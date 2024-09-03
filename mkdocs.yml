@@ -1,0 +1,44 @@
+site_name: IT-手册
+site_description: "IT 手册整理"
+site_author: hlh
+
+theme:
+  name: material
+  language: zh
+  features:
+#    - navigation.expand
+    - navigation.sections
+    - toc.integrate
+    - search.highlight
+    - search.suggest
+    - header.autohide
+    - footer.copyright
+    - footer.text
+    - code.annotate
+    - content.code
+    - material.nav
+    - material.switch
+#    - navigation.tabs
+  palette:
+    # 选择主题颜色
+    primary: 'teal'
+    accent: 'deep orange'
+    # 默认的暗色模式配置
+    toggle:
+      - logo: true
+      - name: 'Switch to Dark Mode'
+      - icon: 'light_mode'
+      - icon_dark: 'dark_mode'
+
+
+plugins:
+  - search
+  - awesome-pages
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - footnotes
+
+extra_css:
+  - css/extra.css
