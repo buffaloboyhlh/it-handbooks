@@ -1,0 +1,65 @@
+/* 一级标题颜色 */
+.md-typeset h1 {
+    color: #3F51B5; /* Indigo */
+}
+
+/* 二级标题颜色 */
+.md-typeset h2 {
+    color: #FF5722; /* Deep Orange */
+}
+
+/* 三级标题颜色 */
+.md-typeset h3 {
+    color: #00BCD4; /* Cyan */
+}
+
+/* 四级标题颜色 */
+.md-typeset h4 {
+    color: #a812d6; /* Lime */
+}
+
+/* 五级标题颜色 */
+.md-typeset h5 {
+    color: #E91E63; /* Pink */
+}
+
+/* 六级标题颜色 */
+.md-typeset h6 {
+    color: #009688; /* Teal */
+}
+
+/* 一级标题带渐变效果 */
+.md-typeset h1 {
+    background: linear-gradient(to right, #3F51B5, #2196F3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* 二级标题加阴影 */
+.md-typeset h2 {
+    color: #FF5722;
+    text-shadow: 1px 1px 2px #888;
+}
+
+/* 默认加粗文本颜色 */
+.md-typeset strong {
+    color: #1976D2; /* Primary Blue */
+}
+
+/* 自定义其他加粗文本颜色 */
+.md-typeset strong.success {
+    color: #388E3C; /* Success Green */
+}
+
+.md-typeset strong.warning {
+    color: #FFF311; /* Warning Amber */
+}
+
+.md-typeset strong.error {
+    color: #D32F2F; /* Error Red */
+}
+
+.md-typeset strong.accent {
+    color: #FF9800; /* Accent Orange */
+}
+
