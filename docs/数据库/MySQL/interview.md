@@ -2987,3 +2987,8 @@
 
    **总结**：MySQL 中的 `JOIN` 操作允许将多个表的数据结合起来进行查询，支持内连接、外连接和交叉连接等多种方式。通过正确使用 `JOIN` 操作，可以高效地检索和整合相关数据。
 
+
+## 补充题目
+
+[MySQL补充题目](https://javabetter.cn/sidebar/sanfene/mysql.html)
+
