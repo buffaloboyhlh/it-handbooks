@@ -1,0 +1,4609 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="IT 手册整理">
+      
+      
+        <meta name="author" content="hlh">
+      
+      
+      
+        <link rel="prev" href="../../%E6%9C%8D%E5%8A%A1%E5%99%A8/uvicorn/basic/">
+      
+      
+        <link rel="next" href="../network/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>http 手册 - IT-手册</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35f28582.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#http" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="IT-手册" class="md-header__button md-logo" aria-label="IT-手册" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IT-手册
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              http 手册
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="IT-手册" class="md-nav__button md-logo" aria-label="IT-手册" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    IT-手册
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IT-手册大全
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Web篇
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Web篇
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Django
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Django
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Web%E7%AF%87/Django/advance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django 进阶教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Web%E7%AF%87/Django/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django 基础教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Web%E7%AF%87/Django/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Web%E7%AF%87/Django/questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django 开发中遇到的问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Web%E7%AF%87/Django/restful/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django RESTful
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    FastAPI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            FastAPI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Web%E7%AF%87/FastAPI/advance./" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FastAPI 进阶教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Web%E7%AF%87/FastAPI/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FastAPI 基础教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Web%E7%AF%87/FastAPI/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FastAPI 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Flask
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Flask
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Web%E7%AF%87/Flask/advance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Advance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Web%E7%AF%87/Flask/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Web%E7%AF%87/Flask/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Web%E7%AF%87/Flask/questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    工作中常见问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    中间件
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            中间件
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Kafka
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Kafka
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kafka 基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kafka 面试
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Rabbitmq
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Rabbitmq
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/rabbitmq/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RabbitMQ 基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/rabbitmq/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RabbitMQ 面试
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Zookeeper
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Zookeeper
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/zookeeper/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    zookeeper 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/zookeeper/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    zookeeper 面试
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    云原生
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            云原生
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Docker
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker-基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker 面试
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Kubernetes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Kubernetes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kubernetes 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/crictl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    crictl 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/helm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kubernetes 包管理工具 helm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kubernetes 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/monitor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kubernetes 监控平台和日志管理
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    人工智能
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            人工智能
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/AI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/Transformers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transformers 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/advance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLM 进阶教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/ai-basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI 概念
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    基础教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLM 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/langchain/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LangChain 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    工具篇
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            工具篇
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%B7%A5%E5%85%B7%E7%AF%87/git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    git 命令
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    数据库
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            数据库
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Elastic
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            Elastic
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/advance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ElastciSearch 进阶教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ElasticSearch 基本教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ElasticSearch 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ElasticSearch 工作中遇到的问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MongoDB
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            MongoDB
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/advance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MongoDB 进阶教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MongoDB 基础教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MongoDB 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MongoDB 工作中遇到的问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MySQL
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            MySQL
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/advance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MySQL 进阶教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MySQL 基础教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MySQL 面试题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MySQL 常见问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Redis
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            Redis
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Redis 基础教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Redis 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Redis 工作中常见问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    服务器
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            服务器
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Nginx
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1">
+            <span class="md-nav__icon md-icon"></span>
+            Nginx
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%9C%8D%E5%8A%A1%E5%99%A8/nginx/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    nginx 基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%9C%8D%E5%8A%A1%E5%99%A8/nginx/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    nginx 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Uvicorn
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            Uvicorn
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%9C%8D%E5%8A%A1%E5%99%A8/uvicorn/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    uvicorn 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    计算机基础
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            计算机基础
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    http 手册
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../network/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    计算机网络面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    操作系统面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../websocket/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Websocket
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    语言篇
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            语言篇
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_1" id="__nav_10_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_1">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/advance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python 进阶教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    python 基础教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_1_4" id="__nav_10_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Python常用库
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Python常用库
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/Seaborn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Seaborn 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/beautifulsoup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    beautifulsoup 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/celery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    celery 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/datastruct/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构和算法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/datetime/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    datetime 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/functools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    functools 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/json/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    json 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/logging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    logging 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/math/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    math 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/matpliot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    matpliot 使用教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/mock/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    mock 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/numpy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    numpy 笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/os/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    os模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pandas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pandas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pathlib/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pathlib 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pickle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pickle 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pymysql/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pymysql 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pytest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pytest 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pytorch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pytorch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/queue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    queue 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/random/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    random 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/re/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    re 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/redis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    redis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/requests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    requests 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scikit-learn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    scikit-learn
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scipy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    scipy 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scrapy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    scrapy 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/selenium/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    selenium 使用教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/shutil/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    shutil 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/sqlalchemy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SQLALchemy 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/sys/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sys 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/time/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    time 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/urllib/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    urllib 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="http">http 手册</h1>
+<p>以下是一个更详细的 HTTP 面试手册，包含了概念、流程、常见问题以及图表和表格来帮助理解。</p>
+<hr />
+<h1 id="http_1">HTTP 面试手册</h1>
+<h2 id="1-http">1. HTTP 基础概念</h2>
+<h3 id="11-http">1.1 HTTP 协议概述</h3>
+<p>HTTP（Hypertext Transfer Protocol）是一个基于请求-响应模式的应用层协议。它定义了客户端与服务器之间的数据传输规则。HTTP 是无状态协议，每个请求都是独立的，没有上下文关联。</p>
+<h3 id="12-http">1.2 HTTP 版本</h3>
+<ul>
+<li><strong>HTTP/0.9</strong>: 最初版本，只有简单的 GET 请求。</li>
+<li><strong>HTTP/1.0</strong>: 支持更多请求方法（如 POST 和 HEAD）和响应状态码。</li>
+<li><strong>HTTP/1.1</strong>: 增加了持久连接、分块传输编码等特性，是目前最广泛使用的版本。</li>
+<li><strong>HTTP/2</strong>: 引入二进制帧、多路复用、头部压缩等特性，提升了性能。</li>
+<li><strong>HTTP/3</strong>: 基于 QUIC 协议，进一步减少了延迟，提高了传输效率。</li>
+</ul>
+<h3 id="13-http">1.3 HTTP 请求与响应结构</h3>
+<h4 id="_1">请求结构</h4>
+<ul>
+<li><strong>请求行</strong>: 包含 HTTP 方法、请求 URL、HTTP 版本。</li>
+<li><strong>请求头</strong>: 包含客户端的信息、请求参数等。</li>
+<li><strong>请求体</strong>: 包含 POST、PUT 等方法的数据内容（如表单数据）。</li>
+</ul>
+<h4 id="_2">响应结构</h4>
+<ul>
+<li><strong>状态行</strong>: 包含 HTTP 版本、状态码、状态短语。</li>
+<li><strong>响应头</strong>: 包含服务器信息、响应数据的属性等。</li>
+<li><strong>响应体</strong>: 包含实际的响应数据（如 HTML 文档、JSON 数据）。</li>
+</ul>
+<h2 id="2-http">2. HTTP 请求方法</h2>
+<h3 id="21-http">2.1 常见 HTTP 方法</h3>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>作用</th>
+<th>是否幂等</th>
+<th>是否安全</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>请求资源</td>
+<td>是</td>
+<td>是</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>提交数据处理请求</td>
+<td>否</td>
+<td>否</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>更新指定资源</td>
+<td>是</td>
+<td>否</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>删除指定资源</td>
+<td>是</td>
+<td>否</td>
+</tr>
+<tr>
+<td>HEAD</td>
+<td>获取资源的头部信息</td>
+<td>是</td>
+<td>是</td>
+</tr>
+<tr>
+<td>OPTIONS</td>
+<td>获取服务器支持的请求方法</td>
+<td>是</td>
+<td>是</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>部分更新指定资源</td>
+<td>否</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-get-post">2.2 GET 与 POST 的区别</h3>
+<ul>
+<li><strong>GET</strong></li>
+<li>参数通过 URL 传递。</li>
+<li>数据大小受限于 URL 长度。</li>
+<li>请求可以被缓存、保存在浏览器历史记录中。</li>
+<li>
+<p>常用于获取数据。</p>
+</li>
+<li>
+<p><strong>POST</strong></p>
+</li>
+<li>参数通过请求体传递。</li>
+<li>没有数据大小限制。</li>
+<li>请求不会被缓存，不会保存在浏览器历史记录中。</li>
+<li>常用于提交表单数据。</li>
+</ul>
+<h3 id="23">2.3 状态码详解</h3>
+<table>
+<thead>
+<tr>
+<th>分类</th>
+<th>状态码</th>
+<th>含义</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1xx</td>
+<td>100</td>
+<td>继续（Continue）</td>
+<td>请求收到，继续处理</td>
+</tr>
+<tr>
+<td>2xx</td>
+<td>200</td>
+<td>成功（OK）</td>
+<td>请求成功，返回所需资源</td>
+</tr>
+<tr>
+<td></td>
+<td>204</td>
+<td>无内容（No Content）</td>
+<td>请求成功，无返回内容</td>
+</tr>
+<tr>
+<td>3xx</td>
+<td>301</td>
+<td>永久重定向（Moved Permanently）</td>
+<td>请求的资源已被永久移动到新位置</td>
+</tr>
+<tr>
+<td></td>
+<td>304</td>
+<td>未修改（Not Modified）</td>
+<td>资源未修改，可以使用缓存</td>
+</tr>
+<tr>
+<td>4xx</td>
+<td>400</td>
+<td>错误请求（Bad Request）</td>
+<td>请求参数错误</td>
+</tr>
+<tr>
+<td></td>
+<td>401</td>
+<td>未授权（Unauthorized）</td>
+<td>请求未通过认证</td>
+</tr>
+<tr>
+<td></td>
+<td>403</td>
+<td>禁止（Forbidden）</td>
+<td>服务器拒绝执行请求</td>
+</tr>
+<tr>
+<td></td>
+<td>404</td>
+<td>未找到（Not Found）</td>
+<td>资源未找到</td>
+</tr>
+<tr>
+<td>5xx</td>
+<td>500</td>
+<td>服务器内部错误（Internal Server Error）</td>
+<td>服务器发生错误</td>
+</tr>
+<tr>
+<td></td>
+<td>503</td>
+<td>服务不可用（Service Unavailable）</td>
+<td>服务器暂时无法处理请求</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-http">3. HTTP 报文结构</h2>
+<h3 id="31">3.1 请求报文</h3>
+<div class="codehilite"><pre><span></span><code><span class="nf">GET</span> <span class="nn">/index.html</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">www.example.com</span>
+<span class="na">User-Agent</span><span class="o">:</span> <span class="l">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36</span>
+<span class="na">Accept</span><span class="o">:</span> <span class="l">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8</span>
+<span class="na">Accept-Language</span><span class="o">:</span> <span class="l">en-US,en;q=0.9</span>
+<span class="na">Connection</span><span class="o">:</span> <span class="l">keep-alive</span>
+</code></pre></div>
+
+<h3 id="32">3.2 响应报文</h3>
+<div class="codehilite"><pre><span></span><code><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Date</span><span class="o">:</span> <span class="l">Tue, 27 Jul 2021 12:28:53 GMT</span>
+<span class="na">Server</span><span class="o">:</span> <span class="l">Apache/2.4.1 (Unix)</span>
+<span class="na">Last-Modified</span><span class="o">:</span> <span class="l">Mon, 26 Jul 2021 15:00:00 GMT</span>
+<span class="na">Content-Length</span><span class="o">:</span> <span class="l">44</span>
+<span class="na">Content-Type</span><span class="o">:</span> <span class="l">text/html</span>
+<span class="na">Connection</span><span class="o">:</span> <span class="l">Closed</span>
+
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;&lt;</span><span class="nt">body</span><span class="p">&gt;&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello, World!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;&lt;/</span><span class="nt">body</span><span class="p">&gt;&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<h3 id="33">3.3 报文头部常见字段</h3>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Host</td>
+<td>请求资源所在的主机地址</td>
+</tr>
+<tr>
+<td>User-Agent</td>
+<td>客户端软件的名称和版本</td>
+</tr>
+<tr>
+<td>Accept</td>
+<td>客户端能够处理的内容类型</td>
+</tr>
+<tr>
+<td>Content-Type</td>
+<td>请求或响应的内容类型</td>
+</tr>
+<tr>
+<td>Content-Length</td>
+<td>请求或响应的内容长度</td>
+</tr>
+<tr>
+<td>Connection</td>
+<td>控制连接的管理（如：keep-alive 以保持连接）</td>
+</tr>
+<tr>
+<td>Cookie</td>
+<td>客户端发送的 Cookie，用于会话管理和状态保持</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-http">4. HTTP 特性</h2>
+<h3 id="41">4.1 无状态性</h3>
+<p>HTTP 是无状态协议，每个请求是独立的，服务器不会保留客户端请求的状态信息。无状态性简化了服务器的设计，但在需要状态管理时，需要使用 Cookie、Session 或 Token。</p>
+<h3 id="42">4.2 持久连接</h3>
+<p>HTTP/1.1 默认使用持久连接，允许多个请求复用同一个 TCP 连接，减少了握手延迟，提高了性能。</p>
+<h3 id="43">4.3 缓存机制</h3>
+<ul>
+<li><strong>强缓存</strong>: 使用 <code>Expires</code> 或 <code>Cache-Control</code> 头来控制缓存。</li>
+<li><strong>协商缓存</strong>: 使用 <code>Last-Modified</code> 和 <code>ETag</code> 头来判断资源是否需要更新。</li>
+</ul>
+<h3 id="44">4.4 重定向</h3>
+<p>服务器可以通过返回 3xx 状态码和 <code>Location</code> 头部实现重定向，将客户端请求重定向到其他 URL。</p>
+<h2 id="5-http">5. HTTP 安全性</h2>
+<h3 id="51-https">5.1 HTTPS</h3>
+<p>HTTPS（HTTP Secure）是在 HTTP 基础上增加了 SSL/TLS 加密层，保障数据传输的安全性。它通过证书验证服务器身份，并加密数据以防止被窃听或篡改。</p>
+<h3 id="52">5.2 常见的安全问题</h3>
+<ul>
+<li><strong>中间人攻击</strong>: 攻击者窃听或篡改客户端与服务器之间的通信。</li>
+<li><strong>XSS（跨站脚本攻击）</strong>: 攻击者通过注入恶意脚本来攻击用户的浏览器。</li>
+<li><strong>CSRF（跨站请求伪造）</strong>: 攻击者诱使用户在已认证的状态下执行恶意操作。</li>
+</ul>
+<h2 id="6-http2-http3">6. HTTP/2 和 HTTP/3</h2>
+<h3 id="61-http2">6.1 HTTP/2</h3>
+<ul>
+<li><strong>二进制协议</strong>: HTTP/2 使用二进制帧进行传输，提高了传输效率。</li>
+<li><strong>多路复用</strong>: 一个连接上可以并行发送多个请求和响应，减少了延迟。</li>
+<li><strong>头部压缩</strong>: 使用 HPACK 算法对头部进行压缩，降低了数据传输量。</li>
+</ul>
+<h3 id="62-http3">6.2 HTTP/3</h3>
+<ul>
+<li><strong>基于 QUIC</strong>: HTTP/3 使用基于 UDP 的 QUIC 协议代替了传统的 TCP，减少了连接建立和恢复的延迟。</li>
+<li><strong>更快的连接恢复</strong>: QUIC 支持更快速的连接恢复机制，特别是在网络不稳定的环境下。</li>
+</ul>
+<h2 id="7">7. 面试常见问题</h2>
+<h3 id="71-http-https">7.1 HTTP 和 HTTPS 的区别</h3>
+<ul>
+<li><strong>安全性</strong>: HTTPS 增加了 SSL/TLS 加密层，保障数据传输的安全性。</li>
+<li><strong>端口</strong>: HTTP 使用 80 端口，HTTPS 使用 443 端口。</li>
+<li><strong>速度</strong>: HTTPS 由于加密解密过程，可能稍慢于 HTTP，但由于 HTTP/2 的引入，差距缩小。</li>
+</ul>
+<h3 id="72-http">7.2 如何实现 HTTP 缓存机制？</h3>
+<p>使用 <code>Cache-Control</code> 和 <code>Expires</code> 进行强缓存控制，使用 <code>ETag</code> 和 <code>Last-Modified</code> 进行协商缓存控制。</p>
+<h3 id="73-http">7.3 为什么 HTTP 是无状态的？</h3>
+<p>无状态性简化了服务器的设计，降低了资源占用，但在需要状态管理时，需要依赖 Cookie、Session 等技术。</p>
+<hr />
+<p>继续深入探讨 HTTP 相关知识，并补充更多内容。</p>
+<hr />
+<h2 id="8-http">8. HTTP 会话管理</h2>
+<h3 id="81-cookie">8.1 Cookie</h3>
+<p><strong>Cookie</strong> 是一种在客户端存储少量数据的技术，通常用于会话管理、用户跟踪和个性化设置。
+- <strong>持久性</strong>: Cookie 可以设置过期时间，成为持久 Cookie。
+- <strong>作用域</strong>: Cookie 的作用域由 <code>Domain</code> 和 <code>Path</code> 属性决定。
+- <strong>安全性</strong>: 通过 <code>Secure</code> 标记只允许在 HTTPS 连接中传输，<code>HttpOnly</code> 标记禁止 JavaScript 访问。</p>
+<p><strong>Cookie 示例</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">Set-Cookie</span><span class="o">:</span><span class="w"> </span><span class="nt">sessionId</span><span class="o">=</span><span class="nt">abc123</span><span class="o">;</span><span class="w"> </span><span class="nt">Expires</span><span class="o">=</span><span class="nt">Wed</span><span class="o">,</span><span class="w"> </span><span class="nt">09</span><span class="w"> </span><span class="nt">Jun</span><span class="w"> </span><span class="nt">2024</span><span class="w"> </span><span class="nt">10</span><span class="p">:</span><span class="nd">18</span><span class="p">:</span><span class="nd">14</span><span class="w"> </span><span class="nt">GMT</span><span class="o">;</span><span class="w"> </span><span class="nt">Path</span><span class="o">=/;</span><span class="w"> </span><span class="nt">Secure</span><span class="o">;</span><span class="w"> </span><span class="nt">HttpOnly</span>
+</code></pre></div>
+
+<h3 id="82-session">8.2 Session</h3>
+<p><strong>Session</strong> 是一种在服务器端保存用户会话数据的技术，通常使用 Session ID 进行标识。Session ID 通常通过 Cookie 或 URL 参数传递。
+- <strong>持久性</strong>: Session 通常是短暂的，默认在用户关闭浏览器或超时后失效。
+- <strong>存储位置</strong>: Session 数据存储在服务器端，通常在内存、数据库或文件系统中。</p>
+<h3 id="83-token">8.3 Token</h3>
+<p><strong>Token</strong> 是一种无状态的认证机制，常见的如 JWT（JSON Web Token）。它包含用户的身份信息，服务器通过验证 Token 来识别用户，而无需存储会话数据。
+- <strong>无状态性</strong>: Token 是无状态的，适合分布式系统。
+- <strong>安全性</strong>: Token 可以被签名和加密，确保数据完整性和保密性。</p>
+<h2 id="9-http">9. HTTP 报头详解</h2>
+<h3 id="91">9.1 常见请求头字段</h3>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>解释</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Host</td>
+<td>指定请求资源的主机和端口</td>
+<td><code>Host: www.example.com</code></td>
+</tr>
+<tr>
+<td>User-Agent</td>
+<td>客户端软件信息</td>
+<td><code>User-Agent: Mozilla/5.0</code></td>
+</tr>
+<tr>
+<td>Accept</td>
+<td>客户端可处理的 MIME 类型</td>
+<td><code>Accept: text/html,application/xhtml+xml</code></td>
+</tr>
+<tr>
+<td>Content-Type</td>
+<td>请求体内容的类型</td>
+<td><code>Content-Type: application/json</code></td>
+</tr>
+<tr>
+<td>Authorization</td>
+<td>请求资源的认证信息</td>
+<td><code>Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l</code></td>
+</tr>
+<tr>
+<td>Referer</td>
+<td>请求的来源页面</td>
+<td><code>Referer: https://www.google.com/</code></td>
+</tr>
+<tr>
+<td>Cookie</td>
+<td>请求附带的 Cookie 信息</td>
+<td><code>Cookie: sessionId=abc123</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="92">9.2 常见响应头字段</h3>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>解释</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content-Type</td>
+<td>响应内容的 MIME 类型</td>
+<td><code>Content-Type: text/html; charset=UTF-8</code></td>
+</tr>
+<tr>
+<td>Content-Length</td>
+<td>响应体的字节长度</td>
+<td><code>Content-Length: 1234</code></td>
+</tr>
+<tr>
+<td>Set-Cookie</td>
+<td>设置客户端的 Cookie</td>
+<td><code>Set-Cookie: sessionId=abc123; HttpOnly</code></td>
+</tr>
+<tr>
+<td>Cache-Control</td>
+<td>指定缓存策略</td>
+<td><code>Cache-Control: no-cache</code></td>
+</tr>
+<tr>
+<td>Expires</td>
+<td>指定资源的过期时间</td>
+<td><code>Expires: Wed, 09 Jun 2024 10:18:14 GMT</code></td>
+</tr>
+<tr>
+<td>ETag</td>
+<td>资源的实体标签，用于缓存验证</td>
+<td><code>ETag: "5d8c72a5edda9c7"</code></td>
+</tr>
+<tr>
+<td>Server</td>
+<td>服务器软件的信息</td>
+<td><code>Server: Apache/2.4.1 (Unix)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="10-http">10. HTTP 缓存机制</h2>
+<h3 id="101">10.1 强缓存</h3>
+<p><strong>强缓存</strong> 是指客户端可以直接从缓存中获取资源，而不需要向服务器发送请求。强缓存由 <code>Expires</code> 和 <code>Cache-Control</code> 头部控制。</p>
+<ul>
+<li>
+<p><strong>Expires</strong>: 指定资源的到期时间，基于服务器时间。
+  <code>plaintext
+  Expires: Wed, 09 Jun 2024 10:18:14 GMT</code></p>
+</li>
+<li>
+<p><strong>Cache-Control</strong>: 提供更灵活的缓存控制选项，例如：</p>
+</li>
+<li><code>max-age</code>: 指定资源的最大缓存时间。</li>
+<li><code>no-cache</code>: 每次使用缓存前必须向服务器验证。</li>
+<li><code>no-store</code>: 不缓存请求或响应的任何内容。</li>
+</ul>
+<p><code>plaintext
+  Cache-Control: max-age=3600</code></p>
+<h3 id="102">10.2 协商缓存</h3>
+<p><strong>协商缓存</strong> 是指客户端需要向服务器验证缓存的资源是否已更新，如果未更新，可以继续使用缓存资源。常用的头部字段有 <code>Last-Modified</code> 和 <code>ETag</code>。</p>
+<ul>
+<li>
+<p><strong>Last-Modified</strong>: 指定资源的最后修改时间。
+  <code>plaintext
+  Last-Modified: Wed, 09 Jun 2023 10:18:14 GMT</code></p>
+</li>
+<li>
+<p><strong>ETag</strong>: 为资源生成唯一标识符，用于判断资源是否修改。
+  <code>plaintext
+  ETag: "5d8c72a5edda9c7"</code></p>
+</li>
+</ul>
+<h2 id="11-http_1">11. HTTP 状态码详解</h2>
+<h3 id="111-1xx">11.1 1xx 信息响应</h3>
+<table>
+<thead>
+<tr>
+<th>状态码</th>
+<th>含义</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100</td>
+<td>继续（Continue）</td>
+<td>客户端应继续请求</td>
+</tr>
+<tr>
+<td>101</td>
+<td>切换协议（Switching Protocols）</td>
+<td>服务器同意切换协议</td>
+</tr>
+</tbody>
+</table>
+<h3 id="112-2xx">11.2 2xx 成功响应</h3>
+<table>
+<thead>
+<tr>
+<th>状态码</th>
+<th>含义</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>成功（OK）</td>
+<td>请求成功，返回请求的数据</td>
+</tr>
+<tr>
+<td>201</td>
+<td>已创建（Created）</td>
+<td>请求成功并且服务器创建了新资源</td>
+</tr>
+<tr>
+<td>204</td>
+<td>无内容（No Content）</td>
+<td>请求成功，但没有返回内容</td>
+</tr>
+</tbody>
+</table>
+<h3 id="113-3xx">11.3 3xx 重定向响应</h3>
+<table>
+<thead>
+<tr>
+<th>状态码</th>
+<th>含义</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>301</td>
+<td>永久移动（Moved Permanently）</td>
+<td>请求的资源已被永久移动到新位置</td>
+</tr>
+<tr>
+<td>302</td>
+<td>临时移动（Found）</td>
+<td>请求的资源暂时从不同的 URI 响应</td>
+</tr>
+<tr>
+<td>304</td>
+<td>未修改（Not Modified）</td>
+<td>缓存的资源仍是最新的，可以使用</td>
+</tr>
+</tbody>
+</table>
+<h3 id="114-4xx">11.4 4xx 客户端错误</h3>
+<table>
+<thead>
+<tr>
+<th>状态码</th>
+<th>含义</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>400</td>
+<td>错误请求（Bad Request）</td>
+<td>请求存在语法问题，服务器无法理解</td>
+</tr>
+<tr>
+<td>401</td>
+<td>未授权（Unauthorized）</td>
+<td>请求需要身份验证</td>
+</tr>
+<tr>
+<td>403</td>
+<td>禁止（Forbidden）</td>
+<td>服务器理解请求，但拒绝执行</td>
+</tr>
+<tr>
+<td>404</td>
+<td>未找到（Not Found）</td>
+<td>服务器无法找到请求的资源</td>
+</tr>
+</tbody>
+</table>
+<h3 id="115-5xx">11.5 5xx 服务器错误</h3>
+<table>
+<thead>
+<tr>
+<th>状态码</th>
+<th>含义</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>500</td>
+<td>服务器内部错误（Internal Server Error）</td>
+<td>服务器遇到意外情况，无法完成请求</td>
+</tr>
+<tr>
+<td>502</td>
+<td>错误网关（Bad Gateway）</td>
+<td>服务器作为网关或代理时收到无效响应</td>
+</tr>
+<tr>
+<td>503</td>
+<td>服务不可用（Service Unavailable）</td>
+<td>服务器暂时无法处理请求</td>
+</tr>
+</tbody>
+</table>
+<h2 id="12-http-restful-api">12. HTTP 与 RESTful API</h2>
+<h3 id="121-restful-api">12.1 RESTful API 概念</h3>
+<p><strong>REST（Representational State Transfer）</strong> 是一种架构风格，常用于设计网络应用程序。RESTful API 遵循以下原则：
+- <strong>资源</strong>: 一切皆资源，每个资源都由一个 URI 唯一标识。
+- <strong>方法</strong>: 使用标准的 HTTP 方法（GET、POST、PUT、DELETE）对资源进行操作。
+- <strong>状态转移</strong>: 通过超链接在资源之间导航，实现状态转移。</p>
+<h3 id="122-restful-api">12.2 RESTful API 的设计要点</h3>
+<ul>
+<li><strong>URI 设计</strong>: 简洁且有层次结构的 URI 设计，如 <code>/users/{id}/posts</code>。</li>
+<li><strong>使用 HTTP 方法</strong>: 根据操作类型选择合适的 HTTP 方法。</li>
+<li><strong>返回格式</strong>: 通常使用 JSON 作为数据交换格式。</li>
+<li><strong>状态码</strong>: 使用标准的 HTTP 状态码表示操作结果。</li>
+</ul>
+<h3 id="123-restful-api">12.3 RESTful API 的优势</h3>
+<ul>
+<li><strong>简单性</strong>: 基于 HTTP 协议，易于理解和实现。</li>
+<li><strong>无状态性</strong>: 每个请求独立，不依赖于服务器的存储状态。</li>
+<li><strong>可扩展性</strong>: RESTful API 适合大规模分布式系统的设计。</li>
+</ul>
+<h2 id="13-http_1">13. HTTP 安全与优化</h2>
+<h3 id="131-http">13.1 HTTP 安全性</h3>
+<ul>
+<li><strong>SSL/TLS</strong>: 使用 SSL/TLS 协议来加密 HTTP 通信，形成 HTTPS，保障数据传输的安全性。</li>
+<li><strong>跨站脚本攻击（XSS）</strong>: 通过输出过滤、防止用户输入恶意脚本来防范 XSS 攻击。</li>
+<li><strong>跨站请求伪造（CSRF）</strong>: 通过验证请求来源和使用 CSRF Token 防止 CSRF 攻击。</li>
+</ul>
+<h3 id="132-http">13.2 HTTP 性能优化</h3>
+<ul>
+<li><strong>压缩</strong>: 使用 Gzip 压缩响应数据，减少数据传输量。</li>
+<li><strong>缓存</strong>: 利用强缓存和协商缓存减少服务器负担和响应时间。</li>
+<li><strong>内容分发网络（CDN）</strong>: 使用 CDN 加速内容分发，减少服务器负载。</li>
+</ul>
+<hr />
+<p>继续扩展 HTTP 面试手册的内容，以帮助你全面了解 HTTP 协议及其相关的技术细节。</p>
+<hr />
+<h2 id="14-http">14. HTTP 代理服务器</h2>
+<h3 id="141">14.1 正向代理</h3>
+<p><strong>正向代理</strong> 是位于客户端和服务器之间的一种代理服务器，客户端通过正向代理访问目标服务器。常见用途包括：
+- <strong>访问控制</strong>: 通过代理服务器过滤不符合策略的请求。
+- <strong>缓存</strong>: 在代理服务器中缓存响应，以减少请求次数和带宽消耗。
+- <strong>匿名访问</strong>: 通过代理隐藏客户端的真实 IP 地址。</p>
+<p><strong>正向代理示意图</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">客户端</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="err">代理服务器</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="err">目标服务器</span>
+</code></pre></div>
+
+<h3 id="142">14.2 反向代理</h3>
+<p><strong>反向代理</strong> 是位于服务器端的一种代理服务器，客户端并不知道其请求的资源实际来自哪个服务器。常见用途包括：
+- <strong>负载均衡</strong>: 反向代理将请求分发到多个后端服务器，以实现负载均衡。
+- <strong>安全性</strong>: 反向代理可以隐藏后端服务器的真实地址，增强安全性。
+- <strong>缓存</strong>: 在反向代理中缓存静态内容，减少后端服务器的负载。</p>
+<p><strong>反向代理示意图</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">客户端</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="err">反向代理</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="err">多个后端服务器</span>
+</code></pre></div>
+
+<h3 id="143">14.3 透明代理</h3>
+<p><strong>透明代理</strong> 是一种不需要客户端配置的代理服务器。客户端发送的请求被透明代理捕获和处理，而客户端不感知代理的存在。常用于网络监控和内容过滤。</p>
+<h2 id="15-http2">15. HTTP/2 协议详解</h2>
+<h3 id="151-http2">15.1 HTTP/2 简介</h3>
+<p><strong>HTTP/2</strong> 是 HTTP/1.1 的升级版本，旨在提高 Web 性能和效率。HTTP/2 的主要特点包括：
+- <strong>二进制帧</strong>: HTTP/2 使用二进制格式传输数据，相比 HTTP/1.x 的文本格式更高效。
+- <strong>多路复用</strong>: 在同一个 TCP 连接上，可以并发处理多个请求和响应，避免了 HTTP/1.x 的队头阻塞（Head-of-Line Blocking）。
+- <strong>头部压缩</strong>: HTTP/2 使用 HPACK 算法对请求和响应头部进行压缩，减少传输的数据量。
+- <strong>服务器推送</strong>: 服务器可以在客户端请求之前，主动向客户端推送资源，进一步提升性能。</p>
+<h3 id="152-http2-http11">15.2 HTTP/2 与 HTTP/1.1 的对比</h3>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>HTTP/1.1</th>
+<th>HTTP/2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数据格式</td>
+<td>文本</td>
+<td>二进制</td>
+</tr>
+<tr>
+<td>多路复用</td>
+<td>不支持</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>头部压缩</td>
+<td>不支持</td>
+<td>支持（HPACK）</td>
+</tr>
+<tr>
+<td>服务器推送</td>
+<td>不支持</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>连接管理</td>
+<td>多个并发连接</td>
+<td>单个连接</td>
+</tr>
+</tbody>
+</table>
+<h3 id="153-http2">15.3 HTTP/2 的优化机制</h3>
+<ul>
+<li><strong>连接复用</strong>: 通过单个 TCP 连接传输多个并发请求，减少了 TCP 握手和连接管理的开销。</li>
+<li><strong>流优先级</strong>: 每个 HTTP/2 流都有一个优先级，服务器可以根据优先级决定资源分配策略。</li>
+<li><strong>流量控制</strong>: HTTP/2 允许客户端和服务器对流进行流量控制，避免带宽被某个流独占。</li>
+</ul>
+<h2 id="16-http3-quic">16. HTTP/3 与 QUIC 协议</h2>
+<h3 id="161-http3">16.1 HTTP/3 简介</h3>
+<p><strong>HTTP/3</strong> 是基于 QUIC 协议的 HTTP 协议版本，旨在进一步提高网络传输效率和可靠性。QUIC 是由 Google 开发的基于 UDP 的传输协议。</p>
+<h3 id="162-http3">16.2 HTTP/3 的优势</h3>
+<ul>
+<li><strong>基于 UDP</strong>: QUIC 基于 UDP，而非 TCP，这使得连接建立更快，数据传输延迟更低。</li>
+<li><strong>无队头阻塞</strong>: QUIC 通过多路传输机制避免了 TCP 的队头阻塞问题。</li>
+<li><strong>集成 TLS</strong>: QUIC 将 TLS 集成到协议本身中，实现了更快速的加密握手过程。</li>
+</ul>
+<h3 id="163-http3">16.3 HTTP/3 的关键技术</h3>
+<ul>
+<li><strong>连接迁移</strong>: QUIC 支持连接迁移，这意味着在网络切换时，客户端和服务器之间的连接不会中断。</li>
+<li><strong>包重传机制</strong>: QUIC 使用包级别的重传机制，减少了数据丢失对传输速度的影响。</li>
+</ul>
+<h2 id="17-http">17. HTTP 方法安全性与幂等性</h2>
+<h3 id="171-http">17.1 HTTP 方法安全性</h3>
+<p>HTTP 方法根据其对服务器资源的影响可以分为两类：
+- <strong>安全方法</strong>: 不会修改服务器资源的 HTTP 方法，主要包括 GET、HEAD 和 OPTIONS。安全方法的请求可以重复执行，而不会改变服务器的状态。
+- <strong>非安全方法</strong>: 可能修改服务器资源的 HTTP 方法，主要包括 POST、PUT、DELETE。使用这些方法时，需要注意请求的副作用。</p>
+<h3 id="172-http">17.2 HTTP 方法的幂等性</h3>
+<p>幂等性是指某个操作无论执行多少次，结果都不会改变。在 HTTP 方法中，以下方法是幂等的：
+- <strong>GET</strong>: 多次获取同一资源，结果相同。
+- <strong>PUT</strong>: 多次上传相同的资源，结果相同。
+- <strong>DELETE</strong>: 多次删除相同的资源，结果相同（资源不存在时删除操作无效）。</p>
+<h3 id="173">17.3 非幂等方法</h3>
+<p><strong>POST</strong> 方法通常用于创建资源或提交数据，因为每次 POST 请求都会导致服务器状态发生变化，因此它是非幂等的。</p>
+<h2 id="18-http">18. HTTP 状态码详解（补充）</h2>
+<h3 id="181-426-upgrade-required">18.1 426 Upgrade Required</h3>
+<p><strong>426 Upgrade Required</strong> 状态码表示客户端应切换到不同的协议版本，例如从 HTTP/1.1 升级到 HTTP/2。</p>
+<h3 id="182-451-unavailable-for-legal-reasons">18.2 451 Unavailable For Legal Reasons</h3>
+<p><strong>451 Unavailable For Legal Reasons</strong> 状态码表示由于法律原因，服务器无法提供所请求的资源。例如，某些国家或地区的法律限制访问某些内容。</p>
+<h2 id="19-http">19. HTTP 报文的详细结构</h2>
+<h3 id="191-http">19.1 HTTP 请求报文</h3>
+<p>HTTP 请求报文由以下几部分组成：
+1. <strong>请求行</strong>: 包含 HTTP 方法、请求目标 URI 和协议版本。例如：
+   <code>GET /index.html HTTP/1.1</code>
+2. <strong>请求头部</strong>: 包含客户端请求的各种信息和参数，例如 Host、User-Agent 等。
+3. <strong>空行</strong>: 请求头部与请求体之间的空行，用于分隔头部和正文。
+4. <strong>请求体</strong>: 发送给服务器的数据，通常用于 POST、PUT 等方法。</p>
+<h3 id="192-http">19.2 HTTP 响应报文</h3>
+<p>HTTP 响应报文由以下几部分组成：
+1. <strong>状态行</strong>: 包含协议版本、状态码和状态描述。例如：
+   <code>HTTP/1.1 200 OK</code>
+2. <strong>响应头部</strong>: 包含服务器端的信息和请求的响应参数，例如 Content-Type、Content-Length 等。
+3. <strong>空行</strong>: 响应头部与响应体之间的空行，用于分隔头部和正文。
+4. <strong>响应体</strong>: 服务器返回给客户端的数据，通常是 HTML、JSON 等格式的内容。</p>
+<h2 id="20-http">20. 常见的 HTTP 安全漏洞及防护</h2>
+<h3 id="201-xss">20.1 跨站脚本攻击（XSS）</h3>
+<p><strong>XSS</strong> 是一种通过在网页中注入恶意脚本来攻击用户的技术，主要防护措施包括：
+- <strong>输入过滤</strong>: 对用户输入的数据进行严格的过滤和验证。
+- <strong>输出编码</strong>: 在输出到网页前，对数据进行编码，避免脚本执行。
+- <strong>内容安全策略（CSP）</strong>: 使用 CSP 限制网页中允许执行的脚本来源。</p>
+<h3 id="202-csrf">20.2 跨站请求伪造（CSRF）</h3>
+<p><strong>CSRF</strong> 是一种通过伪造用户请求来执行未授权操作的攻击，主要防护措施包括：
+- <strong>CSRF Token</strong>: 在表单提交时加入唯一的 Token，并在服务器端验证该 Token 的有效性。
+- <strong>验证来源</strong>: 验证请求的来源是否可信，例如通过 Referer 头部或 Origin 头部进行检查。
+- <strong>双重提交 Cookie</strong>: 在 Cookie 和表单中同时传递 Token，并在服务器端进行比对。</p>
+<h3 id="203-mitm">20.3 中间人攻击（MITM）</h3>
+<p><strong>中间人攻击</strong> 是指攻击者在客户端与服务器之间拦截和篡改通信内容，主要防护措施包括：
+- <strong>使用 HTTPS</strong>: 通过 SSL/TLS 加密通信，防止数据被篡改和窃取。
+- <strong>证书验证</strong>: 客户端验证服务器提供的 SSL 证书是否可信，避免连接到假冒服务器。</p>
+<hr />
+<p>继续扩展 HTTP 面试手册的内容，为你提供更全面的知识覆盖。</p>
+<hr />
+<h2 id="21-http-keep-alive">21. HTTP Keep-Alive 机制</h2>
+<h3 id="211-keep-alive">21.1 Keep-Alive 简介</h3>
+<p><strong>Keep-Alive</strong> 机制，也称为持久连接，是 HTTP/1.1 的默认行为。它允许在同一 TCP 连接上复用多个 HTTP 请求和响应，减少连接建立和关闭的开销。</p>
+<h3 id="212-keep-alive">21.2 Keep-Alive 的优势</h3>
+<ul>
+<li><strong>减少延迟</strong>: 避免每次请求都要重新建立 TCP 连接，从而降低延迟。</li>
+<li><strong>节省资源</strong>: 复用连接可以减少服务器和客户端的资源消耗，如 CPU 和内存使用。</li>
+</ul>
+<h3 id="213-keep-alive">21.3 Keep-Alive 的工作原理</h3>
+<ul>
+<li><strong>持久连接</strong>: HTTP/1.1 默认使用持久连接，除非客户端或服务器明确关闭连接。</li>
+<li><strong><code>Connection: keep-alive</code> 头</strong>: 在 HTTP/1.0 中，客户端和服务器可以通过 <code>Connection: keep-alive</code> 头部指示继续保持连接。</li>
+<li><strong>连接超时</strong>: 服务器通常设置一个超时时间，如果在此时间内没有新的请求，连接将被关闭。</li>
+</ul>
+<h2 id="22-http">22. HTTP 认证机制</h2>
+<h3 id="221-basic">22.1 Basic 认证</h3>
+<p><strong>Basic 认证</strong> 是最简单的 HTTP 认证机制，客户端通过将用户名和密码进行 Base64 编码后发送给服务器。尽管实现简单，但其安全性较低，因为编码后的字符串容易被解码。</p>
+<p><strong>Basic 认证示例</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ=</span>
+</code></pre></div>
+
+<h3 id="222-digest">22.2 Digest 认证</h3>
+<p><strong>Digest 认证</strong> 提供了比 Basic 认证更高的安全性，通过对用户凭据进行 MD5 哈希，并附加随机数（nonce）来防止重放攻击。</p>
+<h3 id="223-bearer-token">22.3 Bearer Token</h3>
+<p><strong>Bearer Token</strong> 是 OAuth 2.0 中常用的认证方式，客户端通过携带令牌（Token）来访问受保护的资源。服务器验证令牌的有效性后允许访问。</p>
+<p><strong>Bearer Token 示例</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">Authorization: Bearer &lt;token&gt;</span>
+</code></pre></div>
+
+<h3 id="224-http">22.4 HTTP 认证头部</h3>
+<p>常用的 HTTP 认证头部包括：
+- <strong>Authorization</strong>: 客户端发送的认证信息。
+- <strong>WWW-Authenticate</strong>: 服务器要求客户端提供认证信息时返回的头部。</p>
+<h2 id="23-http">23. HTTP 头部详解</h2>
+<h3 id="231">23.1 常见请求头部</h3>
+<ul>
+<li><strong>Host</strong>: 指定请求的主机和端口号，HTTP/1.1 中是必需的。</li>
+<li><strong>User-Agent</strong>: 标识客户端的浏览器和操作系统信息。</li>
+<li><strong>Accept</strong>: 指定客户端能够处理的内容类型（MIME 类型）。</li>
+<li><strong>Accept-Encoding</strong>: 指定客户端支持的内容编码方式，如 gzip、deflate。</li>
+<li><strong>Accept-Language</strong>: 指定客户端首选的语言和区域。</li>
+</ul>
+<h3 id="232">23.2 常见响应头部</h3>
+<ul>
+<li><strong>Content-Type</strong>: 指定响应内容的 MIME 类型，如 <code>text/html</code>、<code>application/json</code>。</li>
+<li><strong>Content-Length</strong>: 指定响应内容的字节长度。</li>
+<li><strong>Content-Encoding</strong>: 指定响应内容的编码方式，如 <code>gzip</code>。</li>
+<li><strong>Cache-Control</strong>: 控制缓存的行为，如 <code>no-cache</code>、<code>no-store</code>。</li>
+<li><strong>Expires</strong>: 指定响应内容的过期时间，用于缓存控制。</li>
+</ul>
+<h3 id="233">23.3 安全相关头部</h3>
+<ul>
+<li><strong>Strict-Transport-Security (HSTS)</strong>: 强制客户端通过 HTTPS 访问，并防止降级攻击。</li>
+<li><strong>Content-Security-Policy (CSP)</strong>: 限制网页中可以执行的内容来源，防止 XSS 攻击。</li>
+<li><strong>X-Content-Type-Options</strong>: 防止浏览器 MIME 类型嗅探，确保内容以声明的类型处理。</li>
+<li><strong>X-Frame-Options</strong>: 防止网页被嵌入到其他站点的 iframe 中，防止点击劫持攻击。</li>
+</ul>
+<h2 id="24-http">24. HTTP 协议在移动端的应用</h2>
+<h3 id="241-http">24.1 移动端 HTTP 优化</h3>
+<ul>
+<li><strong>减少请求数</strong>: 合并请求，使用雪碧图（Sprite）、内联资源等技术减少 HTTP 请求数。</li>
+<li><strong>内容压缩</strong>: 使用 Gzip、Brotli 等压缩技术减小响应内容大小。</li>
+<li><strong>图片优化</strong>: 使用 WebP 等高效图片格式，并根据网络状况调整图片质量。</li>
+<li><strong>懒加载</strong>: 延迟加载不在视口内的资源，以减少初始加载时间。</li>
+</ul>
+<h3 id="242">24.2 移动端缓存策略</h3>
+<ul>
+<li><strong>强缓存</strong>: 使用 <code>Cache-Control</code> 和 <code>Expires</code> 头部设置静态资源的缓存时间。</li>
+<li><strong>协商缓存</strong>: 使用 <code>ETag</code> 和 <code>Last-Modified</code> 头部实现资源更新的检查机制。</li>
+</ul>
+<h2 id="25-http">25. HTTP 请求方法的高级用法</h2>
+<h3 id="251-put-patch">25.1 PUT 与 PATCH 的区别</h3>
+<ul>
+<li><strong>PUT</strong>: 用于更新资源的全部内容，客户端发送的请求体包含完整的资源表示。</li>
+<li><strong>PATCH</strong>: 用于部分更新资源，客户端发送的请求体只包含要修改的字段。</li>
+</ul>
+<p><strong>示例</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nf">PUT</span> <span class="nn">/users/1</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="o">:</span> <span class="l">application/json</span>
+
+<span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;john.doe@example.com&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="nf">PATCH</span> <span class="nn">/users/1</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="o">:</span> <span class="l">application/json</span>
+
+<span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;new.email@example.com&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="252-options">25.2 OPTIONS 方法</h3>
+<p><strong>OPTIONS</strong> 方法用于查询服务器支持的 HTTP 方法和其他通信选项，通常用于跨域请求的预检（preflight）请求。</p>
+<p><strong>示例</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nf">OPTIONS</span> <span class="nn">/api/v1/users</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">example.com</span>
+</code></pre></div>
+
+<p>服务器的响应可能包含以下头部:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">Allow: GET, POST, PUT, DELETE, OPTIONS</span>
+</code></pre></div>
+
+<h3 id="253-trace">25.3 TRACE 方法</h3>
+<p><strong>TRACE</strong> 方法用于回显客户端发送的请求，主要用于调试目的。由于安全性较低，现代浏览器和服务器通常禁用该方法。</p>
+<h2 id="26-http-websocket">26. HTTP 与 WebSocket</h2>
+<h3 id="261-websocket">26.1 WebSocket 简介</h3>
+<p><strong>WebSocket</strong> 是一种在单个 TCP 连接上提供全双工通信的协议，用于实时应用，如在线聊天和实时数据更新。与 HTTP 的主要区别在于，WebSocket 一旦连接建立，客户端和服务器之间可以相互发送数据，而无需再发起新的 HTTP 请求。</p>
+<h3 id="262-http-websocket">26.2 HTTP 和 WebSocket 的关系</h3>
+<ul>
+<li><strong>握手阶段</strong>: WebSocket 连接从 HTTP 协议开始，通过 HTTP Upgrade 头部将协议升级为 WebSocket。</li>
+<li><strong>持久连接</strong>: WebSocket 连接一旦建立，通常保持打开状态，直到客户端或服务器主动关闭连接。</li>
+<li><strong>低延迟</strong>: WebSocket 适用于低延迟的应用场景，因为它消除了 HTTP 的请求/响应延迟。</li>
+</ul>
+<h3 id="263-websocket">26.3 WebSocket 的应用场景</h3>
+<ul>
+<li><strong>实时聊天应用</strong>: WebSocket 支持双向通信，适合用于实现实时聊天功能。</li>
+<li><strong>实时数据推送</strong>: 在金融、体育等需要实时数据更新的应用中，WebSocket 可以实时推送数据到客户端。</li>
+<li><strong>多人在线游戏</strong>: WebSocket 的低延迟特性使其成为多人在线游戏通信的理想选择。</li>
+</ul>
+<h2 id="27-http">27. HTTP 的演进及未来发展</h2>
+<h3 id="271-http10-http2">27.1 HTTP/1.0 到 HTTP/2 的演进</h3>
+<ul>
+<li><strong>HTTP/1.0</strong>: 早期版本，采用无状态的请求/响应模型，每次请求都需要重新建立连接。</li>
+<li><strong>HTTP/1.1</strong>: 引入持久连接和管道化，减少连接开销，并支持 Host 头部，实现虚拟主机功能。</li>
+<li><strong>HTTP/2</strong>: 通过多路复用、头部压缩和服务器推送等机制，大幅提升了 Web 性能。</li>
+</ul>
+<h3 id="272-http3">27.2 HTTP/3 的未来</h3>
+<p><strong>HTTP/3</strong> 基于 QUIC 协议，使用 UDP 代替 TCP 提供可靠传输，目标是进一步降低延迟，提高网络传输效率。HTTP/3 的发展将继续推动互联网协议的演进，特别是在移动设备和高并发场景下的应用。</p>
+<h3 id="273-http">27.3 基于 HTTP 的现代应用协议</h3>
+<ul>
+<li><strong>GraphQL</strong>: 基于 HTTP 的查询语言，允许客户端指定所需的数据结构，减少数据传输量。</li>
+<li><strong>gRPC</strong>: 基于 HTTP/2 的远程过程调用（RPC）框架，使用 Protocol Buffers 进行序列化，支持高效的数据传输和双向流通信。</li>
+</ul>
+<hr />
+<p>继续扩展 HTTP 面试手册，涵盖更广泛的主题。</p>
+<hr />
+<h2 id="28-http-cors">28. HTTP CORS 跨域资源共享</h2>
+<h3 id="281-cors">28.1 CORS 概述</h3>
+<p><strong>跨域资源共享（CORS）</strong> 是一种机制，允许浏览器从与提供资源的服务器不同的域中请求资源。CORS 依赖于 HTTP 头部来告知浏览器请求是否被允许跨域。</p>
+<h3 id="282">28.2 同源策略</h3>
+<p>同源策略要求，网页的资源只能从与其所在页面相同源的 URL 获取。源包括协议、域名和端口。CORS 允许在符合条件时突破同源策略。</p>
+<h3 id="283-cors">28.3 CORS 的关键头部</h3>
+<ul>
+<li><strong><code>Access-Control-Allow-Origin</code></strong>: 指定哪些域名可以访问资源，常见值包括单个域名或通配符 <code>*</code>。</li>
+<li><strong><code>Access-Control-Allow-Methods</code></strong>: 指定允许的 HTTP 方法，如 <code>GET</code>, <code>POST</code>, <code>PUT</code>。</li>
+<li><strong><code>Access-Control-Allow-Headers</code></strong>: 指定允许的请求头部，如 <code>Content-Type</code>。</li>
+<li><strong><code>Access-Control-Allow-Credentials</code></strong>: 指定是否允许跨域请求携带凭证（如 Cookies）。</li>
+<li><strong><code>Access-Control-Max-Age</code></strong>: 指定浏览器可以缓存预检请求结果的时间，以秒为单位。</li>
+</ul>
+<h3 id="284">28.4 预检请求</h3>
+<p>当跨域请求使用了非简单请求方法（如 <code>PUT</code>, <code>DELETE</code>）或自定义头部时，浏览器会在实际请求前发送一个 OPTIONS 请求，称为预检请求（Preflight Request）。服务器响应后，浏览器才会发送实际请求。</p>
+<h3 id="285">28.5 实战示例</h3>
+<p><strong>CORS 请求示例</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nf">GET</span> <span class="nn">/api/data</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">api.example.com</span>
+<span class="na">Origin</span><span class="o">:</span> <span class="l">https://www.example.com</span>
+</code></pre></div>
+
+<p><strong>CORS 响应示例</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Access-Control-Allow-Origin</span><span class="o">:</span> <span class="l">https://www.example.com</span>
+<span class="na">Access-Control-Allow-Methods</span><span class="o">:</span> <span class="l">GET, POST</span>
+<span class="na">Access-Control-Allow-Headers</span><span class="o">:</span> <span class="l">Content-Type</span>
+</code></pre></div>
+
+<h2 id="29-http">29. HTTP 流媒体传输</h2>
+<h3 id="291">29.1 流媒体概述</h3>
+<p><strong>流媒体传输</strong> 是指在网络上实时传送音频、视频或多媒体数据的技术。HTTP 常用于传输流媒体内容，如视频点播、直播等。</p>
+<h3 id="292-http">29.2 基于 HTTP 的流媒体协议</h3>
+<ul>
+<li><strong>HLS（HTTP Live Streaming）</strong>: 由 Apple 开发的流媒体协议，使用 HTTP/HTTPS 传输视频内容，支持多种比特率的切换，适用于直播和点播。</li>
+<li><strong>DASH（Dynamic Adaptive Streaming over HTTP）</strong>: 通过分片将视频内容按质量和比特率进行动态调整，广泛支持各类终端设备。</li>
+</ul>
+<h3 id="293-http">29.3 流媒体传输的 HTTP 头部</h3>
+<ul>
+<li><strong>Content-Type</strong>: 指定媒体类型，如 <code>video/mp4</code>, <code>audio/mpeg</code>。</li>
+<li><strong>Content-Length</strong>: 指定视频或音频片段的长度，以字节为单位。</li>
+<li><strong>Accept-Ranges</strong>: 指定是否支持范围请求，通常用于视频的快进和倒退。</li>
+<li><strong>Transfer-Encoding: chunked</strong>: 用于分块传输流媒体内容，避免一次性发送过大的数据包。</li>
+</ul>
+<h3 id="294">29.4 实战示例</h3>
+<p><strong>HLS 请求示例</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nf">GET</span> <span class="nn">/stream/playlist.m3u8</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">media.example.com</span>
+</code></pre></div>
+
+<p><strong>HLS 响应示例</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Content-Type</span><span class="o">:</span> <span class="l">application/vnd.apple.mpegurl</span>
+<span class="na">Content-Length</span><span class="o">:</span> <span class="l">320</span>
+</code></pre></div>
+
+<h2 id="30-http">30. HTTP 安全性最佳实践</h2>
+<h3 id="301-https">30.1 使用 HTTPS</h3>
+<p><strong>HTTPS</strong> 是 HTTP 的加密版本，使用 SSL/TLS 协议加密数据传输，确保通信的保密性、完整性和身份验证。所有现代 Web 应用都应强制使用 HTTPS 进行数据传输。</p>
+<h3 id="302-https">30.2 强制 HTTPS</h3>
+<p>通过设置 <strong>HTTP Strict Transport Security (HSTS)</strong> 头部，可以告知浏览器在未来的请求中自动使用 HTTPS，防止中间人攻击。</p>
+<p><strong>HSTS 头部示例</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">Strict-Transport-Security: max-age=31536000; includeSubDomains</span>
+</code></pre></div>
+
+<h3 id="303">30.3 防范常见攻击</h3>
+<ul>
+<li><strong>跨站脚本攻击（XSS）</strong>: 通过使用 <strong>Content-Security-Policy (CSP)</strong> 头部限制资源的加载来源。</li>
+<li><strong>跨站请求伪造（CSRF）</strong>: 使用 CSRF 令牌（Token）来验证每个请求的合法性，防止恶意网站冒充用户发送请求。</li>
+<li><strong>点击劫持</strong>: 使用 <strong>X-Frame-Options</strong> 头部防止页面被嵌入到 iframe 中，从而避免点击劫持。</li>
+</ul>
+<h3 id="304-api">30.4 API 安全性</h3>
+<p>为 REST API 添加身份验证和授权机制，如使用 <strong>OAuth 2.0</strong> 或 <strong>JWT（JSON Web Token）</strong>，确保 API 资源只能被授权用户访问。</p>
+<h2 id="31-http">31. HTTP 状态码的高级用法</h2>
+<h3 id="311">31.1 重定向状态码</h3>
+<ul>
+<li><strong>301 Moved Permanently</strong>: 用于永久性重定向，浏览器会缓存重定向结果。</li>
+<li><strong>302 Found</strong>: 用于临时重定向，浏览器不会缓存结果。</li>
+<li><strong>303 See Other</strong>: 通常用于表单提交后重定向到另一资源，客户端应使用 GET 请求。</li>
+<li><strong>307 Temporary Redirect</strong>: 类似于 302，但要求客户端重新发起相同的请求方法（如 POST）。</li>
+<li><strong>308 Permanent Redirect</strong>: 类似于 301，但要求客户端使用相同的请求方法进行重定向。</li>
+</ul>
+<h3 id="312">31.2 客户端错误状态码</h3>
+<ul>
+<li><strong>400 Bad Request</strong>: 表示请求格式错误或参数无效。</li>
+<li><strong>401 Unauthorized</strong>: 表示请求需要身份验证。</li>
+<li><strong>403 Forbidden</strong>: 表示服务器拒绝请求，即使客户端已通过身份验证。</li>
+<li><strong>404 Not Found</strong>: 表示请求的资源不存在。</li>
+<li><strong>429 Too Many Requests</strong>: 表示客户端发送了过多请求，被限速。</li>
+</ul>
+<h3 id="313">31.3 服务器错误状态码</h3>
+<ul>
+<li><strong>500 Internal Server Error</strong>: 表示服务器内部错误，无法处理请求。</li>
+<li><strong>502 Bad Gateway</strong>: 表示服务器作为网关或代理时收到无效响应。</li>
+<li><strong>503 Service Unavailable</strong>: 表示服务器临时不可用，通常用于维护或过载。</li>
+<li><strong>504 Gateway Timeout</strong>: 表示服务器作为网关或代理时，等待另一个服务器的响应超时。</li>
+</ul>
+<h2 id="32-http-restful-api">32. HTTP 与 RESTful API</h2>
+<h3 id="321-restful-api">32.1 RESTful API 的基本原则</h3>
+<p><strong>REST（Representational State Transfer）</strong> 是一种软件架构风格，利用 HTTP 协议的语义构建面向资源的 API。RESTful API 遵循以下原则：</p>
+<ul>
+<li><strong>无状态性</strong>: 每个请求都是独立的，服务器不保存客户端的状态。</li>
+<li><strong>统一接口</strong>: 通过标准的 HTTP 方法（GET, POST, PUT, DELETE）对资源进行操作。</li>
+<li><strong>资源表示</strong>: 资源通过 URL 表示，通常使用 JSON 进行数据交换。</li>
+<li><strong>客户端-服务器架构</strong>: 客户端和服务器的职责明确分离，客户端只负责界面和用户交互。</li>
+</ul>
+<h3 id="322-restful-api">32.2 RESTful API 的设计</h3>
+<ul>
+<li><strong>资源路径</strong>: 使用名词表示资源，如 <code>/users</code> 表示用户资源。</li>
+<li><strong>HTTP 方法</strong>: 使用不同的 HTTP 方法进行资源操作，如 <code>GET /users</code> 获取用户列表，<code>POST /users</code> 创建新用户。</li>
+<li><strong>状态码</strong>: 使用适当的 HTTP 状态码表示操作结果，如 <code>201 Created</code> 表示成功创建资源。</li>
+</ul>
+<h3 id="323-restful-api">32.3 RESTful API 的版本控制</h3>
+<p>通过在 URL 或请求头中指定 API 版本号来实现版本控制，确保 API 的向后兼容性。</p>
+<p><strong>示例</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">GET /api/v1/users</span>
+</code></pre></div>
+
+<h3 id="324-restful-api">32.4 RESTful API 的安全性</h3>
+<ul>
+<li><strong>身份验证</strong>: 使用 <strong>OAuth 2.0</strong> 或 <strong>JWT</strong> 确保只有授权的用户可以访问 API。</li>
+<li><strong>速率限制</strong>: 限制客户端在一定时间内的请求数量，防止滥用 API 资源。</li>
+<li><strong>数据加密</strong>: 使用 HTTPS 确保数据在传输过程中不会被窃取或篡改。</li>
+</ul>
+<h2 id="33-http">33. HTTP 的未来发展趋势</h2>
+<h3 id="331-http3">33.1 基于 HTTP/3 的应用场景</h3>
+<p><strong>HTTP/3</strong> 基于 QUIC 协议，旨在减少连接建立时间和提高传输效率。适用于延迟敏感的应用，如视频会议、在线游戏和高频交易。</p>
+<h3 id="332">33.2 增强型安全协议</h3>
+<p>随着网络攻击的复杂性增加，未来的 HTTP 版本可能集成更多的安全特性，如基于零信任模型的身份验证和更强大的加密算法。</p>
+<h3 id="333-http">33.3 HTTP 的去中心化应用</h3>
+<p>随着 Web3 和区块链技术的发展，去中心化应用（DApps）可能会使用 HTTP 协议与智能合约交互，推动 Web 技术向去中心化方向发展。</p>
+<hr />
+<p>继续扩展 HTTP 面试手册，涵盖更多高级话题和技术细节：</p>
+<hr />
+<h2 id="34-http">34. HTTP 负载均衡</h2>
+<h3 id="341">34.1 负载均衡概述</h3>
+<p><strong>负载均衡</strong> 是指将客户端的请求分配到多个服务器上，以提高应用的可用性、性能和扩展性。负载均衡可以在不同层次进行，如 DNS 层、应用层和网络层。</p>
+<h3 id="342">34.2 负载均衡算法</h3>
+<ul>
+<li><strong>轮询（Round Robin）</strong>: 按顺序将请求分配给每个服务器。</li>
+<li><strong>加权轮询（Weighted Round Robin）</strong>: 根据服务器的权重分配请求，权重越高的服务器获得更多请求。</li>
+<li><strong>最少连接（Least Connections）</strong>: 将请求分配给当前连接数最少的服务器。</li>
+<li><strong>IP 哈希（IP Hash）</strong>: 根据客户端 IP 地址的哈希值选择服务器，确保同一 IP 的请求始终被分配到同一服务器。</li>
+</ul>
+<h3 id="343">34.3 负载均衡的实现方式</h3>
+<ul>
+<li><strong>DNS 负载均衡</strong>: 通过 DNS 将不同的 IP 地址分配给请求者，适合于较低层次的负载均衡。</li>
+<li><strong>硬件负载均衡器</strong>: 专用硬件设备，能够处理大量的流量，通常配置复杂但性能高。</li>
+<li><strong>软件负载均衡器</strong>: 软件解决方案，如 NGINX、HAProxy，具有灵活性和可配置性。</li>
+</ul>
+<h3 id="344">34.4 实战示例</h3>
+<p><strong>NGINX 配置示例</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">http</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kn">upstream</span><span class="w"> </span><span class="s">backend</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kn">server</span><span class="w"> </span><span class="s">backend1.example.com</span><span class="p">;</span>
+<span class="w">        </span><span class="kn">server</span><span class="w"> </span><span class="s">backend2.example.com</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kn">server</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kn">location</span><span class="w"> </span><span class="s">/</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kn">proxy_pass</span><span class="w"> </span><span class="s">http://backend</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="35-http">35. HTTP 缓存机制</h2>
+<h3 id="351">35.1 缓存概述</h3>
+<p><strong>缓存</strong> 机制用于减少重复请求的开销，提升应用性能和响应速度。缓存可以发生在浏览器、代理服务器和 CDN 中。</p>
+<h3 id="352-http">35.2 HTTP 缓存头部</h3>
+<ul>
+<li><strong><code>Cache-Control</code></strong>: 指定缓存指令，如 <code>max-age</code>, <code>no-cache</code>, <code>no-store</code>。</li>
+<li><strong><code>Expires</code></strong>: 指定资源过期的时间，若缓存时间过期，缓存内容被视为无效。</li>
+<li><strong><code>ETag</code></strong>: 资源的唯一标识符，客户端可以使用它来验证缓存是否仍然有效。</li>
+<li><strong><code>Last-Modified</code></strong>: 资源的最后修改时间，客户端可以根据此时间来检查资源是否更新。</li>
+</ul>
+<h3 id="353">35.3 缓存策略</h3>
+<ul>
+<li><strong>强缓存</strong>: 使用 <code>Cache-Control</code> 和 <code>Expires</code> 头部控制缓存内容的有效期。</li>
+<li><strong>协商缓存</strong>: 使用 <code>ETag</code> 或 <code>Last-Modified</code> 头部，客户端请求时检查缓存是否有效，服务器根据缓存状态决定是否返回新内容。</li>
+</ul>
+<h3 id="354">35.4 实战示例</h3>
+<p><strong>缓存请求示例</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nf">GET</span> <span class="nn">/resource</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">example.com</span>
+<span class="na">Cache-Control</span><span class="o">:</span> <span class="l">max-age=3600</span>
+</code></pre></div>
+
+<p><strong>缓存响应示例</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Cache-Control</span><span class="o">:</span> <span class="l">max-age=3600</span>
+<span class="na">ETag</span><span class="o">:</span> <span class="l">&quot;abc123&quot;</span>
+</code></pre></div>
+
+<h2 id="36-http2-http3">36. HTTP/2 和 HTTP/3 的对比</h2>
+<h3 id="361-http2">36.1 HTTP/2 的特性</h3>
+<ul>
+<li><strong>多路复用（Multiplexing）</strong>: 在一个连接上并行处理多个请求和响应，避免了队头阻塞问题。</li>
+<li><strong>头部压缩（Header Compression）</strong>: 使用 HPACK 算法压缩 HTTP 头部，减少带宽占用。</li>
+<li><strong>服务器推送（Server Push）</strong>: 允许服务器主动推送资源到客户端，减少加载时间。</li>
+</ul>
+<h3 id="362-http3">36.2 HTTP/3 的特性</h3>
+<ul>
+<li><strong>基于 QUIC 协议</strong>: HTTP/3 使用 QUIC 协议作为传输层，提供更低的延迟和更好的拥塞控制。</li>
+<li><strong>零连接建立（Zero Round Trip Time, 0-RTT）</strong>: 支持零延迟连接建立，提升连接速度。</li>
+<li><strong>更强的加密</strong>: QUIC 协议内置了加密机制，确保数据传输的安全性。</li>
+</ul>
+<h3 id="363">36.3 性能对比</h3>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>HTTP/1.1</th>
+<th>HTTP/2</th>
+<th>HTTP/3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>多路复用</td>
+<td>否</td>
+<td>是</td>
+<td>是</td>
+</tr>
+<tr>
+<td>头部压缩</td>
+<td>否</td>
+<td>是</td>
+<td>是</td>
+</tr>
+<tr>
+<td>服务器推送</td>
+<td>否</td>
+<td>是</td>
+<td>是</td>
+</tr>
+<tr>
+<td>传输层协议</td>
+<td>TCP</td>
+<td>TCP</td>
+<td>QUIC</td>
+</tr>
+<tr>
+<td>连接建立延迟</td>
+<td>高</td>
+<td>较低</td>
+<td>更低</td>
+</tr>
+</tbody>
+</table>
+<h2 id="37-http2">37. HTTP/2 流量控制</h2>
+<h3 id="371">37.1 流量控制概述</h3>
+<p><strong>流量控制</strong> 是一种机制，用于控制数据在客户端和服务器之间的传输速率，避免网络拥堵和数据丢失。</p>
+<h3 id="372-http2">37.2 HTTP/2 的流量控制机制</h3>
+<ul>
+<li><strong>窗口大小（Window Size）</strong>: 服务器和客户端使用流量控制窗口大小来控制接收数据的能力。窗口大小在 HTTP/2 中是动态调整的，确保数据传输的高效性。</li>
+</ul>
+<h3 id="373">37.3 流量控制示例</h3>
+<p><strong>设置流量控制窗口</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">SETTINGS FRAME: WINDOW_SIZE = 65535</span>
+</code></pre></div>
+
+<h2 id="38-http-api">38. HTTP 的 API 设计原则</h2>
+<h3 id="381-restful-api">38.1 RESTful API 设计</h3>
+<ul>
+<li><strong>资源的唯一性</strong>: 每个资源都有一个唯一的 URL。</li>
+<li><strong>无状态性</strong>: 每次请求都包含所有处理该请求所需的信息。</li>
+<li><strong>层次化系统</strong>: 通过中间层（如负载均衡器、缓存）提升系统的可扩展性和性能。</li>
+<li><strong>表现层</strong>: 资源通过统一的接口进行操作，通常使用 JSON 或 XML 作为数据格式。</li>
+</ul>
+<h3 id="382-api">38.2 设计良好的 API</h3>
+<ul>
+<li><strong>简洁性</strong>: API 设计应尽量简洁易懂，避免复杂的路径和参数。</li>
+<li><strong>一致性</strong>: API 的设计应保持一致性，如使用统一的命名规则和响应格式。</li>
+<li><strong>文档化</strong>: 提供详尽的 API 文档，描述每个端点的功能、请求参数和响应格式。</li>
+</ul>
+<h3 id="383">38.3 实战示例</h3>
+<p><strong>API 设计</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">GET /api/v1/users/{id}   # 获取用户信息</span>
+<span class="err">POST /api/v1/users       # 创建新用户</span>
+<span class="err">PUT /api/v1/users/{id}   # 更新用户信息</span>
+<span class="err">DELETE /api/v1/users/{id} # 删除用户</span>
+</code></pre></div>
+
+<hr />
+<p>以上是对 HTTP 相关的更详细的内容，包括负载均衡、缓存机制、HTTP/2 和 HTTP/3 的对比、流量控制、API 设计等方面。如果你还有其他问题或需要更多的详细信息，请告知我！</p>
+<h2 id="api">流量控制和API设计</h2>
+<h3 id="_3">流量控制</h3>
+<h4 id="1">1. 流量控制概述</h4>
+<p>流量控制是一种机制，旨在管理和调节数据在网络中的传输速率，以防止网络拥塞、数据丢失以及确保传输的高效性。它在客户端和服务器之间进行，尤其在高并发场景下，流量控制的有效性至关重要。</p>
+<h4 id="2">2. 流量控制的作用</h4>
+<ul>
+<li><strong>防止拥塞</strong>: 通过限制数据发送速率，避免网络带宽被超负荷使用，从而防止网络拥塞。</li>
+<li><strong>数据完整性</strong>: 控制流量可以减少数据包丢失的风险，确保数据完整传输。</li>
+<li><strong>优化资源利用</strong>: 根据接收端的处理能力动态调整发送数据的速率，避免资源浪费。</li>
+</ul>
+<h4 id="3-http2">3. HTTP/2 流量控制</h4>
+<h5 id="31-flow-control-window">3.1 流量控制窗口（Flow Control Window）</h5>
+<ul>
+<li><strong>初始窗口大小</strong>: HTTP/2 的每个连接和流都有一个初始窗口大小，默认值通常为 65,535 字节。这个值可以通过设置帧（SETTINGS FRAME）进行调整。</li>
+<li><strong>动态调整</strong>: 在数据传输过程中，接收方可以通过 <code>WINDOW_UPDATE</code> 帧动态调整窗口大小，以告知发送方其接收数据的能力。</li>
+</ul>
+<h5 id="32_1">3.2 流量控制的层次</h5>
+<ul>
+<li><strong>连接级流量控制</strong>: 控制整个 HTTP/2 连接上的流量传输，确保不会超出接收方的处理能力。</li>
+<li><strong>流级流量控制</strong>: 控制单个流的数据传输，避免某一流占用过多带宽，影响其他流的数据传输。</li>
+</ul>
+<h5 id="33_1">3.3 实战示例</h5>
+<p><strong>HTTP/2 流量控制的工作流程</strong>:
+1. 客户端与服务器建立 HTTP/2 连接，初始窗口大小为 65,535 字节。
+2. 服务器根据窗口大小，按需发送数据。
+3. 如果客户端的接收缓冲区接近满载，它会发送 <code>WINDOW_UPDATE</code> 帧，减少窗口大小。
+4. 服务器接收到更新的窗口大小后，调整数据发送速率，避免数据丢失或传输阻塞。</p>
+<h3 id="api_1">API 设计</h3>
+<h4 id="1-api">1. API 设计概述</h4>
+<p>API（应用程序接口）是应用程序之间通信的桥梁。良好的 API 设计有助于提高系统的可维护性、扩展性以及开发效率。RESTful API 是目前最流行的设计风格之一，它依赖 HTTP 协议，以资源为中心，通过标准化的操作进行数据交互。</p>
+<h4 id="2-restful-api">2. RESTful API 设计原则</h4>
+<h5 id="21">2.1 资源的唯一性</h5>
+<p>每个资源都有一个唯一的 URI 标识符，例如 <code>/users/{id}</code> 表示特定用户资源。</p>
+<h5 id="22">2.2 无状态性</h5>
+<p>每个请求都是独立的，必须包含处理该请求所需的全部信息，服务器不保留客户端状态。这种设计使得 API 更加灵活和可扩展。</p>
+<h5 id="23_1">2.3 层次化系统</h5>
+<p>API 可以通过多层架构进行设计，如加入缓存层、负载均衡器等，这些中间层提高了 API 的可扩展性和性能。</p>
+<h5 id="24">2.4 表现层</h5>
+<p>API 的操作接口统一，通常使用 JSON 或 XML 作为数据格式，这样客户端可以与不同类型的服务器交互。</p>
+<h4 id="3-api">3. API 设计最佳实践</h4>
+<h5 id="31_1">3.1 清晰简洁的路径设计</h5>
+<p>API 路径应清晰简洁，反映资源的层次结构。例如，使用 <code>/api/v1/users/{id}</code> 获取用户信息，而不是 <code>/getUserInfoById</code>.</p>
+<h5 id="32-http">3.2 使用标准的 HTTP 方法</h5>
+<ul>
+<li><strong>GET</strong>: 用于检索资源，不应对服务器状态产生副作用。</li>
+<li><strong>POST</strong>: 用于创建新资源。</li>
+<li><strong>PUT</strong>: 用于更新现有资源。</li>
+<li><strong>DELETE</strong>: 用于删除资源。</li>
+</ul>
+<h5 id="33_2">3.3 一致性和可预测性</h5>
+<p>API 的设计应保持一致性，如统一的命名规则、错误处理方式以及响应格式。这样可以减少开发者的学习成本。</p>
+<h5 id="34">3.4 版本控制</h5>
+<p>通过在路径中包含版本号（如 <code>/api/v1/</code>），可以确保 API 的向后兼容性，并在必要时进行版本升级。</p>
+<h5 id="35">3.5 安全性</h5>
+<p>API 需要考虑安全性，如使用 HTTPS 加密传输、OAuth 进行身份验证、以及避免暴露敏感信息。</p>
+<h5 id="36">3.6 实时文档</h5>
+<p>提供详尽的 API 文档，描述每个端点的功能、请求参数、响应格式、错误代码等信息。Swagger 是一个流行的工具，可以自动生成和维护 API 文档。</p>
+<h4 id="4">4. 实战示例</h4>
+<h5 id="41-api">4.1 API 路径设计</h5>
+<div class="codehilite"><pre><span></span><code><span class="err">GET /api/v1/users          # 获取所有用户</span>
+<span class="err">GET /api/v1/users/{id}     # 获取指定用户</span>
+<span class="err">POST /api/v1/users         # 创建新用户</span>
+<span class="err">PUT /api/v1/users/{id}     # 更新指定用户</span>
+<span class="err">DELETE /api/v1/users/{id}  # 删除指定用户</span>
+</code></pre></div>
+
+<h5 id="42-json">4.2 JSON 响应示例</h5>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;john@example.com&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-09-03T10:00:00Z&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h5 id="43_1">4.3 错误处理示例</h5>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">404</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;User not found&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<hr />
+<p>通过流量控制，HTTP/2 可以有效管理数据传输速率，避免拥塞；而良好的 API 设计则确保了接口的易用性、扩展性和安全性。这些都是开发高质量软件系统的关键。如果你有更多问题或需要深入探讨某一主题，请随时告诉我！</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "toc.integrate", "search.highlight", "search.suggest", "header.autohide", "footer.copyright", "footer.text", "code.annotate", "content.code", "material.nav", "material.switch"], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+    
+  </body>
+</html>

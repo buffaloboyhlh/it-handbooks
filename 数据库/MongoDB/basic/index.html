@@ -1,0 +1,6713 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="IT 手册整理">
+      
+      
+        <meta name="author" content="hlh">
+      
+      
+      
+        <link rel="prev" href="../advance/">
+      
+      
+        <link rel="next" href="../interview/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>MongoDB 基础教程 - IT-手册</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.35f28582.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mongodb" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="IT-手册" class="md-header__button md-logo" aria-label="IT-手册" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IT-手册
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              MongoDB 基础教程
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="IT-手册" class="md-nav__button md-logo" aria-label="IT-手册" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    IT-手册
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IT-手册大全
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Web篇
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Web篇
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Django
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Django
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web%E7%AF%87/Django/advance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django 进阶教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web%E7%AF%87/Django/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django 基础教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web%E7%AF%87/Django/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web%E7%AF%87/Django/questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django 开发中遇到的问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web%E7%AF%87/Django/restful/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django RESTful
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    FastAPI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            FastAPI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web%E7%AF%87/FastAPI/advance./" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FastAPI 进阶教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web%E7%AF%87/FastAPI/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FastAPI 基础教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web%E7%AF%87/FastAPI/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FastAPI 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Flask
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Flask
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web%E7%AF%87/Flask/advance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Advance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web%E7%AF%87/Flask/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web%E7%AF%87/Flask/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web%E7%AF%87/Flask/questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    工作中常见问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    中间件
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            中间件
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Kafka
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Kafka
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kafka 基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kafka 面试
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Rabbitmq
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Rabbitmq
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/rabbitmq/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RabbitMQ 基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/rabbitmq/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RabbitMQ 面试
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Zookeeper
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Zookeeper
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/zookeeper/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    zookeeper 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/zookeeper/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    zookeeper 面试
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    云原生
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            云原生
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Docker
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker-基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker 面试
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Kubernetes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Kubernetes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kubernetes 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/crictl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    crictl 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/helm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kubernetes 包管理工具 helm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kubernetes 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/monitor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kubernetes 监控平台和日志管理
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    人工智能
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            人工智能
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/AI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/Transformers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transformers 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/advance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLM 进阶教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/ai-basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI 概念
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    基础教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLM 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/langchain/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LangChain 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    工具篇
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            工具篇
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    git 命令
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    数据库
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            数据库
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Elastic
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            Elastic
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Elastic/advance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ElastciSearch 进阶教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Elastic/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ElasticSearch 基本教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Elastic/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ElasticSearch 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Elastic/questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ElasticSearch 工作中遇到的问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MongoDB
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            MongoDB
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MongoDB 进阶教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    MongoDB 基础教程
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    MongoDB 基础教程
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mongodb_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      MongoDB 教程：概念和操作详解
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. MongoDB 的核心概念
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. MongoDB 的核心概念">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-document" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 文档（Document）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 集合（Collection）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 数据库（Database）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-bsonbinary-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 BSON（Binary JSON）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5 索引（Index）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-replica-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6 副本集（Replica Set）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-sharding" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.7 分片（Sharding）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. MongoDB 的基本操作
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. MongoDB 的基本操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 插入文档
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 查询文档
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 更新文档
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 删除文档
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5 索引操作
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 高级操作
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 高级操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 聚合操作
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 副本集配置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 分片配置
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 数据备份与恢复
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 数据备份与恢复">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 备份数据
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 恢复数据
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 安全与用户管理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 安全与用户管理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 用户管理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 启用身份验证
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. MongoDB 高级特性详解
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. MongoDB 高级特性详解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 数据模型设计
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 MongoDB 的分片策略
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 MongoDB 聚合框架深入解析
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4 副本集高可用性配置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5 性能优化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#66" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.6 安全性配置
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. MongoDB 高级操作与工具
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. MongoDB 高级操作与工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 数据备份与恢复
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 性能监控与分析
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3 数据迁移与导入导出
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4 配置与管理工具
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#75" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.5 自动化脚本与调度
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#76" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.6 常见问题与解决方案
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. MongoDB 在分布式系统中的应用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. MongoDB 在分布式系统中的应用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1 分片集群配置与管理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2 数据一致性与故障恢复
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.3 高可用性架构
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.4 性能优化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#85" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.5 实践案例与常见问题
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. MongoDB 的安全性和权限管理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. MongoDB 的安全性和权限管理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.1 认证机制
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.2 授权与角色管理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#103" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.3 数据加密
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#104" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.4 审计与监控
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#105" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.5 网络安全
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#106" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.6 常见安全问题及解决方案
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. MongoDB 数据库优化与性能调优
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. MongoDB 数据库优化与性能调优">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.1 查询优化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.2 索引优化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.3 数据库性能监控
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#114" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.4 数据库设计优化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#115" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.5 数据备份与恢复
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#116" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.6 高可用性配置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#117" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.7 其他优化技巧
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. MongoDB 高级特性与应用场景
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. MongoDB 高级特性与应用场景">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.1 聚合框架
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.2 分片
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.3 复制与故障转移
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#124" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.4 数据恢复
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#125" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.5 数据安全
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#126" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.6 性能优化
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. MongoDB 进阶特性与应用场景
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. MongoDB 进阶特性与应用场景">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-mapreduce" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.1 MapReduce
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.2 聚合管道
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133-ttl" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.3 TTL 索引
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134-gridfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.4 GridFS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#135" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.5 事务处理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#136" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.6 数据建模
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#137" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.7 备份与恢复策略
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#138" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.8 高可用性与负载均衡
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      14. MongoDB 性能优化与调优
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. MongoDB 性能优化与调优">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141" class="md-nav__link">
+    <span class="md-ellipsis">
+      14.1 性能监控
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142" class="md-nav__link">
+    <span class="md-ellipsis">
+      14.2 索引优化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#143" class="md-nav__link">
+    <span class="md-ellipsis">
+      14.3 查询优化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#144" class="md-nav__link">
+    <span class="md-ellipsis">
+      14.4 写入优化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#145" class="md-nav__link">
+    <span class="md-ellipsis">
+      14.5 内存管理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#146-io" class="md-nav__link">
+    <span class="md-ellipsis">
+      14.6 硬盘 I/O 优化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#147" class="md-nav__link">
+    <span class="md-ellipsis">
+      14.7 数据分片与负载均衡
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#148" class="md-nav__link">
+    <span class="md-ellipsis">
+      14.8 数据备份与恢复
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      15. MongoDB 安全性与管理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15. MongoDB 安全性与管理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.1 用户认证与授权
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.2 数据加密
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#153" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.3 数据备份与恢复
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#154" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.4 数据库监控与日志
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#155" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.5 集群管理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#156" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.6 故障恢复与高可用性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#157" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.7 安全最佳实践
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      16. MongoDB 高级功能
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="16. MongoDB 高级功能">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#161" class="md-nav__link">
+    <span class="md-ellipsis">
+      16.1 聚合框架
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#162" class="md-nav__link">
+    <span class="md-ellipsis">
+      16.2 数据库复制
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#163" class="md-nav__link">
+    <span class="md-ellipsis">
+      16.3 数据分片
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#164" class="md-nav__link">
+    <span class="md-ellipsis">
+      16.4 数据持久化与持久性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#165" class="md-nav__link">
+    <span class="md-ellipsis">
+      16.5 数据恢复与灾难恢复
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#166" class="md-nav__link">
+    <span class="md-ellipsis">
+      16.6 高可用架构
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#167" class="md-nav__link">
+    <span class="md-ellipsis">
+      16.7 数据迁移与升级
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#168-mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      16.8 MongoDB 与大数据集成
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-mongodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      17. MongoDB 性能优化
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="17. MongoDB 性能优化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#171" class="md-nav__link">
+    <span class="md-ellipsis">
+      17.1 索引优化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#172" class="md-nav__link">
+    <span class="md-ellipsis">
+      17.2 查询优化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#173" class="md-nav__link">
+    <span class="md-ellipsis">
+      17.3 数据库配置优化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#174" class="md-nav__link">
+    <span class="md-ellipsis">
+      17.4 副本集和分片集群的性能优化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#175" class="md-nav__link">
+    <span class="md-ellipsis">
+      17.5 并发控制与锁优化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#176" class="md-nav__link">
+    <span class="md-ellipsis">
+      17.6 监控与调优
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#177" class="md-nav__link">
+    <span class="md-ellipsis">
+      17.7 高并发场景下的性能优化
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MongoDB 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MongoDB 工作中遇到的问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MySQL
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            MySQL
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MySQL/advance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MySQL 进阶教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MySQL/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MySQL 基础教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MySQL/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MySQL 面试题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MySQL/questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MySQL 常见问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Redis
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            Redis
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Redis/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Redis 基础教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Redis/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Redis 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Redis/questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Redis 工作中常见问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    服务器
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            服务器
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Nginx
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1">
+            <span class="md-nav__icon md-icon"></span>
+            Nginx
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%9C%8D%E5%8A%A1%E5%99%A8/nginx/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    nginx 基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%9C%8D%E5%8A%A1%E5%99%A8/nginx/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    nginx 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Uvicorn
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            Uvicorn
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%9C%8D%E5%8A%A1%E5%99%A8/uvicorn/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    uvicorn 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    计算机基础
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            计算机基础
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    http 手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/network/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    计算机网络面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/system/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    操作系统面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/websocket/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Websocket
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    语言篇
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            语言篇
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_1" id="__nav_10_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_1">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/advance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python 进阶教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    python 基础教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_1_4" id="__nav_10_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Python常用库
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Python常用库
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/Seaborn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Seaborn 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/beautifulsoup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    beautifulsoup 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/celery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    celery 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/datastruct/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构和算法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/datetime/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    datetime 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/functools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    functools 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/json/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    json 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/logging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    logging 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/math/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    math 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/matpliot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    matpliot 使用教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/mock/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    mock 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/numpy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    numpy 笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/os/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    os模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pandas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pandas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pathlib/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pathlib 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pickle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pickle 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pymysql/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pymysql 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pytest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pytest 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pytorch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pytorch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/queue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    queue 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/random/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    random 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/re/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    re 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/redis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    redis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/requests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    requests 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scikit-learn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    scikit-learn
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scipy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    scipy 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scrapy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    scrapy 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/selenium/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    selenium 使用教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/shutil/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    shutil 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/sqlalchemy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SQLALchemy 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/sys/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sys 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/time/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    time 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/urllib/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    urllib 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="mongodb">MongoDB 基础教程</h1>
+<h3 id="mongodb_1">MongoDB 教程：概念和操作详解</h3>
+<p>MongoDB 是一个开源的 NoSQL 数据库，采用文档存储方式，使用 BSON（Binary JSON）格式来存储数据。MongoDB 以其灵活的数据模型、高性能和水平扩展性而受到广泛使用。下面将详细讲解 MongoDB 的核心概念和基本操作。</p>
+<hr />
+<h3 id="1-mongodb">1. MongoDB 的核心概念</h3>
+<h4 id="11-document">1.1 文档（Document）</h4>
+<ul>
+<li><strong>概念</strong>：MongoDB 中的文档是数据的基本单位，类似于关系型数据库中的一行记录。文档以键值对的形式组织，支持嵌套数据结构，可以包含数组和子文档。</li>
+<li><strong>示例</strong>：
+  <code>json
+  {
+      "_id": ObjectId("507f1f77bcf86cd799439011"),
+      "name": "Alice",
+      "age": 25,
+      "address": {
+          "street": "123 Main St",
+          "city": "New York"
+      },
+      "hobbies": ["reading", "travelling"]
+  }</code></li>
+</ul>
+<h4 id="12-collection">1.2 集合（Collection）</h4>
+<ul>
+<li><strong>概念</strong>：集合是文档的容器，类似于关系型数据库中的表。一个集合可以存储多个文档，且文档的结构可以不同。</li>
+<li><strong>操作</strong>：
+  <code>javascript
+  db.createCollection("users")  // 创建集合</code></li>
+</ul>
+<h4 id="13-database">1.3 数据库（Database）</h4>
+<ul>
+<li><strong>概念</strong>：MongoDB 实例中包含多个数据库，每个数据库可以包含多个集合。数据库通过名称来标识。</li>
+<li><strong>操作</strong>：
+  <code>javascript
+  use mydatabase  // 切换或创建数据库
+  show dbs        // 查看所有数据库</code></li>
+</ul>
+<h4 id="14-bsonbinary-json">1.4 BSON（Binary JSON）</h4>
+<ul>
+<li><strong>概念</strong>：BSON 是一种二进制序列化格式，MongoDB 使用它来存储文档数据。BSON 具有扩展性，支持更多的数据类型（如日期、嵌套文档）以及高效的查询和索引操作。</li>
+</ul>
+<h4 id="15-index">1.5 索引（Index）</h4>
+<ul>
+<li><strong>概念</strong>：索引用于加速查询操作，类似于关系型数据库中的索引。MongoDB 支持多种类型的索引，如单字段索引、复合索引、地理空间索引等。</li>
+<li><strong>操作</strong>：
+  <code>javascript
+  db.users.createIndex({ "name": 1 })  // 为name字段创建升序索引</code></li>
+</ul>
+<h4 id="16-replica-set">1.6 副本集（Replica Set）</h4>
+<ul>
+<li><strong>概念</strong>：副本集是 MongoDB 提供的高可用性和数据冗余机制，通过多节点部署来保证数据的可靠性。副本集中一个节点为主节点（Primary），其余为从节点（Secondary）。</li>
+<li><strong>操作</strong>：
+  <code>javascript
+  rs.initiate()  // 初始化副本集</code></li>
+</ul>
+<h4 id="17-sharding">1.7 分片（Sharding）</h4>
+<ul>
+<li><strong>概念</strong>：分片是 MongoDB 的水平扩展机制，将数据分布在多个服务器上，以便处理大规模数据集和高吞吐量的操作。每个分片负责部分数据的存储和查询。</li>
+<li><strong>操作</strong>：
+  <code>javascript
+  sh.enableSharding("mydatabase")  // 启用分片</code></li>
+</ul>
+<hr />
+<h3 id="2-mongodb">2. MongoDB 的基本操作</h3>
+<h4 id="21">2.1 插入文档</h4>
+<ul>
+<li><strong>单条插入</strong>：
+  <code>javascript
+  db.users.insertOne({ "name": "Alice", "age": 25, "city": "New York" })</code></li>
+<li><strong>多条插入</strong>：
+  <code>javascript
+  db.users.insertMany([{ "name": "Bob", "age": 30 }, { "name": "Charlie", "age": 35 }])</code></li>
+</ul>
+<h4 id="22">2.2 查询文档</h4>
+<ul>
+<li><strong>查询所有文档</strong>：
+  <code>javascript
+  db.users.find()</code></li>
+<li><strong>带条件查询</strong>：
+  <code>javascript
+  db.users.find({ "age": { "$gt": 25 } })  // 查询年龄大于25的文档</code></li>
+<li><strong>投影</strong>：
+  <code>javascript
+  db.users.find({ "name": "Alice" }, { "name": 1, "city": 1, "_id": 0 })  // 仅返回name和city字段</code></li>
+</ul>
+<h4 id="23">2.3 更新文档</h4>
+<ul>
+<li><strong>更新单个文档</strong>：
+  <code>javascript
+  db.users.updateOne({ "name": "Alice" }, { "$set": { "age": 26 } })</code></li>
+<li><strong>更新多个文档</strong>：
+  <code>javascript
+  db.users.updateMany({ "city": "New York" }, { "$set": { "city": "San Francisco" } })</code></li>
+</ul>
+<h4 id="24">2.4 删除文档</h4>
+<ul>
+<li><strong>删除单个文档</strong>：
+  <code>javascript
+  db.users.deleteOne({ "name": "Alice" })</code></li>
+<li><strong>删除多个文档</strong>：
+  <code>javascript
+  db.users.deleteMany({ "age": { "$lt": 30 } })</code></li>
+</ul>
+<h4 id="25">2.5 索引操作</h4>
+<ul>
+<li><strong>创建索引</strong>：
+  <code>javascript
+  db.users.createIndex({ "age": 1 })  // 为age字段创建升序索引</code></li>
+<li><strong>查看现有索引</strong>：
+  <code>javascript
+  db.users.getIndexes()</code></li>
+<li><strong>删除索引</strong>：
+  <code>javascript
+  db.users.dropIndex("age_1")</code></li>
+</ul>
+<hr />
+<h3 id="3">3. 高级操作</h3>
+<h4 id="31">3.1 聚合操作</h4>
+<p>MongoDB 提供了强大的聚合框架，用于对文档进行复杂的数据处理。
+- <strong>示例</strong>：计算各城市的用户平均年龄：
+  <code>javascript
+  db.users.aggregate([
+      { "$group": { "_id": "$city", "averageAge": { "$avg": "$age" } } }
+  ])</code></p>
+<h4 id="32">3.2 副本集配置</h4>
+<ul>
+<li><strong>初始化副本集</strong>：
+  <code>javascript
+  rs.initiate()</code></li>
+<li><strong>添加从节点</strong>：
+  <code>javascript
+  rs.add("mongodb2.example.net:27017")</code></li>
+<li><strong>查看副本集状态</strong>：
+  <code>javascript
+  rs.status()</code></li>
+</ul>
+<h4 id="33">3.3 分片配置</h4>
+<ul>
+<li><strong>启用分片</strong>：
+  <code>javascript
+  sh.enableSharding("mydatabase")</code></li>
+<li><strong>为集合创建分片键</strong>：
+  <code>javascript
+  sh.shardCollection("mydatabase.users", { "_id": 1 })</code></li>
+</ul>
+<hr />
+<h3 id="4">4. 数据备份与恢复</h3>
+<h4 id="41">4.1 备份数据</h4>
+<ul>
+<li><strong>使用 <code>mongodump</code> 备份</strong>：
+  <code>bash
+  mongodump --db mydatabase --out /backup/mongodb/</code></li>
+</ul>
+<h4 id="42">4.2 恢复数据</h4>
+<ul>
+<li><strong>使用 <code>mongorestore</code> 恢复</strong>：
+  <code>bash
+  mongorestore --db mydatabase /backup/mongodb/mydatabase</code></li>
+</ul>
+<hr />
+<h3 id="5">5. 安全与用户管理</h3>
+<h4 id="51">5.1 用户管理</h4>
+<ul>
+<li><strong>创建管理员用户</strong>：
+  <code>javascript
+  use admin
+  db.createUser({
+      user: "admin",
+      pwd: "password",
+      roles: [{ role: "userAdminAnyDatabase", db: "admin" }]
+  })</code></li>
+<li><strong>创建普通用户</strong>：
+  <code>javascript
+  use mydatabase
+  db.createUser({
+      user: "myuser",
+      pwd: "mypassword",
+      roles: [{ role: "readWrite", db: "mydatabase" }]
+  })</code></li>
+</ul>
+<h4 id="52">5.2 启用身份验证</h4>
+<ul>
+<li><strong>配置文件启用身份验证</strong>：
+  在 <code>mongod.conf</code> 中启用：
+  <code>yaml
+  security:
+    authorization: "enabled"</code></li>
+<li><strong>使用身份验证连接</strong>：
+  <code>bash
+  mongo -u "admin" -p "password" --authenticationDatabase "admin"</code></li>
+</ul>
+<hr />
+<h3 id="6-mongodb">6. MongoDB 高级特性详解</h3>
+<h4 id="61">6.1 数据模型设计</h4>
+<p>在 MongoDB 中，数据模型设计需要根据应用场景和查询需求进行优化。以下是几种常见的设计模式：</p>
+<ul>
+<li>
+<p><strong>嵌套文档</strong>：适用于一对多或多对多关系，嵌套文档能将相关数据存储在一起，减少查询次数。
+  <code>json
+  {
+      "_id": 1,
+      "name": "Bookstore",
+      "books": [
+          { "title": "Book A", "author": "Author X" },
+          { "title": "Book B", "author": "Author Y" }
+      ]
+  }</code></p>
+</li>
+<li>
+<p><strong>引用（References）</strong>：当数据量较大或需要独立查询时，使用引用模式，通过外键进行关联。
+  <code>json
+  {
+      "_id": 1,
+      "name": "Author X"
+  }</code>
+  <code>json
+  {
+      "_id": 101,
+      "title": "Book A",
+      "author_id": 1
+  }</code></p>
+</li>
+<li>
+<p><strong>归档模式</strong>：对于大量历史数据，可以通过时间戳或其他条件将旧数据归档至独立的集合或数据库，优化查询性能。</p>
+</li>
+</ul>
+<h4 id="62-mongodb">6.2 MongoDB 的分片策略</h4>
+<p>MongoDB 的分片机制能够有效地管理海量数据，以下是常见的分片策略：</p>
+<ul>
+<li>
+<p><strong>哈希分片（Hashed Sharding）</strong>：根据文档键的哈希值进行分片，适合均匀分布的写操作。
+  <code>javascript
+  sh.shardCollection("mydatabase.users", { "_id": "hashed" })</code></p>
+</li>
+<li>
+<p><strong>范围分片（Range Sharding）</strong>：根据文档键的范围进行分片，适合有序数据的查询。
+  <code>javascript
+  sh.shardCollection("mydatabase.orders", { "order_date": 1 })</code></p>
+</li>
+<li>
+<p><strong>标签分片（Tag Aware Sharding）</strong>：为分片添加标签，分配数据到特定的数据中心或区域，适合地理分布的数据管理。</p>
+</li>
+</ul>
+<h4 id="63-mongodb">6.3 MongoDB 聚合框架深入解析</h4>
+<p>MongoDB 聚合框架用于对集合中的数据进行复杂的数据处理和分析操作。以下是一些常用的聚合操作：</p>
+<ul>
+<li>
+<p><strong><code>$match</code></strong>：用于过滤文档，类似于 SQL 的 WHERE 子句。
+  <code>javascript
+  db.orders.aggregate([
+      { "$match": { "status": "shipped" } }
+  ])</code></p>
+</li>
+<li>
+<p><strong><code>$group</code></strong>：用于对文档进行分组，并可以对每组数据进行操作，类似于 SQL 的 GROUP BY。
+  <code>javascript
+  db.orders.aggregate([
+      { "$group": { "_id": "$customerId", "totalAmount": { "$sum": "$amount" } } }
+  ])</code></p>
+</li>
+<li>
+<p><strong><code>$lookup</code></strong>：用于在不同集合之间进行联表查询，类似于 SQL 的 JOIN。
+  <code>javascript
+  db.orders.aggregate([
+      {
+          "$lookup": {
+              "from": "customers",
+              "localField": "customerId",
+              "foreignField": "_id",
+              "as": "customerDetails"
+          }
+      }
+  ])</code></p>
+</li>
+<li>
+<p><strong><code>$unwind</code></strong>：用于将数组字段中的每个元素解构为单独的文档。
+  <code>javascript
+  db.orders.aggregate([
+      { "$unwind": "$items" }
+  ])</code></p>
+</li>
+<li>
+<p><strong><code>$project</code></strong>：用于选择文档中的特定字段，并对这些字段进行重命名或计算。
+  <code>javascript
+  db.orders.aggregate([
+      { "$project": { "customerId": 1, "totalAmount": { "$sum": "$items.price" } } }
+  ])</code></p>
+</li>
+</ul>
+<h4 id="64">6.4 副本集高可用性配置</h4>
+<p>副本集是 MongoDB 提供的容错机制，通过多节点部署来保证数据的高可用性和可靠性。</p>
+<ul>
+<li>
+<p><strong>配置仲裁节点</strong>：仲裁节点（Arbiter）用于选举主节点，但不存储数据。
+  <code>javascript
+  rs.addArb("arbiter.example.net:27017")</code></p>
+</li>
+<li>
+<p><strong>更改优先级</strong>：调整从节点的优先级，使其在主节点故障时能够更快成为新的主节点。
+  <code>javascript
+  rs.reconfig({
+      _id: "rs0",
+      members: [
+          { _id: 0, host: "mongodb1.example.net:27017", priority: 2 },
+          { _id: 1, host: "mongodb2.example.net:27017", priority: 0.5 }
+      ]
+  })</code></p>
+</li>
+<li>
+<p><strong>设置延迟同步</strong>：配置某些从节点延迟同步数据，以备在误删除数据时进行数据恢复。
+  <code>javascript
+  rs.add({
+      host: "mongodb3.example.net:27017",
+      priority: 0,
+      slaveDelay: 3600  // 延迟1小时同步
+  })</code></p>
+</li>
+</ul>
+<h4 id="65">6.5 性能优化</h4>
+<p>MongoDB 的性能优化涉及多个方面，从硬件配置到查询优化。</p>
+<ul>
+<li><strong>查询优化</strong>：</li>
+<li><strong>使用索引</strong>：确保常用的查询字段有索引支持。
+    <code>javascript
+    db.users.createIndex({ "email": 1 })</code></li>
+<li>
+<p><strong>避免扫描整个集合</strong>：使用 <code>limit</code> 限制返回的文档数量，减少内存使用。
+    <code>javascript
+    db.orders.find().limit(100)</code></p>
+</li>
+<li>
+<p><strong>硬件配置</strong>：</p>
+</li>
+<li><strong>增加 RAM</strong>：MongoDB 会尽量将常用数据放入内存，增加 RAM 可以提升查询性能。</li>
+<li>
+<p><strong>使用 SSD</strong>：高 IOPS 的 SSD 可以显著提升写操作的性能。</p>
+</li>
+<li>
+<p><strong>分片集群调优</strong>：</p>
+</li>
+<li><strong>合理分片键</strong>：选择能均匀分布写操作的分片键。</li>
+<li><strong>监控和调整分片</strong>：定期监控分片的负载，必要时手动均衡数据。</li>
+</ul>
+<h4 id="66">6.6 安全性配置</h4>
+<p>MongoDB 的安全性配置至关重要，尤其是在生产环境中。</p>
+<ul>
+<li>
+<p><strong>启用认证</strong>：
+  在生产环境中，必须启用用户认证，防止未经授权的访问。
+  <code>yaml
+  security:
+    authorization: enabled</code></p>
+</li>
+<li>
+<p><strong>启用 SSL/TLS</strong>：
+  使用 SSL/TLS 加密客户端与服务器之间的通信，保护敏感数据。
+  <code>yaml
+  net:
+    ssl:
+      mode: requireSSL
+      PEMKeyFile: /path/to/ssl/mongodb.pem</code></p>
+</li>
+<li>
+<p><strong>设置防火墙</strong>：
+  只允许可信 IP 地址访问 MongoDB 实例，配置服务器的防火墙以限制访问。</p>
+</li>
+<li>
+<p><strong>备份与恢复的安全性</strong>：
+  确保备份文件的安全性，使用加密的备份存储，并定期测试恢复流程。</p>
+</li>
+</ul>
+<hr />
+<h3 id="7-mongodb">7. MongoDB 高级操作与工具</h3>
+<h4 id="71">7.1 数据备份与恢复</h4>
+<p>在生产环境中，定期备份数据是必不可少的。MongoDB 提供了多种数据备份与恢复的方式。</p>
+<ul>
+<li><strong><code>mongodump</code> 和 <code>mongorestore</code></strong>：<code>mongodump</code> 用于备份数据库，<code>mongorestore</code> 用于从备份中恢复数据。</li>
+</ul>
+<p><code>bash
+  mongodump --db mydatabase --out /backup/mongodump/
+  mongorestore --db mydatabase /backup/mongodump/mydatabase/</code></p>
+<ul>
+<li><strong>Oplog 备份</strong>：对于副本集，除了常规备份，还可以备份 Oplog（操作日志），实现增量备份。</li>
+</ul>
+<p><code>bash
+  mongodump --oplog --db mydatabase --out /backup/oplogdump/
+  mongorestore --oplogReplay --db mydatabase /backup/oplogdump/</code></p>
+<ul>
+<li><strong>快照备份</strong>：使用文件系统的快照功能，可以在不停止 MongoDB 服务的情况下进行备份。适用于有高可用性要求的生产环境。</li>
+</ul>
+<p><code>bash
+  lvcreate --size 10G --snapshot --name mdb_backup /dev/vg0/mongodb</code></p>
+<h4 id="72">7.2 性能监控与分析</h4>
+<p>对 MongoDB 的性能监控有助于提前发现潜在问题，并优化数据库配置。</p>
+<ul>
+<li><strong><code>mongostat</code></strong>：实时查看 MongoDB 的关键性能指标，如查询、插入、更新、删除的速率等。</li>
+</ul>
+<p><code>bash
+  mongostat --host mongodb.example.net --port 27017</code></p>
+<ul>
+<li><strong><code>mongotop</code></strong>：实时查看 MongoDB 各集合的读写操作耗时，帮助识别性能瓶颈。</li>
+</ul>
+<p><code>bash
+  mongotop 5</code></p>
+<ul>
+<li><strong>慢查询日志</strong>：配置 MongoDB 记录慢查询日志，帮助分析和优化慢查询。</li>
+</ul>
+<p><code>yaml
+  operationProfiling:
+    slowOpThresholdMs: 100  # 记录超过 100 毫秒的查询
+    mode: all</code></p>
+<ul>
+<li><strong>监控工具</strong>：使用外部监控工具（如 MongoDB Atlas、Prometheus、Grafana 等）来监控 MongoDB 的性能和资源使用。</li>
+</ul>
+<h4 id="73">7.3 数据迁移与导入导出</h4>
+<p>在实际场景中，可能需要将数据从一个 MongoDB 实例迁移到另一个实例，或者从其他数据库导入数据。</p>
+<ul>
+<li><strong><code>mongoimport</code> 和 <code>mongoexport</code></strong>：用于将 JSON 或 CSV 格式的数据导入到 MongoDB，或从 MongoDB 导出数据。</li>
+</ul>
+<p><code>bash
+  mongoexport --db mydatabase --collection mycollection --out /backup/export.json
+  mongoimport --db newdatabase --collection newcollection --file /backup/export.json</code></p>
+<ul>
+<li><strong><code>mongorestore</code> 跨版本迁移</strong>：在 MongoDB 的不同版本之间迁移数据时，建议使用 <code>mongodump</code> 和 <code>mongorestore</code> 进行迁移，确保数据兼容性。</li>
+</ul>
+<p><code>bash
+  mongodump --uri "mongodb://oldserver:27017" --archive=/backup/dump.archive
+  mongorestore --uri "mongodb://newserver:27017" --archive=/backup/dump.archive</code></p>
+<ul>
+<li><strong>数据同步工具</strong>：使用 <code>mongo-sync</code> 等工具，自动同步两个 MongoDB 实例的数据，适用于持续数据迁移或分布式数据库的同步。</li>
+</ul>
+<h4 id="74">7.4 配置与管理工具</h4>
+<p>MongoDB 提供了多种工具和命令来配置和管理数据库。</p>
+<ul>
+<li><strong><code>mongo</code> shell</strong>：MongoDB 的交互式 shell，支持 JavaScript 语法，常用于直接管理数据库。</li>
+</ul>
+<p><code>javascript
+  // 连接数据库
+  mongo --host mongodb.example.net --port 27017
+  // 直接执行查询
+  db.users.find({ age: { $gt: 18 } })</code></p>
+<ul>
+<li>
+<p><strong>MongoDB Atlas</strong>：MongoDB 官方提供的云服务平台，支持自动化的数据库部署、管理和监控。适合不想自行管理数据库的开发团队。</p>
+</li>
+<li>
+<p><strong><code>mongos</code></strong>：用于分片集群的路由服务，<code>mongos</code> 实例负责将查询请求路由到正确的分片。</p>
+</li>
+</ul>
+<p><code>bash
+  mongos --configdb configReplSet/host1:27019,host2:27019,host3:27019 --bind_ip 0.0.0.0</code></p>
+<ul>
+<li><strong><code>mongo-express</code></strong>：一个基于 web 的 MongoDB 管理工具，提供图形化界面来查看和管理数据库中的数据。</li>
+</ul>
+<p><code>bash
+  docker run -it --rm -p 8081:8081 -e ME_CONFIG_MONGODB_ADMINUSERNAME=admin -e ME_CONFIG_MONGODB_ADMINPASSWORD=password mongo-express</code></p>
+<h4 id="75">7.5 自动化脚本与调度</h4>
+<p>在大规模的生产环境中，自动化脚本和调度任务至关重要。</p>
+<ul>
+<li><strong>Cron Jobs</strong>：利用 Linux 的 cron 来定期执行 MongoDB 备份、清理或其他管理任务。</li>
+</ul>
+<p><code>bash
+  0 3 * * * /usr/bin/mongodump --db mydatabase --out /backup/mongodump/</code></p>
+<ul>
+<li><strong>自定义脚本</strong>：编写自定义的 Python、Shell 等脚本来批量管理 MongoDB 数据库，例如定期清理过期数据或合并集合。</li>
+</ul>
+<p><code>python
+  # 示例：定期清理过期的 session 数据
+  from pymongo import MongoClient
+  client = MongoClient('mongodb://localhost:27017/')
+  db = client.mydatabase
+  result = db.sessions.delete_many({"expireAt": {"$lt": datetime.utcnow()}})</code></p>
+<ul>
+<li><strong>Ansible 等自动化工具</strong>：使用 Ansible 等配置管理工具自动化部署和管理 MongoDB 集群。</li>
+</ul>
+<p><code>yaml
+  - name: Install MongoDB
+    apt:
+      name: mongodb-org
+      state: present</code></p>
+<h4 id="76">7.6 常见问题与解决方案</h4>
+<p>在实际操作中，你可能会遇到各种问题，以下是一些常见问题的解决方案：</p>
+<ul>
+<li><strong>连接问题</strong>：如果无法连接到 MongoDB 实例，检查防火墙设置、MongoDB 服务状态以及网络配置。</li>
+</ul>
+<p><code>bash
+  sudo ufw allow 27017  # 允许 MongoDB 默认端口</code></p>
+<ul>
+<li><strong>性能下降</strong>：当 MongoDB 性能下降时，检查索引是否合理配置，是否有慢查询，磁盘是否达到瓶颈。</li>
+</ul>
+<p><code>bash
+  iostat -dx 5  # 查看磁盘 I/O 性能</code></p>
+<ul>
+<li><strong>内存占用过高</strong>：当 MongoDB 内存占用过高时，检查内存配置，是否有大量未关闭的游标，或未优化的查询。</li>
+</ul>
+<p><code>javascript
+  db.serverStatus().metrics.cursor  # 检查游标状态</code></p>
+<ul>
+<li><strong>数据丢失</strong>：如果发生数据丢失，首先检查备份是否可用，然后考虑使用 Oplog 回滚或延迟同步节点恢复数据。</li>
+</ul>
+<hr />
+<h3 id="8-mongodb">8. MongoDB 在分布式系统中的应用</h3>
+<h4 id="81">8.1 分片集群配置与管理</h4>
+<p>MongoDB 的分片机制允许将数据分布在多个服务器上，以实现水平扩展。以下是分片集群的配置与管理：</p>
+<ul>
+<li><strong>设置分片集群</strong>：</li>
+<li><strong>配置服务器</strong>：用于存储集群的元数据。
+    <code>bash
+    mongod --configsvr --replSet configReplSet --port 27019 --dbpath /data/configdb</code></li>
+<li><strong>分片服务器</strong>：存储实际的数据。
+    <code>bash
+    mongod --shardsvr --replSet shardReplSet1 --port 27018 --dbpath /data/shard1</code></li>
+<li>
+<p><strong>路由服务器（mongos）</strong>：用于处理客户端请求，并将请求路由到合适的分片。
+    <code>bash
+    mongos --configdb configReplSet/host1:27019,host2:27019,host3:27019 --bind_ip 0.0.0.0</code></p>
+</li>
+<li>
+<p><strong>添加和删除分片</strong>：</p>
+</li>
+<li><strong>添加分片</strong>：
+    <code>javascript
+    sh.addShard("shardReplSet1/host1:27018,host2:27018")</code></li>
+<li>
+<p><strong>删除分片</strong>：
+    <code>javascript
+    sh.removeShard("shardReplSet1/host1:27018")</code></p>
+</li>
+<li>
+<p><strong>数据均衡</strong>：MongoDB 会自动平衡数据以确保各个分片的负载均衡。
+  <code>javascript
+  sh.startBalancer()  // 启动数据均衡器
+  sh.stopBalancer()   // 停止数据均衡器</code></p>
+</li>
+</ul>
+<h4 id="82">8.2 数据一致性与故障恢复</h4>
+<p>在分布式环境中，确保数据一致性和处理故障恢复是至关重要的。</p>
+<ul>
+<li><strong>一致性级别</strong>：</li>
+<li>
+<p><strong>读写一致性</strong>：MongoDB 提供了读写一致性级别的配置，允许在不同的场景下选择适合的一致性保证。
+    <code>javascript
+    db.collection.find({ query }, { readConcern: { level: "majority" } })
+    db.collection.update({ query }, { $set: { field: value } }, { writeConcern: { w: "majority" } })</code></p>
+</li>
+<li>
+<p><strong>故障恢复</strong>：</p>
+</li>
+<li><strong>主节点故障转移</strong>：MongoDB 的副本集支持自动故障转移，主节点失败时，副本集会选举新的主节点。</li>
+<li>
+<p><strong>备份恢复</strong>：利用备份和 Oplog（操作日志）恢复数据。
+    <code>bash
+    mongorestore --oplogReplay --db mydatabase /backup/oplogdump/</code></p>
+</li>
+<li>
+<p><strong>读写分离</strong>：在副本集环境中，可以配置应用程序进行读写分离，以提高性能和可用性。
+  <code>javascript
+  const client = new MongoClient(uri, {
+    readPreference: 'secondaryPreferred',
+  });</code></p>
+</li>
+</ul>
+<h4 id="83">8.3 高可用性架构</h4>
+<p>MongoDB 的高可用性架构设计包括以下几个方面：</p>
+<ul>
+<li><strong>副本集配置</strong>：</li>
+<li><strong>主节点和从节点</strong>：副本集由一个主节点和多个从节点组成，主节点处理所有的写操作，从节点用于读操作和数据备份。</li>
+<li>
+<p><strong>仲裁节点</strong>：用于参与选举过程，不存储数据，但参与副本集的选举。
+    <code>javascript
+    rs.addArb("arbiter.example.net:27017")</code></p>
+</li>
+<li>
+<p><strong>多数据中心部署</strong>：在多个数据中心部署 MongoDB 实例，可以提高灾难恢复能力。</p>
+</li>
+<li>
+<p><strong>标签分片</strong>：根据地理位置或数据中心标签进行分片，实现更细粒度的数据分布。</p>
+</li>
+<li>
+<p><strong>备份和恢复</strong>：定期备份和测试恢复过程，确保数据在任何情况下都可以恢复。</p>
+</li>
+</ul>
+<h4 id="84">8.4 性能优化</h4>
+<p>MongoDB 性能优化涉及数据库的各个方面，包括查询优化、索引优化、硬件配置等。</p>
+<ul>
+<li><strong>索引优化</strong>：</li>
+<li><strong>复合索引</strong>：对于多字段查询，使用复合索引以提高查询效率。
+    <code>javascript
+    db.orders.createIndex({ "customerId": 1, "orderDate": -1 })</code></li>
+<li>
+<p><strong>覆盖索引</strong>：尽量使用覆盖索引以避免额外的查询操作。
+    <code>javascript
+    db.orders.find({ "customerId": 1 }, { "orderDate": 1 }).hint({ "customerId": 1 })</code></p>
+</li>
+<li>
+<p><strong>查询优化</strong>：</p>
+</li>
+<li><strong>优化查询条件</strong>：确保查询条件使用索引，避免全表扫描。</li>
+<li>
+<p><strong>使用聚合框架</strong>：利用 MongoDB 的聚合框架处理复杂的数据分析任务。</p>
+</li>
+<li>
+<p><strong>硬件配置</strong>：</p>
+</li>
+<li><strong>内存配置</strong>：确保数据库有足够的内存来缓存热点数据。</li>
+<li>
+<p><strong>SSD 磁盘</strong>：使用 SSD 磁盘提升 I/O 性能。</p>
+</li>
+<li>
+<p><strong>数据库分片和负载均衡</strong>：</p>
+</li>
+<li><strong>合理分片</strong>：选择适合的分片键，并监控数据分布，确保数据均匀分布。</li>
+<li><strong>负载均衡</strong>：利用 <code>mongos</code> 负载均衡客户端请求，提升查询性能。</li>
+</ul>
+<h4 id="85">8.5 实践案例与常见问题</h4>
+<p>以下是一些 MongoDB 的实践案例和常见问题：</p>
+<ul>
+<li><strong>案例：电商系统</strong>：</li>
+<li><strong>需求</strong>：高并发、实时分析、数据分布式存储。</li>
+<li>
+<p><strong>解决方案</strong>：使用分片集群存储订单数据，利用副本集保证高可用性，使用聚合框架进行实时数据分析。</p>
+</li>
+<li>
+<p><strong>案例：社交网络应用</strong>：</p>
+</li>
+<li><strong>需求</strong>：大规模用户数据、快速读写、实时推荐。</li>
+<li>
+<p><strong>解决方案</strong>：使用嵌套文档存储用户动态，设置索引提升查询速度，利用副本集和分片集群确保系统的高可用性和性能。</p>
+</li>
+<li>
+<p><strong>常见问题</strong>：</p>
+</li>
+<li><strong>性能瓶颈</strong>：检查索引是否优化，使用性能监控工具进行调优。</li>
+<li><strong>数据不一致</strong>：确认副本集配置正确，检查网络延迟和数据同步问题。</li>
+<li><strong>故障恢复</strong>：定期测试备份恢复过程，确保备份可用性。</li>
+</ul>
+<hr />
+<h3 id="10-mongodb">10. MongoDB 的安全性和权限管理</h3>
+<h4 id="101">10.1 认证机制</h4>
+<p>MongoDB 提供了多种认证机制，以确保只有授权用户能够访问数据库。</p>
+<ul>
+<li><strong>用户名和密码认证</strong>：</li>
+<li><strong>创建用户</strong>：
+    <code>javascript
+    use admin
+    db.createUser({
+      user: "myUser",
+      pwd: "myPassword",
+      roles: [ { role: "readWrite", db: "myDatabase" } ]
+    })</code></li>
+<li>
+<p><strong>连接时提供认证信息</strong>：
+    <code>bash
+    mongo --username myUser --password myPassword --authenticationDatabase myDatabase</code></p>
+</li>
+<li>
+<p><strong>X.509 认证</strong>：</p>
+</li>
+<li>通过客户端证书进行认证，适用于需要更高安全性的场景。</li>
+<li>
+<p><strong>配置</strong>：
+    <code>yaml
+    security:
+      authorization: enabled
+      clusterAuthMode: x509</code></p>
+</li>
+<li>
+<p><strong>LDAP 认证</strong>：</p>
+</li>
+<li>通过 LDAP 服务器进行用户认证，适用于企业环境中的集中式用户管理。</li>
+<li><strong>配置</strong>：
+    <code>yaml
+    security:
+      ldap:
+        servers: ["ldap://ldap.example.com"]
+        bind:
+          method: "simple"
+          dn: "cn=admin,dc=example,dc=com"
+          password: "password"
+        userToDNMapping:
+          map:
+            - user: "uid={0},ou=users,dc=example,dc=com"</code></li>
+</ul>
+<h4 id="102">10.2 授权与角色管理</h4>
+<p>MongoDB 使用角色基于访问控制（RBAC）来管理用户权限。</p>
+<ul>
+<li><strong>创建角色</strong>：</li>
+<li><strong>内置角色</strong>：如 <code>read</code>, <code>readWrite</code>, <code>dbAdmin</code>, <code>clusterAdmin</code> 等，适用于常见的权限需求。</li>
+<li>
+<p><strong>自定义角色</strong>：
+    <code>javascript
+    db.createRole({
+      role: "customRole",
+      privileges: [
+        { resource: { db: "myDatabase", collection: "" }, actions: [ "find", "insert" ] }
+      ],
+      roles: []
+    })</code></p>
+</li>
+<li>
+<p><strong>分配角色</strong>：</p>
+</li>
+<li>
+<p><strong>给用户分配角色</strong>：
+    <code>javascript
+    use admin
+    db.grantRolesToUser("myUser", [ "customRole" ])</code></p>
+</li>
+<li>
+<p><strong>角色权限检查</strong>：</p>
+</li>
+<li><strong>查看角色权限</strong>：
+    <code>javascript
+    use admin
+    db.getRole("customRole", { showPrivileges: true })</code></li>
+</ul>
+<h4 id="103">10.3 数据加密</h4>
+<p>MongoDB 提供了多种数据加密选项，以保护数据的安全性。</p>
+<ul>
+<li><strong>加密静态数据</strong>（Encryption at Rest）：</li>
+<li>
+<p><strong>启用数据加密</strong>：
+    <code>yaml
+    security:
+      encryption:
+        keyFile: /path/to/encryptionKeyFile</code></p>
+</li>
+<li>
+<p><strong>加密传输数据</strong>（Encryption in Transit）：</p>
+</li>
+<li>
+<p><strong>启用 TLS/SSL</strong>：
+    <code>yaml
+    net:
+      ssl:
+        mode: requireSSL
+        PEMKeyFile: /path/to/server.pem</code></p>
+</li>
+<li>
+<p><strong>加密备份数据</strong>：</p>
+</li>
+<li><strong>加密备份文件</strong>：
+    <code>bash
+    gpg --output backup.gpg --encrypt backup.tar</code></li>
+</ul>
+<h4 id="104">10.4 审计与监控</h4>
+<p>审计与监控可以帮助跟踪数据库活动，确保数据库安全性。</p>
+<ul>
+<li><strong>启用审计日志</strong>：</li>
+<li>
+<p><strong>配置审计日志</strong>：
+    <code>yaml
+    systemLog:
+      destination: file
+      path: /var/log/mongodb/audit.log
+    auditLog:
+      destination: file
+      format: JSON
+      filter: { "atype": { "$in": [ "authCheck", "createUser" ] } }</code></p>
+</li>
+<li>
+<p><strong>使用监控工具</strong>：</p>
+</li>
+<li><strong>MongoDB Atlas</strong>：提供全面的监控和审计功能。</li>
+<li><strong>Prometheus 和 Grafana</strong>：监控 MongoDB 性能指标，并进行可视化。</li>
+</ul>
+<h4 id="105">10.5 网络安全</h4>
+<p>保护 MongoDB 实例的网络安全，防止未经授权的访问。</p>
+<ul>
+<li><strong>防火墙配置</strong>：</li>
+<li>
+<p><strong>限制访问 IP</strong>：
+    <code>bash
+    sudo ufw allow from 192.168.1.0/24 to any port 27017</code></p>
+</li>
+<li>
+<p><strong>配置访问控制</strong>：</p>
+</li>
+<li>
+<p><strong>限制 MongoDB 实例的绑定 IP</strong>：
+    <code>yaml
+    net:
+      bindIp: 127.0.0.1</code></p>
+</li>
+<li>
+<p><strong>网络加密</strong>：</p>
+</li>
+<li><strong>启用 TLS/SSL</strong>：
+    <code>yaml
+    net:
+      tls:
+        mode: requireTLS
+        certificateKeyFile: /path/to/server.pem</code></li>
+</ul>
+<h4 id="106">10.6 常见安全问题及解决方案</h4>
+<ul>
+<li><strong>未授权访问</strong>：</li>
+<li>
+<p>确保 MongoDB 实例启用了认证和授权功能，并且正确配置了用户角色。</p>
+</li>
+<li>
+<p><strong>数据泄露</strong>：</p>
+</li>
+<li>
+<p>启用加密功能，保护静态数据和传输数据的安全性。</p>
+</li>
+<li>
+<p><strong>漏洞攻击</strong>：</p>
+</li>
+<li>
+<p>定期更新 MongoDB 到最新版本，修补已知漏洞，避免使用默认配置。</p>
+</li>
+<li>
+<p><strong>配置错误</strong>：</p>
+</li>
+<li>仔细审查配置文件，确保所有安全设置符合最佳实践。</li>
+</ul>
+<hr />
+<h3 id="11-mongodb">11. MongoDB 数据库优化与性能调优</h3>
+<h4 id="111">11.1 查询优化</h4>
+<p>优化 MongoDB 查询以提高性能，主要包括以下几个方面：</p>
+<ul>
+<li><strong>使用索引</strong>：</li>
+<li><strong>创建索引</strong>：为常用查询字段创建索引，提高查询效率。
+    <code>javascript
+    db.collection.createIndex({ "field": 1 })</code></li>
+<li>
+<p><strong>复合索引</strong>：为多个字段创建复合索引，优化复杂查询。
+    <code>javascript
+    db.collection.createIndex({ "field1": 1, "field2": -1 })</code></p>
+</li>
+<li>
+<p><strong>使用覆盖索引</strong>：</p>
+</li>
+<li>
+<p>确保查询只返回索引中包含的字段，避免读取完整文档。
+    <code>javascript
+    db.collection.find({ "field1": value }, { "field2": 1 }).hint({ "field1": 1 })</code></p>
+</li>
+<li>
+<p><strong>避免全表扫描</strong>：</p>
+</li>
+<li>确保查询使用索引，避免不必要的全表扫描。</li>
+<li>
+<p><strong>优化查询条件</strong>：使用索引字段进行查询，并避免使用不支持索引的操作符（如 <code>$regex</code>）。</p>
+</li>
+<li>
+<p><strong>查询性能分析</strong>：</p>
+</li>
+<li><strong>使用 explain()</strong>：分析查询计划，了解查询的执行过程。
+    <code>javascript
+    db.collection.find({ "field": value }).explain("executionStats")</code></li>
+</ul>
+<h4 id="112">11.2 索引优化</h4>
+<p>索引优化是提高查询性能的关键措施之一。</p>
+<ul>
+<li><strong>选择合适的索引</strong>：</li>
+<li><strong>单字段索引</strong>：适用于简单查询。</li>
+<li><strong>复合索引</strong>：适用于涉及多个字段的查询。</li>
+<li>
+<p><strong>稀疏索引</strong>：仅对存在索引字段的文档创建索引。
+    <code>javascript
+    db.collection.createIndex({ "field": 1 }, { sparse: true })</code></p>
+</li>
+<li>
+<p><strong>索引管理</strong>：</p>
+</li>
+<li><strong>查看索引</strong>：检查集合中的索引。
+    <code>javascript
+    db.collection.getIndexes()</code></li>
+<li>
+<p><strong>删除索引</strong>：删除不再使用的索引。
+    <code>javascript
+    db.collection.dropIndex("indexName")</code></p>
+</li>
+<li>
+<p><strong>索引选择</strong>：</p>
+</li>
+<li><strong>使用 <code>hint</code></strong>：指定使用特定索引进行查询。
+    <code>javascript
+    db.collection.find({ "field": value }).hint({ "field1": 1 })</code></li>
+</ul>
+<h4 id="113">11.3 数据库性能监控</h4>
+<p>监控数据库性能，及时发现和解决性能问题。</p>
+<ul>
+<li><strong>使用 MongoDB Atlas</strong>：</li>
+<li>
+<p>提供详细的性能监控、告警和分析功能。</p>
+</li>
+<li>
+<p><strong>使用 <code>mongostat</code></strong>：</p>
+</li>
+<li>
+<p>实时监控 MongoDB 的性能指标。
+    <code>bash
+    mongostat --host &lt;host&gt; --port &lt;port&gt;</code></p>
+</li>
+<li>
+<p><strong>使用 <code>mongotop</code></strong>：</p>
+</li>
+<li>
+<p>监控每个集合的读写操作。
+    <code>bash
+    mongotop --host &lt;host&gt; --port &lt;port&gt;</code></p>
+</li>
+<li>
+<p><strong>自定义监控</strong>：</p>
+</li>
+<li>结合 Prometheus 和 Grafana，创建自定义的监控仪表板。</li>
+</ul>
+<h4 id="114">11.4 数据库设计优化</h4>
+<p>优化数据库设计以提高性能和可维护性。</p>
+<ul>
+<li><strong>模式设计</strong>：</li>
+<li>
+<p><strong>嵌套文档</strong>：适用于一对多关系，将相关数据嵌套在一个文档中，减少联接操作。
+    <code>json
+    {
+      "customer": "John Doe",
+      "orders": [
+        { "orderId": 1, "amount": 100 },
+        { "orderId": 2, "amount": 150 }
+      ]
+    }</code></p>
+</li>
+<li>
+<p><strong>引用关系</strong>：适用于多对多关系，将数据拆分到多个集合中，通过引用进行关联。
+    <code>json
+    {
+      "orderId": 1,
+      "customerId": 123
+    }</code></p>
+</li>
+<li>
+<p><strong>数据分片</strong>：</p>
+</li>
+<li>
+<p><strong>选择适当的分片键</strong>：根据查询模式选择适合的分片键，确保数据分布均衡。
+    <code>javascript
+    sh.shardCollection("myDatabase.myCollection", { "shardKey": 1 })</code></p>
+</li>
+<li>
+<p><strong>优化写操作</strong>：</p>
+</li>
+<li><strong>批量写入</strong>：使用批量写入操作减少网络往返次数。
+    <code>javascript
+    db.collection.bulkWrite([
+      { insertOne: { "document": { "field": value } } },
+      { updateOne: { "filter": { "field": value }, "update": { "$set": { "field": newValue } } } }
+    ])</code></li>
+</ul>
+<h4 id="115">11.5 数据备份与恢复</h4>
+<p>确保数据的备份和恢复操作高效可靠。</p>
+<ul>
+<li><strong>备份策略</strong>：</li>
+<li><strong>全量备份</strong>：定期进行全量备份，确保数据的完整性。
+    <code>bash
+    mongodump --out /backup/backup-`date +%Y%m%d`</code></li>
+<li>
+<p><strong>增量备份</strong>：使用 Oplog 进行增量备份，以减少备份时间和存储空间。</p>
+</li>
+<li>
+<p><strong>恢复操作</strong>：</p>
+</li>
+<li><strong>从备份恢复</strong>：
+    <code>bash
+    mongorestore /backup/backup-20230901</code></li>
+<li>
+<p><strong>使用 Oplog 恢复数据</strong>：
+    <code>bash
+    mongorestore --oplogReplay --db mydatabase /backup/oplogdump/</code></p>
+</li>
+<li>
+<p><strong>备份验证</strong>：</p>
+</li>
+<li>定期验证备份的完整性和可用性，确保在需要恢复时可以顺利恢复。</li>
+</ul>
+<h4 id="116">11.6 高可用性配置</h4>
+<p>配置高可用性以确保 MongoDB 实例在故障时能够继续服务。</p>
+<ul>
+<li><strong>副本集配置</strong>：</li>
+<li>
+<p><strong>主节点和从节点</strong>：配置副本集，主节点处理所有写操作，从节点进行数据备份和读取操作。
+    <code>javascript
+    rs.initiate({
+      _id: "rs0",
+      members: [
+        { _id: 0, host: "host1:27017" },
+        { _id: 1, host: "host2:27017" },
+        { _id: 2, host: "host3:27017" }
+      ]
+    })</code></p>
+</li>
+<li>
+<p><strong>故障转移和恢复</strong>：</p>
+</li>
+<li><strong>自动故障转移</strong>：副本集会自动选举新的主节点。</li>
+<li>
+<p><strong>手动故障转移</strong>：在发生故障时，手动将一个从节点提升为主节点。</p>
+</li>
+<li>
+<p><strong>负载均衡</strong>：</p>
+</li>
+<li><strong>读写分离</strong>：在副本集中配置读写分离，将读操作分配给从节点，提高读性能。
+    <code>javascript
+    db.getMongo().setReadPref("secondaryPreferred")</code></li>
+</ul>
+<h4 id="117">11.7 其他优化技巧</h4>
+<ul>
+<li><strong>使用内存优化</strong>：调整 MongoDB 实例的内存配置，以确保充分利用内存。</li>
+<li><strong>优化硬盘 I/O</strong>：使用高性能的 SSD 磁盘以提高 I/O 性能。</li>
+<li><strong>定期清理过期数据</strong>：设置 TTL 索引，自动删除过期数据，保持数据库的健康。</li>
+</ul>
+<hr />
+<h3 id="12-mongodb">12. MongoDB 高级特性与应用场景</h3>
+<h4 id="121">12.1 聚合框架</h4>
+<p>MongoDB 的聚合框架提供了强大的数据处理能力，可以执行复杂的数据处理任务。</p>
+<ul>
+<li><strong>基本聚合操作</strong>：</li>
+<li><strong>$match</strong>：过滤文档。
+    <code>javascript
+    db.collection.aggregate([
+      { $match: { "field": value } }
+    ])</code></li>
+<li><strong>$group</strong>：按字段分组并计算聚合值。
+    <code>javascript
+    db.collection.aggregate([
+      { $group: { _id: "$field", total: { $sum: "$amount" } } }
+    ])</code></li>
+<li>
+<p><strong>$sort</strong>：对结果进行排序。
+    <code>javascript
+    db.collection.aggregate([
+      { $sort: { "field": 1 } }
+    ])</code></p>
+</li>
+<li>
+<p><strong>复杂聚合操作</strong>：</p>
+</li>
+<li><strong>$lookup</strong>：联接两个集合。
+    <code>javascript
+    db.orders.aggregate([
+      { $lookup: {
+        from: "products",
+        localField: "productId",
+        foreignField: "productId",
+        as: "productDetails"
+      }}
+    ])</code></li>
+<li><strong>$unwind</strong>：将数组字段拆分成多个文档。
+    <code>javascript
+    db.collection.aggregate([
+      { $unwind: "$arrayField" }
+    ])</code></li>
+<li><strong>$facet</strong>：并行执行多个聚合操作。
+    <code>javascript
+    db.collection.aggregate([
+      { $facet: {
+        "totalRevenue": [ { $group: { _id: null, total: { $sum: "$revenue" } } }],
+        "topProducts": [ { $sort: { "sales": -1 } }, { $limit: 10 } ]
+      }}
+    ])</code></li>
+</ul>
+<h4 id="122">12.2 分片</h4>
+<p>分片可以水平扩展 MongoDB 实例，以处理大规模的数据。</p>
+<ul>
+<li><strong>配置分片集群</strong>：</li>
+<li>
+<p><strong>配置分片服务器</strong>：
+    <code>javascript
+    sh.addShard("shard1/host1:27017")
+    sh.addShard("shard2/host2:27017")</code></p>
+</li>
+<li>
+<p><strong>设置分片键</strong>：
+    <code>javascript
+    sh.shardCollection("myDatabase.myCollection", { "shardKey": 1 })</code></p>
+</li>
+<li>
+<p><strong>分片策略</strong>：</p>
+</li>
+<li><strong>哈希分片</strong>：将数据根据哈希值均匀分布到各个分片上。
+    <code>javascript
+    sh.shardCollection("myDatabase.myCollection", { "shardKey": "hashed" })</code></li>
+<li><strong>范围分片</strong>：将数据按照指定范围分布到各个分片上。
+    <code>javascript
+    sh.shardCollection("myDatabase.myCollection", { "shardKey": 1 })</code></li>
+</ul>
+<h4 id="123">12.3 复制与故障转移</h4>
+<p>副本集提供了高可用性，通过自动故障转移来确保服务的持续性。</p>
+<ul>
+<li><strong>副本集成员配置</strong>：</li>
+<li><strong>添加成员</strong>：
+    <code>javascript
+    rs.add("host4:27017")</code></li>
+<li>
+<p><strong>设置优先级</strong>：
+    <code>javascript
+    rs.reconfig({
+      _id: "rs0",
+      members: [
+        { _id: 0, host: "host1:27017", priority: 2 },
+        { _id: 1, host: "host2:27017", priority: 1 },
+        { _id: 2, host: "host3:27017", priority: 0.5 }
+      ]
+    })</code></p>
+</li>
+<li>
+<p><strong>故障转移</strong>：</p>
+</li>
+<li><strong>手动故障转移</strong>：
+    <code>javascript
+    rs.stepDown()</code></li>
+<li><strong>查看当前状态</strong>：
+    <code>javascript
+    rs.status()</code></li>
+</ul>
+<h4 id="124">12.4 数据恢复</h4>
+<p>数据恢复是确保数据可靠性的关键操作。</p>
+<ul>
+<li><strong>使用备份恢复数据</strong>：</li>
+<li><strong>从备份恢复</strong>：
+    <code>bash
+    mongorestore /backup/backup-20230901</code></li>
+<li>
+<p><strong>增量恢复</strong>：使用 Oplog 进行增量恢复。
+    <code>bash
+    mongorestore --oplogReplay --db mydatabase /backup/oplogdump/</code></p>
+</li>
+<li>
+<p><strong>数据迁移</strong>：</p>
+</li>
+<li><strong>使用 <code>mongodump</code> 和 <code>mongorestore</code> 迁移数据</strong>：
+    <code>bash
+    mongodump --uri="mongodb://sourceHost:27017" --out /backup/sourceData
+    mongorestore --uri="mongodb://destinationHost:27017" /backup/sourceData</code></li>
+</ul>
+<h4 id="125">12.5 数据安全</h4>
+<p>确保数据在存储和传输过程中的安全性。</p>
+<ul>
+<li><strong>加密静态数据</strong>（Encryption at Rest）：</li>
+<li>
+<p><strong>配置数据加密</strong>：
+    <code>yaml
+    security:
+      encryption:
+        keyFile: /path/to/encryptionKeyFile</code></p>
+</li>
+<li>
+<p><strong>加密传输数据</strong>（Encryption in Transit）：</p>
+</li>
+<li>
+<p><strong>启用 TLS/SSL</strong>：
+    <code>yaml
+    net:
+      tls:
+        mode: requireTLS
+        certificateKeyFile: /path/to/server.pem</code></p>
+</li>
+<li>
+<p><strong>数据访问控制</strong>：</p>
+</li>
+<li><strong>使用角色基于访问控制（RBAC）</strong>：
+    <code>javascript
+    db.createUser({
+      user: "myUser",
+      pwd: "myPassword",
+      roles: [ { role: "readWrite", db: "myDatabase" } ]
+    })</code></li>
+</ul>
+<h4 id="126">12.6 性能优化</h4>
+<p>提升 MongoDB 性能的关键措施包括优化查询、索引和配置。</p>
+<ul>
+<li><strong>查询优化</strong>：</li>
+<li><strong>使用索引</strong>：
+    <code>javascript
+    db.collection.createIndex({ "field": 1 })</code></li>
+<li>
+<p><strong>使用 <code>explain()</code></strong>：
+    <code>javascript
+    db.collection.find({ "field": value }).explain("executionStats")</code></p>
+</li>
+<li>
+<p><strong>索引优化</strong>：</p>
+</li>
+<li><strong>创建合适的索引</strong>：
+    <code>javascript
+    db.collection.createIndex({ "field1": 1, "field2": -1 })</code></li>
+<li>
+<p><strong>定期维护索引</strong>：
+    <code>javascript
+    db.collection.reIndex()</code></p>
+</li>
+<li>
+<p><strong>内存和硬盘优化</strong>：</p>
+</li>
+<li><strong>调整内存配置</strong>：
+    <code>yaml
+    storage:
+      mmapv1:
+        engine: wiredTiger</code></li>
+<li><strong>优化硬盘 I/O</strong>：<ul>
+<li>使用 SSD 磁盘。</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="13-mongodb">13. MongoDB 进阶特性与应用场景</h3>
+<h4 id="131-mapreduce">13.1 MapReduce</h4>
+<p>MapReduce 是一种处理和生成大数据集的编程模型，MongoDB 支持通过 <code>mapReduce</code> 命令进行数据处理和聚合。</p>
+<ul>
+<li><strong>基本操作</strong>：</li>
+<li><strong>MapReduce 查询</strong>：
+    <code>javascript
+    db.collection.mapReduce(
+      function() { emit(this.field, 1); },
+      function(key, values) { return Array.sum(values); },
+      {
+        out: "resultCollection"
+      }
+    )</code></li>
+<li>
+<p><strong>查看结果</strong>：
+    <code>javascript
+    db.resultCollection.find()</code></p>
+</li>
+<li>
+<p><strong>MapReduce 选项</strong>：</p>
+</li>
+<li><strong>查询条件</strong>：
+    <code>javascript
+    db.collection.mapReduce(
+      function() { if (this.field &gt; 10) emit(this.field, 1); },
+      function(key, values) { return Array.sum(values); },
+      {
+        query: { "field": { $gt: 10 } },
+        out: "resultCollection"
+      }
+    )</code></li>
+</ul>
+<h4 id="132">13.2 聚合管道</h4>
+<p>聚合管道是 MongoDB 强大的数据处理工具，支持更复杂的查询和数据变换。</p>
+<ul>
+<li><strong>聚合管道操作</strong>：</li>
+<li><strong>$match</strong>：过滤文档。
+    <code>javascript
+    db.collection.aggregate([
+      { $match: { "field": value } }
+    ])</code></li>
+<li><strong>$group</strong>：按字段分组并计算聚合值。
+    <code>javascript
+    db.collection.aggregate([
+      { $group: { _id: "$field", total: { $sum: "$amount" } } }
+    ])</code></li>
+<li><strong>$project</strong>：重塑文档。
+    <code>javascript
+    db.collection.aggregate([
+      { $project: { "field": 1, "newField": { $concat: [ "$field1", "$field2" ] } } }
+    ])</code></li>
+<li><strong>$bucket</strong>：将文档分桶。
+    <code>javascript
+    db.collection.aggregate([
+      { $bucket: {
+        groupBy: "$age",
+        boundaries: [0, 18, 30, 40, 50],
+        default: "Other",
+        output: {
+          "count": { $sum: 1 }
+        }
+      }}
+    ])</code></li>
+</ul>
+<h4 id="133-ttl">13.3 TTL 索引</h4>
+<p>TTL（Time-To-Live）索引用于自动删除过期文档，适用于需要定期清理过期数据的场景。</p>
+<ul>
+<li><strong>创建 TTL 索引</strong>：</li>
+<li><strong>示例</strong>：删除 24 小时前的数据。
+    <code>javascript
+    db.collection.createIndex({ "createdAt": 1 }, { expireAfterSeconds: 86400 })</code></li>
+</ul>
+<h4 id="134-gridfs">13.4 GridFS</h4>
+<p>GridFS 是一种存储和检索大文件（如视频和图像）的方式，适用于文件大于 BSON 文档限制的场景。</p>
+<ul>
+<li><strong>存储文件</strong>：</li>
+<li>
+<p><strong>上传文件</strong>：
+    <code>javascript
+    var fs = require('fs');
+    var Grid = require('gridfs-stream');
+    var gfs = Grid(db.connection.db, mongo);
+    gfs.writeFile('filename', fs.createReadStream('filePath'), function(err, file) {
+      if (err) throw err;
+      console.log('File uploaded successfully');
+    });</code></p>
+</li>
+<li>
+<p><strong>检索文件</strong>：</p>
+</li>
+<li><strong>下载文件</strong>：
+    <code>javascript
+    var readStream = gfs.createReadStream({ filename: 'filename' });
+    readStream.pipe(fs.createWriteStream('downloadedFilePath'));</code></li>
+</ul>
+<h4 id="135">13.5 事务处理</h4>
+<p>MongoDB 支持多文档事务，确保操作的原子性和一致性，适用于需要在多个操作中保证数据一致性的场景。</p>
+<ul>
+<li><strong>使用事务</strong>：</li>
+<li>
+<p><strong>开启事务</strong>：
+    ```javascript
+    const session = await client.startSession();
+    session.startTransaction();</p>
+<p>try {
+  await db.collection1.insertOne({ "field": value }, { session });
+  await db.collection2.updateOne({ "field": value }, { $set: { "field": newValue } }, { session });
+  await session.commitTransaction();
+} catch (error) {
+  await session.abortTransaction();
+  throw error;
+} finally {
+  session.endSession();
+}
+```</p>
+</li>
+<li>
+<p><strong>事务选项</strong>：</p>
+</li>
+<li><strong>设置读写关注级别</strong>：
+    <code>javascript
+    const session = client.startSession();
+    const options = { readConcern: { level: 'snapshot' }, writeConcern: { w: 'majority' } };
+    session.startTransaction(options);</code></li>
+</ul>
+<h4 id="136">13.6 数据建模</h4>
+<p>有效的数据建模是设计 MongoDB 数据库的关键，确保数据的高效存储和检索。</p>
+<ul>
+<li><strong>嵌套文档</strong>：</li>
+<li>
+<p><strong>优点</strong>：减少联接操作，适合一对多关系。
+    <code>json
+    {
+      "customer": "John Doe",
+      "orders": [
+        { "orderId": 1, "amount": 100 },
+        { "orderId": 2, "amount": 150 }
+      ]
+    }</code></p>
+</li>
+<li>
+<p><strong>引用文档</strong>：</p>
+</li>
+<li>
+<p><strong>优点</strong>：适合多对多关系，通过引用字段关联数据。
+    <code>json
+    {
+      "orderId": 1,
+      "customerId": 123
+    }</code></p>
+</li>
+<li>
+<p><strong>规范化和反规范化</strong>：</p>
+</li>
+<li><strong>规范化</strong>：拆分数据到多个集合，减少冗余。</li>
+<li><strong>反规范化</strong>：将相关数据存储在同一文档中，优化读取性能。</li>
+</ul>
+<h4 id="137">13.7 备份与恢复策略</h4>
+<p>备份和恢复是确保数据安全和业务连续性的关键。</p>
+<ul>
+<li><strong>备份策略</strong>：</li>
+<li><strong>全量备份</strong>：
+    <code>bash
+    mongodump --out /backup/fullBackup-`date +%Y%m%d`</code></li>
+<li>
+<p><strong>增量备份</strong>：使用 Oplog 捕获增量变化。
+    <code>bash
+    mongodump --oplog --out /backup/incrementalBackup-`date +%Y%m%d`</code></p>
+</li>
+<li>
+<p><strong>恢复操作</strong>：</p>
+</li>
+<li><strong>从全量备份恢复</strong>：
+    <code>bash
+    mongorestore /backup/fullBackup-20230901</code></li>
+<li><strong>从增量备份恢复</strong>：
+    <code>bash
+    mongorestore --oplogReplay --db mydatabase /backup/incrementalBackup-20230901</code></li>
+</ul>
+<h4 id="138">13.8 高可用性与负载均衡</h4>
+<ul>
+<li><strong>副本集</strong>：</li>
+<li>
+<p><strong>配置副本集</strong>：提高可用性和数据冗余。
+    <code>javascript
+    rs.initiate({
+      _id: "rs0",
+      members: [
+        { _id: 0, host: "host1:27017" },
+        { _id: 1, host: "host2:27017" },
+        { _id: 2, host: "host3:27017" }
+      ]
+    })</code></p>
+</li>
+<li>
+<p><strong>分片</strong>：</p>
+</li>
+<li>
+<p><strong>配置分片集群</strong>：水平扩展数据库，处理大规模数据。
+    <code>javascript
+    sh.addShard("shard1/host1:27017")
+    sh.addShard("shard2/host2:27017")</code></p>
+</li>
+<li>
+<p><strong>负载均衡</strong>：</p>
+</li>
+<li><strong>读写分离</strong>：将读操作分配给从节点，写操作在主节点上进行。
+    <code>javascript
+    db.getMongo().setReadPref("secondaryPreferred")</code></li>
+</ul>
+<hr />
+<h3 id="14-mongodb">14. MongoDB 性能优化与调优</h3>
+<h4 id="141">14.1 性能监控</h4>
+<ul>
+<li><strong>MongoDB 监控工具</strong>：</li>
+<li><strong>MongoDB Ops Manager</strong>：<ul>
+<li>提供实时监控和报警功能。</li>
+<li>图形化界面，易于配置和管理。</li>
+</ul>
+</li>
+<li><strong>MongoDB Atlas</strong>：<ul>
+<li>提供云端托管服务的监控功能。</li>
+<li>包括性能指标、报警和分析工具。</li>
+</ul>
+</li>
+<li><strong><code>mongostat</code></strong>：<ul>
+<li>实时监控 MongoDB 实例的性能统计。
+<code>bash
+mongostat --host &lt;host&gt;:&lt;port&gt;</code></li>
+</ul>
+</li>
+<li>
+<p><strong><code>mongotop</code></strong>：</p>
+<ul>
+<li>显示每个数据库的读写操作时间。
+<code>bash
+mongotop --host &lt;host&gt;:&lt;port&gt;</code></li>
+</ul>
+</li>
+<li>
+<p><strong>常用监控指标</strong>：</p>
+</li>
+<li><strong>操作延迟</strong>：监控操作的响应时间。</li>
+<li><strong>内存使用</strong>：监控 MongoDB 的内存消耗。</li>
+<li><strong>I/O 活动</strong>：监控硬盘读写操作。</li>
+<li><strong>连接数</strong>：监控当前的连接数和连接池使用情况。</li>
+</ul>
+<h4 id="142">14.2 索引优化</h4>
+<ul>
+<li><strong>选择合适的索引</strong>：</li>
+<li><strong>单字段索引</strong>：
+    <code>javascript
+    db.collection.createIndex({ "field": 1 })</code></li>
+<li>
+<p><strong>复合索引</strong>：在多个字段上创建索引。
+    <code>javascript
+    db.collection.createIndex({ "field1": 1, "field2": -1 })</code></p>
+</li>
+<li>
+<p><strong>索引使用情况分析</strong>：</p>
+</li>
+<li>
+<p><strong><code>explain()</code> 方法</strong>：</p>
+<ul>
+<li>查看查询的执行计划和索引使用情况。
+<code>javascript
+db.collection.find({ "field": value }).explain("executionStats")</code></li>
+</ul>
+</li>
+<li>
+<p><strong>优化建议</strong>：</p>
+</li>
+<li><strong>避免过多索引</strong>：过多的索引会导致写入性能下降。</li>
+<li><strong>定期重建索引</strong>：优化索引结构。
+    <code>javascript
+    db.collection.reIndex()</code></li>
+</ul>
+<h4 id="143">14.3 查询优化</h4>
+<ul>
+<li><strong>查询优化策略</strong>：</li>
+<li><strong>使用索引</strong>：确保查询条件字段有索引。</li>
+<li><strong>避免全表扫描</strong>：优化查询条件，尽量避免全表扫描。</li>
+<li>
+<p><strong>限制返回字段</strong>：
+    <code>javascript
+    db.collection.find({}, { "field1": 1, "field2": 1 })</code></p>
+</li>
+<li>
+<p><strong>查询模式</strong>：</p>
+</li>
+<li><strong>范围查询</strong>：
+    <code>javascript
+    db.collection.find({ "field": { $gte: 10, $lte: 20 } })</code></li>
+<li><strong>正则表达式查询</strong>：
+    <code>javascript
+    db.collection.find({ "field": /pattern/ })</code></li>
+</ul>
+<h4 id="144">14.4 写入优化</h4>
+<ul>
+<li><strong>写入策略</strong>：</li>
+<li><strong>批量写入</strong>：通过批量操作提高写入效率。
+    <code>javascript
+    db.collection.insertMany([{ "field": 1 }, { "field": 2 }])</code></li>
+<li>
+<p><strong>写入关注</strong>：设置写入确认级别。
+    <code>javascript
+    db.collection.insertOne({ "field": value }, { writeConcern: { w: "majority" } })</code></p>
+</li>
+<li>
+<p><strong>写入性能调优</strong>：</p>
+</li>
+<li><strong>减少索引更新</strong>：在批量写入前关闭或删除不必要的索引。</li>
+<li><strong>使用 WiredTiger 引擎</strong>：默认的 WiredTiger 引擎对写入性能进行优化。</li>
+</ul>
+<h4 id="145">14.5 内存管理</h4>
+<ul>
+<li><strong>内存使用监控</strong>：</li>
+<li>
+<p><strong>监控 <code>resident</code> 和 <code>virtual</code> 内存</strong>：
+    <code>javascript
+    db.serverStatus().mem</code></p>
+</li>
+<li>
+<p><strong>内存优化策略</strong>：</p>
+</li>
+<li><strong>调整缓存大小</strong>：
+    <code>yaml
+    storage:
+      wiredTiger:
+        engineConfig:
+          configString: "cache_size=2GB"</code></li>
+<li><strong>内存映射文件</strong>：调整内存映射文件的使用方式。</li>
+</ul>
+<h4 id="146-io">14.6 硬盘 I/O 优化</h4>
+<ul>
+<li><strong>磁盘 I/O 调优</strong>：</li>
+<li><strong>使用 SSD</strong>：SSD 提供更高的读写速度。</li>
+<li>
+<p><strong>优化磁盘布局</strong>：减少磁盘碎片和提高读写效率。</p>
+</li>
+<li>
+<p><strong>I/O 性能监控</strong>：</p>
+</li>
+<li><strong>监控磁盘使用情况</strong>：
+    <code>bash
+    iostat -x</code></li>
+</ul>
+<h4 id="147">14.7 数据分片与负载均衡</h4>
+<ul>
+<li><strong>分片配置</strong>：</li>
+<li>
+<p><strong>选择分片键</strong>：选择适当的分片键以优化数据分布。
+    <code>javascript
+    sh.shardCollection("myDatabase.myCollection", { "shardKey": 1 })</code></p>
+</li>
+<li>
+<p><strong>负载均衡策略</strong>：</p>
+</li>
+<li>
+<p><strong>读写分离</strong>：将读操作分配给从节点，将写操作留给主节点。
+    <code>javascript
+    db.getMongo().setReadPref("secondaryPreferred")</code></p>
+</li>
+<li>
+<p><strong>监控分片性能</strong>：</p>
+</li>
+<li><strong>分片状态</strong>：
+    <code>javascript
+    sh.status()</code></li>
+</ul>
+<h4 id="148">14.8 数据备份与恢复</h4>
+<ul>
+<li><strong>备份策略</strong>：</li>
+<li>
+<p><strong>全量备份</strong>：
+    <code>bash
+    mongodump --out /backup/fullBackup-`date +%Y%m%d`</code></p>
+</li>
+<li>
+<p><strong>增量备份</strong>：
+    <code>bash
+    mongodump --oplog --out /backup/incrementalBackup-`date +%Y%m%d`</code></p>
+</li>
+<li>
+<p><strong>恢复操作</strong>：</p>
+</li>
+<li>
+<p><strong>从全量备份恢复</strong>：
+    <code>bash
+    mongorestore /backup/fullBackup-20230901</code></p>
+</li>
+<li>
+<p><strong>从增量备份恢复</strong>：
+    <code>bash
+    mongorestore --oplogReplay --db mydatabase /backup/incrementalBackup-20230901</code></p>
+</li>
+</ul>
+<hr />
+<h3 id="15-mongodb">15. MongoDB 安全性与管理</h3>
+<h4 id="151">15.1 用户认证与授权</h4>
+<ul>
+<li><strong>用户认证</strong>：</li>
+<li>
+<p><strong>启用认证</strong>：</p>
+<ul>
+<li><strong>在启动 MongoDB 时启用认证</strong>：
+  <code>bash
+  mongod --auth</code></li>
+<li><strong>在配置文件中启用认证</strong>：
+  <code>yaml
+  security:
+    authorization: "enabled"</code></li>
+</ul>
+</li>
+<li>
+<p><strong>创建用户</strong>：
+    <code>javascript
+    db.createUser({
+      user: "username",
+      pwd: "password",
+      roles: [{ role: "readWrite", db: "databaseName" }]
+    })</code></p>
+</li>
+<li>
+<p><strong>用户角色与权限</strong>：</p>
+</li>
+<li>
+<p><strong>内置角色</strong>：</p>
+<ul>
+<li><strong><code>read</code></strong>：读取指定数据库的权限。</li>
+<li><strong><code>readWrite</code></strong>：读取和写入指定数据库的权限。</li>
+<li><strong><code>dbAdmin</code></strong>：执行数据库管理操作的权限。</li>
+<li><strong><code>clusterAdmin</code></strong>：集群级别的管理权限。</li>
+</ul>
+</li>
+<li>
+<p><strong>创建自定义角色</strong>：
+    <code>javascript
+    db.createRole({
+      role: "customRole",
+      privileges: [
+        { resource: { db: "databaseName", collection: "" }, actions: [ "find", "update" ] }
+      ],
+      roles: []
+    })</code></p>
+</li>
+<li>
+<p><strong>用户管理</strong>：</p>
+</li>
+<li>
+<p><strong>查看用户列表</strong>：
+    <code>javascript
+    db.getUsers()</code></p>
+</li>
+<li>
+<p><strong>修改用户角色</strong>：
+    <code>javascript
+    db.updateUser("username", { roles: [{ role: "dbAdmin", db: "databaseName" }] })</code></p>
+</li>
+<li>
+<p><strong>删除用户</strong>：
+    <code>javascript
+    db.dropUser("username")</code></p>
+</li>
+</ul>
+<h4 id="152">15.2 数据加密</h4>
+<ul>
+<li><strong>静态数据加密</strong>：</li>
+<li>
+<p><strong>启用加密</strong>：</p>
+<ul>
+<li><strong>在配置文件中启用加密</strong>：
+  <code>yaml
+  security:
+    enableEncryption: true
+    encryptionKeyFile: /path/to/encryption/keyfile</code></li>
+</ul>
+</li>
+<li>
+<p><strong>加密算法</strong>：</p>
+<ul>
+<li><strong>支持 AES-256 加密</strong>。</li>
+</ul>
+</li>
+<li>
+<p><strong>传输数据加密</strong>：</p>
+</li>
+<li>
+<p><strong>启用 TLS/SSL</strong>：</p>
+<ul>
+<li><strong>配置 TLS/SSL</strong>：
+  <code>yaml
+  net:
+    ssl:
+      mode: requireSSL
+      PEMKeyFile: /path/to/server.pem
+      CAFile: /path/to/ca.pem</code></li>
+</ul>
+</li>
+<li>
+<p><strong>客户端连接</strong>：
+    <code>javascript
+    const client = new MongoClient(uri, { tls: true, tlsCAFile: "/path/to/ca.pem" });</code></p>
+</li>
+</ul>
+<h4 id="153">15.3 数据备份与恢复</h4>
+<ul>
+<li><strong>全量备份</strong>：</li>
+<li>
+<p><strong>使用 <code>mongodump</code></strong>：
+    <code>bash
+    mongodump --out /backup/fullBackup-`date +%Y%m%d`</code></p>
+</li>
+<li>
+<p><strong>增量备份</strong>：</p>
+</li>
+<li>
+<p><strong>使用 Oplog</strong>：
+    <code>bash
+    mongodump --oplog --out /backup/incrementalBackup-`date +%Y%m%d`</code></p>
+</li>
+<li>
+<p><strong>恢复操作</strong>：</p>
+</li>
+<li>
+<p><strong>从全量备份恢复</strong>：
+    <code>bash
+    mongorestore /backup/fullBackup-20230901</code></p>
+</li>
+<li>
+<p><strong>从增量备份恢复</strong>：
+    <code>bash
+    mongorestore --oplogReplay --db mydatabase /backup/incrementalBackup-20230901</code></p>
+</li>
+</ul>
+<h4 id="154">15.4 数据库监控与日志</h4>
+<ul>
+<li><strong>监控数据库</strong>：</li>
+<li><strong>MongoDB Ops Manager</strong>：提供全面的监控功能。</li>
+<li><strong>MongoDB Atlas</strong>：提供云端监控服务。</li>
+<li>
+<p><strong><code>mongostat</code></strong>：实时监控 MongoDB 实例性能。
+    <code>bash
+    mongostat --host &lt;host&gt;:&lt;port&gt;</code></p>
+</li>
+<li>
+<p><strong><code>mongotop</code></strong>：监控数据库读写操作时间。
+    <code>bash
+    mongotop --host &lt;host&gt;:&lt;port&gt;</code></p>
+</li>
+<li>
+<p><strong>日志管理</strong>：</p>
+</li>
+<li>
+<p><strong>查看日志</strong>：</p>
+<ul>
+<li><strong>默认日志文件</strong>：<code>/var/log/mongodb/mongod.log</code></li>
+<li><strong>日志级别</strong>：在配置文件中设置日志级别。
+  <code>yaml
+  systemLog:
+    verbosity: 1</code></li>
+</ul>
+</li>
+<li>
+<p><strong>配置日志轮转</strong>：
+    <code>yaml
+    systemLog:
+      path: /var/log/mongodb/mongod.log
+      logRotate: rename
+      logAppend: true</code></p>
+</li>
+</ul>
+<h4 id="155">15.5 集群管理</h4>
+<ul>
+<li><strong>副本集管理</strong>：</li>
+<li>
+<p><strong>添加副本集成员</strong>：
+    <code>javascript
+    rs.add("host:port")</code></p>
+</li>
+<li>
+<p><strong>移除副本集成员</strong>：
+    <code>javascript
+    rs.remove("host:port")</code></p>
+</li>
+<li>
+<p><strong>查看副本集状态</strong>：
+    <code>javascript
+    rs.status()</code></p>
+</li>
+<li>
+<p><strong>分片管理</strong>：</p>
+</li>
+<li>
+<p><strong>添加分片</strong>：
+    <code>javascript
+    sh.addShard("shard1/host1:27017")</code></p>
+</li>
+<li>
+<p><strong>移除分片</strong>：
+    <code>javascript
+    sh.removeShard("shard1/host1:27017")</code></p>
+</li>
+<li>
+<p><strong>查看分片状态</strong>：
+    <code>javascript
+    sh.status()</code></p>
+</li>
+</ul>
+<h4 id="156">15.6 故障恢复与高可用性</h4>
+<ul>
+<li><strong>故障恢复</strong>：</li>
+<li>
+<p><strong>使用 <code>mongorestore</code> 恢复数据</strong>：
+    <code>bash
+    mongorestore --drop /backup/fullBackup-20230901</code></p>
+</li>
+<li>
+<p><strong>高可用性设计</strong>：</p>
+</li>
+<li><strong>配置副本集</strong>：提供数据冗余和自动故障转移。</li>
+<li><strong>配置分片</strong>：提供水平扩展，处理大数据量。</li>
+</ul>
+<h4 id="157">15.7 安全最佳实践</h4>
+<ul>
+<li><strong>最小权限原则</strong>：</li>
+<li>
+<p>只给予用户完成任务所需的最小权限。</p>
+</li>
+<li>
+<p><strong>定期更新</strong>：</p>
+</li>
+<li>
+<p>定期更新 MongoDB 和相关组件，修复已知安全漏洞。</p>
+</li>
+<li>
+<p><strong>审计日志</strong>：</p>
+</li>
+<li>
+<p>启用审计日志，记录用户操作和系统事件。</p>
+</li>
+<li>
+<p><strong>安全配置</strong>：</p>
+</li>
+<li>禁用未使用的端口和服务。</li>
+<li>保护管理接口，限制访问。</li>
+</ul>
+<hr />
+<h3 id="16-mongodb">16. MongoDB 高级功能</h3>
+<h4 id="161">16.1 聚合框架</h4>
+<ul>
+<li><strong>聚合管道</strong>：</li>
+<li><strong>基本用法</strong>：
+    <code>javascript
+    db.collection.aggregate([
+      { $match: { field: value } },
+      { $group: { _id: "$field", total: { $sum: "$amount" } } }
+    ])</code></li>
+<li>
+<p><strong>常用阶段</strong>：</p>
+<ul>
+<li><strong><code>$match</code></strong>：过滤文档。</li>
+<li><strong><code>$group</code></strong>：分组和聚合。</li>
+<li><strong><code>$sort</code></strong>：排序。</li>
+<li><strong><code>$project</code></strong>：投影字段。</li>
+</ul>
+</li>
+<li>
+<p><strong>聚合操作示例</strong>：</p>
+</li>
+<li>
+<p><strong>计算总销售额</strong>：
+    <code>javascript
+    db.sales.aggregate([
+      { $match: { date: { $gte: new Date("2024-01-01") } } },
+      { $group: { _id: null, totalSales: { $sum: "$amount" } } }
+    ])</code></p>
+</li>
+<li>
+<p><strong>性能优化</strong>：</p>
+</li>
+<li><strong>索引优化</strong>：为聚合管道中的 <code>$match</code> 阶段创建索引。</li>
+<li><strong>使用 <code>$merge</code></strong>：将聚合结果写入另一个集合。
+    <code>javascript
+    db.collection.aggregate([
+      { $group: { _id: "$field", total: { $sum: "$amount" } } },
+      { $merge: { into: "resultCollection" } }
+    ])</code></li>
+</ul>
+<h4 id="162">16.2 数据库复制</h4>
+<ul>
+<li><strong>副本集配置</strong>：</li>
+<li>
+<p><strong>初始化副本集</strong>：
+    <code>javascript
+    rs.initiate({
+      _id: "rs0",
+      members: [
+        { _id: 0, host: "host1:27017" },
+        { _id: 1, host: "host2:27017" },
+        { _id: 2, host: "host3:27017" }
+      ]
+    })</code></p>
+</li>
+<li>
+<p><strong>自动故障转移</strong>：</p>
+</li>
+<li>
+<p><strong>主节点故障时的自动切换</strong>：副本集成员会自动选举新的主节点。</p>
+</li>
+<li>
+<p><strong>读写分离</strong>：</p>
+</li>
+<li>
+<p><strong>从节点读取</strong>：
+    <code>javascript
+    db.getMongo().setReadPref("secondaryPreferred")</code></p>
+</li>
+<li>
+<p><strong>监控副本集状态</strong>：</p>
+</li>
+<li><strong>查看副本集成员状态</strong>：
+    <code>javascript
+    rs.status()</code></li>
+</ul>
+<h4 id="163">16.3 数据分片</h4>
+<ul>
+<li><strong>分片配置</strong>：</li>
+<li>
+<p><strong>启用分片</strong>：
+    <code>javascript
+    sh.enableSharding("databaseName")</code></p>
+</li>
+<li>
+<p><strong>为集合创建分片</strong>：
+    <code>javascript
+    sh.shardCollection("databaseName.collectionName", { "shardKey": 1 })</code></p>
+</li>
+<li>
+<p><strong>选择分片键</strong>：</p>
+</li>
+<li>
+<p><strong>选择适当的分片键</strong>：需要选择高基数且查询中经常使用的字段作为分片键。</p>
+</li>
+<li>
+<p><strong>监控分片状态</strong>：</p>
+</li>
+<li>
+<p><strong>查看分片状况</strong>：
+    <code>javascript
+    sh.status()</code></p>
+</li>
+<li>
+<p><strong>分片优化</strong>：</p>
+</li>
+<li><strong>均衡器</strong>：MongoDB 的自动均衡器会在分片间均衡数据。</li>
+<li><strong>手动均衡</strong>：
+    <code>javascript
+    sh.startBalancer()</code></li>
+</ul>
+<h4 id="164">16.4 数据持久化与持久性</h4>
+<ul>
+<li><strong>数据持久化</strong>：</li>
+<li><strong>WiredTiger 引擎</strong>：MongoDB 默认的存储引擎，提供高性能的数据持久化。</li>
+<li>
+<p><strong>MMAPv1 引擎</strong>（不推荐）：老旧的存储引擎，适用于较小的数据集。</p>
+</li>
+<li>
+<p><strong>持久性配置</strong>：</p>
+</li>
+<li>
+<p><strong>调整写入关注</strong>：
+    <code>javascript
+    db.collection.insertOne({ "field": "value" }, { writeConcern: { w: "majority" } })</code></p>
+</li>
+<li>
+<p><strong>持久性策略</strong>：</p>
+<ul>
+<li><strong><code>w</code></strong>：写入确认级别。</li>
+<li><strong><code>j</code></strong>：确认写入操作日志。</li>
+<li><strong><code>wtimeout</code></strong>：写入超时时间。</li>
+</ul>
+</li>
+</ul>
+<h4 id="165">16.5 数据恢复与灾难恢复</h4>
+<ul>
+<li><strong>全量备份与恢复</strong>：</li>
+<li>
+<p><strong>备份</strong>：
+    <code>bash
+    mongodump --out /backup/fullBackup-`date +%Y%m%d`</code></p>
+</li>
+<li>
+<p><strong>恢复</strong>：
+    <code>bash
+    mongorestore /backup/fullBackup-20230901</code></p>
+</li>
+<li>
+<p><strong>增量备份与恢复</strong>：</p>
+</li>
+<li>
+<p><strong>备份</strong>：
+    <code>bash
+    mongodump --oplog --out /backup/incrementalBackup-`date +%Y%m%d`</code></p>
+</li>
+<li>
+<p><strong>恢复</strong>：
+    <code>bash
+    mongorestore --oplogReplay --db mydatabase /backup/incrementalBackup-20230901</code></p>
+</li>
+<li>
+<p><strong>灾难恢复</strong>：</p>
+</li>
+<li><strong>从备份恢复</strong>：在发生灾难时，从备份中恢复数据。</li>
+<li><strong>恢复演练</strong>：定期进行恢复演练，确保恢复流程有效。</li>
+</ul>
+<h4 id="166">16.6 高可用架构</h4>
+<ul>
+<li><strong>配置副本集</strong>：</li>
+<li><strong>提供冗余</strong>：副本集可以在主节点失败时提供备份节点。</li>
+<li>
+<p><strong>配置</strong>：副本集配置和管理如前所述。</p>
+</li>
+<li>
+<p><strong>配置分片集群</strong>：</p>
+</li>
+<li>
+<p><strong>处理大数据量</strong>：分片集群可以水平扩展以处理更大的数据量。</p>
+</li>
+<li>
+<p><strong>负载均衡</strong>：</p>
+</li>
+<li><strong>在副本集和分片中</strong>：通过副本集和分片实现负载均衡。</li>
+</ul>
+<h4 id="167">16.7 数据迁移与升级</h4>
+<ul>
+<li><strong>数据迁移</strong>：</li>
+<li><strong>使用 <code>mongodump</code> 和 <code>mongorestore</code></strong>：在不同的 MongoDB 实例之间迁移数据。</li>
+<li>
+<p><strong>数据迁移工具</strong>：使用 MongoDB 提供的数据迁移工具进行迁移。</p>
+</li>
+<li>
+<p><strong>升级 MongoDB</strong>：</p>
+</li>
+<li>
+<p><strong>升级步骤</strong>：</p>
+<ol>
+<li><strong>备份数据</strong>：在升级之前备份所有数据。</li>
+<li><strong>停止服务</strong>：停止 MongoDB 实例。</li>
+<li><strong>安装新版本</strong>：安装新的 MongoDB 版本。</li>
+<li><strong>迁移数据</strong>：使用 <code>mongodump</code> 和 <code>mongorestore</code> 进行数据迁移。</li>
+<li><strong>启动服务</strong>：启动新的 MongoDB 实例。</li>
+</ol>
+</li>
+<li>
+<p><strong>升级注意事项</strong>：</p>
+</li>
+<li><strong>查看升级指南</strong>：不同版本的 MongoDB 可能有不同的升级步骤和注意事项。</li>
+<li><strong>测试升级</strong>：在生产环境升级之前，先在测试环境进行测试。</li>
+</ul>
+<h4 id="168-mongodb">16.8 MongoDB 与大数据集成</h4>
+<ul>
+<li><strong>与 Hadoop 集成</strong>：</li>
+<li>
+<p><strong>MongoDB Connector for Hadoop</strong>：用于将 MongoDB 数据与 Hadoop 进行集成。
+    <code>bash
+    mongo-hadoop-core-&lt;version&gt;.jar</code></p>
+</li>
+<li>
+<p><strong>与 Spark 集成</strong>：</p>
+</li>
+<li>
+<p><strong>MongoDB Spark Connector</strong>：允许 Spark 从 MongoDB 中读取数据并将结果写入 MongoDB。
+    <code>scala
+    val df = spark.read.format("mongo").load()
+    df.write.format("mongo").save()</code></p>
+</li>
+<li>
+<p><strong>与 BI 工具集成</strong>：</p>
+</li>
+<li><strong>MongoDB BI Connector</strong>：允许使用 SQL 查询 MongoDB 数据。
+    <code>bash
+    mongosqld --config /etc/mongosql.conf</code></li>
+</ul>
+<hr />
+<h3 id="17-mongodb">17. MongoDB 性能优化</h3>
+<h4 id="171">17.1 索引优化</h4>
+<ul>
+<li><strong>创建高效的索引</strong>：</li>
+<li><strong>选择性高的字段</strong>：索引应该放在选择性高的字段上，例如唯一字段。</li>
+<li>
+<p><strong>组合索引</strong>：在查询中经常组合使用的字段上创建组合索引。
+    <code>javascript
+    db.collection.createIndex({ field1: 1, field2: -1 })</code></p>
+</li>
+<li>
+<p><strong>索引管理</strong>：</p>
+</li>
+<li><strong>查看现有索引</strong>：
+    <code>javascript
+    db.collection.getIndexes()</code></li>
+<li>
+<p><strong>删除不必要的索引</strong>：
+    <code>javascript
+    db.collection.dropIndex("indexName")</code></p>
+</li>
+<li>
+<p><strong>覆盖查询</strong>：</p>
+</li>
+<li><strong>使用索引覆盖查询</strong>：当查询只使用索引中的字段时，MongoDB 不需要访问实际文档，从而加快查询速度。</li>
+</ul>
+<h4 id="172">17.2 查询优化</h4>
+<ul>
+<li><strong>优化 <code>$lookup</code></strong>：</li>
+<li>
+<p><strong>避免大表连接</strong>：在使用 <code>$lookup</code> 时，尽量避免在大表之间进行连接操作。</p>
+</li>
+<li>
+<p><strong>使用 <code>$expr</code></strong>：</p>
+</li>
+<li>
+<p><strong>避免全表扫描</strong>：使用 <code>$expr</code> 时确保查询条件能够有效利用索引，避免全表扫描。
+    <code>javascript
+    db.collection.find({ $expr: { $gt: ["$field1", "$field2"] } })</code></p>
+</li>
+<li>
+<p><strong>缓存查询结果</strong>：</p>
+</li>
+<li><strong>通过应用层缓存</strong>：将查询结果缓存到应用层以减少对数据库的查询压力。</li>
+</ul>
+<h4 id="173">17.3 数据库配置优化</h4>
+<ul>
+<li><strong>调整 MongoDB 配置</strong>：</li>
+<li><strong>内存分配</strong>：为 MongoDB 分配更多的内存，以提高查询和写入性能。</li>
+<li>
+<p><strong>调整 <code>WiredTiger</code> 缓存</strong>：合理配置 <code>WiredTiger</code> 存储引擎的缓存大小。
+    <code>bash
+    storage.wiredTiger.engineConfig.cacheSizeGB: 8</code></p>
+</li>
+<li>
+<p><strong>网络配置优化</strong>：</p>
+</li>
+<li><strong>减少网络延迟</strong>：在多数据中心部署时，尽量减少节点之间的网络延迟。</li>
+</ul>
+<h4 id="174">17.4 副本集和分片集群的性能优化</h4>
+<ul>
+<li><strong>副本集读写优化</strong>：</li>
+<li><strong>读写分离</strong>：将读操作分配到副本集的从节点，减轻主节点压力。</li>
+<li>
+<p><strong>副本集优先级调整</strong>：为副本集中对性能要求较高的节点提高优先级。</p>
+</li>
+<li>
+<p><strong>分片集群优化</strong>：</p>
+</li>
+<li><strong>均衡数据分布</strong>：确保数据在各个分片之间均匀分布，以避免单个分片的负载过高。</li>
+<li><strong>配置片键</strong>：合理选择片键，避免分片热点问题。</li>
+</ul>
+<h4 id="175">17.5 并发控制与锁优化</h4>
+<ul>
+<li><strong>锁管理</strong>：</li>
+<li>
+<p><strong>锁粒度</strong>：MongoDB 采用的锁粒度已经从最早的全局锁优化为集合级锁，用户无需手动干预，但理解其机制有助于性能调优。</p>
+</li>
+<li>
+<p><strong>优化写操作</strong>：</p>
+</li>
+<li>
+<p><strong>批量操作</strong>：将写操作合并为批量操作，以减少锁的竞争。
+    <code>javascript
+    db.collection.bulkWrite([
+      { insertOne: { document: { field: value } } },
+      { updateOne: { filter: { _id: id }, update: { $set: { field: value } } } }
+    ])</code></p>
+</li>
+<li>
+<p><strong>隔离级别</strong>：</p>
+</li>
+<li><strong>了解隔离级别对性能的影响</strong>：MongoDB 默认的读写隔离级别适用于大部分场景，但在特定情况下可能需要调整。</li>
+</ul>
+<h4 id="176">17.6 监控与调优</h4>
+<ul>
+<li><strong>监控工具</strong>：</li>
+<li>
+<p><strong>MongoDB Profiler</strong>：用于监控和调优慢查询。
+    <code>javascript
+    db.setProfilingLevel(2)
+    db.system.profile.find().sort({ millis: -1 })</code></p>
+</li>
+<li>
+<p><strong>使用 <code>mongostat</code> 和 <code>mongotop</code></strong>：监控数据库的运行状态和性能指标。
+    <code>bash
+    mongostat --discover
+    mongotop</code></p>
+</li>
+<li>
+<p><strong>日志分析</strong>：</p>
+</li>
+<li>
+<p><strong>慢查询日志</strong>：分析慢查询日志，并通过优化索引、重写查询等方式进行调优。
+    <code>bash
+    db.collection.find({ field: value }).sort({ field: 1 })</code></p>
+</li>
+<li>
+<p><strong>性能基准测试</strong>：</p>
+</li>
+<li><strong>使用 <code>sysbench</code> 等工具</strong>：对 MongoDB 进行性能基准测试，以评估不同配置和操作的性能表现。</li>
+</ul>
+<h4 id="177">17.7 高并发场景下的性能优化</h4>
+<ul>
+<li><strong>写入性能优化</strong>：</li>
+<li><strong>批量插入</strong>：在高并发写入场景中，使用批量插入可以大幅提高性能。</li>
+<li>
+<p><strong>异步写入</strong>：通过应用层的异步处理，减少写入对主线程的影响。</p>
+</li>
+<li>
+<p><strong>读性能优化</strong>：</p>
+</li>
+<li>
+<p><strong>多从节点读</strong>：配置副本集从节点读取，从而在高并发读场景中减轻主节点压力。
+    <code>javascript
+    db.getMongo().setReadPref("nearest")</code></p>
+</li>
+<li>
+<p><strong>缓存与队列</strong>：</p>
+</li>
+<li><strong>使用缓存</strong>：在应用层引入缓存机制，减少对数据库的直接访问。</li>
+<li><strong>使用消息队列</strong>：在高并发写入时，使用消息队列缓冲请求，降低数据库压力。</li>
+</ul>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "toc.integrate", "search.highlight", "search.suggest", "header.autohide", "footer.copyright", "footer.text", "code.annotate", "content.code", "material.nav", "material.switch"], "search": "../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+    
+  </body>
+</html>

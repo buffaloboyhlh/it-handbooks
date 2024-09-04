@@ -1,0 +1,3970 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="IT 手册整理">
+      
+      
+        <meta name="author" content="hlh">
+      
+      
+      
+        <link rel="prev" href="../basic/">
+      
+      
+        <link rel="next" href="../questions/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>ElasticSearch 面试手册 - IT-手册</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.35f28582.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#elasticsearch" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="IT-手册" class="md-header__button md-logo" aria-label="IT-手册" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IT-手册
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ElasticSearch 面试手册
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="IT-手册" class="md-nav__button md-logo" aria-label="IT-手册" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    IT-手册
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IT-手册大全
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Web篇
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Web篇
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Django
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Django
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web%E7%AF%87/Django/advance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django 进阶教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web%E7%AF%87/Django/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django 基础教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web%E7%AF%87/Django/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web%E7%AF%87/Django/questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django 开发中遇到的问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web%E7%AF%87/Django/restful/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django RESTful
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    FastAPI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            FastAPI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web%E7%AF%87/FastAPI/advance./" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FastAPI 进阶教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web%E7%AF%87/FastAPI/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FastAPI 基础教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web%E7%AF%87/FastAPI/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FastAPI 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Flask
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Flask
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web%E7%AF%87/Flask/advance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Advance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web%E7%AF%87/Flask/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web%E7%AF%87/Flask/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web%E7%AF%87/Flask/questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    工作中常见问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    中间件
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            中间件
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Kafka
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Kafka
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kafka 基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kafka 面试
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Rabbitmq
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Rabbitmq
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/rabbitmq/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RabbitMQ 基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/rabbitmq/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RabbitMQ 面试
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Zookeeper
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Zookeeper
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/zookeeper/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    zookeeper 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/zookeeper/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    zookeeper 面试
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    云原生
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            云原生
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Docker
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker-基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker 面试
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Kubernetes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Kubernetes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kubernetes 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/crictl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    crictl 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/helm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kubernetes 包管理工具 helm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kubernetes 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/monitor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kubernetes 监控平台和日志管理
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    人工智能
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            人工智能
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/AI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/Transformers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transformers 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/advance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLM 进阶教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/ai-basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI 概念
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    基础教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLM 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/langchain/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LangChain 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    工具篇
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            工具篇
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    git 命令
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    数据库
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            数据库
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Elastic
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            Elastic
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ElastciSearch 进阶教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ElasticSearch 基本教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ElasticSearch 面试手册
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    ElasticSearch 面试手册
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-elasticsearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Elasticsearch 的基本概念
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-elasticsearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Elasticsearch 架构与设计
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-elasticsearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Elasticsearch 查询与索引
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-elasticsearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Elasticsearch 性能优化
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-elasticsearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Elasticsearch 集群管理
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 高级问题与实际应用
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-elasticsearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Elasticsearch 数据建模与设计
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-elasticsearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Elasticsearch 数据处理与分析
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-elasticsearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Elasticsearch 的扩展与优化
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-elasticsearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Elasticsearch 与其他工具的集成
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-elasticsearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Elasticsearch 常见问题及其解决方案
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-elasticsearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. Elasticsearch 日常运维
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-elasticsearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. Elasticsearch 性能调优
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-elasticsearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      14. Elasticsearch 安全与合规
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-elasticsearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      15. Elasticsearch 未来趋势与发展
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-elasticsearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      16. Elasticsearch 数据建模与索引管理
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-elasticsearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      17. Elasticsearch 集群管理与监控
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-elasticsearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      18. Elasticsearch 索引与搜索优化
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-elasticsearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      19. Elasticsearch 与大数据生态系统集成
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-elasticsearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      20. Elasticsearch 的新特性与未来发展
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      补充题目
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ElasticSearch 工作中遇到的问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MongoDB
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            MongoDB
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MongoDB/advance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MongoDB 进阶教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MongoDB/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MongoDB 基础教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MongoDB/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MongoDB 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MongoDB/questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MongoDB 工作中遇到的问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MySQL
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            MySQL
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MySQL/advance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MySQL 进阶教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MySQL/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MySQL 基础教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MySQL/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MySQL 面试题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MySQL/questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MySQL 常见问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Redis
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            Redis
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Redis/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Redis 基础教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Redis/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Redis 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Redis/questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Redis 工作中常见问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    服务器
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            服务器
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Nginx
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1">
+            <span class="md-nav__icon md-icon"></span>
+            Nginx
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%9C%8D%E5%8A%A1%E5%99%A8/nginx/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    nginx 基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%9C%8D%E5%8A%A1%E5%99%A8/nginx/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    nginx 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Uvicorn
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            Uvicorn
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%9C%8D%E5%8A%A1%E5%99%A8/uvicorn/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    uvicorn 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    计算机基础
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            计算机基础
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    http 手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/network/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    计算机网络面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/system/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    操作系统面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/websocket/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Websocket
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    语言篇
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            语言篇
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_1" id="__nav_10_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_1">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/advance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python 进阶教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    python 基础教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_1_4" id="__nav_10_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Python常用库
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Python常用库
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/Seaborn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Seaborn 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/beautifulsoup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    beautifulsoup 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/celery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    celery 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/datastruct/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构和算法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/datetime/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    datetime 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/functools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    functools 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/json/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    json 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/logging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    logging 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/math/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    math 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/matpliot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    matpliot 使用教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/mock/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    mock 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/numpy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    numpy 笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/os/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    os模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pandas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pandas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pathlib/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pathlib 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pickle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pickle 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pymysql/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pymysql 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pytest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pytest 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pytorch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pytorch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/queue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    queue 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/random/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    random 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/re/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    re 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/redis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    redis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/requests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    requests 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scikit-learn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    scikit-learn
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scipy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    scipy 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scrapy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    scrapy 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/selenium/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    selenium 使用教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/shutil/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    shutil 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/sqlalchemy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SQLALchemy 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/sys/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sys 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/time/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    time 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/urllib/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    urllib 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="elasticsearch">ElasticSearch 面试手册</h1>
+<p>以下是一些大厂在面试中常见的 Elasticsearch 相关问题及其详解。这些问题涵盖了基础知识、进阶应用以及实际工作中可能遇到的挑战。</p>
+<h3 id="1-elasticsearch">1. <strong>Elasticsearch 的基本概念</strong></h3>
+<p><strong>1.1 Elasticsearch 是什么？</strong></p>
+<ul>
+<li><strong>回答</strong>：Elasticsearch 是一个基于 Lucene 的开源搜索引擎，提供分布式、多租户的全文搜索引擎，具有 RESTful 风格的接口。它被广泛应用于实时搜索、日志分析、大数据存储等场景。</li>
+</ul>
+<p><strong>1.2 Elasticsearch 与传统数据库的区别是什么？</strong></p>
+<ul>
+<li><strong>回答</strong>：Elasticsearch 是为搜索和分析优化的，而传统关系型数据库（如 MySQL）主要为事务处理优化。Elasticsearch 提供了全文搜索、分布式架构和近实时数据处理能力，而关系型数据库则擅长于严格的事务管理和复杂的表间关联。</li>
+</ul>
+<h3 id="2-elasticsearch">2. <strong>Elasticsearch 架构与设计</strong></h3>
+<p><strong>2.1 什么是索引(Index)、类型(Type) 和文档(Document)？</strong></p>
+<ul>
+<li><strong>回答</strong>：索引是类似于数据库的逻辑集合，包含多个文档；类型是索引的逻辑分组（6.x 以后被弃用），类似于表；文档是 Elasticsearch 中的基本数据单位，存储为 JSON 格式。</li>
+</ul>
+<p><strong>2.2 分片(Shard) 和副本(Replica) 的作用是什么？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li><strong>分片</strong>：将索引数据水平拆分成多个分片，允许数据存储和搜索在多节点间分布，提高性能和扩展性。</li>
+<li><strong>副本</strong>：分片的复制，用于容错和提高查询性能。当一个节点宕机时，副本可以提供数据的冗余副本。</li>
+</ul>
+<p><strong>2.3 解释一下 Elasticsearch 的集群(Cluster)、节点(Node) 和分片(Shard) 之间的关系？</strong></p>
+<ul>
+<li><strong>回答</strong>：集群是由一个或多个节点组成的集合，管理和协调所有分片。节点是集群中的单个实例，负责存储数据并参与索引和搜索操作。每个索引由多个分片组成，这些分片分布在集群的不同节点上。</li>
+</ul>
+<h3 id="3-elasticsearch">3. <strong>Elasticsearch 查询与索引</strong></h3>
+<p><strong>3.1 什么是倒排索引？</strong></p>
+<ul>
+<li><strong>回答</strong>：倒排索引是一种用于快速全文搜索的数据结构，将文档中的每个单词映射到包含这些单词的文档列表。它允许快速查找包含特定单词的文档集。</li>
+</ul>
+<p><strong>3.2 Elasticsearch 中的过滤器(Filter) 和查询(Query) 有什么区别？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li><strong>查询</strong>：计算文档的相关性得分（relevance score），用于全文搜索和排序。</li>
+<li><strong>过滤器</strong>：不计算得分，仅用于筛选数据，效率更高，且可以缓存结果。适合用于频繁执行的条件筛选。</li>
+</ul>
+<p><strong>3.3 解释一下复合查询(Compound Query)？</strong></p>
+<ul>
+<li><strong>回答</strong>：复合查询允许你将多个查询组合在一起。常见的复合查询有 <code>bool</code> 查询（包括 <code>must</code>、<code>should</code>、<code>must_not</code>、<code>filter</code> 等子句）、<code>function_score</code> 查询（用于自定义评分）等。</li>
+</ul>
+<h3 id="4-elasticsearch">4. <strong>Elasticsearch 性能优化</strong></h3>
+<p><strong>4.1 如何优化 Elasticsearch 的查询性能？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li>使用 <code>filter</code> 查询来代替 <code>query</code> 查询，避免不必要的相关性计算。</li>
+<li>合理设计索引结构，使用适当的分片数量和副本数量。</li>
+<li>利用缓存机制，如 <code>filter</code> 缓存和 <code>index.query.default_field</code> 缓存。</li>
+<li>调整 <code>refresh_interval</code> 参数，减少索引刷新频率，提升批量写入性能。</li>
+</ul>
+<p><strong>4.2 如何处理 Elasticsearch 的深度分页问题？</strong></p>
+<ul>
+<li><strong>回答</strong>：深度分页会导致性能问题，因为 Elasticsearch 需要遍历大量数据。可以使用 <code>search_after</code> 或 <code>scroll</code> API 实现更高效的深度分页，或使用 <code>from</code> 和 <code>size</code> 进行分页时控制返回的数据量。</li>
+</ul>
+<p><strong>4.3 如何设计高效的索引策略？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li>选择合适的数据类型：避免使用 <code>text</code> 类型存储非必要的全文字段，尽量使用 <code>keyword</code>、<code>numeric</code> 等具体类型。</li>
+<li>定义合理的分片策略：根据数据量和查询需求，合理设置分片和副本数量。</li>
+<li>使用索引模板：通过模板定义索引的映射和设置，确保一致性和优化。</li>
+</ul>
+<h3 id="5-elasticsearch">5. <strong>Elasticsearch 集群管理</strong></h3>
+<p><strong>5.1 Elasticsearch 集群的节点类型有哪些？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li><strong>主节点（Master Node）</strong>：负责管理集群元数据，协调节点的加入、离开、分片分配等操作。</li>
+<li><strong>数据节点（Data Node）</strong>：存储数据并处理与数据相关的 CRUD、搜索和聚合操作。</li>
+<li><strong>协调节点（Coordinating Node）</strong>：不存储数据，只负责处理客户端请求，协调其他节点返回的结果。</li>
+<li><strong>专用主节点（Dedicated Master Node）</strong>：专门作为主节点使用，避免因数据处理负载影响集群管理。</li>
+<li><strong>机器学习节点（ML Node）</strong>：用于执行机器学习任务，提升性能。</li>
+</ul>
+<p><strong>5.2 如何排查 Elasticsearch 集群中的常见问题？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li><strong>分片未分配</strong>：检查磁盘空间、内存、网络等资源是否充足，或使用 <code>_cluster/reroute</code> 手动分配分片。</li>
+<li><strong>查询慢</strong>：检查查询语句是否合理，避免使用低效的脚本或嵌套查询，使用适当的分片和副本策略。</li>
+<li><strong>节点宕机</strong>：查看日志文件，检查节点资源使用情况，确保 JVM 配置合理，并及时恢复副本。</li>
+</ul>
+<h3 id="6">6. <strong>高级问题与实际应用</strong></h3>
+<p><strong>6.1 Elasticsearch 如何实现数据的近实时搜索？</strong></p>
+<ul>
+<li><strong>回答</strong>：Elasticsearch 默认每秒刷新索引（<code>refresh_interval</code> 设置为1s），将新数据提交到磁盘并使其可搜索，从而实现近实时搜索。可以通过调整 <code>refresh_interval</code> 提高索引的实时性或写入性能。</li>
+</ul>
+<p><strong>6.2 在多租户环境中，如何确保 Elasticsearch 的数据隔离和安全性？</strong></p>
+<ul>
+<li><strong>回答</strong>：可以通过以下方式实现数据隔离和安全性：</li>
+<li>使用不同的索引或索引前缀为不同租户隔离数据。</li>
+<li>配置角色和权限控制，限制每个租户对其索引的访问。</li>
+<li>启用 X-Pack 的安全性模块，实现用户认证和索引级别的访问控制。</li>
+</ul>
+<p><strong>6.3 如何实现 Elasticsearch 的跨集群搜索（Cross Cluster Search, CCS）？</strong></p>
+<ul>
+<li><strong>回答</strong>：跨集群搜索允许在一个集群中搜索另一个集群的数据。通过在集群配置中添加远程集群的连接信息，可以使用 CCS 进行跨集群搜索。这在分布式环境或多地域部署中非常有用。</li>
+</ul>
+<h3 id="7-elasticsearch">7. <strong>Elasticsearch 数据建模与设计</strong></h3>
+<p><strong>7.1 如何设计高效的 Elasticsearch 索引映射（Mapping）？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li><strong>字段类型选择</strong>：根据数据性质选择合适的字段类型。例如，精确匹配的数据应使用 <code>keyword</code> 类型，数值数据应使用 <code>integer</code>、<code>float</code> 等类型。</li>
+<li><strong>禁用不必要的字段</strong>：如果某些字段不需要被搜索或聚合，可以设置 <code>"index": "false"</code>，以减少索引大小和提升性能。</li>
+<li><strong>字段合并</strong>：尽量减少字段数量，避免大量小字段造成的内存和存储开销。</li>
+</ul>
+<p><strong>7.2 如何设计一个适应不断增长的数据量的索引策略？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li><strong>时间分区索引</strong>：对于日志等按时间序列增长的数据，可以使用时间分区（如每天一个索引），定期删除旧索引以控制索引总量。</li>
+<li><strong>动态索引模板</strong>：使用模板自动为新索引设置映射和分片配置，确保数据模型的一致性和扩展性。</li>
+<li><strong>滚动索引</strong>：采用 <code>index rollover</code> 功能，自动创建新索引并将数据滚动到新索引中，避免单一索引过大。</li>
+</ul>
+<p><strong>7.3 如何设计支持多语言搜索的 Elasticsearch 索引？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li><strong>多字段模式</strong>：为不同语言使用不同的 <code>analyzer</code>，并将每种语言的文本存储在独立的字段中。</li>
+<li><strong>多语言分析器</strong>：利用 Elasticsearch 的 <code>language analyzers</code>，针对特定语言进行分词和词形还原，如使用 <code>english</code>、<code>french</code> 等分析器。</li>
+<li><strong>联合索引策略</strong>：将多语言文本索引到同一字段，并使用多分析器 (<code>multi-field</code>) 进行分词处理。</li>
+</ul>
+<h3 id="8-elasticsearch">8. <strong>Elasticsearch 数据处理与分析</strong></h3>
+<p><strong>8.1 如何在 Elasticsearch 中执行复杂的聚合操作？</strong></p>
+<ul>
+<li><strong>回答</strong>：Elasticsearch 提供了多种聚合功能，可以执行类似 SQL 的 <code>GROUP BY</code> 操作：</li>
+<li><strong>桶聚合（Bucket Aggregations）</strong>：将文档分组，如 <code>terms</code> 聚合按字段值分组，<code>date_histogram</code> 聚合按日期区间分组。</li>
+<li><strong>度量聚合（Metric Aggregations）</strong>：对桶内的文档执行统计计算，如 <code>avg</code>、<code>sum</code>、<code>max</code>、<code>min</code> 等。</li>
+<li><strong>管道聚合（Pipeline Aggregations）</strong>：在其他聚合的结果基础上进行二次计算，如 <code>moving_avg</code> 实现移动平均计算。</li>
+</ul>
+<p><strong>8.2 如何在 Elasticsearch 中处理实时数据分析？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li><strong>实时索引刷新</strong>：调整 <code>refresh_interval</code> 参数，控制索引刷新频率以适应实时数据写入需求。</li>
+<li><strong>滚动索引和自动管理</strong>：使用 <code>index lifecycle management</code> (ILM) 策略，自动管理索引生命周期，定期进行滚动和清理。</li>
+<li><strong>Stream Processing 集成</strong>：通过与 Apache Kafka 或 Logstash 等工具集成，实现数据的实时流处理和分析。</li>
+</ul>
+<p><strong>8.3 如何使用 Elasticsearch 实现地理位置数据的查询与分析？</strong></p>
+<ul>
+<li><strong>回答</strong>：Elasticsearch 提供了强大的地理位置数据支持：</li>
+<li><strong>地理字段类型</strong>：使用 <code>geo_point</code> 类型存储地理坐标，支持基于地理位置的距离、区域查询。</li>
+<li><strong>地理查询</strong>：使用 <code>geo_distance</code> 查询特定点周围的文档，或使用 <code>geo_bounding_box</code> 查询特定地理区域内的文档。</li>
+<li><strong>地理聚合</strong>：利用 <code>geohash_grid</code> 聚合实现基于地理网格的分布分析，或 <code>geo_centroid</code> 聚合计算地理中心点。</li>
+</ul>
+<h3 id="9-elasticsearch">9. <strong>Elasticsearch 的扩展与优化</strong></h3>
+<p><strong>9.1 如何处理 Elasticsearch 集群扩展时的常见问题？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li><strong>数据再分片</strong>：当集群扩展时，可能需要调整索引的分片数量。可以使用 <code>reindex</code> API 或 <code>split</code> API 创建新的索引，或使用 <code>shrink</code> API 减少分片数量。</li>
+<li><strong>节点类型调整</strong>：根据负载分布和扩展需求，调整节点的角色，例如添加更多的专用数据节点或协调节点。</li>
+<li><strong>跨集群复制（Cross Cluster Replication, CCR）</strong>：用于集群间数据同步，特别是跨数据中心的灾备场景。</li>
+</ul>
+<p><strong>9.2 如何优化 Elasticsearch 的存储和查询性能？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li><strong>减少索引大小</strong>：使用 <code>index.codec</code> 设置为 <code>best_compression</code>，启用压缩功能，减少索引的磁盘占用。</li>
+<li><strong>缓存机制</strong>：利用 <code>query cache</code> 和 <code>request cache</code> 提高查询性能，避免重复计算。</li>
+<li><strong>合理使用硬件资源</strong>：优化 JVM 堆内存设置，使用 SSD 提高磁盘 I/O 性能，确保网络带宽满足高并发要求。</li>
+</ul>
+<p><strong>9.3 如何在 Elasticsearch 中进行安全配置？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li><strong>启用 TLS/SSL</strong>：在集群节点间和客户端访问时启用 TLS/SSL 加密，确保数据传输安全。</li>
+<li><strong>用户认证与角色管理</strong>：使用 X-Pack 的 Security 模块或其他认证插件，配置用户权限和角色，确保数据访问控制。</li>
+<li><strong>审计日志</strong>：启用审计日志功能，跟踪和记录所有访问操作，确保符合安全和合规性要求。</li>
+</ul>
+<h3 id="10-elasticsearch">10. <strong>Elasticsearch 与其他工具的集成</strong></h3>
+<p><strong>10.1 如何使用 Logstash 将数据导入 Elasticsearch？</strong></p>
+<ul>
+<li><strong>回答</strong>：Logstash 是一个数据处理管道工具，可以从多种数据源采集数据，并将数据流式传输到 Elasticsearch：</li>
+<li><strong>配置输入插件</strong>：定义数据源（如文件、数据库、Kafka），并配置相应的输入插件。</li>
+<li><strong>过滤数据</strong>：使用 Logstash 的 <code>filter</code> 插件（如 <code>grok</code>、<code>mutate</code> 等）对数据进行解析和转换。</li>
+<li><strong>配置输出插件</strong>：将处理后的数据发送到 Elasticsearch 索引，支持批量写入和自动创建索引。</li>
+</ul>
+<p><strong>10.2 如何使用 Kibana 进行数据可视化？</strong></p>
+<ul>
+<li><strong>回答</strong>：Kibana 是 Elasticsearch 的官方 UI 工具，提供了丰富的数据可视化功能：</li>
+<li><strong>创建仪表盘</strong>：通过 Kibana 的 <code>Dashboard</code> 功能，将多个可视化图表整合到一个仪表盘中，实时监控数据。</li>
+<li><strong>构建可视化</strong>：使用 <code>Visualize</code> 功能创建各种图表（如折线图、柱状图、饼图、地理图等），并应用数据过滤和聚合。</li>
+<li><strong>数据探索</strong>：使用 <code>Discover</code> 功能探索和查询 Elasticsearch 索引中的原始数据，支持实时搜索和筛选。</li>
+</ul>
+<p><strong>10.3 如何集成 Elasticsearch 与 Hadoop、Spark 等大数据工具？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li><strong>Elasticsearch-Hadoop 集成</strong>：利用 <code>elasticsearch-hadoop</code> 插件，将 Elasticsearch 作为 Hadoop 生态系统中的数据源或目标，支持 Spark、Hive、Pig 等工具的读写操作。</li>
+<li><strong>Spark 与 Elasticsearch</strong>：通过 <code>Elasticsearch for Apache Spark</code>（也称为 <code>ES-Hadoop</code>），直接从 Spark 执行分布式数据处理任务，并将结果写入 Elasticsearch 索引中。</li>
+<li><strong>批量处理与实时分析</strong>：将 Hadoop 或 Spark 的批处理能力与 Elasticsearch 的实时搜索能力结合，构建混合型大数据解决方案。</li>
+</ul>
+<h3 id="11-elasticsearch">11. <strong>Elasticsearch 常见问题及其解决方案</strong></h3>
+<p><strong>11.1 如何处理 Elasticsearch 索引的"分片分配失败"问题？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li><strong>检查磁盘空间</strong>：确保所有数据节点的磁盘空间充足。如果磁盘空间不足，Elasticsearch 会停止分片分配。</li>
+<li><strong>分配失败的原因排查</strong>：使用 <code>_cluster/allocation/explain</code> API 查看分片分配失败的具体原因，例如内存不足、集群状态不稳定等。</li>
+<li><strong>手动分配分片</strong>：如果是因为某些节点异常导致分片无法分配，可以使用 <code>_cluster/reroute</code> API 手动分配分片到指定节点。</li>
+</ul>
+<p><strong>11.2 如何修复 Elasticsearch 集群的“黄”状态？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li><strong>黄状态原因</strong>：集群处于“黄”状态通常意味着一些索引的副本分片（replica shard）未能分配，但主分片（primary shard）是健康的。</li>
+<li><strong>添加更多节点</strong>：增加数据节点可以帮助分配未分配的副本分片，恢复集群的“绿”状态。</li>
+<li><strong>检查分片设置</strong>：如果集群资源不足，可以调整索引的副本数量，或者减少分片数量。</li>
+</ul>
+<p><strong>11.3 如何避免 Elasticsearch 的“集群状态为红”的情况？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li><strong>集群状态为红的含义</strong>：当一个或多个主分片不可用时，集群状态会变为红色，意味着有数据丢失或不可访问。</li>
+<li><strong>防范措施</strong>：定期监控集群健康状态，确保所有分片正确分配。启用分片自动恢复机制，设置合理的快照策略，定期备份数据。</li>
+<li><strong>快速修复</strong>：如果集群状态为红，首先检查哪些分片未分配，尝试通过手动分配或重新启动相关节点来恢复集群状态。</li>
+</ul>
+<h3 id="12-elasticsearch">12. <strong>Elasticsearch 日常运维</strong></h3>
+<p><strong>12.1 如何管理 Elasticsearch 索引的生命周期（Index Lifecycle Management, ILM）？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li><strong>ILM 概念</strong>：ILM 允许你自动管理索引的生命周期，包括创建、滚动、关闭、删除等操作。通过配置策略，可以在不同阶段对索引进行不同的处理。</li>
+<li><strong>配置 ILM 策略</strong>：创建 ILM 策略定义各个阶段（如热、温、冷、删除）的操作，如在“热”阶段频繁读写，在“冷”阶段将索引设置为只读，并最终删除旧数据。</li>
+<li><strong>应用 ILM 策略</strong>：将 ILM 策略应用到索引模板或具体的索引上，自动管理索引的生命周期。</li>
+</ul>
+<p><strong>12.2 如何在 Elasticsearch 中进行索引的快照和恢复？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li><strong>快照机制</strong>：Elasticsearch 的快照功能可以备份索引或整个集群数据到外部存储（如 S3、HDFS、共享文件系统）。快照是增量的，只会备份自上次快照以来变化的数据。</li>
+<li><strong>创建快照</strong>：使用 <code>_snapshot</code> API 创建快照库（repository），并对索引或集群执行快照操作。可以手动执行或定期执行自动快照。</li>
+<li><strong>恢复数据</strong>：在需要时，可以从快照恢复索引或整个集群，确保在数据丢失或灾难恢复时能够快速恢复服务。</li>
+</ul>
+<p><strong>12.3 如何进行 Elasticsearch 的集群升级？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li><strong>升级前准备</strong>：在升级之前，确保集群的所有数据都已备份，集群健康状态为绿色，并且所有节点的版本兼容。</li>
+<li><strong>滚动升级</strong>：在不中断集群服务的情况下，逐个节点升级。在升级过程中，先升级非主节点，最后升级主节点。滚动升级适合小版本升级。</li>
+<li><strong>重新启动升级</strong>：适用于大版本升级，通常需要停止整个集群，升级所有节点后再重新启动集群。这种方法可能会导致服务中断，需提前做好准备。</li>
+</ul>
+<h3 id="13-elasticsearch">13. <strong>Elasticsearch 性能调优</strong></h3>
+<p><strong>13.1 如何优化 Elasticsearch 的 JVM 设置？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li><strong>JVM 堆内存设置</strong>：确保 JVM 堆内存设置合理，通常建议不超过可用内存的 50%，且最大不超过 32GB。较大的堆内存有助于减少垃圾回收频率，但过大可能导致 GC 暂停时间延长。</li>
+<li><strong>垃圾回收机制</strong>：Elasticsearch 默认使用 G1 垃圾回收器，适用于低延迟需求的场景。可以通过监控 GC 日志来调整 GC 参数，优化内存使用。</li>
+<li><strong>直接内存设置</strong>：确保有足够的直接内存（off-heap memory）用于文件系统缓存，提高文件 I/O 性能。</li>
+</ul>
+<p><strong>13.2 如何通过调整索引设置提升写入性能？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li><strong>禁用刷新（Refresh）</strong>：在进行大量数据导入时，可以暂时禁用自动刷新（将 <code>refresh_interval</code> 设置为 <code>-1</code>），提高批量写入性能。导入完成后再手动刷新索引。</li>
+<li><strong>批量处理</strong>：使用批量 API （Bulk API）进行批量写入操作，减少每次请求的开销，提高写入效率。建议每批次大小在 5MB 到 15MB 之间。</li>
+<li><strong>调整副本数量</strong>：在批量写入时，可以临时将副本数量设置为 0，以减少写入过程中副本同步的开销。写入完成后再恢复副本设置。</li>
+</ul>
+<p><strong>13.3 如何优化 Elasticsearch 的搜索性能？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li><strong>索引字段存储优化</strong>：对不需要参与搜索或聚合的字段禁用索引，减少索引数据量。同时，优化 <code>store</code> 设置，只存储必要的字段。</li>
+<li><strong>预热搜索请求</strong>：通过 <code>search_template</code> API 预热常用搜索请求，减少首次查询的开销。利用 <code>query cache</code> 提升重复查询的性能。</li>
+<li><strong>减少深度分页</strong>：避免深度分页（即大量使用 <code>from</code> 和 <code>size</code>），使用 <code>scroll</code> 或 <code>search_after</code> 实现高效分页，避免深度分页导致的性能瓶颈。</li>
+</ul>
+<h3 id="14-elasticsearch">14. <strong>Elasticsearch 安全与合规</strong></h3>
+<p><strong>14.1 如何配置 Elasticsearch 的用户认证与权限管理？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li><strong>启用 X-Pack Security</strong>：使用 X-Pack Security 模块，为集群添加用户认证、角色权限管理等功能。配置用户目录（如 LDAP、AD）和角色，细粒度控制用户访问权限。</li>
+<li><strong>API 访问控制</strong>：为不同的 API 操作设置不同的权限，确保用户只能访问和操作其权限范围内的数据。</li>
+<li><strong>审计日志</strong>：启用审计日志功能，记录所有的用户操作和访问事件，以便审计和合规性检查。</li>
+</ul>
+<p><strong>14.2 如何实现 Elasticsearch 的加密通信？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li><strong>配置 TLS/SSL</strong>：为节点之间的通信配置 TLS/SSL，加密所有的传输数据。还可以配置 HTTPS 访问 REST API，确保所有客户端到集群的通信都是加密的。</li>
+<li><strong>证书管理</strong>：使用自签名证书或通过受信任的 CA 颁发的证书管理节点和客户端的认证，防止中间人攻击。</li>
+<li><strong>加密静态数据</strong>：通过磁盘加密（如 LUKS）保护 Elasticsearch 节点上的静态数据，防止数据泄露。</li>
+</ul>
+<p><strong>14.3 如何满足 Elasticsearch 的合规性要求？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li><strong>数据保留策略</strong>：配置 ILM 策略，满足不同数据的保留要求。对于需要长期保存的数据，可以配置适当的冷存储或归档策略。</li>
+<li><strong>隐私保护</strong>：在 Elasticsearch 中对敏感数据进行加密存储或屏蔽，使用 <code>tokenization</code> 或 <code>pseudonymization</code> 处理个人数据，确保符合 GDPR 等法规的要求。</li>
+<li><strong>日志审计</strong>：定期检查和保存审计日志，确保所有访问和操作都有记录，并符合企业或法律的审计要求。</li>
+</ul>
+<h3 id="15-elasticsearch">15. <strong>Elasticsearch 未来趋势与发展</strong></h3>
+<p><strong>15.1 Elasticsearch 在大数据生态中的发展方向是什么？</strong></p>
+<ul>
+<li><strong>回答</strong>：Elasticsearch 正逐步扩展其在大数据生态中的角色，除了传统的搜索引擎功能，还向实时分析平台发展。未来可能会在以下几个方向进一步增强：</li>
+<li><strong>集成机器学习</strong>：随着 Elasticsearch 的机器学习功能（如异常检测、预测分析）不断增强，它将在更多场景下替代传统的复杂分析系统。</li>
+<li><strong>大规模数据处理</strong>：通过与 Hadoop、Spark 等大数据平台的深度集成，Elasticsearch 将在海量数据的实时处理和分析中发挥更大的作用。</li>
+<li><strong>跨云集群管理</strong>：随着云计算的发展，Elasticsearch 将加强对多云环境的支持，提供更灵活的跨云集群管理和数据同步能力。</li>
+</ul>
+<p><strong>15.2 如何看待 Elasticsearch 与其他搜索引擎技术的对比和未来竞争？</strong></p>
+<ul>
+<li><strong>回答</strong>：Elasticsearch 与其他搜索引擎技术（如 Solr、Splunk 等）的竞争主要集中在以下几个方面：</li>
+<li><strong>开源社区与生态系统</strong>：Elasticsearch 拥有强大的开源社区和丰富的生态系统，未来将继续通过社区贡献和商业支持保持其竞争优势。</li>
+<li><strong>易用性与可扩展性</strong>：Elasticsearch 在易用性和可扩展性上表现出色，未来将进一步优化集群管理和数据处理能力，使其更适合各种规模的企业使用。</li>
+<li><strong>功能差异化</strong>：随着 Elasticsearch 不断扩展其功能（如机器学习、数据流处理），它将与其他搜索引擎形成更明显的功能差异化，满足不同用户的需求。</li>
+</ul>
+<h3 id="16-elasticsearch">16. <strong>Elasticsearch 数据建模与索引管理</strong></h3>
+<p><strong>16.1 如何设计适合 Elasticsearch 的数据建模方案？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li><strong>扁平化数据结构</strong>：Elasticsearch 更适合扁平化的数据结构，避免深层嵌套以提升查询性能。对于嵌套数据，可以使用 <code>nested</code> 类型字段。</li>
+<li><strong>合理选择数据类型</strong>：为字段选择合适的数据类型（如 <code>keyword</code>、<code>text</code>、<code>date</code>、<code>geo_point</code> 等），避免不必要的索引开销。</li>
+<li><strong>优化索引结构</strong>：使用合适的分片和副本设置，根据数据规模和访问模式来确定分片数量，避免过度分片或分片不足。</li>
+</ul>
+<p><strong>16.2 如何处理 Elasticsearch 中的大规模数据导入？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li><strong>使用批量导入 API</strong>：使用 <code>Bulk API</code> 分批次导入数据，减少单次请求的负载。每个批次数据量建议控制在 5MB 至 15MB 之间。</li>
+<li><strong>禁用刷新和副本</strong>：在导入数据期间，临时禁用索引的自动刷新（<code>refresh_interval: -1</code>）和副本（将副本数量设置为 0），导入完成后再恢复默认设置。</li>
+<li><strong>分批次导入</strong>：将大数据集分为多个批次，逐步导入，避免一次性导入导致的内存和 CPU 过载。</li>
+</ul>
+<p><strong>16.3 如何在 Elasticsearch 中处理多租户场景？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li><strong>索引别名与路由</strong>：使用索引别名（index alias）和路由（routing）来隔离不同租户的数据，确保数据隔离性和查询性能。</li>
+<li><strong>独立索引</strong>：为每个租户创建独立的索引，适用于数据量较大或访问模式有明显差异的场景，但会增加索引管理的复杂度。</li>
+<li><strong>共享索引与过滤器</strong>：对于数据量小的租户，可以将多个租户的数据存储在同一个索引中，并通过过滤器确保每个租户只能访问自己的数据。</li>
+</ul>
+<h3 id="17-elasticsearch">17. <strong>Elasticsearch 集群管理与监控</strong></h3>
+<p><strong>17.1 如何监控 Elasticsearch 集群的健康状态？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li><strong>使用 Kibana 的 Monitoring 插件</strong>：Kibana 提供了 <code>Monitoring</code> 插件，实时监控集群、节点、索引的健康状态、性能指标等。</li>
+<li><strong>设置告警</strong>：通过 Watcher 插件或外部工具（如 Prometheus、Grafana），设置集群健康、节点状态、索引性能等告警，及时发现和处理问题。</li>
+<li><strong>定期查看集群状态</strong>：使用 <code>_cluster/health</code> 和 <code>_cat/nodes</code> API 定期检查集群状态，确保所有分片正常分配，节点资源使用合理。</li>
+</ul>
+<p><strong>17.2 如何在 Elasticsearch 集群中处理故障节点？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li><strong>故障节点排查</strong>：首先检查故障节点的日志文件，找出可能的原因（如内存不足、磁盘空间不足、网络问题等）。</li>
+<li><strong>手动分片重新分配</strong>：如果节点故障导致分片未能分配，可以使用 <code>_cluster/reroute</code> API 手动分配分片到其他健康节点。</li>
+<li><strong>节点重启与恢复</strong>：修复节点故障后，重新启动节点，观察其是否能重新加入集群。如果无法恢复，考虑使用 <code>shard allocation</code> 设置将分片分配到其他节点。</li>
+</ul>
+<p><strong>17.3 如何管理 Elasticsearch 的索引生命周期（ILM）？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li><strong>配置 ILM 策略</strong>：定义索引的生命周期策略（如热、温、冷、删除阶段），并应用到索引模板中，自动管理索引的创建、滚动、关闭和删除。</li>
+<li><strong>监控 ILM 状态</strong>：使用 Kibana 的 ILM 管理界面或 <code>_ilm/explain</code> API 查看索引的 ILM 状态，确保索引按预期策略进行管理。</li>
+<li><strong>调整 ILM 策略</strong>：根据数据增长情况和业务需求，定期调整 ILM 策略（如缩短或延长某阶段的时间），以优化存储和访问性能。</li>
+</ul>
+<h3 id="18-elasticsearch">18. <strong>Elasticsearch 索引与搜索优化</strong></h3>
+<p><strong>18.1 如何提高 Elasticsearch 的搜索性能？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li><strong>使用适当的分片数量</strong>：分片过多会增加集群管理开销，分片过少会影响并行查询性能。根据数据规模和节点数量，合理设置分片数量。</li>
+<li><strong>预热查询</strong>：对于频繁执行的复杂查询，可以使用 <code>search template</code> 预热查询，提高首次查询的响应速度。</li>
+<li><strong>减少深度分页</strong>：避免使用大量的 <code>from</code> 和 <code>size</code> 参数进行深度分页查询，改用 <code>scroll</code> 或 <code>search_after</code> 方式进行高效分页。</li>
+</ul>
+<p><strong>18.2 如何优化 Elasticsearch 的索引速度？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li><strong>批量索引</strong>：通过 <code>Bulk API</code> 批量写入数据，减少单次写操作的开销，提高索引速度。</li>
+<li><strong>调整刷新间隔</strong>：临时设置 <code>refresh_interval</code> 为 <code>-1</code> 禁用自动刷新，批量导入数据后再手动刷新索引。</li>
+<li><strong>控制副本数量</strong>：在批量导入期间将副本数量设置为 0，减少副本同步开销，导入完成后恢复默认副本数量。</li>
+</ul>
+<p><strong>18.3 如何使用 Elasticsearch 的分词器提高搜索准确性？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li><strong>选择合适的分词器</strong>：根据语言和数据特点选择适当的分词器（如 <code>standard</code>、<code>whitespace</code>、<code>ngram</code>、<code>edge_ngram</code> 等），提高搜索结果的相关性。</li>
+<li><strong>自定义分词器</strong>：通过自定义分析器配置，如停用词、同义词过滤器，优化分词效果，提升搜索准确性。</li>
+<li><strong>多字段搜索</strong>：对于需要支持不同分词方式的字段，可以使用 <code>multi-field</code> 将一个字段索引为多个不同的字段，并分别配置不同的分词器。</li>
+</ul>
+<h3 id="19-elasticsearch">19. <strong>Elasticsearch 与大数据生态系统集成</strong></h3>
+<p><strong>19.1 如何将 Elasticsearch 与 Kafka 集成进行实时数据处理？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li><strong>使用 Logstash</strong>：通过 Logstash 的 <code>kafka</code> 输入插件，从 Kafka 读取实时数据，并通过 <code>elasticsearch</code> 输出插件将数据写入 Elasticsearch。</li>
+<li><strong>使用 Kafka Connect</strong>：Kafka Connect 提供了 <code>Elasticsearch Sink Connector</code>，直接将 Kafka 主题中的数据同步到 Elasticsearch 索引。</li>
+<li><strong>实时数据流处理</strong>：结合 Kafka Streams 或 Apache Flink 等流处理框架，对 Kafka 中的数据进行实时处理，并将结果写入 Elasticsearch。</li>
+</ul>
+<p><strong>19.2 如何通过 Hadoop 将大数据批量导入 Elasticsearch？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li><strong>使用 Elasticsearch-Hadoop 插件</strong>：通过 <code>elasticsearch-hadoop</code> 插件，直接从 Hadoop 集群中的 HDFS 读取数据，并批量导入到 Elasticsearch 索引中。</li>
+<li><strong>Spark 与 Elasticsearch 集成</strong>：使用 <code>ES-Hadoop</code> 在 Spark 中读取 HDFS 数据进行处理，并将处理结果写入 Elasticsearch，支持大规模数据的批处理和分析。</li>
+<li><strong>Hive 与 Elasticsearch</strong>：通过 Hive 外部表，将 Hive 查询结果写入 Elasticsearch，实现大数据的批量导入和结构化数据的索引。</li>
+</ul>
+<p><strong>19.3 如何结合 Elasticsearch 与 Spark 进行实时分析？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li><strong>Spark Streaming 集成</strong>：使用 Spark Streaming 处理实时数据流，并将分析结果实时写入 Elasticsearch，构建实时分析平台。</li>
+<li><strong>Elasticsearch 索引与搜索</strong>：利用 Elasticsearch 的强大搜索和分析功能，对 Spark 处理的数据进行索引，支持实时查询和可视化。</li>
+<li><strong>性能优化</strong>：通过优化 Spark 的任务调度和 Elasticsearch 的索引结构，确保实时分析系统的高性能和低延迟。</li>
+</ul>
+<h3 id="20-elasticsearch">20. <strong>Elasticsearch 的新特性与未来发展</strong></h3>
+<p><strong>20.1 Elasticsearch 7.x 系列的新特性有哪些？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li><strong>更快的索引和搜索性能</strong>：Elasticsearch 7.x 对 Lucene 进行了优化，提高了索引和搜索的速度，减少了延迟。</li>
+<li><strong>自动分片管理</strong>：7.x 引入了自动分片管理功能，简化了分片数量的配置，自动根据数据规模调整分片数。</li>
+<li><strong>跨集群复制（CCR）</strong>：支持跨集群复制，允许在不同的 Elasticsearch 集群之间实现数据的实时复制，增强灾难恢复能力。</li>
+</ul>
+<p><strong>20.2 如何利用 Elasticsearch 7.x 的新特性提升应用性能？</strong></p>
+<ul>
+<li><strong>回答</strong>：</li>
+<li><strong>使用自动分片管理</strong>：简化索引配置，通过自动分片管理，根据数据增长自动调整分片数量，提升集群管理效率。</li>
+<li><strong>跨集群复制</strong>：配置跨集群复制，增强数据的高可用性和灾难恢复能力，特别适用于多数据中心的企业应用。</li>
+<li><strong>优化查询性能</strong>：利用 7.x 提供的增强型查询引擎和优化的查询路径，减少复杂查询的响应时间，提升用户体验。</li>
+</ul>
+<h2 id="_1">补充题目</h2>
+<p><a href="https://www.cnblogs.com/crazymakercircle/p/16383826.html">ElasticSearch补充题目</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "toc.integrate", "search.highlight", "search.suggest", "header.autohide", "footer.copyright", "footer.text", "code.annotate", "content.code", "material.nav", "material.switch"], "search": "../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+    
+  </body>
+</html>

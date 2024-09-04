@@ -1,0 +1,4169 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="IT 手册整理">
+      
+      
+        <meta name="author" content="hlh">
+      
+      
+      
+        <link rel="prev" href="../interview/">
+      
+      
+        <link rel="next" href="../../Redis/basic/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>MySQL 常见问题 - IT-手册</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.35f28582.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mysql" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="IT-手册" class="md-header__button md-logo" aria-label="IT-手册" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IT-手册
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              MySQL 常见问题
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="IT-手册" class="md-nav__button md-logo" aria-label="IT-手册" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    IT-手册
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IT-手册大全
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Web篇
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Web篇
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Django
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Django
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web%E7%AF%87/Django/advance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django 进阶教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web%E7%AF%87/Django/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django 基础教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web%E7%AF%87/Django/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web%E7%AF%87/Django/questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django 开发中遇到的问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web%E7%AF%87/Django/restful/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django RESTful
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    FastAPI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            FastAPI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web%E7%AF%87/FastAPI/advance./" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FastAPI 进阶教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web%E7%AF%87/FastAPI/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FastAPI 基础教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web%E7%AF%87/FastAPI/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FastAPI 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Flask
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Flask
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web%E7%AF%87/Flask/advance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Advance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web%E7%AF%87/Flask/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web%E7%AF%87/Flask/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Web%E7%AF%87/Flask/questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    工作中常见问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    中间件
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            中间件
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Kafka
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Kafka
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kafka 基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kafka 面试
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Rabbitmq
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Rabbitmq
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/rabbitmq/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RabbitMQ 基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/rabbitmq/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RabbitMQ 面试
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Zookeeper
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Zookeeper
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/zookeeper/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    zookeeper 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/zookeeper/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    zookeeper 面试
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    云原生
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            云原生
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Docker
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker-基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker 面试
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Kubernetes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Kubernetes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kubernetes 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/crictl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    crictl 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/helm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kubernetes 包管理工具 helm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kubernetes 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/monitor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kubernetes 监控平台和日志管理
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    人工智能
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            人工智能
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/AI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/Transformers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transformers 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/advance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLM 进阶教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/ai-basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI 概念
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    基础教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLM 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/langchain/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LangChain 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    工具篇
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            工具篇
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    git 命令
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    数据库
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            数据库
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Elastic
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            Elastic
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Elastic/advance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ElastciSearch 进阶教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Elastic/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ElasticSearch 基本教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Elastic/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ElasticSearch 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Elastic/questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ElasticSearch 工作中遇到的问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MongoDB
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            MongoDB
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MongoDB/advance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MongoDB 进阶教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MongoDB/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MongoDB 基础教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MongoDB/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MongoDB 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MongoDB/questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MongoDB 工作中遇到的问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MySQL
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            MySQL
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MySQL 进阶教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MySQL 基础教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MySQL 面试题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    MySQL 常见问题
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    MySQL 常见问题
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 慢查询
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 死锁
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 数据库连接问题
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 数据丢失或损坏
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 性能瓶颈
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 权限问题
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 数据一致性问题
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. 连接池配置问题
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. 数据库迁移问题
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. 索引失效
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. 数据库备份和恢复
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. 字符集和排序规则问题
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. 数据库复制问题
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      14. 锁定和并发控制
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      15. 内存和缓存管理
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. 表锁与行锁冲突
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. 读写分离问题
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. 查询缓存失效
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      14. 表碎片问题
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      15. 自增主键冲突
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      16. 慢查询问题
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    <span class="md-ellipsis">
+      17. 数据迁移问题
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18" class="md-nav__link">
+    <span class="md-ellipsis">
+      18. 全文检索问题
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19" class="md-nav__link">
+    <span class="md-ellipsis">
+      19. 时间戳与时区问题
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20" class="md-nav__link">
+    <span class="md-ellipsis">
+      20. 安全问题
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      21. 高并发下的数据库连接数不足
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      22. 数据库死锁问题
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      23. 慢查询日志过大
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      24. 主从复制延迟
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      25. 表设计导致的性能问题
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26" class="md-nav__link">
+    <span class="md-ellipsis">
+      26. 外键约束影响性能
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27" class="md-nav__link">
+    <span class="md-ellipsis">
+      27. 分区表管理问题
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28" class="md-nav__link">
+    <span class="md-ellipsis">
+      28. 频繁的表结构变更
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29" class="md-nav__link">
+    <span class="md-ellipsis">
+      29. 数据库备份与恢复问题
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#30" class="md-nav__link">
+    <span class="md-ellipsis">
+      30. 事务处理不当
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Redis
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            Redis
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Redis/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Redis 基础教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Redis/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Redis 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Redis/questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Redis 工作中常见问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    服务器
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            服务器
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Nginx
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1">
+            <span class="md-nav__icon md-icon"></span>
+            Nginx
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%9C%8D%E5%8A%A1%E5%99%A8/nginx/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    nginx 基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%9C%8D%E5%8A%A1%E5%99%A8/nginx/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    nginx 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Uvicorn
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            Uvicorn
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%9C%8D%E5%8A%A1%E5%99%A8/uvicorn/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    uvicorn 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    计算机基础
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            计算机基础
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    http 手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/network/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    计算机网络面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/system/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    操作系统面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/websocket/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Websocket
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    语言篇
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            语言篇
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_1" id="__nav_10_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_1">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/advance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python 进阶教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    python 基础教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_1_4" id="__nav_10_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Python常用库
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Python常用库
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/Seaborn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Seaborn 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/beautifulsoup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    beautifulsoup 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/celery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    celery 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/datastruct/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构和算法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/datetime/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    datetime 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/functools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    functools 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/json/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    json 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/logging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    logging 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/math/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    math 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/matpliot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    matpliot 使用教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/mock/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    mock 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/numpy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    numpy 笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/os/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    os模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pandas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pandas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pathlib/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pathlib 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pickle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pickle 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pymysql/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pymysql 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pytest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pytest 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pytorch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pytorch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/queue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    queue 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/random/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    random 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/re/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    re 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/redis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    redis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/requests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    requests 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scikit-learn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    scikit-learn
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scipy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    scipy 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scrapy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    scrapy 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/selenium/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    selenium 使用教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/shutil/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    shutil 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/sqlalchemy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SQLALchemy 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/sys/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sys 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/time/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    time 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/urllib/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    urllib 模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="mysql">MySQL 常见问题</h1>
+<p>在 MySQL 的实际工作中，常常会遇到各种问题。以下是一些常见的 MySQL 工作中遇到的问题及其详细解答：</p>
+<h3 id="1">1. <strong>慢查询</strong></h3>
+<p><strong>问题描述</strong>：查询执行时间过长，影响系统性能。</p>
+<p><strong>可能原因</strong>：
+- 缺乏索引：没有为查询条件创建合适的索引。
+- 大数据量：表的数据量过大，查询处理慢。
+- 不合理的查询语句：查询语句的写法不优化，如全表扫描。</p>
+<p><strong>解决方案</strong>：
+- <strong>添加索引</strong>：根据查询条件和 <code>EXPLAIN</code> 输出结果，添加合适的索引。
+  <code>sql
+  CREATE INDEX idx_column ON table_name(column_name);</code>
+- <strong>优化查询语句</strong>：重写查询语句，避免使用 <code>SELECT *</code>，并利用 JOIN 和 WHERE 条件限制结果集。
+- <strong>使用缓存</strong>：启用 MySQL 查询缓存，减少重复查询。
+  <code>sql
+  SET GLOBAL query_cache_size = 1048576;</code>
+- <strong>表分区</strong>：将表分区，减少每次查询的数据量。
+  <code>sql
+  ALTER TABLE table_name PARTITION BY RANGE (column_name) (
+    PARTITION p0 VALUES LESS THAN (1000),
+    PARTITION p1 VALUES LESS THAN (2000)
+  );</code></p>
+<h3 id="2">2. <strong>死锁</strong></h3>
+<p><strong>问题描述</strong>：事务之间因相互持有锁而导致的死锁问题，导致事务无法继续执行。</p>
+<p><strong>可能原因</strong>：
+- 事务锁定顺序不一致：不同事务锁定资源的顺序不同，导致循环等待。
+- 锁粒度过大：事务持有锁的范围过大，增加了死锁的概率。</p>
+<p><strong>解决方案</strong>：
+- <strong>分析死锁</strong>：使用 <code>SHOW ENGINE INNODB STATUS</code> 查看死锁信息。
+  <code>sql
+  SHOW ENGINE INNODB STATUS;</code>
+- <strong>优化事务设计</strong>：尽量减小事务的锁定范围，按相同的顺序请求锁资源。
+- <strong>增加超时设置</strong>：设置锁等待超时，避免长时间等待。
+  <code>sql
+  SET innodb_lock_wait_timeout = 50;</code></p>
+<h3 id="3">3. <strong>数据库连接问题</strong></h3>
+<p><strong>问题描述</strong>：应用无法连接到 MySQL 数据库，导致系统无法正常工作。</p>
+<p><strong>可能原因</strong>：
+- 数据库服务未启动：MySQL 服务未运行或崩溃。
+- 网络问题：网络连接问题或防火墙阻止连接。
+- 配置错误：MySQL 配置文件中绑定了错误的 IP 地址或端口。</p>
+<p><strong>解决方案</strong>：
+- <strong>检查数据库服务</strong>：确保 MySQL 服务正常运行。
+  <code>bash
+  sudo systemctl status mysql</code>
+- <strong>检查网络连接</strong>：确认网络连通性，确保防火墙设置正确。
+  <code>bash
+  telnet your_database_host 3306</code>
+- <strong>检查配置文件</strong>：确认 MySQL 配置文件 <code>my.cnf</code> 中的 <code>bind-address</code> 和 <code>port</code> 设置正确。
+  <code>ini
+  [mysqld]
+  bind-address = 0.0.0.0
+  port = 3306</code></p>
+<h3 id="4">4. <strong>数据丢失或损坏</strong></h3>
+<p><strong>问题描述</strong>：数据意外丢失或数据库损坏，导致数据不可用。</p>
+<p><strong>可能原因</strong>：
+- 硬件故障：磁盘故障或其他硬件问题。
+- 软件错误：MySQL 软件的缺陷或不正确的配置。
+- 用户误操作：错误的 SQL 操作导致数据丢失。</p>
+<p><strong>解决方案</strong>：
+- <strong>恢复备份</strong>：使用备份恢复数据。确保定期备份数据。
+  <code>bash
+  mysql -u root -p &lt; backup.sql</code>
+- <strong>使用日志文件恢复</strong>：利用 MySQL 的二进制日志（binlog）恢复数据。
+  <code>bash
+  mysqlbinlog binlog_file &gt; recovery.sql
+  mysql -u root -p &lt; recovery.sql</code>
+- <strong>修复表</strong>：如果表损坏，可以使用 <code>REPAIR</code> 语句修复。
+  <code>sql
+  REPAIR TABLE table_name;</code></p>
+<h3 id="5">5. <strong>性能瓶颈</strong></h3>
+<p><strong>问题描述</strong>：数据库性能不如预期，查询速度慢，系统响应迟钝。</p>
+<p><strong>可能原因</strong>：
+- 服务器资源不足：CPU、内存或磁盘 I/O 性能瓶颈。
+- 查询不优化：查询语句和索引使用不当。
+- 配置不合理：MySQL 配置参数不适合当前负载。</p>
+<p><strong>解决方案</strong>：
+- <strong>优化配置</strong>：根据系统负载和实际情况调整 MySQL 配置参数，如缓冲区大小和缓存设置。
+  <code>ini
+  innodb_buffer_pool_size = 1G
+  query_cache_size = 64M</code>
+- <strong>监控性能</strong>：使用性能监控工具如 MySQL Workbench 或 <code>performance_schema</code> 来分析性能瓶颈。
+- <strong>优化表结构</strong>：调整表结构和索引，以减少查询时间。</p>
+<h3 id="6">6. <strong>权限问题</strong></h3>
+<p><strong>问题描述</strong>：用户无法访问数据库或执行特定操作，导致权限不足。</p>
+<p><strong>可能原因</strong>：
+- 用户权限配置不正确：没有为用户分配正确的权限。
+- 权限未刷新：更改权限后未刷新权限表。</p>
+<p><strong>解决方案</strong>：
+- <strong>检查用户权限</strong>：使用 <code>SHOW GRANTS</code> 查看用户权限。
+  <code>sql
+  SHOW GRANTS FOR 'username'@'host';</code>
+- <strong>授予权限</strong>：为用户授予必要的权限。
+  <code>sql
+  GRANT ALL PRIVILEGES ON database_name.* TO 'username'@'host';
+  FLUSH PRIVILEGES;</code></p>
+<h3 id="7">7. <strong>数据一致性问题</strong></h3>
+<p><strong>问题描述</strong>：数据在多个表或数据库中不一致，影响系统的可靠性。</p>
+<p><strong>可能原因</strong>：
+- 事务处理不当：事务未能保证原子性，导致数据不一致。
+- 外键约束缺失：缺少外键约束，无法维护数据完整性。</p>
+<p><strong>解决方案</strong>：
+- <strong>使用事务</strong>：确保相关操作在事务中进行，保证数据的一致性。
+  <code>sql
+  START TRANSACTION;
+  -- 执行 SQL 语句
+  COMMIT;</code>
+- <strong>添加外键约束</strong>：确保数据一致性和完整性。
+  <code>sql
+  ALTER TABLE orders ADD CONSTRAINT fk_customer FOREIGN KEY (customer_id) REFERENCES customers(id);</code></p>
+<p>继续深入讨论一些 MySQL 工作中可能遇到的问题及其解决方案：</p>
+<h3 id="8">8. <strong>连接池配置问题</strong></h3>
+<p><strong>问题描述</strong>：数据库连接池配置不当，导致连接过多或过少，影响性能和稳定性。</p>
+<p><strong>可能原因</strong>：
+- <strong>连接池配置不合理</strong>：最大连接数或最小连接数设置不适合实际负载。
+- <strong>资源泄漏</strong>：连接未被正确关闭，导致连接池资源耗尽。</p>
+<p><strong>解决方案</strong>：
+- <strong>调整连接池配置</strong>：根据实际负载调整最大连接数和最小连接数。
+  <code>properties
+  # Example for HikariCP (Java Connection Pool)
+  hikari.maximumPoolSize=50
+  hikari.minimumIdle=10</code>
+- <strong>确保连接关闭</strong>：在代码中正确关闭数据库连接。
+  <code>java
+  try (Connection conn = dataSource.getConnection()) {
+      // 执行数据库操作
+  } catch (SQLException e) {
+      e.printStackTrace();
+  }</code></p>
+<h3 id="9">9. <strong>数据库迁移问题</strong></h3>
+<p><strong>问题描述</strong>：在迁移数据库时，可能会遇到数据丢失、性能下降或迁移失败的问题。</p>
+<p><strong>可能原因</strong>：
+- <strong>迁移工具配置错误</strong>：迁移工具配置不当或使用错误。
+- <strong>数据格式不一致</strong>：源数据库和目标数据库的数据格式或版本不一致。</p>
+<p><strong>解决方案</strong>：
+- <strong>选择合适的迁移工具</strong>：使用经过验证的迁移工具或服务，例如 <code>mysqldump</code>、<code>mysqlpump</code> 或专业的数据迁移工具。
+  <code>bash
+  mysqldump -u root -p database_name &gt; backup.sql
+  mysql -u root -p new_database &lt; backup.sql</code>
+- <strong>验证迁移结果</strong>：在迁移后，进行数据验证和性能测试，确保数据完整性和系统性能。
+- <strong>计划和测试</strong>：在生产环境迁移前，先在测试环境中进行彻底测试，发现和解决潜在问题。</p>
+<h3 id="10">10. <strong>索引失效</strong></h3>
+<p><strong>问题描述</strong>：查询没有利用索引，导致性能问题。</p>
+<p><strong>可能原因</strong>：
+- <strong>索引选择不当</strong>：查询条件没有使用索引，或索引设计不合理。
+- <strong>隐式转换</strong>：查询中使用了数据类型不同的列，导致索引无法使用。</p>
+<p><strong>解决方案</strong>：
+- <strong>优化索引设计</strong>：根据查询条件设计合适的索引，包括单列索引和复合索引。
+  <code>sql
+  CREATE INDEX idx_name_age ON employees(name, age);</code>
+- <strong>避免隐式转换</strong>：确保查询条件的数据类型与列的数据类型一致，避免使用类型转换。
+  ```sql
+  -- 不推荐（可能导致索引失效）
+  SELECT * FROM employees WHERE age = '30';</p>
+<p>-- 推荐
+  SELECT * FROM employees WHERE age = 30;
+  ```</p>
+<h3 id="11">11. <strong>数据库备份和恢复</strong></h3>
+<p><strong>问题描述</strong>：备份和恢复过程中可能出现问题，导致数据无法恢复或备份不完整。</p>
+<p><strong>可能原因</strong>：
+- <strong>备份策略不当</strong>：备份策略设置不合理，导致备份不完整或过于频繁。
+- <strong>恢复过程出错</strong>：恢复过程中的错误或遗漏导致数据不一致。</p>
+<p><strong>解决方案</strong>：
+- <strong>制定备份策略</strong>：根据数据重要性和变化频率制定合理的备份策略，包括全量备份和增量备份。
+  ```bash
+  # Full backup
+  mysqldump -u root -p --all-databases &gt; full_backup.sql</p>
+<p># Incremental backup (requires binary logs)
+  mysqlbinlog --start-datetime="2024-01-01 00:00:00" --stop-datetime="2024-01-02 00:00:00" binlog_file &gt; incremental_backup.sql
+  ```
+- <strong>测试恢复过程</strong>：定期测试备份恢复过程，确保备份文件的完整性和可用性。</p>
+<h3 id="12">12. <strong>字符集和排序规则问题</strong></h3>
+<p><strong>问题描述</strong>：字符集和排序规则不一致，导致数据存储和检索问题。</p>
+<p><strong>可能原因</strong>：
+- <strong>字符集不一致</strong>：数据库、表或列的字符集设置不一致。
+- <strong>排序规则不匹配</strong>：字符比较和排序规则不一致。</p>
+<p><strong>解决方案</strong>：
+- <strong>统一字符集和排序规则</strong>：确保数据库、表和列使用一致的字符集和排序规则。
+  <code>sql
+  ALTER DATABASE database_name CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+  ALTER TABLE table_name CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;</code>
+- <strong>处理字符集转换</strong>：在导入数据时，确保字符集设置正确，避免乱码或数据丢失。</p>
+<h3 id="13">13. <strong>数据库复制问题</strong></h3>
+<p><strong>问题描述</strong>：主从复制出现延迟或不一致问题。</p>
+<p><strong>可能原因</strong>：
+- <strong>复制延迟</strong>：主服务器和从服务器之间的数据同步存在延迟。
+- <strong>复制错误</strong>：复制过程中出现错误，导致数据不一致。</p>
+<p><strong>解决方案</strong>：
+- <strong>监控复制状态</strong>：使用 <code>SHOW SLAVE STATUS</code> 查看复制状态，监控延迟和错误。
+  <code>sql
+  SHOW SLAVE STATUS\G</code>
+- <strong>修复复制错误</strong>：如果发现错误，使用 <code>START SLAVE</code> 和 <code>STOP SLAVE</code> 进行修复，并检查复制日志。
+  <code>sql
+  STOP SLAVE;
+  START SLAVE;</code></p>
+<h3 id="14">14. <strong>锁定和并发控制</strong></h3>
+<p><strong>问题描述</strong>：锁定问题导致并发操作冲突，影响数据库性能。</p>
+<p><strong>可能原因</strong>：
+- <strong>锁争用</strong>：多个事务竞争同一资源，导致锁等待和性能下降。
+- <strong>锁定粒度不合理</strong>：事务锁定的资源过多，影响并发性能。</p>
+<p><strong>解决方案</strong>：
+- <strong>分析锁情况</strong>：使用 <code>SHOW ENGINE INNODB STATUS</code> 查看锁信息。
+  <code>sql
+  SHOW ENGINE INNODB STATUS;</code>
+- <strong>优化事务</strong>：减少事务的锁定范围，避免长时间持有锁。
+  <code>sql
+  START TRANSACTION;
+  -- 执行操作
+  COMMIT;</code>
+- <strong>使用行级锁</strong>：根据需要使用行级锁而非表级锁，以提高并发性能。</p>
+<h3 id="15">15. <strong>内存和缓存管理</strong></h3>
+<p><strong>问题描述</strong>：内存和缓存配置不当导致性能问题或内存不足。</p>
+<p><strong>可能原因</strong>：
+- <strong>内存配置不合理</strong>：InnoDB 缓冲池、查询缓存等内存设置不合适。
+- <strong>缓存失效</strong>：缓存配置不当，导致缓存命中率低。</p>
+<p><strong>解决方案</strong>：
+- <strong>优化内存配置</strong>：根据实际负载调整 InnoDB 缓冲池和查询缓存设置。
+  <code>ini
+  innodb_buffer_pool_size = 2G
+  query_cache_size = 128M</code>
+- <strong>监控缓存使用情况</strong>：使用 MySQL 的监控工具来分析缓存命中率和性能。
+  <code>sql
+  SHOW STATUS LIKE 'Qcache%';</code></p>
+<p>以下是更多 MySQL 在实际工作中可能遇到的问题及其详细解答：</p>
+<h3 id="11_1">11. <strong>表锁与行锁冲突</strong></h3>
+<p><strong>问题描述</strong>：在大表上执行操作时，可能会出现表锁和行锁冲突，导致其他事务无法进行。</p>
+<p><strong>可能原因</strong>：
+- <strong>大范围更新操作</strong>：对表的大范围更新可能触发表锁。
+- <strong>不当的锁定策略</strong>：使用了不适合当前操作的锁类型（如使用表锁而非行锁）。</p>
+<p><strong>解决方案</strong>：
+- <strong>使用行锁</strong>：尽量使用行级锁而非表级锁，减少锁定范围。
+  <code>sql
+  SELECT * FROM table_name WHERE id = 1 FOR UPDATE;</code>
+- <strong>分批次操作</strong>：对大表进行更新时，采用分批次操作，避免长时间锁定。
+  <code>sql
+  UPDATE table_name SET column_name = value WHERE condition LIMIT 1000;</code></p>
+<h3 id="12_1">12. <strong>读写分离问题</strong></h3>
+<p><strong>问题描述</strong>：在读写分离架构下，数据可能会出现延迟，导致从库数据不一致或查询旧数据。</p>
+<p><strong>可能原因</strong>：
+- <strong>主从复制延迟</strong>：由于网络或系统负载问题，导致从库的数据滞后于主库。
+- <strong>读取策略不合理</strong>：应用在需要读取最新数据时从从库读取，导致数据不一致。</p>
+<p><strong>解决方案</strong>：
+- <strong>调整读取策略</strong>：在需要读取最新数据的场景下，强制读取主库的数据。
+  <code>java
+  if (requiresLatestData) {
+      useMasterDatabase();
+  } else {
+      useSlaveDatabase();
+  }</code>
+- <strong>监控复制延迟</strong>：使用监控工具持续监控主从复制延迟，及时发现并解决问题。</p>
+<h3 id="13_1">13. <strong>查询缓存失效</strong></h3>
+<p><strong>问题描述</strong>：查询缓存未命中，导致重复查询时性能下降。</p>
+<p><strong>可能原因</strong>：
+- <strong>动态查询条件</strong>：查询条件经常变化，导致缓存失效。
+- <strong>表数据频繁更新</strong>：表数据频繁更新，导致缓存频繁失效。</p>
+<p><strong>解决方案</strong>：
+- <strong>优化查询缓存策略</strong>：尽量减少动态查询条件的使用，或者在需要频繁读取的数据上增加查询缓存。
+  <code>sql
+  SELECT SQL_CACHE column_name FROM table_name WHERE condition;</code>
+- <strong>针对性缓存</strong>：对不常更新但需要频繁读取的数据使用缓存技术（如 Redis）来提高查询效率。</p>
+<h3 id="14_1">14. <strong>表碎片问题</strong></h3>
+<p><strong>问题描述</strong>：表或索引出现碎片，导致查询效率下降。</p>
+<p><strong>可能原因</strong>：
+- <strong>频繁的增删操作</strong>：频繁的增删操作导致表和索引结构不连续，产生碎片。
+- <strong>长期未维护</strong>：表和索引长时间未进行优化或重建。</p>
+<p><strong>解决方案</strong>：
+- <strong>优化表结构</strong>：定期使用 <code>OPTIMIZE TABLE</code> 对表进行优化，清除碎片。
+  <code>sql
+  OPTIMIZE TABLE table_name;</code>
+- <strong>重建索引</strong>：对有大量碎片的索引进行重建，提高查询性能。
+  <code>sql
+  ALTER TABLE table_name DROP INDEX index_name, ADD INDEX index_name (column_name);</code></p>
+<h3 id="15_1">15. <strong>自增主键冲突</strong></h3>
+<p><strong>问题描述</strong>：在多主库架构或主键自增步长设置不合理时，可能导致自增主键冲突。</p>
+<p><strong>可能原因</strong>：
+- <strong>多主库环境</strong>：多个主库同时写入时，可能会产生主键冲突。
+- <strong>不合理的步长设置</strong>：主键自增步长（<code>auto_increment_increment</code>）设置不当，导致主键重复。</p>
+<p><strong>解决方案</strong>：
+- <strong>配置合理的自增步长</strong>：在多主库环境下，设置不同的自增步长和起始值，避免冲突。
+  <code>sql
+  SET GLOBAL auto_increment_increment = 2;
+  SET GLOBAL auto_increment_offset = 1;</code>
+- <strong>使用UUID</strong>：在分布式环境下，可以使用 UUID 作为主键，避免冲突。
+  <code>sql
+  INSERT INTO table_name (id, column_name) VALUES (UUID(), value);</code></p>
+<h3 id="16">16. <strong>慢查询问题</strong></h3>
+<p><strong>问题描述</strong>：慢查询导致数据库性能下降，影响系统响应速度。</p>
+<p><strong>可能原因</strong>：
+- <strong>查询未使用索引</strong>：查询条件未使用索引，导致全表扫描。
+- <strong>复杂查询语句</strong>：查询语句过于复杂，涉及多个表的 JOIN 操作或嵌套查询。</p>
+<p><strong>解决方案</strong>：
+- <strong>开启慢查询日志</strong>：启用 MySQL 的慢查询日志功能，定位性能瓶颈。
+  <code>sql
+  SET GLOBAL slow_query_log = 'ON';
+  SET GLOBAL long_query_time = 1;</code>
+- <strong>优化查询语句</strong>：对慢查询进行分析，优化索引和查询逻辑，减少查询时间。
+  <code>sql
+  EXPLAIN SELECT * FROM table_name WHERE column_name = value;</code></p>
+<h3 id="17">17. <strong>数据迁移问题</strong></h3>
+<p><strong>问题描述</strong>：数据迁移过程中出现数据丢失或不一致的问题。</p>
+<p><strong>可能原因</strong>：
+- <strong>迁移工具不稳定</strong>：使用的迁移工具或脚本不稳定，导致数据丢失。
+- <strong>并发写入</strong>：迁移过程中有新的数据写入，导致数据不一致。</p>
+<p><strong>解决方案</strong>：
+- <strong>使用可靠的迁移工具</strong>：使用成熟的迁移工具（如 MySQL 的 <code>mysqldump</code> 或 <code>MySQL Workbench</code>）进行数据迁移。
+  <code>bash
+  mysqldump -u root -p database_name &gt; backup.sql</code>
+- <strong>迁移时冻结数据写入</strong>：在迁移过程中，尽量暂停数据的写入操作，确保数据的一致性。</p>
+<h3 id="18">18. <strong>全文检索问题</strong></h3>
+<p><strong>问题描述</strong>：全文检索的查询结果不准确或性能不佳。</p>
+<p><strong>可能原因</strong>：
+- <strong>索引未更新</strong>：数据更新后，全文检索索引未及时更新，导致检索结果不准确。
+- <strong>查询不合理</strong>：查询语法不当，未充分利用全文索引功能。</p>
+<p><strong>解决方案</strong>：
+- <strong>更新全文检索索引</strong>：定期更新全文索引，确保检索结果的准确性。
+  <code>sql
+  ALTER TABLE table_name ADD FULLTEXT(column_name);</code>
+- <strong>优化查询语法</strong>：使用适当的查询语法和匹配模式，提高查询的准确性和性能。
+  <code>sql
+  SELECT * FROM table_name WHERE MATCH(column_name) AGAINST('search_term' IN NATURAL LANGUAGE MODE);</code></p>
+<h3 id="19">19. <strong>时间戳与时区问题</strong></h3>
+<p><strong>问题描述</strong>：时间戳数据在不同时区下不一致，导致时间相关的数据出现问题。</p>
+<p><strong>可能原因</strong>：
+- <strong>时区配置不一致</strong>：数据库服务器、应用服务器和客户端的时区配置不一致。
+- <strong>时间戳存储不合理</strong>：未统一时间戳的存储格式或时区，导致时间数据混乱。</p>
+<p><strong>解决方案</strong>：
+- <strong>统一时区配置</strong>：确保数据库服务器、应用服务器和客户端使用相同的时区设置。
+  <code>sql
+  SET time_zone = '+00:00';</code>
+- <strong>使用 UTC 时间</strong>：在存储时间戳时，统一使用 UTC 时间，避免跨时区问题。
+  <code>sql
+  SELECT UTC_TIMESTAMP();</code></p>
+<h3 id="20">20. <strong>安全问题</strong></h3>
+<p><strong>问题描述</strong>：数据库安全设置不当，可能导致数据泄露或未经授权的访问。</p>
+<p><strong>可能原因</strong>：
+- <strong>权限设置过宽</strong>：用户权限设置过宽，导致非授权用户可以访问或修改数据。
+- <strong>安全审计不足</strong>：缺乏有效的安全审计和监控，无法及时发现安全问题。</p>
+<p><strong>解决方案</strong>：
+- <strong>最小权限原则</strong>：根据业务需求，严格设置用户权限，确保每个用户只能访问必要的数据。
+  <code>sql
+  GRANT SELECT, INSERT ON database_name.table_name TO 'user'@'host';</code>
+- <strong>启用安全审计</strong>：使用 MySQL 的安全审计插件或第三方工具，定期审计和监控数据库操作。
+  <code>sql
+  INSTALL PLUGIN audit_log SONAME 'audit_log.so';</code></p>
+<p>以下是更多 MySQL 在实际工作中可能遇到的问题及其详细解答：</p>
+<h3 id="21">21. <strong>高并发下的数据库连接数不足</strong></h3>
+<p><strong>问题描述</strong>：在高并发场景下，应用程序可能会因为数据库连接数不足而出现连接超时或拒绝连接的问题。</p>
+<p><strong>可能原因</strong>：
+- <strong>连接数配置过低</strong>：数据库的最大连接数设置较低，无法应对高并发请求。
+- <strong>连接池管理不当</strong>：应用程序连接池未合理配置，导致连接泄露或连接复用不佳。</p>
+<p><strong>解决方案</strong>：
+- <strong>增加最大连接数</strong>：根据应用需求适当增加数据库的最大连接数配置。
+  <code>sql
+  SET GLOBAL max_connections = 500;</code>
+- <strong>优化连接池配置</strong>：合理配置应用程序的连接池大小和连接超时时间，避免连接泄露。
+  <code>java
+  dataSource.setMaxActive(100);
+  dataSource.setMaxWait(30000);</code></p>
+<h3 id="22">22. <strong>数据库死锁问题</strong></h3>
+<p><strong>问题描述</strong>：在并发场景下，多个事务可能会相互等待资源，导致死锁发生。</p>
+<p><strong>可能原因</strong>：
+- <strong>不合理的锁定顺序</strong>：事务在访问多个资源时，没有遵循一致的锁定顺序，导致死锁。
+- <strong>长时间持有锁</strong>：某些事务在持有锁的情况下执行了耗时操作，增加了死锁的概率。</p>
+<p><strong>解决方案</strong>：
+- <strong>合理设计事务逻辑</strong>：确保事务在访问多个资源时遵循相同的锁定顺序，减少死锁概率。
+  <code>sql
+  BEGIN;
+  SELECT ... FOR UPDATE;
+  UPDATE ...;
+  COMMIT;</code>
+- <strong>缩短锁定时间</strong>：尽量避免在持有锁的情况下进行耗时操作，减少锁的持有时间。</p>
+<h3 id="23">23. <strong>慢查询日志过大</strong></h3>
+<p><strong>问题描述</strong>：开启慢查询日志后，日志文件迅速增大，占用大量磁盘空间。</p>
+<p><strong>可能原因</strong>：
+- <strong>慢查询频繁发生</strong>：存在大量慢查询，导致日志文件快速增长。
+- <strong>日志切分策略不当</strong>：未配置慢查询日志的切分策略，导致单个日志文件过大。</p>
+<p><strong>解决方案</strong>：
+- <strong>优化慢查询</strong>：通过分析慢查询日志中的查询，优化索引和查询语句，减少慢查询发生。
+  <code>sql
+  EXPLAIN SELECT ...;</code>
+- <strong>配置日志切分</strong>：配置 MySQL 慢查询日志的自动切分策略，避免单个日志文件过大。
+  <code>ini
+  log_slow_verbosity = query_plan
+  log_slow_rate_limit = 100</code></p>
+<h3 id="24">24. <strong>主从复制延迟</strong></h3>
+<p><strong>问题描述</strong>：在主从复制架构中，从库可能会因为各种原因导致数据同步延迟，影响读操作的一致性。</p>
+<p><strong>可能原因</strong>：
+- <strong>从库性能不足</strong>：从库的硬件性能较差，无法及时处理来自主库的复制请求。
+- <strong>网络延迟</strong>：主从库之间的网络连接不稳定，导致数据传输延迟。</p>
+<p><strong>解决方案</strong>：
+- <strong>优化从库配置</strong>：提升从库的硬件配置，或调整参数以提高复制性能。
+  <code>sql
+  SET GLOBAL slave_parallel_workers = 4;</code>
+- <strong>监控和调优网络</strong>：确保主从库之间的网络连接稳定，并优化网络配置减少延迟。</p>
+<h3 id="25">25. <strong>表设计导致的性能问题</strong></h3>
+<p><strong>问题描述</strong>：表设计不合理，可能导致查询性能下降或数据冗余问题。</p>
+<p><strong>可能原因</strong>：
+- <strong>字段设计不合理</strong>：表中包含大量冗余字段或不必要的 BLOB/TEXT 字段，影响查询性能。
+- <strong>索引设计不合理</strong>：未正确建立索引或索引过多，导致查询优化器无法选择最优索引。</p>
+<p><strong>解决方案</strong>：
+- <strong>优化表结构</strong>：对表结构进行梳理，移除不必要的字段，优化数据类型。
+  <code>sql
+  ALTER TABLE table_name DROP COLUMN redundant_column;</code>
+- <strong>合理设计索引</strong>：根据查询需求建立必要的索引，避免不必要的索引浪费存储和影响写性能。
+  <code>sql
+  CREATE INDEX idx_name ON table_name(column1, column2);</code></p>
+<h3 id="26">26. <strong>外键约束影响性能</strong></h3>
+<p><strong>问题描述</strong>：在高并发场景下，外键约束可能导致插入和删除操作的性能下降。</p>
+<p><strong>可能原因</strong>：
+- <strong>外键关联的数据量较大</strong>：外键关联的大量数据需要在操作时进行额外的检查，影响性能。
+- <strong>外键导致的死锁</strong>：复杂的外键关系可能会增加死锁发生的概率。</p>
+<p><strong>解决方案</strong>：
+- <strong>审慎使用外键</strong>：在性能要求较高的场景下，考虑通过应用逻辑实现数据完整性，避免使用外键。
+  <code>sql
+  ALTER TABLE table_name DROP FOREIGN KEY fk_name;</code>
+- <strong>优化外键关联查询</strong>：确保外键字段有合适的索引，减少关联查询时的性能损耗。</p>
+<h3 id="27">27. <strong>分区表管理问题</strong></h3>
+<p><strong>问题描述</strong>：在使用分区表时，可能会因为分区设计不当或管理不善导致性能问题。</p>
+<p><strong>可能原因</strong>：
+- <strong>分区键选择不当</strong>：分区键选择不当，导致数据分布不均匀或某些分区过大。
+- <strong>分区过多或过少</strong>：分区数量不合理，过多的分区增加了管理开销，过少的分区影响并行查询性能。</p>
+<p><strong>解决方案</strong>：
+- <strong>优化分区键选择</strong>：根据数据分布选择合适的分区键，确保数据均匀分布在各分区。
+  <code>sql
+  ALTER TABLE table_name PARTITION BY RANGE(column_name) (PARTITION p1 VALUES LESS THAN (1000), PARTITION p2 VALUES LESS THAN (2000));</code>
+- <strong>调整分区数量</strong>：根据数据量和查询特点，调整分区数量以平衡性能和管理开销。</p>
+<h3 id="28">28. <strong>频繁的表结构变更</strong></h3>
+<p><strong>问题描述</strong>：频繁修改表结构（如添加、删除字段）可能会影响数据库性能，尤其是在大表上进行操作时。</p>
+<p><strong>可能原因</strong>：
+- <strong>频繁调整业务需求</strong>：业务需求经常变动，导致表结构需要频繁调整。
+- <strong>表设计不合理</strong>：初始设计时未充分考虑业务发展，导致后续频繁修改表结构。</p>
+<p><strong>解决方案</strong>：
+- <strong>减少结构变更</strong>：在设计阶段充分考虑业务需求，避免后期频繁修改表结构。
+- <strong>使用在线 DDL 工具</strong>：在需要变更表结构时，使用 pt-online-schema-change 等工具，避免长时间锁表。
+  <code>bash
+  pt-online-schema-change --alter "ADD COLUMN new_column INT" D=database,t=table_name --execute;</code></p>
+<h3 id="29">29. <strong>数据库备份与恢复问题</strong></h3>
+<p><strong>问题描述</strong>：备份策略不当或恢复过程中出现问题，可能导致数据丢失或恢复失败。</p>
+<p><strong>可能原因</strong>：
+- <strong>备份频率不够</strong>：备份不及时，导致数据丢失风险增大。
+- <strong>恢复过程复杂</strong>：恢复步骤不清晰或恢复工具不稳定，导致恢复失败。</p>
+<p><strong>解决方案</strong>：
+- <strong>制定合理的备份策略</strong>：根据业务重要性和数据变化频率，制定适当的备份策略，确保数据安全。
+  <code>bash
+  mysqldump -u root -p --single-transaction --routines --triggers --databases database_name &gt; backup.sql</code>
+- <strong>定期演练恢复过程</strong>：定期进行备份恢复演练，确保在需要时能够快速有效地恢复数据。</p>
+<h3 id="30">30. <strong>事务处理不当</strong></h3>
+<p><strong>问题描述</strong>：不当的事务处理可能导致数据不一致、锁冲突或性能问题。</p>
+<p><strong>可能原因</strong>：
+- <strong>事务过大</strong>：单个事务涉及太多操作，导致锁的持有时间过长，影响其他操作的并发性。
+- <strong>未正确处理事务回滚</strong>：在出现异常时未能正确回滚事务，导致数据不一致。</p>
+<p><strong>解决方案</strong>：
+- <strong>缩小事务范围</strong>：尽量将事务范围控制在最小必要范围内，减少锁定时间。
+  <code>sql
+  BEGIN;
+  UPDATE ...;
+  COMMIT;</code>
+- <strong>正确处理回滚</strong>：确保在异常情况下能够正确回滚事务，维护数据一致性。
+  <code>sql
+  BEGIN;
+  UPDATE ...;
+  ROLLBACK;</code></p>
+<p>这些问题反映了 MySQL 在生产环境中常见的挑战和解决策略。通过针对性地优化配置、设计和操作流程，可以有效解决这些问题，确保数据库系统的稳定性和性能。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "toc.integrate", "search.highlight", "search.suggest", "header.autohide", "footer.copyright", "footer.text", "code.annotate", "content.code", "material.nav", "material.switch"], "search": "../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+    
+  </body>
+</html>
