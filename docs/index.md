@@ -61,5 +61,6 @@
 ## 工具篇
 
 + [**Git**](工具篇/git.md)
++ [**Jenkins**](工具篇/jenkins.md)
 
 
