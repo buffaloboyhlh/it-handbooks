@@ -18,7 +18,8 @@ theme:
     - content.code
     - material.nav
     - material.switch
-#    - navigation.tabs
+    - content.code.copy
+  #    - navigation.tabs
   palette:
     # 选择主题颜色
     primary: 'teal'

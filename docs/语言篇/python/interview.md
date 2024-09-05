@@ -2517,4 +2517,221 @@ print(obj.new_method())  # 输出: I am new
 - **响应式编程** 处理异步数据流，适合实时系统和用户界面。
 - **元编程** 允许动态生成和修改代码，提供极高的灵活性。
 
-每种编程思想都有其独特的优点和适用场景，选择适合的范式有助于解决特定的问题，并提升代码的可维护性和可扩展性。
+## Python 反射
+
+### Python 反射详解
+
+反射是一种计算机程序的能力，它允许程序在运行时检查和操作对象的属性和方法。反射可以在运行时动态地获取对象的类型、检查其属性和方法，甚至修改它们。Python 的反射机制使开发人员能够动态地访问和操作类和对象的属性和方法，赋予了代码更多的灵活性。
+
+#### Python 反射常用函数
+Python 提供了一些内置的函数来实现反射功能：
+
+1. **`type()`**：获取对象的类型。
+2. **`dir()`**：列出对象的所有属性和方法。
+3. **`getattr()`**：获取对象属性或方法的值。
+4. **`hasattr()`**：检查对象是否具有某个属性或方法。
+5. **`setattr()`**：为对象的某个属性赋值。
+6. **`delattr()`**：删除对象的某个属性。
+7. **`callable()`**：检查对象是否可以被调用。
+
+---
+
+### 1. **`type()` - 获取对象类型**
+
+`type()` 函数返回对象的类型，类似于 Java 中的 `getClass()` 方法。
+
+#### 示例
+
+```python
+x = 10
+print(type(x))  # <class 'int'>
+
+y = "Hello"
+print(type(y))  # <class 'str'>
+```
+
+**详解**：
+- `type()` 返回对象所属的类。上例中，`x` 是 `int` 类型，而 `y` 是 `str` 类型。
+
+---
+
+### 2. **`dir()` - 列出对象的属性和方法**
+
+`dir()` 返回一个列表，包含对象的所有属性和方法。
+
+#### 示例
+
+```python
+class MyClass:
+    def __init__(self):
+        self.name = "Python"
+    
+    def greet(self):
+        print(f"Hello, {self.name}")
+
+obj = MyClass()
+print(dir(obj))
+```
+
+**输出**：
+```
+['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', 
+'__getattribute__', '__gt__', '__hash__', '__init__', '__le__', '__lt__', '__module__', '__ne__', 
+'__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', 
+'__subclasshook__', '__weakref__', 'greet', 'name']
+```
+
+**详解**：
+- `dir()` 返回一个列表，其中包括所有对象的内置属性和方法（以 `__` 开头的）以及自定义的属性和方法（如 `greet` 和 `name`）。
+
+---
+
+### 3. **`getattr()` - 获取属性或方法的值**
+
+`getattr()` 用于动态获取对象的属性或方法的值。
+
+#### 示例
+
+```python
+class MyClass:
+    def __init__(self):
+        self.language = "Python"
+    
+    def greet(self):
+        return "Hello, World!"
+
+obj = MyClass()
+
+# 获取属性 language 的值
+lang = getattr(obj, "language")
+print(lang)  # Python
+
+# 获取方法 greet 的返回值
+greet_method = getattr(obj, "greet")
+print(greet_method())  # Hello, World!
+```
+
+**详解**：
+- `getattr()` 第一个参数是对象，第二个参数是属性或方法的名称。该函数返回属性的值或方法的引用。对于方法，需要在返回的结果后加上 `()` 来调用。
+
+---
+
+### 4. **`hasattr()` - 检查属性或方法是否存在**
+
+`hasattr()` 用于检查对象是否具有某个属性或方法。
+
+#### 示例
+
+```python
+class MyClass:
+    def __init__(self):
+        self.version = 3.9
+
+obj = MyClass()
+
+print(hasattr(obj, "version"))  # True
+print(hasattr(obj, "name"))     # False
+```
+
+**详解**：
+- `hasattr()` 检查属性或方法是否存在，存在返回 `True`，否则返回 `False`。
+
+---
+
+### 5. **`setattr()` - 动态设置属性的值**
+
+`setattr()` 可以在运行时为对象设置或修改属性的值。
+
+#### 示例
+
+```python
+class MyClass:
+    def __init__(self):
+        self.language = "Python"
+
+obj = MyClass()
+
+# 修改 language 属性的值
+setattr(obj, "language", "JavaScript")
+print(obj.language)  # JavaScript
+
+# 动态添加新属性
+setattr(obj, "version", 3.9)
+print(obj.version)  # 3.9
+```
+
+**详解**：
+- `setattr()` 接收三个参数：对象、属性名称和属性值。如果属性存在则修改其值，如果不存在则动态添加该属性。
+
+---
+
+### 6. **`delattr()` - 删除对象的属性**
+
+`delattr()` 用于在运行时删除对象的某个属性。
+
+#### 示例
+
+```python
+class MyClass:
+    def __init__(self):
+        self.language = "Python"
+        self.version = 3.9
+
+obj = MyClass()
+
+# 删除属性 language
+delattr(obj, "language")
+
+# 尝试访问被删除的属性会报错
+# print(obj.language)  # AttributeError: 'MyClass' object has no attribute 'language'
+```
+
+**详解**：
+- `delattr()` 用于删除指定的属性。删除后，再次访问该属性将引发 `AttributeError` 异常。
+
+---
+
+### 7. **`callable()` - 检查对象是否可调用**
+
+`callable()` 检查对象是否是可调用的（通常是函数、方法或可调用类）。
+
+#### 示例
+
+```python
+def my_func():
+    pass
+
+class MyClass:
+    def __call__(self):
+        print("MyClass called!")
+
+obj = MyClass()
+
+print(callable(my_func))  # True
+print(callable(obj))      # True
+print(callable(42))       # False
+```
+
+**详解**：
+- `callable()` 返回布尔值，表示对象是否可以被调用。函数和实现了 `__call__()` 方法的对象是可调用的。
+
+---
+
+### 反射的应用场景
+
+1. **动态模块加载**：根据运行时的需求动态加载和使用模块。
+2. **框架设计**：许多框架（如 Django 和 Flask）利用反射来动态检测视图函数、模型等，并自动进行路由或序列化处理。
+3. **插件机制**：反射可以用于开发插件系统，允许用户动态加载插件。
+4. **自动化测试**：可以使用反射技术自动获取和调用测试类中的所有测试方法。
+
+---
+
+### 注意事项
+- 过度使用反射可能会导致代码难以维护和调试，尤其是在动态修改类或对象的属性时。
+- 使用反射时要注意性能开销，因为动态访问属性或方法通常比静态访问慢。
+- 动态地修改对象的行为可能引发不可预知的错误，因此应慎用 `setattr()` 和 `delattr()`。
+
+---
+
+
+
