@@ -2,6 +2,13 @@
 
 本网站的目的是整理和收集IT开发相关的教程和面试题目
 
+## 计算机基础
+
++ [**计算机网络**](计算机基础/network.md)
++ [**计算机操作系统**](计算机基础/system.md)
++ [**HTTP**](计算机基础/http.md)
++ [**WebSocket**](计算机基础/websocket.md)
+
 ## 语言篇
 
 * [**Python**](语言篇/python/basic.md)
