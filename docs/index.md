@@ -5,8 +5,14 @@
 ## 语言篇
 
 * [**Python**](语言篇/python/basic.md)
-* [**Golang**]()     待补充
-* [**C++**]()  待补充
+* [**Golang**](语言篇/Golang/basic.md) 
+* [**C++**](语言篇/C++/basic.md)  
+
+## 数据结构和算法
+
++ [**数据结构**]()
++ [**算法**]()
++ [**LeetCode**]()
 
 ## Web篇
     
