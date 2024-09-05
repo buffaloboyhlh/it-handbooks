@@ -24,7 +24,7 @@
     
     
       
-        <title>Interview - IT-手册</title>
+        <title>Flask 面试手册 - IT-手册</title>
       
     
     
@@ -75,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#flask" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -107,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Interview
+              Flask 面试手册
             
           </span>
         </div>
@@ -567,7 +572,7 @@
         
   
   <span class="md-ellipsis">
-    Advance
+    Flask 进阶教程
   </span>
   
 
@@ -588,7 +593,7 @@
         
   
   <span class="md-ellipsis">
-    Basic
+    Flask 基础教程
   </span>
   
 
@@ -611,16 +616,1050 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Flask 面试手册
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Interview
+    Flask 面试手册
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-flask" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Flask 的应用程序上下文和请求上下文是什么？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-flask-csrf" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Flask 中如何处理跨站请求伪造 (CSRF) 攻击？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-flask" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 如何优化 Flask 应用的性能？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-flask" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 如何在 Flask 中处理文件上传？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-flask-sqlalchemy" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 如何使用 Flask-SQLAlchemy 进行数据库操作？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-flask" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Flask 应用中的错误处理如何实现？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-flask-blueprints" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 如何在 Flask 中使用蓝图（Blueprints）来组织大型应用？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-flask" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Flask 中如何实现用户认证和授权？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Flask 中如何实现用户认证和授权？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flask-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      用户认证示例（Flask-Login）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flask-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      权限管理示例（Flask-Principal）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-flask-migrate" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. 如何使用 Flask-Migrate 进行数据库迁移和版本控制？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. 如何使用 Flask-Migrate 进行数据库迁移和版本控制？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flask-migrate" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置和使用 Flask-Migrate
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-flask" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Flask 中如何处理静态文件和模板？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Flask 中如何处理静态文件和模板？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      静态文件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      模板
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-flask" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Flask 中如何处理表单数据和验证？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Flask 中如何处理表单数据和验证？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flask-wtf" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：使用 Flask-WTF 进行表单处理和验证
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-flask" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. Flask 中如何实现异步任务处理？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Flask 中如何实现异步任务处理？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#celery" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置和使用 Celery
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-flask" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. Flask 中如何实现自定义错误页面和错误处理？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Flask 中如何实现自定义错误页面和错误处理？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：自定义错误页面
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-flask" class="md-nav__link">
+    <span class="md-ellipsis">
+      14. Flask 中如何实现分页功能？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. Flask 中如何实现分页功能？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：实现分页
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-flask-websocket" class="md-nav__link">
+    <span class="md-ellipsis">
+      15. Flask 中如何实现 WebSocket 支持？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15. Flask 中如何实现 WebSocket 支持？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flask-socketio" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置和使用 Flask-SocketIO
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-flask-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      16. Flask 如何处理请求和响应中的 JSON 数据？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="16. Flask 如何处理请求和响应中的 JSON 数据？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json" class="md-nav__link">
+    <span class="md-ellipsis">
+      处理 JSON 请求和响应
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-flask" class="md-nav__link">
+    <span class="md-ellipsis">
+      17. 如何在 Flask 中处理文件上传和下载？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="17. 如何在 Flask 中处理文件上传和下载？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      文件上传示例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      文件下载示例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-flask-rate-limiting" class="md-nav__link">
+    <span class="md-ellipsis">
+      18. Flask 中如何实现限流（Rate Limiting）？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="18. Flask 中如何实现限流（Rate Limiting）？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flask-limiter" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置和使用 Flask-Limiter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-flask" class="md-nav__link">
+    <span class="md-ellipsis">
+      19. Flask 中如何实现后台任务和定时任务？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="19. Flask 中如何实现后台任务和定时任务？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apscheduler" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置和使用 APScheduler
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-flask" class="md-nav__link">
+    <span class="md-ellipsis">
+      20. 如何在 Flask 中实现多语言支持（国际化）？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="20. 如何在 Flask 中实现多语言支持（国际化）？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flask-babel" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置和使用 Flask-Babel
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-flask" class="md-nav__link">
+    <span class="md-ellipsis">
+      21. 如何在 Flask 中实现自定义的中间件？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="21. 如何在 Flask 中实现自定义的中间件？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      自定义中间件示例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-flask-rate-limiting" class="md-nav__link">
+    <span class="md-ellipsis">
+      22. Flask 中如何进行请求的限速（Rate Limiting）？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="22. Flask 中如何进行请求的限速（Rate Limiting）？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flask-limiter_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置 Flask-Limiter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-flask-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      23. 如何在 Flask 中实现 API 文档？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="23. 如何在 Flask 中实现 API 文档？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flask-restplus" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置 Flask-RESTPlus
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-flask" class="md-nav__link">
+    <span class="md-ellipsis">
+      24. 如何在 Flask 中实现分布式缓存？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="24. 如何在 Flask 中实现分布式缓存？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flask-caching" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置和使用 Flask-Caching
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-flask-sqlalchemy" class="md-nav__link">
+    <span class="md-ellipsis">
+      25. 如何在 Flask 中进行 SQLAlchemy 的性能优化？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="25. 如何在 Flask 中进行 SQLAlchemy 的性能优化？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      性能优化示例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-flask" class="md-nav__link">
+    <span class="md-ellipsis">
+      26. 如何在 Flask 中实现用户权限管理？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="26. 如何在 Flask 中实现用户权限管理？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flask-principal_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置 Flask-Principal
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27-flask-ab" class="md-nav__link">
+    <span class="md-ellipsis">
+      27. Flask 中如何进行 A/B 测试？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="27. Flask 中如何进行 A/B 测试？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ab" class="md-nav__link">
+    <span class="md-ellipsis">
+      A/B 测试示例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-flask" class="md-nav__link">
+    <span class="md-ellipsis">
+      28. 如何在 Flask 中实现实时数据更新（如推送通知）？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="28. 如何在 Flask 中实现实时数据更新（如推送通知）？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      实时数据更新示例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-flask" class="md-nav__link">
+    <span class="md-ellipsis">
+      29. Flask 中如何处理大型文件上传？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="29. Flask 中如何处理大型文件上传？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      分块上传示例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#30-flask-token-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      30. 如何在 Flask 中实现基于令牌的身份验证（Token Authentication）？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="30. 如何在 Flask 中实现基于令牌的身份验证（Token Authentication）？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flask-jwt-extended" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置和使用 Flask-JWT-Extended
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31-flask" class="md-nav__link">
+    <span class="md-ellipsis">
+      31. Flask 中如何进行分页查询？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="31. Flask 中如何进行分页查询？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      分页查询示例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-flask-redis" class="md-nav__link">
+    <span class="md-ellipsis">
+      32. 如何在 Flask 中实现 Redis 缓存？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="32. 如何在 Flask 中实现 Redis 缓存？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#redis" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置和使用 Redis 缓存
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-flask" class="md-nav__link">
+    <span class="md-ellipsis">
+      33. 如何在 Flask 中进行单元测试？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="33. 如何在 Flask 中进行单元测试？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      单元测试示例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-flask-blueprints" class="md-nav__link">
+    <span class="md-ellipsis">
+      34. 如何在 Flask 中使用 Blueprints 进行项目结构化？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="34. 如何在 Flask 中使用 Blueprints 进行项目结构化？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#blueprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blueprint 示例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35-flask" class="md-nav__link">
+    <span class="md-ellipsis">
+      35. Flask 中如何进行错误处理和自定义错误页面？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="35. Flask 中如何进行错误处理和自定义错误页面？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      自定义错误处理示例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36-flask-cors" class="md-nav__link">
+    <span class="md-ellipsis">
+      36. 如何在 Flask 中处理跨域资源共享（CORS）？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="36. 如何在 Flask 中处理跨域资源共享（CORS）？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flask-cors" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置和使用 Flask-CORS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#37-flask-celery" class="md-nav__link">
+    <span class="md-ellipsis">
+      37. 如何在 Flask 中实现任务队列（如 Celery）？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="37. 如何在 Flask 中实现任务队列（如 Celery）？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#celery_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置和使用 Celery
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#38-flask" class="md-nav__link">
+    <span class="md-ellipsis">
+      38. 如何在 Flask 中处理文件下载？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="38. 如何在 Flask 中处理文件下载？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      文件下载示例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#39-flask-websocket" class="md-nav__link">
+    <span class="md-ellipsis">
+      39. 如何在 Flask 中使用 WebSocket 实现实时通信？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="39. 如何在 Flask 中使用 WebSocket 实现实时通信？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flask-socketio_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置和使用 Flask-SocketIO
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#40-flask-oauth-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      40. 如何在 Flask 中使用 OAuth 2.0 实现第三方登录？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="40. 如何在 Flask 中使用 OAuth 2.0 实现第三方登录？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flask-dance-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置和使用 Flask-Dance 实现 GitHub 登录
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#41-flask-csrf" class="md-nav__link">
+    <span class="md-ellipsis">
+      41. 如何在 Flask 中处理 CSRF（跨站请求伪造）？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="41. 如何在 Flask 中处理 CSRF（跨站请求伪造）？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#csrf" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置 CSRF 保护
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-flask" class="md-nav__link">
+    <span class="md-ellipsis">
+      42. 如何在 Flask 中发送电子邮件？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="42. 如何在 Flask 中发送电子邮件？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flask-mail" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置和使用 Flask-Mail
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-flask" class="md-nav__link">
+    <span class="md-ellipsis">
+      43. 如何在 Flask 中进行文件上传与大小限制？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="43. 如何在 Flask 中进行文件上传与大小限制？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      文件上传示例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-flask" class="md-nav__link">
+    <span class="md-ellipsis">
+      44. 如何在 Flask 中实现用户会话管理？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="44. 如何在 Flask 中实现用户会话管理？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      用户会话管理示例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45-flask-jinja2" class="md-nav__link">
+    <span class="md-ellipsis">
+      45. 如何在 Flask 中使用 Jinja2 模板引擎？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="45. 如何在 Flask 中使用 Jinja2 模板引擎？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      模板示例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -638,7 +1677,7 @@
         
   
   <span class="md-ellipsis">
-    工作中常见问题
+    Flask 工作中常见问题
   </span>
   
 
@@ -4005,9 +5044,1716 @@
                   
 
 
-  <h1>Interview</h1>
+<h1 id="flask">Flask 面试手册</h1>
+<p>在大厂面试中，Flask 相关的面试题通常涉及到以下几个方面：Flask 的基本概念、项目结构、请求处理、扩展使用、性能优化、安全性等。以下是一些常见的 Flask 面试题及其详细解答：</p>
+<hr />
+<h4 id="1-flask">1. <strong>Flask 的应用程序上下文和请求上下文是什么？</strong></h4>
+<p><strong>应用程序上下文</strong> 和 <strong>请求上下文</strong> 是 Flask 中的两个重要概念。</p>
+<ul>
+<li><strong>应用程序上下文</strong> (<code>app_context</code>)：</li>
+<li>包含了应用程序的实例，如 <code>app.config</code>。</li>
+<li>使用 <code>with app.app_context():</code> 来推送应用程序上下文。</li>
+<li>
+<p>在应用程序上下文中，你可以访问 <code>current_app</code> 和 <code>g</code>。</p>
+</li>
+<li>
+<p><strong>请求上下文</strong> (<code>request_context</code>)：</p>
+</li>
+<li>包含了当前请求的信息，如请求的数据和环境。</li>
+<li>使用 <code>with app.test_request_context():</code> 来推送请求上下文。</li>
+<li>在请求上下文中，你可以访问 <code>request</code> 和 <code>session</code>。</li>
+</ul>
+<p><strong>示例代码</strong>：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">current_app</span><span class="p">,</span> <span class="n">request</span>
 
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Request method: </span><span class="si">{</span><span class="n">request</span><span class="o">.</span><span class="n">method</span><span class="si">}</span><span class="s2">, App name: </span><span class="si">{</span><span class="n">current_app</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：应用程序上下文允许在没有请求的情况下访问应用程序的配置和数据，而请求上下文则与每个请求相关，提供请求级别的信息。</p>
+<hr />
+<h4 id="2-flask-csrf">2. <strong>Flask 中如何处理跨站请求伪造 (CSRF) 攻击？</strong></h4>
+<p>CSRF 攻击通常通过在用户不知情的情况下执行恶意请求来实现。Flask 中可以使用 <code>Flask-WTF</code> 或 <code>Flask-SeaSurf</code> 来处理 CSRF 攻击。</p>
+<p><strong>示例代码</strong>：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template_string</span><span class="p">,</span> <span class="n">request</span>
+<span class="kn">from</span> <span class="nn">flask_wtf.csrf</span> <span class="kn">import</span> <span class="n">CSRFProtect</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">secret_key</span> <span class="o">=</span> <span class="s1">&#39;mysecret&#39;</span>
+<span class="n">csrf</span> <span class="o">=</span> <span class="n">CSRFProtect</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;POST&#39;</span><span class="p">:</span>
+        <span class="c1"># 处理表单提交</span>
+        <span class="k">return</span> <span class="s1">&#39;Form submitted!&#39;</span>
+    <span class="k">return</span> <span class="n">render_template_string</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">        &lt;form method=&quot;post&quot;&gt;</span>
+<span class="s1">            &lt;input type=&quot;text&quot; name=&quot;example&quot;&gt;</span>
+<span class="s1">            &lt;input type=&quot;submit&quot;&gt;</span>
+<span class="s1">        &lt;/form&gt;</span>
+<span class="s1">    &#39;&#39;&#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：使用 <code>Flask-WTF</code> 或 <code>Flask-SeaSurf</code> 可以自动为表单添加 CSRF 保护。<code>CSRFProtect</code> 提供了防护 CSRF 攻击的中间件。</p>
+<hr />
+<h4 id="3-flask">3. <strong>如何优化 Flask 应用的性能？</strong></h4>
+<p>优化 Flask 应用的性能可以从以下几个方面着手：</p>
+<ul>
+<li><strong>使用缓存</strong>：可以使用 <code>Flask-Caching</code> 来缓存视图函数的结果。</li>
+<li><strong>数据库优化</strong>：使用 SQLAlchemy 的查询优化功能，减少不必要的查询。</li>
+<li><strong>静态文件优化</strong>：使用 Web 服务器（如 Nginx）来处理静态文件，提高性能。</li>
+<li><strong>异步任务</strong>：使用 Celery 处理后台任务，减少请求处理时间。</li>
+</ul>
+<p><strong>示例代码（缓存）</strong>：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">flask_caching</span> <span class="kn">import</span> <span class="n">Cache</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;CACHE_TYPE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;simple&#39;</span>
+<span class="n">cache</span> <span class="o">=</span> <span class="n">Cache</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="nd">@cache</span><span class="o">.</span><span class="n">cached</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="c1"># 模拟耗时操作</span>
+    <span class="kn">import</span> <span class="nn">time</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s1">&#39;Hello, World!&#39;</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：通过缓存视图函数的结果，可以显著减少处理时间和服务器负担。</p>
+<hr />
+<h4 id="4-flask">4. <strong>如何在 Flask 中处理文件上传？</strong></h4>
+<p>文件上传通常涉及到接收文件、验证文件类型、保存文件等操作。可以使用 Flask 的 <code>request.files</code> 来处理文件上传。</p>
+<p><strong>示例代码</strong>：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">redirect</span><span class="p">,</span> <span class="n">url_for</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">upload_file</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;POST&#39;</span><span class="p">:</span>
+        <span class="n">file</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">files</span><span class="p">[</span><span class="s1">&#39;file&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">file</span><span class="p">:</span>
+            <span class="n">file</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;./uploads/</span><span class="si">{</span><span class="n">file</span><span class="o">.</span><span class="n">filename</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;upload_file&#39;</span><span class="p">))</span>
+    <span class="k">return</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">        &lt;form method=&quot;post&quot; enctype=&quot;multipart/form-data&quot;&gt;</span>
+<span class="s1">            &lt;input type=&quot;file&quot; name=&quot;file&quot;&gt;</span>
+<span class="s1">            &lt;input type=&quot;submit&quot;&gt;</span>
+<span class="s1">        &lt;/form&gt;</span>
+<span class="s1">    &#39;&#39;&#39;</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：<code>request.files</code> 提供了上传的文件对象。可以对文件进行保存、验证和处理。</p>
+<hr />
+<h4 id="5-flask-sqlalchemy">5. <strong>如何使用 Flask-SQLAlchemy 进行数据库操作？</strong></h4>
+<p><code>Flask-SQLAlchemy</code> 是 Flask 的一个扩展，简化了 SQLAlchemy 的使用。可以使用它来定义模型、执行查询和管理数据库事务。</p>
+<p><strong>示例代码</strong>：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">jsonify</span>
+<span class="kn">from</span> <span class="nn">flask_sqlalchemy</span> <span class="kn">import</span> <span class="n">SQLAlchemy</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;SQLALCHEMY_DATABASE_URI&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;sqlite:///example.db&#39;</span>
+<span class="n">db</span> <span class="o">=</span> <span class="n">SQLAlchemy</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="nb">id</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">username</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">80</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/add_user&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">add_user</span><span class="p">():</span>
+    <span class="n">username</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">username</span><span class="p">:</span>
+        <span class="n">new_user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">)</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">new_user</span><span class="p">)</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="s1">&#39;User added&#39;</span><span class="p">}),</span> <span class="mi">201</span>
+    <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="s1">&#39;No username provided&#39;</span><span class="p">}),</span> <span class="mi">400</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">create_all</span><span class="p">()</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：使用 <code>Flask-SQLAlchemy</code> 可以方便地定义模型类、执行数据库操作，并管理数据库事务。</p>
+<hr />
+<h4 id="6-flask">6. <strong>Flask 应用中的错误处理如何实现？</strong></h4>
+<p>Flask 允许通过错误处理器捕获和处理特定的 HTTP 错误代码。例如，你可以处理 404 错误或 500 错误，并返回自定义的错误页面或信息。</p>
+<p><strong>示例代码</strong>：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">errorhandler</span><span class="p">(</span><span class="mi">404</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">page_not_found</span><span class="p">(</span><span class="n">e</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;404.html&#39;</span><span class="p">),</span> <span class="mi">404</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">errorhandler</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">internal_error</span><span class="p">(</span><span class="n">e</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s2">&quot;An internal error occurred&quot;</span><span class="p">,</span> <span class="mi">500</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;Welcome!&#39;</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：使用 <code>@app.errorhandler</code> 装饰器定义错误处理器，可以自定义错误页面或返回错误信息。</p>
+<hr />
+<h4 id="7-flask-blueprints">7. <strong>如何在 Flask 中使用蓝图（Blueprints）来组织大型应用？</strong></h4>
+<p>蓝图（Blueprints）允许你将 Flask 应用分解为多个模块，每个模块有自己的视图函数、静态文件和模板。</p>
+<p><strong>示例代码</strong>：</p>
+<ol>
+<li><strong>创建蓝图</strong>：</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Blueprint</span><span class="p">,</span> <span class="n">render_template</span>
+
+<span class="n">mod</span> <span class="o">=</span> <span class="n">Blueprint</span><span class="p">(</span><span class="s1">&#39;mod&#39;</span><span class="p">,</span> <span class="vm">__name__</span><span class="p">,</span> <span class="n">url_prefix</span><span class="o">=</span><span class="s1">&#39;/mod&#39;</span><span class="p">)</span>
+
+<span class="nd">@mod</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;This is the mod index page&#39;</span>
+</code></pre></div>
+
+<ol>
+<li><strong>注册蓝图</strong>：</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">mod</span> <span class="kn">import</span> <span class="n">mod</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">register_blueprint</span><span class="p">(</span><span class="n">mod</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：使用蓝图可以更好地组织和管理大型 Flask 应用，提升可维护性。</p>
+<hr />
+<h3 id="8-flask">8. <strong>Flask 中如何实现用户认证和授权？</strong></h3>
+<p>用户认证和授权是 Web 应用的重要功能。可以使用 Flask 扩展库 <code>Flask-Login</code> 来处理用户认证，<code>Flask-Principal</code> 来处理权限和角色管理。</p>
+<h4 id="flask-login">用户认证示例（Flask-Login）</h4>
+<ol>
+<li><strong>安装 Flask-Login</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>Flask-Login
+</code></pre></div>
+
+<ol>
+<li><strong>配置 Flask-Login</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span><span class="p">,</span> <span class="n">redirect</span><span class="p">,</span> <span class="n">url_for</span><span class="p">,</span> <span class="n">request</span>
+<span class="kn">from</span> <span class="nn">flask_login</span> <span class="kn">import</span> <span class="n">LoginManager</span><span class="p">,</span> <span class="n">UserMixin</span><span class="p">,</span> <span class="n">login_user</span><span class="p">,</span> <span class="n">login_required</span><span class="p">,</span> <span class="n">logout_user</span><span class="p">,</span> <span class="n">current_user</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">secret_key</span> <span class="o">=</span> <span class="s1">&#39;mysecretkey&#39;</span>
+<span class="n">login_manager</span> <span class="o">=</span> <span class="n">LoginManager</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+<span class="n">login_manager</span><span class="o">.</span><span class="n">login_view</span> <span class="o">=</span> <span class="s1">&#39;login&#39;</span>
+
+<span class="c1"># 模拟用户数据</span>
+<span class="n">users</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;user&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;password&#39;</span><span class="p">:</span> <span class="s1">&#39;password&#39;</span><span class="p">}}</span>
+
+<span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">UserMixin</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">username</span>
+
+<span class="nd">@login_manager</span><span class="o">.</span><span class="n">user_loader</span>
+<span class="k">def</span> <span class="nf">load_user</span><span class="p">(</span><span class="n">username</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">User</span><span class="p">(</span><span class="n">username</span><span class="p">)</span> <span class="k">if</span> <span class="n">username</span> <span class="ow">in</span> <span class="n">users</span> <span class="k">else</span> <span class="kc">None</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/login&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">login</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;POST&#39;</span><span class="p">:</span>
+        <span class="n">username</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">]</span>
+        <span class="n">password</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">users</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">username</span><span class="p">)</span> <span class="ow">and</span> <span class="n">users</span><span class="p">[</span><span class="n">username</span><span class="p">][</span><span class="s1">&#39;password&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">password</span><span class="p">:</span>
+            <span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">username</span><span class="p">)</span>
+            <span class="n">login_user</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;login.html&#39;</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/logout&#39;</span><span class="p">)</span>
+<span class="nd">@login_required</span>
+<span class="k">def</span> <span class="nf">logout</span><span class="p">():</span>
+    <span class="n">logout_user</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">))</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="nd">@login_required</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;Hello, </span><span class="si">{</span><span class="n">current_user</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s1">!&#39;</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：</p>
+<ul>
+<li><strong><code>LoginManager</code></strong>：处理用户会话。</li>
+<li><strong><code>login_user</code></strong> 和 <strong><code>logout_user</code></strong>：用于登录和登出。</li>
+<li><strong><code>@login_required</code></strong>：保护视图函数，确保用户已登录。</li>
+</ul>
+<h4 id="flask-principal">权限管理示例（Flask-Principal）</h4>
+<ol>
+<li><strong>安装 Flask-Principal</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>Flask-Principal
+</code></pre></div>
+
+<ol>
+<li><strong>配置 Flask-Principal</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">flask_principal</span> <span class="kn">import</span> <span class="n">Principal</span><span class="p">,</span> <span class="n">Permission</span><span class="p">,</span> <span class="n">RoleNeed</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">secret_key</span> <span class="o">=</span> <span class="s1">&#39;mysecretkey&#39;</span>
+<span class="n">principal</span> <span class="o">=</span> <span class="n">Principal</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+
+<span class="n">admin_permission</span> <span class="o">=</span> <span class="n">Permission</span><span class="p">(</span><span class="n">RoleNeed</span><span class="p">(</span><span class="s1">&#39;admin&#39;</span><span class="p">))</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;Welcome!&#39;</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/admin&#39;</span><span class="p">)</span>
+<span class="nd">@admin_permission</span><span class="o">.</span><span class="n">require</span><span class="p">(</span><span class="n">http_exception</span><span class="o">=</span><span class="mi">403</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">admin</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;Welcome to the admin panel&#39;</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：</p>
+<ul>
+<li><strong><code>Permission</code></strong>：定义权限，基于角色或其他需求。</li>
+<li><strong><code>RoleNeed</code></strong>：定义角色需求。</li>
+</ul>
+<hr />
+<h3 id="9-flask-migrate">9. <strong>如何使用 Flask-Migrate 进行数据库迁移和版本控制？</strong></h3>
+<p><code>Flask-Migrate</code> 是一个用于数据库迁移的扩展，基于 Alembic，支持数据库版本控制。</p>
+<h4 id="flask-migrate">配置和使用 Flask-Migrate</h4>
+<ol>
+<li><strong>安装 Flask-Migrate</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>Flask-Migrate
+</code></pre></div>
+
+<ol>
+<li><strong>配置 Flask-Migrate</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">flask_sqlalchemy</span> <span class="kn">import</span> <span class="n">SQLAlchemy</span>
+<span class="kn">from</span> <span class="nn">flask_migrate</span> <span class="kn">import</span> <span class="n">Migrate</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;SQLALCHEMY_DATABASE_URI&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;sqlite:///example.db&#39;</span>
+<span class="n">db</span> <span class="o">=</span> <span class="n">SQLAlchemy</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+<span class="n">migrate</span> <span class="o">=</span> <span class="n">Migrate</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">db</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="nb">id</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">username</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">80</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<ol>
+<li><strong>使用 Flask-Migrate 进行迁移</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code>flask<span class="w"> </span>db<span class="w"> </span>init<span class="w">         </span><span class="c1"># 初始化迁移目录</span>
+flask<span class="w"> </span>db<span class="w"> </span>migrate<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Initial migration.&quot;</span><span class="w">  </span><span class="c1"># 生成迁移脚本</span>
+flask<span class="w"> </span>db<span class="w"> </span>upgrade<span class="w">      </span><span class="c1"># 应用迁移</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：</p>
+<ul>
+<li><strong><code>flask db init</code></strong>：初始化迁移目录。</li>
+<li><strong><code>flask db migrate</code></strong>：生成迁移脚本。</li>
+<li><strong><code>flask db upgrade</code></strong>：应用迁移脚本，更新数据库模式。</li>
+</ul>
+<hr />
+<h3 id="10-flask">10. <strong>Flask 中如何处理静态文件和模板？</strong></h3>
+<p>Flask 提供了对静态文件和模板的支持，使得文件管理和视图渲染变得简便。</p>
+<h4 id="_1">静态文件</h4>
+<p>静态文件通常放在 <code>static</code> 目录下，Flask 会自动提供对这些文件的访问。</p>
+<p><strong>示例</strong>：</p>
+<div class="codehilite"><pre><span></span><code><span class="cm">&lt;!-- templates/index.html --&gt;</span>
+<span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ url_for(&#39;static&#39;, filename=&#39;style.css&#39;) }}&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Static Files in Flask<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<h4 id="_2">模板</h4>
+<p>Flask 使用 Jinja2 模板引擎来渲染 HTML 模板，模板文件通常放在 <code>templates</code> 目录下。</p>
+<p><strong>示例</strong>：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;index.html&#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：</p>
+<ul>
+<li><strong><code>url_for('static', filename='style.css')</code></strong>：生成静态文件的 URL。</li>
+<li><strong><code>render_template('index.html')</code></strong>：渲染模板文件。</li>
+</ul>
+<hr />
+<h3 id="11-flask">11. <strong>Flask 中如何处理表单数据和验证？</strong></h3>
+<p>Flask 提供了处理表单数据的基础功能，并且可以通过 <code>Flask-WTF</code> 扩展实现表单验证。</p>
+<h4 id="flask-wtf">示例：使用 Flask-WTF 进行表单处理和验证</h4>
+<ol>
+<li><strong>安装 Flask-WTF</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>Flask-WTF
+</code></pre></div>
+
+<ol>
+<li><strong>配置 Flask-WTF</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span><span class="p">,</span> <span class="n">redirect</span><span class="p">,</span> <span class="n">url_for</span>
+<span class="kn">from</span> <span class="nn">flask_wtf</span> <span class="kn">import</span> <span class="n">FlaskForm</span>
+<span class="kn">from</span> <span class="nn">wtforms</span> <span class="kn">import</span> <span class="n">StringField</span><span class="p">,</span> <span class="n">SubmitField</span>
+<span class="kn">from</span> <span class="nn">wtforms.validators</span> <span class="kn">import</span> <span class="n">DataRequired</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">secret_key</span> <span class="o">=</span> <span class="s1">&#39;mysecretkey&#39;</span>
+
+<span class="k">class</span> <span class="nc">MyForm</span><span class="p">(</span><span class="n">FlaskForm</span><span class="p">):</span>
+    <span class="n">username</span> <span class="o">=</span> <span class="n">StringField</span><span class="p">(</span><span class="s1">&#39;Username&#39;</span><span class="p">,</span> <span class="n">validators</span><span class="o">=</span><span class="p">[</span><span class="n">DataRequired</span><span class="p">()])</span>
+    <span class="n">submit</span> <span class="o">=</span> <span class="n">SubmitField</span><span class="p">(</span><span class="s1">&#39;Submit&#39;</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="n">form</span> <span class="o">=</span> <span class="n">MyForm</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">validate_on_submit</span><span class="p">():</span>
+        <span class="n">username</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">username</span><span class="o">.</span><span class="n">data</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;success&#39;</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;index.html&#39;</span><span class="p">,</span> <span class="n">form</span><span class="o">=</span><span class="n">form</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/success/&lt;username&gt;&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">success</span><span class="p">(</span><span class="n">username</span><span class="p">):</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;Hello, </span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s1">!&#39;</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：</p>
+<ul>
+<li><strong><code>FlaskForm</code></strong>：提供表单处理和验证功能。</li>
+<li><strong><code>validate_on_submit</code></strong>：检查表单是否提交且验证通过。</li>
+</ul>
+<hr />
+<h3 id="12-flask">12. <strong>Flask 中如何实现异步任务处理？</strong></h3>
+<p>异步任务处理通常使用任务队列系统，如 Celery，与 Flask 集成实现后台任务处理。</p>
+<h4 id="celery">配置和使用 Celery</h4>
+<ol>
+<li><strong>安装 Celery 和 Redis</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>Celery<span class="w"> </span>redis
+</code></pre></div>
+
+<ol>
+<li><strong>配置 Celery</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">celery</span> <span class="kn">import</span> <span class="n">Celery</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;CELERY_BROKER_URL&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;redis://localhost:6379/0&#39;</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;CELERY_RESULT_BACKEND&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;redis://localhost:6379/0&#39;</span>
+
+<span class="n">celery</span> <span class="o">=</span> <span class="n">Celery</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">broker</span><span class="o">=</span><span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;CELERY_BROKER_URL&#39;</span><span class="p">])</span>
+<span class="n">celery</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">)</span>
+
+<span class="nd">@celery</span><span class="o">.</span><span class="n">task</span>
+<span class="k">def</span> <span class="nf">add_together</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/add/&lt;int:a&gt;/&lt;int:b&gt;&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">add_together</span><span class="o">.</span><span class="n">delay</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;Task ID: </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s1">&#39;</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：</p>
+<ul>
+<li><strong><code>Celery</code></strong>：处理异步任务。</li>
+<li><strong><code>add_together.delay(a, b)</code></strong>：将任务添加到任务队列中异步执行。</li>
+</ul>
+<hr />
+<h3 id="13-flask">13. <strong>Flask 中如何实现自定义错误页面和错误处理？</strong></h3>
+<p>Flask 允许你定义自定义错误页面来处理常见的 HTTP 错误。</p>
+<h4 id="_3">示例：自定义错误页面</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;Welcome to the home page&#39;</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">errorhandler</span><span class="p">(</span><span class="mi">404</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">not_found</span><span class="p">(</span><span class="n">error</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;404.html&#39;</span><span class="p">),</span> <span class="mi">404</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">errorhandler</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">internal_error</span><span class="p">(</span><span class="n">error</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;500.html&#39;</span><span class="p">),</span> <span class="mi">500</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：</p>
+<ul>
+<li><strong><code>@app.errorhandler(404)</code></strong>：定义 404 错误处理函数。</li>
+<li><strong><code>render_template('404.html')</code></strong>：返回自定义的 404 错误页面。</li>
+</ul>
+<hr />
+<h3 id="14-flask">14. <strong>Flask 中如何实现分页功能？</strong></h3>
+<p>分页功能可以使用 <code>Flask-SQLAlchemy</code> 和 SQLAlchemy 的分页功能来实现。</p>
+<h4 id="_4">示例：实现分页</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">render_template</span>
+<span class="kn">from</span> <span class="nn">flask_sqlalchemy</span> <span class="kn">import</span> <span class="n">SQLAlchemy</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;SQLALCHEMY_DATABASE_URI&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;sqlite:///example.db&#39;</span>
+<span class="n">db</span> <span class="o">=</span> <span class="n">SQLAlchemy</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="nb">id</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">username</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">80</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/users&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">users</span><span class="p">():</span>
+    <span class="n">page</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;page&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+    <span class="n">per_page</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">users</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">paginate</span><span class="p">(</span><span class="n">page</span><span class="p">,</span> <span class="n">per_page</span><span class="p">,</span> <span class="n">error_out</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;users.html&#39;</span><span class="p">,</span> <span class="n">users</span><span class="o">=</span><span class="n">users</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：</p>
+<ul>
+<li><strong><code>paginate(page, per_page)</code></strong>：实现分页功能，返回指定页数和每页条数的数据。</li>
+</ul>
+<hr />
+<h3 id="15-flask-websocket">15. <strong>Flask 中如何实现 WebSocket 支持？</strong></h3>
+<p>Flask 本身不直接支持 WebSocket，但可以通过 Flask-SocketIO 来实现 WebSocket 功能。</p>
+<h4 id="flask-socketio">配置和使用 Flask-SocketIO</h4>
+<ol>
+<li><strong>安装 Flask-SocketIO</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>flask-socketio
+</code></pre></div>
+
+<ol>
+<li><strong>配置 Flask-SocketIO</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span>
+<span class="kn">from</span> <span class="nn">flask_socketio</span> <span class="kn">import</span> <span class="n">SocketIO</span><span class="p">,</span> <span class="n">emit</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">secret_key</span> <span class="o">=</span> <span class="s1">&#39;mysecretkey&#39;</span>
+<span class="n">socketio</span> <span class="o">=</span> <span class="n">SocketIO</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;index.html&#39;</span><span class="p">)</span>
+
+<span class="nd">@socketio</span><span class="o">.</span><span class="n">on</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">handle_message</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Received message: </span><span class="si">{</span><span class="n">message</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">emit</span><span class="p">(</span><span class="s1">&#39;response&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="s1">&#39;Message received!&#39;</span><span class="p">})</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">socketio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>示例 HTML</strong> (<code>templates/index.html</code>)：</p>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>SocketIO Test<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://cdn.socket.io/4.0.0/socket.io.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">socket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">io</span><span class="p">();</span>
+<span class="w">        </span><span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;response&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="w">        </span><span class="p">});</span>
+<span class="w">        </span><span class="nx">socket</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s1">&#39;Hello, Server!&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>WebSocket Test<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：</p>
+<ul>
+<li><strong><code>SocketIO</code></strong>：处理 WebSocket 连接。</li>
+<li><strong><code>@socketio.on('message')</code></strong>：处理接收到的消息。</li>
+<li><strong><code>emit('response', {...})</code></strong>：发送消息到客户端。</li>
+</ul>
+<hr />
+<h3 id="16-flask-json">16. <strong>Flask 如何处理请求和响应中的 JSON 数据？</strong></h3>
+<p>Flask 提供了处理 JSON 数据的功能，允许你轻松解析和生成 JSON 数据。</p>
+<h4 id="json">处理 JSON 请求和响应</h4>
+<ol>
+<li><strong>处理 JSON 请求</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">jsonify</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/json&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">json_example</span><span class="p">():</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">get_json</span><span class="p">()</span>  <span class="c1"># 解析请求中的 JSON 数据</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">!&#39;</span><span class="p">})</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<ol>
+<li><strong>发送 JSON 响应</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">jsonify</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/data&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">data</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">})</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：</p>
+<ul>
+<li><strong><code>request.get_json()</code></strong>：解析请求中的 JSON 数据。</li>
+<li><strong><code>jsonify()</code></strong>：生成 JSON 响应。</li>
+</ul>
+<hr />
+<h3 id="17-flask">17. <strong>如何在 Flask 中处理文件上传和下载？</strong></h3>
+<p>处理文件上传和下载是 Web 应用中的常见需求，Flask 提供了简便的接口来实现这些功能。</p>
+<h4 id="_5">文件上传示例</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">redirect</span><span class="p">,</span> <span class="n">url_for</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">upload_file</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;POST&#39;</span><span class="p">:</span>
+        <span class="n">file</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">files</span><span class="p">[</span><span class="s1">&#39;file&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">file</span><span class="p">:</span>
+            <span class="n">file</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;./uploads/</span><span class="si">{</span><span class="n">file</span><span class="o">.</span><span class="n">filename</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;upload_file&#39;</span><span class="p">))</span>
+    <span class="k">return</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">        &lt;form method=&quot;post&quot; enctype=&quot;multipart/form-data&quot;&gt;</span>
+<span class="s1">            &lt;input type=&quot;file&quot; name=&quot;file&quot;&gt;</span>
+<span class="s1">            &lt;input type=&quot;submit&quot;&gt;</span>
+<span class="s1">        &lt;/form&gt;</span>
+<span class="s1">    &#39;&#39;&#39;</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<h4 id="_6">文件下载示例</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">send_from_directory</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/download/&lt;filename&gt;&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">download_file</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">send_from_directory</span><span class="p">(</span><span class="n">directory</span><span class="o">=</span><span class="s1">&#39;uploads&#39;</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="n">filename</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：</p>
+<ul>
+<li><strong><code>request.files</code></strong>：获取上传的文件对象。</li>
+<li><strong><code>send_from_directory()</code></strong>：发送指定目录中的文件作为响应。</li>
+</ul>
+<hr />
+<h3 id="18-flask-rate-limiting">18. <strong>Flask 中如何实现限流（Rate Limiting）？</strong></h3>
+<p>限流是防止过多请求对服务器造成压力的策略，可以使用 <code>Flask-Limiter</code> 来实现。</p>
+<h4 id="flask-limiter">配置和使用 Flask-Limiter</h4>
+<ol>
+<li><strong>安装 Flask-Limiter</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>Flask-Limiter
+</code></pre></div>
+
+<ol>
+<li><strong>配置 Flask-Limiter</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">flask_limiter</span> <span class="kn">import</span> <span class="n">Limiter</span>
+<span class="kn">from</span> <span class="nn">flask_limiter.util</span> <span class="kn">import</span> <span class="n">get_remote_address</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">limiter</span> <span class="o">=</span> <span class="n">Limiter</span><span class="p">(</span><span class="n">get_remote_address</span><span class="p">,</span> <span class="n">app</span><span class="o">=</span><span class="n">app</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="nd">@limiter</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="s2">&quot;5 per minute&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;This is a rate-limited route&#39;</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：</p>
+<ul>
+<li><strong><code>Limiter</code></strong>：配置限流规则。</li>
+<li><strong><code>@limiter.limit("5 per minute")</code></strong>：限制每分钟最多 5 次请求。</li>
+</ul>
+<hr />
+<h3 id="19-flask">19. <strong>Flask 中如何实现后台任务和定时任务？</strong></h3>
+<p>除了使用 Celery 处理异步任务外，还可以使用 <code>APScheduler</code> 处理定时任务。</p>
+<h4 id="apscheduler">配置和使用 APScheduler</h4>
+<ol>
+<li><strong>安装 APScheduler</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>APScheduler
+</code></pre></div>
+
+<ol>
+<li><strong>配置 APScheduler</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">apscheduler.schedulers.background</span> <span class="kn">import</span> <span class="n">BackgroundScheduler</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">scheduler</span> <span class="o">=</span> <span class="n">BackgroundScheduler</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">scheduled_task</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This task runs every minute&#39;</span><span class="p">)</span>
+
+<span class="n">scheduler</span><span class="o">.</span><span class="n">add_job</span><span class="p">(</span><span class="n">func</span><span class="o">=</span><span class="n">scheduled_task</span><span class="p">,</span> <span class="n">trigger</span><span class="o">=</span><span class="s2">&quot;interval&quot;</span><span class="p">,</span> <span class="n">minutes</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">scheduler</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;Background scheduler is running!&#39;</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：</p>
+<ul>
+<li><strong><code>BackgroundScheduler</code></strong>：后台任务调度器。</li>
+<li><strong><code>add_job(func, trigger, ...)</code></strong>：添加定时任务。</li>
+</ul>
+<hr />
+<h3 id="20-flask">20. <strong>如何在 Flask 中实现多语言支持（国际化）？</strong></h3>
+<p>Flask 提供了国际化支持，可以使用 <code>Flask-Babel</code> 来处理多语言需求。</p>
+<h4 id="flask-babel">配置和使用 Flask-Babel</h4>
+<ol>
+<li><strong>安装 Flask-Babel</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>Flask-Babel
+</code></pre></div>
+
+<ol>
+<li><strong>配置 Flask-Babel</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">render_template</span>
+<span class="kn">from</span> <span class="nn">flask_babel</span> <span class="kn">import</span> <span class="n">Babel</span><span class="p">,</span> <span class="n">_</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;BABEL_DEFAULT_LOCALE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;en&#39;</span>
+<span class="n">babel</span> <span class="o">=</span> <span class="n">Babel</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;index.html&#39;</span><span class="p">)</span>
+
+<span class="nd">@babel</span><span class="o">.</span><span class="n">localeselector</span>
+<span class="k">def</span> <span class="nf">get_locale</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">request</span><span class="o">.</span><span class="n">accept_languages</span><span class="o">.</span><span class="n">best_match</span><span class="p">([</span><span class="s1">&#39;en&#39;</span><span class="p">,</span> <span class="s1">&#39;es&#39;</span><span class="p">])</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>示例 HTML</strong> (<code>templates/index.html</code>)：</p>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>{{ _(&#39;Hello&#39;) }}<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>{{ _(&#39;Welcome&#39;) }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：</p>
+<ul>
+<li><strong><code>Babel</code></strong>：处理国际化和本地化。</li>
+<li><strong><code>_()</code></strong>：标记需要翻译的文本。</li>
+<li><strong><code>get_locale()</code></strong>：选择适合的语言环境。</li>
+</ul>
+<hr />
+<h3 id="21-flask">21. <strong>如何在 Flask 中实现自定义的中间件？</strong></h3>
+<p>Flask 中间件可以通过创建自定义的 WSGI 中间件来实现，它在请求和响应之间执行代码。</p>
+<h4 id="_7">自定义中间件示例</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">g</span>
+
+<span class="k">class</span> <span class="nc">CustomMiddleware</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">app</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">app</span> <span class="o">=</span> <span class="n">app</span>
+
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">environ</span><span class="p">,</span> <span class="n">start_response</span><span class="p">):</span>
+        <span class="c1"># 在请求处理之前</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Before request&quot;</span><span class="p">)</span>
+        <span class="n">g</span><span class="o">.</span><span class="n">custom_data</span> <span class="o">=</span> <span class="s2">&quot;Some data&quot;</span>
+
+        <span class="k">def</span> <span class="nf">custom_start_response</span><span class="p">(</span><span class="n">status</span><span class="p">,</span> <span class="n">headers</span><span class="p">):</span>
+            <span class="c1"># 在响应处理之前</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;After request&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">start_response</span><span class="p">(</span><span class="n">status</span><span class="p">,</span> <span class="n">headers</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">app</span><span class="p">(</span><span class="n">environ</span><span class="p">,</span> <span class="n">custom_start_response</span><span class="p">)</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">wsgi_app</span> <span class="o">=</span> <span class="n">CustomMiddleware</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">wsgi_app</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;Custom data: </span><span class="si">{</span><span class="n">g</span><span class="o">.</span><span class="n">custom_data</span><span class="si">}</span><span class="s1">&#39;</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：</p>
+<ul>
+<li><strong><code>CustomMiddleware</code></strong>：自定义中间件类，实现 <code>__call__</code> 方法来处理请求和响应。</li>
+<li><strong><code>g.custom_data</code></strong>：在请求处理期间存储和共享数据。</li>
+</ul>
+<hr />
+<h3 id="22-flask-rate-limiting">22. <strong>Flask 中如何进行请求的限速（Rate Limiting）？</strong></h3>
+<p><code>Flask-Limiter</code> 可以帮助实现 API 请求的限速，以保护应用免受滥用。</p>
+<h4 id="flask-limiter_1">配置 Flask-Limiter</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">request</span>
+<span class="kn">from</span> <span class="nn">flask_limiter</span> <span class="kn">import</span> <span class="n">Limiter</span>
+<span class="kn">from</span> <span class="nn">flask_limiter.util</span> <span class="kn">import</span> <span class="n">get_remote_address</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">limiter</span> <span class="o">=</span> <span class="n">Limiter</span><span class="p">(</span><span class="n">get_remote_address</span><span class="p">,</span> <span class="n">app</span><span class="o">=</span><span class="n">app</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/limited&#39;</span><span class="p">)</span>
+<span class="nd">@limiter</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="s2">&quot;10 per minute&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">limited</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;This is a rate-limited endpoint.&#39;</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：</p>
+<ul>
+<li><strong><code>@limiter.limit("10 per minute")</code></strong>：限制每分钟最多 10 次请求。</li>
+<li><strong><code>get_remote_address</code></strong>：获取客户端 IP 地址进行限速。</li>
+</ul>
+<hr />
+<h3 id="23-flask-api">23. <strong>如何在 Flask 中实现 API 文档？</strong></h3>
+<p>可以使用 <code>Flask-RESTPlus</code> 或 <code>Flask-RESTX</code> 来生成 API 文档和 Swagger UI。</p>
+<h4 id="flask-restplus">配置 Flask-RESTPlus</h4>
+<ol>
+<li><strong>安装 Flask-RESTPlus</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>flask-restplus
+</code></pre></div>
+
+<ol>
+<li><strong>配置和使用</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">flask_restplus</span> <span class="kn">import</span> <span class="n">Api</span><span class="p">,</span> <span class="n">Resource</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">Api</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+
+<span class="nd">@api</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/hello&#39;</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">HelloWorld</span><span class="p">(</span><span class="n">Resource</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This is the Hello World endpoint.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;hello&#39;</span><span class="p">:</span> <span class="s1">&#39;world&#39;</span><span class="p">}</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：</p>
+<ul>
+<li><strong><code>Api</code></strong>：创建 API 实例。</li>
+<li><strong><code>Resource</code></strong>：定义 API 资源和端点。</li>
+<li><strong><code>@api.route('/hello')</code></strong>：为端点指定路由。</li>
+</ul>
+<hr />
+<h3 id="24-flask">24. <strong>如何在 Flask 中实现分布式缓存？</strong></h3>
+<p>分布式缓存可以通过 Redis 实现，以提高应用性能和响应速度。</p>
+<h4 id="flask-caching">配置和使用 Flask-Caching</h4>
+<ol>
+<li><strong>安装 Flask-Caching 和 Redis</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>Flask-Caching<span class="w"> </span>redis
+</code></pre></div>
+
+<ol>
+<li><strong>配置 Flask-Caching</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">flask_caching</span> <span class="kn">import</span> <span class="n">Cache</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;CACHE_TYPE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;redis&#39;</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;CACHE_REDIS_HOST&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;localhost&#39;</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;CACHE_REDIS_PORT&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">6379</span>
+<span class="n">cache</span> <span class="o">=</span> <span class="n">Cache</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="nd">@cache</span><span class="o">.</span><span class="n">cached</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;This page is cached for 60 seconds&#39;</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：</p>
+<ul>
+<li><strong><code>CACHE_TYPE</code></strong>：设置缓存类型为 Redis。</li>
+<li><strong><code>@cache.cached(timeout=60)</code></strong>：缓存视图函数的结果，超时时间为 60 秒。</li>
+</ul>
+<hr />
+<h3 id="25-flask-sqlalchemy">25. <strong>如何在 Flask 中进行 SQLAlchemy 的性能优化？</strong></h3>
+<p>性能优化可以通过合理使用 SQLAlchemy 的特性，如预加载、事务管理等来实现。</p>
+<h4 id="_8">性能优化示例</h4>
+<ol>
+<li><strong>使用预加载（Eager Loading）</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">flask_sqlalchemy</span> <span class="kn">import</span> <span class="n">SQLAlchemy</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;SQLALCHEMY_DATABASE_URI&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;sqlite:///example.db&#39;</span>
+<span class="n">db</span> <span class="o">=</span> <span class="n">SQLAlchemy</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Parent</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="nb">id</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">children</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">relationship</span><span class="p">(</span><span class="s1">&#39;Child&#39;</span><span class="p">,</span> <span class="n">backref</span><span class="o">=</span><span class="s1">&#39;parent&#39;</span><span class="p">,</span> <span class="n">lazy</span><span class="o">=</span><span class="s1">&#39;subquery&#39;</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="nb">id</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">parent_id</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Integer</span><span class="p">,</span> <span class="n">db</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="s1">&#39;parent.id&#39;</span><span class="p">))</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="n">parents</span> <span class="o">=</span> <span class="n">Parent</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>  <span class="c1"># 使用 Eager Loading 加载所有父项及其子项</span>
+    <span class="k">return</span> <span class="s1">&#39;Loaded parents and children&#39;</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<ol>
+<li><strong>使用事务管理</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">flask_sqlalchemy</span> <span class="kn">import</span> <span class="n">SQLAlchemy</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;SQLALCHEMY_DATABASE_URI&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;sqlite:///example.db&#39;</span>
+<span class="n">db</span> <span class="o">=</span> <span class="n">SQLAlchemy</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/transaction&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">transaction_example</span><span class="p">():</span>
+    <span class="k">with</span> <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">begin</span><span class="p">(</span><span class="n">subtransactions</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Parent</span><span class="p">())</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Child</span><span class="p">())</span>
+    <span class="k">return</span> <span class="s1">&#39;Transaction committed&#39;</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：</p>
+<ul>
+<li><strong>Eager Loading</strong>：避免 N+1 查询问题，通过 <code>lazy='subquery'</code> 一次性加载相关数据。</li>
+<li><strong>事务管理</strong>：使用 <code>with db.session.begin(subtransactions=True)</code> 确保事务的一致性和回滚。</li>
+</ul>
+<hr />
+<h3 id="26-flask">26. <strong>如何在 Flask 中实现用户权限管理？</strong></h3>
+<p>可以使用 <code>Flask-Principal</code> 来管理用户权限和角色。</p>
+<h4 id="flask-principal_1">配置 Flask-Principal</h4>
+<ol>
+<li><strong>安装 Flask-Principal</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>Flask-Principal
+</code></pre></div>
+
+<ol>
+<li><strong>配置和使用</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">g</span>
+<span class="kn">from</span> <span class="nn">flask_principal</span> <span class="kn">import</span> <span class="n">Principal</span><span class="p">,</span> <span class="n">Permission</span><span class="p">,</span> <span class="n">RoleNeed</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">secret_key</span> <span class="o">=</span> <span class="s1">&#39;mysecretkey&#39;</span>
+<span class="n">principal</span> <span class="o">=</span> <span class="n">Principal</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+
+<span class="n">admin_permission</span> <span class="o">=</span> <span class="n">Permission</span><span class="p">(</span><span class="n">RoleNeed</span><span class="p">(</span><span class="s1">&#39;admin&#39;</span><span class="p">))</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;Hello, World!&#39;</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/admin&#39;</span><span class="p">)</span>
+<span class="nd">@admin_permission</span><span class="o">.</span><span class="n">require</span><span class="p">(</span><span class="n">http_exception</span><span class="o">=</span><span class="mi">403</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">admin</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;Welcome to the admin panel&#39;</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：</p>
+<ul>
+<li><strong><code>Permission</code></strong>：定义权限。</li>
+<li><strong><code>RoleNeed</code></strong>：定义角色需求。</li>
+<li><strong><code>@admin_permission.require(http_exception=403)</code></strong>：保护视图函数，需要管理员权限才能访问。</li>
+</ul>
+<hr />
+<h3 id="27-flask-ab">27. <strong>Flask 中如何进行 A/B 测试？</strong></h3>
+<p>A/B 测试可以通过不同的路由或请求参数来实现用户体验的测试和优化。</p>
+<h4 id="ab">A/B 测试示例</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">render_template</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="n">version</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;version&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">version</span> <span class="o">==</span> <span class="s1">&#39;B&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;index_b.html&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;index_a.html&#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：</p>
+<ul>
+<li><strong><code>request.args.get('version', 'A')</code></strong>：根据请求参数选择不同的页面版本进行 A/B 测试。</li>
+</ul>
+<hr />
+<h3 id="28-flask">28. <strong>如何在 Flask 中实现实时数据更新（如推送通知）？</strong></h3>
+<p>可以使用 WebSocket 来实现实时数据更新，结合 <code>Flask-SocketIO</code>。</p>
+<h4 id="_9">实时数据更新示例</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span>
+<span class="kn">from</span> <span class="nn">flask_socketio</span> <span class="kn">import</span> <span class="n">SocketIO</span><span class="p">,</span> <span class="n">emit</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">socketio</span> <span class="o">=</span> <span class="n">SocketIO</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;index.html&#39;</span><span class="p">)</span>
+
+<span class="nd">@socketio</span><span class="o">.</span><span class="n">on</span><span class="p">(</span><span class="s1">&#39;connect&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">handle_connect</span><span class="p">():</span>
+    <span class="n">emit</span><span class="p">(</span><span class="s1">&#39;notification&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="s1">&#39;Welcome to the real-time app!&#39;</span><span class="p">})</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">socketio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>示例 HTML</strong> (<code>templates/index.html</code>)：</p>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Real-Time Update<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://cdn.socket.io/4.0.0/socket.io.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">socket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">io</span><span class="p">();</span>
+<span class="w">        </span><span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;notification&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="w">        </span><span class="p">});</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Real-Time Notifications<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：</p>
+<ul>
+<li><strong><code>socket.on('notification', ...)</code></strong>：接收服务器推送的实时数据。</li>
+</ul>
+<hr />
+<h3 id="29-flask">29. <strong>Flask 中如何处理大型文件上传？</strong></h3>
+<p>对于大型文件上传，可以使用分块上传和后台处理来优化性能。</p>
+<h4 id="_10">分块上传示例</h4>
+<ol>
+<li><strong>安装 Flask-Uploads</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>Flask-Uploads
+</code></pre></div>
+
+<ol>
+<li><strong>配置 Flask-Uploads</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">request</span>
+<span class="kn">from</span> <span class="nn">flask_uploads</span> <span class="kn">import</span> <span class="n">UploadSet</span><span class="p">,</span> <span class="n">configure_uploads</span><span class="p">,</span> <span class="n">ALL</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;UPLOADED_FILES_DEST&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;uploads&#39;</span>
+<span class="n">files</span> <span class="o">=</span> <span class="n">UploadSet</span><span class="p">(</span><span class="s1">&#39;files&#39;</span><span class="p">,</span> <span class="n">ALL</span><span class="p">)</span>
+<span class="n">configure_uploads</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">files</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/upload&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">upload</span><span class="p">():</span>
+    <span class="k">if</span> <span class="s1">&#39;file&#39;</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">files</span><span class="p">:</span>
+        <span class="n">file</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">files</span><span class="p">[</span><span class="s1">&#39;file&#39;</span><span class="p">]</span>
+        <span class="n">file</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;./uploads/</span><span class="si">{</span><span class="n">file</span><span class="o">.</span><span class="n">filename</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="s1">&#39;File uploaded successfully&#39;</span>
+    <span class="k">return</span> <span class="s1">&#39;No file uploaded&#39;</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：</p>
+<ul>
+<li><strong><code>UploadSet</code></strong>：管理文件上传的集合。</li>
+<li><strong><code>configure_uploads()</code></strong>：配置上传的文件类型和存储路径。</li>
+</ul>
+<hr />
+<h3 id="30-flask-token-authentication">30. <strong>如何在 Flask 中实现基于令牌的身份验证（Token Authentication）？</strong></h3>
+<p>基于令牌的身份验证通常使用 JSON Web Tokens（JWT）来实现，<code>Flask-JWT-Extended</code> 是一个流行的扩展库。</p>
+<h4 id="flask-jwt-extended">配置和使用 Flask-JWT-Extended</h4>
+<ol>
+<li><strong>安装 Flask-JWT-Extended</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>Flask-JWT-Extended
+</code></pre></div>
+
+<ol>
+<li><strong>配置和使用</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">jsonify</span><span class="p">,</span> <span class="n">request</span>
+<span class="kn">from</span> <span class="nn">flask_jwt_extended</span> <span class="kn">import</span> <span class="n">JWTManager</span><span class="p">,</span> <span class="n">create_access_token</span><span class="p">,</span> <span class="n">jwt_required</span><span class="p">,</span> <span class="n">get_jwt_identity</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;JWT_SECRET_KEY&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;supersecretkey&#39;</span>  <span class="c1"># 配置 JWT 密钥</span>
+<span class="n">jwt</span> <span class="o">=</span> <span class="n">JWTManager</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+
+<span class="c1"># 模拟用户数据</span>
+<span class="n">users</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;admin&#39;</span><span class="p">:</span> <span class="s1">&#39;password123&#39;</span><span class="p">}</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/login&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">login</span><span class="p">():</span>
+    <span class="n">username</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">)</span>
+    <span class="n">password</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;password&#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">username</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">users</span> <span class="ow">or</span> <span class="n">users</span><span class="p">[</span><span class="n">username</span><span class="p">]</span> <span class="o">!=</span> <span class="n">password</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s2">&quot;msg&quot;</span><span class="p">:</span> <span class="s2">&quot;Invalid credentials&quot;</span><span class="p">}),</span> <span class="mi">401</span>
+
+    <span class="n">access_token</span> <span class="o">=</span> <span class="n">create_access_token</span><span class="p">(</span><span class="n">identity</span><span class="o">=</span><span class="n">username</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">jsonify</span><span class="p">(</span><span class="n">access_token</span><span class="o">=</span><span class="n">access_token</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/protected&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">])</span>
+<span class="nd">@jwt_required</span><span class="p">()</span>  <span class="c1"># 保护路由，需要 JWT 才能访问</span>
+<span class="k">def</span> <span class="nf">protected</span><span class="p">():</span>
+    <span class="n">current_user</span> <span class="o">=</span> <span class="n">get_jwt_identity</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">jsonify</span><span class="p">(</span><span class="n">logged_in_as</span><span class="o">=</span><span class="n">current_user</span><span class="p">),</span> <span class="mi">200</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：</p>
+<ul>
+<li><strong><code>create_access_token(identity=username)</code></strong>：为用户生成一个访问令牌。</li>
+<li><strong><code>@jwt_required()</code></strong>：保护某个路由，只有持有有效 JWT 的用户可以访问。</li>
+<li><strong><code>get_jwt_identity()</code></strong>：获取当前 JWT 的身份信息。</li>
+</ul>
+<hr />
+<h3 id="31-flask">31. <strong>Flask 中如何进行分页查询？</strong></h3>
+<p>在使用数据库查询时，分页可以帮助你高效处理和显示大量数据。可以结合 SQLAlchemy 来实现分页。</p>
+<h4 id="_11">分页查询示例</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">jsonify</span>
+<span class="kn">from</span> <span class="nn">flask_sqlalchemy</span> <span class="kn">import</span> <span class="n">SQLAlchemy</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;SQLALCHEMY_DATABASE_URI&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;sqlite:///example.db&#39;</span>
+<span class="n">db</span> <span class="o">=</span> <span class="n">SQLAlchemy</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Item</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="nb">id</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">80</span><span class="p">))</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/items&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">get_items</span><span class="p">():</span>
+    <span class="n">page</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;page&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+    <span class="n">per_page</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;per_page&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+    <span class="n">items</span> <span class="o">=</span> <span class="n">Item</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">paginate</span><span class="p">(</span><span class="n">page</span><span class="o">=</span><span class="n">page</span><span class="p">,</span> <span class="n">per_page</span><span class="o">=</span><span class="n">per_page</span><span class="p">,</span> <span class="n">error_out</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span>
+        <span class="s1">&#39;items&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">item</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="o">.</span><span class="n">items</span><span class="p">],</span>
+        <span class="s1">&#39;total&#39;</span><span class="p">:</span> <span class="n">items</span><span class="o">.</span><span class="n">total</span><span class="p">,</span>
+        <span class="s1">&#39;pages&#39;</span><span class="p">:</span> <span class="n">items</span><span class="o">.</span><span class="n">pages</span><span class="p">,</span>
+        <span class="s1">&#39;current_page&#39;</span><span class="p">:</span> <span class="n">items</span><span class="o">.</span><span class="n">page</span>
+    <span class="p">})</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：</p>
+<ul>
+<li><strong><code>query.paginate(page=page, per_page=per_page)</code></strong>：分页查询方法，返回当前页数据。</li>
+<li><strong><code>error_out=False</code></strong>：如果页数超出范围，避免抛出错误。</li>
+</ul>
+<hr />
+<h3 id="32-flask-redis">32. <strong>如何在 Flask 中实现 Redis 缓存？</strong></h3>
+<p>Redis 是一个高效的内存缓存解决方案，结合 Flask 可以显著提高应用的性能。</p>
+<h4 id="redis">配置和使用 Redis 缓存</h4>
+<ol>
+<li><strong>安装 Flask-Caching 和 Redis</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>Flask-Caching<span class="w"> </span>redis
+</code></pre></div>
+
+<ol>
+<li><strong>配置 Flask-Caching 与 Redis</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">flask_caching</span> <span class="kn">import</span> <span class="n">Cache</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;CACHE_TYPE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;redis&#39;</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;CACHE_REDIS_HOST&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;localhost&#39;</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;CACHE_REDIS_PORT&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">6379</span>
+<span class="n">cache</span> <span class="o">=</span> <span class="n">Cache</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/data&#39;</span><span class="p">)</span>
+<span class="nd">@cache</span><span class="o">.</span><span class="n">cached</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>  <span class="c1"># 缓存 30 秒</span>
+<span class="k">def</span> <span class="nf">get_data</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;This is cached data&#39;</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：</p>
+<ul>
+<li><strong><code>CACHE_TYPE</code></strong>：设置缓存类型为 Redis。</li>
+<li><strong><code>@cache.cached(timeout=30)</code></strong>：将视图函数结果缓存 30 秒。</li>
+</ul>
+<hr />
+<h3 id="33-flask">33. <strong>如何在 Flask 中进行单元测试？</strong></h3>
+<p>使用 Flask 提供的测试客户端可以轻松编写单元测试。</p>
+<h4 id="_12">单元测试示例</h4>
+<ol>
+<li><strong>创建简单应用</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;Hello, World!&#39;</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<ol>
+<li><strong>编写测试用例</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">unittest</span>
+<span class="kn">from</span> <span class="nn">app</span> <span class="kn">import</span> <span class="n">app</span>
+
+<span class="k">class</span> <span class="nc">FlaskTestCase</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># 创建测试客户端</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">app</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">test_client</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">testing</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="k">def</span> <span class="nf">test_index</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># 测试主页响应</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">status_code</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertIn</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;Hello, World!&#39;</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：</p>
+<ul>
+<li><strong><code>app.test_client()</code></strong>：生成一个测试客户端，用于模拟请求。</li>
+<li><strong><code>self.assertEqual()</code></strong>：验证测试结果是否符合预期。</li>
+</ul>
+<hr />
+<h3 id="34-flask-blueprints">34. <strong>如何在 Flask 中使用 Blueprints 进行项目结构化？</strong></h3>
+<p>使用 Flask 的 <code>Blueprints</code> 功能可以将应用程序模块化，便于大型项目的组织和维护。</p>
+<h4 id="blueprint">Blueprint 示例</h4>
+<ol>
+<li><strong>创建蓝图模块</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="c1"># blueprints.py</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Blueprint</span>
+
+<span class="n">bp</span> <span class="o">=</span> <span class="n">Blueprint</span><span class="p">(</span><span class="s1">&#39;example&#39;</span><span class="p">,</span> <span class="vm">__name__</span><span class="p">)</span>
+
+<span class="nd">@bp</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;This is a Blueprint!&#39;</span>
+</code></pre></div>
+
+<ol>
+<li><strong>主应用中注册蓝图</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">blueprints</span> <span class="kn">import</span> <span class="n">bp</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">register_blueprint</span><span class="p">(</span><span class="n">bp</span><span class="p">,</span> <span class="n">url_prefix</span><span class="o">=</span><span class="s1">&#39;/example&#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：</p>
+<ul>
+<li><strong><code>Blueprint</code></strong>：用于组织相关的视图函数和路由。</li>
+<li><strong><code>app.register_blueprint()</code></strong>：将蓝图注册到主应用程序中。</li>
+</ul>
+<hr />
+<h3 id="35-flask">35. <strong>Flask 中如何进行错误处理和自定义错误页面？</strong></h3>
+<p>通过捕获错误并定义自定义错误页面，可以增强用户体验。</p>
+<h4 id="_13">自定义错误处理示例</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;Welcome to the homepage!&#39;</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">errorhandler</span><span class="p">(</span><span class="mi">404</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">page_not_found</span><span class="p">(</span><span class="n">e</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;404.html&#39;</span><span class="p">),</span> <span class="mi">404</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">errorhandler</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">internal_server_error</span><span class="p">(</span><span class="n">e</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;500.html&#39;</span><span class="p">),</span> <span class="mi">500</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：</p>
+<ul>
+<li><strong><code>@app.errorhandler(404)</code></strong>：捕获 404 错误并返回自定义页面。</li>
+<li><strong><code>render_template('404.html')</code></strong>：返回一个自定义的 HTML 模板。</li>
+</ul>
+<hr />
+<h3 id="36-flask-cors">36. <strong>如何在 Flask 中处理跨域资源共享（CORS）？</strong></h3>
+<p>跨域资源共享（CORS）问题可以通过 <code>Flask-CORS</code> 扩展解决。</p>
+<h4 id="flask-cors">配置和使用 Flask-CORS</h4>
+<ol>
+<li><strong>安装 Flask-CORS</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>Flask-CORS
+</code></pre></div>
+
+<ol>
+<li><strong>配置 Flask-CORS</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">flask_cors</span> <span class="kn">import</span> <span class="n">CORS</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">CORS</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;CORS is enabled!&#39;</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：</p>
+<ul>
+<li><strong><code>CORS(app)</code></strong>：启用跨域资源共享，允许所有域访问该应用程序。</li>
+</ul>
+<hr />
+<h3 id="37-flask-celery">37. <strong>如何在 Flask 中实现任务队列（如 Celery）？</strong></h3>
+<p>可以使用 Celery 进行后台任务处理，例如定时任务或异步任务。</p>
+<h4 id="celery_1">配置和使用 Celery</h4>
+<ol>
+<li><strong>安装 Celery 和 Flask-Celery</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>Celery
+</code></pre></div>
+
+<ol>
+<li><strong>配置 Celery</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">celery</span> <span class="kn">import</span> <span class="n">Celery</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;CELERY_BROKER_URL&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;redis://localhost:6379/0&#39;</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;CELERY_RESULT_BACKEND&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;redis://localhost:6379/0&#39;</span>
+
+<span class="k">def</span> <span class="nf">make_celery</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
+    <span class="n">celery</span> <span class="o">=</span> <span class="n">Celery</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">import_name</span><span class="p">,</span> <span class="n">broker</span><span class="o">=</span><span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;CELERY_BROKER_URL&#39;</span><span class="p">])</span>
+    <span class="n">celery</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">celery</span>
+
+<span class="n">celery</span> <span class="o">=</span> <span class="n">make_celery</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/start-task&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">start_task</span><span class="p">():</span>
+    <span class="n">task</span> <span class="o">=</span> <span class="n">long_task</span><span class="o">.</span><span class="n">apply_async</span><span class="p">()</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;Task started: </span><span class="si">{</span><span class="n">task</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s1">&#39;</span>
+
+<span class="nd">@celery</span><span class="o">.</span><span class="n">task</span>
+<span class="k">def</span> <span class="nf">long_task</span><span class="p">():</span>
+    <span class="c1"># 模拟一个耗时任务</span>
+    <span class="kn">import</span> <span class="nn">time</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s1">&#39;Task completed&#39;</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：</p>
+<ul>
+<li><strong><code>Celery</code></strong>：配置任务队列和任务处理。</li>
+<li><strong><code>@celery.task</code></strong>：定义异步任务，后台执行。</li>
+</ul>
+<hr />
+<h3 id="38-flask">38. <strong>如何在 Flask 中处理文件下载？</strong></h3>
+<p>文件下载是许多应用中的常见需求，Flask 提供了简单的方法来实现这一功能，通常使用 <code>send_file()</code> 或 <code>send_from_directory()</code> 来完成。</p>
+<h4 id="_14">文件下载示例</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">send_file</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/download/&lt;filename&gt;&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">download_file</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="c1"># 假设文件位于 &#39;uploads&#39; 文件夹中</span>
+    <span class="k">return</span> <span class="n">send_file</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;uploads/</span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">as_attachment</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：
+- <strong><code>send_file()</code></strong>：Flask 提供的函数用于发送文件到客户端。
+- <strong><code>as_attachment=True</code></strong>：告诉浏览器将文件作为附件下载，而不是直接在浏览器中显示。</p>
+<hr />
+<h3 id="39-flask-websocket">39. <strong>如何在 Flask 中使用 WebSocket 实现实时通信？</strong></h3>
+<p>在 Flask 中实现 WebSocket 实时通信可以使用 <code>flask-socketio</code> 扩展。它允许你创建 WebSocket 连接，以支持实时的双向通信。</p>
+<h4 id="flask-socketio_1">配置和使用 Flask-SocketIO</h4>
+<ol>
+<li><strong>安装 Flask-SocketIO</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>Flask-SocketIO
+</code></pre></div>
+
+<ol>
+<li><strong>配置 WebSocket 应用</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span>
+<span class="kn">from</span> <span class="nn">flask_socketio</span> <span class="kn">import</span> <span class="n">SocketIO</span><span class="p">,</span> <span class="n">send</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;SECRET_KEY&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;mysecret&#39;</span>
+<span class="n">socketio</span> <span class="o">=</span> <span class="n">SocketIO</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;index.html&#39;</span><span class="p">)</span>
+
+<span class="nd">@socketio</span><span class="o">.</span><span class="n">on</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">handle_message</span><span class="p">(</span><span class="n">msg</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Message: </span><span class="si">{</span><span class="n">msg</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">send</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">broadcast</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># 广播消息给所有连接的客户端</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">socketio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：
+- <strong><code>flask_socketio.SocketIO()</code></strong>：初始化 WebSocket 支持。
+- <strong><code>@socketio.on('message')</code></strong>：监听来自客户端的消息，并广播给其他客户端。</p>
+<hr />
+<h3 id="40-flask-oauth-20">40. <strong>如何在 Flask 中使用 OAuth 2.0 实现第三方登录？</strong></h3>
+<p>可以使用 <code>Flask-Dance</code> 扩展轻松实现 OAuth 2.0 的第三方登录，如 Google、GitHub、Facebook 等。</p>
+<h4 id="flask-dance-github">配置和使用 Flask-Dance 实现 GitHub 登录</h4>
+<ol>
+<li><strong>安装 Flask-Dance</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>Flask-Dance
+</code></pre></div>
+
+<ol>
+<li><strong>配置 GitHub 登录</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">redirect</span><span class="p">,</span> <span class="n">url_for</span>
+<span class="kn">from</span> <span class="nn">flask_dance.contrib.github</span> <span class="kn">import</span> <span class="n">make_github_blueprint</span><span class="p">,</span> <span class="n">github</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">secret_key</span> <span class="o">=</span> <span class="s1">&#39;supersecretkey&#39;</span>
+<span class="n">github_bp</span> <span class="o">=</span> <span class="n">make_github_blueprint</span><span class="p">(</span><span class="n">client_id</span><span class="o">=</span><span class="s1">&#39;your-client-id&#39;</span><span class="p">,</span> <span class="n">client_secret</span><span class="o">=</span><span class="s1">&#39;your-client-secret&#39;</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">register_blueprint</span><span class="p">(</span><span class="n">github_bp</span><span class="p">,</span> <span class="n">url_prefix</span><span class="o">=</span><span class="s1">&#39;/github_login&#39;</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">github</span><span class="o">.</span><span class="n">authorized</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;github.login&#39;</span><span class="p">))</span>
+    <span class="n">resp</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;/user&#39;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">resp</span><span class="o">.</span><span class="n">ok</span><span class="p">,</span> <span class="n">resp</span><span class="o">.</span><span class="n">text</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Logged in as: </span><span class="si">{</span><span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;login&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：
+- <strong><code>make_github_blueprint()</code></strong>：创建 GitHub 登录蓝图。
+- <strong><code>github.authorized</code></strong>：检查用户是否已经登录。
+- <strong><code>github.get('/user')</code></strong>：从 GitHub 获取用户信息。</p>
+<hr />
+<h3 id="41-flask-csrf">41. <strong>如何在 Flask 中处理 CSRF（跨站请求伪造）？</strong></h3>
+<p>使用 <code>Flask-WTF</code> 来处理 CSRF 是最常见的方法。它会自动为表单生成 CSRF 令牌，并验证表单是否安全。</p>
+<h4 id="csrf">配置 CSRF 保护</h4>
+<ol>
+<li><strong>安装 Flask-WTF</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>Flask-WTF
+</code></pre></div>
+
+<ol>
+<li><strong>配置 CSRF</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span><span class="p">,</span> <span class="n">request</span>
+<span class="kn">from</span> <span class="nn">flask_wtf</span> <span class="kn">import</span> <span class="n">CSRFProtect</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">secret_key</span> <span class="o">=</span> <span class="s1">&#39;supersecretkey&#39;</span>
+<span class="n">csrf</span> <span class="o">=</span> <span class="n">CSRFProtect</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/submit&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">submit</span><span class="p">():</span>
+    <span class="c1"># 表单处理逻辑</span>
+    <span class="k">return</span> <span class="s1">&#39;Form submitted successfully!&#39;</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：
+- <strong><code>CSRFProtect(app)</code></strong>：为整个应用程序启用 CSRF 保护。
+- <strong><code>Flask-WTF</code></strong>：自动为表单生成和验证 CSRF 令牌。</p>
+<hr />
+<h3 id="42-flask">42. <strong>如何在 Flask 中发送电子邮件？</strong></h3>
+<p>可以使用 <code>Flask-Mail</code> 扩展来发送电子邮件。</p>
+<h4 id="flask-mail">配置和使用 Flask-Mail</h4>
+<ol>
+<li><strong>安装 Flask-Mail</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>Flask-Mail
+</code></pre></div>
+
+<ol>
+<li><strong>发送电子邮件</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">flask_mail</span> <span class="kn">import</span> <span class="n">Mail</span><span class="p">,</span> <span class="n">Message</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;MAIL_SERVER&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;smtp.example.com&#39;</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;MAIL_PORT&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">587</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;MAIL_USERNAME&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;your-email@example.com&#39;</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;MAIL_PASSWORD&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;your-password&#39;</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;MAIL_USE_TLS&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;MAIL_USE_SSL&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="n">mail</span> <span class="o">=</span> <span class="n">Mail</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/send-mail&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">send_mail</span><span class="p">():</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="n">Message</span><span class="p">(</span><span class="s1">&#39;Hello from Flask&#39;</span><span class="p">,</span> <span class="n">sender</span><span class="o">=</span><span class="s1">&#39;your-email@example.com&#39;</span><span class="p">,</span> <span class="n">recipients</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;recipient@example.com&#39;</span><span class="p">])</span>
+    <span class="n">msg</span><span class="o">.</span><span class="n">body</span> <span class="o">=</span> <span class="s1">&#39;This is a test email sent from a Flask web application!&#39;</span>
+    <span class="n">mail</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s1">&#39;Mail sent!&#39;</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：
+- <strong><code>flask_mail.Mail()</code></strong>：配置邮件发送功能。
+- <strong><code>mail.send(msg)</code></strong>：发送电子邮件。</p>
+<hr />
+<h3 id="43-flask">43. <strong>如何在 Flask 中进行文件上传与大小限制？</strong></h3>
+<p>Flask 提供了 <code>request.files</code> 来处理文件上传，还可以设置文件大小限制。</p>
+<h4 id="_15">文件上传示例</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">redirect</span><span class="p">,</span> <span class="n">url_for</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;MAX_CONTENT_LENGTH&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">16</span> <span class="o">*</span> <span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span>  <span class="c1"># 限制文件大小为 16MB</span>
+<span class="n">UPLOAD_FOLDER</span> <span class="o">=</span> <span class="s1">&#39;uploads&#39;</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;UPLOAD_FOLDER&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">UPLOAD_FOLDER</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/upload&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">upload_file</span><span class="p">():</span>
+    <span class="k">if</span> <span class="s1">&#39;file&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">files</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;No file part&#39;</span>
+
+    <span class="n">file</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">files</span><span class="p">[</span><span class="s1">&#39;file&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">file</span><span class="o">.</span><span class="n">filename</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;No selected file&#39;</span>
+
+    <span class="n">file</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;UPLOAD_FOLDER&#39;</span><span class="p">],</span> <span class="n">file</span><span class="o">.</span><span class="n">filename</span><span class="p">))</span>
+    <span class="k">return</span> <span class="s1">&#39;File uploaded successfully&#39;</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：
+- <strong><code>app.config['MAX_CONTENT_LENGTH']</code></strong>：设置上传文件的大小限制。
+- <strong><code>file.save()</code></strong>：将文件保存到指定目录。</p>
+<hr />
+<h3 id="44-flask">44. <strong>如何在 Flask 中实现用户会话管理？</strong></h3>
+<p>用户会话管理可以使用 Flask 的 <code>session</code> 对象，它允许存储和访问会话数据。</p>
+<h4 id="_16">用户会话管理示例</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="n">redirect</span><span class="p">,</span> <span class="n">url_for</span><span class="p">,</span> <span class="n">request</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">secret_key</span> <span class="o">=</span> <span class="s1">&#39;supersecretkey&#39;</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">if</span> <span class="s1">&#39;username&#39;</span> <span class="ow">in</span> <span class="n">session</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;Logged in as </span><span class="si">{</span><span class="n">session</span><span class="p">[</span><span class="s2">&quot;username&quot;</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span>
+    <span class="k">return</span> <span class="s1">&#39;You are not logged in&#39;</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/login&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">login</span><span class="p">():</span>
+    <span class="n">session</span><span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">))</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/logout&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">logout</span><span class="p">():</span>
+    <span class="n">session</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：
+- <strong><code>session['username']</code></strong>：将用户名存储在会话中。
+- <strong><code>session.pop()</code></strong>：删除会话中的数据，用户登出。</p>
+<hr />
+<h3 id="45-flask-jinja2">45. <strong>如何在 Flask 中使用 Jinja2 模板引擎？</strong></h3>
+<p>Jinja2 是 Flask 的模板引擎，允许在 HTML 中嵌入 Python 代码。</p>
+<h4 id="_17">模板示例</h4>
+<ol>
+<li><strong>HTML 模板</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="cm">&lt;!-- templates/index.html --&gt;</span>
+<span class="cp">&lt;!doctype html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;&lt;</span><span class="nt">title</span><span class="p">&gt;</span>{{ title }}<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>{{ greeting }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<ol>
+<li><strong>渲染模板</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;index.html&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Welcome&#39;</span><span class="p">,</span> <span class="n">greeting</span><span class="o">=</span><span class="s1">&#39;Hello, Flask!&#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：
+- <strong><code>render_template()</code></strong>：渲染模板并传递上下文变量。
+- <strong><code>{{ variable }}</code></strong>：在模板中使用双花括号插入 Python 变量。</p>
+<hr />
 
 
 
@@ -4054,7 +6800,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "toc.integrate", "search.highlight", "search.suggest", "header.autohide", "footer.copyright", "footer.text", "code.annotate", "content.code", "material.nav", "material.switch"], "search": "../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "toc.integrate", "search.highlight", "search.suggest", "header.autohide", "footer.copyright", "footer.text", "code.annotate", "content.code", "material.nav", "material.switch", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.56dfad97.min.js"></script>

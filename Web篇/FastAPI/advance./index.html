@@ -469,6 +469,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    FastAPI 进阶教程
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -478,6 +489,1177 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-fastapi-dependency-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. FastAPI 中的依赖注入（Dependency Injection）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. FastAPI 中的依赖注入（Dependency Injection）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：依赖注入的基本用法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      详解：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 自定义依赖项
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 自定义依赖项">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：类作为依赖项
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      详解：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 依赖项的作用域控制
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 依赖项的作用域控制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：依赖项作用域
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      详解：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-fastapi-sqlalchemy" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. FastAPI 与 SQLAlchemy 深入结合
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. FastAPI 与 SQLAlchemy 深入结合">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sqlalchemy" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：SQLAlchemy 数据库会话管理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      详解：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. FastAPI 与异步数据库操作
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. FastAPI 与异步数据库操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tortoise-orm" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：使用 Tortoise ORM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      详解：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. FastAPI 的后台任务处理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. FastAPI 的后台任务处理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backgroundtasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：使用 BackgroundTasks 处理后台任务
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      详解：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-fastapi-middleware" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. FastAPI 中的中间件（Middleware）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. FastAPI 中的中间件（Middleware）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：自定义中间件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      详解：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-fastapi-celery" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. FastAPI 与异步任务队列 Celery 的集成
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. FastAPI 与异步任务队列 Celery 的集成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fastapi-celery" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：FastAPI 与 Celery 集成
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      详解：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-fastapi-event-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. FastAPI 中的事件处理（Event Handling）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. FastAPI 中的事件处理（Event Handling）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：启动和关闭事件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      详解：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. FastAPI 的安全性提升
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. FastAPI 的安全性提升">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#oauth2-jwt" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：使用 OAuth2 密码流和 JWT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      详解：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-fastapi-websocket" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. FastAPI 中的 WebSocket 实现
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. FastAPI 中的 WebSocket 实现">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#websocket" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：实现 WebSocket 连接
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      详解：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. FastAPI 的后台定时任务
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. FastAPI 的后台定时任务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apscheduler" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：使用 APScheduler 实现定时任务
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      详解：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-fastapi-redis" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. FastAPI 与 Redis 缓存的结合
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. FastAPI 与 Redis 缓存的结合">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#redis-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：使用 Redis 缓存 API 响应
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      详解：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      14. FastAPI 中的依赖注入与数据库连接池结合
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. FastAPI 中的依赖注入与数据库连接池结合">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#asyncpg" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：使用 asyncpg 连接池
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      详解：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      15. FastAPI 的测试和调试
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15. FastAPI 的测试和调试">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#testclient" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：使用 TestClient 进行测试
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      详解：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      16. FastAPI 中的文件上传和下载
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="16. FastAPI 中的文件上传和下载">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：实现文件上传
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      详解：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-fastapi-graphql" class="md-nav__link">
+    <span class="md-ellipsis">
+      17. FastAPI 与 GraphQL 的集成
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="17. FastAPI 与 GraphQL 的集成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#graphql-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：使用 GraphQL 创建 API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      详解：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-fastapi-cors" class="md-nav__link">
+    <span class="md-ellipsis">
+      18. FastAPI 的 CORS 支持
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="18. FastAPI 的 CORS 支持">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cors" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：配置 CORS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      详解：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-fastapi-jwt" class="md-nav__link">
+    <span class="md-ellipsis">
+      19. FastAPI 与 JWT 结合的用户认证
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="19. FastAPI 与 JWT 结合的用户认证">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jwt" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：使用 JWT 进行用户认证
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      详解：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      20. FastAPI 的自定义异常处理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="20. FastAPI 的自定义异常处理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：自定义异常处理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      详解：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      21. FastAPI 的分页处理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="21. FastAPI 的分页处理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：实现分页
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      详解：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-fastapi-pydantic" class="md-nav__link">
+    <span class="md-ellipsis">
+      22. FastAPI 的请求体模型（Pydantic）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="22. FastAPI 的请求体模型（Pydantic）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pydantic" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：使用 Pydantic 模型验证请求数据
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      详解：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      23. FastAPI 的路由参数和路径参数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="23. FastAPI 的路由参数和路径参数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：路径参数与查询参数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      详解：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      24. FastAPI 的请求和响应模型
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="24. FastAPI 的请求和响应模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：请求和响应模型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      详解：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      25. FastAPI 的静态文件服务
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="25. FastAPI 的静态文件服务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：配置静态文件服务
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      详解：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      26. FastAPI 的请求体和响应体示例
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="26. FastAPI 的请求体和响应体示例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：定义示例数据
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      详解：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      27. FastAPI 的异步编程支持
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="27. FastAPI 的异步编程支持">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：异步数据库查询
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      详解：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      28. FastAPI 的中间件和插件扩展
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="28. FastAPI 的中间件和插件扩展">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：使用中间件记录请求日志
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      详解：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      29. FastAPI 的错误日志和监控
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="29. FastAPI 的错误日志和监控">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：集成日志记录
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    <span class="md-ellipsis">
+      详解：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#30-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      30. FastAPI 的文档自定义
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="30. FastAPI 的文档自定义">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：自定义 OpenAPI 文档
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    <span class="md-ellipsis">
+      详解：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      31. FastAPI 的数据库集成
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="31. FastAPI 的数据库集成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sqlalchemy_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用 SQLAlchemy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tortoise-orm_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用 Tortoise ORM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      32. FastAPI 的安全性最佳实践
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="32. FastAPI 的安全性最佳实践">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#https" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用 HTTPS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    <span class="md-ellipsis">
+      限制请求速率
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      33. FastAPI 的多语言支持
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="33. FastAPI 的多语言支持">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gettext" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：使用 gettext 实现多语言支持
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      34. FastAPI 的异步任务队列
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="34. FastAPI 的异步任务队列">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#celery" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：使用 Celery 实现异步任务
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35-fastapi-oauth2-openid-connect" class="md-nav__link">
+    <span class="md-ellipsis">
+      35. FastAPI 的 OAuth2 和 OpenID Connect 支持
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="35. FastAPI 的 OAuth2 和 OpenID Connect 支持">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#oauth2" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：OAuth2 认证
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36-fastapi-swagger-redoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      36. FastAPI 的 Swagger 和 ReDoc 自定义
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="36. FastAPI 的 Swagger 和 ReDoc 自定义">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#swagger" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：自定义 Swagger 文档
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -582,7 +1764,7 @@
         
   
   <span class="md-ellipsis">
-    Advance
+    Flask 进阶教程
   </span>
   
 
@@ -603,7 +1785,7 @@
         
   
   <span class="md-ellipsis">
-    Basic
+    Flask 基础教程
   </span>
   
 
@@ -624,7 +1806,7 @@
         
   
   <span class="md-ellipsis">
-    Interview
+    Flask 面试手册
   </span>
   
 
@@ -645,7 +1827,7 @@
         
   
   <span class="md-ellipsis">
-    工作中常见问题
+    Flask 工作中常见问题
   </span>
   
 
@@ -4013,6 +5195,1019 @@
 
 
 <h1 id="fastapi">FastAPI 进阶教程</h1>
+<h3 id="1-fastapi-dependency-injection">1. FastAPI 中的依赖注入（Dependency Injection）</h3>
+<p>依赖注入是 FastAPI 的核心功能之一，可以将某些共享逻辑（如数据库连接、验证逻辑等）抽象成依赖项，减少代码重复并提高可维护性。</p>
+<h4 id="_1">示例：依赖注入的基本用法</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">Depends</span><span class="p">,</span> <span class="n">FastAPI</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">get_query_param</span><span class="p">(</span><span class="n">q</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">q</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/items/&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">read_items</span><span class="p">(</span><span class="n">q</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Depends</span><span class="p">(</span><span class="n">get_query_param</span><span class="p">)):</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;query_param&quot;</span><span class="p">:</span> <span class="n">q</span><span class="p">}</span>
+</code></pre></div>
+
+<h4 id="_2">详解：</h4>
+<ul>
+<li><strong>Depends</strong>：通过 <code>Depends</code> 函数声明依赖项，<code>get_query_param</code> 的返回值会被注入到 <code>read_items</code> 路由中。</li>
+<li><strong>依赖复用</strong>：相同的依赖函数可以在多个路由中复用，大幅减少重复代码。</li>
+</ul>
+<hr />
+<h3 id="2">2. 自定义依赖项</h3>
+<p>FastAPI 的依赖项不仅可以是简单的函数，还可以是带有复杂逻辑的类或者协程。</p>
+<h4 id="_3">示例：类作为依赖项</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">Depends</span><span class="p">,</span> <span class="n">FastAPI</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="k">class</span> <span class="nc">QueryChecker</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">q</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">q</span> <span class="o">=</span> <span class="n">q</span>
+
+    <span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">q</span><span class="p">:</span>
+            <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Query param is: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">q</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="s2">&quot;No query param provided&quot;</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/items/&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">read_items</span><span class="p">(</span><span class="n">checker</span><span class="p">:</span> <span class="n">QueryChecker</span> <span class="o">=</span> <span class="n">Depends</span><span class="p">()):</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="n">checker</span><span class="o">.</span><span class="n">check</span><span class="p">()}</span>
+</code></pre></div>
+
+<h4 id="_4">详解：</h4>
+<ul>
+<li><strong>类作为依赖</strong>：通过定义类，可以封装更复杂的业务逻辑，依赖项会自动实例化并注入到路由中。</li>
+<li><strong>状态维护</strong>：类中的 <code>self.q</code> 可以保存状态，适用于一些需要维护内部状态的业务场景。</li>
+</ul>
+<hr />
+<h3 id="3">3. 依赖项的作用域控制</h3>
+<p>依赖项可以设置不同的作用域，包括：
+- <strong><code>request</code></strong>：每次请求都会创建新的依赖实例。
+- <strong><code>session</code></strong>：生命周期内维持一个依赖实例。</p>
+<h4 id="_5">示例：依赖项作用域</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">Depends</span><span class="p">,</span> <span class="n">FastAPI</span>
+<span class="kn">from</span> <span class="nn">contextlib</span> <span class="kn">import</span> <span class="n">contextmanager</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="nd">@contextmanager</span>
+<span class="k">def</span> <span class="nf">db_session</span><span class="p">():</span>
+    <span class="n">db</span> <span class="o">=</span> <span class="s2">&quot;database_session&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">db</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Close the DB session&quot;</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/items/&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">read_items</span><span class="p">(</span><span class="n">db</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Depends</span><span class="p">(</span><span class="n">db_session</span><span class="p">)):</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;db_session&quot;</span><span class="p">:</span> <span class="n">db</span><span class="p">}</span>
+</code></pre></div>
+
+<h4 id="_6">详解：</h4>
+<ul>
+<li><strong>contextmanager</strong>：通过 Python 的 <code>contextmanager</code> 实现依赖项的生命周期管理。</li>
+<li><strong>依赖项作用域</strong>：每次请求都会启动一个数据库会话，并在请求结束后自动关闭。</li>
+</ul>
+<hr />
+<h3 id="4-fastapi-sqlalchemy">4. FastAPI 与 SQLAlchemy 深入结合</h3>
+<p>在实际项目中，通常会使用 ORM 框架进行数据库操作，SQLAlchemy 是一个常用的 ORM 框架。通过依赖注入和 FastAPI，SQLAlchemy 可以高效管理数据库会话。</p>
+<h4 id="sqlalchemy">示例：SQLAlchemy 数据库会话管理</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="kn">import</span> <span class="n">sessionmaker</span><span class="p">,</span> <span class="n">Session</span>
+<span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">Depends</span><span class="p">,</span> <span class="n">FastAPI</span>
+
+<span class="n">DATABASE_URL</span> <span class="o">=</span> <span class="s2">&quot;sqlite:///./test.db&quot;</span>
+<span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="n">DATABASE_URL</span><span class="p">)</span>
+<span class="n">SessionLocal</span> <span class="o">=</span> <span class="n">sessionmaker</span><span class="p">(</span><span class="n">autocommit</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">autoflush</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">bind</span><span class="o">=</span><span class="n">engine</span><span class="p">)</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">get_db</span><span class="p">():</span>
+    <span class="n">db</span> <span class="o">=</span> <span class="n">SessionLocal</span><span class="p">()</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">db</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/items/&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">read_items</span><span class="p">(</span><span class="n">db</span><span class="p">:</span> <span class="n">Session</span> <span class="o">=</span> <span class="n">Depends</span><span class="p">(</span><span class="n">get_db</span><span class="p">)):</span>
+    <span class="c1"># 使用 db 进行数据库操作</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Database session in use&quot;</span><span class="p">}</span>
+</code></pre></div>
+
+<h4 id="_7">详解：</h4>
+<ul>
+<li><strong>sessionmaker</strong>：创建一个数据库会话工厂，每次请求都会生成一个新的会话。</li>
+<li><strong>get_db</strong>：通过依赖注入 <code>get_db</code> 函数，可以在请求生命周期内管理数据库会话，避免手动处理会话关闭。</li>
+</ul>
+<hr />
+<h3 id="5-fastapi">5. FastAPI 与异步数据库操作</h3>
+<p>FastAPI 支持异步操作数据库，使用诸如 <code>asyncpg</code> 和 <code>Tortoise ORM</code> 等异步数据库驱动，可以大幅提高 I/O 密集型操作的性能。</p>
+<h4 id="tortoise-orm">示例：使用 Tortoise ORM</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
+<span class="kn">from</span> <span class="nn">tortoise.contrib.fastapi</span> <span class="kn">import</span> <span class="n">register_tortoise</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="k">class</span> <span class="nc">ItemModel</span><span class="p">:</span>
+    <span class="c1"># 定义数据库模型</span>
+    <span class="k">pass</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/items/&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">read_items</span><span class="p">():</span>
+    <span class="n">items</span> <span class="o">=</span> <span class="k">await</span> <span class="n">ItemModel</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">items</span>
+
+<span class="n">register_tortoise</span><span class="p">(</span>
+    <span class="n">app</span><span class="p">,</span>
+    <span class="n">db_url</span><span class="o">=</span><span class="s2">&quot;sqlite://db.sqlite3&quot;</span><span class="p">,</span>
+    <span class="n">modules</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;models&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;your_project.models&quot;</span><span class="p">]},</span>
+    <span class="n">generate_schemas</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">add_exception_handlers</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<h4 id="_8">详解：</h4>
+<ul>
+<li><strong>Tortoise ORM</strong>：一个异步的 ORM，支持与 FastAPI 完美结合，提供自动化的数据库迁移和模型管理。</li>
+<li><strong>register_tortoise</strong>：通过 <code>register_tortoise</code> 函数，将 Tortoise ORM 注册到 FastAPI 应用中，并自动生成数据库表。</li>
+</ul>
+<hr />
+<h3 id="6-fastapi">6. FastAPI 的后台任务处理</h3>
+<p>在某些情况下，我们需要在处理完请求后执行一些异步任务。FastAPI 提供了后台任务处理的功能，允许任务在响应后异步执行。</p>
+<h4 id="backgroundtasks">示例：使用 BackgroundTasks 处理后台任务</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">BackgroundTasks</span><span class="p">,</span> <span class="n">FastAPI</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">write_log</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;log.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">log_file</span><span class="p">:</span>
+        <span class="n">log_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/send-notification/&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">send_notification</span><span class="p">(</span><span class="n">background_tasks</span><span class="p">:</span> <span class="n">BackgroundTasks</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="n">background_tasks</span><span class="o">.</span><span class="n">add_task</span><span class="p">(</span><span class="n">write_log</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Notification sent in background&quot;</span><span class="p">}</span>
+</code></pre></div>
+
+<h4 id="_9">详解：</h4>
+<ul>
+<li><strong>BackgroundTasks</strong>：FastAPI 提供的后台任务管理器，可以通过 <code>add_task</code> 方法将任务放入后台异步执行。</li>
+<li><strong>后台任务</strong>：任务可以在响应返回后继续执行，不会阻塞主线程。</li>
+</ul>
+<hr />
+<h3 id="7-fastapi-middleware">7. FastAPI 中的中间件（Middleware）</h3>
+<p>中间件可以在请求到达路由之前或者响应返回客户端之前进行额外的操作，如修改请求、响应或者进行身份验证。</p>
+<h4 id="_10">示例：自定义中间件</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
+<span class="kn">from</span> <span class="nn">starlette.middleware.base</span> <span class="kn">import</span> <span class="n">BaseHTTPMiddleware</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="k">class</span> <span class="nc">CustomMiddleware</span><span class="p">(</span><span class="n">BaseHTTPMiddleware</span><span class="p">):</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">dispatch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">call_next</span><span class="p">):</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="n">call_next</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+        <span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s2">&quot;X-Custom-Header&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Value&quot;</span>
+        <span class="k">return</span> <span class="n">response</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">add_middleware</span><span class="p">(</span><span class="n">CustomMiddleware</span><span class="p">)</span>
+</code></pre></div>
+
+<h4 id="_11">详解：</h4>
+<ul>
+<li><strong>BaseHTTPMiddleware</strong>：实现自定义中间件的基类，通过 <code>dispatch</code> 方法处理请求和响应。</li>
+<li><strong>add_middleware</strong>：在 FastAPI 中注册自定义中间件，每次请求会经过这个中间件进行处理。</li>
+</ul>
+<hr />
+<h3 id="8-fastapi-celery">8. FastAPI 与异步任务队列 Celery 的集成</h3>
+<p>在高并发场景下，FastAPI 可以与 Celery 等任务队列系统结合，处理一些需要长时间执行的任务，如发送邮件、生成报告等。</p>
+<h4 id="fastapi-celery">示例：FastAPI 与 Celery 集成</h4>
+<ol>
+<li>配置 Celery：</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">celery</span> <span class="kn">import</span> <span class="n">Celery</span>
+
+<span class="n">celery_app</span> <span class="o">=</span> <span class="n">Celery</span><span class="p">(</span>
+    <span class="s2">&quot;worker&quot;</span><span class="p">,</span>
+    <span class="n">broker</span><span class="o">=</span><span class="s2">&quot;redis://localhost:6379/0&quot;</span><span class="p">,</span>
+    <span class="n">backend</span><span class="o">=</span><span class="s2">&quot;redis://localhost:6379/0&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<ol>
+<li>FastAPI 中调用 Celery 任务：</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
+<span class="kn">from</span> <span class="nn">.celery</span> <span class="kn">import</span> <span class="n">celery_app</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="nd">@celery_app</span><span class="o">.</span><span class="n">task</span>
+<span class="k">def</span> <span class="nf">send_email</span><span class="p">(</span><span class="n">to</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="c1"># 模拟发送邮件</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Email sent to </span><span class="si">{</span><span class="n">to</span><span class="si">}</span><span class="s2">&quot;</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/send-email/&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">send_email_endpoint</span><span class="p">(</span><span class="n">to</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="n">task</span> <span class="o">=</span> <span class="n">send_email</span><span class="o">.</span><span class="n">delay</span><span class="p">(</span><span class="n">to</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;task_id&quot;</span><span class="p">:</span> <span class="n">task</span><span class="o">.</span><span class="n">id</span><span class="p">}</span>
+</code></pre></div>
+
+<h4 id="_12">详解：</h4>
+<ul>
+<li><strong>Celery</strong>：一个流行的分布式任务队列系统，用于处理后台任务。</li>
+<li><strong>send_email.delay()</strong>：通过 <code>delay()</code> 方法将任务放入队列，由 Celery 异步执行任务。</li>
+</ul>
+<hr />
+<h3 id="9-fastapi-event-handling">9. FastAPI 中的事件处理（Event Handling）</h3>
+<p>FastAPI 支持应用启动和关闭时执行特定的事件处理函数，通常用于在应用启动时建立数据库连接，或在关闭时释放资源。</p>
+<h4 id="_13">示例：启动和关闭事件</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">on_event</span><span class="p">(</span><span class="s2">&quot;startup&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">startup_event</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Application is starting&quot;</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">on_event</span><span class="p">(</span><span class="s2">&quot;shutdown&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">shutdown_event</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Application is shutting down&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<h4 id="_14">详解：</h4>
+<ul>
+<li><strong>@app.on_event</strong>：通过 <code>on_event</code> 装饰器声明启动和关闭事件，可以在应用启动或关闭时执行一些初始化或清理操作。</li>
+</ul>
+<hr />
+<h3 id="10-fastapi">10. FastAPI 的安全性提升</h3>
+<p>FastAPI 提供了多种安全相关的功能，如 OAuth2、API Key 认证、JWT 认证等，适合保护敏感的 API。</p>
+<h4 id="oauth2-jwt">示例：使用 OAuth2 密码流和 JWT</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">Depends</span><span class="p">,</span> <span class="n">FastAPI</span><span class="p">,</span> <span class="n">HTTPException</span>
+<span class="kn">from</span> <span class="nn">fastapi.security</span> <span class="kn">import</span> <span class="n">OAuth2PasswordBearer</span>
+<span class="kn">from</span> <span class="nn">jose</span> <span class="kn">import</span> <span class="n">jwt</span><span class="p">,</span> <span class="n">JWTError</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="n">oauth2_scheme</span> <span class="o">=</span> <span class="n">OAuth2PasswordBearer</span><span class="p">(</span><span class="n">tokenUrl</span><span class="o">=</span><span class="s2">&quot;token&quot;</span><span class="p">)</span>
+
+<span class="n">SECRET_KEY</span> <span class="o">=</span> <span class="s2">&quot;your_secret_key&quot;</span>
+<span class="n">ALGORITHM</span> <span class="o">=</span> <span class="s2">&quot;HS256&quot;</span>
+
+<span class="k">def</span> <span class="nf">verify_token</span><span class="p">(</span><span class="n">token</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Depends</span><span class="p">(</span><span class="n">oauth2_scheme</span><span class="p">)):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">payload</span> <span class="o">=</span> <span class="n">jwt</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="n">SECRET_KEY</span><span class="p">,</span> <span class="n">algorithms</span><span class="o">=</span><span class="p">[</span><span class="n">ALGORITHM</span><span class="p">])</span>
+    <span class="k">except</span> <span class="n">JWTError</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">HTTPException</span><span class="p">(</span><span class="n">status_code</span><span class="o">=</span><span class="mi">401</span><span class="p">,</span> <span class="n">detail</span><span class="o">=</span><span class="s2">&quot;Invalid token&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">payload</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/users/me&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">read_users_me</span><span class="p">(</span><span class="n">token</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Depends</span><span class="p">(</span><span class="n">verify_token</span><span class="p">)):</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="n">token</span><span class="p">}</span>
+</code></pre></div>
+
+<h4 id="_15">详解：</h4>
+<ul>
+<li><strong>OAuth2PasswordBearer</strong>：FastAPI 提供的 OAuth2 密码流，用于保护路由。</li>
+<li><strong>JWT</strong>：JSON Web Token，用于认证用户身份，通过 <code>jose</code> 库进行编码和解码。</li>
+</ul>
+<hr />
+<h3 id="11-fastapi-websocket">11. FastAPI 中的 WebSocket 实现</h3>
+<p>WebSocket 是一种在客户端和服务器之间建立全双工通信的协议，适合实时应用场景。FastAPI 支持 WebSocket 的实现，可以用于在线聊天、实时通知等场景。</p>
+<h4 id="websocket">示例：实现 WebSocket 连接</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span><span class="p">,</span> <span class="n">WebSocket</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">websocket</span><span class="p">(</span><span class="s2">&quot;/ws&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">websocket_endpoint</span><span class="p">(</span><span class="n">websocket</span><span class="p">:</span> <span class="n">WebSocket</span><span class="p">):</span>
+    <span class="k">await</span> <span class="n">websocket</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="k">await</span> <span class="n">websocket</span><span class="o">.</span><span class="n">receive_text</span><span class="p">()</span>
+        <span class="k">await</span> <span class="n">websocket</span><span class="o">.</span><span class="n">send_text</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Message received: </span><span class="si">{</span><span class="n">data</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<h4 id="_16">详解：</h4>
+<ul>
+<li><strong>WebSocket</strong>：<code>WebSocket</code> 类提供了建立 WebSocket 连接的方法，<code>receive_text()</code> 接收客户端发送的消息，<code>send_text()</code> 返回响应。</li>
+<li><strong>全双工通信</strong>：WebSocket 允许服务器与客户端之间的双向通信，无需每次发送 HTTP 请求。</li>
+</ul>
+<hr />
+<h3 id="12-fastapi">12. FastAPI 的后台定时任务</h3>
+<p>FastAPI 并不直接支持定时任务，但是可以通过结合 <code>apscheduler</code> 等第三方库，实现定时任务功能。</p>
+<h4 id="apscheduler">示例：使用 APScheduler 实现定时任务</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
+<span class="kn">from</span> <span class="nn">apscheduler.schedulers.background</span> <span class="kn">import</span> <span class="n">BackgroundScheduler</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="n">scheduler</span> <span class="o">=</span> <span class="n">BackgroundScheduler</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">periodic_task</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This task runs periodically&quot;</span><span class="p">)</span>
+
+<span class="n">scheduler</span><span class="o">.</span><span class="n">add_job</span><span class="p">(</span><span class="n">periodic_task</span><span class="p">,</span> <span class="s2">&quot;interval&quot;</span><span class="p">,</span> <span class="n">seconds</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">scheduler</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">read_root</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;FastAPI with periodic tasks&quot;</span><span class="p">}</span>
+</code></pre></div>
+
+<h4 id="_17">详解：</h4>
+<ul>
+<li><strong>APScheduler</strong>：用于在 FastAPI 应用中调度定时任务，支持以固定的时间间隔执行任务。</li>
+<li><strong>BackgroundScheduler</strong>：后台调度器，可以在应用启动后自动运行。</li>
+</ul>
+<hr />
+<h3 id="13-fastapi-redis">13. FastAPI 与 Redis 缓存的结合</h3>
+<p>在处理高并发请求时，使用 Redis 进行缓存是提升性能的有效方式。通过 FastAPI 结合 Redis，可以实现数据缓存、会话管理等功能。</p>
+<h4 id="redis-api">示例：使用 Redis 缓存 API 响应</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">redis</span>
+<span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">redis</span><span class="o">.</span><span class="n">Redis</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">6379</span><span class="p">,</span> <span class="n">db</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/items/</span><span class="si">{item_id}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">read_item</span><span class="p">(</span><span class="n">item_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+    <span class="n">cached_item</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">item_id</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">cached_item</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;item&quot;</span><span class="p">:</span> <span class="n">cached_item</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)}</span>
+    <span class="n">item</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Item with id </span><span class="si">{</span><span class="n">item_id</span><span class="si">}</span><span class="s2">&quot;</span>  <span class="c1"># 模拟从数据库获取的数据</span>
+    <span class="n">r</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">item_id</span><span class="p">,</span> <span class="n">item</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;item&quot;</span><span class="p">:</span> <span class="n">item</span><span class="p">}</span>
+</code></pre></div>
+
+<h4 id="_18">详解：</h4>
+<ul>
+<li><strong>Redis</strong>：使用 Redis 作为缓存层，减少数据库查询次数，提升响应速度。</li>
+<li><strong>r.get() 和 r.set()</strong>：从 Redis 获取和存储缓存的数据，支持多种数据类型的缓存。</li>
+</ul>
+<hr />
+<h3 id="14-fastapi">14. FastAPI 中的依赖注入与数据库连接池结合</h3>
+<p>对于高并发场景，单次连接数据库可能成为性能瓶颈。通过连接池（如 <code>asyncpg</code>），可以高效管理数据库连接。</p>
+<h4 id="asyncpg">示例：使用 asyncpg 连接池</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">asyncpg</span>
+<span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">get_db_pool</span><span class="p">():</span>
+    <span class="n">pool</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncpg</span><span class="o">.</span><span class="n">create_pool</span><span class="p">(</span><span class="n">dsn</span><span class="o">=</span><span class="s2">&quot;postgres://user:password@localhost:5432/dbname&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pool</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">on_event</span><span class="p">(</span><span class="s2">&quot;startup&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">startup_event</span><span class="p">():</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">db_pool</span> <span class="o">=</span> <span class="k">await</span> <span class="n">get_db_pool</span><span class="p">()</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">on_event</span><span class="p">(</span><span class="s2">&quot;shutdown&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">shutdown_event</span><span class="p">():</span>
+    <span class="k">await</span> <span class="n">app</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">db_pool</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/items/</span><span class="si">{item_id}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">read_item</span><span class="p">(</span><span class="n">item_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+    <span class="k">async</span> <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">db_pool</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span> <span class="k">as</span> <span class="n">connection</span><span class="p">:</span>
+        <span class="n">item</span> <span class="o">=</span> <span class="k">await</span> <span class="n">connection</span><span class="o">.</span><span class="n">fetchrow</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM items WHERE id = $1&quot;</span><span class="p">,</span> <span class="n">item_id</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">item</span>
+</code></pre></div>
+
+<h4 id="_19">详解：</h4>
+<ul>
+<li><strong>asyncpg</strong>：一个高效的异步 PostgreSQL 客户端库，支持连接池管理。</li>
+<li><strong>create_pool()</strong>：创建数据库连接池，应用启动时创建，关闭时释放。</li>
+</ul>
+<hr />
+<h3 id="15-fastapi">15. FastAPI 的测试和调试</h3>
+<p>为了确保应用的稳定性和正确性，编写单元测试非常重要。FastAPI 提供了与 <code>TestClient</code> 集成的简单方法，用于快速测试 API。</p>
+<h4 id="testclient">示例：使用 TestClient 进行测试</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi.testclient</span> <span class="kn">import</span> <span class="n">TestClient</span>
+<span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/items/&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">read_items</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;items&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;item1&quot;</span><span class="p">,</span> <span class="s2">&quot;item2&quot;</span><span class="p">]}</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">TestClient</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">test_read_items</span><span class="p">():</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/items/&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span>
+    <span class="k">assert</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span> <span class="o">==</span> <span class="p">{</span><span class="s2">&quot;items&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;item1&quot;</span><span class="p">,</span> <span class="s2">&quot;item2&quot;</span><span class="p">]}</span>
+</code></pre></div>
+
+<h4 id="_20">详解：</h4>
+<ul>
+<li><strong>TestClient</strong>：FastAPI 自带的测试客户端，基于 <code>requests</code>，可以模拟发送请求并检查响应结果。</li>
+<li><strong>单元测试</strong>：通过编写测试函数，可以确保每个 API 的行为符合预期。</li>
+</ul>
+<hr />
+<h3 id="16-fastapi">16. FastAPI 中的文件上传和下载</h3>
+<p>FastAPI 支持文件上传和下载操作，特别适合处理大文件和多文件上传。</p>
+<h4 id="_21">示例：实现文件上传</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span><span class="p">,</span> <span class="n">File</span><span class="p">,</span> <span class="n">UploadFile</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/uploadfile/&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">create_upload_file</span><span class="p">(</span><span class="n">file</span><span class="p">:</span> <span class="n">UploadFile</span> <span class="o">=</span> <span class="n">File</span><span class="p">(</span><span class="o">...</span><span class="p">)):</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="k">await</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;filename&quot;</span><span class="p">:</span> <span class="n">file</span><span class="o">.</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">content</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)}</span>
+</code></pre></div>
+
+<h4 id="_22">详解：</h4>
+<ul>
+<li><strong>UploadFile</strong>：FastAPI 提供的文件上传类，支持异步处理上传文件，<code>read()</code> 方法读取文件内容。</li>
+<li><strong>File()</strong>：声明上传文件参数，并可以指定文件的多种元数据。</li>
+</ul>
+<hr />
+<h3 id="17-fastapi-graphql">17. FastAPI 与 GraphQL 的集成</h3>
+<p>FastAPI 支持与 GraphQL 集成，通过 <code>graphene</code> 库实现基于 GraphQL 的 API 开发，适合需要灵活查询和数据结构的项目。</p>
+<h4 id="graphql-api">示例：使用 GraphQL 创建 API</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">graphene</span>
+<span class="kn">from</span> <span class="nn">starlette.graphql</span> <span class="kn">import</span> <span class="n">GraphQLApp</span>
+<span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
+
+<span class="k">class</span> <span class="nc">Query</span><span class="p">(</span><span class="n">graphene</span><span class="o">.</span><span class="n">ObjectType</span><span class="p">):</span>
+    <span class="n">hello</span> <span class="o">=</span> <span class="n">graphene</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">graphene</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="n">default_value</span><span class="o">=</span><span class="s2">&quot;stranger&quot;</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">resolve_hello</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">info</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Hello </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+<span class="n">app</span><span class="o">.</span><span class="n">add_route</span><span class="p">(</span><span class="s2">&quot;/graphql&quot;</span><span class="p">,</span> <span class="n">GraphQLApp</span><span class="p">(</span><span class="n">schema</span><span class="o">=</span><span class="n">graphene</span><span class="o">.</span><span class="n">Schema</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="n">Query</span><span class="p">)))</span>
+</code></pre></div>
+
+<h4 id="_23">详解：</h4>
+<ul>
+<li><strong>GraphQL</strong>：一种查询语言，允许客户端灵活指定需要的数据，避免数据过多或不足的问题。</li>
+<li><strong>GraphQLApp</strong>：FastAPI 提供了 <code>GraphQLApp</code>，可以快速集成 GraphQL 服务。</li>
+</ul>
+<hr />
+<h3 id="18-fastapi-cors">18. FastAPI 的 CORS 支持</h3>
+<p>在跨域请求的场景下，FastAPI 支持通过配置 CORS（跨源资源共享）规则来允许某些来源访问 API。</p>
+<h4 id="cors">示例：配置 CORS</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
+<span class="kn">from</span> <span class="nn">fastapi.middleware.cors</span> <span class="kn">import</span> <span class="n">CORSMiddleware</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="n">origins</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;http://localhost:3000&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;https://myfrontendapp.com&quot;</span>
+<span class="p">]</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">add_middleware</span><span class="p">(</span>
+    <span class="n">CORSMiddleware</span><span class="p">,</span>
+    <span class="n">allow_origins</span><span class="o">=</span><span class="n">origins</span><span class="p">,</span>
+    <span class="n">allow_credentials</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">allow_methods</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">],</span>
+    <span class="n">allow_headers</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<h4 id="_24">详解：</h4>
+<ul>
+<li><strong>CORSMiddleware</strong>：FastAPI 的 CORS 中间件，允许配置跨域请求的来源、方法、头部等参数，确保前端应用能够正确访问 API。</li>
+</ul>
+<hr />
+<h3 id="19-fastapi-jwt">19. FastAPI 与 JWT 结合的用户认证</h3>
+<p>通过 JWT（JSON Web Token）进行用户认证是 RESTful API 中常见的方式。FastAPI 与 JWT 可以很方便地结合，实现安全的用户身份验证。</p>
+<h4 id="jwt">示例：使用 JWT 进行用户认证</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">Depends</span><span class="p">,</span> <span class="n">FastAPI</span><span class="p">,</span> <span class="n">HTTPException</span>
+<span class="kn">from</span> <span class="nn">fastapi.security</span> <span class="kn">import</span> <span class="n">OAuth2PasswordBearer</span>
+<span class="kn">from</span> <span class="nn">jose</span> <span class="kn">import</span> <span class="n">JWTError</span><span class="p">,</span> <span class="n">jwt</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+<span class="n">oauth2_scheme</span> <span class="o">=</span> <span class="n">OAuth2PasswordBearer</span><span class="p">(</span><span class="n">tokenUrl</span><span class="o">=</span><span class="s2">&quot;token&quot;</span><span class="p">)</span>
+
+<span class="n">SECRET_KEY</span> <span class="o">=</span> <span class="s2">&quot;mysecret&quot;</span>
+<span class="n">ALGORITHM</span> <span class="o">=</span> <span class="s2">&quot;HS256&quot;</span>
+
+<span class="k">def</span> <span class="nf">decode_jwt</span><span class="p">(</span><span class="n">token</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">payload</span> <span class="o">=</span> <span class="n">jwt</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="n">SECRET_KEY</span><span class="p">,</span> <span class="n">algorithms</span><span class="o">=</span><span class="p">[</span><span class="n">ALGORITHM</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">payload</span>
+    <span class="k">except</span> <span class="n">JWTError</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">HTTPException</span><span class="p">(</span><span class="n">status_code</span><span class="o">=</span><span class="mi">401</span><span class="p">,</span> <span class="n">detail</span><span class="o">=</span><span class="s2">&quot;Invalid token&quot;</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/users/me&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">read_users_me</span><span class="p">(</span><span class="n">token</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Depends</span><span class="p">(</span><span class="n">oauth2_scheme</span><span class="p">)):</span>
+    <span class="k">return</span> <span class="n">decode_jwt</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
+</code></pre></div>
+
+<h4 id="_25">详解：</h4>
+<ul>
+<li><strong>JWT</strong>：用于认证和授权的令牌，包含用户的加密信息。</li>
+<li><strong>OAuth2PasswordBearer</strong>：FastAPI 提供的 OAuth2 认证流，使用 JWT 进行令牌验证。</li>
+</ul>
+<hr />
+<h3 id="20-fastapi">20. FastAPI 的自定义异常处理</h3>
+<p>自定义异常处理可以帮助你管理和处理特定的错误条件，从而提供更友好的用户反馈和更有效的错误追踪。</p>
+<h4 id="_26">示例：自定义异常处理</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span><span class="p">,</span> <span class="n">HTTPException</span>
+<span class="kn">from</span> <span class="nn">fastapi.responses</span> <span class="kn">import</span> <span class="n">JSONResponse</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="k">class</span> <span class="nc">CustomException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">exception_handler</span><span class="p">(</span><span class="n">CustomException</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">custom_exception_handler</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">exc</span><span class="p">:</span> <span class="n">CustomException</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">JSONResponse</span><span class="p">(</span>
+        <span class="n">status_code</span><span class="o">=</span><span class="mi">418</span><span class="p">,</span>
+        <span class="n">content</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;Custom exception occurred with name: </span><span class="si">{</span><span class="n">exc</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">},</span>
+    <span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/raise-custom-exception/</span><span class="si">{name}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">raise_custom_exception</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="k">raise</span> <span class="n">CustomException</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+</code></pre></div>
+
+<h4 id="_27">详解：</h4>
+<ul>
+<li><strong>自定义异常类</strong>：创建自定义异常类 <code>CustomException</code>。</li>
+<li><strong>异常处理器</strong>：使用 <code>@app.exception_handler</code> 装饰器注册自定义异常处理器。</li>
+<li><strong>JSONResponse</strong>：返回自定义格式的 JSON 响应。</li>
+</ul>
+<hr />
+<h3 id="21-fastapi">21. FastAPI 的分页处理</h3>
+<p>分页是一种处理大量数据时的常见方法。FastAPI 可以结合查询参数实现简单的分页功能。</p>
+<h4 id="_28">示例：实现分页</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span><span class="p">,</span> <span class="n">Query</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="n">fake_items</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&quot;item&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;Item </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">}</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/items/&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">read_items</span><span class="p">(</span><span class="n">skip</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Query</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">alias</span><span class="o">=</span><span class="s2">&quot;page&quot;</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="n">limit</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Query</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="mi">100</span><span class="p">)):</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">skip</span> <span class="o">*</span> <span class="n">limit</span>
+    <span class="n">end</span> <span class="o">=</span> <span class="n">start</span> <span class="o">+</span> <span class="n">limit</span>
+    <span class="k">return</span> <span class="n">fake_items</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">]</span>
+</code></pre></div>
+
+<h4 id="_29">详解：</h4>
+<ul>
+<li><strong>Query</strong>：使用 <code>Query</code> 声明查询参数，并设置默认值和验证条件。</li>
+<li><strong>分页逻辑</strong>：通过 <code>skip</code> 和 <code>limit</code> 参数计算数据的起始和结束位置，返回相应的分页数据。</li>
+</ul>
+<hr />
+<h3 id="22-fastapi-pydantic">22. FastAPI 的请求体模型（Pydantic）</h3>
+<p>FastAPI 使用 Pydantic 作为数据验证和序列化的工具。通过 Pydantic 的模型，可以确保请求数据符合预期的结构和类型。</p>
+<h4 id="pydantic">示例：使用 Pydantic 模型验证请求数据</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span>
+<span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="k">class</span> <span class="nc">Item</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">price</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">tax</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/items/&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">create_item</span><span class="p">(</span><span class="n">item</span><span class="p">:</span> <span class="n">Item</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;item&quot;</span><span class="p">:</span> <span class="n">item</span><span class="p">}</span>
+</code></pre></div>
+
+<h4 id="_30">详解：</h4>
+<ul>
+<li><strong>BaseModel</strong>：Pydantic 的基类，通过继承 <code>BaseModel</code> 定义数据模型。</li>
+<li><strong>数据验证</strong>：请求体的数据会自动验证是否符合模型定义的类型和结构。</li>
+</ul>
+<hr />
+<h3 id="23-fastapi">23. FastAPI 的路由参数和路径参数</h3>
+<p>FastAPI 支持路径参数和查询参数的灵活使用，可以通过这些参数接收和处理客户端的请求数据。</p>
+<h4 id="_31">示例：路径参数与查询参数</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/items/</span><span class="si">{item_id}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">read_item</span><span class="p">(</span><span class="n">item_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">q</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;item_id&quot;</span><span class="p">:</span> <span class="n">item_id</span><span class="p">,</span> <span class="s2">&quot;q&quot;</span><span class="p">:</span> <span class="n">q</span><span class="p">}</span>
+</code></pre></div>
+
+<h4 id="_32">详解：</h4>
+<ul>
+<li><strong>路径参数</strong>：通过 <code>{item_id}</code> 语法定义路径参数，并在函数中接收。</li>
+<li><strong>查询参数</strong>：通过函数参数接收查询参数，支持默认值和类型检查。</li>
+</ul>
+<hr />
+<h3 id="24-fastapi">24. FastAPI 的请求和响应模型</h3>
+<p>通过定义请求和响应模型，可以确保 API 的输入和输出数据符合预期的结构，增强代码的自文档化。</p>
+<h4 id="_33">示例：请求和响应模型</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span>
+<span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="k">class</span> <span class="nc">Item</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">price</span><span class="p">:</span> <span class="nb">float</span>
+
+<span class="k">class</span> <span class="nc">ResponseModel</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">item</span><span class="p">:</span> <span class="n">Item</span>
+    <span class="n">message</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/items/&quot;</span><span class="p">,</span> <span class="n">response_model</span><span class="o">=</span><span class="n">ResponseModel</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">create_item</span><span class="p">(</span><span class="n">item</span><span class="p">:</span> <span class="n">Item</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;item&quot;</span><span class="p">:</span> <span class="n">item</span><span class="p">,</span> <span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Item created successfully&quot;</span><span class="p">}</span>
+</code></pre></div>
+
+<h4 id="_34">详解：</h4>
+<ul>
+<li><strong>请求模型</strong>：通过 <code>Item</code> 类定义请求体的结构。</li>
+<li><strong>响应模型</strong>：通过 <code>ResponseModel</code> 类定义响应体的结构，并在 <code>@app.post</code> 装饰器中指定 <code>response_model</code>。</li>
+</ul>
+<hr />
+<h3 id="25-fastapi">25. FastAPI 的静态文件服务</h3>
+<p>FastAPI 可以通过配置静态文件服务来处理静态资源，如图片、CSS 文件、JavaScript 文件等。</p>
+<h4 id="_35">示例：配置静态文件服务</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
+<span class="kn">from</span> <span class="nn">fastapi.staticfiles</span> <span class="kn">import</span> <span class="n">StaticFiles</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s2">&quot;/static&quot;</span><span class="p">,</span> <span class="n">StaticFiles</span><span class="p">(</span><span class="n">directory</span><span class="o">=</span><span class="s2">&quot;static&quot;</span><span class="p">),</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;static&quot;</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">root</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Static files are served at /static&quot;</span><span class="p">}</span>
+</code></pre></div>
+
+<h4 id="_36">详解：</h4>
+<ul>
+<li><strong>StaticFiles</strong>：FastAPI 的静态文件服务类，用于指定静态文件的目录。</li>
+<li><strong>app.mount</strong>：将静态文件目录挂载到指定的路径上。</li>
+</ul>
+<hr />
+<h3 id="26-fastapi">26. FastAPI 的请求体和响应体示例</h3>
+<p>在开发 API 时，提供清晰的请求体和响应体示例可以帮助前端开发者更好地理解 API 接口的使用。</p>
+<h4 id="_37">示例：定义示例数据</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span>
+<span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="k">class</span> <span class="nc">Item</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">price</span><span class="p">:</span> <span class="nb">float</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/items/&quot;</span><span class="p">,</span> <span class="n">response_model</span><span class="o">=</span><span class="n">Item</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">create_item</span><span class="p">(</span><span class="n">item</span><span class="p">:</span> <span class="n">Item</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">item</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/items/</span><span class="si">{item_id}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">response_model</span><span class="o">=</span><span class="n">Item</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">read_item</span><span class="p">(</span><span class="n">item_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Item&quot;</span><span class="p">,</span> <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Item description&quot;</span><span class="p">,</span> <span class="s2">&quot;price&quot;</span><span class="p">:</span> <span class="mf">123.45</span><span class="p">}</span>
+</code></pre></div>
+
+<h4 id="_38">详解：</h4>
+<ul>
+<li><strong>示例数据</strong>：在 <code>response_model</code> 中定义的模型会自动生成示例数据，这些示例数据会在 API 文档中显示，帮助用户了解请求和响应的数据格式。</li>
+</ul>
+<hr />
+<h3 id="27-fastapi">27. FastAPI 的异步编程支持</h3>
+<p>FastAPI 原生支持异步编程，可以使用 <code>async/await</code> 语法进行异步 I/O 操作，提高应用的性能和响应速度。</p>
+<h4 id="_39">示例：异步数据库查询</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
+<span class="kn">import</span> <span class="nn">asyncio</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">async_query</span><span class="p">():</span>
+    <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># 模拟异步 I/O 操作</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="s2">&quot;Async data&quot;</span><span class="p">}</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/async-items/&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">read_async_items</span><span class="p">():</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="k">await</span> <span class="n">async_query</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">data</span>
+</code></pre></div>
+
+<h4 id="_40">详解：</h4>
+<ul>
+<li><strong>async/await</strong>：通过 <code>async/await</code> 语法进行异步操作，适合 I/O 密集型任务，如数据库查询、网络请求等。</li>
+<li><strong>async_query</strong>：一个模拟的异步查询函数，演示如何处理异步操作。</li>
+</ul>
+<hr />
+<h3 id="28-fastapi">28. FastAPI 的中间件和插件扩展</h3>
+<p>FastAPI 支持通过中间件和插件进行功能扩展，如日志记录、请求限流等。</p>
+<h4 id="_41">示例：使用中间件记录请求日志</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span><span class="p">,</span> <span class="n">Request</span>
+<span class="kn">from</span> <span class="nn">starlette.middleware.base</span> <span class="kn">import</span> <span class="n">BaseHTTPMiddleware</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="k">class</span> <span class="nc">LoggingMiddleware</span><span class="p">(</span><span class="n">BaseHTTPMiddleware</span><span class="p">):</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">dispatch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">:</span> <span class="n">Request</span><span class="p">,</span> <span class="n">call_next</span><span class="p">):</span>
+        <span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;uvicorn&quot;</span><span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Request: </span><span class="si">{</span><span class="n">request</span><span class="o">.</span><span class="n">method</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">request</span><span class="o">.</span><span class="n">url</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="n">call_next</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">response</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">add_middleware</span><span class="p">(</span><span class="n">LoggingMiddleware</span><span class="p">)</span>
+</code></pre></div>
+
+<h4 id="_42">详解：</h4>
+<ul>
+<li><strong>BaseHTTPMiddleware</strong>：自定义中间件基类，允许在请求和响应之间进行处理。</li>
+<li><strong>LoggingMiddleware</strong>：一个简单的日志中间件，记录请求的基本信息。</li>
+</ul>
+<hr />
+<h3 id="29-fastapi">29. FastAPI 的错误日志和监控</h3>
+<p>错误日志和监控对于生产环境中的应用至关重要。通过集成日志记录和监控工具，可以实时了解应用的运行状态。</p>
+<h4 id="_43">示例：集成日志记录</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span><span class="p">,</span> <span class="n">HTTPException</span>
+
+<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;my_logger&quot;</span><span class="p">)</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/items/</span><span class="si">{item_id}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">read_item</span><span class="p">(</span><span class="n">item_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">item_id</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid item_id: </span><span class="si">{</span><span class="n">item_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="n">HTTPException</span><span class="p">(</span><span class="n">status_code</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">detail</span><span class="o">=</span><span class="s2">&quot;Invalid item ID&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;item_id&quot;</span><span class="p">:</span> <span class="n">item_id</span><span class="p">}</span>
+</code></pre></div>
+
+<h4 id="_44">详解：</h4>
+<ul>
+<li><strong>logging</strong>：Python 的标准库用于记录应用的日志。</li>
+<li><strong>logger.error</strong>：记录错误信息，并在发生错误时输出到日志中。</li>
+</ul>
+<hr />
+<h3 id="30-fastapi">30. FastAPI 的文档自定义</h3>
+<p>FastAPI 自动生成的 API 文档非常强大，但你也可以通过自定义文档来满足特定需求。</p>
+<h4 id="openapi">示例：自定义 OpenAPI 文档</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;My API&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;This is a very fancy project&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;1.0.0&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/items/&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">read_items</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Custom API Documentation&quot;</span><span class="p">}</span>
+</code></pre></div>
+
+<h4 id="_45">详解：</h4>
+<ul>
+<li><strong>FastAPI 初始化参数</strong>：通过 <code>title</code>、<code>description</code> 和 <code>version</code> 参数自定义 API 文档的标题、描述和版本。</li>
+<li><strong>文档生成</strong>：FastAPI 会自动生成并提供 OpenAPI 和 Swagger UI 文档。</li>
+</ul>
+<hr />
+<h3 id="31-fastapi">31. FastAPI 的数据库集成</h3>
+<p>FastAPI 可以与多种数据库集成，包括关系型数据库和非关系型数据库。这里我们以 SQLAlchemy 和 Tortoise ORM 为例，演示如何在 FastAPI 中使用它们。</p>
+<h4 id="sqlalchemy_1">使用 SQLAlchemy</h4>
+<p><strong>示例：SQLAlchemy 与 FastAPI 集成</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span><span class="p">,</span> <span class="n">Depends</span><span class="p">,</span> <span class="n">HTTPException</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span><span class="p">,</span> <span class="n">Column</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">String</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy.ext.declarative</span> <span class="kn">import</span> <span class="n">declarative_base</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="kn">import</span> <span class="n">sessionmaker</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="n">DATABASE_URL</span> <span class="o">=</span> <span class="s2">&quot;sqlite:///./test.db&quot;</span>
+
+<span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="n">DATABASE_URL</span><span class="p">)</span>
+<span class="n">SessionLocal</span> <span class="o">=</span> <span class="n">sessionmaker</span><span class="p">(</span><span class="n">autocommit</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">autoflush</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">bind</span><span class="o">=</span><span class="n">engine</span><span class="p">)</span>
+<span class="n">Base</span> <span class="o">=</span> <span class="n">declarative_base</span><span class="p">()</span>
+
+<span class="k">class</span> <span class="nc">Item</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s2">&quot;items&quot;</span>
+    <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">description</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">Base</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">create_all</span><span class="p">(</span><span class="n">bind</span><span class="o">=</span><span class="n">engine</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">get_db</span><span class="p">():</span>
+    <span class="n">db</span> <span class="o">=</span> <span class="n">SessionLocal</span><span class="p">()</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">db</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/items/&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">create_item</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">db</span><span class="p">:</span> <span class="n">Depends</span><span class="p">(</span><span class="n">get_db</span><span class="p">)):</span>
+    <span class="n">db_item</span> <span class="o">=</span> <span class="n">Item</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">)</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">db_item</span><span class="p">)</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">refresh</span><span class="p">(</span><span class="n">db_item</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">db_item</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/items/</span><span class="si">{item_id}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">read_item</span><span class="p">(</span><span class="n">item_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">db</span><span class="p">:</span> <span class="n">Depends</span><span class="p">(</span><span class="n">get_db</span><span class="p">)):</span>
+    <span class="n">db_item</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Item</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">Item</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="n">item_id</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">db_item</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">HTTPException</span><span class="p">(</span><span class="n">status_code</span><span class="o">=</span><span class="mi">404</span><span class="p">,</span> <span class="n">detail</span><span class="o">=</span><span class="s2">&quot;Item not found&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">db_item</span>
+</code></pre></div>
+
+<p><strong>详解：</strong></p>
+<ul>
+<li><strong>create_engine</strong>：创建数据库引擎，连接到指定的数据库。</li>
+<li><strong>SessionLocal</strong>：数据库会话工厂，用于创建和管理数据库会话。</li>
+<li><strong>Base</strong>：声明基础模型类，所有模型继承自该类。</li>
+<li><strong>get_db</strong>：依赖注入函数，管理数据库会话的生命周期。</li>
+</ul>
+<h4 id="tortoise-orm_1">使用 Tortoise ORM</h4>
+<p><strong>示例：Tortoise ORM 与 FastAPI 集成</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span><span class="p">,</span> <span class="n">HTTPException</span>
+<span class="kn">from</span> <span class="nn">tortoise</span> <span class="kn">import</span> <span class="n">Tortoise</span><span class="p">,</span> <span class="n">fields</span>
+<span class="kn">from</span> <span class="nn">tortoise.models</span> <span class="kn">import</span> <span class="n">Model</span>
+<span class="kn">from</span> <span class="nn">tortoise.contrib.fastapi</span> <span class="kn">import</span> <span class="n">HTTPNotFoundError</span><span class="p">,</span> <span class="n">register_tortoise</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="k">class</span> <span class="nc">Item</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="nb">id</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">IntField</span><span class="p">(</span><span class="n">pk</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">255</span><span class="p">)</span>
+    <span class="n">description</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">TextField</span><span class="p">(</span><span class="n">null</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">register_tortoise</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">db_url</span><span class="o">=</span><span class="s1">&#39;sqlite://db.sqlite3&#39;</span><span class="p">,</span> <span class="n">modules</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;models&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;__main__&#39;</span><span class="p">]},</span> <span class="n">generate_schemas</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/items/&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">create_item</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+    <span class="n">item</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Item</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">item</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/items/</span><span class="si">{item_id}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">read_item</span><span class="p">(</span><span class="n">item_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+    <span class="n">item</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Item</span><span class="o">.</span><span class="n">get_or_none</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">item_id</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">item</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">HTTPException</span><span class="p">(</span><span class="n">status_code</span><span class="o">=</span><span class="mi">404</span><span class="p">,</span> <span class="n">detail</span><span class="o">=</span><span class="s2">&quot;Item not found&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">item</span>
+</code></pre></div>
+
+<p><strong>详解：</strong></p>
+<ul>
+<li><strong>register_tortoise</strong>：注册 Tortoise ORM 与 FastAPI 集成，自动处理数据库连接和模式生成。</li>
+<li><strong>Item</strong>：模型类，定义数据表结构。</li>
+</ul>
+<hr />
+<h3 id="32-fastapi">32. FastAPI 的安全性最佳实践</h3>
+<p>确保 API 的安全性是开发过程中至关重要的部分。这里介绍一些 FastAPI 的安全性最佳实践，包括使用 HTTPS、限制请求速率等。</p>
+<h4 id="https">使用 HTTPS</h4>
+<p><strong>示例：通过 Uvicorn 启动 HTTPS</strong></p>
+<div class="codehilite"><pre><span></span><code>uvicorn<span class="w"> </span>main:app<span class="w"> </span>--host<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span>--port<span class="w"> </span><span class="m">8000</span><span class="w"> </span>--ssl-keyfile<span class="o">=</span>./key.pem<span class="w"> </span>--ssl-certfile<span class="o">=</span>./cert.pem
+</code></pre></div>
+
+<p><strong>详解：</strong></p>
+<ul>
+<li><strong>--ssl-keyfile 和 --ssl-certfile</strong>：指定 SSL 证书和密钥文件，实现 HTTPS 加密通信。</li>
+</ul>
+<h4 id="_46">限制请求速率</h4>
+<p><strong>示例：使用 <code>slowapi</code> 限制请求速率</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
+<span class="kn">from</span> <span class="nn">slowapi</span> <span class="kn">import</span> <span class="n">Limiter</span>
+<span class="kn">from</span> <span class="nn">slowapi.util</span> <span class="kn">import</span> <span class="n">get_remote_address</span>
+<span class="kn">from</span> <span class="nn">slowapi.errors</span> <span class="kn">import</span> <span class="n">RateLimitExceeded</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+<span class="n">limiter</span> <span class="o">=</span> <span class="n">Limiter</span><span class="p">(</span><span class="n">key_func</span><span class="o">=</span><span class="n">get_remote_address</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">limiter</span> <span class="o">=</span> <span class="n">limiter</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/limited/&quot;</span><span class="p">)</span>
+<span class="nd">@limiter</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="s2">&quot;5/minute&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">limited_route</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;This route is rate limited&quot;</span><span class="p">}</span>
+</code></pre></div>
+
+<p><strong>详解：</strong></p>
+<ul>
+<li><strong>Limiter</strong>：配置速率限制器，限制特定路由的请求速率。</li>
+<li><strong>get_remote_address</strong>：获取客户端 IP 地址作为速率限制的依据。</li>
+</ul>
+<hr />
+<h3 id="33-fastapi">33. FastAPI 的多语言支持</h3>
+<p>如果你的应用需要支持多语言，可以使用 FastAPI 与 <code>gettext</code> 结合，实现国际化（i18n）功能。</p>
+<h4 id="gettext">示例：使用 <code>gettext</code> 实现多语言支持</h4>
+<p><strong>安装依赖：</strong></p>
+<div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>gettext
+</code></pre></div>
+
+<p><strong>代码示例：</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
+<span class="kn">from</span> <span class="nn">gettext</span> <span class="kn">import</span> <span class="n">translation</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">get_translations</span><span class="p">(</span><span class="n">lang</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">translation</span><span class="p">(</span><span class="n">domain</span><span class="o">=</span><span class="s2">&quot;messages&quot;</span><span class="p">,</span> <span class="n">localedir</span><span class="o">=</span><span class="s2">&quot;locale&quot;</span><span class="p">,</span> <span class="n">languages</span><span class="o">=</span><span class="p">[</span><span class="n">lang</span><span class="p">])</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/greet/</span><span class="si">{lang}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">lang</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="n">translations</span> <span class="o">=</span> <span class="n">get_translations</span><span class="p">(</span><span class="n">lang</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="n">translations</span><span class="o">.</span><span class="n">gettext</span><span class="p">(</span><span class="s2">&quot;Hello, world!&quot;</span><span class="p">)}</span>
+</code></pre></div>
+
+<p><strong>详解：</strong></p>
+<ul>
+<li><strong>gettext</strong>：用于加载和管理翻译文件，支持多语言文本。</li>
+<li><strong>translations.gettext</strong>：根据当前语言返回翻译后的文本。</li>
+</ul>
+<hr />
+<h3 id="34-fastapi">34. FastAPI 的异步任务队列</h3>
+<p>对于长时间运行的任务或批量处理，可以使用异步任务队列，如 <code>Celery</code>。</p>
+<h4 id="celery">示例：使用 Celery 实现异步任务</h4>
+<p><strong>安装依赖：</strong></p>
+<div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>celery<span class="o">[</span>redis<span class="o">]</span><span class="w"> </span>fastapi
+</code></pre></div>
+
+<p><strong>代码示例：</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span><span class="p">,</span> <span class="n">BackgroundTasks</span>
+<span class="kn">from</span> <span class="nn">celery</span> <span class="kn">import</span> <span class="n">Celery</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+<span class="n">celery_app</span> <span class="o">=</span> <span class="n">Celery</span><span class="p">(</span><span class="s1">&#39;tasks&#39;</span><span class="p">,</span> <span class="n">broker</span><span class="o">=</span><span class="s1">&#39;redis://localhost:6379/0&#39;</span><span class="p">)</span>
+
+<span class="nd">@celery_app</span><span class="o">.</span><span class="n">task</span>
+<span class="k">def</span> <span class="nf">background_task</span><span class="p">(</span><span class="n">param</span><span class="p">):</span>
+    <span class="c1"># 处理任务</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Processed </span><span class="si">{</span><span class="n">param</span><span class="si">}</span><span class="s2">&quot;</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/tasks/&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">create_task</span><span class="p">(</span><span class="n">param</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">background_tasks</span><span class="p">:</span> <span class="n">BackgroundTasks</span><span class="p">):</span>
+    <span class="n">background_tasks</span><span class="o">.</span><span class="n">add_task</span><span class="p">(</span><span class="n">background_task</span><span class="p">,</span> <span class="n">param</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Task has been started&quot;</span><span class="p">}</span>
+</code></pre></div>
+
+<p><strong>详解：</strong></p>
+<ul>
+<li><strong>Celery</strong>：一个异步任务队列，支持任务调度和执行。</li>
+<li><strong>BackgroundTasks</strong>：FastAPI 提供的后台任务处理器，用于管理和调度后台任务。</li>
+</ul>
+<hr />
+<h3 id="35-fastapi-oauth2-openid-connect">35. FastAPI 的 OAuth2 和 OpenID Connect 支持</h3>
+<p>使用 OAuth2 和 OpenID Connect 实现更复杂的认证和授权机制。</p>
+<h4 id="oauth2">示例：OAuth2 认证</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span><span class="p">,</span> <span class="n">Depends</span>
+<span class="kn">from</span> <span class="nn">fastapi.security</span> <span class="kn">import</span> <span class="n">OAuth2AuthorizationCodeBearer</span>
+<span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="n">oauth2_scheme</span> <span class="o">=</span> <span class="n">OAuth2AuthorizationCodeBearer</span><span class="p">(</span><span class="n">authorizationUrl</span><span class="o">=</span><span class="s2">&quot;authorization_url&quot;</span><span class="p">,</span> <span class="n">tokenUrl</span><span class="o">=</span><span class="s2">&quot;token_url&quot;</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">username</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/users/me&quot;</span><span class="p">,</span> <span class="n">response_model</span><span class="o">=</span><span class="n">User</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">get_current_user</span><span class="p">(</span><span class="n">token</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Depends</span><span class="p">(</span><span class="n">oauth2_scheme</span><span class="p">)):</span>
+    <span class="c1"># 验证 token 并获取用户信息</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">}</span>
+</code></pre></div>
+
+<p><strong>详解：</strong></p>
+<ul>
+<li><strong>OAuth2AuthorizationCodeBearer</strong>：处理 OAuth2 授权码流的安全认证。</li>
+<li><strong>token 验证</strong>：使用依赖注入对 token 进行验证和解析。</li>
+</ul>
+<hr />
+<h3 id="36-fastapi-swagger-redoc">36. FastAPI 的 Swagger 和 ReDoc 自定义</h3>
+<p>FastAPI 自动生成的 API 文档（Swagger 和 ReDoc）可以进行自定义，以满足特定的需求。</p>
+<h4 id="swagger">示例：自定义 Swagger 文档</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;My API&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;This is a custom API&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;1.0.0&quot;</span><span class="p">,</span>
+    <span class="n">openapi_tags</span><span class="o">=</span><span class="p">[{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;items&quot;</span><span class="p">,</span> <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Operations with items&quot;</span><span class="p">}]</span>
+<span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/items/&quot;</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;items&quot;</span><span class="p">])</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">read_items</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;items&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;item1&quot;</span><span class="p">,</span> <span class="s2">&quot;item2&quot;</span><span class="p">]}</span>
+</code></pre></div>
+
+<p><strong>详解：</strong></p>
+<ul>
+<li><strong>title、description、version</strong>：自定义 API 文档的基本信息。</li>
+<li><strong>openapi_tags</strong>：定义 API 文档中的标签和描述信息。</li>
+</ul>
+<hr />
 
 
 
@@ -4059,7 +6254,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "toc.integrate", "search.highlight", "search.suggest", "header.autohide", "footer.copyright", "footer.text", "code.annotate", "content.code", "material.nav", "material.switch"], "search": "../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "toc.integrate", "search.highlight", "search.suggest", "header.autohide", "footer.copyright", "footer.text", "code.annotate", "content.code", "material.nav", "material.switch", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.56dfad97.min.js"></script>
