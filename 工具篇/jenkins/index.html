@@ -5201,11 +5201,13 @@
 <li><code>-p 50000:50000</code>：Jenkins 的 agent 通信端口。</li>
 </ul>
 <h4 id="13-jenkins">1.3 Jenkins 插件管理</h4>
-<p>Jenkins 插件扩展了 Jenkins 的功能。你可以通过 "Manage Jenkins" -&gt; "Manage Plugins" 来安装、更新或删除插件。常用插件包括：
-- <strong>Git 插件</strong>：支持 Git 版本控制的集成。
-- <strong>Maven 插件</strong>：用于 Maven 项目的构建。
-- <strong>Pipeline 插件</strong>：支持流水线脚本的编写。
-- <strong>Docker 插件</strong>：用于在 Docker 容器中执行构建任务。</p>
+<p>Jenkins 插件扩展了 Jenkins 的功能。你可以通过 "Manage Jenkins" -&gt; "Manage Plugins" 来安装、更新或删除插件。常用插件包括：</p>
+<ul>
+<li><strong>Git 插件</strong>：支持 Git 版本控制的集成。</li>
+<li><strong>Maven 插件</strong>：用于 Maven 项目的构建。</li>
+<li><strong>Pipeline 插件</strong>：支持流水线脚本的编写。</li>
+<li><strong>Docker 插件</strong>：用于在 Docker 容器中执行构建任务。</li>
+</ul>
 <h4 id="14-jenkins-job">1.4 创建第一个 Jenkins Job</h4>
 <ol>
 <li>点击 "New Item" 创建一个新任务。</li>
@@ -5217,42 +5219,43 @@
 </ol>
 <h3 id="jenkins-pipeline">二、Jenkins 流水线（Pipeline）</h3>
 <h4 id="21-jenkins-pipeline">2.1 什么是 Jenkins Pipeline</h4>
-<p>Jenkins Pipeline 是 Jenkins 中用于定义自动化过程的脚本化工作流。它以代码的形式定义持续集成和持续交付的所有步骤。Jenkins Pipeline 分为两种：
-- <strong>Declarative Pipeline（声明式流水线）</strong>：简单易读，更加结构化的 Pipeline 语法。
-- <strong>Scripted Pipeline（脚本式流水线）</strong>：基于 Groovy 语法，更加灵活，适合复杂的构建需求。</p>
+<p>Jenkins Pipeline 是 Jenkins 中用于定义自动化过程的脚本化工作流。它以代码的形式定义持续集成和持续交付的所有步骤。Jenkins Pipeline 分为两种：</p>
+<ul>
+<li><strong>Declarative Pipeline（声明式流水线）</strong>：简单易读，更加结构化的 Pipeline 语法。</li>
+<li><strong>Scripted Pipeline（脚本式流水线）</strong>：基于 Groovy 语法，更加灵活，适合复杂的构建需求。</li>
+</ul>
 <h4 id="22-declarative-pipeline">2.2 创建 Declarative Pipeline</h4>
 <p>Declarative Pipeline 是目前最推荐的方式，易于维护和管理。可以通过 Jenkinsfile 来定义流水线。</p>
 <ol>
-<li>
-<p>创建 <code>Jenkinsfile</code>：
-   <code>groovy
-   pipeline {
-       agent any
-       stages {
-           stage('Build') {
-               steps {
-                   echo 'Building...'
-                   sh 'mvn clean install'
-               }
-           }
-           stage('Test') {
-               steps {
-                   echo 'Testing...'
-                   sh 'mvn test'
-               }
-           }
-           stage('Deploy') {
-               steps {
-                   echo 'Deploying...'
-                   sh './deploy.sh'
-               }
-           }
-       }
-   }</code></p>
-</li>
-<li>
-<p>在 Jenkins 项目中配置 Pipeline：</p>
-</li>
+<li>创建 <code>Jenkinsfile</code>：</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="n">pipeline</span><span class="w"> </span><span class="o">{</span>
+<span class="w">       </span><span class="n">agent</span><span class="w"> </span><span class="n">any</span>
+<span class="w">       </span><span class="n">stages</span><span class="w"> </span><span class="o">{</span>
+<span class="w">           </span><span class="n">stage</span><span class="o">(</span><span class="s1">&#39;Build&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">               </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
+<span class="w">                   </span><span class="n">echo</span><span class="w"> </span><span class="s1">&#39;Building...&#39;</span>
+<span class="w">                   </span><span class="n">sh</span><span class="w"> </span><span class="s1">&#39;mvn clean install&#39;</span>
+<span class="w">               </span><span class="o">}</span>
+<span class="w">           </span><span class="o">}</span>
+<span class="w">           </span><span class="n">stage</span><span class="o">(</span><span class="s1">&#39;Test&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">               </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
+<span class="w">                   </span><span class="n">echo</span><span class="w"> </span><span class="s1">&#39;Testing...&#39;</span>
+<span class="w">                   </span><span class="n">sh</span><span class="w"> </span><span class="s1">&#39;mvn test&#39;</span>
+<span class="w">               </span><span class="o">}</span>
+<span class="w">           </span><span class="o">}</span>
+<span class="w">           </span><span class="n">stage</span><span class="o">(</span><span class="s1">&#39;Deploy&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">               </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
+<span class="w">                   </span><span class="n">echo</span><span class="w"> </span><span class="s1">&#39;Deploying...&#39;</span>
+<span class="w">                   </span><span class="n">sh</span><span class="w"> </span><span class="s1">&#39;./deploy.sh&#39;</span>
+<span class="w">               </span><span class="o">}</span>
+<span class="w">           </span><span class="o">}</span>
+<span class="w">       </span><span class="o">}</span>
+<span class="w">   </span><span class="o">}</span>
+</code></pre></div>
+
+<ol>
+<li>在 Jenkins 项目中配置 Pipeline：</li>
 <li>选择 "Pipeline" 项目类型。</li>
 <li>在 "Pipeline" 选项中，选择 "Pipeline script from SCM"，并配置 Git 仓库中的 Jenkinsfile。</li>
 </ol>
@@ -5276,9 +5279,11 @@
 
 <h3 id="jenkins_2">三、高级 Jenkins 配置</h3>
 <h4 id="31-jenkins-docker">3.1 使用 Jenkins 与 Docker 集成</h4>
-<p>Jenkins 可以通过 Docker 插件在容器中运行构建任务，以实现环境隔离。
-1. 安装 Docker 插件。
-2. 在 "Build Environment" 中，选择 "Use Docker Container"，并配置 Docker 镜像（如 <code>maven:3.6-jdk-8</code>）。</p>
+<p>Jenkins 可以通过 Docker 插件在容器中运行构建任务，以实现环境隔离。</p>
+<ol>
+<li>安装 Docker 插件。</li>
+<li>在 "Build Environment" 中，选择 "Use Docker Container"，并配置 Docker 镜像（如 <code>maven:3.6-jdk-8</code>）。</li>
+</ol>
 <h4 id="32-jenkins">3.2 Jenkins 分布式构建</h4>
 <p>Jenkins 可以通过 Master 和 Agent 架构实现分布式构建。通过配置多个 Agent，Jenkins 可以在不同的机器上并行执行构建任务。</p>
 <ol>
@@ -5291,21 +5296,22 @@
 <li>
 <p>在项目中选择运行节点：</p>
 </li>
-<li>在 Jenkinsfile 中使用 <code>agent</code> 语句指定运行的节点：
-     <code>groovy
-     pipeline {
-         agent {
-             label 'linux'
-         }
-         stages {
-             stage('Build') {
-                 steps {
-                     sh 'make build'
-                 }
-             }
-         }
-     }</code></li>
+<li>在 Jenkinsfile 中使用 <code>agent</code> 语句指定运行的节点：</li>
 </ol>
+<div class="codehilite"><pre><span></span><code><span class="w">     </span><span class="n">pipeline</span><span class="w"> </span><span class="o">{</span>
+<span class="w">         </span><span class="n">agent</span><span class="w"> </span><span class="o">{</span>
+<span class="w">             </span><span class="n">label</span><span class="w"> </span><span class="s1">&#39;linux&#39;</span>
+<span class="w">         </span><span class="o">}</span>
+<span class="w">         </span><span class="n">stages</span><span class="w"> </span><span class="o">{</span>
+<span class="w">             </span><span class="n">stage</span><span class="o">(</span><span class="s1">&#39;Build&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">                 </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
+<span class="w">                     </span><span class="n">sh</span><span class="w"> </span><span class="s1">&#39;make build&#39;</span>
+<span class="w">                 </span><span class="o">}</span>
+<span class="w">             </span><span class="o">}</span>
+<span class="w">         </span><span class="o">}</span>
+<span class="w">     </span><span class="o">}</span>
+</code></pre></div>
+
 <h4 id="33-jenkins">3.3 Jenkins 的安全性与备份</h4>
 <ol>
 <li><strong>安全性</strong>：启用身份验证和授权机制，确保只有授权用户能够访问 Jenkins 资源。可以使用 LDAP、OAuth 等方式进行身份验证。</li>
@@ -5319,19 +5325,20 @@
 <h4 id="42">4.2 自动化部署</h4>
 <ul>
 <li>Jenkins 可以与 Ansible、Kubernetes、AWS 等工具集成，实现自动化的部署流程。</li>
-<li>例如，使用 Jenkins 部署到 Kubernetes 集群：
-  <code>groovy
-  pipeline {
-      agent any
-      stages {
-          stage('Deploy to Kubernetes') {
-              steps {
-                  sh 'kubectl apply -f deployment.yaml'
-              }
-          }
-      }
-  }</code></li>
+<li>例如，使用 Jenkins 部署到 Kubernetes 集群：</li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="w">  </span><span class="n">pipeline</span><span class="w"> </span><span class="o">{</span>
+<span class="w">      </span><span class="n">agent</span><span class="w"> </span><span class="n">any</span>
+<span class="w">      </span><span class="n">stages</span><span class="w"> </span><span class="o">{</span>
+<span class="w">          </span><span class="n">stage</span><span class="o">(</span><span class="s1">&#39;Deploy to Kubernetes&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">              </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
+<span class="w">                  </span><span class="n">sh</span><span class="w"> </span><span class="s1">&#39;kubectl apply -f deployment.yaml&#39;</span>
+<span class="w">              </span><span class="o">}</span>
+<span class="w">          </span><span class="o">}</span>
+<span class="w">      </span><span class="o">}</span>
+<span class="w">  </span><span class="o">}</span>
+</code></pre></div>
+
 <h4 id="43">4.3 蓝绿部署与滚动更新</h4>
 <ul>
 <li>通过集成 Jenkins 与 Kubernetes 或 Docker Swarm，你可以实现蓝绿部署或滚动更新，从而确保应用更新的过程中零停机。</li>
@@ -5339,23 +5346,24 @@
 <h3 id="jenkins_4">五、Jenkins 性能优化</h3>
 <h4 id="51">5.1 并行构建与分阶段构建</h4>
 <ul>
-<li>Jenkins Pipeline 支持并行构建，你可以通过 <code>parallel</code> 语法并行执行多个任务，加快构建速度：
-  <code>groovy
-  stage('Parallel Build') {
-      parallel {
-          stage('Unit Tests') {
-              steps {
-                  sh 'mvn test'
-              }
-          }
-          stage('Integration Tests') {
-              steps {
-                  sh 'mvn verify'
-              }
-          }
-      }
-  }</code></li>
+<li>Jenkins Pipeline 支持并行构建，你可以通过 <code>parallel</code> 语法并行执行多个任务，加快构建速度：</li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="w">  </span><span class="n">stage</span><span class="o">(</span><span class="s1">&#39;Parallel Build&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">      </span><span class="n">parallel</span><span class="w"> </span><span class="o">{</span>
+<span class="w">          </span><span class="n">stage</span><span class="o">(</span><span class="s1">&#39;Unit Tests&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">              </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
+<span class="w">                  </span><span class="n">sh</span><span class="w"> </span><span class="s1">&#39;mvn test&#39;</span>
+<span class="w">              </span><span class="o">}</span>
+<span class="w">          </span><span class="o">}</span>
+<span class="w">          </span><span class="n">stage</span><span class="o">(</span><span class="s1">&#39;Integration Tests&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">              </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
+<span class="w">                  </span><span class="n">sh</span><span class="w"> </span><span class="s1">&#39;mvn verify&#39;</span>
+<span class="w">              </span><span class="o">}</span>
+<span class="w">          </span><span class="o">}</span>
+<span class="w">      </span><span class="o">}</span>
+<span class="w">  </span><span class="o">}</span>
+</code></pre></div>
+
 <h4 id="52">5.2 资源管理与性能调优</h4>
 <ul>
 <li>优化 Jenkins Master 和 Agent 的资源配置，使用合适的 JVM 参数来提高性能。</li>
@@ -5436,23 +5444,24 @@
 <p>配置代码库的 URL，并指定默认分支。</p>
 </li>
 <li>
-<p><strong>在 Jenkinsfile 中使用共享库</strong>：
-   <code>groovy
-   @Library('my-shared-library') _
-   pipeline {
-       agent any
-       stages {
-           stage('Use Shared Library') {
-               steps {
-                   script {
-                       mySharedLibraryMethod()
-                   }
-               }
-           }
-       }
-   }</code></p>
+<p><strong>在 Jenkinsfile 中使用共享库</strong>：</p>
 </li>
 </ol>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="nd">@Library</span><span class="o">(</span><span class="s1">&#39;my-shared-library&#39;</span><span class="o">)</span><span class="w"> </span><span class="n">_</span>
+<span class="w">   </span><span class="n">pipeline</span><span class="w"> </span><span class="o">{</span>
+<span class="w">       </span><span class="n">agent</span><span class="w"> </span><span class="n">any</span>
+<span class="w">       </span><span class="n">stages</span><span class="w"> </span><span class="o">{</span>
+<span class="w">           </span><span class="n">stage</span><span class="o">(</span><span class="s1">&#39;Use Shared Library&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">               </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
+<span class="w">                   </span><span class="n">script</span><span class="w"> </span><span class="o">{</span>
+<span class="w">                       </span><span class="n">mySharedLibraryMethod</span><span class="o">()</span>
+<span class="w">                   </span><span class="o">}</span>
+<span class="w">               </span><span class="o">}</span>
+<span class="w">           </span><span class="o">}</span>
+<span class="w">       </span><span class="o">}</span>
+<span class="w">   </span><span class="o">}</span>
+</code></pre></div>
+
 <h3 id="jenkins_5">八、Jenkins 与其他工具的集成</h3>
 <h4 id="81-jenkins-github">8.1 Jenkins 与 GitHub 集成</h4>
 <p>Jenkins 与 GitHub 的无缝集成可以实现通过 Webhook 触发构建、自动拉取代码、发布构建状态等功能。</p>
@@ -5500,42 +5509,42 @@
 <h4 id="83-jenkins-docker">8.3 Jenkins 与 Docker 集成</h4>
 <p>Jenkins 通过 Docker 可以实现环境的隔离和一致性，构建环境可以在 Docker 容器中运行，确保开发、测试和生产环境的一致。</p>
 <ol>
-<li>
-<p><strong>使用 Docker 容器作为构建环境</strong>：
-   <code>groovy
-   pipeline {
-       agent {
-           docker {
-               image 'maven:3.6.3-jdk-8'
-               label 'docker'
-           }
-       }
-       stages {
-           stage('Build') {
-               steps {
-                   sh 'mvn clean install'
-               }
-           }
-       }
-   }</code></p>
-</li>
-<li>
-<p><strong>使用 Docker 构建和发布镜像</strong>：</p>
-</li>
-<li>你可以在 Jenkins 中通过 Shell 步骤来构建 Docker 镜像并推送到 Docker Hub 或私有仓库。
-   <code>groovy
-   pipeline {
-       agent any
-       stages {
-           stage('Build Docker Image') {
-               steps {
-                   sh 'docker build -t my-app:latest .'
-                   sh 'docker push my-app:latest'
-               }
-           }
-       }
-   }</code></li>
+<li><strong>使用 Docker 容器作为构建环境</strong>：</li>
 </ol>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="n">pipeline</span><span class="w"> </span><span class="o">{</span>
+<span class="w">       </span><span class="n">agent</span><span class="w"> </span><span class="o">{</span>
+<span class="w">           </span><span class="n">docker</span><span class="w"> </span><span class="o">{</span>
+<span class="w">               </span><span class="n">image</span><span class="w"> </span><span class="s1">&#39;maven:3.6.3-jdk-8&#39;</span>
+<span class="w">               </span><span class="n">label</span><span class="w"> </span><span class="s1">&#39;docker&#39;</span>
+<span class="w">           </span><span class="o">}</span>
+<span class="w">       </span><span class="o">}</span>
+<span class="w">       </span><span class="n">stages</span><span class="w"> </span><span class="o">{</span>
+<span class="w">           </span><span class="n">stage</span><span class="o">(</span><span class="s1">&#39;Build&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">               </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
+<span class="w">                   </span><span class="n">sh</span><span class="w"> </span><span class="s1">&#39;mvn clean install&#39;</span>
+<span class="w">               </span><span class="o">}</span>
+<span class="w">           </span><span class="o">}</span>
+<span class="w">       </span><span class="o">}</span>
+<span class="w">   </span><span class="o">}</span>
+</code></pre></div>
+
+<ol>
+<li><strong>使用 Docker 构建和发布镜像</strong>：</li>
+<li>你可以在 Jenkins 中通过 Shell 步骤来构建 Docker 镜像并推送到 Docker Hub 或私有仓库。</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="n">pipeline</span><span class="w"> </span><span class="o">{</span>
+<span class="w">       </span><span class="n">agent</span><span class="w"> </span><span class="n">any</span>
+<span class="w">       </span><span class="n">stages</span><span class="w"> </span><span class="o">{</span>
+<span class="w">           </span><span class="n">stage</span><span class="o">(</span><span class="s1">&#39;Build Docker Image&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">               </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
+<span class="w">                   </span><span class="n">sh</span><span class="w"> </span><span class="s1">&#39;docker build -t my-app:latest .&#39;</span>
+<span class="w">                   </span><span class="n">sh</span><span class="w"> </span><span class="s1">&#39;docker push my-app:latest&#39;</span>
+<span class="w">               </span><span class="o">}</span>
+<span class="w">           </span><span class="o">}</span>
+<span class="w">       </span><span class="o">}</span>
+<span class="w">   </span><span class="o">}</span>
+</code></pre></div>
+
 <h4 id="84-jenkins-kubernetes">8.4 Jenkins 与 Kubernetes 集成</h4>
 <p>在 Jenkins 中，你可以通过 Kubernetes 插件将 Jenkins 构建任务分发到 Kubernetes 集群中执行。可以动态启动 Jenkins agent 作为 Kubernetes Pod，从而大幅提升可扩展性。</p>
 <ol>
@@ -5550,36 +5559,37 @@
 <p>在 "Manage Jenkins" -&gt; "Configure System" 中，配置 Kubernetes 集群的连接信息，包括 Kubernetes API 地址、认证方式等。</p>
 </li>
 <li>
-<p><strong>在 Jenkinsfile 中使用 Kubernetes agent</strong>：
-   <code>groovy
-   pipeline {
-       agent {
-           kubernetes {
-               yaml '''
-               apiVersion: v1
-               kind: Pod
-               spec:
-                 containers:
-                 - name: maven
-                   image: maven:3.6.3-jdk-8
-                   command:
-                   - cat
-                   tty: true
-               '''
-           }
-       }
-       stages {
-           stage('Build') {
-               steps {
-                   container('maven') {
-                       sh 'mvn clean install'
-                   }
-               }
-           }
-       }
-   }</code></p>
+<p><strong>在 Jenkinsfile 中使用 Kubernetes agent</strong>：</p>
 </li>
 </ol>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="n">pipeline</span><span class="w"> </span><span class="o">{</span>
+<span class="w">       </span><span class="n">agent</span><span class="w"> </span><span class="o">{</span>
+<span class="w">           </span><span class="n">kubernetes</span><span class="w"> </span><span class="o">{</span>
+<span class="w">               </span><span class="n">yaml</span><span class="w"> </span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">               apiVersion: v1</span>
+<span class="s1">               kind: Pod</span>
+<span class="s1">               spec:</span>
+<span class="s1">                 containers:</span>
+<span class="s1">                 - name: maven</span>
+<span class="s1">                   image: maven:3.6.3-jdk-8</span>
+<span class="s1">                   command:</span>
+<span class="s1">                   - cat</span>
+<span class="s1">                   tty: true</span>
+<span class="s1">               &#39;&#39;&#39;</span>
+<span class="w">           </span><span class="o">}</span>
+<span class="w">       </span><span class="o">}</span>
+<span class="w">       </span><span class="n">stages</span><span class="w"> </span><span class="o">{</span>
+<span class="w">           </span><span class="n">stage</span><span class="o">(</span><span class="s1">&#39;Build&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">               </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
+<span class="w">                   </span><span class="n">container</span><span class="o">(</span><span class="s1">&#39;maven&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">                       </span><span class="n">sh</span><span class="w"> </span><span class="s1">&#39;mvn clean install&#39;</span>
+<span class="w">                   </span><span class="o">}</span>
+<span class="w">               </span><span class="o">}</span>
+<span class="w">           </span><span class="o">}</span>
+<span class="w">       </span><span class="o">}</span>
+<span class="w">   </span><span class="o">}</span>
+</code></pre></div>
+
 <h3 id="jenkins_6">九、Jenkins 监控与警报</h3>
 <h4 id="91-jenkins">9.1 Jenkins 系统监控</h4>
 <ol>
@@ -5628,11 +5638,12 @@
 </li>
 <li>
 <p><strong>生成插件项目</strong>：
-   使用 Maven 生成插件项目：
-   <code>bash
-   mvn archetype:generate -Dfilter=io.jenkins.archetypes:</code></p>
+   使用 Maven 生成插件项目：</p>
 </li>
 </ol>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span>mvn<span class="w"> </span>archetype:generate<span class="w"> </span>-Dfilter<span class="o">=</span>io.jenkins.archetypes:
+</code></pre></div>
+
 <p>然后选择合适的插件模板，如 <code>io.jenkins.archetypes:hello-world-plugin</code>，并根据提示填写项目的基本信息（如 groupId、artifactId 等）。</p>
 <ol>
 <li><strong>插件结构</strong>：
@@ -5647,16 +5658,17 @@
    插件的核心逻辑通常通过扩展 Jenkins 的扩展点（Extension Points）来实现。例如，构建步骤可以通过实现 <code>Builder</code> 类，并用 <code>@Extension</code> 注解进行注册。</p>
 </li>
 </ol>
-<p>一个简单的插件示例：
-   <code>java
-   @Extension
-   public class HelloWorldBuilder extends Builder {
-       @Override
-       public boolean perform(AbstractBuild&lt;?, ?&gt; build, Launcher launcher, BuildListener listener) {
-           listener.getLogger().println("Hello, Jenkins Plugin!");
-           return true;
-       }
-   }</code></p>
+<p>一个简单的插件示例：</p>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="nd">@Extension</span>
+<span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HelloWorldBuilder</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Builder</span><span class="w"> </span><span class="p">{</span>
+<span class="w">       </span><span class="nd">@Override</span>
+<span class="w">       </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">perform</span><span class="p">(</span><span class="n">AbstractBuild</span><span class="o">&lt;?</span><span class="p">,</span><span class="w"> </span><span class="o">?&gt;</span><span class="w"> </span><span class="n">build</span><span class="p">,</span><span class="w"> </span><span class="n">Launcher</span><span class="w"> </span><span class="n">launcher</span><span class="p">,</span><span class="w"> </span><span class="n">BuildListener</span><span class="w"> </span><span class="n">listener</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">           </span><span class="n">listener</span><span class="p">.</span><span class="na">getLogger</span><span class="p">().</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hello, Jenkins Plugin!&quot;</span><span class="p">);</span>
+<span class="w">           </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">       </span><span class="p">}</span>
+<span class="w">   </span><span class="p">}</span>
+</code></pre></div>
+
 <ol>
 <li><strong>插件的用户界面（UI）</strong>：
    Jenkins 插件的 UI 通常通过 <code>Jelly</code> 或 <code>Stapler</code> 来实现。Jelly 是 Jenkins 的模板引擎，类似于 JSP。通过配置 <code>config.jelly</code> 文件，可以为插件提供自定义的配置界面。</li>
@@ -5669,10 +5681,13 @@
 </li>
 <li>
 <p><strong>本地运行 Jenkins</strong>：
-   可以使用 Maven 启动一个本地的 Jenkins 实例来加载和测试插件：
-   <code>bash
-   mvn hpi:run</code></p>
+   可以使用 Maven 启动一个本地的 Jenkins 实例来加载和测试插件：</p>
 </li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span>mvn<span class="w"> </span>hpi:run
+</code></pre></div>
+
+<ol>
 <li>
 <p><strong>插件调试</strong>：
    可以通过在 IDE 中配置远程调试，并在 <code>mvn hpi:run</code> 时附加到调试端口。这样，你可以在插件代码中设置断点进行调试。</p>
@@ -5771,13 +5786,16 @@
 <li>
 <p><strong>解决方案</strong>：</p>
 </li>
-<li><strong>设置超时</strong>：在 Jenkinsfile 中为长时间运行的步骤设置超时：
-     <code>groovy
-     timeout(time: 10, unit: 'MINUTES') {
-         sh 'long-running-task.sh'
-     }</code></li>
-<li><strong>分析构建日志</strong>：通过查看 Jenkins 构建日志，排查卡住的具体步骤并进行优化。</li>
+<li><strong>设置超时</strong>：在 Jenkinsfile 中为长时间运行的步骤设置超时：</li>
 </ol>
+<div class="codehilite"><pre><span></span><code><span class="w">     </span><span class="n">timeout</span><span class="o">(</span><span class="nl">time:</span><span class="w"> </span><span class="mi">10</span><span class="o">,</span><span class="w"> </span><span class="nl">unit:</span><span class="w"> </span><span class="s1">&#39;MINUTES&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">         </span><span class="n">sh</span><span class="w"> </span><span class="s1">&#39;long-running-task.sh&#39;</span>
+<span class="w">     </span><span class="o">}</span>
+</code></pre></div>
+
+<ul>
+<li><strong>分析构建日志</strong>：通过查看 Jenkins 构建日志，排查卡住的具体步骤并进行优化。</li>
+</ul>
 <h4 id="133-jenkins">13.3 Jenkins 内存泄漏或崩溃</h4>
 <ol>
 <li><strong>原因分析</strong>：</li>
@@ -5788,11 +5806,14 @@
 <li>
 <p><strong>解决方案</strong>：</p>
 </li>
-<li><strong>调整 JVM 参数</strong>：增加 Jenkins 启动时的 JVM 堆内存大小：
-     <code>bash
-     java -Xmx4096m -jar jenkins.war</code></li>
-<li><strong>定期清理旧数据</strong>：通过 <code>Build Discarder</code> 插件定期清理旧的构建记录和工作空间。</li>
+<li><strong>调整 JVM 参数</strong>：增加 Jenkins 启动时的 JVM 堆内存大小：</li>
 </ol>
+<div class="codehilite"><pre><span></span><code><span class="w">     </span>java<span class="w"> </span>-Xmx4096m<span class="w"> </span>-jar<span class="w"> </span>jenkins.war
+</code></pre></div>
+
+<ul>
+<li><strong>定期清理旧数据</strong>：通过 <code>Build Discarder</code> 插件定期清理旧的构建记录和工作空间。</li>
+</ul>
 <h4 id="134-jenkins">13.4 Jenkins 构建失败频繁</h4>
 <ol>
 <li><strong>原因分析</strong>：</li>
@@ -5803,13 +5824,16 @@
 <li>
 <p><strong>解决方案</strong>：</p>
 </li>
-<li><strong>重试机制</strong>：为容易失败的步骤添加重试逻辑：
-     <code>groovy
-     retry(3) {
-         sh 'unstable-command.sh'
-     }</code></li>
-<li><strong>排查外部依赖</strong>：通过日志分析找到频繁失败的依赖项，优化或替换相关服务。</li>
+<li><strong>重试机制</strong>：为容易失败的步骤添加重试逻辑：</li>
 </ol>
+<div class="codehilite"><pre><span></span><code><span class="w">     </span><span class="n">retry</span><span class="o">(</span><span class="mi">3</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">         </span><span class="n">sh</span><span class="w"> </span><span class="s1">&#39;unstable-command.sh&#39;</span>
+<span class="w">     </span><span class="o">}</span>
+</code></pre></div>
+
+<ul>
+<li><strong>排查外部依赖</strong>：通过日志分析找到频繁失败的依赖项，优化或替换相关服务。</li>
+</ul>
 <hr />
 <p>接下来我们将更深入地探讨 Jenkins 的一些进阶内容，包括 Jenkins 的自定义开发、插件开发、在复杂项目中的应用场景以及一些常见问题的解决方案。这些内容将有助于你充分发挥 Jenkins 的潜力。</p>
 <h3 id="jenkins_11">十一、Jenkins 插件开发</h3>
@@ -5824,11 +5848,12 @@
 </li>
 <li>
 <p><strong>生成插件项目</strong>：
-   使用 Maven 生成插件项目：
-   <code>bash
-   mvn archetype:generate -Dfilter=io.jenkins.archetypes:</code></p>
+   使用 Maven 生成插件项目：</p>
 </li>
 </ol>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span>mvn<span class="w"> </span>archetype:generate<span class="w"> </span>-Dfilter<span class="o">=</span>io.jenkins.archetypes:
+</code></pre></div>
+
 <p>然后选择合适的插件模板，如 <code>io.jenkins.archetypes:hello-world-plugin</code>，并根据提示填写项目的基本信息（如 groupId、artifactId 等）。</p>
 <ol>
 <li><strong>插件结构</strong>：
@@ -5843,16 +5868,17 @@
    插件的核心逻辑通常通过扩展 Jenkins 的扩展点（Extension Points）来实现。例如，构建步骤可以通过实现 <code>Builder</code> 类，并用 <code>@Extension</code> 注解进行注册。</p>
 </li>
 </ol>
-<p>一个简单的插件示例：
-   <code>java
-   @Extension
-   public class HelloWorldBuilder extends Builder {
-       @Override
-       public boolean perform(AbstractBuild&lt;?, ?&gt; build, Launcher launcher, BuildListener listener) {
-           listener.getLogger().println("Hello, Jenkins Plugin!");
-           return true;
-       }
-   }</code></p>
+<p>一个简单的插件示例：</p>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="nd">@Extension</span>
+<span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HelloWorldBuilder</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Builder</span><span class="w"> </span><span class="p">{</span>
+<span class="w">       </span><span class="nd">@Override</span>
+<span class="w">       </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">perform</span><span class="p">(</span><span class="n">AbstractBuild</span><span class="o">&lt;?</span><span class="p">,</span><span class="w"> </span><span class="o">?&gt;</span><span class="w"> </span><span class="n">build</span><span class="p">,</span><span class="w"> </span><span class="n">Launcher</span><span class="w"> </span><span class="n">launcher</span><span class="p">,</span><span class="w"> </span><span class="n">BuildListener</span><span class="w"> </span><span class="n">listener</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">           </span><span class="n">listener</span><span class="p">.</span><span class="na">getLogger</span><span class="p">().</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hello, Jenkins Plugin!&quot;</span><span class="p">);</span>
+<span class="w">           </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">       </span><span class="p">}</span>
+<span class="w">   </span><span class="p">}</span>
+</code></pre></div>
+
 <ol>
 <li><strong>插件的用户界面（UI）</strong>：
    Jenkins 插件的 UI 通常通过 <code>Jelly</code> 或 <code>Stapler</code> 来实现。Jelly 是 Jenkins 的模板引擎，类似于 JSP。通过配置 <code>config.jelly</code> 文件，可以为插件提供自定义的配置界面。</li>
@@ -5865,10 +5891,13 @@
 </li>
 <li>
 <p><strong>本地运行 Jenkins</strong>：
-   可以使用 Maven 启动一个本地的 Jenkins 实例来加载和测试插件：
-   <code>bash
-   mvn hpi:run</code></p>
+   可以使用 Maven 启动一个本地的 Jenkins 实例来加载和测试插件：</p>
 </li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span>mvn<span class="w"> </span>hpi:run
+</code></pre></div>
+
+<ol>
 <li>
 <p><strong>插件调试</strong>：
    可以通过在 IDE 中配置远程调试，并在 <code>mvn hpi:run</code> 时附加到调试端口。这样，你可以在插件代码中设置断点进行调试。</p>
@@ -5967,13 +5996,16 @@
 <li>
 <p><strong>解决方案</strong>：</p>
 </li>
-<li><strong>设置超时</strong>：在 Jenkinsfile 中为长时间运行的步骤设置超时：
-     <code>groovy
-     timeout(time: 10, unit: 'MINUTES') {
-         sh 'long-running-task.sh'
-     }</code></li>
-<li><strong>分析构建日志</strong>：通过查看 Jenkins 构建日志，排查卡住的具体步骤并进行优化。</li>
+<li><strong>设置超时</strong>：在 Jenkinsfile 中为长时间运行的步骤设置超时：</li>
 </ol>
+<div class="codehilite"><pre><span></span><code><span class="w">     </span><span class="n">timeout</span><span class="o">(</span><span class="nl">time:</span><span class="w"> </span><span class="mi">10</span><span class="o">,</span><span class="w"> </span><span class="nl">unit:</span><span class="w"> </span><span class="s1">&#39;MINUTES&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">         </span><span class="n">sh</span><span class="w"> </span><span class="s1">&#39;long-running-task.sh&#39;</span>
+<span class="w">     </span><span class="o">}</span>
+</code></pre></div>
+
+<ul>
+<li><strong>分析构建日志</strong>：通过查看 Jenkins 构建日志，排查卡住的具体步骤并进行优化。</li>
+</ul>
 <h4 id="133-jenkins_1">13.3 Jenkins 内存泄漏或崩溃</h4>
 <ol>
 <li><strong>原因分析</strong>：</li>
@@ -5984,11 +6016,14 @@
 <li>
 <p><strong>解决方案</strong>：</p>
 </li>
-<li><strong>调整 JVM 参数</strong>：增加 Jenkins 启动时的 JVM 堆内存大小：
-     <code>bash
-     java -Xmx4096m -jar jenkins.war</code></li>
-<li><strong>定期清理旧数据</strong>：通过 <code>Build Discarder</code> 插件定期清理旧的构建记录和工作空间。</li>
+<li><strong>调整 JVM 参数</strong>：增加 Jenkins 启动时的 JVM 堆内存大小：</li>
 </ol>
+<div class="codehilite"><pre><span></span><code><span class="w">     </span>java<span class="w"> </span>-Xmx4096m<span class="w"> </span>-jar<span class="w"> </span>jenkins.war
+</code></pre></div>
+
+<ul>
+<li><strong>定期清理旧数据</strong>：通过 <code>Build Discarder</code> 插件定期清理旧的构建记录和工作空间。</li>
+</ul>
 <h4 id="134-jenkins_1">13.4 Jenkins 构建失败频繁</h4>
 <ol>
 <li><strong>原因分析</strong>：</li>
@@ -5999,13 +6034,16 @@
 <li>
 <p><strong>解决方案</strong>：</p>
 </li>
-<li><strong>重试机制</strong>：为容易失败的步骤添加重试逻辑：
-     <code>groovy
-     retry(3) {
-         sh 'unstable-command.sh'
-     }</code></li>
-<li><strong>排查外部依赖</strong>：通过日志分析找到频繁失败的依赖项，优化或替换相关服务。</li>
+<li><strong>重试机制</strong>：为容易失败的步骤添加重试逻辑：</li>
 </ol>
+<div class="codehilite"><pre><span></span><code><span class="w">     </span><span class="n">retry</span><span class="o">(</span><span class="mi">3</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">         </span><span class="n">sh</span><span class="w"> </span><span class="s1">&#39;unstable-command.sh&#39;</span>
+<span class="w">     </span><span class="o">}</span>
+</code></pre></div>
+
+<ul>
+<li><strong>排查外部依赖</strong>：通过日志分析找到频繁失败的依赖项，优化或替换相关服务。</li>
+</ul>
 <hr />
 <p>接下来我们继续深入 Jenkins 的一些更为高级的应用场景和技术，包括在企业级项目中的最佳实践、Jenkins 的安全性设计、插件开发的高级技巧，以及结合 Jenkins 与 DevOps 的自动化流程优化。</p>
 <h3 id="jenkins_14">十四、企业级 Jenkins 实施最佳实践</h3>
@@ -6102,20 +6140,22 @@
 <li>
 <p><strong>日志记录</strong>：</p>
 </li>
-<li>Jenkins 使用 SLF4J 作为其日志框架，在插件中可以使用 SLF4J 来记录调试信息和错误。
-   ```java
-   private static final Logger LOGGER = LoggerFactory.getLogger(MyPlugin.class);</li>
+<li>Jenkins 使用 SLF4J 作为其日志框架，在插件中可以使用 SLF4J 来记录调试信息和错误。</li>
 </ol>
-<p>public void perform() {
-       LOGGER.info("Starting plugin execution");
-   }
-   ```</p>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">Logger</span><span class="w"> </span><span class="n">LOGGER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LoggerFactory</span><span class="p">.</span><span class="na">getLogger</span><span class="p">(</span><span class="n">MyPlugin</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+
+<span class="w">   </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">perform</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">       </span><span class="n">LOGGER</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">&quot;Starting plugin execution&quot;</span><span class="p">);</span>
+<span class="w">   </span><span class="p">}</span>
+</code></pre></div>
+
 <ol>
 <li><strong>用户界面日志</strong>：</li>
-<li>通过 <code>BuildListener</code> 或 <code>TaskListener</code> 向用户界面输出日志信息，方便用户查看插件的执行状态和结果。
-   <code>java
-   listener.getLogger().println("Executing build step...");</code></li>
+<li>通过 <code>BuildListener</code> 或 <code>TaskListener</code> 向用户界面输出日志信息，方便用户查看插件的执行状态和结果。</li>
 </ol>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="n">listener</span><span class="p">.</span><span class="na">getLogger</span><span class="p">().</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Executing build step...&quot;</span><span class="p">);</span>
+</code></pre></div>
+
 <h4 id="153">15.3 插件国际化</h4>
 <ol>
 <li><strong>多语言支持</strong>：</li>
@@ -6125,12 +6165,11 @@
 <li>
 <p><strong>Jelly 文件的国际化</strong>：</p>
 </li>
-<li>在 <code>Jelly</code> 文件中，通过 <code>$Messages</code> 调用国际化字符串：
-   ```xml
- <br />
-<h1>${Messages.MyPlugin_Title()}</h1></li>
+<li>在 <code>Jelly</code> 文件中，通过 <code>$Messages</code> 调用国际化字符串：</li>
 </ol>
-<p>```</p>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="nt">&lt;h1&gt;</span>${Messages.MyPlugin_Title()}<span class="nt">&lt;/h1&gt;</span>
+</code></pre></div>
+
 <h3 id="jenkins-devops">十六、Jenkins 与 DevOps 流程的整合优化</h3>
 <h4 id="161-devops-jenkins">16.1 DevOps 中 Jenkins 的角色</h4>
 <p>Jenkins 是 DevOps 自动化流程中的核心工具之一，主要负责代码构建、测试、部署等环节的自动化执行。然而，要实现完整的 DevOps 流程，Jenkins 通常需要与其他工具结合使用。</p>
