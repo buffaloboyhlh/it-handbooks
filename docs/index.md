@@ -49,6 +49,7 @@
 
 + [**Docker**](云原生/docker/basic.md)
 + [**Kubernetes**](云原生/kubernetes/basic.md)
++ [**Prometheus**](云原生/Prometheus/basic.md)
 
 ## 人工智能
 
@@ -65,5 +66,7 @@
 
 + [**Git**](工具篇/git.md)
 + [**Jenkins**](工具篇/jenkins.md)
++ [**故障排查工具**](工具篇/SRE.md)
++ [**混沌工程**](工具篇/chaos.md)
 
 
