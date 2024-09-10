@@ -218,3 +218,7 @@ SonarQube 是一个强大的代码质量管理工具，适用于个人开发者�
 2. 配置 SonarQube Scanner 或使用 SonarLint 进行代码分析。
 3. 在 SonarQube 中查看分析报告，持续监控和优化代码质量。
 4. 将 SonarQube 集成到 Jenkins、GitLab 等 CI/CD 流水线中，实现持续自动化的代码质量检查。
+
+## 补充教程
+
+[**补充教程**](http://www.zjwoo.com/Linux/sonarqube.html#_1-%E7%8E%AF%E5%A2%83)
