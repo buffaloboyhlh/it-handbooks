@@ -33,6 +33,7 @@
 + [**Redis**](数据库/Redis/basic.md)
 + [**MongoDB**](数据库/MongoDB/basic.md)
 + [**Elastic**](数据库/Elastic/basic.md)
++ [**PostgreSQL**](数据库/PostgreSQL/basic.md)
 
 ## 中间件
 
@@ -61,6 +62,11 @@
 ## 系统设计
 
 + [**缓存**]()
++ [**限流**](系统设计/ratelimit.md)
++ [**一致性哈希**](系统设计/hash.md)
++ [**布隆过滤器**](系统设计/bloom.md)
++ [**唯一ID**](系统设计/id.md)
++ [**面试题**](系统设计/interview.md)
 
 ## 工具篇
 
