@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="zh" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="../advance/">
+        <link rel="prev" href="../../MongoDB/questions/">
       
       
-        <link rel="next" href="../interview/">
+        <link rel="next" href="../command/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>MySQL 基础教程 - IT-手册</title>
+        <title>MySQL 教程 - IT-手册</title>
       
     
     
@@ -64,10 +64,12 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-orange">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -77,7 +79,7 @@
       
         
         <a href="#mysql" class="md-skip">
-          跳转至
+          Skip to content
         </a>
       
     </div>
@@ -91,7 +93,7 @@
   
 
 <header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="页眉">
+  <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../../.." title="IT-手册" class="md-header__button md-logo" aria-label="IT-手册" data-md-component="logo">
       
   
@@ -112,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              MySQL 基础教程
+              MySQL 教程
             
           </span>
         </div>
@@ -120,7 +122,33 @@
     </div>
     
       
+        <form class="md-header__option" data-md-component="palette">
+  
     
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -132,29 +160,27 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="查找">
+      <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            正在初始化搜索引擎
+            Initializing search
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -187,9 +213,7 @@
 
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="导航栏" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="IT-手册" class="md-nav__button md-logo" aria-label="IT-手册" data-md-component="logo">
       
@@ -231,20 +255,15 @@
     
     
     
-      
-        
-        
-      
     
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -270,8 +289,6 @@
   
     
     
-    
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -421,8 +438,6 @@
     
     
     
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -528,8 +543,6 @@
   
     
     
-    
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -665,20 +678,15 @@
     
     
     
-      
-        
-        
-      
     
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -704,8 +712,6 @@
   
     
     
-    
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -792,8 +798,6 @@
     
     
     
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -878,8 +882,6 @@
   
     
     
-    
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -973,20 +975,15 @@
     
     
     
-      
-        
-        
-      
     
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1012,8 +1009,6 @@
   
     
     
-    
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1078,8 +1073,6 @@
   
     
     
-    
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1165,8 +1158,6 @@
   
     
     
-    
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1323,20 +1314,15 @@
     
     
     
-      
-        
-        
-      
     
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1362,8 +1348,6 @@
   
     
     
-    
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1449,8 +1433,6 @@
   
     
     
-    
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1558,8 +1540,6 @@
     
     
     
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -1665,8 +1645,6 @@
   
     
     
-    
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1781,20 +1759,15 @@
     
     
     
-      
-        
-        
-      
     
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1935,20 +1908,15 @@
     
     
     
-      
-        
-        
-      
     
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1974,8 +1942,6 @@
   
     
     
-    
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -2103,8 +2069,6 @@
   
     
     
-    
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -2235,8 +2199,6 @@
     
     
     
-      
-    
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
@@ -2267,48 +2229,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../SQL/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    SQL 教程
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../advance/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    MySQL 进阶教程
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -2325,7 +2245,7 @@
           
   
   <span class="md-ellipsis">
-    MySQL 基础教程
+    MySQL 教程
   </span>
   
 
@@ -2336,7 +2256,7 @@
         
   
   <span class="md-ellipsis">
-    MySQL 基础教程
+    MySQL 教程
   </span>
   
 
@@ -2344,7 +2264,7 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -2353,60 +2273,87 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#1-mysql" class="md-nav__link">
     <span class="md-ellipsis">
-      一、基础概念
+      1. MySQL 基础知识
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="一、基础概念">
+    <nav class="md-nav" aria-label="1. MySQL 基础知识">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-database" class="md-nav__link">
+  <a href="#11-mysql" class="md-nav__link">
     <span class="md-ellipsis">
-      1. 数据库 (Database)
+      1.1 什么是 MySQL？
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-table" class="md-nav__link">
+  <a href="#12-mysql" class="md-nav__link">
     <span class="md-ellipsis">
-      2. 表 (Table)
+      1.2 安装 MySQL
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-row-column" class="md-nav__link">
+  <a href="#13" class="md-nav__link">
     <span class="md-ellipsis">
-      3. 行 (Row) 和 列 (Column)
+      1.3 数据库基本概念
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-primary-key" class="md-nav__link">
+  <a href="#14" class="md-nav__link">
     <span class="md-ellipsis">
-      4. 主键 (Primary Key)
+      1.4 创建数据库和表
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-foreign-key" class="md-nav__link">
+  <a href="#15" class="md-nav__link">
     <span class="md-ellipsis">
-      5. 外键 (Foreign Key)
+      1.5 插入数据
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6 查询数据
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.7 更新数据
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.8 删除数据
     </span>
   </a>
   
@@ -2418,19 +2365,55 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mysql_1" class="md-nav__link">
+  <a href="#2-mysql" class="md-nav__link">
     <span class="md-ellipsis">
-      二、安装 MySQL
+      2. MySQL 进阶操作
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="二、安装 MySQL">
+    <nav class="md-nav" aria-label="2. MySQL 进阶操作">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#mysql_2" class="md-nav__link">
+  <a href="#21" class="md-nav__link">
     <span class="md-ellipsis">
-      连接 MySQL 命令：
+      2.1 复杂查询
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 索引
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 事务
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 视图
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5 存储过程与函数
     </span>
   </a>
   
@@ -2442,82 +2425,46 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sql" class="md-nav__link">
+  <a href="#3-mysql" class="md-nav__link">
     <span class="md-ellipsis">
-      三、基本 SQL 语法
+      3. MySQL 优化
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="三、基本 SQL 语法">
+    <nav class="md-nav" aria-label="3. MySQL 优化">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
+  <a href="#31" class="md-nav__link">
     <span class="md-ellipsis">
-      1. 创建数据库
+      3.1 查询优化
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+  <a href="#32" class="md-nav__link">
     <span class="md-ellipsis">
-      2. 创建表
+      3.2 数据库设计优化
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
+  <a href="#33" class="md-nav__link">
     <span class="md-ellipsis">
-      3. 插入数据
+      3.3 缓存
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
+  <a href="#34" class="md-nav__link">
     <span class="md-ellipsis">
-      4. 查询数据
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. 更新数据
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. 删除数据
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. 删除表
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#8-constraints" class="md-nav__link">
-    <span class="md-ellipsis">
-      8. 数据约束 (Constraints)
+      3.4 数据库备份与恢复
     </span>
   </a>
   
@@ -2529,721 +2476,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#4-mysql" class="md-nav__link">
     <span class="md-ellipsis">
-      四、数据类型
+      4. 进阶 MySQL 特性
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="四、数据类型">
+    <nav class="md-nav" aria-label="4. 进阶 MySQL 特性">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1_1" class="md-nav__link">
+  <a href="#41" class="md-nav__link">
     <span class="md-ellipsis">
-      1. 数值类型
+      4.1 分区表
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2_1" class="md-nav__link">
+  <a href="#42" class="md-nav__link">
     <span class="md-ellipsis">
-      2. 字符串类型
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. 日期和时间类型
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      五、索引
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="五、索引">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      创建索引：
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      删除索引：
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#join" class="md-nav__link">
-    <span class="md-ellipsis">
-      六、联合查询 (JOIN)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="六、联合查询 (JOIN)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      示例：
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#inner-join" class="md-nav__link">
-    <span class="md-ellipsis">
-      一、INNER JOIN（内连接）
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="一、INNER JOIN（内连接）">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. 定义
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. 语法
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. 示例
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#left-join" class="md-nav__link">
-    <span class="md-ellipsis">
-      二、LEFT JOIN（左连接）
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="二、LEFT JOIN（左连接）">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. 定义
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. 语法
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. 示例
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#right-join" class="md-nav__link">
-    <span class="md-ellipsis">
-      三、RIGHT JOIN（右连接）
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="三、RIGHT JOIN（右连接）">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. 定义
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. 语法
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. 示例
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#full-join" class="md-nav__link">
-    <span class="md-ellipsis">
-      四、FULL JOIN（全连接）
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="四、FULL JOIN（全连接）">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. 定义
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-full-join" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. 语法（模拟 FULL JOIN）
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. 示例
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cross-join" class="md-nav__link">
-    <span class="md-ellipsis">
-      五、CROSS JOIN（交叉连接）
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="五、CROSS JOIN（交叉连接）">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. 定义
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. 语法
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. 示例
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#self-join" class="md-nav__link">
-    <span class="md-ellipsis">
-      六、自连接（Self Join）
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="六、自连接（Self Join）">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. 定义
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. 语法
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. 示例
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#join_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      七、使用 JOIN 的注意事项
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="七、使用 JOIN 的注意事项">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. 适当使用索引
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-on-where" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. 使用 ON 而不是 WHERE
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-cross-join" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. 避免 CROSS JOIN 的误用
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. 避免多表联接性能问题
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#views" class="md-nav__link">
-    <span class="md-ellipsis">
-      七、视图 (Views)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="七、视图 (Views)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      创建视图：
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      查询视图：
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#stored-procedures-triggers" class="md-nav__link">
-    <span class="md-ellipsis">
-      八、存储过程 (Stored Procedures) 和 触发器 (Triggers)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="八、存储过程 (Stored Procedures) 和 触发器 (Triggers)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. 存储过程
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. 触发器
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#transactions" class="md-nav__link">
-    <span class="md-ellipsis">
-      九、事务 (Transactions)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="九、事务 (Transactions)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      开启事务：
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    <span class="md-ellipsis">
-      提交事务：
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    <span class="md-ellipsis">
-      回滚事务：
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mysql_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      十一、MySQL 高级特性
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="十一、MySQL 高级特性">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-acid" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. 事务的 ACID 特性
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-transaction-isolation-levels" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. 隔离级别 (Transaction Isolation Levels)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mysql_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      十二、MySQL 优化
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="十二、MySQL 优化">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1_10" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. 查询优化
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. 索引优化
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. 数据库设计优化
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    <span class="md-ellipsis">
-      十三、安全管理
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="十三、安全管理">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1_11" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. 用户和权限管理
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. 数据备份与恢复
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. 数据备份与恢复">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
-    <span class="md-ellipsis">
-      备份：
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
-    <span class="md-ellipsis">
-      恢复：
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. 数据加密
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. 数据加密">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
-    <span class="md-ellipsis">
-      数据传输加密：
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
-    <span class="md-ellipsis">
-      数据存储加密：
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mysql_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      十四、MySQL 常见问题
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="十四、MySQL 常见问题">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1_12" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. 数据库锁机制
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-deadlock" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. 死锁 (Deadlock)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-innodb-vs-myisam" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. InnoDB vs MyISAM 存储引擎
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. 慢查询日志
+      4.2 主从复制
     </span>
   </a>
   
@@ -3252,7 +2506,7 @@
           <li class="md-nav__item">
   <a href="#5-mysql" class="md-nav__link">
     <span class="md-ellipsis">
-      5. MySQL 性能调优工具
+      5. 高级 MySQL 特性与技术
     </span>
   </a>
   
@@ -3264,37 +2518,781 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mysql_6" class="md-nav__link">
+  <a href="#51-triggers" class="md-nav__link">
     <span class="md-ellipsis">
-      十五、MySQL 备份与恢复策略
+      5.1 触发器（Triggers）
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="十五、MySQL 备份与恢复策略">
+    <nav class="md-nav" aria-label="5.1 触发器（Triggers）">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1_13" class="md-nav__link">
+  <a href="#511" class="md-nav__link">
     <span class="md-ellipsis">
-      1. 完全备份
+      5.1.1 创建触发器
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2_10" class="md-nav__link">
+  <a href="#512" class="md-nav__link">
     <span class="md-ellipsis">
-      2. 增量备份
+      5.1.2 删除触发器
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-storage-engines" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 存储引擎（Storage Engines）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2 存储引擎（Storage Engines）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#521-innodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.1 InnoDB
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3_10" class="md-nav__link">
+  <a href="#522-myisam" class="md-nav__link">
     <span class="md-ellipsis">
-      3. 恢复数据
+      5.2.2 MyISAM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#523-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.3 Memory 引擎
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#524" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.4 表的存储引擎选择
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53-partitioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 分区（Partitioning）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 分区（Partitioning）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#531-range-partitioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.1 范围分区（Range Partitioning）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#532-list-partitioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.2 列表分区（List Partitioning）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#533" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.3 分区的优点
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#54" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 集群与高可用性
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.4 集群与高可用性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#541-master-slave-replication" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4.1 主从复制（Master-Slave Replication）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#542-master-master-replication" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4.2 主主复制（Master-Master Replication）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#543-mysql-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4.3 MySQL Cluster
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#55" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5 安全性与权限管理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.5 安全性与权限管理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#551" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5.1 创建用户
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#552" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5.2 分配权限
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#553" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5.3 撤销权限
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#554" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5.4 删除用户
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. MySQL 性能监控与调优
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. MySQL 性能监控与调优">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 查询性能分析
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 慢查询日志
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 性能调优工具
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. MySQL 管理与维护
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#71" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 数据库备份与恢复
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.1 数据库备份与恢复">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#711-mysqldump" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1.1 逻辑备份（使用 mysqldump）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#712-mysqlhotcopy" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1.2 物理备份（使用 mysqlhotcopy）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#713-binlog" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1.3 增量备份（使用 binlog）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#72-cron-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 自动化任务调度（使用 cron 和 MySQL 事件）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.2 自动化任务调度（使用 cron 和 MySQL 事件）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#721-cron-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.1 使用 cron 调度 MySQL 备份
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#722-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.2 MySQL 事件调度器
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#73" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3 权限与安全管理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.3 权限与安全管理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#731" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3.1 用户与权限管理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#732" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3.2 数据加密
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#74" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4 性能监控与调优
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.4 性能监控与调优">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#741-explain" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4.1 使用 EXPLAIN 优化查询
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#742-show-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4.2 使用 SHOW STATUS 监控服务器性能
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#743" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4.3 使用慢查询日志分析性能问题
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. MySQL 高可用性与灾难恢复
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. MySQL 高可用性与灾难恢复">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1 主从复制
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2 主主复制
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-mysql-group-replication" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.3 MySQL Group Replication
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. MySQL 日志与审计
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. MySQL 日志与审计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-binary-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.1 二进制日志（Binary Log）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-error-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.2 错误日志（Error Log）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. MySQL 扩展功能与第三方工具
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#101-full-text-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.1 全文检索（Full-Text Search）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.1 全文检索（Full-Text Search）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1011" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.1.1 创建全文索引
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1012" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.1.2 执行全文检索查询
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1013-vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.1.3 自然语言模式 vs 布尔模式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1014" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.1.4 全文检索的应用场景
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#102-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.2 MySQL 连接池
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.2 MySQL 连接池">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1021-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.2.1 配置 MySQL 连接池
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1022" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.2.2 连接池的优点
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#103" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.3 第三方数据库管理工具
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.3 第三方数据库管理工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1031-phpmyadmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.3.1 phpMyAdmin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1032-mysql-workbench" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.3.2 MySQL Workbench
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1033-navicat" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.3.3 Navicat
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#104-mysql-mysql-s3" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.4 MySQL 外部存储扩展：MySQL 结合 S3
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.4 MySQL 外部存储扩展：MySQL 结合 S3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1041-mysql-s3" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.4.1 MySQL 结合 S3 使用场景
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1042-mysql-s3" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.4.2 配置 MySQL 与 S3 的集成
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1043-s3" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.4.3 数据迁移到 S3
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#105-mysql-nosql" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.5 MySQL 与 NoSQL 的集成
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.5 MySQL 与 NoSQL 的集成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1051-mysql-redis" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.5.1 MySQL 与 Redis 集成
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.5.1 MySQL 与 Redis 集成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      典型应用场景：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1052-mysql-elasticsearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.5.2 MySQL 与 Elasticsearch 集成
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.5.2 MySQL 与 Elasticsearch 集成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      典型应用场景：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据同步方式：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-mysql_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. MySQL 社区资源与学习路径
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. MySQL 社区资源与学习路径">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.1 MySQL 官方文档
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.2 开源社区与论坛
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.3 学习与实践路线
     </span>
   </a>
   
@@ -3309,6 +3307,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../command/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MySQL 常用命令
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -3373,8 +3392,6 @@
     
     
     
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -3387,7 +3404,7 @@
             
   
   <span class="md-ellipsis">
-    Redis
+    PostgreSQL
   </span>
   
 
@@ -3396,6 +3413,91 @@
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            PostgreSQL
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PostgreSQL/advance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PostgreSQL 进阶教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PostgreSQL/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PostgreSQL 基础教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Redis
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_5">
             <span class="md-nav__icon md-icon"></span>
             Redis
           </label>
@@ -3412,7 +3514,7 @@
         
   
   <span class="md-ellipsis">
-    Redis 基础教程
+    Redis 教程
   </span>
   
 
@@ -3488,20 +3590,15 @@
     
     
     
-      
-        
-        
-      
     
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3598,20 +3695,15 @@
     
     
     
-      
-        
-        
-      
     
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
         
           
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3637,8 +3729,6 @@
   
     
     
-    
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -3725,8 +3815,6 @@
     
     
     
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -3798,20 +3886,162 @@
     
     
     
-      
-        
-        
-      
     
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
         
           
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    系统设计
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            系统设计
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/bloom/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    布隆过滤器
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/hash/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一致性哈希
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/id/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    唯一ID
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    系统设计题目
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/ratelimit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    限流
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3822,8 +4052,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             计算机基础
           </label>
@@ -3929,20 +4159,15 @@
     
     
     
-      
-        
-        
-      
     
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
         
           
-          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="">
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3953,8 +4178,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
             <span class="md-nav__icon md-icon"></span>
             语言篇
           </label>
@@ -3969,17 +4194,15 @@
     
     
     
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_1" >
         
           
-          <label class="md-nav__link" for="__nav_11_1" id="__nav_11_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12_1" id="__nav_12_1_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3990,8 +4213,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_1">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_1">
             <span class="md-nav__icon md-icon"></span>
             C++
           </label>
@@ -4077,17 +4300,15 @@
     
     
     
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_2" >
         
           
-          <label class="md-nav__link" for="__nav_11_2" id="__nav_11_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12_2" id="__nav_12_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -4098,8 +4319,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_2">
             <span class="md-nav__icon md-icon"></span>
             Golang
           </label>
@@ -4156,17 +4377,15 @@
     
     
     
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_2_3" >
         
           
-          <label class="md-nav__link" for="__nav_11_2_3" id="__nav_11_2_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12_2_3" id="__nav_12_2_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -4177,8 +4396,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_2_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_2_3">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_12_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_2_3">
             <span class="md-nav__icon md-icon"></span>
             常用库
           </label>
@@ -4566,17 +4785,15 @@
     
     
     
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_3" >
         
           
-          <label class="md-nav__link" for="__nav_11_3" id="__nav_11_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12_3" id="__nav_12_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -4587,8 +4804,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_3">
             <span class="md-nav__icon md-icon"></span>
             Python
           </label>
@@ -4666,17 +4883,15 @@
     
     
     
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_3_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_3_4" >
         
           
-          <label class="md-nav__link" for="__nav_11_3_4" id="__nav_11_3_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12_3_4" id="__nav_12_3_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -4687,8 +4902,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_3_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_3_4">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_12_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_3_4">
             <span class="md-nav__icon md-icon"></span>
             Python常用库
           </label>
@@ -5417,6 +5632,1058 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. MySQL 基础知识
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. MySQL 基础知识">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 什么是 MySQL？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 安装 MySQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 数据库基本概念
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 创建数据库和表
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5 插入数据
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6 查询数据
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.7 更新数据
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.8 删除数据
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. MySQL 进阶操作
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. MySQL 进阶操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 复杂查询
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 索引
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 事务
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 视图
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5 存储过程与函数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. MySQL 优化
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. MySQL 优化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 查询优化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 数据库设计优化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 缓存
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 数据库备份与恢复
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 进阶 MySQL 特性
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 进阶 MySQL 特性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 分区表
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 主从复制
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 高级 MySQL 特性与技术
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#51-triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 触发器（Triggers）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1 触发器（Triggers）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#511" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.1 创建触发器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#512" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.2 删除触发器
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-storage-engines" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 存储引擎（Storage Engines）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2 存储引擎（Storage Engines）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#521-innodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.1 InnoDB
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#522-myisam" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.2 MyISAM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#523-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.3 Memory 引擎
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#524" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.4 表的存储引擎选择
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53-partitioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 分区（Partitioning）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 分区（Partitioning）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#531-range-partitioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.1 范围分区（Range Partitioning）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#532-list-partitioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.2 列表分区（List Partitioning）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#533" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.3 分区的优点
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#54" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 集群与高可用性
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.4 集群与高可用性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#541-master-slave-replication" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4.1 主从复制（Master-Slave Replication）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#542-master-master-replication" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4.2 主主复制（Master-Master Replication）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#543-mysql-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4.3 MySQL Cluster
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#55" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5 安全性与权限管理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.5 安全性与权限管理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#551" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5.1 创建用户
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#552" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5.2 分配权限
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#553" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5.3 撤销权限
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#554" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5.4 删除用户
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. MySQL 性能监控与调优
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. MySQL 性能监控与调优">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 查询性能分析
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 慢查询日志
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 性能调优工具
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. MySQL 管理与维护
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#71" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 数据库备份与恢复
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.1 数据库备份与恢复">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#711-mysqldump" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1.1 逻辑备份（使用 mysqldump）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#712-mysqlhotcopy" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1.2 物理备份（使用 mysqlhotcopy）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#713-binlog" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1.3 增量备份（使用 binlog）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#72-cron-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 自动化任务调度（使用 cron 和 MySQL 事件）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.2 自动化任务调度（使用 cron 和 MySQL 事件）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#721-cron-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.1 使用 cron 调度 MySQL 备份
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#722-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2.2 MySQL 事件调度器
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#73" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3 权限与安全管理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.3 权限与安全管理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#731" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3.1 用户与权限管理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#732" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3.2 数据加密
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#74" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4 性能监控与调优
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.4 性能监控与调优">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#741-explain" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4.1 使用 EXPLAIN 优化查询
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#742-show-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4.2 使用 SHOW STATUS 监控服务器性能
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#743" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4.3 使用慢查询日志分析性能问题
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. MySQL 高可用性与灾难恢复
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. MySQL 高可用性与灾难恢复">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1 主从复制
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2 主主复制
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-mysql-group-replication" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.3 MySQL Group Replication
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. MySQL 日志与审计
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. MySQL 日志与审计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-binary-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.1 二进制日志（Binary Log）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-error-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.2 错误日志（Error Log）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. MySQL 扩展功能与第三方工具
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#101-full-text-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.1 全文检索（Full-Text Search）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.1 全文检索（Full-Text Search）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1011" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.1.1 创建全文索引
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1012" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.1.2 执行全文检索查询
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1013-vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.1.3 自然语言模式 vs 布尔模式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1014" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.1.4 全文检索的应用场景
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#102-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.2 MySQL 连接池
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.2 MySQL 连接池">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1021-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.2.1 配置 MySQL 连接池
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1022" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.2.2 连接池的优点
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#103" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.3 第三方数据库管理工具
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.3 第三方数据库管理工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1031-phpmyadmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.3.1 phpMyAdmin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1032-mysql-workbench" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.3.2 MySQL Workbench
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1033-navicat" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.3.3 Navicat
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#104-mysql-mysql-s3" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.4 MySQL 外部存储扩展：MySQL 结合 S3
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.4 MySQL 外部存储扩展：MySQL 结合 S3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1041-mysql-s3" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.4.1 MySQL 结合 S3 使用场景
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1042-mysql-s3" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.4.2 配置 MySQL 与 S3 的集成
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1043-s3" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.4.3 数据迁移到 S3
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#105-mysql-nosql" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.5 MySQL 与 NoSQL 的集成
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.5 MySQL 与 NoSQL 的集成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1051-mysql-redis" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.5.1 MySQL 与 Redis 集成
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.5.1 MySQL 与 Redis 集成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      典型应用场景：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1052-mysql-elasticsearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.5.2 MySQL 与 Elasticsearch 集成
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.5.2 MySQL 与 Elasticsearch 集成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      典型应用场景：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据同步方式：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-mysql_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. MySQL 社区资源与学习路径
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. MySQL 社区资源与学习路径">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.1 MySQL 官方文档
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.2 开源社区与论坛
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.3 学习与实践路线
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           
             <div class="md-content" data-md-component="content">
@@ -5425,538 +6692,901 @@
                   
 
 
-<h1 id="mysql">MySQL 基础教程</h1>
-<p>MySQL 是一个广泛使用的开源关系型数据库管理系统 (RDBMS)，它基于 SQL (结构化查询语言) 进行数据库的操作和管理。MySQL 通常用于构建动态网站和应用，具有强大的数据存储和查询能力。以下是 MySQL 的基础概念、常用 SQL 语句和示例详解。</p>
+<h1 id="mysql">MySQL 教程</h1>
+<p>MySQL 是一种广泛使用的关系型数据库管理系统，因其开源、稳定、高效的特点，常被用于网站和应用程序的后台数据库。这个教程将帮助你从 MySQL 的基础知识入门，逐步深入到更高级的操作和优化技巧。</p>
 <hr />
-<h2 id="_1">一、基础概念</h2>
-<h3 id="1-database">1. 数据库 (Database)</h3>
-<p>数据库是用于存储数据的容器，可以将其视为一个文件柜，里面存放了很多表（表是数据的具体存储结构）。</p>
-<h3 id="2-table">2. 表 (Table)</h3>
-<p>表是数据库中的核心元素，它由行和列组成，行表示记录，列表示字段。表中的数据通常是有结构化的，定义了数据的类型和约束。</p>
-<h3 id="3-row-column">3. 行 (Row) 和 列 (Column)</h3>
+<h2 id="1-mysql">1. <strong>MySQL 基础知识</strong></h2>
+<h3 id="11-mysql">1.1 什么是 MySQL？</h3>
+<p>MySQL 是一个开源的关系型数据库管理系统，它基于 SQL（结构化查询语言）进行数据管理。它通常用于存储、检索和管理应用程序中的数据，尤其是 Web 应用。</p>
+<h3 id="12-mysql">1.2 安装 MySQL</h3>
+<p>在大多数操作系统中，安装 MySQL 非常简单。以下是不同系统的安装方法：</p>
 <ul>
-<li><strong>行</strong>：表中的每一行表示一条完整的记录或数据。</li>
-<li><strong>列</strong>：表中的列表示属性或字段，每一列的数据有特定的类型和约束。</li>
+<li>
+<p><strong>Ubuntu/Debian：</strong>
+  <code>bash
+  sudo apt update
+  sudo apt install mysql-server</code></p>
+</li>
+<li>
+<p><strong>CentOS/RHEL：</strong>
+  <code>bash
+  sudo yum install mysql-server</code></p>
+</li>
+<li>
+<p><strong>Windows：</strong>
+  通过官方 MySQL Installer 进行安装：<a href="https://dev.mysql.com/downloads/installer/">MySQL 官网</a></p>
+</li>
 </ul>
-<h3 id="4-primary-key">4. 主键 (Primary Key)</h3>
-<p>主键是表中的一个或多个列，用来唯一标识表中的每条记录。主键中的数据不能重复，且不能为 <code>NULL</code>。</p>
-<h3 id="5-foreign-key">5. 外键 (Foreign Key)</h3>
-<p>外键是表中某一列，它的值来自另一表的主键，外键用于维护两表之间的关系（如一对多、多对多）。</p>
-<hr />
-<h2 id="mysql_1">二、安装 MySQL</h2>
-<p>你可以在不同的平台上安装 MySQL，如 Linux、macOS、Windows。安装完成后，可以通过命令行或者图形化工具（如 MySQL Workbench）进行管理。</p>
-<h3 id="mysql_2">连接 MySQL 命令：</h3>
+<p>安装后，通过 <code>mysql</code> 命令行工具登录数据库：</p>
 <div class="codehilite"><pre><span></span><code>mysql<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p
 </code></pre></div>
 
-<p><code>-u</code> 是用户名，<code>-p</code> 表示你将被提示输入密码。</p>
-<hr />
-<h2 id="sql">三、基本 SQL 语法</h2>
-<h3 id="1">1. 创建数据库</h3>
-<p>创建一个新的数据库：</p>
-<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">my_database</span><span class="p">;</span>
-</code></pre></div>
-
-<p>选择使用该数据库：</p>
-<div class="codehilite"><pre><span></span><code><span class="n">USE</span><span class="w"> </span><span class="n">my_database</span><span class="p">;</span>
-</code></pre></div>
-
-<h3 id="2">2. 创建表</h3>
-<p>定义表结构时，你需要指定列名称和数据类型。以下是创建一个 <code>users</code> 表的示例：</p>
-<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-<span class="w">    </span><span class="n">name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
-<span class="w">    </span><span class="n">email</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
-<span class="w">    </span><span class="n">age</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
-<span class="w">    </span><span class="n">created_at</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span>
-<span class="p">);</span>
-</code></pre></div>
-
+<h3 id="13">1.3 数据库基本概念</h3>
 <ul>
-<li><code>id</code>：自增列，且是主键。</li>
-<li><code>name</code> 和 <code>email</code>：是字符串，最大长度为 100。</li>
-<li><code>age</code>：整数类型。</li>
-<li><code>created_at</code>：自动记录数据插入时间。</li>
+<li><strong>数据库（Database）</strong>：存储数据的集合。</li>
+<li><strong>表（Table）</strong>：数据库中的数据结构，包含行和列。</li>
+<li><strong>行（Row）</strong>：表中的每条记录。</li>
+<li><strong>列（Column）</strong>：表的字段属性。</li>
+<li><strong>主键（Primary Key）</strong>：唯一标识表中每条记录的列。</li>
+<li><strong>外键（Foreign Key）</strong>：表中用于关联另一张表的列。</li>
 </ul>
-<h3 id="3">3. 插入数据</h3>
-<p>向表中插入数据：</p>
-<div class="codehilite"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">email</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="p">)</span><span class="w"> </span>
-<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;John Doe&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;john@example.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">28</span><span class="p">);</span>
+<h3 id="14">1.4 创建数据库和表</h3>
+<ol>
+<li>
+<p><strong>创建数据库</strong>：
+   <code>sql
+   CREATE DATABASE my_database;</code></p>
+</li>
+<li>
+<p><strong>使用数据库</strong>：
+   <code>sql
+   USE my_database;</code></p>
+</li>
+<li>
+<p><strong>创建表</strong>：
+   <code>sql
+   CREATE TABLE users (
+     id INT AUTO_INCREMENT PRIMARY KEY,
+     name VARCHAR(100),
+     email VARCHAR(100) UNIQUE,
+     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+   );</code></p>
+</li>
+</ol>
+<h3 id="15">1.5 插入数据</h3>
+<p>插入一条记录：</p>
+<div class="codehilite"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">email</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;alice@example.com&#39;</span><span class="p">);</span>
 </code></pre></div>
 
-<h3 id="4">4. 查询数据</h3>
-<p>查询表中的所有数据：</p>
-<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="p">;</span>
+<h3 id="16">1.6 查询数据</h3>
+<ol>
+<li>
+<p>查询所有用户：
+   <code>sql
+   SELECT * FROM users;</code></p>
+</li>
+<li>
+<p>查询指定条件的数据：
+   <code>sql
+   SELECT * FROM users WHERE name = 'Alice';</code></p>
+</li>
+</ol>
+<h3 id="17">1.7 更新数据</h3>
+<p>更新用户的邮箱地址：</p>
+<div class="codehilite"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;alice@newdomain.com&#39;</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Alice&#39;</span><span class="p">;</span>
 </code></pre></div>
 
-<p>查询特定的列：</p>
-<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">email</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="p">;</span>
+<h3 id="18">1.8 删除数据</h3>
+<p>删除某个用户：</p>
+<div class="codehilite"><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Alice&#39;</span><span class="p">;</span>
 </code></pre></div>
 
-<p>按条件查询：</p>
-<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
-</code></pre></div>
-
-<h3 id="5">5. 更新数据</h3>
-<p>更新表中的数据：</p>
-<div class="codehilite"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">users</span><span class="w"> </span>
-<span class="k">SET</span><span class="w"> </span><span class="n">email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;john_new@example.com&#39;</span><span class="w"> </span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;John Doe&#39;</span><span class="p">;</span>
-</code></pre></div>
-
-<h3 id="6">6. 删除数据</h3>
-<p>删除表中的数据：</p>
-<div class="codehilite"><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;John Doe&#39;</span><span class="p">;</span>
-</code></pre></div>
-
-<p>删除表中所有数据（谨慎操作）：</p>
-<div class="codehilite"><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="p">;</span>
-</code></pre></div>
-
-<h3 id="7">7. 删除表</h3>
-<p>删除表时，其结构和数据都会被删除：</p>
-<div class="codehilite"><pre><span></span><code><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span><span class="p">;</span>
-</code></pre></div>
-
-<h3 id="8-constraints">8. 数据约束 (Constraints)</h3>
+<hr />
+<h2 id="2-mysql">2. <strong>MySQL 进阶操作</strong></h2>
+<h3 id="21">2.1 复杂查询</h3>
+<ol>
+<li>
+<p><strong>多条件查询</strong>（使用 <code>AND</code>、<code>OR</code>）：
+   <code>sql
+   SELECT * FROM users WHERE name = 'Alice' AND email LIKE '%example.com';</code></p>
+</li>
+<li>
+<p><strong>排序</strong>（使用 <code>ORDER BY</code>）：
+   <code>sql
+   SELECT * FROM users ORDER BY created_at DESC;</code></p>
+</li>
+<li>
+<p><strong>分页查询</strong>（使用 <code>LIMIT</code> 和 <code>OFFSET</code>）：
+   <code>sql
+   SELECT * FROM users LIMIT 10 OFFSET 20;  -- 获取第 21 到第 30 条记录</code></p>
+</li>
+<li>
+<p><strong>聚合函数</strong>（使用 <code>COUNT</code>、<code>SUM</code>、<code>AVG</code>、<code>MAX</code>、<code>MIN</code>）：
+   <code>sql
+   SELECT COUNT(*) FROM users;
+   SELECT AVG(age) FROM users;</code></p>
+</li>
+<li>
+<p><strong>分组查询</strong>（使用 <code>GROUP BY</code>）：
+   <code>sql
+   SELECT COUNT(*), country FROM users GROUP BY country;</code></p>
+</li>
+<li>
+<p><strong>多表连接</strong>（使用 <code>JOIN</code>）：
+   <code>sql
+   SELECT users.name, orders.amount 
+   FROM users 
+   JOIN orders ON users.id = orders.user_id;</code></p>
+</li>
+</ol>
+<h3 id="22">2.2 索引</h3>
 <ul>
-<li><strong>NOT NULL</strong>：列值不能为空。</li>
-<li><strong>UNIQUE</strong>：列值唯一。</li>
-<li><strong>DEFAULT</strong>：为列设置默认值。</li>
-<li><strong>AUTO_INCREMENT</strong>：值自动递增，通常用于主键。</li>
-<li><strong>FOREIGN KEY</strong>：为外键设置引用关系。</li>
+<li>
+<p><strong>创建索引</strong>：索引用于加速查询，尤其是在大量数据的表中。
+  <code>sql
+  CREATE INDEX idx_user_email ON users(email);</code></p>
+</li>
+<li>
+<p><strong>删除索引</strong>：
+  <code>sql
+  DROP INDEX idx_user_email ON users;</code></p>
+</li>
 </ul>
-<p>示例：</p>
-<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">orders</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="n">order_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-<span class="w">    </span><span class="n">user_id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
-<span class="w">    </span><span class="n">order_date</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
-<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">user_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">users</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
-<span class="p">);</span>
-</code></pre></div>
-
-<hr />
-<h2 id="_2">四、数据类型</h2>
-<h3 id="1_1">1. 数值类型</h3>
-<ul>
-<li><code>INT</code>：整数类型，如 <code>INT(11)</code>。</li>
-<li><code>FLOAT</code>、<code>DOUBLE</code>：用于存储浮点数。</li>
-<li><code>DECIMAL</code>：用于存储精确小数。</li>
-</ul>
-<h3 id="2_1">2. 字符串类型</h3>
-<ul>
-<li><code>CHAR(n)</code>：固定长度字符串。</li>
-<li><code>VARCHAR(n)</code>：可变长度字符串。</li>
-<li><code>TEXT</code>：存储长文本数据。</li>
-</ul>
-<h3 id="3_1">3. 日期和时间类型</h3>
-<ul>
-<li><code>DATE</code>：存储日期。</li>
-<li><code>DATETIME</code>：存储日期和时间。</li>
-<li><code>TIMESTAMP</code>：存储 Unix 时间戳。</li>
-</ul>
-<hr />
-<h2 id="_3">五、索引</h2>
-<p>索引用于加速数据库的查询，通常在频繁查询的列上创建索引。</p>
-<h3 id="_4">创建索引：</h3>
-<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_name</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">users</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
-</code></pre></div>
-
-<h3 id="_5">删除索引：</h3>
-<div class="codehilite"><pre><span></span><code><span class="k">DROP</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_name</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">users</span><span class="p">;</span>
-</code></pre></div>
-
-<hr />
-<h2 id="join">六、联合查询 (JOIN)</h2>
-<p>联合查询用于从多个表中查询相关数据。常见的联合查询类型有：内连接（INNER JOIN）、外连接（LEFT JOIN、RIGHT JOIN）等。</p>
-<h3 id="_6">示例：</h3>
-<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">users</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">orders</span><span class="p">.</span><span class="n">order_date</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">users</span>
-<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">orders</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">users</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">orders</span><span class="p">.</span><span class="n">user_id</span><span class="p">;</span>
-</code></pre></div>
-
-<p>这将查询出用户及其对应的订单日期。</p>
-<hr />
-<p>MySQL 中的联合查询（Join）用于从多个表中获取相关的数据。MySQL 支持多种类型的联合查询，每种查询类型都有不同的应用场景和特性。下面将详细介绍常见的联合查询类型，包括 <code>INNER JOIN</code>、<code>LEFT JOIN</code>、<code>RIGHT JOIN</code>、<code>FULL JOIN</code>（虽然 MySQL 不直接支持 <code>FULL JOIN</code>，但可以通过其他方式实现）、<code>CROSS JOIN</code> 以及自连接（Self Join）等。</p>
-<hr />
-<h3 id="inner-join">一、<code>INNER JOIN</code>（内连接）</h3>
-<h4 id="1_2">1. 定义</h4>
-<p><code>INNER JOIN</code> 只返回两个表中都存在匹配记录的数据。也就是说，只有在连接条件匹配的情况下，才会返回对应的行。</p>
-<h4 id="2_2">2. 语法</h4>
-<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">columns</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">table1</span>
-<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">table2</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">table1</span><span class="p">.</span><span class="k">column</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">table2</span><span class="p">.</span><span class="k">column</span><span class="p">;</span>
-</code></pre></div>
-
-<h4 id="3_2">3. 示例</h4>
-<p>假设有两个表 <code>employees</code>（员工表）和 <code>departments</code>（部门表），查询所有员工及其对应的部门：</p>
-<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">employees</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">departments</span><span class="p">.</span><span class="n">department_name</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
-<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">departments</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">employees</span><span class="p">.</span><span class="n">department_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">departments</span><span class="p">.</span><span class="n">id</span><span class="p">;</span>
-</code></pre></div>
-
-<p>结果只会返回在 <code>employees</code> 表和 <code>departments</code> 表中都存在匹配记录的行。</p>
-<hr />
-<h3 id="left-join">二、<code>LEFT JOIN</code>（左连接）</h3>
-<h4 id="1_3">1. 定义</h4>
-<p><code>LEFT JOIN</code> 返回左表中的所有记录，即使右表中没有匹配的记录。对于没有匹配的右表记录，结果中会以 <code>NULL</code> 填充。</p>
-<h4 id="2_3">2. 语法</h4>
-<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">columns</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">table1</span>
-<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">table2</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">table1</span><span class="p">.</span><span class="k">column</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">table2</span><span class="p">.</span><span class="k">column</span><span class="p">;</span>
-</code></pre></div>
-
-<h4 id="3_3">3. 示例</h4>
-<p>查询所有员工及其对应的部门，若某个员工没有部门，显示 <code>NULL</code>：</p>
-<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">employees</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">departments</span><span class="p">.</span><span class="n">department_name</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
-<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">departments</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">employees</span><span class="p">.</span><span class="n">department_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">departments</span><span class="p">.</span><span class="n">id</span><span class="p">;</span>
-</code></pre></div>
-
-<p>此查询将返回所有员工，即使某些员工没有部门信息（这些员工的部门列会显示 <code>NULL</code>）。</p>
-<hr />
-<h3 id="right-join">三、<code>RIGHT JOIN</code>（右连接）</h3>
-<h4 id="1_4">1. 定义</h4>
-<p><code>RIGHT JOIN</code> 与 <code>LEFT JOIN</code> 类似，但它返回右表中的所有记录，即使左表中没有匹配的记录。对于没有匹配的左表记录，结果中会以 <code>NULL</code> 填充。</p>
-<h4 id="2_4">2. 语法</h4>
-<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">columns</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">table1</span>
-<span class="k">RIGHT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">table2</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">table1</span><span class="p">.</span><span class="k">column</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">table2</span><span class="p">.</span><span class="k">column</span><span class="p">;</span>
-</code></pre></div>
-
-<h4 id="3_4">3. 示例</h4>
-<p>查询所有部门及其对应的员工，若某个部门没有员工，显示 <code>NULL</code>：</p>
-<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">employees</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">departments</span><span class="p">.</span><span class="n">department_name</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
-<span class="k">RIGHT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">departments</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">employees</span><span class="p">.</span><span class="n">department_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">departments</span><span class="p">.</span><span class="n">id</span><span class="p">;</span>
-</code></pre></div>
-
-<p>此查询将返回所有部门，即使某些部门没有员工（这些部门的员工列会显示 <code>NULL</code>）。</p>
-<hr />
-<h3 id="full-join">四、<code>FULL JOIN</code>（全连接）</h3>
-<h4 id="1_5">1. 定义</h4>
-<p><code>FULL JOIN</code> 返回两个表中的所有记录。当左表或右表中没有匹配的记录时，会显示 <code>NULL</code>。MySQL 不直接支持 <code>FULL JOIN</code>，但可以通过 <code>UNION</code> 结合 <code>LEFT JOIN</code> 和 <code>RIGHT JOIN</code> 来实现。</p>
-<h4 id="2-full-join">2. 语法（模拟 <code>FULL JOIN</code>）</h4>
-<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">columns</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">table1</span>
-<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">table2</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">table1</span><span class="p">.</span><span class="k">column</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">table2</span><span class="p">.</span><span class="k">column</span>
-<span class="k">UNION</span>
-<span class="k">SELECT</span><span class="w"> </span><span class="n">columns</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">table1</span>
-<span class="k">RIGHT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">table2</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">table1</span><span class="p">.</span><span class="k">column</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">table2</span><span class="p">.</span><span class="k">column</span><span class="p">;</span>
-</code></pre></div>
-
-<h4 id="3_5">3. 示例</h4>
-<p>查询所有员工和部门的信息，包括没有对应关系的员工和部门：</p>
-<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">employees</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">departments</span><span class="p">.</span><span class="n">department_name</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
-<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">departments</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">employees</span><span class="p">.</span><span class="n">department_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">departments</span><span class="p">.</span><span class="n">id</span>
-<span class="k">UNION</span>
-<span class="k">SELECT</span><span class="w"> </span><span class="n">employees</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">departments</span><span class="p">.</span><span class="n">department_name</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
-<span class="k">RIGHT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">departments</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">employees</span><span class="p">.</span><span class="n">department_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">departments</span><span class="p">.</span><span class="n">id</span><span class="p">;</span>
-</code></pre></div>
-
-<p>这个查询会返回所有员工和部门的信息，即使有的员工没有部门，或者有的部门没有员工。</p>
-<hr />
-<h3 id="cross-join">五、<code>CROSS JOIN</code>（交叉连接）</h3>
-<h4 id="1_6">1. 定义</h4>
-<p><code>CROSS JOIN</code> 返回两个表的笛卡尔积，即每个左表的行都与右表的所有行组合。通常不会在有明确连接条件的查询中使用。</p>
-<h4 id="2_5">2. 语法</h4>
-<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">columns</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">table1</span>
-<span class="k">CROSS</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">table2</span><span class="p">;</span>
-</code></pre></div>
-
-<h4 id="3_6">3. 示例</h4>
-<p>查询员工与部门的笛卡尔积，每个员工与每个部门组合在一起：</p>
-<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">employees</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">departments</span><span class="p">.</span><span class="n">department_name</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
-<span class="k">CROSS</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">departments</span><span class="p">;</span>
-</code></pre></div>
-
-<p>此查询会返回员工和部门的所有可能组合。</p>
-<hr />
-<h3 id="self-join">六、自连接（Self Join）</h3>
-<h4 id="1_7">1. 定义</h4>
-<p>自连接是指同一个表的不同实例进行连接。它常用于表示层级结构的数据（如员工和经理的关系）。</p>
-<h4 id="2_6">2. 语法</h4>
-<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="k">column</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="k">column</span>
-<span class="k">FROM</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">a</span>
-<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="k">column</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="k">column</span><span class="p">;</span>
-</code></pre></div>
-
-<h4 id="3_7">3. 示例</h4>
-<p>假设员工表 <code>employees</code> 中每个员工都有一个经理的 ID，查询所有员工及其经理的信息：</p>
-<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">employee</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">manager</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="n">e</span>
-<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">manager_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">id</span><span class="p">;</span>
-</code></pre></div>
-
-<p>此查询将返回每个员工及其对应的经理。</p>
-<hr />
-<h3 id="join_1">七、使用 <code>JOIN</code> 的注意事项</h3>
-<h4 id="1_8">1. 适当使用索引</h4>
-<p>在进行连接操作时，确保连接列上有适当的索引能够显著提高查询性能。尤其是在处理大数据集时，索引能够减少全表扫描，提升查询速度。</p>
-<h4 id="2-on-where">2. 使用 <code>ON</code> 而不是 <code>WHERE</code></h4>
-<p>在 <code>JOIN</code> 操作中，建议使用 <code>ON</code> 来指定连接条件，而不是 <code>WHERE</code>。这样可以避免错误的过滤操作，确保连接逻辑清晰。</p>
-<h4 id="3-cross-join">3. 避免 <code>CROSS JOIN</code> 的误用</h4>
-<p>由于 <code>CROSS JOIN</code> 会生成笛卡尔积，数据量可能会急剧增长，因此在使用时需要格外小心，确保符合实际业务需求。</p>
-<h4 id="4_1">4. 避免多表联接性能问题</h4>
-<p>如果需要连接多个表，可能会导致性能下降。可以通过索引优化、拆分复杂查询、或者使用缓存来缓解这一问题。</p>
-<hr />
-<p>通过掌握这些联合查询类型，你可以灵活地从多个表中获取相关数据，根据具体的业务需求选择合适的 <code>JOIN</code> 类型，实现复杂的数据查询。</p>
-<h2 id="views">七、视图 (Views)</h2>
-<p>视图是一个虚拟表，其内容通过 SQL 查询生成。视图使得复杂查询简化，并提高数据访问的安全性。</p>
-<h3 id="_7">创建视图：</h3>
-<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">user_orders</span><span class="w"> </span><span class="k">AS</span>
-<span class="k">SELECT</span><span class="w"> </span><span class="n">users</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">orders</span><span class="p">.</span><span class="n">order_date</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">users</span>
-<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">orders</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">users</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">orders</span><span class="p">.</span><span class="n">user_id</span><span class="p">;</span>
-</code></pre></div>
-
-<h3 id="_8">查询视图：</h3>
-<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">user_orders</span><span class="p">;</span>
-</code></pre></div>
-
-<hr />
-<h2 id="stored-procedures-triggers">八、存储过程 (Stored Procedures) 和 触发器 (Triggers)</h2>
-<h3 id="1_9">1. 存储过程</h3>
-<p>存储过程是一组 SQL 语句的集合，能够存储在数据库中并在需要时执行。它提高了数据库操作的灵活性。</p>
-<div class="codehilite"><pre><span></span><code><span class="k">DELIMITER</span><span class="w"> </span><span class="o">//</span>
-<span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="n">GetUserAge</span><span class="p">(</span><span class="k">IN</span><span class="w"> </span><span class="n">user_id</span><span class="w"> </span><span class="nb">INT</span><span class="p">)</span>
-<span class="k">BEGIN</span>
-<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">user_id</span><span class="p">;</span>
-<span class="k">END</span><span class="w"> </span><span class="o">//</span>
-<span class="k">DELIMITER</span><span class="w"> </span><span class="p">;</span>
-</code></pre></div>
-
-<p>调用存储过程：</p>
-<div class="codehilite"><pre><span></span><code><span class="k">CALL</span><span class="w"> </span><span class="n">GetUserAge</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-</code></pre></div>
-
-<h3 id="2_7">2. 触发器</h3>
-<p>触发器是一种特殊类型的存储过程，它会在某个表上的 INSERT、UPDATE 或 DELETE 操作触发时自动执行。</p>
-<p>创建触发器：</p>
-<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="n">before_insert_user</span>
-<span class="k">BEFORE</span><span class="w"> </span><span class="k">INSERT</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">users</span>
-<span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span>
-<span class="k">SET</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">created_at</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NOW</span><span class="p">();</span>
-</code></pre></div>
-
-<hr />
-<h2 id="transactions">九、事务 (Transactions)</h2>
-<p>事务是一组数据库操作，这些操作要么全部成功，要么全部失败。事务用于保证数据的一致性。</p>
-<h3 id="_9">开启事务：</h3>
+<h3 id="23">2.3 事务</h3>
+<p>事务用于确保一系列 SQL 操作的原子性，全部成功或全部回滚。</p>
 <div class="codehilite"><pre><span></span><code><span class="k">START</span><span class="w"> </span><span class="k">TRANSACTION</span><span class="p">;</span>
+<span class="k">UPDATE</span><span class="w"> </span><span class="n">accounts</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">balance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">balance</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">user_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="k">UPDATE</span><span class="w"> </span><span class="n">accounts</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">balance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">balance</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">user_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="k">COMMIT</span><span class="p">;</span><span class="w">  </span><span class="c1">-- 提交事务</span>
 </code></pre></div>
 
-<h3 id="_10">提交事务：</h3>
-<div class="codehilite"><pre><span></span><code><span class="k">COMMIT</span><span class="p">;</span>
-</code></pre></div>
-
-<h3 id="_11">回滚事务：</h3>
+<p>如果中途出现错误，可以使用 <code>ROLLBACK</code> 回滚事务：</p>
 <div class="codehilite"><pre><span></span><code><span class="k">ROLLBACK</span><span class="p">;</span>
 </code></pre></div>
 
-<hr />
-<p>继续为你提供 MySQL 的更多内容，涵盖进阶概念、优化技巧、安全管理和常见问题，帮助你更深入地掌握 MySQL。</p>
-<hr />
-<h2 id="mysql_3">十一、MySQL 高级特性</h2>
-<h3 id="1-acid">1. 事务的 ACID 特性</h3>
-<p>ACID 是指事务的四大特性，它们保证了事务处理的可靠性：</p>
-<ul>
-<li><strong>Atomicity（原子性）</strong>：事务的所有操作要么全部执行成功，要么全部失败并回滚。</li>
-<li><strong>Consistency（一致性）</strong>：事务执行前后，数据库必须处于一致状态。</li>
-<li><strong>Isolation（隔离性）</strong>：事务之间的操作是彼此隔离的，不会相互影响。</li>
-<li><strong>Durability（持久性）</strong>：事务提交后，其结果应持久地保存到数据库中，不能被丢失。</li>
-</ul>
-<h3 id="2-transaction-isolation-levels">2. 隔离级别 (Transaction Isolation Levels)</h3>
-<p>在并发事务中，隔离级别决定了事务间数据可见性的不同程度。MySQL 支持四种标准的隔离级别：</p>
-<ul>
-<li><strong>READ UNCOMMITTED</strong>：允许读取未提交的数据，可能会导致脏读 (Dirty Read)。</li>
-<li><strong>READ COMMITTED</strong>：只能读取已经提交的数据，防止脏读，但可能会出现不可重复读 (Non-repeatable Read)。</li>
-<li><strong>REPEATABLE READ</strong>：防止不可重复读，MySQL 默认的隔离级别，但可能会出现幻读 (Phantom Read)。</li>
-<li><strong>SERIALIZABLE</strong>：最高级别的隔离，防止幻读，所有事务逐个执行，但效率最低。</li>
-</ul>
-<p>修改隔离级别的语法：</p>
-<div class="codehilite"><pre><span></span><code><span class="k">SET</span><span class="w"> </span><span class="k">GLOBAL</span><span class="w"> </span><span class="k">TRANSACTION</span><span class="w"> </span><span class="k">ISOLATION</span><span class="w"> </span><span class="k">LEVEL</span><span class="w"> </span><span class="k">REPEATABLE</span><span class="w"> </span><span class="k">READ</span><span class="p">;</span>
-</code></pre></div>
-
-<hr />
-<h2 id="mysql_4">十二、MySQL 优化</h2>
-<h3 id="1_10">1. 查询优化</h3>
-<p>优化查询语句可以显著提高数据库性能。以下是一些常用的查询优化技巧：</p>
-<ul>
-<li><strong>使用索引</strong>：在经常被查询的列上添加索引，能够加速查询。特别是在 <code>WHERE</code>、<code>JOIN</code>、<code>ORDER BY</code> 和 <code>GROUP BY</code> 子句中用到的列上添加索引。</li>
-<li><strong>避免使用 SELECT * 查询</strong>：只查询需要的列，减少数据传输量。</li>
-<li><strong>使用 <code>EXPLAIN</code> 分析查询</strong>：<code>EXPLAIN</code> 命令能够告诉你查询语句的执行计划，帮助你找到可能的性能瓶颈。</li>
-</ul>
-<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="k">EXPLAIN</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span>
-</code></pre></div>
-
-<ul>
-<li><strong>使用 LIMIT 优化分页查询</strong>：在分页查询中使用 <code>LIMIT</code> 限制返回的结果集大小。</li>
-</ul>
-<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="k">LIMIT</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="k">OFFSET</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
-</code></pre></div>
-
-<ul>
-<li><strong>避免在索引列上使用函数</strong>：如 <code>WHERE</code> 子句中如果对索引列使用函数，会导致索引失效。</li>
-</ul>
-<h3 id="2_8">2. 索引优化</h3>
-<p>索引是提高数据库性能的关键，但也不是越多越好。以下是常见的索引优化技巧：</p>
-<ul>
-<li><strong>复合索引</strong>：为多个列创建联合索引，能够加速复合查询。例如：</li>
-</ul>
-<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_name_age</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">users</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="p">);</span>
-</code></pre></div>
-
+<h3 id="24">2.4 视图</h3>
+<p>视图是一个虚拟表，基于 SQL 查询结果。
+- <strong>创建视图</strong>：
+  <code>sql
+  CREATE VIEW user_orders AS
+  SELECT users.name, orders.amount
+  FROM users
+  JOIN orders ON users.id = orders.user_id;</code></p>
 <ul>
 <li>
-<p><strong>避免冗余索引</strong>：如果某列已经包含在联合索引中，不需要再为该列创建单独索引。</p>
+<p><strong>查询视图</strong>：
+  <code>sql
+  SELECT * FROM user_orders;</code></p>
 </li>
 <li>
-<p><strong>删除不必要的索引</strong>：过多的索引会增加写操作的开销，所以只在需要查询加速的列上创建索引。</p>
+<p><strong>删除视图</strong>：
+  <code>sql
+  DROP VIEW user_orders;</code></p>
 </li>
 </ul>
-<h3 id="3_8">3. 数据库设计优化</h3>
-<p>好的数据库设计能够提高数据操作的效率和性能。</p>
+<h3 id="25">2.5 存储过程与函数</h3>
 <ul>
-<li><strong>范式化设计</strong>：通过将数据分解到多个表来减少冗余，提高数据一致性。常见的范式有第一范式 (1NF)、第二范式 (2NF)、第三范式 (3NF) 等。</li>
-<li><strong>反范式化设计</strong>：在需要提升查询性能的情况下，适当进行反范式化，通过冗余数据减少复杂查询的开销。</li>
-<li><strong>分区 (Partitioning)</strong>：对于大表，使用分区可以加快查询速度，将数据分成多个较小的部分存储。</li>
+<li><strong>存储过程</strong>：用于封装一组 SQL 操作，可重复执行。
+  <code>sql
+  DELIMITER //
+  CREATE PROCEDURE GetUserCount()
+  BEGIN
+    SELECT COUNT(*) FROM users;
+  END //
+  DELIMITER ;</code></li>
 </ul>
+<p>调用存储过程：
+  <code>sql
+  CALL GetUserCount();</code></p>
+<ul>
+<li><strong>函数</strong>：类似于存储过程，但有返回值。
+  <code>sql
+  DELIMITER //
+  CREATE FUNCTION GetTotalOrders() RETURNS INT
+  BEGIN
+    DECLARE total INT;
+    SELECT COUNT(*) INTO total FROM orders;
+    RETURN total;
+  END //
+  DELIMITER ;</code></li>
+</ul>
+<p>调用函数：
+  <code>sql
+  SELECT GetTotalOrders();</code></p>
 <hr />
-<h2 id="_12">十三、安全管理</h2>
-<h3 id="1_11">1. 用户和权限管理</h3>
-<p>在 MySQL 中，为了保证数据的安全性和访问控制，你可以创建用户并为他们赋予特定权限。</p>
-<ul>
-<li><strong>创建用户</strong>：</li>
-</ul>
-<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="s1">&#39;username&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span><span class="w"> </span><span class="n">IDENTIFIED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s1">&#39;password&#39;</span><span class="p">;</span>
-</code></pre></div>
-
-<ul>
-<li><strong>授予权限</strong>：</li>
-</ul>
-<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="k">GRANT</span><span class="w"> </span><span class="k">SELECT</span><span class="p">,</span><span class="w"> </span><span class="k">INSERT</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">my_database</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">&#39;username&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span><span class="p">;</span>
-</code></pre></div>
-
-<ul>
-<li><strong>查看用户权限</strong>：</li>
-</ul>
-<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="k">SHOW</span><span class="w"> </span><span class="n">GRANTS</span><span class="w"> </span><span class="k">FOR</span><span class="w"> </span><span class="s1">&#39;username&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span><span class="p">;</span>
-</code></pre></div>
-
-<ul>
-<li><strong>撤销权限</strong>：</li>
-</ul>
-<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="k">REVOKE</span><span class="w"> </span><span class="k">INSERT</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">my_database</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="s1">&#39;username&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span><span class="p">;</span>
-</code></pre></div>
-
-<ul>
-<li><strong>删除用户</strong>：</li>
-</ul>
-<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="k">DROP</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="s1">&#39;username&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span><span class="p">;</span>
-</code></pre></div>
-
-<h3 id="2_9">2. 数据备份与恢复</h3>
-<h4 id="_13">备份：</h4>
-<p>使用 <code>mysqldump</code> 工具可以备份整个数据库或特定表：</p>
-<div class="codehilite"><pre><span></span><code>mysqldump<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p<span class="w"> </span>my_database<span class="w"> </span>&gt;<span class="w"> </span>backup.sql
-</code></pre></div>
-
-<h4 id="_14">恢复：</h4>
-<p>恢复备份的数据：</p>
-<div class="codehilite"><pre><span></span><code>mysql<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p<span class="w"> </span>my_database<span class="w"> </span>&lt;<span class="w"> </span>backup.sql
-</code></pre></div>
-
-<h3 id="3_9">3. 数据加密</h3>
-<h4 id="_15">数据传输加密：</h4>
-<p>使用 SSL 加密可以保护客户端与服务器之间的数据传输。</p>
-<h4 id="_16">数据存储加密：</h4>
-<p>MySQL 支持加密表空间，用于保护数据在磁盘上的存储安全。</p>
-<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">encrypted_table</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-<span class="w">    </span><span class="n">secret_data</span><span class="w"> </span><span class="n">VARBINARY</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span>
-<span class="p">)</span><span class="w"> </span><span class="n">ENCRYPTION</span><span class="o">=</span><span class="s1">&#39;Y&#39;</span><span class="p">;</span>
-</code></pre></div>
-
+<h2 id="3-mysql">3. <strong>MySQL 优化</strong></h2>
+<h3 id="31">3.1 查询优化</h3>
+<ol>
+<li>
+<p><strong>使用索引</strong>：通过创建合适的索引，可以显著提高查询速度。查询使用索引时，可以通过 <code>EXPLAIN</code> 语句查看执行计划。
+   <code>sql
+   EXPLAIN SELECT * FROM users WHERE email = 'alice@example.com';</code></p>
+</li>
+<li>
+<p><strong>避免 SELECT *</strong>：查询时只选择必要的列，而不是使用 <code>SELECT *</code>。</p>
+</li>
+<li>
+<p><strong>合理使用 <code>LIMIT</code></strong>：对于大数据集的查询，使用 <code>LIMIT</code> 限制返回的记录数，减少不必要的数据传输。</p>
+</li>
+<li>
+<p><strong>避免过多的 <code>JOIN</code></strong>：多个表连接会增加查询的复杂度和执行时间，尽量避免频繁使用复杂的 <code>JOIN</code>。</p>
+</li>
+</ol>
+<h3 id="32">3.2 数据库设计优化</h3>
+<ol>
+<li>
+<p><strong>范式化</strong>：遵循数据库范式（如第一范式、第二范式、第三范式）进行设计，减少数据冗余。</p>
+</li>
+<li>
+<p><strong>反范式化</strong>：在某些高性能场景下，可以适当反范式化设计，比如通过冗余数据减少 <code>JOIN</code> 操作。</p>
+</li>
+</ol>
+<h3 id="33">3.3 缓存</h3>
+<p>使用 MySQL 查询缓存可以加速相同查询的执行。可以通过配置 <code>query_cache_size</code> 和 <code>query_cache_type</code> 参数来启用和设置查询缓存大小。</p>
+<h3 id="34">3.4 数据库备份与恢复</h3>
+<ol>
+<li>
+<p><strong>备份数据库</strong>：
+   <code>bash
+   mysqldump -u root -p my_database &gt; backup.sql</code></p>
+</li>
+<li>
+<p><strong>恢复数据库</strong>：
+   <code>bash
+   mysql -u root -p my_database &lt; backup.sql</code></p>
+</li>
+</ol>
 <hr />
-<h2 id="mysql_5">十四、MySQL 常见问题</h2>
-<h3 id="1_12">1. 数据库锁机制</h3>
-<p>锁是数据库用来保证并发控制的机制。常见的锁包括：</p>
+<h2 id="4-mysql">4. <strong>进阶 MySQL 特性</strong></h2>
+<h3 id="41">4.1 分区表</h3>
+<p>分区表将大型表分割成多个部分，以加速查询性能。</p>
 <ul>
-<li><strong>共享锁 (Shared Lock)</strong>：允许多个事务读取同一个资源，但不允许修改。</li>
-<li><strong>排它锁 (Exclusive Lock)</strong>：一个事务持有排它锁时，其他事务既不能读也不能写该资源。</li>
+<li><strong>创建分区表</strong>：
+  <code>sql
+  CREATE TABLE orders (
+    id INT,
+    amount DECIMAL(10, 2),
+    order_date DATE
+  )
+  PARTITION BY RANGE (YEAR(order_date)) (
+    PARTITION p2022 VALUES LESS THAN (2023),
+    PARTITION p2023 VALUES LESS THAN (2024)
+  );</code></li>
 </ul>
-<p>查看锁状态：</p>
-<div class="codehilite"><pre><span></span><code><span class="k">SHOW</span><span class="w"> </span><span class="n">ENGINE</span><span class="w"> </span><span class="n">INNODB</span><span class="w"> </span><span class="n">STATUS</span><span class="p">;</span>
+<h3 id="42">4.2 主从复制</h3>
+<p>MySQL 支持主从复制机制，用于实现高可用性和负载均衡。主从复制的基本流程如下：</p>
+<ol>
+<li><strong>主服务器（Master）</strong>：接收写操作并将操作日志发送给从服务器。</li>
+<li>
+<p><strong>从服务器（Slave）</strong>：接收来自主服务器的日志并执行相应操作。</p>
+</li>
+<li>
+<p><strong>配置主从复制</strong>的详细步骤较为复杂，涉及修改 MySQL 配置文件和使用 <code>CHANGE MASTER TO</code> 命令。可以查阅 MySQL 官方文档获取详细步骤。</p>
+</li>
+</ol>
+<hr />
+<h3 id="5-mysql">5. <strong>高级 MySQL 特性与技术</strong></h3>
+<p>除了基础操作和查询优化外，MySQL 还提供了许多高级功能，这些功能可以帮助处理复杂的业务场景、提升性能、增加系统可靠性。</p>
+<hr />
+<h2 id="51-triggers">5.1 <strong>触发器（Triggers）</strong></h2>
+<p>触发器是一种特殊的存储在数据库中的程序，它在特定事件发生时自动执行。你可以在插入（<code>INSERT</code>）、更新（<code>UPDATE</code>）、删除（<code>DELETE</code>）操作时自动触发这些程序，用于实现一些自动化的操作。</p>
+<h3 id="511">5.1.1 创建触发器</h3>
+<p>触发器在表上执行，并且是在某种特定操作（插入、更新、删除）之前或之后运行。</p>
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="n">before_insert_user</span>
+<span class="k">BEFORE</span><span class="w"> </span><span class="k">INSERT</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">users</span>
+<span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span>
+<span class="k">BEGIN</span>
+<span class="w">  </span><span class="k">SET</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">created_at</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NOW</span><span class="p">();</span>
+<span class="k">END</span><span class="p">;</span>
 </code></pre></div>
 
-<h3 id="2-deadlock">2. 死锁 (Deadlock)</h3>
-<p>死锁是指两个或多个事务互相等待对方释放锁，导致无法继续执行。为避免死锁，应该：</p>
+<h3 id="512">5.1.2 删除触发器</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">DROP</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">before_insert_user</span><span class="p">;</span>
+</code></pre></div>
+
+<p>触发器可以帮助在业务逻辑中自动处理一些数据，比如在插入数据前自动设置时间戳，或在删除记录时自动记录日志。</p>
+<hr />
+<h2 id="52-storage-engines">5.2 <strong>存储引擎（Storage Engines）</strong></h2>
+<p>MySQL 支持多种存储引擎，不同的引擎适用于不同的应用场景。最常见的存储引擎包括 <strong>InnoDB</strong> 和 <strong>MyISAM</strong>。</p>
+<h3 id="521-innodb">5.2.1 InnoDB</h3>
 <ul>
-<li>按照相同的顺序访问表和行。</li>
-<li>使用较短的事务，尽量减少锁的持有时间。</li>
-<li>避免在同一事务中频繁请求锁。</li>
+<li><strong>支持事务</strong>：InnoDB 是 MySQL 默认的存储引擎，支持 ACID（原子性、一致性、隔离性、持久性）事务。</li>
+<li><strong>外键支持</strong>：InnoDB 支持外键约束，这使得它可以处理关系复杂的数据表。</li>
+<li><strong>数据安全</strong>：InnoDB 提供了崩溃恢复功能，确保即使在数据库意外关闭时也不会丢失数据。</li>
 </ul>
-<p>当发生死锁时，MySQL 会自动选择一个事务进行回滚。你可以通过 <code>SHOW ENGINE INNODB STATUS</code> 命令查看最近的死锁信息。</p>
-<h3 id="3-innodb-vs-myisam">3. InnoDB vs MyISAM 存储引擎</h3>
-<p>MySQL 常用的两种存储引擎是 InnoDB 和 MyISAM，它们有以下区别：</p>
-<ul>
-<li><strong>InnoDB</strong>：支持事务和外键，使用行级锁，更适合频繁更新的操作。</li>
-<li><strong>MyISAM</strong>：不支持事务，使用表级锁，查询速度较快，适合以读操作为主的应用。</li>
-</ul>
-<p>你可以在创建表时指定存储引擎：</p>
-<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">my_table</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-<span class="w">    </span><span class="k">data</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<p><strong>创建 InnoDB 表：</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">orders</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">  </span><span class="n">user_id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">amount</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">),</span>
+<span class="w">  </span><span class="n">created_at</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span>
+<span class="w">  </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">user_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">users</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
 <span class="p">)</span><span class="w"> </span><span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span><span class="p">;</span>
 </code></pre></div>
 
-<h3 id="4_2">4. 慢查询日志</h3>
-<p>慢查询日志用于记录执行时间超过指定阈值的 SQL 查询，帮助你分析性能瓶颈。</p>
-<p>开启慢查询日志：</p>
-<div class="codehilite"><pre><span></span><code><span class="k">SET</span><span class="w"> </span><span class="k">GLOBAL</span><span class="w"> </span><span class="n">slow_query_log</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;ON&#39;</span><span class="p">;</span>
-<span class="k">SET</span><span class="w"> </span><span class="k">GLOBAL</span><span class="w"> </span><span class="n">long_query_time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">  </span><span class="c1">-- 设置查询超过 1 秒的记录为慢查询</span>
-</code></pre></div>
-
-<p>查看慢查询日志：</p>
-<div class="codehilite"><pre><span></span><code>cat<span class="w"> </span>/var/lib/mysql/slow.log
-</code></pre></div>
-
-<h3 id="5-mysql">5. MySQL 性能调优工具</h3>
+<h3 id="522-myisam">5.2.2 MyISAM</h3>
 <ul>
-<li>
-<p><strong>MySQLTuner</strong>：一个开源的 MySQL 性能调优工具，通过分析服务器状态提供优化建议。</p>
-<p>使用方法：
-<code>bash
-wget http://mysqltuner.pl/ -O mysqltuner.pl
-perl mysqltuner.pl</code></p>
-</li>
-<li>
-<p><strong>Percona Toolkit</strong>：提供一组用于 MySQL 数据库管理和性能调优的实用工具。</p>
-</li>
+<li><strong>性能高，但不支持事务</strong>：MyISAM 比 InnoDB 的读取性能更快，但不支持事务和外键。</li>
+<li><strong>适合只读数据或轻量级应用</strong>：MyISAM 引擎适合轻量级应用，特别是只读数据库或不需要严格事务处理的场景。</li>
+</ul>
+<p><strong>创建 MyISAM 表：</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">products</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">  </span><span class="n">name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
+<span class="w">  </span><span class="n">price</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
+<span class="p">)</span><span class="w"> </span><span class="n">ENGINE</span><span class="o">=</span><span class="n">MyISAM</span><span class="p">;</span>
+</code></pre></div>
+
+<h3 id="523-memory">5.2.3 Memory 引擎</h3>
+<ul>
+<li><strong>基于内存的存储</strong>：Memory 引擎将数据存储在内存中，因此它非常快，但数据不会持久化。</li>
+<li><strong>适合临时数据或缓存</strong>：该引擎适合处理临时数据或需要高速存取但不需要持久化的场景。</li>
+</ul>
+<p><strong>创建 Memory 表：</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">cache</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">  </span><span class="k">data</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="p">)</span><span class="w"> </span><span class="n">ENGINE</span><span class="o">=</span><span class="n">MEMORY</span><span class="p">;</span>
+</code></pre></div>
+
+<h3 id="524">5.2.4 表的存储引擎选择</h3>
+<p>存储引擎的选择取决于应用场景。如果需要支持事务、数据完整性要求高，那么建议使用 InnoDB。如果只是做查询密集型的场景（如数据仓库或日志系统），MyISAM 可能更适合。</p>
+<hr />
+<h2 id="53-partitioning">5.3 <strong>分区（Partitioning）</strong></h2>
+<p>分区是将表水平切分成多个部分，以加速查询和提高性能。分区表特别适合处理大型数据集，尤其是按日期、地理位置或其他特定字段进行的查询。</p>
+<h3 id="531-range-partitioning">5.3.1 范围分区（Range Partitioning）</h3>
+<p>按范围分割表数据。例如，可以将订单表按年份分区：</p>
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">orders</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">amount</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">),</span>
+<span class="w">  </span><span class="n">order_date</span><span class="w"> </span><span class="nb">DATE</span>
+<span class="p">)</span>
+<span class="n">PARTITION</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">RANGE</span><span class="w"> </span><span class="p">(</span><span class="k">YEAR</span><span class="p">(</span><span class="n">order_date</span><span class="p">))</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">PARTITION</span><span class="w"> </span><span class="n">p2021</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="k">LESS</span><span class="w"> </span><span class="k">THAN</span><span class="w"> </span><span class="p">(</span><span class="mi">2022</span><span class="p">),</span>
+<span class="w">  </span><span class="n">PARTITION</span><span class="w"> </span><span class="n">p2022</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="k">LESS</span><span class="w"> </span><span class="k">THAN</span><span class="w"> </span><span class="p">(</span><span class="mi">2023</span><span class="p">),</span>
+<span class="w">  </span><span class="n">PARTITION</span><span class="w"> </span><span class="n">p2023</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="k">LESS</span><span class="w"> </span><span class="k">THAN</span><span class="w"> </span><span class="p">(</span><span class="mi">2024</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+
+<h3 id="532-list-partitioning">5.3.2 列表分区（List Partitioning）</h3>
+<p>列表分区按具体值分割表数据。例如，可以根据地区分区：</p>
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
+<span class="w">  </span><span class="n">country</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="n">PARTITION</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">LIST</span><span class="w"> </span><span class="p">(</span><span class="n">country</span><span class="p">)</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">PARTITION</span><span class="w"> </span><span class="n">usa</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;USA&#39;</span><span class="p">),</span>
+<span class="w">  </span><span class="n">PARTITION</span><span class="w"> </span><span class="n">uk</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;UK&#39;</span><span class="p">),</span>
+<span class="w">  </span><span class="n">PARTITION</span><span class="w"> </span><span class="n">other</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;Canada&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Mexico&#39;</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+
+<h3 id="533">5.3.3 分区的优点</h3>
+<ul>
+<li><strong>查询加速</strong>：分区表可以加快查询速度，特别是当查询的数据只涉及某个分区时。</li>
+<li><strong>数据管理</strong>：可以对不同分区的数据进行独立管理，比如单独备份、恢复或删除特定分区的数据。</li>
 </ul>
 <hr />
-<h2 id="mysql_6">十五、MySQL 备份与恢复策略</h2>
-<h3 id="1_13">1. 完全备份</h3>
-<p>完全备份是对整个数据库或服务器进行备份，适合用作定期备份和紧急恢复。</p>
-<div class="codehilite"><pre><span></span><code>mysqldump<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p<span class="w"> </span>--all-databases<span class="w"> </span>&gt;<span class="w"> </span>all_databases_backup.sql
-</code></pre></div>
-
-<h3 id="2_10">2. 增量备份</h3>
-<p>增量备份是指只备份上次备份后发生变化的数据，适合大型数据库的备份。</p>
-<p>使用 <code>binary logs</code> 可以实现增量备份：</p>
-<div class="codehilite"><pre><span></span><code>mysqlbinlog<span class="w"> </span>--start-datetime<span class="o">=</span><span class="s2">&quot;2024-09-06 10:00:00&quot;</span><span class="w"> </span>/var/log/mysql-bin.000001<span class="w"> </span>&gt;<span class="w"> </span>incremental_backup.sql
-</code></pre></div>
-
-<h3 id="3_10">3. 恢复数据</h3>
-<p>恢复数据时，先恢复完全备份，再应用增量备份。</p>
+<h2 id="54">5.4 <strong>集群与高可用性</strong></h2>
+<p>MySQL 支持多种集群和高可用性方案，帮助企业实现高性能、高可用的数据服务。</p>
+<h3 id="541-master-slave-replication">5.4.1 主从复制（Master-Slave Replication）</h3>
+<p>主从复制是 MySQL 中最常见的一种复制机制，它允许一台主服务器处理写请求，然后将数据复制到从服务器，来处理读请求。</p>
+<ul>
+<li><strong>主服务器</strong>：处理所有写操作。</li>
+<li><strong>从服务器</strong>：实时复制主服务器的数据，处理读操作。</li>
+</ul>
+<p><strong>配置步骤：</strong></p>
+<ol>
+<li>
+<p>在主服务器上配置二进制日志：
+   <code>ini
+   [mysqld]
+   log-bin=mysql-bin
+   server-id=1</code></p>
+</li>
+<li>
+<p>在从服务器上设置复制参数：
+   <code>ini
+   [mysqld]
+   server-id=2</code></p>
+</li>
+<li>
+<p>启动从服务器，执行 <code>CHANGE MASTER TO</code> 命令来连接主服务器：
+   <code>sql
+   CHANGE MASTER TO
+   MASTER_HOST='master_host',
+   MASTER_USER='replication_user',
+   MASTER_PASSWORD='password',
+   MASTER_LOG_FILE='mysql-bin.000001',
+   MASTER_LOG_POS= 123;</code></p>
+</li>
+<li>
+<p>启动从服务器复制：
+   <code>sql
+   START SLAVE;</code></p>
+</li>
+</ol>
+<h3 id="542-master-master-replication">5.4.2 主主复制（Master-Master Replication）</h3>
+<p>主主复制允许两台服务器都能进行写操作，同时将数据互相同步。这种架构的优势在于提供了更高的可用性，但也可能会引入数据冲突问题，因此需要适当的冲突处理机制。</p>
+<h3 id="543-mysql-cluster">5.4.3 MySQL Cluster</h3>
+<p>MySQL Cluster 是一种高可用性和可扩展性的数据库架构，它通过分布式集群来实现高可用、自动故障转移和数据分片。</p>
+<p><strong>MySQL Cluster 的主要组件：</strong></p>
+<ul>
+<li><strong>管理节点</strong>：管理集群配置和元数据。</li>
+<li><strong>数据节点</strong>：存储实际数据。</li>
+<li><strong>SQL 节点</strong>：处理 SQL 查询。</li>
+</ul>
+<p>MySQL Cluster 非常适合需要高并发、低延迟的大规模应用，例如电信、金融或实时应用。</p>
 <hr />
-<p>通过掌握这些 MySQL 的高级功能和优化技巧，你可以更有效地管理和调优 MySQL 数据库，提高系统的性能、安全性以及稳定性。</p>
+<h2 id="55">5.5 <strong>安全性与权限管理</strong></h2>
+<p>在生产环境中，确保数据库的安全性至关重要。MySQL 提供了多种方式来管理用户权限和保证数据安全。</p>
+<h3 id="551">5.5.1 创建用户</h3>
+<p>使用 <code>CREATE USER</code> 命令来创建新用户：</p>
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="s1">&#39;username&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span><span class="w"> </span><span class="n">IDENTIFIED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s1">&#39;password&#39;</span><span class="p">;</span>
+</code></pre></div>
+
+<h3 id="552">5.5.2 分配权限</h3>
+<p>分配权限使用 <code>GRANT</code> 命令，权限级别包括全局权限、数据库权限和表级权限。</p>
+<ol>
+<li>
+<p><strong>授予数据库级别权限</strong>：
+   <code>sql
+   GRANT ALL PRIVILEGES ON my_database.* TO 'username'@'localhost';</code></p>
+</li>
+<li>
+<p><strong>授予表级别权限</strong>：
+   <code>sql
+   GRANT SELECT, INSERT ON my_database.users TO 'username'@'localhost';</code></p>
+</li>
+</ol>
+<h3 id="553">5.5.3 撤销权限</h3>
+<p>使用 <code>REVOKE</code> 命令撤销权限：</p>
+<div class="codehilite"><pre><span></span><code><span class="k">REVOKE</span><span class="w"> </span><span class="k">INSERT</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">my_database</span><span class="p">.</span><span class="n">users</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="s1">&#39;username&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span><span class="p">;</span>
+</code></pre></div>
+
+<h3 id="554">5.5.4 删除用户</h3>
+<p>删除用户使用 <code>DROP USER</code> 命令：</p>
+<div class="codehilite"><pre><span></span><code><span class="k">DROP</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="s1">&#39;username&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span><span class="p">;</span>
+</code></pre></div>
+
+<hr />
+<h2 id="6-mysql">6. <strong>MySQL 性能监控与调优</strong></h2>
+<p>性能监控和调优是保持数据库运行高效、稳定的重要环节。MySQL 提供了一些工具和命令来帮助分析数据库性能瓶颈。</p>
+<h3 id="61">6.1 查询性能分析</h3>
+<p>使用 <code>EXPLAIN</code> 命令来查看查询的执行计划：</p>
+<div class="codehilite"><pre><span></span><code><span class="k">EXPLAIN</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;example@example.com&#39;</span><span class="p">;</span>
+</code></pre></div>
+
+<p>这会显示 MySQL 如何执行查询，是否使用了索引，以及扫描的行数。</p>
+<h3 id="62">6.2 慢查询日志</h3>
+<p>启用慢查询日志来记录执行时间超过阈值的查询：</p>
+<div class="codehilite"><pre><span></span><code><span class="k">[mysqld]</span>
+<span class="na">slow_query_log</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1</span>
+<span class="na">slow_query_log_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/var/log/mysql/slow.log</span>
+<span class="na">long_query_time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">2</span><span class="w">  </span><span class="c1"># 记录执行时间超过2秒的查询</span>
+</code></pre></div>
+
+<p>通过分析慢查询日志，找出需要优化的 SQL 语句。</p>
+<h3 id="63">6.3 性能调优工具</h3>
+<p>MySQL 提供了几个内置的工具来帮助监控和调优：</p>
+<ol>
+<li><strong>MySQL Performance Schema</strong>：提供详细的性能监控数据，包括锁、查询等资源消耗情况。</li>
+<li><strong>SHOW STATUS</strong>：显示 MySQL 的运行状态：
+   <code>sql
+   SHOW GLOBAL STATUS LIKE 'Threads_connected';</code></li>
+</ol>
+<p>通过这些状态信息，可以监控 MySQL 服务器的负载情况，从而采取必要的优化措施。</p>
+<hr />
+<h3 id="7-mysql">7. <strong>MySQL 管理与维护</strong></h3>
+<p>在生产环境中，数据库管理和维护是日常运维的重要部分。维护数据库的健康状态、确保数据的完整性和安全性、定期备份和监控性能都是管理员的主要任务。</p>
+<hr />
+<h2 id="71">7.1 <strong>数据库备份与恢复</strong></h2>
+<p>数据库备份是防止数据丢失的关键步骤，尤其在灾难发生时，备份是唯一能够恢复数据的手段。</p>
+<h3 id="711-mysqldump">7.1.1 逻辑备份（使用 <code>mysqldump</code>）</h3>
+<p><code>mysqldump</code> 是 MySQL 提供的逻辑备份工具，它将数据库导出为 SQL 文件。</p>
+<ol>
+<li>
+<p><strong>备份单个数据库</strong>：
+   <code>bash
+   mysqldump -u root -p my_database &gt; backup.sql</code></p>
+</li>
+<li>
+<p><strong>备份所有数据库</strong>：
+   <code>bash
+   mysqldump -u root -p --all-databases &gt; all_backup.sql</code></p>
+</li>
+<li>
+<p><strong>备份特定的表</strong>：
+   <code>bash
+   mysqldump -u root -p my_database my_table &gt; table_backup.sql</code></p>
+</li>
+<li>
+<p><strong>恢复数据库</strong>：
+   <code>bash
+   mysql -u root -p my_database &lt; backup.sql</code></p>
+</li>
+<li>
+<p><strong>压缩备份</strong>：
+   <code>bash
+   mysqldump -u root -p my_database | gzip &gt; backup.sql.gz</code></p>
+</li>
+</ol>
+<h3 id="712-mysqlhotcopy">7.1.2 物理备份（使用 <code>mysqlhotcopy</code>）</h3>
+<p><code>mysqlhotcopy</code> 是 MySQL 提供的物理备份工具，它直接复制数据库的物理文件，适用于 MyISAM 和 ARCHIVE 存储引擎。</p>
+<div class="codehilite"><pre><span></span><code>mysqlhotcopy<span class="w"> </span>my_database<span class="w"> </span>/path/to/backup
+</code></pre></div>
+
+<h3 id="713-binlog">7.1.3 增量备份（使用 <code>binlog</code>）</h3>
+<p>二进制日志（binlog）记录了数据库的所有写操作，可以用来实现增量备份和恢复。通过启用二进制日志，你可以恢复到特定时间点的状态。</p>
+<ol>
+<li>
+<p><strong>启用二进制日志</strong>：
+   在 MySQL 配置文件（<code>my.cnf</code>）中启用二进制日志：
+   <code>ini
+   [mysqld]
+   log-bin=mysql-bin</code></p>
+</li>
+<li>
+<p><strong>恢复增量数据</strong>：
+   假设你有一个完整的备份（<code>backup.sql</code>），以及二进制日志文件（<code>mysql-bin.000001</code>），你可以恢复增量数据：
+   <code>bash
+   mysql -u root -p my_database &lt; backup.sql
+   mysqlbinlog mysql-bin.000001 | mysql -u root -p my_database</code></p>
+</li>
+</ol>
+<hr />
+<h2 id="72-cron-mysql">7.2 <strong>自动化任务调度（使用 <code>cron</code> 和 MySQL 事件）</strong></h2>
+<p>定期执行备份、数据库清理等任务是数据库管理中的重要部分。你可以使用 Linux 的 <code>cron</code> 工具和 MySQL 事件来自动化这些操作。</p>
+<h3 id="721-cron-mysql">7.2.1 使用 <code>cron</code> 调度 MySQL 备份</h3>
+<p><code>cron</code> 是 Unix/Linux 系统中的定时任务调度器。你可以设置定时任务来自动备份 MySQL 数据库。</p>
+<ol>
+<li>
+<p><strong>编辑 <code>crontab</code> 文件</strong>：
+   <code>bash
+   crontab -e</code></p>
+</li>
+<li>
+<p><strong>添加定时任务</strong>：
+   每天凌晨 2 点执行数据库备份：
+   <code>bash
+   0 2 * * * mysqldump -u root -p my_database &gt; /path/to/backup/backup_$(date +\%F).sql</code></p>
+</li>
+</ol>
+<h3 id="722-mysql">7.2.2 MySQL 事件调度器</h3>
+<p>MySQL 内置了事件调度器功能，可以用来执行定时任务。</p>
+<ol>
+<li>
+<p><strong>启用事件调度器</strong>：
+   <code>sql
+   SET GLOBAL event_scheduler = ON;</code></p>
+</li>
+<li>
+<p><strong>创建定时事件</strong>：
+   创建一个每天清理旧数据的事件：
+   <code>sql
+   CREATE EVENT IF NOT EXISTS cleanup_old_orders
+   ON SCHEDULE EVERY 1 DAY
+   DO
+   DELETE FROM orders WHERE order_date &lt; NOW() - INTERVAL 1 YEAR;</code></p>
+</li>
+<li>
+<p><strong>查看事件状态</strong>：
+   <code>sql
+   SHOW EVENTS;</code></p>
+</li>
+<li>
+<p><strong>删除事件</strong>：
+   <code>sql
+   DROP EVENT IF EXISTS cleanup_old_orders;</code></p>
+</li>
+</ol>
+<p>通过使用 <code>cron</code> 和 MySQL 事件调度器，管理员可以自动化数据库管理任务，减轻手动操作的负担。</p>
+<hr />
+<h2 id="73">7.3 <strong>权限与安全管理</strong></h2>
+<p>数据库的安全性管理至关重要，包括用户权限、数据加密以及网络安全等方面。</p>
+<h3 id="731">7.3.1 用户与权限管理</h3>
+<p>MySQL 提供了细粒度的用户权限控制，可以为不同用户分配不同的数据库操作权限。</p>
+<ol>
+<li>
+<p><strong>创建新用户</strong>：
+   <code>sql
+   CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';</code></p>
+</li>
+<li>
+<p><strong>授予权限</strong>：
+   给用户授予指定数据库的权限：
+   <code>sql
+   GRANT ALL PRIVILEGES ON my_database.* TO 'username'@'localhost';</code></p>
+</li>
+<li>
+<p><strong>查看用户权限</strong>：
+   <code>sql
+   SHOW GRANTS FOR 'username'@'localhost';</code></p>
+</li>
+<li>
+<p><strong>撤销权限</strong>：
+   <code>sql
+   REVOKE INSERT, UPDATE ON my_database.* FROM 'username'@'localhost';</code></p>
+</li>
+<li>
+<p><strong>删除用户</strong>：
+   <code>sql
+   DROP USER 'username'@'localhost';</code></p>
+</li>
+</ol>
+<h3 id="732">7.3.2 数据加密</h3>
+<p>MySQL 支持对数据传输和存储进行加密，以确保数据安全。</p>
+<ol>
+<li>
+<p><strong>启用 SSL 加密</strong>：
+   配置 MySQL 使用 SSL 来加密客户端和服务器之间的通信。首先生成 SSL 证书，然后在 MySQL 配置文件中启用 SSL：
+   <code>ini
+   [mysqld]
+   require_secure_transport=ON
+   ssl-ca=/path/to/ca-cert.pem
+   ssl-cert=/path/to/server-cert.pem
+   ssl-key=/path/to/server-key.pem</code></p>
+</li>
+<li>
+<p><strong>加密数据列</strong>：
+   在某些情况下，你可能需要对敏感数据列进行加密，比如存储密码或个人信息：
+   <code>sql
+   INSERT INTO users (name, email, password) 
+   VALUES ('Alice', 'alice@example.com', AES_ENCRYPT('mypassword', 'encryption_key'));</code></p>
+</li>
+</ol>
+<p>查询加密数据：
+   <code>sql
+   SELECT AES_DECRYPT(password, 'encryption_key') FROM users WHERE name = 'Alice';</code></p>
+<hr />
+<h2 id="74">7.4 <strong>性能监控与调优</strong></h2>
+<p>随着数据库规模的增长，性能问题可能会变得更加明显。MySQL 提供了一些内置工具和方法来帮助你监控和优化数据库性能。</p>
+<h3 id="741-explain">7.4.1 使用 <code>EXPLAIN</code> 优化查询</h3>
+<p><code>EXPLAIN</code> 命令可以显示查询执行计划，帮助找出查询性能瓶颈。</p>
+<div class="codehilite"><pre><span></span><code><span class="k">EXPLAIN</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">orders</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">user_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</code></pre></div>
+
+<h3 id="742-show-status">7.4.2 使用 <code>SHOW STATUS</code> 监控服务器性能</h3>
+<p><code>SHOW STATUS</code> 命令可以显示 MySQL 服务器的状态变量，如连接数、查询次数等：</p>
+<div class="codehilite"><pre><span></span><code><span class="k">SHOW</span><span class="w"> </span><span class="k">GLOBAL</span><span class="w"> </span><span class="n">STATUS</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;Threads_connected&#39;</span><span class="p">;</span>
+<span class="k">SHOW</span><span class="w"> </span><span class="k">GLOBAL</span><span class="w"> </span><span class="n">STATUS</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;Queries&#39;</span><span class="p">;</span>
+</code></pre></div>
+
+<h3 id="743">7.4.3 使用慢查询日志分析性能问题</h3>
+<p>启用慢查询日志可以帮助你找出那些执行时间较长的 SQL 查询：</p>
+<ol>
+<li>
+<p><strong>启用慢查询日志</strong>：
+   在 MySQL 配置文件中启用慢查询日志：
+   <code>ini
+   [mysqld]
+   slow_query_log = 1
+   slow_query_log_file = /var/log/mysql/slow.log
+   long_query_time = 2  # 查询超过2秒的记录</code></p>
+</li>
+<li>
+<p><strong>分析慢查询日志</strong>：
+   通过日志文件查看哪些查询导致了性能瓶颈，然后进行优化。</p>
+</li>
+</ol>
+<hr />
+<h2 id="8-mysql">8. <strong>MySQL 高可用性与灾难恢复</strong></h2>
+<p>在大规模应用中，数据库的高可用性和灾难恢复至关重要。MySQL 提供了多种高可用性方案来确保数据的连续性和可靠性。</p>
+<hr />
+<h3 id="81">8.1 <strong>主从复制</strong></h3>
+<p>主从复制（Master-Slave Replication）是一种常见的高可用性和数据冗余方案，它可以将主服务器的数据实时复制到从服务器。</p>
+<ol>
+<li><strong>主服务器</strong>：处理写操作并将操作日志传递给从服务器。</li>
+<li><strong>从服务器</strong>：只处理读操作，通过复制主服务器的数据进行同步。</li>
+</ol>
+<h3 id="82">8.2 <strong>主主复制</strong></h3>
+<p>主主复制（Master-Master Replication）允许两个服务器互相复制数据，均能处理读写操作。这种配置提高了系统的容错性和可用性。</p>
+<h3 id="83-mysql-group-replication">8.3 <strong>MySQL Group Replication</strong></h3>
+<p>MySQL Group Replication 是 MySQL 官方提供的高可用集群解决方案，支持自动故障转移。它通过多主结构（Multi-Master）实现数据同步，并保证数据的一致性。</p>
+<hr />
+<h2 id="9-mysql">9. <strong>MySQL 日志与审计</strong></h2>
+<p>日志和审计功能有助于记录和分析数据库操作，确保数据库的安全性和可审计性。</p>
+<h3 id="91-binary-log">9.1 <strong>二进制日志（Binary Log）</strong></h3>
+<p>二进制日志记录了所有更改数据的 SQL 语句，是数据恢复和复制的关键工具。</p>
+<h3 id="92-error-log">9.2 <strong>错误日志（Error Log）</strong></h3>
+<p>错误日志记录了 MySQL 服务器的启动和关闭信息，以及发生的错误。通过错误日志可以排查系统中的问题。</p>
+<hr />
+<h3 id="10-mysql">10. <strong>MySQL 扩展功能与第三方工具</strong></h3>
+<p>在实际开发和运维中，除了 MySQL 内置的功能，使用一些扩展功能和第三方工具可以帮助管理员更加高效地管理数据库系统，提升性能和可维护性。</p>
+<hr />
+<h2 id="101-full-text-search">10.1 <strong>全文检索（Full-Text Search）</strong></h2>
+<p>MySQL 提供了全文检索功能，允许你在大文本数据中快速查找匹配项。这种功能通常应用在搜索引擎、内容管理系统和电子商务网站的产品搜索中。</p>
+<h3 id="1011">10.1.1 创建全文索引</h3>
+<p>要使用全文检索，首先需要为目标字段创建全文索引。MySQL 中支持的存储引擎（如 InnoDB 和 MyISAM）都可以使用全文索引。</p>
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">articles</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">  </span><span class="n">title</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">200</span><span class="p">),</span>
+<span class="w">  </span><span class="n">content</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">FULLTEXT</span><span class="p">(</span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">content</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+
+<h3 id="1012">10.1.2 执行全文检索查询</h3>
+<p>使用 <code>MATCH</code> 和 <code>AGAINST</code> 语法执行全文检索查询。例如，查找包含特定关键字的文章：</p>
+<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">articles</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="k">MATCH</span><span class="p">(</span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">content</span><span class="p">)</span><span class="w"> </span><span class="n">AGAINST</span><span class="p">(</span><span class="s1">&#39;MySQL 全文检索&#39;</span><span class="p">);</span>
+</code></pre></div>
+
+<h3 id="1013-vs">10.1.3 自然语言模式 vs 布尔模式</h3>
+<ul>
+<li><strong>自然语言模式</strong>：根据词频和相关性自动排序结果。上面的查询示例即为自然语言模式。</li>
+<li><strong>布尔模式</strong>：允许使用逻辑运算符（如 <code>+</code>、<code>-</code>）来定义更加精确的搜索条件。</li>
+</ul>
+<p>布尔模式查询示例：</p>
+<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">articles</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="k">MATCH</span><span class="p">(</span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">content</span><span class="p">)</span><span class="w"> </span><span class="n">AGAINST</span><span class="p">(</span><span class="s1">&#39;+MySQL -Python&#39;</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="nb">BOOLEAN</span><span class="w"> </span><span class="k">MODE</span><span class="p">);</span>
+</code></pre></div>
+
+<h3 id="1014">10.1.4 全文检索的应用场景</h3>
+<ul>
+<li><strong>博客或新闻网站</strong>：用于内容搜索，通过关键词查找文章或博客帖子。</li>
+<li><strong>电子商务</strong>：用于产品搜索，通过搜索栏查找商品信息。</li>
+</ul>
+<hr />
+<h2 id="102-mysql">10.2 <strong>MySQL 连接池</strong></h2>
+<p>在高并发应用中，频繁的数据库连接和断开操作可能会影响性能。为了解决这个问题，MySQL 支持连接池技术，通过复用已建立的数据库连接来减少开销。</p>
+<h3 id="1021-mysql">10.2.1 配置 MySQL 连接池</h3>
+<p>在一些流行的框架和语言（如 Java、Python、PHP）中，可以通过配置连接池来提高数据库操作的效率。</p>
+<p><strong>Java 示例</strong>（使用 HikariCP 连接池）：</p>
+<div class="codehilite"><pre><span></span><code><span class="n">HikariConfig</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HikariConfig</span><span class="p">();</span>
+<span class="n">config</span><span class="p">.</span><span class="na">setJdbcUrl</span><span class="p">(</span><span class="s">&quot;jdbc:mysql://localhost:3306/my_database&quot;</span><span class="p">);</span>
+<span class="n">config</span><span class="p">.</span><span class="na">setUsername</span><span class="p">(</span><span class="s">&quot;root&quot;</span><span class="p">);</span>
+<span class="n">config</span><span class="p">.</span><span class="na">setPassword</span><span class="p">(</span><span class="s">&quot;password&quot;</span><span class="p">);</span>
+<span class="n">config</span><span class="p">.</span><span class="na">setMaximumPoolSize</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w">  </span><span class="c1">// 最大连接池大小</span>
+<span class="n">HikariDataSource</span><span class="w"> </span><span class="n">dataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HikariDataSource</span><span class="p">(</span><span class="n">config</span><span class="p">);</span>
+</code></pre></div>
+
+<p><strong>Python 示例</strong>（使用 <code>mysql.connector.pooling</code> 模块）：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">mysql.connector</span> <span class="kn">import</span> <span class="n">pooling</span>
+
+<span class="n">pool</span> <span class="o">=</span> <span class="n">pooling</span><span class="o">.</span><span class="n">MySQLConnectionPool</span><span class="p">(</span>
+    <span class="n">pool_name</span><span class="o">=</span><span class="s2">&quot;mypool&quot;</span><span class="p">,</span>
+    <span class="n">pool_size</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">user</span><span class="o">=</span><span class="s2">&quot;root&quot;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;password&quot;</span><span class="p">,</span>
+    <span class="n">host</span><span class="o">=</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span>
+    <span class="n">database</span><span class="o">=</span><span class="s2">&quot;my_database&quot;</span>
+<span class="p">)</span>
+<span class="n">conn</span> <span class="o">=</span> <span class="n">pool</span><span class="o">.</span><span class="n">get_connection</span><span class="p">()</span>
+</code></pre></div>
+
+<h3 id="1022">10.2.2 连接池的优点</h3>
+<ul>
+<li><strong>减少连接开销</strong>：避免频繁地创建和断开连接，提高性能。</li>
+<li><strong>更好的资源管理</strong>：通过限制连接数来避免数据库超负荷。</li>
+<li><strong>提高响应速度</strong>：减少等待连接的时间，提高应用程序的响应速度。</li>
+</ul>
+<hr />
+<h2 id="103">10.3 <strong>第三方数据库管理工具</strong></h2>
+<p>在实际项目中，使用第三方工具可以简化数据库的管理和监控，帮助开发人员和 DBA 更好地维护 MySQL 数据库。</p>
+<h3 id="1031-phpmyadmin">10.3.1 phpMyAdmin</h3>
+<p><strong>phpMyAdmin</strong> 是一款基于 Web 的 MySQL 管理工具，支持直观的图形界面来进行数据库操作。</p>
+<ul>
+<li><strong>优点</strong>：</li>
+<li>图形化界面，适合不熟悉命令行的用户。</li>
+<li>
+<p>支持数据库备份和恢复、查询执行、表结构管理等操作。</p>
+</li>
+<li>
+<p><strong>安装步骤</strong>：</p>
+</li>
+<li>下载 phpMyAdmin 并解压到服务器目录。</li>
+<li>配置数据库连接信息：
+     <code>php
+     $cfg['Servers'][$i]['host'] = 'localhost';
+     $cfg['Servers'][$i]['user'] = 'root';
+     $cfg['Servers'][$i]['password'] = 'password';</code></li>
+<li>访问 <code>http://localhost/phpmyadmin</code> 进行管理操作。</li>
+</ul>
+<h3 id="1032-mysql-workbench">10.3.2 MySQL Workbench</h3>
+<p><strong>MySQL Workbench</strong> 是官方提供的一款可视化数据库设计与管理工具，支持跨平台使用，适合开发者和 DBA。</p>
+<ul>
+<li><strong>功能</strong>：</li>
+<li>数据库设计：可视化创建和管理数据库模型。</li>
+<li>SQL 开发：编写、执行和优化 SQL 查询。</li>
+<li>
+<p>服务器管理：监控数据库性能、配置用户权限等。</p>
+</li>
+<li>
+<p><strong>安装</strong>：MySQL Workbench 可从 <a href="https://www.mysql.com/products/workbench/">官方 MySQL 网站</a> 下载。</p>
+</li>
+</ul>
+<h3 id="1033-navicat">10.3.3 Navicat</h3>
+<p><strong>Navicat</strong> 是一款强大的数据库管理工具，支持 MySQL、PostgreSQL、MongoDB 等多种数据库，提供直观的用户界面和丰富的功能。</p>
+<ul>
+<li><strong>功能</strong>：</li>
+<li>数据同步：支持数据库结构和数据同步。</li>
+<li>数据备份与恢复：支持定时备份，确保数据安全。</li>
+<li>报告生成：可以生成数据报表，支持导出多种格式（如 Excel、CSV）。</li>
+</ul>
+<hr />
+<h2 id="104-mysql-mysql-s3">10.4 <strong>MySQL 外部存储扩展：MySQL 结合 S3</strong></h2>
+<p>MySQL 8.0 引入了对外部存储（如 Amazon S3）的支持，允许将数据直接存储到外部对象存储服务中，适用于大数据量的存储需求。</p>
+<h3 id="1041-mysql-s3">10.4.1 MySQL 结合 S3 使用场景</h3>
+<ul>
+<li><strong>冷数据存储</strong>：对于一些不常访问的数据，可以通过外部存储来节省本地存储空间。</li>
+<li><strong>日志存储</strong>：将系统日志、大量的历史记录存储到 S3，减少数据库的负担。</li>
+</ul>
+<h3 id="1042-mysql-s3">10.4.2 配置 MySQL 与 S3 的集成</h3>
+<ol>
+<li>确保 MySQL 版本为 8.0 及以上，支持外部存储插件。</li>
+<li>使用 SQL 命令配置 S3 连接：
+   <code>sql
+   INSTALL PLUGIN aws_key_management SONAME 'keyring_aws.so';</code></li>
+<li>配置 AWS S3 凭证并测试连接。</li>
+</ol>
+<h3 id="1043-s3">10.4.3 数据迁移到 S3</h3>
+<p>可以将冷数据、日志文件等迁移到 S3，而在 MySQL 中保留引用，以节省存储空间并提高性能。</p>
+<hr />
+<h2 id="105-mysql-nosql">10.5 <strong>MySQL 与 NoSQL 的集成</strong></h2>
+<p>随着应用程序的需求越来越复杂，有时仅靠 MySQL 的关系型数据库无法满足需求。将 MySQL 与 NoSQL 数据库结合使用是一个有效的解决方案。</p>
+<h3 id="1051-mysql-redis">10.5.1 MySQL 与 Redis 集成</h3>
+<p>Redis 是一个高性能的内存数据库，常用于缓存和实时数据存储。通过将 Redis 与 MySQL 集成，你可以利用 Redis 进行缓存，以减轻 MySQL 的查询压力。</p>
+<h4 id="_1">典型应用场景：</h4>
+<ol>
+<li><strong>缓存热点数据</strong>：将经常访问的数据缓存到 Redis，减少 MySQL 的查询负载。</li>
+<li><strong>会话存储</strong>：使用 Redis 来存储用户会话数据，而持久化数据则存储在 MySQL 中。</li>
+</ol>
+<h3 id="1052-mysql-elasticsearch">10.5.2 MySQL 与 Elasticsearch 集成</h3>
+<p>Elasticsearch 是一个强大的搜索和分析引擎。通过将 MySQL 数据同步到 Elasticsearch，可以实现高效的全文检索功能。</p>
+<h4 id="_2">典型应用场景：</h4>
+<ol>
+<li><strong>数据索引与搜索</strong>：将 MySQL 数据索引到 Elasticsearch 中，提升全文搜索的性能。</li>
+<li><strong>大数据分析</strong>：利用 Elasticsearch 的聚合功能进行大规模数据的实时分析。</li>
+</ol>
+<h4 id="_3">数据同步方式：</h4>
+<ol>
+<li>使用 MySQL 的 <code>binlog</code>（二进制日志）同步数据到 Elasticsearch。</li>
+<li>使用第三方同步工具如 <code>Logstash</code> 或 <code>Debezium</code> 实现实时数据同步。</li>
+</ol>
+<hr />
+<h2 id="11-mysql_1">11. <strong>MySQL 社区资源与学习路径</strong></h2>
+<p>通过社区和网络资源，你可以持续学习和更新 MySQL 的最新知识和实践。</p>
+<h3 id="111-mysql">11.1 MySQL 官方文档</h3>
+<p>MySQL 官方提供了详尽的文档，涵盖所有 MySQL 功能和使用细节：<a href="https://dev.mysql.com/doc/">MySQL 官方文档</a></p>
+<h3 id="112">11.2 开源社区与论坛</h3>
+<ul>
+<li><strong>Stack Overflow</strong>：通过搜索问题和答案，获得社区的帮助。</li>
+<li><strong>MySQL 社区论坛</strong>：参与 MySQL 官方社区讨论，解决问题和学习最新技术。</li>
+</ul>
+<h3 id="113">11.3 学习与实践路线</h3>
+<ol>
+<li><strong>初学者阶段</strong>：</li>
+<li>学习 SQL 语法。</li>
+<li>理解数据库设计的基本原则（如范式）。</li>
+<li>
+<p>掌握 MySQL 基本操作：CRUD（创建、读取、更新、删除）。</p>
+</li>
+<li>
+<p><strong>进阶阶段</strong>：</p>
+</li>
+<li>掌握性能优化技巧：索引优化、查询优化。</li>
+<li>学习事务管理和存储过程的使用。</li>
+<li>
+<p>了解备份与恢复策略。</p>
+</li>
+<li>
+<p><strong>高级阶段</strong>：</p>
+</li>
+<li>学习高可用性和灾难恢复方案：主从复制、集群管理。</li>
+<li>
+<p>掌握 MySQL 与其他技术的集成：NoSQL 数据库、外部存储服务。</p>
+</li>
+<li>
+<p><strong>专业阶段</strong>：</p>
+</li>
+<li>深入研究 MySQL 性能监控与调优。</li>
+<li>参与大型项目，应用所学的最佳实践。</li>
+<li>在社区和论坛中分享经验和知识。</li>
+</ol>
+<hr />
+<p>以上内容涵盖了 MySQL 的许多扩展功能和高级应用，希望这些信息对您深入了解和应用 MySQL 有所帮助。</p>
 
 
 
@@ -6003,7 +7633,7 @@ perl mysqltuner.pl</code></p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "toc.integrate", "search.highlight", "search.suggest", "header.autohide", "footer.copyright", "footer.text", "code.annotate", "content.code", "material.nav", "material.switch", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.56dfad97.min.js"></script>

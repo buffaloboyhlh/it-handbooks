@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="zh" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -64,10 +64,12 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-orange">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -77,7 +79,7 @@
       
         
         <a href="#_1" class="md-skip">
-          跳转至
+          Skip to content
         </a>
       
     </div>
@@ -91,7 +93,7 @@
   
 
 <header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="页眉">
+  <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../../.." title="IT-手册" class="md-header__button md-logo" aria-label="IT-手册" data-md-component="logo">
       
   
@@ -120,7 +122,33 @@
     </div>
     
       
+        <form class="md-header__option" data-md-component="palette">
+  
     
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -132,29 +160,27 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="查找">
+      <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            正在初始化搜索引擎
+            Initializing search
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -187,9 +213,7 @@
 
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="导航栏" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="IT-手册" class="md-nav__button md-logo" aria-label="IT-手册" data-md-component="logo">
       
@@ -231,20 +255,15 @@
     
     
     
-      
-        
-        
-      
     
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -270,8 +289,6 @@
   
     
     
-    
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -421,8 +438,6 @@
     
     
     
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -528,8 +543,6 @@
   
     
     
-    
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -665,20 +678,15 @@
     
     
     
-      
-        
-        
-      
     
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -704,8 +712,6 @@
   
     
     
-    
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -792,8 +798,6 @@
     
     
     
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -878,8 +882,6 @@
   
     
     
-    
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -973,20 +975,15 @@
     
     
     
-      
-        
-        
-      
     
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1012,8 +1009,6 @@
   
     
     
-    
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1078,8 +1073,6 @@
   
     
     
-    
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1165,8 +1158,6 @@
   
     
     
-    
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1325,20 +1316,15 @@
     
     
     
-      
-        
-        
-      
     
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1364,8 +1350,6 @@
   
     
     
-    
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1451,8 +1435,6 @@
   
     
     
-    
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1562,8 +1544,6 @@
     
     
     
-      
-    
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
@@ -1629,7 +1609,7 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -1638,7 +1618,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -2439,8 +2419,6 @@
     
     
     
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -2554,20 +2532,15 @@
     
     
     
-      
-        
-        
-      
     
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2706,20 +2679,15 @@
     
     
     
-      
-        
-        
-      
     
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2745,8 +2713,6 @@
   
     
     
-    
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -2875,8 +2841,6 @@
     
     
     
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -3004,8 +2968,6 @@
     
     
     
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -3039,53 +3001,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/SQL/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    SQL 教程
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/advance/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    MySQL 进阶教程
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    MySQL 基础教程
+    MySQL 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/command/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MySQL 常用命令
   </span>
   
 
@@ -3154,8 +3095,6 @@
     
     
     
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -3168,7 +3107,7 @@
             
   
   <span class="md-ellipsis">
-    Redis
+    PostgreSQL
   </span>
   
 
@@ -3177,6 +3116,91 @@
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            PostgreSQL
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/PostgreSQL/advance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PostgreSQL 进阶教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/PostgreSQL/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PostgreSQL 基础教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Redis
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_5">
             <span class="md-nav__icon md-icon"></span>
             Redis
           </label>
@@ -3193,7 +3217,7 @@
         
   
   <span class="md-ellipsis">
-    Redis 基础教程
+    Redis 教程
   </span>
   
 
@@ -3269,20 +3293,15 @@
     
     
     
-      
-        
-        
-      
     
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3379,20 +3398,15 @@
     
     
     
-      
-        
-        
-      
     
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
         
           
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3418,8 +3432,6 @@
   
     
     
-    
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -3506,8 +3518,6 @@
     
     
     
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -3579,20 +3589,162 @@
     
     
     
-      
-        
-        
-      
     
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
         
           
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    系统设计
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            系统设计
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/bloom/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    布隆过滤器
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/hash/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一致性哈希
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/id/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    唯一ID
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/interview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    系统设计题目
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/ratelimit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    限流
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3603,8 +3755,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             计算机基础
           </label>
@@ -3710,20 +3862,15 @@
     
     
     
-      
-        
-        
-      
     
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
         
           
-          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="">
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3734,8 +3881,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
             <span class="md-nav__icon md-icon"></span>
             语言篇
           </label>
@@ -3750,17 +3897,15 @@
     
     
     
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_1" >
         
           
-          <label class="md-nav__link" for="__nav_11_1" id="__nav_11_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12_1" id="__nav_12_1_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3771,8 +3916,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_1">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_1">
             <span class="md-nav__icon md-icon"></span>
             C++
           </label>
@@ -3858,17 +4003,15 @@
     
     
     
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_2" >
         
           
-          <label class="md-nav__link" for="__nav_11_2" id="__nav_11_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12_2" id="__nav_12_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3879,8 +4022,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_2">
             <span class="md-nav__icon md-icon"></span>
             Golang
           </label>
@@ -3937,17 +4080,15 @@
     
     
     
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_2_3" >
         
           
-          <label class="md-nav__link" for="__nav_11_2_3" id="__nav_11_2_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12_2_3" id="__nav_12_2_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3958,8 +4099,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_2_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_2_3">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_12_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_2_3">
             <span class="md-nav__icon md-icon"></span>
             常用库
           </label>
@@ -4347,17 +4488,15 @@
     
     
     
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_3" >
         
           
-          <label class="md-nav__link" for="__nav_11_3" id="__nav_11_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12_3" id="__nav_12_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -4368,8 +4507,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_3">
             <span class="md-nav__icon md-icon"></span>
             Python
           </label>
@@ -4447,17 +4586,15 @@
     
     
     
-      
-    
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_3_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_3_4" >
         
           
-          <label class="md-nav__link" for="__nav_11_3_4" id="__nav_11_3_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12_3_4" id="__nav_12_3_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -4468,8 +4605,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_3_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_3_4">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_12_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_3_4">
             <span class="md-nav__icon md-icon"></span>
             Python常用库
           </label>
@@ -5198,6 +5335,761 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 高级监督学习算法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 高级监督学习算法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-svm" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 支持向量机（SVM）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-ensemble-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 集成学习（Ensemble Learning）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-bayesian-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 贝叶斯方法（Bayesian Methods）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 模型优化与调优
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 模型优化与调优">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 超参数调优
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-cross-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 交叉验证（Cross Validation）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 学习曲线与验证曲线
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 特征工程与选择
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 特征工程与选择">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 特征工程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 特征选择
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 特征生成
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 高级无监督学习算法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 高级无监督学习算法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-density-estimation" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 密度估计（Density Estimation）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-autoencoder" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 自编码器（Autoencoder）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-pca" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 主成分分析（PCA）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 强化学习进阶
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 强化学习进阶">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-qq-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Q学习（Q-Learning）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-qdqn" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 深度Q网络（DQN）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-policy-gradient" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 策略梯度（Policy Gradient）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 机器学习的前沿研究方向
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 机器学习的前沿研究方向">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-meta-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 元学习（Meta-Learning）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-graph-neural-network-gnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 图神经网络（Graph Neural Network, GNN）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-federated-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 联邦学习（Federated Learning）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-interpretability-explainability" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 模型解释性与可解释性（Interpretability &amp; Explainability）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. 模型解释性与可解释性（Interpretability & Explainability）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 可解释性 vs. 精确性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 模型解释工具
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3 可解释性在实际中的应用
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-adversarial-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. 对抗学习（Adversarial Learning）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. 对抗学习（Adversarial Learning）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-adversarial-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1 对抗样本（Adversarial Examples）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-adversarial-training" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2 对抗训练（Adversarial Training）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-gan" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.3 GAN（生成对抗网络）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-generative-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. 生成模型（Generative Models）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. 生成模型（Generative Models）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-vae" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.1 变分自编码器（VAE）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.2 深度生成模型的应用
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-transfer-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. 迁移学习（Transfer Learning）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. 迁移学习（Transfer Learning）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.1 迁移学习的基本思想
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.2 迁移学习的应用场景
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. 无监督学习进阶
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. 无监督学习进阶">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.1 聚类算法进阶
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-pca" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.2 主成分分析（PCA）与非线性降维
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. 强化学习进阶
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. 强化学习进阶">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.1 策略梯度与深度强化学习
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-imitation-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.2 模仿学习（Imitation Learning）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-multi-agent-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.3 多智能体学习（Multi-Agent Learning）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. 强化学习的实际应用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. 强化学习的实际应用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.1 游戏
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.2 机器人控制
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.3 自动驾驶
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.4 金融交易
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      14. 无监督学习的前沿应用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. 无监督学习的前沿应用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141" class="md-nav__link">
+    <span class="md-ellipsis">
+      14.1 异常检测
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142" class="md-nav__link">
+    <span class="md-ellipsis">
+      14.2 聚类算法的实际应用
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#143" class="md-nav__link">
+    <span class="md-ellipsis">
+      14.3 生成模型的进展
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-graph-neural-networksgnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      15. 图神经网络（Graph Neural Networks，GNN）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15. 图神经网络（Graph Neural Networks，GNN）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151-gcn" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.1 图卷积网络（GCN）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152-gat" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.2 图注意力网络（GAT）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#153-graph-autoencoder" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.3 图自动编码器（Graph Autoencoder）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-federated-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      16. 联邦学习（Federated Learning）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="16. 联邦学习（Federated Learning）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#161" class="md-nav__link">
+    <span class="md-ellipsis">
+      16.1 联邦学习的核心原理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#162" class="md-nav__link">
+    <span class="md-ellipsis">
+      16.2 联邦学习的实际应用
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-automl" class="md-nav__link">
+    <span class="md-ellipsis">
+      17. 自动化机器学习（AutoML）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="17. 自动化机器学习（AutoML）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#171" class="md-nav__link">
+    <span class="md-ellipsis">
+      17.1 超参数优化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#172-neural-architecture-searchnas" class="md-nav__link">
+    <span class="md-ellipsis">
+      17.2 神经网络架构搜索（Neural Architecture Search，NAS）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#173" class="md-nav__link">
+    <span class="md-ellipsis">
+      17.3 数据预处理与特征工程
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18" class="md-nav__link">
+    <span class="md-ellipsis">
+      18. 机器学习的未来趋势
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="18. 机器学习的未来趋势">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#181" class="md-nav__link">
+    <span class="md-ellipsis">
+      18.1 可解释的深度学习
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#182-meta-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      18.2 元学习（Meta-Learning）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#183" class="md-nav__link">
+    <span class="md-ellipsis">
+      18.3 量子机器学习
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           
             <div class="md-content" data-md-component="content">
@@ -5518,7 +6410,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "toc.integrate", "search.highlight", "search.suggest", "header.autohide", "footer.copyright", "footer.text", "code.annotate", "content.code", "material.nav", "material.switch", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.56dfad97.min.js"></script>
