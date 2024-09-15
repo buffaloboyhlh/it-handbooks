@@ -36,7 +36,7 @@ MongoDB 是一种流行的 NoSQL 数据库，许多大厂的面试中会考察�
 **3.2 使用 `$group` 和 `$lookup` 操作符，编写一个复杂的聚合查询。**
 
 - **答案**：
-  ```javascript
+```javascript
   db.orders.aggregate([
     { $match: { status: "completed" } },
     {
@@ -55,7 +55,7 @@ MongoDB 是一种流行的 NoSQL 数据库，许多大厂的面试中会考察�
       }
     }
   ])
-  ```
+```
 
 ### 4. **数据模型与设计**
 
@@ -82,13 +82,13 @@ MongoDB 是一种流行的 NoSQL 数据库，许多大厂的面试中会考察�
 - **答案**：
   - 启动多个 MongoDB 实例，每个实例都应使用 `--replSet` 参数指定相同的复制集名称。
   - 在一个实例上初始化复制集：
-    ```javascript
+```javascript
     rs.initiate()
-    ```
+```
   - 添加从节点：
-    ```javascript
+```javascript
     rs.add("hostname:port")
-    ```
+```
 
 ### 6. **分片与水平扩展**
 
@@ -142,7 +142,7 @@ MongoDB 是一种流行的 NoSQL 数据库，许多大厂的面试中会考察�
 **9.2 如何在 MongoDB 中实现事务？**
 
 - **答案**：
-  ```javascript
+```javascript
   const session = db.getMongo().startSession();
   session.startTransaction();
   try {
@@ -155,7 +155,7 @@ MongoDB 是一种流行的 NoSQL 数据库，许多大厂的面试中会考察�
   } finally {
     session.endSession();
   }
-  ```
+```
 
 ### 10. **备份与恢复**
 
@@ -190,27 +190,27 @@ MongoDB 是一种流行的 NoSQL 数据库，许多大厂的面试中会考察�
 
 - **答案**：
   - **用户集合**：存储用户信息。
-    ```javascript
+```javascript
     {
       _id: ObjectId("user_id"),
       name: "John Doe",
       email: "john@example.com",
       addresses: [{ type: "shipping", address: "123 Main St" }]
     }
-    ```
+```
 
   - **产品集合**：存储产品信息。
-    ```javascript
+```javascript
     {
       _id: ObjectId("product_id"),
       name: "Product Name",
       price: 100.0,
       categories: ["Electronics", "Mobile"]
     }
-    ```
+```
 
   - **订单集合**：存储订单信息，引用用户和产品。
-    ```javascript
+```javascript
     {
       _id: ObjectId("order_id"),
       userId: ObjectId("user_id"),
@@ -220,7 +220,7 @@ MongoDB 是一种流行的 NoSQL 数据库，许多大厂的面试中会考察�
       totalAmount: 200.0,
       status: "pending"
     }
-    ```
+```
 
 ### 12. **数据一致性**
 
@@ -251,7 +251,7 @@ MongoDB 是一种流行的 NoSQL 数据库，许多大厂的面试中会考察�
 **13.1 使用 `$facet` 操作符进行多维度数据分析的示例。**
 
 - **答案**：
-  ```javascript
+```javascript
   db.orders.aggregate([
     {
       $facet: {
@@ -265,18 +265,18 @@ MongoDB 是一种流行的 NoSQL 数据库，许多大厂的面试中会考察�
       }
     }
   ])
-  ```
+```
 
 **13.2 解释 MongoDB 的 `$merge` 操作符及其用途。**
 
 - **答案**：
   `$merge` 操作符用于将聚合管道的结果写入指定的集合。可以选择覆盖、插入新文档或更新现有文档。
-  ```javascript
+```javascript
   db.orders.aggregate([
     { $group: { _id: "$productId", totalSales: { $sum: "$amount" } } },
     { $merge: { into: "productSales", whenMatched: "merge", whenNotMatched: "insert" } }
   ])
-  ```
+```
 
 ### 14. **分片管理**
 
@@ -307,13 +307,13 @@ MongoDB 是一种流行的 NoSQL 数据库，许多大厂的面试中会考察�
 
 - **答案**：
   - **从全量备份恢复**：
-    ```bash
+```bash
     mongorestore /backup/directory
-    ```
+```
   - **从增量备份恢复**：
-    ```bash
+```bash
     mongorestore --oplogReplay /backup/directory
-    ```
+```
 
 ### 16. **应用程序集成**
 
@@ -336,9 +336,9 @@ MongoDB 是一种流行的 NoSQL 数据库，许多大厂的面试中会考察�
 
 - **答案**：
   - **启用 Profiler**：
-    ```javascript
+```javascript
     db.setProfilingLevel(2, { slowms: 100 })
-    ```
+```
   - **分析慢查询**：使用 `db.system.profile.find()` 查询慢查询记录，优化相关查询和索引。
 
 **17.2 解释 MongoDB 的缓存机制及其优化方法。**
@@ -371,7 +371,7 @@ MongoDB 是一种流行的 NoSQL 数据库，许多大厂的面试中会考察�
 
 - **答案**：
   - **博客文章集合**：存储博客文章信息。
-    ```javascript
+```javascript
     {
       _id: ObjectId("post_id"),
       title: "Blog Post Title",
@@ -387,10 +387,10 @@ MongoDB 是一种流行的 NoSQL 数据库，许多大厂的面试中会考察�
       ],
       createdAt: ISODate("2024-01-01T00:00:00Z")
     }
-    ```
+```
 
   - **评论集合**（如果评论非常多，考虑将评论存储在单独的集合中）：
-    ```javascript
+```javascript
     {
       _id: ObjectId("comment_id"),
       postId: ObjectId("post_id"),
@@ -398,21 +398,21 @@ MongoDB 是一种流行的 NoSQL 数据库，许多大厂的面试中会考察�
       content: "This is a comment",
       createdAt: ISODate("2024-01-01T00:00:00Z")
     }
-    ```
+```
 
 **19.2 解释 MongoDB 中的 `hint` 和 `collation` 操作符。**
 
 - **答案**：
   - **`hint`**：
     - 用于强制 MongoDB 使用特定的索引来执行查询，以优化性能或解决查询计划选择不当的问题。
-    ```javascript
+```javascript
     db.collection.find({ field: "value" }).hint({ field: 1 })
-    ```
+```
   - **`collation`**：
     - 用于指定查询和排序时的排序规则，例如不同语言的排序规则或忽略大小写。
-    ```javascript
+```javascript
     db.collection.find({ name: "John" }).collation({ locale: "en", strength: 2 })
-    ```
+```
 
 ### 20. **高级聚合操作**
 
@@ -420,7 +420,7 @@ MongoDB 是一种流行的 NoSQL 数据库，许多大厂的面试中会考察�
 
 - **答案**：
   - **示例**：假设有一个员工集合，`employees`，包含员工的管理关系。
-    ```javascript
+```javascript
     db.employees.aggregate([
       {
         $graphLookup: {
@@ -432,14 +432,14 @@ MongoDB 是一种流行的 NoSQL 数据库，许多大厂的面试中会考察�
         }
       }
     ])
-    ```
+```
 
 **20.2 解释 MongoDB 的 `$bucket` 和 `$bucketAuto` 操作符。**
 
 - **答案**：
   - **`$bucket`**：
     - 用于将文档分配到自定义的分桶中，适用于对数据进行分组和汇总。
-    ```javascript
+```javascript
     db.collection.aggregate([
       {
         $bucket: {
@@ -452,11 +452,11 @@ MongoDB 是一种流行的 NoSQL 数据库，许多大厂的面试中会考察�
         }
       }
     ])
-    ```
+```
 
   - **`$bucketAuto`**：
     - 自动计算桶的边界，根据文档的分布动态创建桶。
-    ```javascript
+```javascript
     db.collection.aggregate([
       {
         $bucketAuto: {
@@ -468,7 +468,7 @@ MongoDB 是一种流行的 NoSQL 数据库，许多大厂的面试中会考察�
         }
       }
     ])
-    ```
+```
 
 ### 21. **分片管理**
 
@@ -477,9 +477,9 @@ MongoDB 是一种流行的 NoSQL 数据库，许多大厂的面试中会考察�
 - **答案**：
   - **监控数据分布**：使用 `sh.status()` 和 MongoDB Atlas 的监控工具来查看数据分布。
   - **手动调整**：使用 `sh.moveChunk()` 将数据从一个分片移动到另一个分片，以实现负载均衡。
-  ```javascript
+```javascript
   sh.moveChunk("database.collection", { shardKey: value }, "targetShard")
-  ```
+```
 
 **21.2 如何应对分片键选择不当的问题？**
 
@@ -493,18 +493,18 @@ MongoDB 是一种流行的 NoSQL 数据库，许多大厂的面试中会考察�
 
 - **答案**：
   - **`mongodump`**：用于创建数据库的备份。
-    ```bash
+```bash
     mongodump --uri="mongodb://localhost:27017" --out /backup/directory
-    ```
+```
     常用参数：
     - `--db`：指定备份的数据库。
     - `--collection`：指定备份的集合。
     - `--gzip`：压缩备份文件。
   
   - **`mongorestore`**：用于从备份文件恢复数据。
-    ```bash
+```bash
     mongorestore --uri="mongodb://localhost:27017" /backup/directory
-    ```
+```
     常用参数：
     - `--drop`：在恢复前删除现有集合。
     - `--gzip`：解压备份文件。
@@ -523,18 +523,18 @@ MongoDB 是一种流行的 NoSQL 数据库，许多大厂的面试中会考察�
 
 - **答案**：
   - **启用认证**：配置 MongoDB 实例启用认证机制，确保只有授权用户可以访问数据。
-    ```yaml
+```yaml
     security:
       authorization: "enabled"
-    ```
+```
   - **创建用户和角色**：使用 `db.createUser()` 创建用户并分配角色。
-    ```javascript
+```javascript
     db.createUser({
       user: "myUser",
       pwd: "myPassword",
       roles: [{ role: "readWrite", db: "myDatabase" }]
     })
-    ```
+```
   - **配置角色**：使用 `db.createRole()` 定义自定义角色，控制访问权限。
 
 **23.2 MongoDB 数据库加密的最佳实践。**
@@ -550,9 +550,9 @@ MongoDB 是一种流行的 NoSQL 数据库，许多大厂的面试中会考察�
 
 - **答案**：
   - **批量写入**：使用批量操作来减少网络往返和提高写入性能。
-    ```javascript
+```javascript
     db.collection.insertMany([{ ... }, { ... }])
-    ```
+```
   - **调整 `writeConcern`**：根据应用需求调整 `writeConcern` 设置，以平衡数据可靠性和写入性能。
   - **使用分片**：将数据分片以减少单个节点的写入负载。
 
@@ -573,7 +573,7 @@ MongoDB 是一种流行的 NoSQL 数据库，许多大厂的面试中会考察�
   - **事务处理机制**：
     - MongoDB 3.6+ 支持多文档事务，提供 ACID 特性，确保跨多个文档和集合的操作的一致性。
     - **事务操作**：使用 `startTransaction()` 开始事务，使用 `commitTransaction()` 提交事务，使用 `abortTransaction()` 回滚事务。
-    ```javascript
+```javascript
     const session = client.startSession();
     session.startTransaction();
     try {
@@ -590,7 +590,7 @@ MongoDB 是一种流行的 NoSQL 数据库，许多大厂的面试中会考察�
     } finally {
       session.endSession();
     }
-    ```
+```
   - **应用场景**：
     - **金融系统**：保证账户之间的转账操作的一致性。
     - **库存管理**：确保库存和订单数据的一致性。
@@ -610,25 +610,25 @@ MongoDB 是一种流行的 NoSQL 数据库，许多大厂的面试中会考察�
   - **MongoDB Atlas**：提供了内置的监控工具，显示集群的性能指标和健康状态。
   - **`mongostat` 和 `mongotop`**：
     - `mongostat`：显示 MongoDB 实例的性能统计数据。
-      ```bash
+```bash
       mongostat --host localhost
-      ```
+```
     - `mongotop`：显示 MongoDB 实例中各集合的操作时间。
-      ```bash
+```bash
       mongotop --host localhost
-      ```
+```
   - **`db.serverStatus()`**：获取 MongoDB 实例的详细服务器状态信息。
-    ```javascript
+```javascript
     db.serverStatus();
-    ```
+```
 
 **26.2 解释 MongoDB 的慢查询日志和如何优化慢查询。**
 
 - **答案**：
   - **慢查询日志**：MongoDB 会记录执行时间超过 `slowms` 设置的查询。可以通过 `db.setProfilingLevel()` 配置慢查询日志级别。
-    ```javascript
+```javascript
     db.setProfilingLevel(2, { slowms: 100 });
-    ```
+```
   - **优化慢查询**：
     - **创建索引**：为查询条件创建合适的索引。
     - **查询优化**：分析慢查询的执行计划，并优化查询语句。
@@ -657,7 +657,7 @@ MongoDB 是一种流行的 NoSQL 数据库，许多大厂的面试中会考察�
   - **角色**：MongoDB 使用基于角色的访问控制（RBAC）来管理用户的权限。
     - **内置角色**：如 `read`, `readWrite`, `dbAdmin` 等。
     - **自定义角色**：使用 `db.createRole()` 创建具有特定权限的自定义角色。
-      ```javascript
+```javascript
       db.createRole({
         role: "myCustomRole",
         privileges: [
@@ -668,24 +668,24 @@ MongoDB 是一种流行的 NoSQL 数据库，许多大厂的面试中会考察�
         ],
         roles: []
       });
-      ```
+```
 
 **28.2 如何使用 MongoDB 的加密功能保护数据？**
 
 - **答案**：
   - **数据加密**：使用 MongoDB Enterprise 的加密功能对磁盘上的数据进行加密。启用加密需在配置文件中设置 `security` 相关参数。
-    ```yaml
+```yaml
     security:
       encryption:
         keyFile: /path/to/keyfile
-    ```
+```
   - **传输加密**：通过启用 SSL/TLS 加密客户端与服务器之间的数据传输。
-    ```yaml
+```yaml
     net:
       tls:
         mode: requireTLS
         certificateKeyFile: /path/to/mongodb.pem
-    ```
+```
 
 ### 29. **高级数据处理**
 
@@ -693,7 +693,7 @@ MongoDB 是一种流行的 NoSQL 数据库，许多大厂的面试中会考察�
 
 - **答案**：
   - **示例**：将订单数据按月份汇总并写入新的集合 `monthlyOrders`。
-    ```javascript
+```javascript
     db.orders.aggregate([
       {
         $group: {
@@ -709,20 +709,20 @@ MongoDB 是一种流行的 NoSQL 数据库，许多大厂的面试中会考察�
         }
       }
     ])
-    ```
+```
 
 **29.2 解释 `$out` 操作符及其应用场景。**
 
 - **答案**：
   - **`$out`**：
     - 将聚合管道的结果直接写入指定集合，覆盖现有集合的内容。
-    ```javascript
+```javascript
     db.orders.aggregate([
       { $match: { status: "completed" } },
       { $group: { _id: "$productId", totalSales: { $sum: "$amount" } } },
       { $out: "completedSales" }
     ])
-    ```
+```
   - **应用场景**：
     - 用于将复杂的聚合结果保存到集合中，以便后续查询或分析。
 
@@ -732,13 +732,13 @@ MongoDB 是一种流行的 NoSQL 数据库，许多大厂的面试中会考察�
 
 - **答案**：
   - **`mongodump`**：创建数据库的备份。
-    ```bash
+```bash
     mongodump --uri="mongodb://localhost:27017" --out /backup/directory
-    ```
+```
   - **`mongorestore`**：恢复数据。
-    ```bash
+```bash
     mongorestore --uri="mongodb://localhost:27017" /backup/directory
-    ```
+```
 
 **30.2 如何使用 MongoDB Atlas 的自动备份功能？**
 

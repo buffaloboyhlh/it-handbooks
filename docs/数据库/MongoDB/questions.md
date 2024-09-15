@@ -13,13 +13,13 @@
 
 - **解决方案**：
   - **添加索引**：使用 `db.collection.createIndex()` 为查询条件添加索引。
-    ```javascript
+```javascript
     db.collection.createIndex({ field: 1 });
-    ```
+```
   - **使用 `explain()`**：分析查询的执行计划，找出性能瓶颈。
-    ```javascript
+```javascript
     db.collection.find({ field: "value" }).explain("executionStats");
-    ```
+```
   - **优化查询**：重构查询语句，避免全表扫描。
 
 **1.2 写入性能问题**
@@ -30,13 +30,13 @@
 
 - **解决方案**：
   - **调整写关注**：根据需求调整 `writeConcern` 设置，以平衡写入性能和数据可靠性。
-    ```javascript
+```javascript
     db.collection.insertOne({ ... }, { writeConcern: { w: 1 } });
-    ```
+```
   - **批量写入**：使用批量操作来减少网络往返次数。
-    ```javascript
+```javascript
     db.collection.insertMany([{ ... }, { ... }]);
-    ```
+```
 
 ### 2. **数据一致性问题**
 
@@ -48,14 +48,14 @@
 
 - **解决方案**：
   - **检查复制集状态**：使用 `rs.status()` 确保复制集状态正常。
-    ```javascript
+```javascript
     rs.status();
-    ```
+```
   - **配置 `writeConcern` 和 `readConcern`**：确保写入操作和读取操作具有合适的一致性设置。
-    ```javascript
+```javascript
     db.collection.insertOne({ ... }, { writeConcern: { w: "majority" } });
     db.collection.find({ ... }).readConcern("majority");
-    ```
+```
 
 **2.2 事务处理问题**
 
@@ -65,7 +65,7 @@
 
 - **解决方案**：
   - **正确使用事务**：确保使用 `startTransaction()` 开始事务，使用 `commitTransaction()` 提交事务，使用 `abortTransaction()` 回滚事务。
-    ```javascript
+```javascript
     const session = client.startSession();
     session.startTransaction();
     try {
@@ -76,7 +76,7 @@
     } finally {
       session.endSession();
     }
-    ```
+```
   - **调整超时设置**：根据需要调整事务的超时设置。
 
 ### 3. **分片问题**
@@ -89,9 +89,9 @@
 - **解决方案**：
   - **重新设计分片键**：选择合适的分片键，确保数据均匀分布。
   - **使用 `sh.splitAt()`**：手动分割数据块，以提高分片均衡性。
-    ```javascript
+```javascript
     sh.splitAt("database.collection", { shardKey: value });
-    ```
+```
 
 **3.2 分片故障处理**
 
@@ -100,9 +100,9 @@
 
 - **解决方案**：
   - **检查分片状态**：使用 `sh.status()` 查看分片状态。
-    ```javascript
+```javascript
     sh.status();
-    ```
+```
   - **重启分片节点**：重启故障节点或将其替换为新节点。
 
 ### 4. **备份和恢复问题**
@@ -126,9 +126,9 @@
 - **解决方案**：
   - **检查备份文件完整性**：确认备份文件未损坏。
   - **使用 `mongorestore` 恢复数据**：正确配置 `mongorestore` 参数进行数据恢复。
-    ```bash
+```bash
     mongorestore --uri="mongodb://localhost:27017" /backup/directory
-    ```
+```
 
 ### 5. **安全性问题**
 
@@ -139,18 +139,18 @@
 
 - **解决方案**：
   - **启用认证**：在配置文件中启用认证。
-    ```yaml
+```yaml
     security:
       authorization: "enabled"
-    ```
+```
   - **创建用户和角色**：使用 `db.createUser()` 创建用户，并为其分配正确的角色。
-    ```javascript
+```javascript
     db.createUser({
       user: "myUser",
       pwd: "myPassword",
       roles: [{ role: "readWrite", db: "myDatabase" }]
     });
-    ```
+```
 
 **5.2 数据加密问题**
 
@@ -160,12 +160,12 @@
 - **解决方案**：
   - **启用磁盘加密**：使用 MongoDB Enterprise 的加密功能进行磁盘数据加密。
   - **启用传输加密**：配置 SSL/TLS 加密客户端与服务器之间的数据传输。
-    ```yaml
+```yaml
     net:
       tls:
         mode: requireTLS
         certificateKeyFile: /path/to/mongodb.pem
-    ```
+```
 
 ### 6. **运维和监控问题**
 
@@ -220,7 +220,7 @@
 - **解决方案**：
   - **重新设计数据模型**：根据应用场景重新设计数据模型，避免不必要的数据冗余和嵌套层级。
   - **使用嵌套文档和引用**：根据查询频率选择适当的数据建模方式。对于高频访问的数据，可以考虑嵌套文档；对于低频访问的数据，考虑使用引用。
-    ```javascript
+```javascript
     // 嵌套文档示例
     {
       _id: ObjectId("post_id"),
@@ -232,7 +232,7 @@
         }
       ]
     }
-    ```
+```
 
 **8.2 查询效率低下**
 
@@ -243,9 +243,9 @@
 - **解决方案**：
   - **优化数据模型**：确保数据模型与查询模式一致。
   - **创建索引**：为常用查询字段创建索引，提高查询效率。
-    ```javascript
+```javascript
     db.collection.createIndex({ field: 1 });
-    ```
+```
 
 ### 9. **系统部署问题**
 
@@ -266,10 +266,10 @@
 
 - **解决方案**：
   - **检查节点状态**：使用 `rs.status()` 和 `sh.status()` 检查复制集和分片的状态。
-    ```javascript
+```javascript
     rs.status();
     sh.status();
-    ```
+```
   - **修复故障节点**：重启故障节点或替换故障节点以恢复集群正常运行。
 
 ### 10. **数据一致性和事务问题**
@@ -291,9 +291,9 @@
 - **解决方案**：
   - **优化事务操作**：减少事务中的操作，避免长时间持有事务锁。
   - **调整事务超时设置**：根据需要调整事务超时设置。
-    ```javascript
+```javascript
     const session = client.startSession({ defaultTransactionOptions: { maxCommitTimeMS: 60000 } });
-    ```
+```
 
 ### 11. **监控和维护问题**
 
@@ -314,9 +314,9 @@
 - **解决方案**：
   - **计划维护时间**：选择业务低峰期进行维护任务，以减少对业务的影响。
   - **使用 `background` 选项**：在创建或重建索引时，使用 `background` 选项来减少对系统的影响。
-    ```javascript
+```javascript
     db.collection.createIndex({ field: 1 }, { background: true });
-    ```
+```
 
 ### 12. **备份和恢复问题**
 
@@ -336,9 +336,9 @@
 
 - **解决方案**：
   - **使用 `--oplogReplay`**：在恢复时使用 `--oplogReplay` 选项，以保证数据的一致性。
-    ```bash
+```bash
     mongorestore --oplogReplay /backup/directory
-    ```
+```
 
 ### 13. **分片和高可用性问题**
 
@@ -350,9 +350,9 @@
 - **解决方案**：
   - **重新选择分片键**：根据数据访问模式和分布重新选择合适的分片键。
   - **执行 `sh.moveChunk()`**：将数据块从一个分片移动到另一个分片，以优化数据分布。
-    ```javascript
+```javascript
     sh.moveChunk("database.collection", { shardKey: value }, "targetShard");
-    ```
+```
 
 **13.2 处理分片故障**
 
@@ -417,19 +417,19 @@
 - **解决方案**：
   - **使用 `mongodump` 和 `mongorestore` 的正确参数**：
     - **`mongodump`**：创建备份。
-      ```bash
+  ```bash
       mongodump --uri="mongodb://localhost:27017" --out /backup/directory
-      ```
+  ```
     - **`mongorestore`**：恢复数据。
-      ```bash
+  ```bash
       mongorestore --uri="mongodb://localhost:27017" /backup/directory
-      ```
+  ```
   - **验证备份和恢复**：在备份后和恢复后验证数据完整性，确保数据无损。
   - **使用 `--gzip` 进行压缩**：减少备份文件的大小。
-    ```bash
+```bash
     mongodump --gzip --archive=/backup/directory/backup.gz
     mongorestore --gzip --archive=/backup/directory/backup.gz
-    ```
+```
 
 **16.2 数据迁移中的数据一致性问题**
 
@@ -439,9 +439,9 @@
 - **解决方案**：
   - **使用增量迁移工具**：如 `MongoMirror`，进行增量迁移，确保迁移过程中的数据一致性。
   - **使用 `oplog` 回放**：在迁移过程中使用 `oplog` 来保持数据的一致性。
-    ```bash
+```bash
     mongorestore --oplogReplay /backup/directory
-    ```
+```
 
 ### 17. **高可用性和故障恢复**
 
@@ -454,10 +454,10 @@
   - **检查网络连接**：确保复制集成员之间的网络连接正常。
   - **检查日志文件**：查看 MongoDB 的日志文件，以获取详细的错误信息。
   - **重新同步节点**：尝试重新同步出现问题的节点。
-    ```javascript
+```javascript
     rs.remove("hostname:port");
     rs.add("hostname:port");
-    ```
+```
 
 **17.2 故障转移和选举问题**
 
@@ -466,9 +466,9 @@
 
 - **解决方案**：
   - **配置选举超时**：调整选举超时配置，确保选举过程快速完成。
-    ```javascript
+```javascript
     rs.conf().settings.electionTimeoutMillis = 10000;
-    ```
+```
   - **增加投票节点**：确保复制集中有足够的节点参与投票，防止选举无法完成。
 
 ### 18. **安全性和访问控制**
@@ -480,7 +480,7 @@
 
 - **解决方案**：
   - **使用角色和权限管理**：创建合适的角色，并为用户分配角色。
-    ```javascript
+```javascript
     db.createRole({
       role: "readWriteRole",
       privileges: [
@@ -496,7 +496,7 @@
       pwd: "password",
       roles: [{ role: "readWriteRole", db: "myDatabase" }]
     });
-    ```
+```
   - **定期审计权限**：定期审计用户和角色权限，确保遵循最小权限原则。
 
 **18.2 数据加密问题**
@@ -507,18 +507,18 @@
 - **解决方案**：
   - **启用加密**：配置 MongoDB 进行数据加密，包括磁盘加密和传输加密。
     - **磁盘加密**（MongoDB Enterprise）：
-      ```yaml
+  ```yaml
       security:
         encryption:
           keyFile: /path/to/encryption-key
-      ```
+  ```
     - **传输加密**（SSL/TLS）：
-      ```yaml
+  ```yaml
       net:
         tls:
           mode: requireTLS
           certificateKeyFile: /path/to/certificate.pem
-      ```
+  ```
 
 ### 19. **数据模型和查询优化**
 
@@ -539,9 +539,9 @@
 
 - **解决方案**：
   - **分析查询计划**：使用 `explain()` 分析查询的执行计划，找出性能瓶颈。
-    ```javascript
+```javascript
     db.collection.find({ field: "value" }).explain("executionStats");
-    ```
+```
   - **优化查询**：避免不必要的全表扫描，使用索引提高查询效率。
   - **索引管理**：定期检查和优化索引，避免过多或不必要的索引。
 
@@ -565,10 +565,10 @@
   - **优化查询和索引**：减少对系统资源的消耗。
   - **增加硬件资源**：根据需要增加服务器的 CPU、内存或磁盘容量。
   - **资源监控**：使用 `mongostat` 和 `mongotop` 工具监控资源利用情况。
-    ```bash
+```bash
     mongostat --host localhost
     mongotop --host localhost
-    ```
+```
 
 ### 21. **分片管理**
 
@@ -580,9 +580,9 @@
 - **解决方案**：
   - **选择合适的分片键**：根据数据访问模式选择能够均匀分布数据的分片键。
   - **重新分片**：如果发现数据分布不均，可以考虑重新分片。
-    ```javascript
+```javascript
     sh.shardCollection("database.collection", { shardKey: 1 });
-    ```
+```
 
 **21.2 分片数据迁移**
 
@@ -591,7 +591,7 @@
 
 - **解决方案**：
   - **手动迁移数据**：使用 `sh.moveChunk()` 将数据块从一个分片移动到另一个分片。
-    ```javascript
+```javascript
     sh.moveChunk("database.collection", { shardKey: value }, "targetShard");
-    ```
+```
   - **监控数据迁移进度**：确保数据迁移过程正常进行，并监控迁移进度。
