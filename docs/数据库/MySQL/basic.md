@@ -15,15 +15,15 @@ MySQL 是一个开源的关系型数据库管理系统，它基于 SQL（结构�
 在大多数操作系统中，安装 MySQL 非常简单。以下是不同系统的安装方法：
 
 - **Ubuntu/Debian：**
-  ```bash
+```bash
   sudo apt update
   sudo apt install mysql-server
-  ```
+```
 
 - **CentOS/RHEL：**
-  ```bash
+```bash
   sudo yum install mysql-server
-  ```
+```
 
 - **Windows：**
   通过官方 MySQL Installer 进行安装：[MySQL 官网](https://dev.mysql.com/downloads/installer/)
@@ -45,24 +45,24 @@ mysql -u root -p
 ### 1.4 创建数据库和表
 
 1. **创建数据库**：
-   ```sql
+```sql
    CREATE DATABASE my_database;
-   ```
+```
 
 2. **使用数据库**：
-   ```sql
+```sql
    USE my_database;
-   ```
+```
 
 3. **创建表**：
-   ```sql
+```sql
    CREATE TABLE users (
      id INT AUTO_INCREMENT PRIMARY KEY,
      name VARCHAR(100),
      email VARCHAR(100) UNIQUE,
      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
    );
-   ```
+```
 
 ### 1.5 插入数据
 
@@ -74,14 +74,14 @@ INSERT INTO users (name, email) VALUES ('Alice', 'alice@example.com');
 ### 1.6 查询数据
 
 1. 查询所有用户：
-   ```sql
+```sql
    SELECT * FROM users;
-   ```
+```
 
 2. 查询指定条件的数据：
-   ```sql
+```sql
    SELECT * FROM users WHERE name = 'Alice';
-   ```
+```
 
 ### 1.7 更新数据
 
@@ -104,49 +104,49 @@ DELETE FROM users WHERE name = 'Alice';
 ### 2.1 复杂查询
 
 1. **多条件查询**（使用 `AND`、`OR`）：
-   ```sql
+```sql
    SELECT * FROM users WHERE name = 'Alice' AND email LIKE '%example.com';
-   ```
+```
 
 2. **排序**（使用 `ORDER BY`）：
-   ```sql
+```sql
    SELECT * FROM users ORDER BY created_at DESC;
-   ```
+```
 
 3. **分页查询**（使用 `LIMIT` 和 `OFFSET`）：
-   ```sql
+```sql
    SELECT * FROM users LIMIT 10 OFFSET 20;  -- 获取第 21 到第 30 条记录
-   ```
+```
 
 4. **聚合函数**（使用 `COUNT`、`SUM`、`AVG`、`MAX`、`MIN`）：
-   ```sql
+```sql
    SELECT COUNT(*) FROM users;
    SELECT AVG(age) FROM users;
-   ```
+```
 
 5. **分组查询**（使用 `GROUP BY`）：
-   ```sql
+```sql
    SELECT COUNT(*), country FROM users GROUP BY country;
-   ```
+```
 
 6. **多表连接**（使用 `JOIN`）：
-   ```sql
+```sql
    SELECT users.name, orders.amount 
    FROM users 
    JOIN orders ON users.id = orders.user_id;
-   ```
+```
 
 ### 2.2 索引
 
 - **创建索引**：索引用于加速查询，尤其是在大量数据的表中。
-  ```sql
+```sql
   CREATE INDEX idx_user_email ON users(email);
-  ```
+```
 
 - **删除索引**：
-  ```sql
+```sql
   DROP INDEX idx_user_email ON users;
-  ```
+```
 
 ### 2.3 事务
 
@@ -167,42 +167,42 @@ ROLLBACK;
 
 视图是一个虚拟表，基于 SQL 查询结果。
 - **创建视图**：
-  ```sql
+```sql
   CREATE VIEW user_orders AS
   SELECT users.name, orders.amount
   FROM users
   JOIN orders ON users.id = orders.user_id;
-  ```
+```
 
 - **查询视图**：
-  ```sql
+```sql
   SELECT * FROM user_orders;
-  ```
+```
 
 - **删除视图**：
-  ```sql
+```sql
   DROP VIEW user_orders;
-  ```
+```
 
 ### 2.5 存储过程与函数
 
 - **存储过程**：用于封装一组 SQL 操作，可重复执行。
-  ```sql
+```sql
   DELIMITER //
   CREATE PROCEDURE GetUserCount()
   BEGIN
     SELECT COUNT(*) FROM users;
   END //
   DELIMITER ;
-  ```
+```
 
   调用存储过程：
-  ```sql
+```sql
   CALL GetUserCount();
-  ```
+```
 
 - **函数**：类似于存储过程，但有返回值。
-  ```sql
+```sql
   DELIMITER //
   CREATE FUNCTION GetTotalOrders() RETURNS INT
   BEGIN
@@ -211,12 +211,12 @@ ROLLBACK;
     RETURN total;
   END //
   DELIMITER ;
-  ```
+```
 
   调用函数：
-  ```sql
+```sql
   SELECT GetTotalOrders();
-  ```
+```
 
 ---
 
@@ -225,9 +225,9 @@ ROLLBACK;
 ### 3.1 查询优化
 
 1. **使用索引**：通过创建合适的索引，可以显著提高查询速度。查询使用索引时，可以通过 `EXPLAIN` 语句查看执行计划。
-   ```sql
+```sql
    EXPLAIN SELECT * FROM users WHERE email = 'alice@example.com';
-   ```
+```
 
 2. **避免 SELECT \***：查询时只选择必要的列，而不是使用 `SELECT *`。
 
@@ -248,14 +248,14 @@ ROLLBACK;
 ### 3.4 数据库备份与恢复
 
 1. **备份数据库**：
-   ```bash
+```bash
    mysqldump -u root -p my_database > backup.sql
-   ```
+```
 
 2. **恢复数据库**：
-   ```bash
+```bash
    mysql -u root -p my_database < backup.sql
-   ```
+```
 
 ---
 
@@ -266,7 +266,7 @@ ROLLBACK;
 分区表将大型表分割成多个部分，以加速查询性能。
 
 - **创建分区表**：
-  ```sql
+```sql
   CREATE TABLE orders (
     id INT,
     amount DECIMAL(10, 2),
@@ -276,7 +276,7 @@ ROLLBACK;
     PARTITION p2022 VALUES LESS THAN (2023),
     PARTITION p2023 VALUES LESS THAN (2024)
   );
-  ```
+```
 
 ### 4.2 主从复制
 
@@ -435,32 +435,32 @@ MySQL 支持多种集群和高可用性方案，帮助企业实现高性能、�
 **配置步骤：**
 
 1. 在主服务器上配置二进制日志：
-   ```ini
+```ini
    [mysqld]
    log-bin=mysql-bin
    server-id=1
-   ```
+```
 
 2. 在从服务器上设置复制参数：
-   ```ini
+```ini
    [mysqld]
    server-id=2
-   ```
+```
 
 3. 启动从服务器，执行 `CHANGE MASTER TO` 命令来连接主服务器：
-   ```sql
+```sql
    CHANGE MASTER TO
    MASTER_HOST='master_host',
    MASTER_USER='replication_user',
    MASTER_PASSWORD='password',
    MASTER_LOG_FILE='mysql-bin.000001',
    MASTER_LOG_POS= 123;
-   ```
+```
 
 4. 启动从服务器复制：
-   ```sql
+```sql
    START SLAVE;
-   ```
+```
 
 ### 5.4.2 主主复制（Master-Master Replication）
 
@@ -496,14 +496,14 @@ CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
 分配权限使用 `GRANT` 命令，权限级别包括全局权限、数据库权限和表级权限。
 
 1. **授予数据库级别权限**：
-   ```sql
+```sql
    GRANT ALL PRIVILEGES ON my_database.* TO 'username'@'localhost';
-   ```
+```
 
 2. **授予表级别权限**：
-   ```sql
+```sql
    GRANT SELECT, INSERT ON my_database.users TO 'username'@'localhost';
-   ```
+```
 
 ### 5.5.3 撤销权限
 
@@ -551,9 +551,9 @@ MySQL 提供了几个内置的工具来帮助监控和调优：
 
 1. **MySQL Performance Schema**：提供详细的性能监控数据，包括锁、查询等资源消耗情况。
 2. **SHOW STATUS**：显示 MySQL 的运行状态：
-   ```sql
+```sql
    SHOW GLOBAL STATUS LIKE 'Threads_connected';
-   ```
+```
 
 通过这些状态信息，可以监控 MySQL 服务器的负载情况，从而采取必要的优化措施。
 
@@ -574,29 +574,29 @@ MySQL 提供了几个内置的工具来帮助监控和调优：
 `mysqldump` 是 MySQL 提供的逻辑备份工具，它将数据库导出为 SQL 文件。
 
 1. **备份单个数据库**：
-   ```bash
+```bash
    mysqldump -u root -p my_database > backup.sql
-   ```
+```
 
 2. **备份所有数据库**：
-   ```bash
+```bash
    mysqldump -u root -p --all-databases > all_backup.sql
-   ```
+```
 
 3. **备份特定的表**：
-   ```bash
+```bash
    mysqldump -u root -p my_database my_table > table_backup.sql
-   ```
+```
 
 4. **恢复数据库**：
-   ```bash
+```bash
    mysql -u root -p my_database < backup.sql
-   ```
+```
 
 5. **压缩备份**：
-   ```bash
+```bash
    mysqldump -u root -p my_database | gzip > backup.sql.gz
-   ```
+```
 
 ### 7.1.2 物理备份（使用 `mysqlhotcopy`）
 
@@ -612,17 +612,17 @@ mysqlhotcopy my_database /path/to/backup
 
 1. **启用二进制日志**：
    在 MySQL 配置文件（`my.cnf`）中启用二进制日志：
-   ```ini
+```ini
    [mysqld]
    log-bin=mysql-bin
-   ```
+```
 
 2. **恢复增量数据**：
    假设你有一个完整的备份（`backup.sql`），以及二进制日志文件（`mysql-bin.000001`），你可以恢复增量数据：
-   ```bash
+```bash
    mysql -u root -p my_database < backup.sql
    mysqlbinlog mysql-bin.000001 | mysql -u root -p my_database
-   ```
+```
 
 ---
 
@@ -635,43 +635,43 @@ mysqlhotcopy my_database /path/to/backup
 `cron` 是 Unix/Linux 系统中的定时任务调度器。你可以设置定时任务来自动备份 MySQL 数据库。
 
 1. **编辑 `crontab` 文件**：
-   ```bash
+```bash
    crontab -e
-   ```
+```
 
 2. **添加定时任务**：
    每天凌晨 2 点执行数据库备份：
-   ```bash
+```bash
    0 2 * * * mysqldump -u root -p my_database > /path/to/backup/backup_$(date +\%F).sql
-   ```
+```
 
 ### 7.2.2 MySQL 事件调度器
 
 MySQL 内置了事件调度器功能，可以用来执行定时任务。
 
 1. **启用事件调度器**：
-   ```sql
+```sql
    SET GLOBAL event_scheduler = ON;
-   ```
+```
 
 2. **创建定时事件**：
    创建一个每天清理旧数据的事件：
-   ```sql
+```sql
    CREATE EVENT IF NOT EXISTS cleanup_old_orders
    ON SCHEDULE EVERY 1 DAY
    DO
    DELETE FROM orders WHERE order_date < NOW() - INTERVAL 1 YEAR;
-   ```
+```
 
 3. **查看事件状态**：
-   ```sql
+```sql
    SHOW EVENTS;
-   ```
+```
 
 4. **删除事件**：
-   ```sql
+```sql
    DROP EVENT IF EXISTS cleanup_old_orders;
-   ```
+```
 
 通过使用 `cron` 和 MySQL 事件调度器，管理员可以自动化数据库管理任务，减轻手动操作的负担。
 
@@ -686,30 +686,30 @@ MySQL 内置了事件调度器功能，可以用来执行定时任务。
 MySQL 提供了细粒度的用户权限控制，可以为不同用户分配不同的数据库操作权限。
 
 1. **创建新用户**：
-   ```sql
+```sql
    CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
-   ```
+```
 
 2. **授予权限**：
    给用户授予指定数据库的权限：
-   ```sql
+```sql
    GRANT ALL PRIVILEGES ON my_database.* TO 'username'@'localhost';
-   ```
+```
 
 3. **查看用户权限**：
-   ```sql
+```sql
    SHOW GRANTS FOR 'username'@'localhost';
-   ```
+```
 
 4. **撤销权限**：
-   ```sql
+```sql
    REVOKE INSERT, UPDATE ON my_database.* FROM 'username'@'localhost';
-   ```
+```
 
 5. **删除用户**：
-   ```sql
+```sql
    DROP USER 'username'@'localhost';
-   ```
+```
 
 ### 7.3.2 数据加密
 
@@ -717,25 +717,25 @@ MySQL 支持对数据传输和存储进行加密，以确保数据安全。
 
 1. **启用 SSL 加密**：
    配置 MySQL 使用 SSL 来加密客户端和服务器之间的通信。首先生成 SSL 证书，然后在 MySQL 配置文件中启用 SSL：
-   ```ini
+```ini
    [mysqld]
    require_secure_transport=ON
    ssl-ca=/path/to/ca-cert.pem
    ssl-cert=/path/to/server-cert.pem
    ssl-key=/path/to/server-key.pem
-   ```
+```
 
 2. **加密数据列**：
    在某些情况下，你可能需要对敏感数据列进行加密，比如存储密码或个人信息：
-   ```sql
+```sql
    INSERT INTO users (name, email, password) 
    VALUES ('Alice', 'alice@example.com', AES_ENCRYPT('mypassword', 'encryption_key'));
-   ```
+```
 
    查询加密数据：
-   ```sql
+```sql
    SELECT AES_DECRYPT(password, 'encryption_key') FROM users WHERE name = 'Alice';
-   ```
+```
 
 ---
 
@@ -766,12 +766,12 @@ SHOW GLOBAL STATUS LIKE 'Queries';
 
 1. **启用慢查询日志**：
    在 MySQL 配置文件中启用慢查询日志：
-   ```ini
+```ini
    [mysqld]
    slow_query_log = 1
    slow_query_log_file = /var/log/mysql/slow.log
    long_query_time = 2  # 查询超过2秒的记录
-   ```
+```
 
 2. **分析慢查询日志**：
    通过日志文件查看哪些查询导致了性能瓶颈，然后进行优化。
@@ -923,11 +923,11 @@ conn = pool.get_connection()
 - **安装步骤**：
   1. 下载 phpMyAdmin 并解压到服务器目录。
   2. 配置数据库连接信息：
-     ```php
+  ```php
      $cfg['Servers'][$i]['host'] = 'localhost';
      $cfg['Servers'][$i]['user'] = 'root';
      $cfg['Servers'][$i]['password'] = 'password';
-     ```
+  ```
   3. 访问 `http://localhost/phpmyadmin` 进行管理操作。
 
 ### 10.3.2 MySQL Workbench
@@ -965,9 +965,9 @@ MySQL 8.0 引入了对外部存储（如 Amazon S3）的支持，允许将数据
 
 1. 确保 MySQL 版本为 8.0 及以上，支持外部存储插件。
 2. 使用 SQL 命令配置 S3 连接：
-   ```sql
+```sql
    INSTALL PLUGIN aws_key_management SONAME 'keyring_aws.so';
-   ```
+```
 3. 配置 AWS S3 凭证并测试连接。
 
 ### 10.4.3 数据迁移到 S3
