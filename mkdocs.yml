@@ -6,7 +6,7 @@ theme:
   name: material
   language: zh
   features:
-#    - navigation.expand
+    - navigation.expand
     - navigation.sections
     - toc.integrate
     - search.highlight
@@ -19,7 +19,7 @@ theme:
     - material.nav
     - material.switch
     - content.code.copy
-  #    - navigation.tabs
+    - navigation.tabs
   palette:
 
     # 选择主题颜色
