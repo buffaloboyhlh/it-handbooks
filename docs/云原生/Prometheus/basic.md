@@ -31,32 +31,32 @@
 #### 2.1.1 从源代码安装
 
 1. 下载 Prometheus：
-   ```bash
+```bash
    wget https://github.com/prometheus/prometheus/releases/download/v2.44.0/prometheus-2.44.0.linux-amd64.tar.gz
-   ```
+```
 
 2. 解压并进入目录：
-   ```bash
+```bash
    tar -xzf prometheus-2.44.0.linux-amd64.tar.gz
    cd prometheus-2.44.0.linux-amd64
-   ```
+```
 
 3. 启动 Prometheus：
-   ```bash
+```bash
    ./prometheus --config.file=prometheus.yml
-   ```
+```
 
 #### 2.1.2 使用 Docker 安装
 
 1. 拉取 Prometheus 镜像：
-   ```bash
+```bash
    docker pull prom/prometheus
-   ```
+```
 
 2. 启动 Prometheus 容器：
-   ```bash
+```bash
    docker run -d -p 9090:9090 --name prometheus prom/prometheus
-   ```
+```
 
 ### 2.2 配置 Prometheus
 
@@ -80,6 +80,7 @@ scrape_configs:
 ### 3.1 数据模型
 
 Prometheus 的数据模型包括：
+
 - **指标名称**：例如 `http_requests_total`。
 - **标签**：用于标识不同的时间序列，例如 `method="GET"`, `status="200"`。
 - **时间戳**：样本的时间点。
@@ -90,29 +91,31 @@ Prometheus 的数据模型包括：
 PromQL 是用于查询 Prometheus 数据的强大工具。
 
 **基本查询示例**：
+
 - 获取所有 `http_requests_total` 指标数据：
-  ```promql
+```promql
   http_requests_total
-  ```
+```
 
 - 计算每秒请求速率：
-  ```promql
+```promql
   rate(http_requests_total[5m])
-  ```
+```
 
 - 计算请求总数的平均值：
-  ```promql
+```promql
   avg(http_requests_total)
-  ```
+```
 
 - 计算错误率：
-  ```promql
+```promql
   rate(http_requests_total{status="500"}[5m]) / rate(http_requests_total[5m])
-  ```
+```
 
 ### 3.3 PromQL 函数与操作符
 
 PromQL 提供了多种函数和操作符用于数据处理：
+
 - **聚合函数**：`sum()`, `avg()`, `max()`, `min()`
 - **数学运算**：`+`, `-`, `*`, `/`
 - **时间函数**：`rate()`, `increase()`, `histogram_quantile()`
@@ -129,24 +132,24 @@ PromQL 提供了多种函数和操作符用于数据处理：
 
 1. **Node Exporter**：监控操作系统级别的指标。
    - **安装**：
-     ```bash
+```bash
      wget https://github.com/prometheus/node_exporter/releases/download/v1.5.0/node_exporter-1.5.0.linux-amd64.tar.gz
      tar -xzf node_exporter-1.5.0.linux-amd64.tar.gz
      cd node_exporter-1.5.0.linux-amd64
      ./node_exporter
-     ```
+```
 
 2. **Blackbox Exporter**：监控网络服务的可用性。
    - **安装**：
-     ```bash
+```bash
      docker run -d -p 9115:9115 --name blackbox_exporter prom/blackbox-exporter
-     ```
+```
 
 3. **MySQL Exporter**：监控 MySQL 数据库的状态。
    - **安装**：
-     ```bash
+```bash
      docker run -d -p 9104:9104 --name mysql_exporter prom/mysqld_exporter
-     ```
+```
 
 ### 4.3 配置 Prometheus 抓取 Exporter 数据
 
@@ -171,28 +174,28 @@ scrape_configs:
 #### 5.1.1 使用 Docker 安装
 
 1. 拉取 Grafana 镜像：
-   ```bash
+```bash
    docker pull grafana/grafana
-   ```
+```
 
 2. 启动 Grafana 容器：
-   ```bash
+```bash
    docker run -d -p 3000:3000 --name grafana grafana/grafana
-   ```
+```
 
 #### 5.1.2 使用二进制文件安装
 
 1. 下载并解压 Grafana：
-   ```bash
+```bash
    wget https://dl.grafana.com/oss/release/grafana-9.5.1.linux-amd64.tar.gz
    tar -zxvf grafana-9.5.1.linux-amd64.tar.gz
-   ```
+```
 
 2. 启动 Grafana：
-   ```bash
+```bash
    cd grafana-9.5.1
    ./bin/grafana-server web
-   ```
+```
 
 ### 5.2 配置 Grafana 数据源
 
@@ -361,17 +364,17 @@ curl -X POST http://localhost:9090/api/v1/admin/tsdb/snapshot
 #### 2.1.1 使用 Docker 安装
 
 1. 拉取 MySQL Exporter 镜像：
-   ```bash
+```bash
    docker pull prom/mysqld-exporter
-   ```
+```
 
 2. 启动容器，并连接到 MySQL 数据库：
-   ```bash
+```bash
    docker run -d -p 9104:9104 \
      -e DATA_SOURCE_NAME="user:password@(db_host:3306)/" \
      --name mysql_exporter \
      prom/mysqld-exporter
-   ```
+```
 
 - `DATA_SOURCE_NAME` 是 MySQL Exporter 连接 MySQL 数据库所需的连接信息。
   - `user`：MySQL 用户名
@@ -381,43 +384,43 @@ curl -X POST http://localhost:9090/api/v1/admin/tsdb/snapshot
 #### 2.1.2 使用二进制文件安装
 
 1. 下载 MySQL Exporter：
-   ```bash
+```bash
    wget https://github.com/prometheus/mysqld_exporter/releases/download/v0.14.0/mysqld_exporter-0.14.0.linux-amd64.tar.gz
-   ```
+```
 
 2. 解压文件：
-   ```bash
+```bash
    tar -xzf mysqld_exporter-0.14.0.linux-amd64.tar.gz
    cd mysqld_exporter-0.14.0.linux-amd64
-   ```
+```
 
 3. 启动 MySQL Exporter：
-   ```bash
+```bash
    ./mysqld_exporter --config.my-cnf="/path/to/.my.cnf"
-   ```
+```
 
 - `.my.cnf` 文件中包含连接 MySQL 数据库的配置信息：
-   ```ini
+```ini
    [client]
    user=root
    password=your_password
-   ```
+```
 
 ### 2.2 MySQL 用户权限设置
 
 为了让 MySQL Exporter 访问 MySQL 的性能指标，需要为其创建一个专用用户并分配适当的权限：
 
 1. 连接到 MySQL 数据库：
-   ```bash
+```bash
    mysql -u root -p
-   ```
+```
 
 2. 创建一个用于监控的用户并分配权限：
-   ```sql
+```sql
    CREATE USER 'exporter'@'localhost' IDENTIFIED BY 'password';
    GRANT PROCESS, REPLICATION CLIENT, SELECT ON *.* TO 'exporter'@'localhost';
    FLUSH PRIVILEGES;
-   ```
+```
 
 ---
 
@@ -442,17 +445,17 @@ scrape_configs:
 ### 3.2 验证 MySQL Exporter 指标抓取
 
 1. 重新启动 Prometheus 服务：
-   ```bash
+```bash
    systemctl restart prometheus
-   ```
+```
 
 2. 访问 Prometheus Web UI（默认端口 9090），在 “**Targets**” 页面检查 MySQL Exporter 是否成功注册。
 
 3. 测试抓取的 MySQL 指标：
    在 Prometheus Web UI 中，执行查询：
-   ```promql
+```promql
    mysql_global_status_connections
-   ```
+```
 
 ---
 
