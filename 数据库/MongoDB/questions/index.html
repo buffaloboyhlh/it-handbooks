@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.36">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.35f28582.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.06209087.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -1047,7 +1047,7 @@
         
   
   <span class="md-ellipsis">
-    Prometheus 基础教程
+    Prometheus 教程
   </span>
   
 
@@ -1976,11 +1976,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Elastic/advance/" class="md-nav__link">
+      <a href="../../Elastic/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    ElastciSearch 进阶教程
+    Elasticsearch 教程
   </span>
   
 
@@ -1997,11 +1997,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Elastic/basic/" class="md-nav__link">
+      <a href="../../Elastic/filebeat/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    ElasticSearch 基本教程
+    filebeat 教程
   </span>
   
 
@@ -2023,6 +2023,27 @@
   
   <span class="md-ellipsis">
     ElasticSearch 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Elastic/logstash/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LogStash 教程
   </span>
   
 
@@ -2105,32 +2126,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../advance/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    MongoDB 进阶教程
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    MongoDB 基础教程
+    MongoDB 教程
   </span>
   
 
@@ -2528,7 +2528,7 @@
         
   
   <span class="md-ellipsis">
-    MySQL 常见问题
+    MySQl 常见问题
   </span>
   
 
@@ -2930,7 +2930,7 @@
         
   
   <span class="md-ellipsis">
-    nginx 基础
+    Nginx 教程
   </span>
   
 
@@ -5032,12 +5032,18 @@
 <li>
 <p><strong>解决方案</strong>：</p>
 </li>
-<li><strong>添加索引</strong>：使用 <code>db.collection.createIndex()</code> 为查询条件添加索引。
-    <code>javascript
-    db.collection.createIndex({ field: 1 });</code></li>
-<li><strong>使用 <code>explain()</code></strong>：分析查询的执行计划，找出性能瓶颈。
-    <code>javascript
-    db.collection.find({ field: "value" }).explain("executionStats");</code></li>
+<li><strong>添加索引</strong>：使用 <code>db.collection.createIndex()</code> 为查询条件添加索引。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">createIndex</span><span class="p">({</span><span class="w"> </span><span class="nx">field</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="p">});</span>
+</code></pre></div>
+
+<ul>
+<li><strong>使用 <code>explain()</code></strong>：分析查询的执行计划，找出性能瓶颈。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="w"> </span><span class="nx">field</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span><span class="w"> </span><span class="p">}).</span><span class="nx">explain</span><span class="p">(</span><span class="s2">&quot;executionStats&quot;</span><span class="p">);</span>
+</code></pre></div>
+
+<ul>
 <li><strong>优化查询</strong>：重构查询语句，避免全表扫描。</li>
 </ul>
 <p><strong>1.2 写入性能问题</strong></p>
@@ -5050,13 +5056,17 @@
 <li>
 <p><strong>解决方案</strong>：</p>
 </li>
-<li><strong>调整写关注</strong>：根据需求调整 <code>writeConcern</code> 设置，以平衡写入性能和数据可靠性。
-    <code>javascript
-    db.collection.insertOne({ ... }, { writeConcern: { w: 1 } });</code></li>
-<li><strong>批量写入</strong>：使用批量操作来减少网络往返次数。
-    <code>javascript
-    db.collection.insertMany([{ ... }, { ... }]);</code></li>
+<li><strong>调整写关注</strong>：根据需求调整 <code>writeConcern</code> 设置，以平衡写入性能和数据可靠性。</li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">insertOne</span><span class="p">({</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">writeConcern</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">w</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">});</span>
+</code></pre></div>
+
+<ul>
+<li><strong>批量写入</strong>：使用批量操作来减少网络往返次数。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">insertMany</span><span class="p">([{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}]);</span>
+</code></pre></div>
+
 <h3 id="2">2. <strong>数据一致性问题</strong></h3>
 <p><strong>2.1 数据丢失或不一致</strong></p>
 <ul>
@@ -5068,14 +5078,18 @@
 <li>
 <p><strong>解决方案</strong>：</p>
 </li>
-<li><strong>检查复制集状态</strong>：使用 <code>rs.status()</code> 确保复制集状态正常。
-    <code>javascript
-    rs.status();</code></li>
-<li><strong>配置 <code>writeConcern</code> 和 <code>readConcern</code></strong>：确保写入操作和读取操作具有合适的一致性设置。
-    <code>javascript
-    db.collection.insertOne({ ... }, { writeConcern: { w: "majority" } });
-    db.collection.find({ ... }).readConcern("majority");</code></li>
+<li><strong>检查复制集状态</strong>：使用 <code>rs.status()</code> 确保复制集状态正常。</li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nx">rs</span><span class="p">.</span><span class="nx">status</span><span class="p">();</span>
+</code></pre></div>
+
+<ul>
+<li><strong>配置 <code>writeConcern</code> 和 <code>readConcern</code></strong>：确保写入操作和读取操作具有合适的一致性设置。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">insertOne</span><span class="p">({</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">writeConcern</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">w</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;majority&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">});</span>
+<span class="w">    </span><span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}).</span><span class="nx">readConcern</span><span class="p">(</span><span class="s2">&quot;majority&quot;</span><span class="p">);</span>
+</code></pre></div>
+
 <p><strong>2.2 事务处理问题</strong></p>
 <ul>
 <li><strong>可能原因</strong>：</li>
@@ -5086,18 +5100,21 @@
 <li>
 <p><strong>解决方案</strong>：</p>
 </li>
-<li><strong>正确使用事务</strong>：确保使用 <code>startTransaction()</code> 开始事务，使用 <code>commitTransaction()</code> 提交事务，使用 <code>abortTransaction()</code> 回滚事务。
-    <code>javascript
-    const session = client.startSession();
-    session.startTransaction();
-    try {
-      db.collection.insertOne({ ... }, { session });
-      session.commitTransaction();
-    } catch (error) {
-      session.abortTransaction();
-    } finally {
-      session.endSession();
-    }</code></li>
+<li><strong>正确使用事务</strong>：确保使用 <code>startTransaction()</code> 开始事务，使用 <code>commitTransaction()</code> 提交事务，使用 <code>abortTransaction()</code> 回滚事务。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">session</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">client</span><span class="p">.</span><span class="nx">startSession</span><span class="p">();</span>
+<span class="w">    </span><span class="nx">session</span><span class="p">.</span><span class="nx">startTransaction</span><span class="p">();</span>
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">insertOne</span><span class="p">({</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">session</span><span class="w"> </span><span class="p">});</span>
+<span class="w">      </span><span class="nx">session</span><span class="p">.</span><span class="nx">commitTransaction</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">session</span><span class="p">.</span><span class="nx">abortTransaction</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">session</span><span class="p">.</span><span class="nx">endSession</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+
+<ul>
 <li><strong>调整超时设置</strong>：根据需要调整事务的超时设置。</li>
 </ul>
 <h3 id="3">3. <strong>分片问题</strong></h3>
@@ -5111,10 +5128,11 @@
 <p><strong>解决方案</strong>：</p>
 </li>
 <li><strong>重新设计分片键</strong>：选择合适的分片键，确保数据均匀分布。</li>
-<li><strong>使用 <code>sh.splitAt()</code></strong>：手动分割数据块，以提高分片均衡性。
-    <code>javascript
-    sh.splitAt("database.collection", { shardKey: value });</code></li>
+<li><strong>使用 <code>sh.splitAt()</code></strong>：手动分割数据块，以提高分片均衡性。</li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nx">sh</span><span class="p">.</span><span class="nx">splitAt</span><span class="p">(</span><span class="s2">&quot;database.collection&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">shardKey</span><span class="o">:</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="p">});</span>
+</code></pre></div>
+
 <p><strong>3.2 分片故障处理</strong></p>
 <ul>
 <li><strong>可能原因</strong>：</li>
@@ -5124,9 +5142,12 @@
 <li>
 <p><strong>解决方案</strong>：</p>
 </li>
-<li><strong>检查分片状态</strong>：使用 <code>sh.status()</code> 查看分片状态。
-    <code>javascript
-    sh.status();</code></li>
+<li><strong>检查分片状态</strong>：使用 <code>sh.status()</code> 查看分片状态。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nx">sh</span><span class="p">.</span><span class="nx">status</span><span class="p">();</span>
+</code></pre></div>
+
+<ul>
 <li><strong>重启分片节点</strong>：重启故障节点或将其替换为新节点。</li>
 </ul>
 <h3 id="4">4. <strong>备份和恢复问题</strong></h3>
@@ -5154,10 +5175,11 @@
 <p><strong>解决方案</strong>：</p>
 </li>
 <li><strong>检查备份文件完整性</strong>：确认备份文件未损坏。</li>
-<li><strong>使用 <code>mongorestore</code> 恢复数据</strong>：正确配置 <code>mongorestore</code> 参数进行数据恢复。
-    <code>bash
-    mongorestore --uri="mongodb://localhost:27017" /backup/directory</code></li>
+<li><strong>使用 <code>mongorestore</code> 恢复数据</strong>：正确配置 <code>mongorestore</code> 参数进行数据恢复。</li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span>mongorestore<span class="w"> </span>--uri<span class="o">=</span><span class="s2">&quot;mongodb://localhost:27017&quot;</span><span class="w"> </span>/backup/directory
+</code></pre></div>
+
 <h3 id="5">5. <strong>安全性问题</strong></h3>
 <p><strong>5.1 认证和授权配置问题</strong></p>
 <ul>
@@ -5168,18 +5190,22 @@
 <li>
 <p><strong>解决方案</strong>：</p>
 </li>
-<li><strong>启用认证</strong>：在配置文件中启用认证。
-    <code>yaml
-    security:
-      authorization: "enabled"</code></li>
-<li><strong>创建用户和角色</strong>：使用 <code>db.createUser()</code> 创建用户，并为其分配正确的角色。
-    <code>javascript
-    db.createUser({
-      user: "myUser",
-      pwd: "myPassword",
-      roles: [{ role: "readWrite", db: "myDatabase" }]
-    });</code></li>
+<li><strong>启用认证</strong>：在配置文件中启用认证。</li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nt">security</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">authorization</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;enabled&quot;</span>
+</code></pre></div>
+
+<ul>
+<li><strong>创建用户和角色</strong>：使用 <code>db.createUser()</code> 创建用户，并为其分配正确的角色。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nx">db</span><span class="p">.</span><span class="nx">createUser</span><span class="p">({</span>
+<span class="w">      </span><span class="nx">user</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;myUser&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">pwd</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;myPassword&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">roles</span><span class="o">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nx">role</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;readWrite&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">db</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;myDatabase&quot;</span><span class="w"> </span><span class="p">}]</span>
+<span class="w">    </span><span class="p">});</span>
+</code></pre></div>
+
 <p><strong>5.2 数据加密问题</strong></p>
 <ul>
 <li><strong>可能原因</strong>：</li>
@@ -5190,13 +5216,14 @@
 <p><strong>解决方案</strong>：</p>
 </li>
 <li><strong>启用磁盘加密</strong>：使用 MongoDB Enterprise 的加密功能进行磁盘数据加密。</li>
-<li><strong>启用传输加密</strong>：配置 SSL/TLS 加密客户端与服务器之间的数据传输。
-    <code>yaml
-    net:
-      tls:
-        mode: requireTLS
-        certificateKeyFile: /path/to/mongodb.pem</code></li>
+<li><strong>启用传输加密</strong>：配置 SSL/TLS 加密客户端与服务器之间的数据传输。</li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nt">net</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">tls</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">requireTLS</span>
+<span class="w">        </span><span class="nt">certificateKeyFile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/path/to/mongodb.pem</span>
+</code></pre></div>
+
 <h3 id="6">6. <strong>运维和监控问题</strong></h3>
 <p><strong>6.1 监控数据缺失</strong></p>
 <ul>
@@ -5260,20 +5287,21 @@
 <p><strong>解决方案</strong>：</p>
 </li>
 <li><strong>重新设计数据模型</strong>：根据应用场景重新设计数据模型，避免不必要的数据冗余和嵌套层级。</li>
-<li><strong>使用嵌套文档和引用</strong>：根据查询频率选择适当的数据建模方式。对于高频访问的数据，可以考虑嵌套文档；对于低频访问的数据，考虑使用引用。
-    <code>javascript
-    // 嵌套文档示例
-    {
-      _id: ObjectId("post_id"),
-      title: "Blog Post",
-      comments: [
-        { 
-          _id: ObjectId("comment_id"),
-          content: "This is a comment"
-        }
-      ]
-    }</code></li>
+<li><strong>使用嵌套文档和引用</strong>：根据查询频率选择适当的数据建模方式。对于高频访问的数据，可以考虑嵌套文档；对于低频访问的数据，考虑使用引用。</li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="c1">// 嵌套文档示例</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">_id</span><span class="o">:</span><span class="w"> </span><span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;post_id&quot;</span><span class="p">),</span>
+<span class="w">      </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Blog Post&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">comments</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span>
+<span class="w">          </span><span class="nx">_id</span><span class="o">:</span><span class="w"> </span><span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;comment_id&quot;</span><span class="p">),</span>
+<span class="w">          </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;This is a comment&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+
 <p><strong>8.2 查询效率低下</strong></p>
 <ul>
 <li><strong>可能原因</strong>：</li>
@@ -5285,10 +5313,11 @@
 <p><strong>解决方案</strong>：</p>
 </li>
 <li><strong>优化数据模型</strong>：确保数据模型与查询模式一致。</li>
-<li><strong>创建索引</strong>：为常用查询字段创建索引，提高查询效率。
-    <code>javascript
-    db.collection.createIndex({ field: 1 });</code></li>
+<li><strong>创建索引</strong>：为常用查询字段创建索引，提高查询效率。</li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">createIndex</span><span class="p">({</span><span class="w"> </span><span class="nx">field</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="p">});</span>
+</code></pre></div>
+
 <h3 id="9">9. <strong>系统部署问题</strong></h3>
 <p><strong>9.1 部署 MongoDB 时遇到的配置问题</strong></p>
 <ul>
@@ -5312,10 +5341,13 @@
 <li>
 <p><strong>解决方案</strong>：</p>
 </li>
-<li><strong>检查节点状态</strong>：使用 <code>rs.status()</code> 和 <code>sh.status()</code> 检查复制集和分片的状态。
-    <code>javascript
-    rs.status();
-    sh.status();</code></li>
+<li><strong>检查节点状态</strong>：使用 <code>rs.status()</code> 和 <code>sh.status()</code> 检查复制集和分片的状态。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nx">rs</span><span class="p">.</span><span class="nx">status</span><span class="p">();</span>
+<span class="w">    </span><span class="nx">sh</span><span class="p">.</span><span class="nx">status</span><span class="p">();</span>
+</code></pre></div>
+
+<ul>
 <li><strong>修复故障节点</strong>：重启故障节点或替换故障节点以恢复集群正常运行。</li>
 </ul>
 <h3 id="10">10. <strong>数据一致性和事务问题</strong></h3>
@@ -5341,10 +5373,11 @@
 <p><strong>解决方案</strong>：</p>
 </li>
 <li><strong>优化事务操作</strong>：减少事务中的操作，避免长时间持有事务锁。</li>
-<li><strong>调整事务超时设置</strong>：根据需要调整事务超时设置。
-    <code>javascript
-    const session = client.startSession({ defaultTransactionOptions: { maxCommitTimeMS: 60000 } });</code></li>
+<li><strong>调整事务超时设置</strong>：根据需要调整事务超时设置。</li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">session</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">client</span><span class="p">.</span><span class="nx">startSession</span><span class="p">({</span><span class="w"> </span><span class="nx">defaultTransactionOptions</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">maxCommitTimeMS</span><span class="o">:</span><span class="w"> </span><span class="mf">60000</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">});</span>
+</code></pre></div>
+
 <h3 id="11">11. <strong>监控和维护问题</strong></h3>
 <p><strong>11.1 监控数据丢失</strong></p>
 <ul>
@@ -5368,10 +5401,11 @@
 <p><strong>解决方案</strong>：</p>
 </li>
 <li><strong>计划维护时间</strong>：选择业务低峰期进行维护任务，以减少对业务的影响。</li>
-<li><strong>使用 <code>background</code> 选项</strong>：在创建或重建索引时，使用 <code>background</code> 选项来减少对系统的影响。
-    <code>javascript
-    db.collection.createIndex({ field: 1 }, { background: true });</code></li>
+<li><strong>使用 <code>background</code> 选项</strong>：在创建或重建索引时，使用 <code>background</code> 选项来减少对系统的影响。</li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">createIndex</span><span class="p">({</span><span class="w"> </span><span class="nx">field</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">background</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">});</span>
+</code></pre></div>
+
 <h3 id="12">12. <strong>备份和恢复问题</strong></h3>
 <p><strong>12.1 备份数据的完整性问题</strong></p>
 <ul>
@@ -5394,10 +5428,11 @@
 <li>
 <p><strong>解决方案</strong>：</p>
 </li>
-<li><strong>使用 <code>--oplogReplay</code></strong>：在恢复时使用 <code>--oplogReplay</code> 选项，以保证数据的一致性。
-    <code>bash
-    mongorestore --oplogReplay /backup/directory</code></li>
+<li><strong>使用 <code>--oplogReplay</code></strong>：在恢复时使用 <code>--oplogReplay</code> 选项，以保证数据的一致性。</li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span>mongorestore<span class="w"> </span>--oplogReplay<span class="w"> </span>/backup/directory
+</code></pre></div>
+
 <h3 id="13">13. <strong>分片和高可用性问题</strong></h3>
 <p><strong>13.1 分片集群的数据分布不均</strong></p>
 <ul>
@@ -5409,10 +5444,11 @@
 <p><strong>解决方案</strong>：</p>
 </li>
 <li><strong>重新选择分片键</strong>：根据数据访问模式和分布重新选择合适的分片键。</li>
-<li><strong>执行 <code>sh.moveChunk()</code></strong>：将数据块从一个分片移动到另一个分片，以优化数据分布。
-    <code>javascript
-    sh.moveChunk("database.collection", { shardKey: value }, "targetShard");</code></li>
+<li><strong>执行 <code>sh.moveChunk()</code></strong>：将数据块从一个分片移动到另一个分片，以优化数据分布。</li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nx">sh</span><span class="p">.</span><span class="nx">moveChunk</span><span class="p">(</span><span class="s2">&quot;database.collection&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">shardKey</span><span class="o">:</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="s2">&quot;targetShard&quot;</span><span class="p">);</span>
+</code></pre></div>
+
 <p><strong>13.2 处理分片故障</strong></p>
 <ul>
 <li><strong>可能原因</strong>：</li>
@@ -5497,11 +5533,12 @@
 </ul>
 </li>
 <li><strong>验证备份和恢复</strong>：在备份后和恢复后验证数据完整性，确保数据无损。</li>
-<li><strong>使用 <code>--gzip</code> 进行压缩</strong>：减少备份文件的大小。
-    <code>bash
-    mongodump --gzip --archive=/backup/directory/backup.gz
-    mongorestore --gzip --archive=/backup/directory/backup.gz</code></li>
+<li><strong>使用 <code>--gzip</code> 进行压缩</strong>：减少备份文件的大小。</li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span>mongodump<span class="w"> </span>--gzip<span class="w"> </span>--archive<span class="o">=</span>/backup/directory/backup.gz
+<span class="w">    </span>mongorestore<span class="w"> </span>--gzip<span class="w"> </span>--archive<span class="o">=</span>/backup/directory/backup.gz
+</code></pre></div>
+
 <p><strong>16.2 数据迁移中的数据一致性问题</strong></p>
 <ul>
 <li><strong>问题</strong>：</li>
@@ -5512,10 +5549,11 @@
 <p><strong>解决方案</strong>：</p>
 </li>
 <li><strong>使用增量迁移工具</strong>：如 <code>MongoMirror</code>，进行增量迁移，确保迁移过程中的数据一致性。</li>
-<li><strong>使用 <code>oplog</code> 回放</strong>：在迁移过程中使用 <code>oplog</code> 来保持数据的一致性。
-    <code>bash
-    mongorestore --oplogReplay /backup/directory</code></li>
+<li><strong>使用 <code>oplog</code> 回放</strong>：在迁移过程中使用 <code>oplog</code> 来保持数据的一致性。</li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span>mongorestore<span class="w"> </span>--oplogReplay<span class="w"> </span>/backup/directory
+</code></pre></div>
+
 <h3 id="17">17. <strong>高可用性和故障恢复</strong></h3>
 <p><strong>17.1 复制集成员状态异常</strong></p>
 <ul>
@@ -5528,11 +5566,12 @@
 </li>
 <li><strong>检查网络连接</strong>：确保复制集成员之间的网络连接正常。</li>
 <li><strong>检查日志文件</strong>：查看 MongoDB 的日志文件，以获取详细的错误信息。</li>
-<li><strong>重新同步节点</strong>：尝试重新同步出现问题的节点。
-    <code>javascript
-    rs.remove("hostname:port");
-    rs.add("hostname:port");</code></li>
+<li><strong>重新同步节点</strong>：尝试重新同步出现问题的节点。</li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nx">rs</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s2">&quot;hostname:port&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">rs</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;hostname:port&quot;</span><span class="p">);</span>
+</code></pre></div>
+
 <p><strong>17.2 故障转移和选举问题</strong></p>
 <ul>
 <li><strong>问题</strong>：</li>
@@ -5542,9 +5581,12 @@
 <li>
 <p><strong>解决方案</strong>：</p>
 </li>
-<li><strong>配置选举超时</strong>：调整选举超时配置，确保选举过程快速完成。
-    <code>javascript
-    rs.conf().settings.electionTimeoutMillis = 10000;</code></li>
+<li><strong>配置选举超时</strong>：调整选举超时配置，确保选举过程快速完成。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nx">rs</span><span class="p">.</span><span class="nx">conf</span><span class="p">().</span><span class="nx">settings</span><span class="p">.</span><span class="nx">electionTimeoutMillis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10000</span><span class="p">;</span>
+</code></pre></div>
+
+<ul>
 <li><strong>增加投票节点</strong>：确保复制集中有足够的节点参与投票，防止选举无法完成。</li>
 </ul>
 <h3 id="18">18. <strong>安全性和访问控制</strong></h3>
@@ -5557,23 +5599,26 @@
 <li>
 <p><strong>解决方案</strong>：</p>
 </li>
-<li><strong>使用角色和权限管理</strong>：创建合适的角色，并为用户分配角色。
-    <code>javascript
-    db.createRole({
-      role: "readWriteRole",
-      privileges: [
-        {
-          resource: { db: "myDatabase", collection: "" },
-          actions: [ "find", "insert", "update", "remove" ]
-        }
-      ],
-      roles: []
-    });
-    db.createUser({
-      user: "username",
-      pwd: "password",
-      roles: [{ role: "readWriteRole", db: "myDatabase" }]
-    });</code></li>
+<li><strong>使用角色和权限管理</strong>：创建合适的角色，并为用户分配角色。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nx">db</span><span class="p">.</span><span class="nx">createRole</span><span class="p">({</span>
+<span class="w">      </span><span class="nx">role</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;readWriteRole&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">privileges</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">resource</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">db</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;myDatabase&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">collection</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">          </span><span class="nx">actions</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">&quot;find&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;insert&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;update&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;remove&quot;</span><span class="w"> </span><span class="p">]</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">],</span>
+<span class="w">      </span><span class="nx">roles</span><span class="o">:</span><span class="w"> </span><span class="p">[]</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">    </span><span class="nx">db</span><span class="p">.</span><span class="nx">createUser</span><span class="p">({</span>
+<span class="w">      </span><span class="nx">user</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;username&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">pwd</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;password&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">roles</span><span class="o">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nx">role</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;readWriteRole&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">db</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;myDatabase&quot;</span><span class="w"> </span><span class="p">}]</span>
+<span class="w">    </span><span class="p">});</span>
+</code></pre></div>
+
+<ul>
 <li><strong>定期审计权限</strong>：定期审计用户和角色权限，确保遵循最小权限原则。</li>
 </ul>
 <p><strong>18.2 数据加密问题</strong></p>
@@ -5623,9 +5668,12 @@
 <li>
 <p><strong>解决方案</strong>：</p>
 </li>
-<li><strong>分析查询计划</strong>：使用 <code>explain()</code> 分析查询的执行计划，找出性能瓶颈。
-    <code>javascript
-    db.collection.find({ field: "value" }).explain("executionStats");</code></li>
+<li><strong>分析查询计划</strong>：使用 <code>explain()</code> 分析查询的执行计划，找出性能瓶颈。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="w"> </span><span class="nx">field</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span><span class="w"> </span><span class="p">}).</span><span class="nx">explain</span><span class="p">(</span><span class="s2">&quot;executionStats&quot;</span><span class="p">);</span>
+</code></pre></div>
+
+<ul>
 <li><strong>优化查询</strong>：避免不必要的全表扫描，使用索引提高查询效率。</li>
 <li><strong>索引管理</strong>：定期检查和优化索引，避免过多或不必要的索引。</li>
 </ul>
@@ -5653,11 +5701,12 @@
 </li>
 <li><strong>优化查询和索引</strong>：减少对系统资源的消耗。</li>
 <li><strong>增加硬件资源</strong>：根据需要增加服务器的 CPU、内存或磁盘容量。</li>
-<li><strong>资源监控</strong>：使用 <code>mongostat</code> 和 <code>mongotop</code> 工具监控资源利用情况。
-    <code>bash
-    mongostat --host localhost
-    mongotop --host localhost</code></li>
+<li><strong>资源监控</strong>：使用 <code>mongostat</code> 和 <code>mongotop</code> 工具监控资源利用情况。</li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span>mongostat<span class="w"> </span>--host<span class="w"> </span>localhost
+<span class="w">    </span>mongotop<span class="w"> </span>--host<span class="w"> </span>localhost
+</code></pre></div>
+
 <h3 id="21">21. <strong>分片管理</strong></h3>
 <p><strong>21.1 分片键选择</strong></p>
 <ul>
@@ -5669,10 +5718,11 @@
 <p><strong>解决方案</strong>：</p>
 </li>
 <li><strong>选择合适的分片键</strong>：根据数据访问模式选择能够均匀分布数据的分片键。</li>
-<li><strong>重新分片</strong>：如果发现数据分布不均，可以考虑重新分片。
-    <code>javascript
-    sh.shardCollection("database.collection", { shardKey: 1 });</code></li>
+<li><strong>重新分片</strong>：如果发现数据分布不均，可以考虑重新分片。</li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nx">sh</span><span class="p">.</span><span class="nx">shardCollection</span><span class="p">(</span><span class="s2">&quot;database.collection&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">shardKey</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="p">});</span>
+</code></pre></div>
+
 <p><strong>21.2 分片数据迁移</strong></p>
 <ul>
 <li><strong>问题</strong>：</li>
@@ -5682,9 +5732,12 @@
 <li>
 <p><strong>解决方案</strong>：</p>
 </li>
-<li><strong>手动迁移数据</strong>：使用 <code>sh.moveChunk()</code> 将数据块从一个分片移动到另一个分片。
-    <code>javascript
-    sh.moveChunk("database.collection", { shardKey: value }, "targetShard");</code></li>
+<li><strong>手动迁移数据</strong>：使用 <code>sh.moveChunk()</code> 将数据块从一个分片移动到另一个分片。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nx">sh</span><span class="p">.</span><span class="nx">moveChunk</span><span class="p">(</span><span class="s2">&quot;database.collection&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">shardKey</span><span class="o">:</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="s2">&quot;targetShard&quot;</span><span class="p">);</span>
+</code></pre></div>
+
+<ul>
 <li><strong>监控数据迁移进度</strong>：确保数据迁移过程正常进行，并监控迁移进度。</li>
 </ul>
 
@@ -5733,7 +5786,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.56dfad97.min.js"></script>

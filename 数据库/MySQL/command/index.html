@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.36">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.35f28582.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.06209087.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -1047,7 +1047,7 @@
         
   
   <span class="md-ellipsis">
-    Prometheus 基础教程
+    Prometheus 教程
   </span>
   
 
@@ -1976,11 +1976,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Elastic/advance/" class="md-nav__link">
+      <a href="../../Elastic/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    ElastciSearch 进阶教程
+    Elasticsearch 教程
   </span>
   
 
@@ -1997,11 +1997,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Elastic/basic/" class="md-nav__link">
+      <a href="../../Elastic/filebeat/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    ElasticSearch 基本教程
+    filebeat 教程
   </span>
   
 
@@ -2023,6 +2023,27 @@
   
   <span class="md-ellipsis">
     ElasticSearch 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Elastic/logstash/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LogStash 教程
   </span>
   
 
@@ -2103,32 +2124,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../MongoDB/advance/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    MongoDB 进阶教程
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../MongoDB/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    MongoDB 基础教程
+    MongoDB 教程
   </span>
   
 
@@ -2573,7 +2573,7 @@
         
   
   <span class="md-ellipsis">
-    MySQL 常见问题
+    MySQl 常见问题
   </span>
   
 
@@ -2975,7 +2975,7 @@
         
   
   <span class="md-ellipsis">
-    nginx 基础
+    Nginx 教程
   </span>
   
 
@@ -5111,233 +5111,269 @@
 <h1 id="mysql">MySQL 常用命令</h1>
 <p>以下是 MySQL 常用命令的详细解说，涵盖了数据库管理、表操作、数据查询等方面：</p>
 <h3 id="1-mysql">1. <strong>连接 MySQL</strong></h3>
-<p><strong>命令</strong>：
-   <code>bash
-   mysql -u 用户名 -p</code>
-   <strong>详解</strong>：通过该命令可以登录 MySQL 数据库，<code>-u</code> 指定用户名，<code>-p</code> 后输入密码。登录后即可执行 MySQL 命令。</p>
+<p><strong>命令</strong>：</p>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span>mysql<span class="w"> </span>-u<span class="w"> </span>用户名<span class="w"> </span>-p
+</code></pre></div>
+
+<p><strong>详解</strong>：通过该命令可以登录 MySQL 数据库，<code>-u</code> 指定用户名，<code>-p</code> 后输入密码。登录后即可执行 MySQL 命令。</p>
 <hr />
 <h3 id="2">2. <strong>显示数据库</strong></h3>
-<p><strong>命令</strong>：
-   <code>sql
-   SHOW DATABASES;</code>
-   <strong>详解</strong>：列出当前 MySQL 服务器上的所有数据库。</p>
+<p><strong>命令</strong>：</p>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="k">SHOW</span><span class="w"> </span><span class="n">DATABASES</span><span class="p">;</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：列出当前 MySQL 服务器上的所有数据库。</p>
 <hr />
 <h3 id="3">3. <strong>创建数据库</strong></h3>
-<p><strong>命令</strong>：
-   <code>sql
-   CREATE DATABASE 数据库名;</code>
-   <strong>详解</strong>：在 MySQL 服务器上创建一个新数据库。</p>
+<p><strong>命令</strong>：</p>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="err">数据库名</span><span class="p">;</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：在 MySQL 服务器上创建一个新数据库。</p>
 <hr />
 <h3 id="4">4. <strong>选择数据库</strong></h3>
-<p><strong>命令</strong>：
-   <code>sql
-   USE 数据库名;</code>
-   <strong>详解</strong>：指定之后的操作都在选定的数据库上进行。</p>
+<p><strong>命令</strong>：</p>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="n">USE</span><span class="w"> </span><span class="err">数据库名</span><span class="p">;</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：指定之后的操作都在选定的数据库上进行。</p>
 <hr />
 <h3 id="5">5. <strong>删除数据库</strong></h3>
-<p><strong>命令</strong>：
-   <code>sql
-   DROP DATABASE 数据库名;</code>
-   <strong>详解</strong>：删除指定的数据库，注意此操作会丢失所有数据。</p>
+<p><strong>命令</strong>：</p>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="k">DROP</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="err">数据库名</span><span class="p">;</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：删除指定的数据库，注意此操作会丢失所有数据。</p>
 <hr />
 <h3 id="6">6. <strong>显示表</strong></h3>
-<p><strong>命令</strong>：
-   <code>sql
-   SHOW TABLES;</code>
-   <strong>详解</strong>：列出当前选择的数据库中的所有表。</p>
+<p><strong>命令</strong>：</p>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="k">SHOW</span><span class="w"> </span><span class="n">TABLES</span><span class="p">;</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：列出当前选择的数据库中的所有表。</p>
 <hr />
 <h3 id="7">7. <strong>创建表</strong></h3>
-<p><strong>命令</strong>：
-   <code>sql
-   CREATE TABLE 表名 (
-       列名 数据类型 [约束],
-       列名 数据类型 [约束],
-       ...
-   );</code>
-   <strong>详解</strong>：创建一个新表，指定列名和数据类型，可能包含约束（如 <code>PRIMARY KEY</code>、<code>NOT NULL</code> 等）。</p>
+<p><strong>命令</strong>：</p>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">表名</span><span class="w"> </span><span class="p">(</span>
+<span class="w">       </span><span class="err">列名</span><span class="w"> </span><span class="err">数据类型</span><span class="w"> </span><span class="p">[</span><span class="err">约束</span><span class="p">],</span>
+<span class="w">       </span><span class="err">列名</span><span class="w"> </span><span class="err">数据类型</span><span class="w"> </span><span class="p">[</span><span class="err">约束</span><span class="p">],</span>
+<span class="w">       </span><span class="p">...</span>
+<span class="w">   </span><span class="p">);</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：创建一个新表，指定列名和数据类型，可能包含约束（如 <code>PRIMARY KEY</code>、<code>NOT NULL</code> 等）。</p>
 <hr />
 <h3 id="8">8. <strong>查看表结构</strong></h3>
-<p><strong>命令</strong>：
-   <code>sql
-   DESCRIBE 表名;</code>
-   <strong>详解</strong>：显示表的结构，包括列名、数据类型、是否为主键、是否允许为空等。</p>
+<p><strong>命令</strong>：</p>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="k">DESCRIBE</span><span class="w"> </span><span class="err">表名</span><span class="p">;</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：显示表的结构，包括列名、数据类型、是否为主键、是否允许为空等。</p>
 <hr />
 <h3 id="9">9. <strong>插入数据</strong></h3>
-<p><strong>命令</strong>：
-   <code>sql
-   INSERT INTO 表名 (列1, 列2, ...) VALUES (值1, 值2, ...);</code>
-   <strong>详解</strong>：向指定的表中插入一行数据。如果不需要插入所有列，可以省略一些列名及其对应值。</p>
+<p><strong>命令</strong>：</p>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="err">表名</span><span class="w"> </span><span class="p">(</span><span class="err">列</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="err">列</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="p">...)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="err">值</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="err">值</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="p">...);</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：向指定的表中插入一行数据。如果不需要插入所有列，可以省略一些列名及其对应值。</p>
 <hr />
 <h3 id="10">10. <strong>查询数据</strong></h3>
-<p><strong>命令</strong>：
-   <code>sql
-   SELECT 列1, 列2, ... FROM 表名 WHERE 条件;</code>
-   <strong>详解</strong>：从表中查询指定列的数据，可以通过 <code>WHERE</code> 条件筛选结果。</p>
+<p><strong>命令</strong>：</p>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="k">SELECT</span><span class="w"> </span><span class="err">列</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="err">列</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="err">表名</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="err">条件</span><span class="p">;</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：从表中查询指定列的数据，可以通过 <code>WHERE</code> 条件筛选结果。</p>
 <hr />
 <h3 id="11">11. <strong>更新数据</strong></h3>
-<p><strong>命令</strong>：
-   <code>sql
-   UPDATE 表名 SET 列1=值1, 列2=值2 WHERE 条件;</code>
-   <strong>详解</strong>：更新表中符合条件的记录的值。<code>WHERE</code> 语句至关重要，否则会更新所有行。</p>
+<p><strong>命令</strong>：</p>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="k">UPDATE</span><span class="w"> </span><span class="err">表名</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="err">列</span><span class="mi">1</span><span class="o">=</span><span class="err">值</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="err">列</span><span class="mi">2</span><span class="o">=</span><span class="err">值</span><span class="mi">2</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="err">条件</span><span class="p">;</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：更新表中符合条件的记录的值。<code>WHERE</code> 语句至关重要，否则会更新所有行。</p>
 <hr />
 <h3 id="12">12. <strong>删除数据</strong></h3>
-<p><strong>命令</strong>：
-   <code>sql
-   DELETE FROM 表名 WHERE 条件;</code>
-   <strong>详解</strong>：删除符合条件的记录。与更新操作类似，<code>WHERE</code> 语句防止删除表中所有数据。</p>
+<p><strong>命令</strong>：</p>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="err">表名</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="err">条件</span><span class="p">;</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：删除符合条件的记录。与更新操作类似，<code>WHERE</code> 语句防止删除表中所有数据。</p>
 <hr />
 <h3 id="13">13. <strong>显示表的创建语句</strong></h3>
-<p><strong>命令</strong>：
-   <code>sql
-   SHOW CREATE TABLE 表名;</code>
-   <strong>详解</strong>：显示创建表的完整 SQL 语句，包括列定义、约束等。</p>
+<p><strong>命令</strong>：</p>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="k">SHOW</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">表名</span><span class="p">;</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：显示创建表的完整 SQL 语句，包括列定义、约束等。</p>
 <hr />
 <h3 id="14">14. <strong>添加列</strong></h3>
-<p><strong>命令</strong>：
-   <code>sql
-   ALTER TABLE 表名 ADD 列名 数据类型 [约束];</code>
-   <strong>详解</strong>：在表中新增列。</p>
+<p><strong>命令</strong>：</p>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">表名</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="err">列名</span><span class="w"> </span><span class="err">数据类型</span><span class="w"> </span><span class="p">[</span><span class="err">约束</span><span class="p">];</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：在表中新增列。</p>
 <hr />
 <h3 id="15">15. <strong>修改列</strong></h3>
-<p><strong>命令</strong>：
-   <code>sql
-   ALTER TABLE 表名 MODIFY 列名 新数据类型 [约束];</code>
-   <strong>详解</strong>：修改表中的列定义，比如改变数据类型或约束。</p>
+<p><strong>命令</strong>：</p>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">表名</span><span class="w"> </span><span class="k">MODIFY</span><span class="w"> </span><span class="err">列名</span><span class="w"> </span><span class="err">新数据类型</span><span class="w"> </span><span class="p">[</span><span class="err">约束</span><span class="p">];</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：修改表中的列定义，比如改变数据类型或约束。</p>
 <hr />
 <h3 id="16">16. <strong>删除列</strong></h3>
-<p><strong>命令</strong>：
-   <code>sql
-   ALTER TABLE 表名 DROP 列名;</code>
-   <strong>详解</strong>：删除表中的某一列。</p>
+<p><strong>命令</strong>：</p>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">表名</span><span class="w"> </span><span class="k">DROP</span><span class="w"> </span><span class="err">列名</span><span class="p">;</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：删除表中的某一列。</p>
 <hr />
 <h3 id="17">17. <strong>删除表</strong></h3>
-<p><strong>命令</strong>：
-   <code>sql
-   DROP TABLE 表名;</code>
-   <strong>详解</strong>：删除指定的表，删除后该表的数据也将不可恢复。</p>
+<p><strong>命令</strong>：</p>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">表名</span><span class="p">;</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：删除指定的表，删除后该表的数据也将不可恢复。</p>
 <hr />
 <h3 id="18">18. <strong>表重命名</strong></h3>
-<p><strong>命令</strong>：
-   <code>sql
-   ALTER TABLE 旧表名 RENAME TO 新表名;</code>
-   <strong>详解</strong>：将表的名称修改为新的名称。</p>
+<p><strong>命令</strong>：</p>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">旧表名</span><span class="w"> </span><span class="k">RENAME</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="err">新表名</span><span class="p">;</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：将表的名称修改为新的名称。</p>
 <hr />
 <h3 id="19">19. <strong>创建索引</strong></h3>
-<p><strong>命令</strong>：
-   <code>sql
-   CREATE INDEX 索引名 ON 表名 (列名);</code>
-   <strong>详解</strong>：为指定列创建索引以加快查询速度。</p>
+<p><strong>命令</strong>：</p>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="err">索引名</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="err">表名</span><span class="w"> </span><span class="p">(</span><span class="err">列名</span><span class="p">);</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：为指定列创建索引以加快查询速度。</p>
 <hr />
 <h3 id="20">20. <strong>删除索引</strong></h3>
-<p><strong>命令</strong>：
-   <code>sql
-   DROP INDEX 索引名 ON 表名;</code>
-   <strong>详解</strong>：删除指定的索引。</p>
+<p><strong>命令</strong>：</p>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="k">DROP</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="err">索引名</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="err">表名</span><span class="p">;</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：删除指定的索引。</p>
 <hr />
 <h3 id="21">21. <strong>查看表中的索引</strong></h3>
-<p><strong>命令</strong>：
-   <code>sql
-   SHOW INDEX FROM 表名;</code>
-   <strong>详解</strong>：显示表中所有的索引及其详细信息。</p>
+<p><strong>命令</strong>：</p>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="k">SHOW</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="err">表名</span><span class="p">;</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：显示表中所有的索引及其详细信息。</p>
 <hr />
 <h3 id="22">22. <strong>备份数据库</strong></h3>
-<p><strong>命令</strong>：
-   <code>bash
-   mysqldump -u 用户名 -p 数据库名 &gt; 备份文件.sql</code>
-   <strong>详解</strong>：将数据库内容导出到 SQL 文件中，用于备份。</p>
+<p><strong>命令</strong>：</p>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span>mysqldump<span class="w"> </span>-u<span class="w"> </span>用户名<span class="w"> </span>-p<span class="w"> </span>数据库名<span class="w"> </span>&gt;<span class="w"> </span>备份文件.sql
+</code></pre></div>
+
+<p><strong>详解</strong>：将数据库内容导出到 SQL 文件中，用于备份。</p>
 <hr />
 <h3 id="23">23. <strong>恢复数据库</strong></h3>
-<p><strong>命令</strong>：
-   <code>bash
-   mysql -u 用户名 -p 数据库名 &lt; 备份文件.sql</code>
-   <strong>详解</strong>：从备份文件中恢复数据库。</p>
+<p><strong>命令</strong>：</p>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span>mysql<span class="w"> </span>-u<span class="w"> </span>用户名<span class="w"> </span>-p<span class="w"> </span>数据库名<span class="w"> </span>&lt;<span class="w"> </span>备份文件.sql
+</code></pre></div>
+
+<p><strong>详解</strong>：从备份文件中恢复数据库。</p>
 <hr />
 <h3 id="24">24. <strong>查看当前用户</strong></h3>
-<p><strong>命令</strong>：
-   <code>sql
-   SELECT USER();</code>
-   <strong>详解</strong>：显示当前登录的 MySQL 用户名。</p>
+<p><strong>命令</strong>：</p>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="k">SELECT</span><span class="w"> </span><span class="k">USER</span><span class="p">();</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：显示当前登录的 MySQL 用户名。</p>
 <hr />
 <h3 id="25-mysql">25. <strong>查看 MySQL 版本</strong></h3>
-<p><strong>命令</strong>：
-   <code>sql
-   SELECT VERSION();</code>
-   <strong>详解</strong>：显示当前 MySQL 服务器的版本信息。</p>
+<p><strong>命令</strong>：</p>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="k">SELECT</span><span class="w"> </span><span class="k">VERSION</span><span class="p">();</span>
+</code></pre></div>
+
+<p><strong>详解</strong>：显示当前 MySQL 服务器的版本信息。</p>
 <hr />
 <h2 id="show">Show 命令</h2>
 <p><code>SHOW</code>命令是 MySQL 中用于显示数据库状态、结构和配置信息的命令。以下是一些常见的 <code>SHOW</code> 命令：</p>
 <ol>
-<li>
-<p><strong>显示所有数据库</strong>：
-   <code>sql
-   SHOW DATABASES;</code></p>
-</li>
-<li>
-<p><strong>显示当前使用的数据库</strong>：
-   <code>sql
-   SELECT DATABASE();</code></p>
-</li>
-<li>
-<p><strong>显示当前数据库中的所有表</strong>：
-   <code>sql
-   SHOW TABLES;</code></p>
-</li>
-<li>
-<p><strong>显示表的结构</strong>：
-   <code>sql
-   SHOW COLUMNS FROM table_name;</code></p>
-</li>
-<li>
-<p><strong>显示表的索引</strong>：
-   <code>sql
-   SHOW INDEX FROM table_name;</code></p>
-</li>
-<li>
-<p><strong>显示当前连接的用户</strong>：
-   <code>sql
-   SHOW PROCESSLIST;</code></p>
-</li>
-<li>
-<p><strong>显示 MySQL 服务器的状态</strong>：
-   <code>sql
-   SHOW STATUS;</code></p>
-</li>
-<li>
-<p><strong>显示 MySQL 配置变量</strong>：
-   <code>sql
-   SHOW VARIABLES;</code></p>
-</li>
-<li>
-<p><strong>显示创建表的 SQL 语句</strong>：
-   <code>sql
-   SHOW CREATE TABLE table_name;</code></p>
-</li>
-<li>
-<p><strong>显示创建数据库的 SQL 语句</strong>：
-    <code>sql
-    SHOW CREATE DATABASE database_name;</code></p>
-</li>
-<li>
-<p><strong>显示触发器</strong>：
-    <code>sql
-    SHOW TRIGGERS;</code></p>
-</li>
-<li>
-<p><strong>显示视图</strong>：
-    <code>sql
-    SHOW FULL TABLES WHERE Table_type = 'VIEW';</code></p>
-</li>
-<li>
-<p><strong>显示存储过程</strong>：
-    <code>sql
-    SHOW PROCEDURE STATUS;</code></p>
-</li>
-<li>
-<p><strong>显示事件</strong>：
-    <code>sql
-    SHOW EVENTS;</code></p>
-</li>
+<li><strong>显示所有数据库</strong>：</li>
 </ol>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="k">SHOW</span><span class="w"> </span><span class="n">DATABASES</span><span class="p">;</span>
+</code></pre></div>
+
+<ol>
+<li><strong>显示当前使用的数据库</strong>：</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="k">SELECT</span><span class="w"> </span><span class="k">DATABASE</span><span class="p">();</span>
+</code></pre></div>
+
+<ol>
+<li><strong>显示当前数据库中的所有表</strong>：</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="k">SHOW</span><span class="w"> </span><span class="n">TABLES</span><span class="p">;</span>
+</code></pre></div>
+
+<ol>
+<li><strong>显示表的结构</strong>：</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="k">SHOW</span><span class="w"> </span><span class="n">COLUMNS</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span><span class="p">;</span>
+</code></pre></div>
+
+<ol>
+<li><strong>显示表的索引</strong>：</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="k">SHOW</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span><span class="p">;</span>
+</code></pre></div>
+
+<ol>
+<li><strong>显示当前连接的用户</strong>：</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="k">SHOW</span><span class="w"> </span><span class="n">PROCESSLIST</span><span class="p">;</span>
+</code></pre></div>
+
+<ol>
+<li><strong>显示 MySQL 服务器的状态</strong>：</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="k">SHOW</span><span class="w"> </span><span class="n">STATUS</span><span class="p">;</span>
+</code></pre></div>
+
+<ol>
+<li><strong>显示 MySQL 配置变量</strong>：</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="k">SHOW</span><span class="w"> </span><span class="n">VARIABLES</span><span class="p">;</span>
+</code></pre></div>
+
+<ol>
+<li><strong>显示创建表的 SQL 语句</strong>：</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="w">   </span><span class="k">SHOW</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">table_name</span><span class="p">;</span>
+</code></pre></div>
+
+<ol>
+<li><strong>显示创建数据库的 SQL 语句</strong>：</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="k">SHOW</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">database_name</span><span class="p">;</span>
+</code></pre></div>
+
+<ol>
+<li><strong>显示触发器</strong>：</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="k">SHOW</span><span class="w"> </span><span class="n">TRIGGERS</span><span class="p">;</span>
+</code></pre></div>
+
+<ol>
+<li><strong>显示视图</strong>：</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="k">SHOW</span><span class="w"> </span><span class="k">FULL</span><span class="w"> </span><span class="n">TABLES</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Table_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;VIEW&#39;</span><span class="p">;</span>
+</code></pre></div>
+
+<ol>
+<li><strong>显示存储过程</strong>：</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="k">SHOW</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="n">STATUS</span><span class="p">;</span>
+</code></pre></div>
+
+<ol>
+<li><strong>显示事件</strong>：</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="k">SHOW</span><span class="w"> </span><span class="n">EVENTS</span><span class="p">;</span>
+</code></pre></div>
 
 
 
@@ -5384,7 +5420,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.56dfad97.min.js"></script>

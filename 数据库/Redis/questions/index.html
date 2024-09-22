@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.36">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.35f28582.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.06209087.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -1047,7 +1047,7 @@
         
   
   <span class="md-ellipsis">
-    Prometheus 基础教程
+    Prometheus 教程
   </span>
   
 
@@ -1976,11 +1976,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Elastic/advance/" class="md-nav__link">
+      <a href="../../Elastic/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    ElastciSearch 进阶教程
+    Elasticsearch 教程
   </span>
   
 
@@ -1997,11 +1997,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Elastic/basic/" class="md-nav__link">
+      <a href="../../Elastic/filebeat/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    ElasticSearch 基本教程
+    filebeat 教程
   </span>
   
 
@@ -2023,6 +2023,27 @@
   
   <span class="md-ellipsis">
     ElasticSearch 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Elastic/logstash/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LogStash 教程
   </span>
   
 
@@ -2103,32 +2124,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../MongoDB/advance/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    MongoDB 进阶教程
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../MongoDB/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    MongoDB 基础教程
+    MongoDB 教程
   </span>
   
 
@@ -2297,7 +2297,7 @@
         
   
   <span class="md-ellipsis">
-    MySQL 常见问题
+    MySQl 常见问题
   </span>
   
 
@@ -2936,7 +2936,7 @@
         
   
   <span class="md-ellipsis">
-    nginx 基础
+    Nginx 教程
   </span>
   
 
@@ -5037,18 +5037,22 @@
 <h4 id="1">1. <strong>内存不足问题</strong></h4>
 <p><strong>问题描述</strong>：
 Redis 是一个内存数据库，所有的数据都存储在内存中，因此内存不足是 Redis 使用过程中常见的问题。当 Redis 实例的内存使用接近服务器物理内存限制时，可能会导致 OOM（Out of Memory）错误，甚至导致 Redis 进程被操作系统杀死。</p>
-<p><strong>解决方案</strong>：
-- <strong>内存淘汰策略</strong>：
-  Redis 提供了多种内存淘汰策略（eviction policy），如 <code>volatile-lru</code>、<code>allkeys-lru</code>、<code>volatile-ttl</code>、<code>noeviction</code> 等。可以根据业务场景选择合适的淘汰策略。
-  <code>bash
-  maxmemory-policy allkeys-lru</code></p>
+<p><strong>解决方案</strong>：</p>
 <ul>
-<li>
-<p><strong>合理设置 maxmemory</strong>：
-  配置 <code>maxmemory</code> 限制 Redis 实例使用的最大内存。
-  <code>bash
-  maxmemory 2gb</code></p>
-</li>
+<li><strong>内存淘汰策略</strong>：
+  Redis 提供了多种内存淘汰策略（eviction policy），如 <code>volatile-lru</code>、<code>allkeys-lru</code>、<code>volatile-ttl</code>、<code>noeviction</code> 等。可以根据业务场景选择合适的淘汰策略。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">  </span>maxmemory-policy<span class="w"> </span>allkeys-lru
+</code></pre></div>
+
+<ul>
+<li><strong>合理设置 maxmemory</strong>：
+  配置 <code>maxmemory</code> 限制 Redis 实例使用的最大内存。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">  </span>maxmemory<span class="w"> </span>2gb
+</code></pre></div>
+
+<ul>
 <li>
 <p><strong>优化数据结构</strong>：
   优化存储在 Redis 中的数据结构，例如使用更紧凑的数据结构或者压缩数据。</p>
@@ -5062,11 +5066,14 @@ Redis 是一个内存数据库，所有的数据都存储在内存中，因此�
 <h4 id="2-redis">2. <strong>Redis 阻塞问题</strong></h4>
 <p><strong>问题描述</strong>：
 在高并发环境中，某些 Redis 命令（如 <code>BLPOP</code>、<code>BRPOP</code>）可能会引发 Redis 的阻塞问题，导致 Redis 无法处理其他请求。</p>
-<p><strong>解决方案</strong>：
-- <strong>避免长时间的阻塞命令</strong>：
-  在使用 <code>BLPOP</code> 等命令时，设置合理的超时时间，避免长时间阻塞。
-  <code>bash
-  BLPOP myqueue 1</code></p>
+<p><strong>解决方案</strong>：</p>
+<ul>
+<li><strong>避免长时间的阻塞命令</strong>：
+  在使用 <code>BLPOP</code> 等命令时，设置合理的超时时间，避免长时间阻塞。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">  </span>BLPOP<span class="w"> </span>myqueue<span class="w"> </span><span class="m">1</span>
+</code></pre></div>
+
 <ul>
 <li>
 <p><strong>使用非阻塞命令</strong>：
@@ -5081,36 +5088,44 @@ Redis 是一个内存数据库，所有的数据都存储在内存中，因此�
 <h4 id="3">3. <strong>数据一致性问题</strong></h4>
 <p><strong>问题描述</strong>：
 在使用 Redis 时，特别是在主从复制（Replication）和集群模式下，可能会出现数据一致性问题。例如，主从同步延迟可能导致读到的数据不一致。</p>
-<p><strong>解决方案</strong>：
-- <strong>设置合适的复制延迟策略</strong>：
-  通过调整 <code>min-slaves-to-write</code> 和 <code>min-slaves-max-lag</code> 配置，确保主节点在一定数量的从节点同步数据后再进行写入操作。
-  <code>bash
-  min-slaves-to-write 1
-  min-slaves-max-lag 10</code></p>
+<p><strong>解决方案</strong>：</p>
 <ul>
-<li>
-<p><strong>使用强一致性策略</strong>：
-  在 Redis Cluster 模式下，通过配置 <code>wait</code> 命令确保写操作在多个节点上生效后才返回。
-  <code>bash
-  WAIT 1 1000</code></p>
-</li>
-<li>
-<p><strong>合理选择数据一致性策略</strong>：
-  根据业务需求，选择合适的数据一致性策略，例如 CAP 理论中的 AP 或 CP 模式。</p>
-</li>
+<li><strong>设置合适的复制延迟策略</strong>：
+  通过调整 <code>min-slaves-to-write</code> 和 <code>min-slaves-max-lag</code> 配置，确保主节点在一定数量的从节点同步数据后再进行写入操作。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">  </span>min-slaves-to-write<span class="w"> </span><span class="m">1</span>
+<span class="w">  </span>min-slaves-max-lag<span class="w"> </span><span class="m">10</span>
+</code></pre></div>
+
+<ul>
+<li><strong>使用强一致性策略</strong>：
+  在 Redis Cluster 模式下，通过配置 <code>wait</code> 命令确保写操作在多个节点上生效后才返回。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">  </span>WAIT<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1000</span>
+</code></pre></div>
+
+<ul>
+<li><strong>合理选择数据一致性策略</strong>：
+  根据业务需求，选择合适的数据一致性策略，例如 CAP 理论中的 AP 或 CP 模式。</li>
 </ul>
 <hr />
 <h4 id="4">4. <strong>缓存雪崩、击穿和穿透问题</strong></h4>
-<p><strong>问题描述</strong>：
-- <strong>缓存雪崩</strong>：大量缓存同时失效，导致大量请求直接打到数据库上，可能引发数据库压力过大甚至崩溃。
-- <strong>缓存击穿</strong>：热点数据在缓存失效的瞬间，有大量请求同时访问，导致数据库压力骤增。
-- <strong>缓存穿透</strong>：查询的 key 不存在于缓存和数据库中，导致所有请求都打到数据库上。</p>
-<p><strong>解决方案</strong>：
-- <strong>缓存雪崩</strong>：
-  - <strong>设置不同的过期时间</strong>：对不同的缓存设置不同的过期时间，避免大量缓存同时失效。
-  - <strong>使用锁机制</strong>：在缓存重建时，使用分布式锁机制避免多个请求同时去查询数据库。</p>
+<p><strong>问题描述</strong>：</p>
 <ul>
-<li><strong>缓存击穿</strong>：</li>
+<li><strong>缓存雪崩</strong>：大量缓存同时失效，导致大量请求直接打到数据库上，可能引发数据库压力过大甚至崩溃。</li>
+<li><strong>缓存击穿</strong>：热点数据在缓存失效的瞬间，有大量请求同时访问，导致数据库压力骤增。</li>
+<li><strong>缓存穿透</strong>：查询的 key 不存在于缓存和数据库中，导致所有请求都打到数据库上。</li>
+</ul>
+<p><strong>解决方案</strong>：</p>
+<ul>
+<li><strong>缓存雪崩</strong>：</li>
+<li><strong>设置不同的过期时间</strong>：对不同的缓存设置不同的过期时间，避免大量缓存同时失效。</li>
+<li>
+<p><strong>使用锁机制</strong>：在缓存重建时，使用分布式锁机制避免多个请求同时去查询数据库。</p>
+</li>
+<li>
+<p><strong>缓存击穿</strong>：</p>
+</li>
 <li><strong>热点数据永不过期</strong>：对于热点数据，可以设置为永不过期或使用主动更新机制。</li>
 <li>
 <p><strong>加锁或队列</strong>：使用分布式锁或者队列机制，确保同一时间只有一个请求可以查询数据库。</p>
@@ -5125,34 +5140,39 @@ Redis 是一个内存数据库，所有的数据都存储在内存中，因此�
 <h4 id="5">5. <strong>主从切换的脑裂问题</strong></h4>
 <p><strong>问题描述</strong>：
 在 Redis 主从架构中，如果网络分区或者其他故障导致主从节点失联，可能会出现脑裂问题，即有多个节点认为自己是主节点。</p>
-<p><strong>解决方案</strong>：
-- <strong>配置 <code>protected-mode</code></strong>：
-  开启 Redis 的 <code>protected-mode</code> 以避免在网络分区后出现多个主节点。
-  <code>bash
-  protected-mode yes</code></p>
+<p><strong>解决方案</strong>：</p>
 <ul>
-<li>
-<p><strong>使用 Redis Sentinel</strong>：
-  通过 Redis Sentinel 实现自动故障转移，并配置合适的故障转移时间，减少脑裂可能性。
-  <code>bash
-  sentinel monitor mymaster 127.0.0.1 6379 2</code></p>
-</li>
-<li>
-<p><strong>定期监控和测试</strong>：
-  定期测试和监控主从节点的状态，及时发现和处理脑裂问题。</p>
-</li>
+<li><strong>配置 <code>protected-mode</code></strong>：
+  开启 Redis 的 <code>protected-mode</code> 以避免在网络分区后出现多个主节点。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">  </span>protected-mode<span class="w"> </span>yes
+</code></pre></div>
+
+<ul>
+<li><strong>使用 Redis Sentinel</strong>：
+  通过 Redis Sentinel 实现自动故障转移，并配置合适的故障转移时间，减少脑裂可能性。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">  </span>sentinel<span class="w"> </span>monitor<span class="w"> </span>mymaster<span class="w"> </span><span class="m">127</span>.0.0.1<span class="w"> </span><span class="m">6379</span><span class="w"> </span><span class="m">2</span>
+</code></pre></div>
+
+<ul>
+<li><strong>定期监控和测试</strong>：
+  定期测试和监控主从节点的状态，及时发现和处理脑裂问题。</li>
 </ul>
 <hr />
 <h4 id="6">6. <strong>持久化性能问题</strong></h4>
 <p><strong>问题描述</strong>：
 Redis 提供 RDB 和 AOF 两种持久化方式，但在高并发写入场景下，可能会影响持久化的性能，导致写入延迟或者持久化文件损坏。</p>
-<p><strong>解决方案</strong>：
-- <strong>调整持久化配置</strong>：
-  根据业务需求，合理配置持久化参数，如 <code>save</code> 的频率、<code>appendfsync</code> 的策略。
-  <code>bash
-  save 900 1
-  save 300 10
-  save 60 10000</code></p>
+<p><strong>解决方案</strong>：</p>
+<ul>
+<li><strong>调整持久化配置</strong>：
+  根据业务需求，合理配置持久化参数，如 <code>save</code> 的频率、<code>appendfsync</code> 的策略。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">  </span>save<span class="w"> </span><span class="m">900</span><span class="w"> </span><span class="m">1</span>
+<span class="w">  </span>save<span class="w"> </span><span class="m">300</span><span class="w"> </span><span class="m">10</span>
+<span class="w">  </span>save<span class="w"> </span><span class="m">60</span><span class="w"> </span><span class="m">10000</span>
+</code></pre></div>
+
 <ul>
 <li>
 <p><strong>RDB 和 AOF 混合使用</strong>：
@@ -5167,11 +5187,14 @@ Redis 提供 RDB 和 AOF 两种持久化方式，但在高并发写入场景下�
 <h4 id="7">7. <strong>监控与告警问题</strong></h4>
 <p><strong>问题描述</strong>：
 在生产环境中，缺乏对 Redis 的监控和告警可能会导致问题发生时无法及时发现，进而影响业务。</p>
-<p><strong>解决方案</strong>：
-- <strong>使用 Redis 自带的监控命令</strong>：
-  通过 <code>INFO</code> 命令监控 Redis 的运行状态。
-  <code>bash
-  redis-cli INFO</code></p>
+<p><strong>解决方案</strong>：</p>
+<ul>
+<li><strong>使用 Redis 自带的监控命令</strong>：
+  通过 <code>INFO</code> 命令监控 Redis 的运行状态。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">  </span>redis-cli<span class="w"> </span>INFO
+</code></pre></div>
+
 <ul>
 <li>
 <p><strong>使用第三方监控工具</strong>：
@@ -5186,11 +5209,14 @@ Redis 提供 RDB 和 AOF 两种持久化方式，但在高并发写入场景下�
 <h4 id="8">8. <strong>数据迁移与升级问题</strong></h4>
 <p><strong>问题描述</strong>：
 在业务扩展或系统升级过程中，Redis 数据迁移和版本升级可能会遇到兼容性问题或数据丢失风险。</p>
-<p><strong>解决方案</strong>：
-- <strong>使用 <code>redis-cli --rdb</code> 进行数据迁移</strong>：
-  在迁移数据时，先使用 <code>redis-cli --rdb</code> 生成 RDB 文件，再导入新的实例。
-  <code>bash
-  redis-cli --rdb dump.rdb</code></p>
+<p><strong>解决方案</strong>：</p>
+<ul>
+<li><strong>使用 <code>redis-cli --rdb</code> 进行数据迁移</strong>：
+  在迁移数据时，先使用 <code>redis-cli --rdb</code> 生成 RDB 文件，再导入新的实例。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">  </span>redis-cli<span class="w"> </span>--rdb<span class="w"> </span>dump.rdb
+</code></pre></div>
+
 <ul>
 <li>
 <p><strong>使用 Redis Cluster 进行平滑迁移</strong>：
@@ -5205,23 +5231,28 @@ Redis 提供 RDB 和 AOF 两种持久化方式，但在高并发写入场景下�
 <h3 id="9-redis">9. <strong>Redis 性能优化问题</strong></h3>
 <p><strong>问题描述</strong>：
 随着业务规模的扩大，Redis 的性能可能会出现瓶颈，导致响应时间增加或吞吐量下降。</p>
-<p><strong>解决方案</strong>：
-- <strong>合理选择数据结构</strong>：
-  不同的数据结构在 Redis 中有不同的性能表现，选择合适的数据结构非常重要。例如，<code>HASH</code> 适用于存储较小的键值对集合，而 <code>SET</code> 适合处理无序集合。</p>
+<p><strong>解决方案</strong>：</p>
 <ul>
+<li>
+<p><strong>合理选择数据结构</strong>：
+  不同的数据结构在 Redis 中有不同的性能表现，选择合适的数据结构非常重要。例如，<code>HASH</code> 适用于存储较小的键值对集合，而 <code>SET</code> 适合处理无序集合。</p>
+</li>
 <li>
 <p><strong>减少阻塞操作</strong>：
   尽量避免使用阻塞式命令（如 <code>KEYS</code>、<code>SORT</code>）或大数据量操作（如对大量元素的 <code>LRANGE</code>），因为它们会阻塞 Redis 的事件循环。</p>
 </li>
 <li>
 <p><strong>使用 Pipelining</strong>：
-  在高并发情况下，使用管道（Pipelining）批量发送命令，可以显著提高性能。
-  <code>python
-  pipe = r.pipeline()
-  for i in range(10000):
-      pipe.set(f'key{i}', i)
-  pipe.execute()</code></p>
+  在高并发情况下，使用管道（Pipelining）批量发送命令，可以显著提高性能。</p>
 </li>
+</ul>
+<div class="codehilite"><pre><span></span><code>  <span class="n">pipe</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">pipeline</span><span class="p">()</span>
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">):</span>
+      <span class="n">pipe</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;key</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+  <span class="n">pipe</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+</code></pre></div>
+
+<ul>
 <li>
 <p><strong>分片和集群</strong>：
   通过 Redis Cluster 或分片机制，将数据和流量分散到多个 Redis 实例上，提升整体性能。</p>
@@ -5235,10 +5266,12 @@ Redis 提供 RDB 和 AOF 两种持久化方式，但在高并发写入场景下�
 <h3 id="10-redis">10. <strong>Redis 中的热点数据问题</strong></h3>
 <p><strong>问题描述</strong>：
 在 Redis 中，某些键可能被频繁访问，这会导致 Redis 的读写不均衡，影响系统的整体性能。</p>
-<p><strong>解决方案</strong>：
-- <strong>使用分布式缓存</strong>：
-  通过将热点数据分布到多个 Redis 实例中，减少单个实例的压力。</p>
+<p><strong>解决方案</strong>：</p>
 <ul>
+<li>
+<p><strong>使用分布式缓存</strong>：
+  通过将热点数据分布到多个 Redis 实例中，减少单个实例的压力。</p>
+</li>
 <li>
 <p><strong>增加副本</strong>：
   增加热点数据的副本，允许更多的读请求分布到不同的副本上，缓解单点压力。</p>
@@ -5252,10 +5285,12 @@ Redis 提供 RDB 和 AOF 两种持久化方式，但在高并发写入场景下�
 <h3 id="11-redis">11. <strong>Redis 与持久化存储之间的数据一致性问题</strong></h3>
 <p><strong>问题描述</strong>：
 当 Redis 作为缓存层与持久化存储（如 MySQL、PostgreSQL）配合使用时，可能会出现数据不一致的情况。例如，在 Redis 中的数据与数据库中的数据不同步。</p>
-<p><strong>解决方案</strong>：
-- <strong>使用消息队列</strong>：
-  使用消息队列（如 Kafka、RabbitMQ）进行异步更新，确保 Redis 和持久化存储之间的数据一致性。</p>
+<p><strong>解决方案</strong>：</p>
 <ul>
+<li>
+<p><strong>使用消息队列</strong>：
+  使用消息队列（如 Kafka、RabbitMQ）进行异步更新，确保 Redis 和持久化存储之间的数据一致性。</p>
+</li>
 <li>
 <p><strong>使用双写机制</strong>：
   在更新数据库的同时，也更新 Redis 缓存，确保两个存储系统的数据同步。</p>
@@ -5269,11 +5304,14 @@ Redis 提供 RDB 和 AOF 两种持久化方式，但在高并发写入场景下�
 <h3 id="12-redis">12. <strong>Redis 的监控与报警问题</strong></h3>
 <p><strong>问题描述</strong>：
 在生产环境中，缺乏对 Redis 的监控和报警可能导致系统出现问题时不能及时发现，从而影响业务的稳定性。</p>
-<p><strong>解决方案</strong>：
-- <strong>使用 <code>INFO</code> 命令进行监控</strong>：
-  Redis 提供了 <code>INFO</code> 命令，可以查看服务器的状态和性能指标。
-  <code>bash
-  redis-cli INFO</code></p>
+<p><strong>解决方案</strong>：</p>
+<ul>
+<li><strong>使用 <code>INFO</code> 命令进行监控</strong>：
+  Redis 提供了 <code>INFO</code> 命令，可以查看服务器的状态和性能指标。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">  </span>redis-cli<span class="w"> </span>INFO
+</code></pre></div>
+
 <ul>
 <li>
 <p><strong>配置 Redis 的日志级别</strong>：
@@ -5288,10 +5326,12 @@ Redis 提供 RDB 和 AOF 两种持久化方式，但在高并发写入场景下�
 <h3 id="13-redis">13. <strong>Redis 的数据恢复问题</strong></h3>
 <p><strong>问题描述</strong>：
 当 Redis 实例崩溃或数据损坏时，如何快速恢复数据是一个非常关键的问题。</p>
-<p><strong>解决方案</strong>：
-- <strong>定期备份</strong>：
-  定期执行 Redis 数据备份（如生成 RDB 快照或 AOF 文件），以确保在出现故障时能够恢复数据。</p>
+<p><strong>解决方案</strong>：</p>
 <ul>
+<li>
+<p><strong>定期备份</strong>：
+  定期执行 Redis 数据备份（如生成 RDB 快照或 AOF 文件），以确保在出现故障时能够恢复数据。</p>
+</li>
 <li>
 <p><strong>使用 RDB 和 AOF 组合策略</strong>：
   结合使用 RDB 和 AOF，既保证数据的恢复速度，也保证数据的完整性。</p>
@@ -5305,10 +5345,12 @@ Redis 提供 RDB 和 AOF 两种持久化方式，但在高并发写入场景下�
 <h3 id="14-redis">14. <strong>Redis 的版本兼容性问题</strong></h3>
 <p><strong>问题描述</strong>：
 在升级 Redis 版本时，可能会遇到版本兼容性问题，如新版本不支持旧版本的一些配置或命令，导致系统无法正常运行。</p>
-<p><strong>解决方案</strong>：
-- <strong>在测试环境中进行全面测试</strong>：
-  在正式升级 Redis 之前，先在测试环境中进行全面的兼容性测试，确保新版本不会对现有业务产生影响。</p>
+<p><strong>解决方案</strong>：</p>
 <ul>
+<li>
+<p><strong>在测试环境中进行全面测试</strong>：
+  在正式升级 Redis 之前，先在测试环境中进行全面的兼容性测试，确保新版本不会对现有业务产生影响。</p>
+</li>
 <li>
 <p><strong>逐步升级</strong>：
   如果涉及到多个 Redis 实例，建议逐步升级，每次升级一个实例，并监控其运行情况。</p>
@@ -5322,11 +5364,14 @@ Redis 提供 RDB 和 AOF 两种持久化方式，但在高并发写入场景下�
 <h3 id="15-redis">15. <strong>Redis 的内存碎片问题</strong></h3>
 <p><strong>问题描述</strong>：
 随着 Redis 中数据的频繁写入和删除，内存碎片会逐渐增多，导致 Redis 的内存利用效率降低，甚至出现 OOM（Out of Memory）问题。</p>
-<p><strong>解决方案</strong>：
-- <strong>内存碎片的检测</strong>：
-  使用 <code>INFO MEMORY</code> 命令查看 Redis 的内存使用情况，包括内存碎片率（fragmentation ratio）。如果碎片率高，可以考虑进行内存优化。</p>
-<p><code>bash
-  redis-cli INFO MEMORY</code></p>
+<p><strong>解决方案</strong>：</p>
+<ul>
+<li><strong>内存碎片的检测</strong>：
+  使用 <code>INFO MEMORY</code> 命令查看 Redis 的内存使用情况，包括内存碎片率（fragmentation ratio）。如果碎片率高，可以考虑进行内存优化。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">  </span>redis-cli<span class="w"> </span>INFO<span class="w"> </span>MEMORY
+</code></pre></div>
+
 <ul>
 <li>
 <p><strong>调整 maxmemory-policy</strong>：
@@ -5341,12 +5386,15 @@ Redis 提供 RDB 和 AOF 两种持久化方式，但在高并发写入场景下�
 <h3 id="16-redis">16. <strong>Redis 的慢查询问题</strong></h3>
 <p><strong>问题描述</strong>：
 在 Redis 中，某些复杂查询可能执行时间较长，影响整体性能。这种现象通常被称为“慢查询”。</p>
-<p><strong>解决方案</strong>：
-- <strong>启用慢查询日志</strong>：
-  Redis 提供了慢查询日志功能，可以记录执行时间超过指定阈值的命令。通过配置 <code>slowlog-log-slower-than</code> 和 <code>slowlog-max-len</code> 参数，可以启用和调整慢查询日志。</p>
-<p><code>bash
-  CONFIG SET slowlog-log-slower-than 10000  # 设置慢查询阈值为10ms
-  CONFIG SET slowlog-max-len 128            # 设置慢查询日志最大长度</code></p>
+<p><strong>解决方案</strong>：</p>
+<ul>
+<li><strong>启用慢查询日志</strong>：
+  Redis 提供了慢查询日志功能，可以记录执行时间超过指定阈值的命令。通过配置 <code>slowlog-log-slower-than</code> 和 <code>slowlog-max-len</code> 参数，可以启用和调整慢查询日志。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">  </span>CONFIG<span class="w"> </span>SET<span class="w"> </span>slowlog-log-slower-than<span class="w"> </span><span class="m">10000</span><span class="w">  </span><span class="c1"># 设置慢查询阈值为10ms</span>
+<span class="w">  </span>CONFIG<span class="w"> </span>SET<span class="w"> </span>slowlog-max-len<span class="w"> </span><span class="m">128</span><span class="w">            </span><span class="c1"># 设置慢查询日志最大长度</span>
+</code></pre></div>
+
 <ul>
 <li>
 <p><strong>分析慢查询日志</strong>：
@@ -5361,10 +5409,12 @@ Redis 提供 RDB 和 AOF 两种持久化方式，但在高并发写入场景下�
 <h3 id="17-redis">17. <strong>Redis 的高可用性问题</strong></h3>
 <p><strong>问题描述</strong>：
 在生产环境中，Redis 作为缓存或数据库的单点故障会对业务产生严重影响，因此需要保证 Redis 的高可用性。</p>
-<p><strong>解决方案</strong>：
-- <strong>Redis Sentinel</strong>：
-  使用 Redis Sentinel 实现 Redis 的高可用性。Sentinel 可以自动监控主节点的状态，当主节点出现故障时，自动进行主从切换，确保服务的持续性。</p>
+<p><strong>解决方案</strong>：</p>
 <ul>
+<li>
+<p><strong>Redis Sentinel</strong>：
+  使用 Redis Sentinel 实现 Redis 的高可用性。Sentinel 可以自动监控主节点的状态，当主节点出现故障时，自动进行主从切换，确保服务的持续性。</p>
+</li>
 <li>
 <p><strong>Redis Cluster</strong>：
   Redis Cluster 是一种分布式的 Redis 解决方案，通过将数据分片存储在多个节点上，确保即使某些节点出现故障，其他节点仍能继续服务。Cluster 还具备自动故障转移的功能。</p>
@@ -5378,10 +5428,12 @@ Redis 提供 RDB 和 AOF 两种持久化方式，但在高并发写入场景下�
 <h3 id="18-redis">18. <strong>Redis 与其他存储系统的混合使用问题</strong></h3>
 <p><strong>问题描述</strong>：
 在大型系统中，通常会同时使用 Redis 和其他存储系统（如 MySQL、Elasticsearch 等），但在实际应用中，可能会遇到如何高效协同的问题。</p>
-<p><strong>解决方案</strong>：
-- <strong>合理的数据分层</strong>：
-  根据业务需求，将数据进行分层存储，例如，热数据存储在 Redis 中，冷数据存储在 MySQL 中；实时查询使用 Redis，复杂查询使用 Elasticsearch。</p>
+<p><strong>解决方案</strong>：</p>
 <ul>
+<li>
+<p><strong>合理的数据分层</strong>：
+  根据业务需求，将数据进行分层存储，例如，热数据存储在 Redis 中，冷数据存储在 MySQL 中；实时查询使用 Redis，复杂查询使用 Elasticsearch。</p>
+</li>
 <li>
 <p><strong>异步同步机制</strong>：
   使用消息队列或任务调度器，将 Redis 与其他存储系统的数据异步同步，确保数据的一致性与完整性。</p>
@@ -5395,10 +5447,12 @@ Redis 提供 RDB 和 AOF 两种持久化方式，但在高并发写入场景下�
 <h3 id="19-redis">19. <strong>Redis 的冷启动问题</strong></h3>
 <p><strong>问题描述</strong>：
 在 Redis 冷启动时，由于缓存为空，可能会导致大量请求直接打到数据库，导致数据库负载激增，影响系统性能。</p>
-<p><strong>解决方案</strong>：
-- <strong>预热缓存</strong>：
-  在 Redis 冷启动前，预先将热点数据加载到缓存中，避免冷启动时大量请求涌入数据库。</p>
+<p><strong>解决方案</strong>：</p>
 <ul>
+<li>
+<p><strong>预热缓存</strong>：
+  在 Redis 冷启动前，预先将热点数据加载到缓存中，避免冷启动时大量请求涌入数据库。</p>
+</li>
 <li>
 <p><strong>分步加载</strong>：
   分批加载缓存数据，逐步恢复 Redis 的缓存状态，减轻数据库压力。</p>
@@ -5412,11 +5466,14 @@ Redis 提供 RDB 和 AOF 两种持久化方式，但在高并发写入场景下�
 <h3 id="20-redis">20. <strong>Redis 的数据过期与清理问题</strong></h3>
 <p><strong>问题描述</strong>：
 Redis 中的键值对可以设置过期时间，但在高并发场景下，数据的过期与清理策略需要精细调整，以避免对性能造成影响。</p>
-<p><strong>解决方案</strong>：
-- <strong>合理设置过期时间</strong>：
-  为每个键设置合理的过期时间，避免数据长期占用内存。可以通过 <code>EXPIRE</code> 命令为键设置过期时间。</p>
-<p><code>bash
-  EXPIRE mykey 60  # 设置 mykey 的过期时间为60秒</code></p>
+<p><strong>解决方案</strong>：</p>
+<ul>
+<li><strong>合理设置过期时间</strong>：
+  为每个键设置合理的过期时间，避免数据长期占用内存。可以通过 <code>EXPIRE</code> 命令为键设置过期时间。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">  </span>EXPIRE<span class="w"> </span>mykey<span class="w"> </span><span class="m">60</span><span class="w">  </span><span class="c1"># 设置 mykey 的过期时间为60秒</span>
+</code></pre></div>
+
 <ul>
 <li>
 <p><strong>使用 <code>volatile-*</code> 策略</strong>：
@@ -5474,7 +5531,7 @@ Redis 中的键值对可以设置过期时间，但在高并发场景下，数�
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.56dfad97.min.js"></script>

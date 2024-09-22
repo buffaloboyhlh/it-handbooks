@@ -13,14 +13,14 @@
       
       
       
-        <link rel="prev" href="../interview/">
+        <link rel="prev" href="../logstash/">
       
       
-        <link rel="next" href="../../MongoDB/advance/">
+        <link rel="next" href="../../MongoDB/basic/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.36">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.35f28582.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.06209087.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -1047,7 +1047,7 @@
         
   
   <span class="md-ellipsis">
-    Prometheus 基础教程
+    Prometheus 教程
   </span>
   
 
@@ -1978,11 +1978,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../advance/" class="md-nav__link">
+      <a href="../basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    ElastciSearch 进阶教程
+    Elasticsearch 教程
   </span>
   
 
@@ -1999,11 +1999,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../basic/" class="md-nav__link">
+      <a href="../filebeat/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    ElasticSearch 基本教程
+    filebeat 教程
   </span>
   
 
@@ -2025,6 +2025,27 @@
   
   <span class="md-ellipsis">
     ElasticSearch 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logstash/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LogStash 教程
   </span>
   
 
@@ -2325,32 +2346,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../MongoDB/advance/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    MongoDB 进阶教程
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../MongoDB/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    MongoDB 基础教程
+    MongoDB 教程
   </span>
   
 
@@ -2519,7 +2519,7 @@
         
   
   <span class="md-ellipsis">
-    MySQL 常见问题
+    MySQl 常见问题
   </span>
   
 
@@ -2921,7 +2921,7 @@
         
   
   <span class="md-ellipsis">
-    nginx 基础
+    Nginx 教程
   </span>
   
 
@@ -5005,13 +5005,17 @@
 <h3 id="1">1. <strong>集群健康状态不佳</strong></h3>
 <p><strong>问题描述</strong>：<br />
 Elasticsearch 集群处于黄（yellow）或红（red）状态，可能导致部分或全部数据不可用。</p>
-<p><strong>解决方案</strong>：
-- <strong>黄状态（yellow）</strong>：通常意味着副本分片（replica shard）未能分配。
-  - 检查集群中是否有足够的节点来分配副本分片。
-  - 增加节点数量，或者减少索引的副本数。
-  - 如果不需要高可用性，可以暂时忽略黄状态。</p>
+<p><strong>解决方案</strong>：</p>
 <ul>
-<li><strong>红状态（red）</strong>：表示主分片（primary shard）未能分配，数据可能丢失或不可用。</li>
+<li><strong>黄状态（yellow）</strong>：通常意味着副本分片（replica shard）未能分配。</li>
+<li>检查集群中是否有足够的节点来分配副本分片。</li>
+<li>增加节点数量，或者减少索引的副本数。</li>
+<li>
+<p>如果不需要高可用性，可以暂时忽略黄状态。</p>
+</li>
+<li>
+<p><strong>红状态（red）</strong>：表示主分片（primary shard）未能分配，数据可能丢失或不可用。</p>
+</li>
 <li>检查节点是否因硬件故障或其他问题下线，尝试修复并重新启动节点。</li>
 <li>使用 <code>_cluster/reroute</code> API 手动重新分配未分配的分片。</li>
 <li>检查是否有配置错误（如不正确的分片数量设置）。</li>
@@ -5019,12 +5023,16 @@ Elasticsearch 集群处于黄（yellow）或红（red）状态，可能导致部
 <h3 id="2-gc">2. <strong>节点内存溢出或 GC（垃圾回收）问题</strong></h3>
 <p><strong>问题描述</strong>：<br />
 节点由于内存溢出（Out of Memory, OOM）或频繁的垃圾回收（Garbage Collection, GC）而导致性能下降或节点崩溃。</p>
-<p><strong>解决方案</strong>：
-- <strong>优化 JVM 内存设置</strong>：
-  - 将 JVM 堆内存设置为系统内存的 50%，但不超过 32GB。
-  - 监控并调整 GC 参数，如使用 G1 GC 以减少垃圾回收暂停时间。</p>
+<p><strong>解决方案</strong>：</p>
 <ul>
-<li><strong>减少索引/查询的内存占用</strong>：</li>
+<li><strong>优化 JVM 内存设置</strong>：</li>
+<li>将 JVM 堆内存设置为系统内存的 50%，但不超过 32GB。</li>
+<li>
+<p>监控并调整 GC 参数，如使用 G1 GC 以减少垃圾回收暂停时间。</p>
+</li>
+<li>
+<p><strong>减少索引/查询的内存占用</strong>：</p>
+</li>
 <li>优化索引映射，避免不必要的字段和索引。</li>
 <li>控制查询的复杂度，避免大量 <code>terms</code> 查询或深度分页。</li>
 <li>使用 <code>doc_values</code> 代替 <code>fielddata</code>，降低内存使用。</li>
@@ -5032,20 +5040,26 @@ Elasticsearch 集群处于黄（yellow）或红（red）状态，可能导致部
 <h3 id="3">3. <strong>分片分配失败</strong></h3>
 <p><strong>问题描述</strong>：<br />
 某些分片未能分配，导致索引无法正常工作。</p>
-<p><strong>解决方案</strong>：
-- <strong>磁盘空间不足</strong>：确保节点有足够的磁盘空间。如果磁盘使用率过高，Elasticsearch 会停止分片分配。
-- <strong>节点资源不足</strong>：检查节点的 CPU、内存等资源使用情况，如果资源不足，考虑增加节点或升级硬件。
-- <strong>分配限制</strong>：检查并调整分片分配设置，如 <code>cluster.routing.allocation.*</code> 设置，以确保分片能够正确分配。</p>
+<p><strong>解决方案</strong>：</p>
+<ul>
+<li><strong>磁盘空间不足</strong>：确保节点有足够的磁盘空间。如果磁盘使用率过高，Elasticsearch 会停止分片分配。</li>
+<li><strong>节点资源不足</strong>：检查节点的 CPU、内存等资源使用情况，如果资源不足，考虑增加节点或升级硬件。</li>
+<li><strong>分配限制</strong>：检查并调整分片分配设置，如 <code>cluster.routing.allocation.*</code> 设置，以确保分片能够正确分配。</li>
+</ul>
 <h3 id="4">4. <strong>查询性能问题</strong></h3>
 <p><strong>问题描述</strong>：<br />
 查询响应时间过长，可能导致用户体验下降或系统超时。</p>
-<p><strong>解决方案</strong>：
-- <strong>优化查询语句</strong>：
-  - 避免使用 <code>wildcard</code> 查询，改用 <code>prefix</code> 或 <code>regexp</code> 查询。
-  - 减少复杂的嵌套查询或大范围的 <code>range</code> 查询。
-  - 使用 <code>search template</code> 缓存常用查询，减少查询解析时间。</p>
+<p><strong>解决方案</strong>：</p>
 <ul>
-<li><strong>使用合适的索引设置</strong>：</li>
+<li><strong>优化查询语句</strong>：</li>
+<li>避免使用 <code>wildcard</code> 查询，改用 <code>prefix</code> 或 <code>regexp</code> 查询。</li>
+<li>减少复杂的嵌套查询或大范围的 <code>range</code> 查询。</li>
+<li>
+<p>使用 <code>search template</code> 缓存常用查询，减少查询解析时间。</p>
+</li>
+<li>
+<p><strong>使用合适的索引设置</strong>：</p>
+</li>
 <li>为常用查询字段启用 <code>doc_values</code> 以加快聚合查询。</li>
 <li>
 <p>使用 <code>index sorting</code> 预先排序索引，提高排序查询性能。</p>
@@ -5058,115 +5072,147 @@ Elasticsearch 集群处于黄（yellow）或红（red）状态，可能导致部
 <h3 id="5">5. <strong>索引性能问题</strong></h3>
 <p><strong>问题描述</strong>：<br />
 数据写入速度慢，可能导致延迟或阻塞。</p>
-<p><strong>解决方案</strong>：
-- <strong>批量索引</strong>：使用 <code>Bulk API</code> 批量写入数据，减少每次写操作的开销。
-- <strong>调整刷新间隔</strong>：临时设置 <code>refresh_interval</code> 为 <code>-1</code> 禁用自动刷新，导入数据后再手动刷新。
-- <strong>减少副本数量</strong>：在大量写入期间，将副本数量设置为 0，写入完成后再恢复默认副本数量。</p>
+<p><strong>解决方案</strong>：</p>
+<ul>
+<li><strong>批量索引</strong>：使用 <code>Bulk API</code> 批量写入数据，减少每次写操作的开销。</li>
+<li><strong>调整刷新间隔</strong>：临时设置 <code>refresh_interval</code> 为 <code>-1</code> 禁用自动刷新，导入数据后再手动刷新。</li>
+<li><strong>减少副本数量</strong>：在大量写入期间，将副本数量设置为 0，写入完成后再恢复默认副本数量。</li>
+</ul>
 <h3 id="6-elasticsearch">6. <strong>Elasticsearch 集群扩展困难</strong></h3>
 <p><strong>问题描述</strong>：<br />
 随着数据量增加，集群性能下降，扩展节点后效果不明显。</p>
-<p><strong>解决方案</strong>：
-- <strong>水平扩展</strong>：通过增加更多的数据节点来分担负载，确保每个节点的分片数量合理分布。
-- <strong>分片数量优化</strong>：根据数据规模和查询需求，合理设置分片数量，避免过度分片或分片不足。
-- <strong>热/冷集群架构</strong>：将不同使用频率的数据分配到热节点（高性能硬件）和冷节点（低成本存储）上，优化资源使用。</p>
+<p><strong>解决方案</strong>：</p>
+<ul>
+<li><strong>水平扩展</strong>：通过增加更多的数据节点来分担负载，确保每个节点的分片数量合理分布。</li>
+<li><strong>分片数量优化</strong>：根据数据规模和查询需求，合理设置分片数量，避免过度分片或分片不足。</li>
+<li><strong>热/冷集群架构</strong>：将不同使用频率的数据分配到热节点（高性能硬件）和冷节点（低成本存储）上，优化资源使用。</li>
+</ul>
 <h3 id="7">7. <strong>数据丢失或无法访问</strong></h3>
 <p><strong>问题描述</strong>：<br />
 集群中的某些数据丢失或无法访问，可能由于分片丢失或节点故障导致。</p>
-<p><strong>解决方案</strong>：
-- <strong>定期备份</strong>：使用 Elasticsearch 的快照功能定期备份数据，以防止数据丢失。
-- <strong>分片自动恢复</strong>：启用分片自动恢复设置，确保在节点故障时能够自动恢复数据。
-- <strong>手动恢复</strong>：如果快照数据可用，使用快照功能手动恢复丢失的数据。</p>
+<p><strong>解决方案</strong>：</p>
+<ul>
+<li><strong>定期备份</strong>：使用 Elasticsearch 的快照功能定期备份数据，以防止数据丢失。</li>
+<li><strong>分片自动恢复</strong>：启用分片自动恢复设置，确保在节点故障时能够自动恢复数据。</li>
+<li><strong>手动恢复</strong>：如果快照数据可用，使用快照功能手动恢复丢失的数据。</li>
+</ul>
 <h3 id="8">8. <strong>磁盘使用率过高</strong></h3>
 <p><strong>问题描述</strong>：<br />
 节点磁盘使用率过高，可能导致写入失败或集群不可用。</p>
-<p><strong>解决方案</strong>：
-- <strong>数据清理</strong>：定期删除旧索引或不再需要的数据，释放磁盘空间。
-- <strong>调整分片数量</strong>：减少分片数量，降低磁盘占用。对于冷数据，可以合并分片或将数据归档到外部存储。
-- <strong>磁盘扩展</strong>：如果磁盘空间不足，考虑增加节点或扩展现有节点的存储容量。</p>
+<p><strong>解决方案</strong>：</p>
+<ul>
+<li><strong>数据清理</strong>：定期删除旧索引或不再需要的数据，释放磁盘空间。</li>
+<li><strong>调整分片数量</strong>：减少分片数量，降低磁盘占用。对于冷数据，可以合并分片或将数据归档到外部存储。</li>
+<li><strong>磁盘扩展</strong>：如果磁盘空间不足，考虑增加节点或扩展现有节点的存储容量。</li>
+</ul>
 <h3 id="9-elasticsearch">9. <strong>Elasticsearch 客户端超时</strong></h3>
 <p><strong>问题描述</strong>：<br />
 客户端查询或写入操作超时，可能导致请求失败或服务中断。</p>
-<p><strong>解决方案</strong>：
-- <strong>增加超时时间</strong>：根据网络状况和查询复杂度，适当增加客户端的超时时间设置。
-- <strong>优化查询/写入逻辑</strong>：减少一次性操作的数据量，分批次进行大数据量的查询或写入。
-- <strong>使用异步操作</strong>：对于需要较长时间的操作，使用异步请求或回调函数，避免阻塞客户端。</p>
+<p><strong>解决方案</strong>：</p>
+<ul>
+<li><strong>增加超时时间</strong>：根据网络状况和查询复杂度，适当增加客户端的超时时间设置。</li>
+<li><strong>优化查询/写入逻辑</strong>：减少一次性操作的数据量，分批次进行大数据量的查询或写入。</li>
+<li><strong>使用异步操作</strong>：对于需要较长时间的操作，使用异步请求或回调函数，避免阻塞客户端。</li>
+</ul>
 <h3 id="10">10. <strong>日志文件过大</strong></h3>
 <p><strong>问题描述</strong>：<br />
 Elasticsearch 生成的日志文件过大，占用大量磁盘空间。</p>
-<p><strong>解决方案</strong>：
-- <strong>调整日志级别</strong>：将日志级别从 <code>DEBUG</code> 或 <code>INFO</code> 调整为 <code>WARN</code> 或 <code>ERROR</code>，减少日志输出量。
-- <strong>日志轮转与清理</strong>：配置日志轮转策略，定期压缩和清理旧日志文件，防止日志文件占用过多磁盘空间。
-- <strong>外部日志管理</strong>：使用外部工具（如 Logstash 或 Filebeat）集中管理和分析 Elasticsearch 日志。</p>
+<p><strong>解决方案</strong>：</p>
+<ul>
+<li><strong>调整日志级别</strong>：将日志级别从 <code>DEBUG</code> 或 <code>INFO</code> 调整为 <code>WARN</code> 或 <code>ERROR</code>，减少日志输出量。</li>
+<li><strong>日志轮转与清理</strong>：配置日志轮转策略，定期压缩和清理旧日志文件，防止日志文件占用过多磁盘空间。</li>
+<li><strong>外部日志管理</strong>：使用外部工具（如 Logstash 或 Filebeat）集中管理和分析 Elasticsearch 日志。</li>
+</ul>
 <h3 id="11-elasticsearch">11. <strong>Elasticsearch 索引膨胀</strong></h3>
 <p><strong>问题描述</strong>：<br />
 索引占用的磁盘空间远大于原始数据的大小，导致磁盘空间迅速耗尽。</p>
-<p><strong>解决方案</strong>：
-- <strong>删除不必要的字段</strong>：在映射中避免索引不需要搜索的字段，尤其是大文本字段或二进制数据。
-- <strong>压缩存储</strong>：启用 Elasticsearch 的压缩存储选项（如 <code>best_compression</code>），可以减少索引存储空间。
-- <strong>清理旧索引</strong>：定期删除不再需要的旧索引，使用索引生命周期管理（ILM）自动清理。</p>
+<p><strong>解决方案</strong>：</p>
+<ul>
+<li><strong>删除不必要的字段</strong>：在映射中避免索引不需要搜索的字段，尤其是大文本字段或二进制数据。</li>
+<li><strong>压缩存储</strong>：启用 Elasticsearch 的压缩存储选项（如 <code>best_compression</code>），可以减少索引存储空间。</li>
+<li><strong>清理旧索引</strong>：定期删除不再需要的旧索引，使用索引生命周期管理（ILM）自动清理。</li>
+</ul>
 <h3 id="12">12. <strong>映射冲突问题</strong></h3>
 <p><strong>问题描述</strong>：<br />
 索引映射（mapping）冲突可能导致数据写入失败，或引发查询错误。</p>
-<p><strong>解决方案</strong>：
-- <strong>使用动态映射模板</strong>：通过定义动态映射模板来控制字段类型，防止 Elasticsearch 自动为不同类型的数据生成错误的映射。
-- <strong>手动映射管理</strong>：在索引创建时手动定义映射，明确指定每个字段的类型，避免冲突。
-- <strong>版本控制</strong>：使用版本号或日期作为索引名称的一部分，当需要更改映射时创建新索引并迁移数据，避免直接修改现有映射。</p>
+<p><strong>解决方案</strong>：</p>
+<ul>
+<li><strong>使用动态映射模板</strong>：通过定义动态映射模板来控制字段类型，防止 Elasticsearch 自动为不同类型的数据生成错误的映射。</li>
+<li><strong>手动映射管理</strong>：在索引创建时手动定义映射，明确指定每个字段的类型，避免冲突。</li>
+<li><strong>版本控制</strong>：使用版本号或日期作为索引名称的一部分，当需要更改映射时创建新索引并迁移数据，避免直接修改现有映射。</li>
+</ul>
 <h3 id="13">13. <strong>聚合性能问题</strong></h3>
 <p><strong>问题描述</strong>：<br />
 大规模数据上的聚合查询响应时间过长，导致应用性能下降。</p>
-<p><strong>解决方案</strong>：
-- <strong>减少数据量</strong>：使用预过滤（如 <code>filter</code> 聚合）减少参与聚合的数据量，提高聚合速度。
-- <strong>优化聚合类型</strong>：尽量使用轻量级聚合，如 <code>terms</code> 聚合，避免使用 <code>scripted metric</code> 等消耗资源的聚合。
-- <strong>缓存聚合结果</strong>：对于重复执行的聚合查询，考虑使用 Elasticsearch 的查询缓存功能，以减少计算开销。</p>
+<p><strong>解决方案</strong>：</p>
+<ul>
+<li><strong>减少数据量</strong>：使用预过滤（如 <code>filter</code> 聚合）减少参与聚合的数据量，提高聚合速度。</li>
+<li><strong>优化聚合类型</strong>：尽量使用轻量级聚合，如 <code>terms</code> 聚合，避免使用 <code>scripted metric</code> 等消耗资源的聚合。</li>
+<li><strong>缓存聚合结果</strong>：对于重复执行的聚合查询，考虑使用 Elasticsearch 的查询缓存功能，以减少计算开销。</li>
+</ul>
 <h3 id="14">14. <strong>分片不均匀分布</strong></h3>
 <p><strong>问题描述</strong>：<br />
 在集群中，部分节点的分片数量远多于其他节点，导致这些节点资源过载。</p>
-<p><strong>解决方案</strong>：
-- <strong>手动分片重新分配</strong>：使用 <code>_cluster/reroute</code> API 手动将分片重新分配到较空闲的节点上，均衡分片分布。
-- <strong>调整集群设置</strong>：修改 <code>cluster.routing.allocation</code> 相关设置，如 <code>balance.shard</code> 和 <code>balance.index</code>，以确保分片均匀分配。
-- <strong>升级 Elasticsearch</strong>：部分版本的 Elasticsearch 可能在分片分配上存在问题，升级到较新版本可能解决此问题。</p>
+<p><strong>解决方案</strong>：</p>
+<ul>
+<li><strong>手动分片重新分配</strong>：使用 <code>_cluster/reroute</code> API 手动将分片重新分配到较空闲的节点上，均衡分片分布。</li>
+<li><strong>调整集群设置</strong>：修改 <code>cluster.routing.allocation</code> 相关设置，如 <code>balance.shard</code> 和 <code>balance.index</code>，以确保分片均匀分配。</li>
+<li><strong>升级 Elasticsearch</strong>：部分版本的 Elasticsearch 可能在分片分配上存在问题，升级到较新版本可能解决此问题。</li>
+</ul>
 <h3 id="15">15. <strong>时间序列数据的索引管理</strong></h3>
 <p><strong>问题描述</strong>：<br />
 对于时间序列数据，如日志或监控数据，索引数量随着时间推移迅速增加，管理变得复杂。</p>
-<p><strong>解决方案</strong>：
-- <strong>使用索引生命周期管理（ILM）</strong>：配置 ILM 策略自动管理时间序列数据的索引生命周期，自动创建、滚动、关闭、删除索引。
-- <strong>按时间段划分索引</strong>：将时间序列数据按天、周或月划分为不同的索引，以便于管理和查询。
-- <strong>压缩和归档旧数据</strong>：将历史数据迁移到冷存储或归档，使用压缩格式减少存储占用。</p>
+<p><strong>解决方案</strong>：</p>
+<ul>
+<li><strong>使用索引生命周期管理（ILM）</strong>：配置 ILM 策略自动管理时间序列数据的索引生命周期，自动创建、滚动、关闭、删除索引。</li>
+<li><strong>按时间段划分索引</strong>：将时间序列数据按天、周或月划分为不同的索引，以便于管理和查询。</li>
+<li><strong>压缩和归档旧数据</strong>：将历史数据迁移到冷存储或归档，使用压缩格式减少存储占用。</li>
+</ul>
 <h3 id="16">16. <strong>跨集群搜索问题</strong></h3>
 <p><strong>问题描述</strong>：<br />
 跨集群搜索时，查询性能较低，或者数据同步不一致。</p>
-<p><strong>解决方案</strong>：
-- <strong>优化集群连接</strong>：确保跨集群连接的网络延迟和带宽满足要求，尽量将集群部署在低延迟的网络环境中。
-- <strong>异步查询</strong>：使用异步查询或任务管理 API 处理大规模跨集群查询，避免阻塞集群。
-- <strong>跨集群复制</strong>：对于需要实时数据同步的场景，使用 Elasticsearch 的跨集群复制（CCR）功能，将数据从一个集群复制到另一个集群。</p>
+<p><strong>解决方案</strong>：</p>
+<ul>
+<li><strong>优化集群连接</strong>：确保跨集群连接的网络延迟和带宽满足要求，尽量将集群部署在低延迟的网络环境中。</li>
+<li><strong>异步查询</strong>：使用异步查询或任务管理 API 处理大规模跨集群查询，避免阻塞集群。</li>
+<li><strong>跨集群复制</strong>：对于需要实时数据同步的场景，使用 Elasticsearch 的跨集群复制（CCR）功能，将数据从一个集群复制到另一个集群。</li>
+</ul>
 <h3 id="17">17. <strong>节点间通信问题</strong></h3>
 <p><strong>问题描述</strong>：<br />
 节点间通信失败，导致集群不稳定或分片未能分配。</p>
-<p><strong>解决方案</strong>：
-- <strong>检查网络配置</strong>：确保所有节点之间的网络连接稳定，特别是在使用云环境时，检查防火墙和安全组配置。
-- <strong>调整节点间超时设置</strong>：如果网络延迟较高，可以适当增加节点间通信的超时时间（如 <code>discovery.zen.fd.ping_timeout</code>）。
-- <strong>日志排查</strong>：检查 Elasticsearch 日志文件，查找并修复可能的网络问题或节点配置错误。</p>
+<p><strong>解决方案</strong>：</p>
+<ul>
+<li><strong>检查网络配置</strong>：确保所有节点之间的网络连接稳定，特别是在使用云环境时，检查防火墙和安全组配置。</li>
+<li><strong>调整节点间超时设置</strong>：如果网络延迟较高，可以适当增加节点间通信的超时时间（如 <code>discovery.zen.fd.ping_timeout</code>）。</li>
+<li><strong>日志排查</strong>：检查 Elasticsearch 日志文件，查找并修复可能的网络问题或节点配置错误。</li>
+</ul>
 <h3 id="18">18. <strong>索引模板应用失败</strong></h3>
 <p><strong>问题描述</strong>：<br />
 新建索引时未能正确应用预定义的索引模板，导致映射错误或设置丢失。</p>
-<p><strong>解决方案</strong>：
-- <strong>检查模板优先级</strong>：确保正确设置索引模板的优先级（<code>order</code>），避免多个模板冲突。
-- <strong>模板匹配规则</strong>：核实模板的匹配规则（如 <code>index_patterns</code>），确保新建索引的名称能够正确匹配模板。
-- <strong>手动应用模板</strong>：在特殊情况下，可以手动应用模板到已有索引，使用 <code>_template/apply</code> API。</p>
+<p><strong>解决方案</strong>：</p>
+<ul>
+<li><strong>检查模板优先级</strong>：确保正确设置索引模板的优先级（<code>order</code>），避免多个模板冲突。</li>
+<li><strong>模板匹配规则</strong>：核实模板的匹配规则（如 <code>index_patterns</code>），确保新建索引的名称能够正确匹配模板。</li>
+<li><strong>手动应用模板</strong>：在特殊情况下，可以手动应用模板到已有索引，使用 <code>_template/apply</code> API。</li>
+</ul>
 <h3 id="19">19. <strong>数据迁移和版本升级</strong></h3>
 <p><strong>问题描述</strong>：<br />
 Elasticsearch 升级或集群迁移过程中，数据可能丢失或无法正常迁移。</p>
-<p><strong>解决方案</strong>：
-- <strong>滚动升级</strong>：在升级 Elasticsearch 时，使用滚动升级的方式，一次升级一个节点，确保集群始终可用。
-- <strong>数据备份与恢复</strong>：在升级或迁移前，使用快照功能备份数据，以便在出现问题时快速恢复。
-- <strong>跨集群迁移</strong>：对于跨集群迁移，考虑使用跨集群复制（CCR）或跨集群搜索（CCS）实现无缝数据迁移。</p>
+<p><strong>解决方案</strong>：</p>
+<ul>
+<li><strong>滚动升级</strong>：在升级 Elasticsearch 时，使用滚动升级的方式，一次升级一个节点，确保集群始终可用。</li>
+<li><strong>数据备份与恢复</strong>：在升级或迁移前，使用快照功能备份数据，以便在出现问题时快速恢复。</li>
+<li><strong>跨集群迁移</strong>：对于跨集群迁移，考虑使用跨集群复制（CCR）或跨集群搜索（CCS）实现无缝数据迁移。</li>
+</ul>
 <h3 id="20-elasticsearch">20. <strong>Elasticsearch 安全问题</strong></h3>
 <p><strong>问题描述</strong>：<br />
 未启用安全机制的 Elasticsearch 集群容易受到未经授权的访问或攻击。</p>
-<p><strong>解决方案</strong>：
-- <strong>启用 X-Pack 安全</strong>：使用 Elasticsearch 的 X-Pack 安全功能启用身份验证、角色管理和加密通信。
-- <strong>访问控制</strong>：通过角色和权限控制不同用户对索引和数据的访问权限，防止数据泄露。
-- <strong>日志和审计</strong>：启用审计日志功能，监控并记录所有访问和操作，及时发现并处理安全威胁。</p>
+<p><strong>解决方案</strong>：</p>
+<ul>
+<li><strong>启用 X-Pack 安全</strong>：使用 Elasticsearch 的 X-Pack 安全功能启用身份验证、角色管理和加密通信。</li>
+<li><strong>访问控制</strong>：通过角色和权限控制不同用户对索引和数据的访问权限，防止数据泄露。</li>
+<li><strong>日志和审计</strong>：启用审计日志功能，监控并记录所有访问和操作，及时发现并处理安全威胁。</li>
+</ul>
 
 
 
@@ -5213,7 +5259,7 @@ Elasticsearch 升级或集群迁移过程中，数据可能丢失或无法正常
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.56dfad97.min.js"></script>

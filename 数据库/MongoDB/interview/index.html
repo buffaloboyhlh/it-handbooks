@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.36">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.35f28582.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.06209087.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -1047,7 +1047,7 @@
         
   
   <span class="md-ellipsis">
-    Prometheus 基础教程
+    Prometheus 教程
   </span>
   
 
@@ -1976,11 +1976,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Elastic/advance/" class="md-nav__link">
+      <a href="../../Elastic/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    ElastciSearch 进阶教程
+    Elasticsearch 教程
   </span>
   
 
@@ -1997,11 +1997,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Elastic/basic/" class="md-nav__link">
+      <a href="../../Elastic/filebeat/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    ElasticSearch 基本教程
+    filebeat 教程
   </span>
   
 
@@ -2023,6 +2023,27 @@
   
   <span class="md-ellipsis">
     ElasticSearch 面试手册
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Elastic/logstash/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LogStash 教程
   </span>
   
 
@@ -2105,32 +2126,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../advance/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    MongoDB 进阶教程
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    MongoDB 基础教程
+    MongoDB 教程
   </span>
   
 
@@ -2618,7 +2618,7 @@
         
   
   <span class="md-ellipsis">
-    MySQL 常见问题
+    MySQl 常见问题
   </span>
   
 
@@ -3020,7 +3020,7 @@
         
   
   <span class="md-ellipsis">
-    nginx 基础
+    Nginx 教程
   </span>
   
 
@@ -5230,27 +5230,28 @@
 </ul>
 <p><strong>3.2 使用 <code>$group</code> 和 <code>$lookup</code> 操作符，编写一个复杂的聚合查询。</strong></p>
 <ul>
-<li><strong>答案</strong>：
-  <code>javascript
-  db.orders.aggregate([
-    { $match: { status: "completed" } },
-    {
-      $lookup: {
-        from: "customers",
-        localField: "customerId",
-        foreignField: "_id",
-        as: "customerDetails"
-      }
-    },
-    {
-      $group: {
-        _id: "$customerId",
-        totalAmount: { $sum: "$amount" },
-        orderCount: { $sum: 1 }
-      }
-    }
-  ])</code></li>
+<li><strong>答案</strong>：</li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="w">  </span><span class="nx">db</span><span class="p">.</span><span class="nx">orders</span><span class="p">.</span><span class="nx">aggregate</span><span class="p">([</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">$match</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">status</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;completed&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">$lookup</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kr">from</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;customers&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">localField</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;customerId&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">foreignField</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;_id&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="kr">as</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;customerDetails&quot;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">$group</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">_id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;$customerId&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">totalAmount</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$sum</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;$amount&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">orderCount</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$sum</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">])</span>
+</code></pre></div>
+
 <h3 id="4">4. <strong>数据模型与设计</strong></h3>
 <p><strong>4.1 在 MongoDB 中，嵌套文档和引用文档的使用场景是什么？</strong></p>
 <ul>
@@ -5273,13 +5274,17 @@
 <ul>
 <li><strong>答案</strong>：</li>
 <li>启动多个 MongoDB 实例，每个实例都应使用 <code>--replSet</code> 参数指定相同的复制集名称。</li>
-<li>在一个实例上初始化复制集：
-    <code>javascript
-    rs.initiate()</code></li>
-<li>添加从节点：
-    <code>javascript
-    rs.add("hostname:port")</code></li>
+<li>在一个实例上初始化复制集：</li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nx">rs</span><span class="p">.</span><span class="nx">initiate</span><span class="p">()</span>
+</code></pre></div>
+
+<ul>
+<li>添加从节点：</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nx">rs</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;hostname:port&quot;</span><span class="p">)</span>
+</code></pre></div>
+
 <h3 id="6">6. <strong>分片与水平扩展</strong></h3>
 <p><strong>6.1 什么是分片？MongoDB 中如何实现水平扩展？</strong></p>
 <ul>
@@ -5327,21 +5332,22 @@
 </ul>
 <p><strong>9.2 如何在 MongoDB 中实现事务？</strong></p>
 <ul>
-<li><strong>答案</strong>：
-  <code>javascript
-  const session = db.getMongo().startSession();
-  session.startTransaction();
-  try {
-    db.collection1.insertOne({ field: "value" }, { session });
-    db.collection2.updateOne({ field: "value" }, { $set: { field: "newValue" } }, { session });
-    session.commitTransaction();
-  } catch (e) {
-    session.abortTransaction();
-    throw e;
-  } finally {
-    session.endSession();
-  }</code></li>
+<li><strong>答案</strong>：</li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">session</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">db</span><span class="p">.</span><span class="nx">getMongo</span><span class="p">().</span><span class="nx">startSession</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">session</span><span class="p">.</span><span class="nx">startTransaction</span><span class="p">();</span>
+<span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">db</span><span class="p">.</span><span class="nx">collection1</span><span class="p">.</span><span class="nx">insertOne</span><span class="p">({</span><span class="w"> </span><span class="nx">field</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">session</span><span class="w"> </span><span class="p">});</span>
+<span class="w">    </span><span class="nx">db</span><span class="p">.</span><span class="nx">collection2</span><span class="p">.</span><span class="nx">updateOne</span><span class="p">({</span><span class="w"> </span><span class="nx">field</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$set</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">field</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;newValue&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">session</span><span class="w"> </span><span class="p">});</span>
+<span class="w">    </span><span class="nx">session</span><span class="p">.</span><span class="nx">commitTransaction</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">session</span><span class="p">.</span><span class="nx">abortTransaction</span><span class="p">();</span>
+<span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="nx">e</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">session</span><span class="p">.</span><span class="nx">endSession</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span>
+</code></pre></div>
+
 <h3 id="10">10. <strong>备份与恢复</strong></h3>
 <p><strong>10.1 如何备份 MongoDB 数据库？</strong></p>
 <ul>
@@ -5370,40 +5376,41 @@
 <p><strong>11.2 设计一个 MongoDB 数据模型来支持一个电商平台的订单系统。</strong></p>
 <ul>
 <li><strong>答案</strong>：</li>
-<li>
-<p><strong>用户集合</strong>：存储用户信息。
-    <code>javascript
-    {
-      _id: ObjectId("user_id"),
-      name: "John Doe",
-      email: "john@example.com",
-      addresses: [{ type: "shipping", address: "123 Main St" }]
-    }</code></p>
-</li>
-<li>
-<p><strong>产品集合</strong>：存储产品信息。
-    <code>javascript
-    {
-      _id: ObjectId("product_id"),
-      name: "Product Name",
-      price: 100.0,
-      categories: ["Electronics", "Mobile"]
-    }</code></p>
-</li>
-<li>
-<p><strong>订单集合</strong>：存储订单信息，引用用户和产品。
-    <code>javascript
-    {
-      _id: ObjectId("order_id"),
-      userId: ObjectId("user_id"),
-      items: [
-        { productId: ObjectId("product_id"), quantity: 2, price: 100.0 }
-      ],
-      totalAmount: 200.0,
-      status: "pending"
-    }</code></p>
-</li>
+<li><strong>用户集合</strong>：存储用户信息。</li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">_id</span><span class="o">:</span><span class="w"> </span><span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;user_id&quot;</span><span class="p">),</span>
+<span class="w">      </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">email</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;john@example.com&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">addresses</span><span class="o">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;shipping&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">address</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;123 Main St&quot;</span><span class="w"> </span><span class="p">}]</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+
+<ul>
+<li><strong>产品集合</strong>：存储产品信息。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">_id</span><span class="o">:</span><span class="w"> </span><span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;product_id&quot;</span><span class="p">),</span>
+<span class="w">      </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Product Name&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">price</span><span class="o">:</span><span class="w"> </span><span class="mf">100.0</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">categories</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Electronics&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Mobile&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+
+<ul>
+<li><strong>订单集合</strong>：存储订单信息，引用用户和产品。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">_id</span><span class="o">:</span><span class="w"> </span><span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;order_id&quot;</span><span class="p">),</span>
+<span class="w">      </span><span class="nx">userId</span><span class="o">:</span><span class="w"> </span><span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;user_id&quot;</span><span class="p">),</span>
+<span class="w">      </span><span class="nx">items</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nx">productId</span><span class="o">:</span><span class="w"> </span><span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;product_id&quot;</span><span class="p">),</span><span class="w"> </span><span class="nx">quantity</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">price</span><span class="o">:</span><span class="w"> </span><span class="mf">100.0</span><span class="w"> </span><span class="p">}</span>
+<span class="w">      </span><span class="p">],</span>
+<span class="w">      </span><span class="nx">totalAmount</span><span class="o">:</span><span class="w"> </span><span class="mf">200.0</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">status</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;pending&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+
 <h3 id="12">12. <strong>数据一致性</strong></h3>
 <p><strong>12.1 MongoDB 如何确保数据的一致性？</strong></p>
 <ul>
@@ -5437,32 +5444,34 @@
 <h3 id="13">13. <strong>高级聚合</strong></h3>
 <p><strong>13.1 使用 <code>$facet</code> 操作符进行多维度数据分析的示例。</strong></p>
 <ul>
-<li><strong>答案</strong>：
-  <code>javascript
-  db.orders.aggregate([
-    {
-      $facet: {
-        "totalOrders": [{ $count: "count" }],
-        "ordersByStatus": [
-          { $group: { _id: "$status", count: { $sum: 1 } } }
-        ],
-        "averageOrderAmount": [
-          { $group: { _id: null, averageAmount: { $avg: "$totalAmount" } } }
-        ]
-      }
-    }
-  ])</code></li>
+<li><strong>答案</strong>：</li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="w">  </span><span class="nx">db</span><span class="p">.</span><span class="nx">orders</span><span class="p">.</span><span class="nx">aggregate</span><span class="p">([</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">$facet</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s2">&quot;totalOrders&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nx">$count</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;count&quot;</span><span class="w"> </span><span class="p">}],</span>
+<span class="w">        </span><span class="s2">&quot;ordersByStatus&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">          </span><span class="p">{</span><span class="w"> </span><span class="nx">$group</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">_id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;$status&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">count</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$sum</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="s2">&quot;averageOrderAmount&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">          </span><span class="p">{</span><span class="w"> </span><span class="nx">$group</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">_id</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nx">averageAmount</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$avg</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;$totalAmount&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">])</span>
+</code></pre></div>
+
 <p><strong>13.2 解释 MongoDB 的 <code>$merge</code> 操作符及其用途。</strong></p>
 <ul>
 <li><strong>答案</strong>：
-  <code>$merge</code> 操作符用于将聚合管道的结果写入指定的集合。可以选择覆盖、插入新文档或更新现有文档。
-  <code>javascript
-  db.orders.aggregate([
-    { $group: { _id: "$productId", totalSales: { $sum: "$amount" } } },
-    { $merge: { into: "productSales", whenMatched: "merge", whenNotMatched: "insert" } }
-  ])</code></li>
+  <code>$merge</code> 操作符用于将聚合管道的结果写入指定的集合。可以选择覆盖、插入新文档或更新现有文档。</li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="w">  </span><span class="nx">db</span><span class="p">.</span><span class="nx">orders</span><span class="p">.</span><span class="nx">aggregate</span><span class="p">([</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">$group</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">_id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;$productId&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">totalSales</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$sum</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;$amount&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">$merge</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">into</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;productSales&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">whenMatched</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;merge&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">whenNotMatched</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;insert&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">])</span>
+</code></pre></div>
+
 <h3 id="14">14. <strong>分片管理</strong></h3>
 <p><strong>14.1 分片键选择对性能的影响？</strong></p>
 <ul>
@@ -5489,13 +5498,17 @@
 <p><strong>15.2 如何从备份中恢复数据？</strong></p>
 <ul>
 <li><strong>答案</strong>：</li>
-<li><strong>从全量备份恢复</strong>：
-    <code>bash
-    mongorestore /backup/directory</code></li>
-<li><strong>从增量备份恢复</strong>：
-    <code>bash
-    mongorestore --oplogReplay /backup/directory</code></li>
+<li><strong>从全量备份恢复</strong>：</li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span>mongorestore<span class="w"> </span>/backup/directory
+</code></pre></div>
+
+<ul>
+<li><strong>从增量备份恢复</strong>：</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span>mongorestore<span class="w"> </span>--oplogReplay<span class="w"> </span>/backup/directory
+</code></pre></div>
+
 <h3 id="16">16. <strong>应用程序集成</strong></h3>
 <p><strong>16.1 如何将 MongoDB 与微服务架构中的其他服务集成？</strong></p>
 <ul>
@@ -5514,9 +5527,12 @@
 <p><strong>17.1 如何使用 MongoDB Profiler 来检测和优化慢查询？</strong></p>
 <ul>
 <li><strong>答案</strong>：</li>
-<li><strong>启用 Profiler</strong>：
-    <code>javascript
-    db.setProfilingLevel(2, { slowms: 100 })</code></li>
+<li><strong>启用 Profiler</strong>：</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nx">db</span><span class="p">.</span><span class="nx">setProfilingLevel</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">slowms</span><span class="o">:</span><span class="w"> </span><span class="mf">100</span><span class="w"> </span><span class="p">})</span>
+</code></pre></div>
+
+<ul>
 <li><strong>分析慢查询</strong>：使用 <code>db.system.profile.find()</code> 查询慢查询记录，优化相关查询和索引。</li>
 </ul>
 <p><strong>17.2 解释 MongoDB 的缓存机制及其优化方法。</strong></p>
@@ -5545,121 +5561,127 @@
 <p><strong>19.1 设计一个 MongoDB 数据模型来支持一个博客系统的评论功能。</strong></p>
 <ul>
 <li><strong>答案</strong>：</li>
-<li>
-<p><strong>博客文章集合</strong>：存储博客文章信息。
-    <code>javascript
-    {
-      _id: ObjectId("post_id"),
-      title: "Blog Post Title",
-      content: "Content of the blog post",
-      authorId: ObjectId("author_id"),
-      comments: [
-        { 
-          _id: ObjectId("comment_id"),
-          authorId: ObjectId("comment_author_id"),
-          content: "This is a comment",
-          createdAt: ISODate("2024-01-01T00:00:00Z")
-        }
-      ],
-      createdAt: ISODate("2024-01-01T00:00:00Z")
-    }</code></p>
-</li>
-<li>
-<p><strong>评论集合</strong>（如果评论非常多，考虑将评论存储在单独的集合中）：
-    <code>javascript
-    {
-      _id: ObjectId("comment_id"),
-      postId: ObjectId("post_id"),
-      authorId: ObjectId("author_id"),
-      content: "This is a comment",
-      createdAt: ISODate("2024-01-01T00:00:00Z")
-    }</code></p>
-</li>
+<li><strong>博客文章集合</strong>：存储博客文章信息。</li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">_id</span><span class="o">:</span><span class="w"> </span><span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;post_id&quot;</span><span class="p">),</span>
+<span class="w">      </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Blog Post Title&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Content of the blog post&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">authorId</span><span class="o">:</span><span class="w"> </span><span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;author_id&quot;</span><span class="p">),</span>
+<span class="w">      </span><span class="nx">comments</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span>
+<span class="w">          </span><span class="nx">_id</span><span class="o">:</span><span class="w"> </span><span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;comment_id&quot;</span><span class="p">),</span>
+<span class="w">          </span><span class="nx">authorId</span><span class="o">:</span><span class="w"> </span><span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;comment_author_id&quot;</span><span class="p">),</span>
+<span class="w">          </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;This is a comment&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">createdAt</span><span class="o">:</span><span class="w"> </span><span class="nx">ISODate</span><span class="p">(</span><span class="s2">&quot;2024-01-01T00:00:00Z&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">],</span>
+<span class="w">      </span><span class="nx">createdAt</span><span class="o">:</span><span class="w"> </span><span class="nx">ISODate</span><span class="p">(</span><span class="s2">&quot;2024-01-01T00:00:00Z&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+
+<ul>
+<li><strong>评论集合</strong>（如果评论非常多，考虑将评论存储在单独的集合中）：</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">_id</span><span class="o">:</span><span class="w"> </span><span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;comment_id&quot;</span><span class="p">),</span>
+<span class="w">      </span><span class="nx">postId</span><span class="o">:</span><span class="w"> </span><span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;post_id&quot;</span><span class="p">),</span>
+<span class="w">      </span><span class="nx">authorId</span><span class="o">:</span><span class="w"> </span><span class="nx">ObjectId</span><span class="p">(</span><span class="s2">&quot;author_id&quot;</span><span class="p">),</span>
+<span class="w">      </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;This is a comment&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">createdAt</span><span class="o">:</span><span class="w"> </span><span class="nx">ISODate</span><span class="p">(</span><span class="s2">&quot;2024-01-01T00:00:00Z&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+
 <p><strong>19.2 解释 MongoDB 中的 <code>hint</code> 和 <code>collation</code> 操作符。</strong></p>
 <ul>
 <li><strong>答案</strong>：</li>
 <li><strong><code>hint</code></strong>：<ul>
-<li>用于强制 MongoDB 使用特定的索引来执行查询，以优化性能或解决查询计划选择不当的问题。
-<code>javascript
-db.collection.find({ field: "value" }).hint({ field: 1 })</code></li>
+<li>用于强制 MongoDB 使用特定的索引来执行查询，以优化性能或解决查询计划选择不当的问题。</li>
 </ul>
 </li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="w"> </span><span class="nx">field</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span><span class="w"> </span><span class="p">}).</span><span class="nx">hint</span><span class="p">({</span><span class="w"> </span><span class="nx">field</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="p">})</span>
+</code></pre></div>
+
+<ul>
 <li><strong><code>collation</code></strong>：<ul>
-<li>用于指定查询和排序时的排序规则，例如不同语言的排序规则或忽略大小写。
-<code>javascript
-db.collection.find({ name: "John" }).collation({ locale: "en", strength: 2 })</code></li>
+<li>用于指定查询和排序时的排序规则，例如不同语言的排序规则或忽略大小写。</li>
 </ul>
 </li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;John&quot;</span><span class="w"> </span><span class="p">}).</span><span class="nx">collation</span><span class="p">({</span><span class="w"> </span><span class="nx">locale</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;en&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">strength</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="p">})</span>
+</code></pre></div>
+
 <h3 id="20">20. <strong>高级聚合操作</strong></h3>
 <p><strong>20.1 使用 <code>$graphLookup</code> 操作符进行图形化查询。</strong></p>
 <ul>
 <li><strong>答案</strong>：</li>
-<li><strong>示例</strong>：假设有一个员工集合，<code>employees</code>，包含员工的管理关系。
-    <code>javascript
-    db.employees.aggregate([
-      {
-        $graphLookup: {
-          from: "employees",
-          startWith: "$managerId",
-          connectFromField: "managerId",
-          connectToField: "_id",
-          as: "reportees"
-        }
-      }
-    ])</code></li>
+<li><strong>示例</strong>：假设有一个员工集合，<code>employees</code>，包含员工的管理关系。</li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nx">db</span><span class="p">.</span><span class="nx">employees</span><span class="p">.</span><span class="nx">aggregate</span><span class="p">([</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">$graphLookup</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="kr">from</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;employees&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">startWith</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;$managerId&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">connectFromField</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;managerId&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">connectToField</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;_id&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="kr">as</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;reportees&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">])</span>
+</code></pre></div>
+
 <p><strong>20.2 解释 MongoDB 的 <code>$bucket</code> 和 <code>$bucketAuto</code> 操作符。</strong></p>
 <ul>
 <li><strong>答案</strong>：</li>
-<li>
-<p><strong><code>$bucket</code></strong>：</p>
-<ul>
-<li>用于将文档分配到自定义的分桶中，适用于对数据进行分组和汇总。
-<code>javascript
-db.collection.aggregate([
-  {
-    $bucket: {
-      groupBy: "$age",
-      boundaries: [0, 18, 30, 40, 50, 60],
-      default: "Other",
-      output: {
-        count: { $sum: 1 }
-      }
-    }
-  }
-])</code></li>
-</ul>
-</li>
-<li>
-<p><strong><code>$bucketAuto</code></strong>：</p>
-<ul>
-<li>自动计算桶的边界，根据文档的分布动态创建桶。
-<code>javascript
-db.collection.aggregate([
-  {
-    $bucketAuto: {
-      groupBy: "$age",
-      buckets: 5,
-      output: {
-        count: { $sum: 1 }
-      }
-    }
-  }
-])</code></li>
+<li><strong><code>$bucket</code></strong>：<ul>
+<li>用于将文档分配到自定义的分桶中，适用于对数据进行分组和汇总。</li>
 </ul>
 </li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">aggregate</span><span class="p">([</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">$bucket</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">groupBy</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;$age&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">boundaries</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">18</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span><span class="w"> </span><span class="mf">40</span><span class="p">,</span><span class="w"> </span><span class="mf">50</span><span class="p">,</span><span class="w"> </span><span class="mf">60</span><span class="p">],</span>
+<span class="w">          </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Other&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">output</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">count</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$sum</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="p">}</span>
+<span class="w">          </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">])</span>
+</code></pre></div>
+
+<ul>
+<li><strong><code>$bucketAuto</code></strong>：<ul>
+<li>自动计算桶的边界，根据文档的分布动态创建桶。</li>
+</ul>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">aggregate</span><span class="p">([</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">$bucketAuto</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">groupBy</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;$age&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">buckets</span><span class="o">:</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">output</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">count</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$sum</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="p">}</span>
+<span class="w">          </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">])</span>
+</code></pre></div>
+
 <h3 id="21">21. <strong>分片管理</strong></h3>
 <p><strong>21.1 如何调整 MongoDB 分片的负载均衡？</strong></p>
 <ul>
 <li><strong>答案</strong>：</li>
 <li><strong>监控数据分布</strong>：使用 <code>sh.status()</code> 和 MongoDB Atlas 的监控工具来查看数据分布。</li>
-<li><strong>手动调整</strong>：使用 <code>sh.moveChunk()</code> 将数据从一个分片移动到另一个分片，以实现负载均衡。
-  <code>javascript
-  sh.moveChunk("database.collection", { shardKey: value }, "targetShard")</code></li>
+<li><strong>手动调整</strong>：使用 <code>sh.moveChunk()</code> 将数据从一个分片移动到另一个分片，以实现负载均衡。</li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="w">  </span><span class="nx">sh</span><span class="p">.</span><span class="nx">moveChunk</span><span class="p">(</span><span class="s2">&quot;database.collection&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">shardKey</span><span class="o">:</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="s2">&quot;targetShard&quot;</span><span class="p">)</span>
+</code></pre></div>
+
 <p><strong>21.2 如何应对分片键选择不当的问题？</strong></p>
 <ul>
 <li><strong>答案</strong>：</li>
@@ -5670,29 +5692,29 @@ db.collection.aggregate([
 <p><strong>22.1 MongoDB 的 <code>mongodump</code> 和 <code>mongorestore</code> 命令的使用场景和参数。</strong></p>
 <ul>
 <li><strong>答案</strong>：</li>
-<li>
-<p><strong><code>mongodump</code></strong>：用于创建数据库的备份。
-    <code>bash
-    mongodump --uri="mongodb://localhost:27017" --out /backup/directory</code>
-    常用参数：</p>
+<li><strong><code>mongodump</code></strong>：用于创建数据库的备份。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span>mongodump<span class="w"> </span>--uri<span class="o">=</span><span class="s2">&quot;mongodb://localhost:27017&quot;</span><span class="w"> </span>--out<span class="w"> </span>/backup/directory
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>常用参数：
+- `--db`：指定备份的数据库。
+- `--collection`：指定备份的集合。
+- `--gzip`：压缩备份文件。
+</code></pre></div>
+
 <ul>
-<li><code>--db</code>：指定备份的数据库。</li>
-<li><code>--collection</code>：指定备份的集合。</li>
-<li><code>--gzip</code>：压缩备份文件。</li>
+<li><strong><code>mongorestore</code></strong>：用于从备份文件恢复数据。</li>
 </ul>
-</li>
-<li>
-<p><strong><code>mongorestore</code></strong>：用于从备份文件恢复数据。
-    <code>bash
-    mongorestore --uri="mongodb://localhost:27017" /backup/directory</code>
-    常用参数：</p>
-<ul>
-<li><code>--drop</code>：在恢复前删除现有集合。</li>
-<li><code>--gzip</code>：解压备份文件。</li>
-<li><code>--oplogReplay</code>：在恢复时重放操作日志以保证数据一致性。</li>
-</ul>
-</li>
-</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span>mongorestore<span class="w"> </span>--uri<span class="o">=</span><span class="s2">&quot;mongodb://localhost:27017&quot;</span><span class="w"> </span>/backup/directory
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>常用参数：
+- `--drop`：在恢复前删除现有集合。
+- `--gzip`：解压备份文件。
+- `--oplogReplay`：在恢复时重放操作日志以保证数据一致性。
+</code></pre></div>
+
 <p><strong>22.2 处理大规模数据备份的挑战和解决方案。</strong></p>
 <ul>
 <li><strong>答案</strong>：</li>
@@ -5704,17 +5726,23 @@ db.collection.aggregate([
 <p><strong>23.1 如何配置 MongoDB 的访问控制和权限管理？</strong></p>
 <ul>
 <li><strong>答案</strong>：</li>
-<li><strong>启用认证</strong>：配置 MongoDB 实例启用认证机制，确保只有授权用户可以访问数据。
-    <code>yaml
-    security:
-      authorization: "enabled"</code></li>
-<li><strong>创建用户和角色</strong>：使用 <code>db.createUser()</code> 创建用户并分配角色。
-    <code>javascript
-    db.createUser({
-      user: "myUser",
-      pwd: "myPassword",
-      roles: [{ role: "readWrite", db: "myDatabase" }]
-    })</code></li>
+<li><strong>启用认证</strong>：配置 MongoDB 实例启用认证机制，确保只有授权用户可以访问数据。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nt">security</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">authorization</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;enabled&quot;</span>
+</code></pre></div>
+
+<ul>
+<li><strong>创建用户和角色</strong>：使用 <code>db.createUser()</code> 创建用户并分配角色。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nx">db</span><span class="p">.</span><span class="nx">createUser</span><span class="p">({</span>
+<span class="w">      </span><span class="nx">user</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;myUser&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">pwd</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;myPassword&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">roles</span><span class="o">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nx">role</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;readWrite&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">db</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;myDatabase&quot;</span><span class="w"> </span><span class="p">}]</span>
+<span class="w">    </span><span class="p">})</span>
+</code></pre></div>
+
+<ul>
 <li><strong>配置角色</strong>：使用 <code>db.createRole()</code> 定义自定义角色，控制访问权限。</li>
 </ul>
 <p><strong>23.2 MongoDB 数据库加密的最佳实践。</strong></p>
@@ -5728,9 +5756,12 @@ db.collection.aggregate([
 <p><strong>24.1 如何优化 MongoDB 的写入性能？</strong></p>
 <ul>
 <li><strong>答案</strong>：</li>
-<li><strong>批量写入</strong>：使用批量操作来减少网络往返和提高写入性能。
-    <code>javascript
-    db.collection.insertMany([{ ... }, { ... }])</code></li>
+<li><strong>批量写入</strong>：使用批量操作来减少网络往返和提高写入性能。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">.</span><span class="nx">insertMany</span><span class="p">([{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}])</span>
+</code></pre></div>
+
+<ul>
 <li><strong>调整 <code>writeConcern</code></strong>：根据应用需求调整 <code>writeConcern</code> 设置，以平衡数据可靠性和写入性能。</li>
 <li><strong>使用分片</strong>：将数据分片以减少单个节点的写入负载。</li>
 </ul>
@@ -5746,31 +5777,35 @@ db.collection.aggregate([
 <p><strong>25.1 解释 MongoDB 的事务处理机制及其应用场景。</strong></p>
 <ul>
 <li><strong>答案</strong>：</li>
-<li>
-<p><strong>事务处理机制</strong>：</p>
-<ul>
+<li><strong>事务处理机制</strong>：<ul>
 <li>MongoDB 3.6+ 支持多文档事务，提供 ACID 特性，确保跨多个文档和集合的操作的一致性。</li>
-<li><strong>事务操作</strong>：使用 <code>startTransaction()</code> 开始事务，使用 <code>commitTransaction()</code> 提交事务，使用 <code>abortTransaction()</code> 回滚事务。
-```javascript
-const session = client.startSession();
-session.startTransaction();
-try {
-  const ordersCollection = client.db('myDB').collection('orders');
-  const productsCollection = client.db('myDB').collection('products');</li>
+<li><strong>事务操作</strong>：使用 <code>startTransaction()</code> 开始事务，使用 <code>commitTransaction()</code> 提交事务，使用 <code>abortTransaction()</code> 回滚事务。</li>
 </ul>
-<p>ordersCollection.insertOne({ ... }, { session });
-  productsCollection.updateOne({ ... }, { ... }, { session });</p>
-<p>session.commitTransaction();
-} catch (error) {
-  session.abortTransaction();
-  throw error;
-} finally {
-  session.endSession();
-}
-```
-  - <strong>应用场景</strong>：
-- <strong>金融系统</strong>：保证账户之间的转账操作的一致性。
-- <strong>库存管理</strong>：确保库存和订单数据的一致性。</p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">session</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">client</span><span class="p">.</span><span class="nx">startSession</span><span class="p">();</span>
+<span class="w">    </span><span class="nx">session</span><span class="p">.</span><span class="nx">startTransaction</span><span class="p">();</span>
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">ordersCollection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">client</span><span class="p">.</span><span class="nx">db</span><span class="p">(</span><span class="s1">&#39;myDB&#39;</span><span class="p">).</span><span class="nx">collection</span><span class="p">(</span><span class="s1">&#39;orders&#39;</span><span class="p">);</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">productsCollection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">client</span><span class="p">.</span><span class="nx">db</span><span class="p">(</span><span class="s1">&#39;myDB&#39;</span><span class="p">).</span><span class="nx">collection</span><span class="p">(</span><span class="s1">&#39;products&#39;</span><span class="p">);</span>
+
+<span class="w">      </span><span class="nx">ordersCollection</span><span class="p">.</span><span class="nx">insertOne</span><span class="p">({</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">session</span><span class="w"> </span><span class="p">});</span>
+<span class="w">      </span><span class="nx">productsCollection</span><span class="p">.</span><span class="nx">updateOne</span><span class="p">({</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">session</span><span class="w"> </span><span class="p">});</span>
+
+<span class="w">      </span><span class="nx">session</span><span class="p">.</span><span class="nx">commitTransaction</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">session</span><span class="p">.</span><span class="nx">abortTransaction</span><span class="p">();</span>
+<span class="w">      </span><span class="k">throw</span><span class="w"> </span><span class="nx">error</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">session</span><span class="p">.</span><span class="nx">endSession</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+
+<ul>
+<li><strong>应用场景</strong>：<ul>
+<li><strong>金融系统</strong>：保证账户之间的转账操作的一致性。</li>
+<li><strong>库存管理</strong>：确保库存和订单数据的一致性。</li>
+</ul>
 </li>
 </ul>
 <p><strong>25.2 如何处理跨分片事务中的性能问题？</strong></p>
@@ -5786,24 +5821,34 @@ try {
 <li><strong>答案</strong>：</li>
 <li><strong>MongoDB Atlas</strong>：提供了内置的监控工具，显示集群的性能指标和健康状态。</li>
 <li><strong><code>mongostat</code> 和 <code>mongotop</code></strong>：<ul>
-<li><code>mongostat</code>：显示 MongoDB 实例的性能统计数据。
-  <code>bash
-  mongostat --host localhost</code></li>
-<li><code>mongotop</code>：显示 MongoDB 实例中各集合的操作时间。
-  <code>bash
-  mongotop --host localhost</code></li>
+<li><code>mongostat</code>：显示 MongoDB 实例的性能统计数据。</li>
 </ul>
 </li>
-<li><strong><code>db.serverStatus()</code></strong>：获取 MongoDB 实例的详细服务器状态信息。
-    <code>javascript
-    db.serverStatus();</code></li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="w">      </span>mongostat<span class="w"> </span>--host<span class="w"> </span>localhost
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="o">-</span><span class="w"> </span><span class="n n-Quoted">`mongotop`</span><span class="n">：显示</span><span class="w"> </span><span class="n">MongoDB</span><span class="w"> </span><span class="n">实例中各集合的操作时间。</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="w">      </span>mongotop<span class="w"> </span>--host<span class="w"> </span>localhost
+</code></pre></div>
+
+<ul>
+<li><strong><code>db.serverStatus()</code></strong>：获取 MongoDB 实例的详细服务器状态信息。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nx">db</span><span class="p">.</span><span class="nx">serverStatus</span><span class="p">();</span>
+</code></pre></div>
+
 <p><strong>26.2 解释 MongoDB 的慢查询日志和如何优化慢查询。</strong></p>
 <ul>
 <li><strong>答案</strong>：</li>
-<li><strong>慢查询日志</strong>：MongoDB 会记录执行时间超过 <code>slowms</code> 设置的查询。可以通过 <code>db.setProfilingLevel()</code> 配置慢查询日志级别。
-    <code>javascript
-    db.setProfilingLevel(2, { slowms: 100 });</code></li>
+<li><strong>慢查询日志</strong>：MongoDB 会记录执行时间超过 <code>slowms</code> 设置的查询。可以通过 <code>db.setProfilingLevel()</code> 配置慢查询日志级别。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nx">db</span><span class="p">.</span><span class="nx">setProfilingLevel</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">slowms</span><span class="o">:</span><span class="w"> </span><span class="mf">100</span><span class="w"> </span><span class="p">});</span>
+</code></pre></div>
+
+<ul>
 <li><strong>优化慢查询</strong>：<ul>
 <li><strong>创建索引</strong>：为查询条件创建合适的索引。</li>
 <li><strong>查询优化</strong>：分析慢查询的执行计划，并优化查询语句。</li>
@@ -5831,71 +5876,80 @@ try {
 <li><strong>答案</strong>：</li>
 <li><strong>角色</strong>：MongoDB 使用基于角色的访问控制（RBAC）来管理用户的权限。<ul>
 <li><strong>内置角色</strong>：如 <code>read</code>, <code>readWrite</code>, <code>dbAdmin</code> 等。</li>
-<li><strong>自定义角色</strong>：使用 <code>db.createRole()</code> 创建具有特定权限的自定义角色。
-  <code>javascript
-  db.createRole({
-    role: "myCustomRole",
-    privileges: [
-      {
-        resource: { db: "myDB", collection: "" },
-        actions: [ "find", "update" ]
-      }
-    ],
-    roles: []
-  });</code></li>
+<li><strong>自定义角色</strong>：使用 <code>db.createRole()</code> 创建具有特定权限的自定义角色。</li>
 </ul>
 </li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="w">      </span><span class="nx">db</span><span class="p">.</span><span class="nx">createRole</span><span class="p">({</span>
+<span class="w">        </span><span class="nx">role</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;myCustomRole&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">privileges</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">          </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">resource</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">db</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;myDB&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">collection</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">            </span><span class="nx">actions</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">&quot;find&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;update&quot;</span><span class="w"> </span><span class="p">]</span>
+<span class="w">          </span><span class="p">}</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="nx">roles</span><span class="o">:</span><span class="w"> </span><span class="p">[]</span>
+<span class="w">      </span><span class="p">});</span>
+</code></pre></div>
+
 <p><strong>28.2 如何使用 MongoDB 的加密功能保护数据？</strong></p>
 <ul>
 <li><strong>答案</strong>：</li>
-<li><strong>数据加密</strong>：使用 MongoDB Enterprise 的加密功能对磁盘上的数据进行加密。启用加密需在配置文件中设置 <code>security</code> 相关参数。
-    <code>yaml
-    security:
-      encryption:
-        keyFile: /path/to/keyfile</code></li>
-<li><strong>传输加密</strong>：通过启用 SSL/TLS 加密客户端与服务器之间的数据传输。
-    <code>yaml
-    net:
-      tls:
-        mode: requireTLS
-        certificateKeyFile: /path/to/mongodb.pem</code></li>
+<li><strong>数据加密</strong>：使用 MongoDB Enterprise 的加密功能对磁盘上的数据进行加密。启用加密需在配置文件中设置 <code>security</code> 相关参数。</li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nt">security</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">encryption</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">keyFile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/path/to/keyfile</span>
+</code></pre></div>
+
+<ul>
+<li><strong>传输加密</strong>：通过启用 SSL/TLS 加密客户端与服务器之间的数据传输。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nt">net</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">tls</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">requireTLS</span>
+<span class="w">        </span><span class="nt">certificateKeyFile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/path/to/mongodb.pem</span>
+</code></pre></div>
+
 <h3 id="29">29. <strong>高级数据处理</strong></h3>
 <p><strong>29.1 使用 <code>$merge</code> 操作符将聚合结果写入新集合的示例。</strong></p>
 <ul>
 <li><strong>答案</strong>：</li>
-<li><strong>示例</strong>：将订单数据按月份汇总并写入新的集合 <code>monthlyOrders</code>。
-    <code>javascript
-    db.orders.aggregate([
-      {
-        $group: {
-          _id: { month: { $month: "$orderDate" }, year: { $year: "$orderDate" } },
-          totalAmount: { $sum: "$amount" }
-        }
-      },
-      {
-        $merge: {
-          into: "monthlyOrders",
-          whenMatched: "merge",
-          whenNotMatched: "insert"
-        }
-      }
-    ])</code></li>
+<li><strong>示例</strong>：将订单数据按月份汇总并写入新的集合 <code>monthlyOrders</code>。</li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nx">db</span><span class="p">.</span><span class="nx">orders</span><span class="p">.</span><span class="nx">aggregate</span><span class="p">([</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">$group</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">_id</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">month</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$month</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;$orderDate&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="nx">year</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$year</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;$orderDate&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
+<span class="w">          </span><span class="nx">totalAmount</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$sum</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;$amount&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">$merge</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">into</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;monthlyOrders&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">whenMatched</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;merge&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">whenNotMatched</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;insert&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">])</span>
+</code></pre></div>
+
 <p><strong>29.2 解释 <code>$out</code> 操作符及其应用场景。</strong></p>
 <ul>
 <li><strong>答案</strong>：</li>
 <li><strong><code>$out</code></strong>：<ul>
-<li>将聚合管道的结果直接写入指定集合，覆盖现有集合的内容。
-<code>javascript
-db.orders.aggregate([
-  { $match: { status: "completed" } },
-  { $group: { _id: "$productId", totalSales: { $sum: "$amount" } } },
-  { $out: "completedSales" }
-])</code></li>
+<li>将聚合管道的结果直接写入指定集合，覆盖现有集合的内容。</li>
 </ul>
 </li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nx">db</span><span class="p">.</span><span class="nx">orders</span><span class="p">.</span><span class="nx">aggregate</span><span class="p">([</span>
+<span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nx">$match</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">status</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;completed&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
+<span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nx">$group</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">_id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;$productId&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">totalSales</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">$sum</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;$amount&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
+<span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nx">$out</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;completedSales&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">])</span>
+</code></pre></div>
+
+<ul>
 <li><strong>应用场景</strong>：<ul>
 <li>用于将复杂的聚合结果保存到集合中，以便后续查询或分析。</li>
 </ul>
@@ -5905,13 +5959,17 @@ db.orders.aggregate([
 <p><strong>30.1 使用 MongoDB 的备份工具创建和管理备份。</strong></p>
 <ul>
 <li><strong>答案</strong>：</li>
-<li><strong><code>mongodump</code></strong>：创建数据库的备份。
-    <code>bash
-    mongodump --uri="mongodb://localhost:27017" --out /backup/directory</code></li>
-<li><strong><code>mongorestore</code></strong>：恢复数据。
-    <code>bash
-    mongorestore --uri="mongodb://localhost:27017" /backup/directory</code></li>
+<li><strong><code>mongodump</code></strong>：创建数据库的备份。</li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span>mongodump<span class="w"> </span>--uri<span class="o">=</span><span class="s2">&quot;mongodb://localhost:27017&quot;</span><span class="w"> </span>--out<span class="w"> </span>/backup/directory
+</code></pre></div>
+
+<ul>
+<li><strong><code>mongorestore</code></strong>：恢复数据。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span>mongorestore<span class="w"> </span>--uri<span class="o">=</span><span class="s2">&quot;mongodb://localhost:27017&quot;</span><span class="w"> </span>/backup/directory
+</code></pre></div>
+
 <p><strong>30.2 如何使用 MongoDB Atlas 的自动备份功能？</strong></p>
 <ul>
 <li><strong>答案</strong>：</li>
@@ -5967,7 +6025,7 @@ db.orders.aggregate([
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.56dfad97.min.js"></script>
