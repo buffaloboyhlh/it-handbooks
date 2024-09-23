@@ -24,7 +24,7 @@
     
     
       
-        <title>filebeat 教程 - IT-手册</title>
+        <title>filebeat.yml 配置文件 - IT-手册</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#filebeat" class="md-skip">
+        <a href="#filebeatyml" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              filebeat 教程
+              filebeat.yml 配置文件
             
           </span>
         </div>
@@ -2012,7 +2012,7 @@
           
   
   <span class="md-ellipsis">
-    filebeat 教程
+    filebeat.yml 配置文件
   </span>
   
 
@@ -2023,7 +2023,7 @@
         
   
   <span class="md-ellipsis">
-    filebeat 教程
+    filebeat.yml 配置文件
   </span>
   
 
@@ -2045,64 +2045,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#filebeat_1" class="md-nav__link">
+  <a href="#filebeat" class="md-nav__link">
     <span class="md-ellipsis">
-      Filebeat 从入门到精通教程
+      Filebeat 配置结构
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#1-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Inputs（输入）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Inputs（输入）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      目录
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-filebeat" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Filebeat 基础概念
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-filebeat" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Filebeat 安装与启动
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. Filebeat 安装与启动">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-centos-filebeat" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.1 在 CentOS 上安装 Filebeat
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22-ubuntu-filebeat" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.2 在 Ubuntu 上安装 Filebeat
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#23-filebeat" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.3 启动和启用 Filebeat 服务
+      关键配置说明：
     </span>
   </a>
   
@@ -2114,62 +2078,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-filebeat" class="md-nav__link">
+  <a href="#2-outputs" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Filebeat 配置详解
+      2. Outputs（输出）
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. Filebeat 配置详解">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31-inputs" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.1 输入源配置（inputs）
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3.1 输入源配置（inputs）">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      示例：收集日志文件
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      示例：收集系统日志
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32-outputs" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.2 输出目标配置（outputs）
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3.2 输出目标配置（outputs）">
+    <nav class="md-nav" aria-label="2. Outputs（输出）">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#elasticsearch" class="md-nav__link">
     <span class="md-ellipsis">
-      直接输出到 Elasticsearch
+      输出到 Elasticsearch：
     </span>
   </a>
   
@@ -2178,54 +2099,25 @@
           <li class="md-nav__item">
   <a href="#logstash" class="md-nav__link">
     <span class="md-ellipsis">
-      输出到 Logstash
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-filebeat" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Filebeat 模块化配置
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. Filebeat 模块化配置">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.1 启用模块
+      输出到 Logstash：
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#42" class="md-nav__link">
+  <a href="#kafka" class="md-nav__link">
     <span class="md-ellipsis">
-      4.2 查看所有可用模块
+      输出到 Kafka：
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#43" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      4.3 模块配置文件
+      关键配置说明：
     </span>
   </a>
   
@@ -2237,28 +2129,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-filebeat-logstashelasticsearch" class="md-nav__link">
+  <a href="#3-processors" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Filebeat 与 Logstash/Elasticsearch 集成
+      3. Processors（处理器）
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="5. Filebeat 与 Logstash/Elasticsearch 集成">
+    <nav class="md-nav" aria-label="3. Processors（处理器）">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#51-logstash" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      5.1 通过 Logstash 处理日志
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#52-filebeat-logstash" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.2 配置 Filebeat 输出到 Logstash
+      关键配置说明：
     </span>
   </a>
   
@@ -2270,52 +2153,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-filebeat" class="md-nav__link">
+  <a href="#4-logging" class="md-nav__link">
     <span class="md-ellipsis">
-      6. Filebeat 高级功能
+      4. Logging（日志记录）
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="6. Filebeat 高级功能">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#61" class="md-nav__link">
-    <span class="md-ellipsis">
-      6.1 多输入与多输出
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="6.1 多输入与多输出">
+    <nav class="md-nav" aria-label="4. Logging（日志记录）">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      多输入源示例
+      关键配置说明：
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Setup（初始化）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Setup（初始化）">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
-      多输出源示例
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#62" class="md-nav__link">
-    <span class="md-ellipsis">
-      6.2 自定义字段与标签
+      关键配置说明：
     </span>
   </a>
   
@@ -2327,77 +2201,20 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#7-filebeat" class="md-nav__link">
+  <a href="#6" class="md-nav__link">
     <span class="md-ellipsis">
-      7. Filebeat 性能优化
+      6. 示例配置
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#8-filebeat" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
-      8. Filebeat 常见问题排查
+      总结
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="8. Filebeat 常见问题排查">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#81-filebeat" class="md-nav__link">
-    <span class="md-ellipsis">
-      8.1 查看 Filebeat 日志
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#82" class="md-nav__link">
-    <span class="md-ellipsis">
-      8.2 测试配置文件
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#9-filebeat" class="md-nav__link">
-    <span class="md-ellipsis">
-      9. Filebeat 实战案例
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="9. Filebeat 实战案例">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#91-filebeat-elasticsearch-web" class="md-nav__link">
-    <span class="md-ellipsis">
-      9.1 集成 Filebeat 和 Elasticsearch，收集 Web 日志
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#92-filebeat-logstash" class="md-nav__link">
-    <span class="md-ellipsis">
-      9.2 Filebeat 和 Logstash 集成日志过滤
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2442,7 +2259,7 @@
         
   
   <span class="md-ellipsis">
-    LogStash 教程
+    logstash 配置文件
   </span>
   
 
@@ -4983,64 +4800,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#filebeat_1" class="md-nav__link">
+  <a href="#filebeat" class="md-nav__link">
     <span class="md-ellipsis">
-      Filebeat 从入门到精通教程
+      Filebeat 配置结构
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#1-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Inputs（输入）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Inputs（输入）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      目录
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-filebeat" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Filebeat 基础概念
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-filebeat" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Filebeat 安装与启动
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. Filebeat 安装与启动">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-centos-filebeat" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.1 在 CentOS 上安装 Filebeat
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22-ubuntu-filebeat" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.2 在 Ubuntu 上安装 Filebeat
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#23-filebeat" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.3 启动和启用 Filebeat 服务
+      关键配置说明：
     </span>
   </a>
   
@@ -5052,62 +4833,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-filebeat" class="md-nav__link">
+  <a href="#2-outputs" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Filebeat 配置详解
+      2. Outputs（输出）
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. Filebeat 配置详解">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31-inputs" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.1 输入源配置（inputs）
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3.1 输入源配置（inputs）">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      示例：收集日志文件
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      示例：收集系统日志
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32-outputs" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.2 输出目标配置（outputs）
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3.2 输出目标配置（outputs）">
+    <nav class="md-nav" aria-label="2. Outputs（输出）">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#elasticsearch" class="md-nav__link">
     <span class="md-ellipsis">
-      直接输出到 Elasticsearch
+      输出到 Elasticsearch：
     </span>
   </a>
   
@@ -5116,54 +4854,25 @@
           <li class="md-nav__item">
   <a href="#logstash" class="md-nav__link">
     <span class="md-ellipsis">
-      输出到 Logstash
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-filebeat" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Filebeat 模块化配置
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. Filebeat 模块化配置">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.1 启用模块
+      输出到 Logstash：
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#42" class="md-nav__link">
+  <a href="#kafka" class="md-nav__link">
     <span class="md-ellipsis">
-      4.2 查看所有可用模块
+      输出到 Kafka：
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#43" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      4.3 模块配置文件
+      关键配置说明：
     </span>
   </a>
   
@@ -5175,28 +4884,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-filebeat-logstashelasticsearch" class="md-nav__link">
+  <a href="#3-processors" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Filebeat 与 Logstash/Elasticsearch 集成
+      3. Processors（处理器）
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="5. Filebeat 与 Logstash/Elasticsearch 集成">
+    <nav class="md-nav" aria-label="3. Processors（处理器）">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#51-logstash" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      5.1 通过 Logstash 处理日志
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#52-filebeat-logstash" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.2 配置 Filebeat 输出到 Logstash
+      关键配置说明：
     </span>
   </a>
   
@@ -5208,52 +4908,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-filebeat" class="md-nav__link">
+  <a href="#4-logging" class="md-nav__link">
     <span class="md-ellipsis">
-      6. Filebeat 高级功能
+      4. Logging（日志记录）
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="6. Filebeat 高级功能">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#61" class="md-nav__link">
-    <span class="md-ellipsis">
-      6.1 多输入与多输出
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="6.1 多输入与多输出">
+    <nav class="md-nav" aria-label="4. Logging（日志记录）">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      多输入源示例
+      关键配置说明：
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Setup（初始化）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Setup（初始化）">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
-      多输出源示例
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#62" class="md-nav__link">
-    <span class="md-ellipsis">
-      6.2 自定义字段与标签
+      关键配置说明：
     </span>
   </a>
   
@@ -5265,77 +4956,20 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#7-filebeat" class="md-nav__link">
+  <a href="#6" class="md-nav__link">
     <span class="md-ellipsis">
-      7. Filebeat 性能优化
+      6. 示例配置
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#8-filebeat" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
-      8. Filebeat 常见问题排查
+      总结
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="8. Filebeat 常见问题排查">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#81-filebeat" class="md-nav__link">
-    <span class="md-ellipsis">
-      8.1 查看 Filebeat 日志
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#82" class="md-nav__link">
-    <span class="md-ellipsis">
-      8.2 测试配置文件
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#9-filebeat" class="md-nav__link">
-    <span class="md-ellipsis">
-      9. Filebeat 实战案例
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="9. Filebeat 实战案例">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#91-filebeat-elasticsearch-web" class="md-nav__link">
-    <span class="md-ellipsis">
-      9.1 集成 Filebeat 和 Elasticsearch，收集 Web 日志
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#92-filebeat-logstash" class="md-nav__link">
-    <span class="md-ellipsis">
-      9.2 Filebeat 和 Logstash 集成日志过滤
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -5354,240 +4988,165 @@
                   
 
 
-<h1 id="filebeat">filebeat 教程</h1>
-<h3 id="filebeat_1">Filebeat 从入门到精通教程</h3>
-<p>Filebeat 是一个轻量级的日志传输工具，主要用于将服务器和应用程序生成的日志数据发送到 Logstash、Elasticsearch 或其他存储服务。它是 Elastic Stack（ELK Stack）的一部分，常用于实时日志处理和监控。本文将带你从 Filebeat 的基础入门到一些高级功能的掌握，帮助你全面掌握 Filebeat。</p>
-<hr />
-<h2 id="_1">目录</h2>
-<ol>
-<li><strong>Filebeat 基础概念</strong></li>
-<li><strong>Filebeat 安装与启动</strong></li>
-<li><strong>Filebeat 配置详解</strong></li>
-<li>输入源（Inputs）</li>
-<li>输出目标（Outputs）</li>
-<li><strong>Filebeat 模块化配置</strong></li>
-<li>模块简介</li>
-<li>启用和管理模块</li>
-<li><strong>Filebeat 与 Logstash/Elasticsearch 集成</strong></li>
-<li><strong>Filebeat 高级功能</strong></li>
-<li>多输入与多输出</li>
-<li>自定义字段与标签</li>
-<li><strong>Filebeat 性能优化</strong></li>
-<li><strong>Filebeat 常见问题排查</strong></li>
-<li><strong>Filebeat 实战案例</strong></li>
-</ol>
-<hr />
-<h2 id="1-filebeat">1. Filebeat 基础概念</h2>
-<p>Filebeat 是 Elastic Stack 中的“轻量级代理”，专门用于转发和集中化日志数据。它可以通过以下几种方式使用：</p>
+<h1 id="filebeatyml">filebeat.yml 配置文件</h1>
+<p><code>filebeat.yml</code> 是 Filebeat 的主配置文件，用于定义如何从日志源收集数据、处理数据并将其发送到指定的目标系统（如 Elasticsearch、Logstash 等）。以下是对 <code>filebeat.yml</code> 的详细解读，包括配置项的解释以及示例。</p>
+<h3 id="filebeat">Filebeat 配置结构</h3>
+<p>典型的 <code>filebeat.yml</code> 配置结构主要包含以下几个部分：
+- <strong>Inputs（输入）</strong>：定义日志来源。
+- <strong>Outputs（输出）</strong>：定义日志的输出目标。
+- <strong>Processors（处理器）</strong>：日志的预处理配置。
+- <strong>Logging（日志记录）</strong>：Filebeat 自身的日志记录设置。
+- <strong>Setup（初始化）</strong>：设置 Filebeat 的索引模板、仪表板等。</p>
+<h3 id="1-inputs">1. Inputs（输入）</h3>
+<p><code>filebeat.inputs</code> 配置项用于定义 Filebeat 从哪些源收集日志数据。</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">filebeat.inputs</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">log</span>
+<span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">paths</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/log/mysql/mysql.log</span><span class="w">  </span><span class="c1"># 指定日志文件路径</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/log/mysql/error.log</span>
+<span class="w">    </span><span class="nt">encoding</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">utf-8</span><span class="w">  </span><span class="c1"># 设置日志文件的编码类型</span>
+<span class="w">    </span><span class="nt">exclude_lines</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;^#&#39;</span><span class="p p-Indicator">]</span><span class="w">  </span><span class="c1"># 排除匹配此正则的行（如以 # 开头的注释）</span>
+<span class="w">    </span><span class="nt">include_lines</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;^ERR&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;^WARN&#39;</span><span class="p p-Indicator">]</span><span class="w">  </span><span class="c1"># 仅包含匹配此正则的行</span>
+<span class="w">    </span><span class="nt">exclude_files</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;\.gz$&#39;</span><span class="p p-Indicator">]</span><span class="w">  </span><span class="c1"># 排除匹配此正则的文件（如 .gz 压缩文件）</span>
+<span class="w">    </span><span class="nt">scan_frequency</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10s</span><span class="w">  </span><span class="c1"># 每隔 10 秒检查新日志</span>
+<span class="w">    </span><span class="nt">multiline.pattern</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;^ERROR&#39;</span><span class="w">  </span><span class="c1"># 处理多行日志，匹配行的开头为 ERROR</span>
+<span class="w">    </span><span class="nt">multiline.negate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">  </span><span class="c1"># 启用非匹配模式</span>
+<span class="w">    </span><span class="nt">multiline.match</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">after</span><span class="w">  </span><span class="c1"># 将多行日志合并为一条日志</span>
+</code></pre></div>
+
+<h4 id="_1">关键配置说明：</h4>
 <ul>
-<li><strong>直接发送到 Elasticsearch</strong>：Filebeat 可以直接将日志数据发送到 Elasticsearch，以供实时查询、分析和可视化。</li>
-<li><strong>通过 Logstash 处理后发送到 Elasticsearch</strong>：使用 Logstash 处理数据时，可以将 Filebeat 日志数据发送到 Logstash 进行进一步的过滤、处理和增强，然后再传递给 Elasticsearch。</li>
-<li><strong>通过模块进行日志解析</strong>：Filebeat 包含大量预配置模块，能够自动解析特定应用程序的日志。</li>
+<li><strong>paths</strong>：日志文件的路径，可以使用通配符，如 <code>/var/log/*.log</code>。</li>
+<li><strong>exclude_lines/include_lines</strong>：通过正则表达式排除或包含特定日志行。</li>
+<li><strong>multiline</strong>：用于处理多行日志，例如 Java 异常堆栈，或复杂的错误日志。</li>
+<li><strong>scan_frequency</strong>：控制 Filebeat 扫描新日志的频率。</li>
 </ul>
-<hr />
-<h2 id="2-filebeat">2. Filebeat 安装与启动</h2>
-<p>Filebeat 支持多种操作系统，下面将以 CentOS 和 Ubuntu 为例，介绍如何安装和启动 Filebeat。</p>
-<h3 id="21-centos-filebeat">2.1 在 CentOS 上安装 Filebeat</h3>
-<div class="codehilite"><pre><span></span><code><span class="c1"># 导入 Elastic 公钥</span>
-sudo<span class="w"> </span>rpm<span class="w"> </span>--import<span class="w"> </span>https://artifacts.elastic.co/GPG-KEY-elasticsearch
-
-<span class="c1"># 创建 Filebeat YUM 仓库</span>
-sudo<span class="w"> </span>tee<span class="w"> </span>/etc/yum.repos.d/elastic.repo<span class="w"> </span><span class="s">&lt;&lt;EOF</span>
-<span class="s">[elastic-8.x]</span>
-<span class="s">name=Elastic repository for 8.x packages</span>
-<span class="s">baseurl=https://artifacts.elastic.co/packages/8.x/yum</span>
-<span class="s">gpgcheck=1</span>
-<span class="s">gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch</span>
-<span class="s">enabled=1</span>
-<span class="s">autorefresh=1</span>
-<span class="s">type=rpm-md</span>
-<span class="s">EOF</span>
-
-<span class="c1"># 安装 Filebeat</span>
-sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>filebeat
-</code></pre></div>
-
-<h3 id="22-ubuntu-filebeat">2.2 在 Ubuntu 上安装 Filebeat</h3>
-<div class="codehilite"><pre><span></span><code><span class="c1"># 导入 Elastic 公钥</span>
-curl<span class="w"> </span>-fsSL<span class="w"> </span>https://artifacts.elastic.co/GPG-KEY-elasticsearch<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span>-o<span class="w"> </span>/usr/share/keyrings/elastic-archive-keyring.gpg
-
-<span class="c1"># 添加 Elastic 源</span>
-<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb [signed-by=/usr/share/keyrings/elastic-archive-keyring.gpg] https://artifacts.elastic.co/packages/8.x/apt stable main&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/elastic-8.x.list
-
-<span class="c1"># 安装 Filebeat</span>
-sudo<span class="w"> </span>apt-get<span class="w"> </span>update
-sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>filebeat
-</code></pre></div>
-
-<h3 id="23-filebeat">2.3 启动和启用 Filebeat 服务</h3>
-<div class="codehilite"><pre><span></span><code><span class="c1"># 启动 Filebeat 服务</span>
-sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>filebeat
-
-<span class="c1"># 设置 Filebeat 开机自动启动</span>
-sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>filebeat
-</code></pre></div>
-
-<hr />
-<h2 id="3-filebeat">3. Filebeat 配置详解</h2>
-<p>Filebeat 的配置文件是 <code>filebeat.yml</code>，位于 <code>/etc/filebeat/</code> 目录。Filebeat 的主要配置包括 <strong>输入源（inputs）</strong> 和 <strong>输出目标（outputs）</strong>。</p>
-<h3 id="31-inputs">3.1 输入源配置（inputs）</h3>
-<p>Filebeat 支持从多种类型的日志文件、系统日志、服务日志中收集日志数据。常见的输入源类型包括文件、系统日志等。</p>
-<h4 id="_2">示例：收集日志文件</h4>
-<div class="codehilite"><pre><span></span><code><span class="nt">filebeat.inputs</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">log</span>
-<span class="w">  </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="w">  </span><span class="nt">paths</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/log/*.log</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/path/to/custom/logs/*.log</span>
-</code></pre></div>
-
-<h4 id="_3">示例：收集系统日志</h4>
-<div class="codehilite"><pre><span></span><code><span class="nt">filebeat.inputs</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">syslog</span>
-<span class="w">  </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="w">  </span><span class="nt">protocol.udp</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;0.0.0.0:514&quot;</span>
-</code></pre></div>
-
-<h3 id="32-outputs">3.2 输出目标配置（outputs）</h3>
-<p>Filebeat 支持多种输出方式，可以将数据发送到 Elasticsearch、Logstash、Kafka 或其他系统。最常见的输出目标是 <strong>Elasticsearch</strong> 和 <strong>Logstash</strong>。</p>
-<h4 id="elasticsearch">直接输出到 Elasticsearch</h4>
+<h3 id="2-outputs">2. Outputs（输出）</h3>
+<p>Filebeat 支持多种输出目标，包括 Elasticsearch、Logstash、Kafka 等。你需要根据具体场景配置。</p>
+<h4 id="elasticsearch">输出到 Elasticsearch：</h4>
 <div class="codehilite"><pre><span></span><code><span class="nt">output.elasticsearch</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;http://localhost:9200&quot;</span><span class="p p-Indicator">]</span><span class="w">  </span><span class="c1"># Elasticsearch 地址</span>
+<span class="w">  </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;elastic&quot;</span><span class="w">  </span><span class="c1"># Elasticsearch 用户名</span>
+<span class="w">  </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;changeme&quot;</span><span class="w">  </span><span class="c1"># Elasticsearch 密码</span>
+<span class="w">  </span><span class="nt">index</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;filebeat-%{[agent.version]}-%{+yyyy.MM.dd}&quot;</span><span class="w">  </span><span class="c1"># 索引的命名格式</span>
+<span class="w">  </span><span class="nt">pipeline</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my-pipeline&quot;</span><span class="w">  </span><span class="c1"># 指定 Ingest pipeline 来处理日志</span>
+</code></pre></div>
+
+<h4 id="logstash">输出到 Logstash：</h4>
+<div class="codehilite"><pre><span></span><code><span class="nt">output.logstash</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;localhost:5044&quot;</span><span class="p p-Indicator">]</span><span class="w">  </span><span class="c1"># Logstash 地址</span>
+<span class="w">  </span><span class="nt">ssl.enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">  </span><span class="c1"># 启用 SSL 加密传输</span>
+<span class="w">  </span><span class="nt">ssl.certificate_authorities</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;/etc/pki/tls/certs/logstash-ca.pem&quot;</span><span class="p p-Indicator">]</span><span class="w">  </span><span class="c1"># SSL 证书路径</span>
+</code></pre></div>
+
+<h4 id="kafka">输出到 Kafka：</h4>
+<div class="codehilite"><pre><span></span><code><span class="nt">output.kafka</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;kafka:9092&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="nt">topic</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;filebeat&quot;</span><span class="w">  </span><span class="c1"># Kafka 主题</span>
+<span class="w">  </span><span class="nt">partition.round_robin</span><span class="p">:</span><span class="w">  </span><span class="c1"># 使用轮询的方式发送到分区</span>
+<span class="w">    </span><span class="nt">reachable_only</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">required_acks</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w">  </span><span class="c1"># Kafka 应答级别</span>
+</code></pre></div>
+
+<h4 id="_2">关键配置说明：</h4>
+<ul>
+<li><strong>output.elasticsearch</strong>：直接将日志发送到 Elasticsearch，常用于无需额外处理的场景。</li>
+<li><strong>output.logstash</strong>：将日志发送到 Logstash 进行进一步处理，然后由 Logstash 发往 Elasticsearch 或其他系统。</li>
+<li><strong>output.kafka</strong>：日志发送到 Kafka 队列，适用于分布式系统。</li>
+</ul>
+<h3 id="3-processors">3. Processors（处理器）</h3>
+<p><code>processors</code> 用于对日志进行预处理，处理器可以按顺序应用于每条日志事件。</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">processors</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">add_fields</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&#39;</span><span class="w">  </span><span class="c1"># 添加新字段到日志中</span>
+<span class="w">      </span><span class="nt">fields</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">log_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql</span><span class="w">  </span><span class="c1"># 设置 log_type 字段为 &quot;mysql&quot;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">drop_fields</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">fields</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;agent&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;host&quot;</span><span class="p p-Indicator">]</span><span class="w">  </span><span class="c1"># 删除不需要的字段</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">rename</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">fields</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">from</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;message&quot;</span>
+<span class="w">          </span><span class="nt">to</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mysql_log&quot;</span><span class="w">  </span><span class="c1"># 重命名字段</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">dissect</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">tokenizer</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;%{timestamp}</span><span class="nv"> </span><span class="s">%{loglevel}</span><span class="nv"> </span><span class="s">%{message}&quot;</span><span class="w">  </span><span class="c1"># 使用 dissect 解析字段</span>
+<span class="w">      </span><span class="nt">field</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;message&quot;</span>
+<span class="w">      </span><span class="nt">target_prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;parsed&quot;</span><span class="w">  </span><span class="c1"># 将解析的字段放入 &quot;parsed&quot; 下</span>
+</code></pre></div>
+
+<h4 id="_3">关键配置说明：</h4>
+<ul>
+<li><strong>add_fields</strong>：为每条日志添加自定义字段，便于后续查询或过滤。</li>
+<li><strong>drop_fields</strong>：删除不需要的字段，减少数据量。</li>
+<li><strong>dissect</strong>：通过简单的模式匹配来提取字段，适合结构化日志。</li>
+</ul>
+<h3 id="4-logging">4. Logging（日志记录）</h3>
+<p>控制 Filebeat 自身的日志记录，帮助调试和排错。</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">logging.level</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">info</span><span class="w">  </span><span class="c1"># 日志级别，可以是 debug, info, warning, error</span>
+<span class="nt">logging.to_files</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">  </span><span class="c1"># 是否写入文件</span>
+<span class="nt">logging.files</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/log/filebeat</span><span class="w">  </span><span class="c1"># Filebeat 日志文件的存放路径</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">filebeat.log</span><span class="w">  </span><span class="c1"># 日志文件名</span>
+<span class="w">  </span><span class="nt">keepfiles</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7</span><span class="w">  </span><span class="c1"># 保留的日志文件数量</span>
+<span class="w">  </span><span class="nt">permissions</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0644</span><span class="w">  </span><span class="c1"># 文件权限</span>
+</code></pre></div>
+
+<h4 id="_4">关键配置说明：</h4>
+<ul>
+<li><strong>logging.level</strong>：日志级别，调试时建议使用 <code>debug</code> 级别，以便获取更多详细信息。</li>
+<li><strong>logging.files</strong>：定义日志的保存路径和文件名，默认日志存储在标准输出。</li>
+</ul>
+<h3 id="5-setup">5. Setup（初始化）</h3>
+<p><code>setup</code> 部分用于初始化 Filebeat 在 Elasticsearch 中的索引模板、仪表板等。</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">setup.kibana</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;localhost:5601&quot;</span><span class="w">  </span><span class="c1"># Kibana 地址</span>
+
+<span class="nt">setup.template.settings</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">index.number_of_shards</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w">  </span><span class="c1"># 设置索引的分片数量</span>
+<span class="w">  </span><span class="nt">index.codec</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">best_compression</span><span class="w">  </span><span class="c1"># 使用最佳压缩方式</span>
+<span class="nt">setup.dashboards.enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">  </span><span class="c1"># 是否自动加载 Filebeat 仪表板</span>
+</code></pre></div>
+
+<h4 id="_5">关键配置说明：</h4>
+<ul>
+<li><strong>setup.kibana</strong>：用于将 Filebeat 与 Kibana 集成。</li>
+<li><strong>setup.template</strong>：用于设置 Elasticsearch 索引模板的参数。</li>
+<li><strong>setup.dashboards</strong>：是否自动导入 Filebeat 提供的 Kibana 仪表板。</li>
+</ul>
+<h3 id="6">6. 示例配置</h3>
+<p>以下是一个完整的 <code>filebeat.yml</code> 示例，它从 MySQL 日志中收集日志，处理后发送到 Elasticsearch：</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">filebeat.inputs</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">log</span>
+<span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">paths</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/log/mysql/mysql.log</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/log/mysql/error.log</span>
+<span class="w">    </span><span class="nt">exclude_lines</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;^#&#39;</span><span class="p p-Indicator">]</span><span class="w">  </span><span class="c1"># 排除注释行</span>
+<span class="w">    </span><span class="nt">multiline.pattern</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;^ERROR&#39;</span>
+<span class="w">    </span><span class="nt">multiline.negate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">multiline.match</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">after</span>
+
+<span class="nt">processors</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">add_fields</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&#39;</span>
+<span class="w">      </span><span class="nt">fields</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">log_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql</span>
+
+<span class="nt">output.elasticsearch</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;http://localhost:9200&quot;</span><span class="p p-Indicator">]</span>
 <span class="w">  </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;elastic&quot;</span>
-<span class="w">  </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;your_password&quot;</span>
+<span class="w">  </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;changeme&quot;</span>
+<span class="w">  </span><span class="nt">index</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;filebeat-mysql-%{+yyyy.MM.dd}&quot;</span>
+
+<span class="nt">setup.kibana</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;localhost:5601&quot;</span>
+
+<span class="nt">setup.template.settings</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">index.number_of_shards</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 </code></pre></div>
 
-<h4 id="logstash">输出到 Logstash</h4>
-<div class="codehilite"><pre><span></span><code><span class="nt">output.logstash</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;localhost:5044&quot;</span><span class="p p-Indicator">]</span>
-</code></pre></div>
-
-<hr />
-<h2 id="4-filebeat">4. Filebeat 模块化配置</h2>
-<p>Filebeat 提供了许多预配置的模块，支持采集和解析不同类型的服务日志，如 Nginx、Apache、MySQL 等。</p>
-<h3 id="41">4.1 启用模块</h3>
-<p>使用以下命令可以启用一个 Filebeat 模块：</p>
-<div class="codehilite"><pre><span></span><code>sudo<span class="w"> </span>filebeat<span class="w"> </span>modules<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>nginx
-</code></pre></div>
-
-<h3 id="42">4.2 查看所有可用模块</h3>
-<div class="codehilite"><pre><span></span><code>sudo<span class="w"> </span>filebeat<span class="w"> </span>modules<span class="w"> </span>list
-</code></pre></div>
-
-<h3 id="43">4.3 模块配置文件</h3>
-<p>模块的配置文件位于 <code>/etc/filebeat/modules.d/</code> 目录下。例如，Nginx 模块的配置文件是 <code>nginx.yml</code>，你可以修改此文件来调整采集和解析的行为。</p>
-<hr />
-<h2 id="5-filebeat-logstashelasticsearch">5. Filebeat 与 Logstash/Elasticsearch 集成</h2>
-<p>Filebeat 通常与 Elasticsearch 或 Logstash 一起使用，提供强大的日志处理能力。</p>
-<h3 id="51-logstash">5.1 通过 Logstash 处理日志</h3>
-<p>在 Logstash 中配置 <code>beats</code> 插件，监听来自 Filebeat 的日志：</p>
-<div class="codehilite"><pre><span></span><code>input<span class="w"> </span><span class="o">{</span>
-<span class="w">  </span>beats<span class="w"> </span><span class="o">{</span>
-<span class="w">    </span><span class="nv">port</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span><span class="m">5044</span>
-<span class="w">  </span><span class="o">}</span>
-<span class="o">}</span>
-
-output<span class="w"> </span><span class="o">{</span>
-<span class="w">  </span>elasticsearch<span class="w"> </span><span class="o">{</span>
-<span class="w">    </span><span class="nv">hosts</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span><span class="o">[</span><span class="s2">&quot;http://localhost:9200&quot;</span><span class="o">]</span>
-<span class="w">    </span><span class="nv">index</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span><span class="s2">&quot;filebeat-%{+YYYY.MM.dd}&quot;</span>
-<span class="w">  </span><span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div>
-
-<h3 id="52-filebeat-logstash">5.2 配置 Filebeat 输出到 Logstash</h3>
-<p>在 <code>filebeat.yml</code> 中配置输出到 Logstash：</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">output.logstash</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;localhost:5044&quot;</span><span class="p p-Indicator">]</span>
-</code></pre></div>
-
-<hr />
-<h2 id="6-filebeat">6. Filebeat 高级功能</h2>
-<h3 id="61">6.1 多输入与多输出</h3>
-<p>你可以在 <code>filebeat.inputs</code> 中定义多个输入源，并且可以同时输出到多个目标（例如，输出到 Elasticsearch 和 Logstash）。</p>
-<h4 id="_4">多输入源示例</h4>
-<div class="codehilite"><pre><span></span><code><span class="nt">filebeat.inputs</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">log</span>
-<span class="w">  </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="w">  </span><span class="nt">paths</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/log/nginx/access.log</span>
-
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">log</span>
-<span class="w">  </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="w">  </span><span class="nt">paths</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/log/nginx/error.log</span>
-</code></pre></div>
-
-<h4 id="_5">多输出源示例</h4>
-<div class="codehilite"><pre><span></span><code><span class="nt">output.elasticsearch</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;http://localhost:9200&quot;</span><span class="p p-Indicator">]</span>
-
-<span class="nt">output.logstash</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;localhost:5044&quot;</span><span class="p p-Indicator">]</span>
-</code></pre></div>
-
-<h3 id="62">6.2 自定义字段与标签</h3>
-<p>你可以为每个输入源添加自定义字段，便于在 Elasticsearch 中进行筛选和查询。</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">filebeat.inputs</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">log</span>
-<span class="w">  </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="w">  </span><span class="nt">paths</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/log/nginx/access.log</span>
-<span class="w">  </span><span class="nt">fields</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">production</span>
-<span class="w">    </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span>
-</code></pre></div>
-
-<hr />
-<h2 id="7-filebeat">7. Filebeat 性能优化</h2>
-<p>Filebeat 在处理大量日志时，需要对性能进行优化：</p>
-<ul>
-<li><strong>批量发送</strong>：通过 <code>bulk_max_size</code> 设置批量发送日志的数量。</li>
-<li><strong>队列大小</strong>：通过 <code>queue.mem</code> 设置内存队列大小，避免日志丢失。</li>
-<li><strong>数据压缩</strong>：启用 <code>compression_level</code> 减少带宽使用。</li>
-</ul>
-<div class="codehilite"><pre><span></span><code><span class="nt">output.elasticsearch</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;http://localhost:9200&quot;</span><span class="p p-Indicator">]</span>
-<span class="w">  </span><span class="nt">bulk_max_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1024</span>
-<span class="w">  </span><span class="nt">compression_level</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
-</code></pre></div>
-
-<hr />
-<h2 id="8-filebeat">8. Filebeat 常见问题排查</h2>
-<h3 id="81-filebeat">8.1 查看 Filebeat 日志</h3>
-<p>查看 Filebeat 的运行日志以排查问题：</p>
-<div class="codehilite"><pre><span></span><code>sudo<span class="w"> </span>journalctl<span class="w"> </span>-u<span class="w"> </span>filebeat
-</code></pre></div>
-
-<p>或查看具体的日志文件：</p>
-<div class="codehilite"><pre><span></span><code>sudo<span class="w"> </span>tail<span class="w"> </span>-f<span class="w"> </span>/var/log/filebeat/filebeat.log
-</code></pre></div>
-
-<h3 id="82">8.2 测试配置文件</h3>
-<p>使用命令检查 <code>filebeat.yml</code> 配置文件是否正确：</p>
-<div class="codehilite"><pre><span></span><code>sudo<span class="w"> </span>filebeat<span class="w"> </span><span class="nb">test</span><span class="w"> </span>config
-</code></pre></div>
-
-<p>测试 Filebeat 是否能够连接到输出目标：</p>
-<div class="codehilite"><pre><span></span><code>sudo<span class="w"> </span>filebeat<span class="w"> </span><span class="nb">test</span><span class="w"> </span>output
-</code></pre></div>
-
-<hr />
-<h2 id="9-filebeat">9. Filebeat 实战案例</h2>
-<h3 id="91-filebeat-elasticsearch-web">9.1 集成 Filebeat 和 Elasticsearch，收集 Web 日志</h3>
-<p>步骤：
-1. 配置 Filebeat 采集 Nginx 日志。
-2. 启用 Nginx 模块。
-3. 配置输出到 Elasticsearch。
-4. 在 Kibana 中查看收集到的日志并创建仪表板。</p>
-<h3 id="92-filebeat-logstash">9.2 Filebeat 和 Logstash 集成日志过滤</h3>
-<p>步骤：
-1. Filebeat 将日志发送到 Logstash。
-2. 在 Logstash 中使用 <code>grok</code> 过滤和解析日志。
-3. 将处理后的日志发送到 Elasticsearch。</p>
-<hr />
-<p>通过本文档的学习，你应该已经掌握了 Filebeat 的基本使用和配置，了解了如何与 Logstash 和 Elasticsearch 集成以及进行一些性能优化。在实际场景中，Filebeat 可以灵活应用于不同的日志采集需求，为你的系统和应用提供强大的日志分析能力。</p>
+<h3 id="_6">总结</h3>
+<p><code>filebeat.yml</code> 配置文件具有很强的灵活性，能够根据不同的日志源和处理需求进行定制。通过定义不同的输入、处理器和输出，可以满足多种日志采集场景。</p>
 
 
 

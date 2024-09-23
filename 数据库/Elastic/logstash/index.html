@@ -24,7 +24,7 @@
     
     
       
-        <title>LogStash 教程 - IT-手册</title>
+        <title>logstash 配置文件 - IT-手册</title>
       
     
     
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              LogStash 教程
+              logstash 配置文件
             
           </span>
         </div>
@@ -2003,7 +2003,7 @@
         
   
   <span class="md-ellipsis">
-    filebeat 教程
+    filebeat.yml 配置文件
   </span>
   
 
@@ -2054,7 +2054,7 @@
           
   
   <span class="md-ellipsis">
-    LogStash 教程
+    logstash 配置文件
   </span>
   
 
@@ -2065,7 +2065,7 @@
         
   
   <span class="md-ellipsis">
-    LogStash 教程
+    logstash 配置文件
   </span>
   
 
@@ -2087,37 +2087,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-logstash" class="md-nav__link">
+  <a href="#1-input" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Logstash 架构概览
+      1. Input（输入）部分详解
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-logstash" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Logstash 安装
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. Logstash 安装">
+    <nav class="md-nav" aria-label="1. Input（输入）部分详解">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-linux" class="md-nav__link">
+  <a href="#1-filebeat" class="md-nav__link">
     <span class="md-ellipsis">
-      2.1 在 Linux 上安装
+      示例 1：接收来自 Filebeat 的数据
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#22-windows" class="md-nav__link">
+  <a href="#2-tcp" class="md-nav__link">
     <span class="md-ellipsis">
-      2.2 在 Windows 上安装
+      示例 2：从 TCP 端口接收数据
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例 3：从标准输入接收数据（用于测试）
     </span>
   </a>
   
@@ -2129,188 +2129,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-logstash" class="md-nav__link">
+  <a href="#2-filter" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Logstash 配置详解
+      2. Filter（过滤器）部分详解
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. Logstash 配置详解">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.1 基本配置结构
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32-input" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.2 Input 插件
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33-filter" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.3 Filter 插件
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3.3 Filter 插件">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#331-grok" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.3.1 Grok 过滤器
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#332-mutate" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.3.2 Mutate 过滤器
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#333-date" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.3.3 Date 过滤器
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#34-output" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.4 Output 插件
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3.4 Output 插件">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#341-elasticsearch" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.4.1 输出到 Elasticsearch
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#342-stdout" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.4.2 输出到控制台（stdout）
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-logstash-apache" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Logstash 实例：处理 Apache 日志
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-logstash" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Logstash 管道管理与性能优化
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="5. Logstash 管道管理与性能优化">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#51" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.1 多管道配置
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#52" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.2 性能优化
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-logstash" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Logstash 可视化与监控
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#filter" class="md-nav__link">
-    <span class="md-ellipsis">
-      Filter 详解
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Filter 详解">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#logstash-filter" class="md-nav__link">
-    <span class="md-ellipsis">
-      Logstash Filter 插件类别及常用插件
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Logstash Filter 插件类别及常用插件">
+    <nav class="md-nav" aria-label="2. Filter（过滤器）部分详解">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#1-grok" class="md-nav__link">
     <span class="md-ellipsis">
-      1. grok 插件
+      示例 1：使用 grok 提取日志信息
     </span>
   </a>
   
@@ -2319,7 +2150,7 @@
           <li class="md-nav__item">
   <a href="#2-mutate" class="md-nav__link">
     <span class="md-ellipsis">
-      2. mutate 插件
+      示例 2：使用 mutate 修改字段
     </span>
   </a>
   
@@ -2328,52 +2159,16 @@
           <li class="md-nav__item">
   <a href="#3-date" class="md-nav__link">
     <span class="md-ellipsis">
-      3. date 插件
+      示例 3：使用 date 解析时间戳
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-geoip" class="md-nav__link">
+  <a href="#4" class="md-nav__link">
     <span class="md-ellipsis">
-      4. geoip 插件
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-json" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. json 插件
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-kv" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. kv 插件
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-split" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. split 插件
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#8-drop" class="md-nav__link">
-    <span class="md-ellipsis">
-      8. drop 插件
+      示例 4：处理多行日志
     </span>
   </a>
   
@@ -2383,36 +2178,91 @@
     </nav>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#3-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Output（输出）部分详解
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Output（输出）部分详解">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#logstash-filter_1" class="md-nav__link">
+  <a href="#1-elasticsearch" class="md-nav__link">
     <span class="md-ellipsis">
-      Logstash Filter 的基本结构
+      示例 1：输出到 Elasticsearch
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例 2：输出到文件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例 3：输出到标准输出（用于调试）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-kafka" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例 4：输出到 Kafka
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-logstash" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Logstash 配置文件完整示例
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      综合示例
+      配置文件详解：
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 多输入、多输出示例
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       总结
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -4956,37 +4806,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-logstash" class="md-nav__link">
+  <a href="#1-input" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Logstash 架构概览
+      1. Input（输入）部分详解
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-logstash" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Logstash 安装
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. Logstash 安装">
+    <nav class="md-nav" aria-label="1. Input（输入）部分详解">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-linux" class="md-nav__link">
+  <a href="#1-filebeat" class="md-nav__link">
     <span class="md-ellipsis">
-      2.1 在 Linux 上安装
+      示例 1：接收来自 Filebeat 的数据
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#22-windows" class="md-nav__link">
+  <a href="#2-tcp" class="md-nav__link">
     <span class="md-ellipsis">
-      2.2 在 Windows 上安装
+      示例 2：从 TCP 端口接收数据
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例 3：从标准输入接收数据（用于测试）
     </span>
   </a>
   
@@ -4998,188 +4848,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-logstash" class="md-nav__link">
+  <a href="#2-filter" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Logstash 配置详解
+      2. Filter（过滤器）部分详解
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. Logstash 配置详解">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.1 基本配置结构
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32-input" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.2 Input 插件
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33-filter" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.3 Filter 插件
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3.3 Filter 插件">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#331-grok" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.3.1 Grok 过滤器
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#332-mutate" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.3.2 Mutate 过滤器
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#333-date" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.3.3 Date 过滤器
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#34-output" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.4 Output 插件
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3.4 Output 插件">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#341-elasticsearch" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.4.1 输出到 Elasticsearch
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#342-stdout" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.4.2 输出到控制台（stdout）
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-logstash-apache" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Logstash 实例：处理 Apache 日志
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-logstash" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Logstash 管道管理与性能优化
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="5. Logstash 管道管理与性能优化">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#51" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.1 多管道配置
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#52" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.2 性能优化
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-logstash" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Logstash 可视化与监控
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#filter" class="md-nav__link">
-    <span class="md-ellipsis">
-      Filter 详解
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Filter 详解">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#logstash-filter" class="md-nav__link">
-    <span class="md-ellipsis">
-      Logstash Filter 插件类别及常用插件
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Logstash Filter 插件类别及常用插件">
+    <nav class="md-nav" aria-label="2. Filter（过滤器）部分详解">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#1-grok" class="md-nav__link">
     <span class="md-ellipsis">
-      1. grok 插件
+      示例 1：使用 grok 提取日志信息
     </span>
   </a>
   
@@ -5188,7 +4869,7 @@
           <li class="md-nav__item">
   <a href="#2-mutate" class="md-nav__link">
     <span class="md-ellipsis">
-      2. mutate 插件
+      示例 2：使用 mutate 修改字段
     </span>
   </a>
   
@@ -5197,52 +4878,16 @@
           <li class="md-nav__item">
   <a href="#3-date" class="md-nav__link">
     <span class="md-ellipsis">
-      3. date 插件
+      示例 3：使用 date 解析时间戳
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-geoip" class="md-nav__link">
+  <a href="#4" class="md-nav__link">
     <span class="md-ellipsis">
-      4. geoip 插件
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-json" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. json 插件
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-kv" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. kv 插件
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-split" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. split 插件
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#8-drop" class="md-nav__link">
-    <span class="md-ellipsis">
-      8. drop 插件
+      示例 4：处理多行日志
     </span>
   </a>
   
@@ -5252,36 +4897,91 @@
     </nav>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#3-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Output（输出）部分详解
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Output（输出）部分详解">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#logstash-filter_1" class="md-nav__link">
+  <a href="#1-elasticsearch" class="md-nav__link">
     <span class="md-ellipsis">
-      Logstash Filter 的基本结构
+      示例 1：输出到 Elasticsearch
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例 2：输出到文件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例 3：输出到标准输出（用于调试）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-kafka" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例 4：输出到 Kafka
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-logstash" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Logstash 配置文件完整示例
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      综合示例
+      配置文件详解：
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 多输入、多输出示例
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       总结
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -5300,389 +5000,217 @@
                   
 
 
-<h1 id="logstash">LogStash 教程</h1>
-<p><strong>Logstash</strong> 是 Elastic Stack 中的一个核心组件，用于实时的数据收集、转换和存储。Logstash 可以从各种来源（如日志文件、数据库、消息队列等）收集数据，对数据进行过滤、转换，然后将数据发送到多个目的地（如 Elasticsearch、Kafka、文件等）。Logstash 的强大之处在于它的灵活性，支持复杂的数据处理流程和丰富的插件系统。</p>
-<p>本文将详细介绍 Logstash 的功能、架构、使用方法以及常见配置示例。</p>
-<hr />
-<h2 id="1-logstash">1. <strong>Logstash 架构概览</strong></h2>
-<p>Logstash 的工作流程可以分为三个阶段：</p>
+<h1 id="logstash">logstash 配置文件</h1>
+<p>Logstash 配置文件是用来定义数据的<strong>输入（Input）</strong>、<strong>过滤（Filter）</strong>和<strong>输出（Output）</strong>的。它通常以 <code>.conf</code> 结尾，具有如下三个核心部分：</p>
 <ul>
-<li><strong>Input</strong>：定义数据源，Logstash 从这些数据源读取数据。</li>
-<li><strong>Filter</strong>：对数据进行处理、过滤或转换。</li>
-<li><strong>Output</strong>：将处理后的数据发送到目的地，如 Elasticsearch、文件、数据库等。</li>
+<li><strong>Input</strong>：指定数据的来源。</li>
+<li><strong>Filter</strong>：对数据进行处理和过滤。</li>
+<li><strong>Output</strong>：指定数据的去向，如 Elasticsearch、文件或其他目标。</li>
 </ul>
-<p>Logstash 还支持 <code>codec</code> 插件，用于处理数据的序列化与反序列化。它允许在数据进入和输出时，对数据进行格式转换，例如 JSON、CSV 等格式。</p>
-<hr />
-<h2 id="2-logstash">2. <strong>Logstash 安装</strong></h2>
-<p>Logstash 可以在各种操作系统上安装，以下介绍在 Linux 和 Windows 平台上的安装方法。</p>
-<h3 id="21-linux">2.1 <strong>在 Linux 上安装</strong></h3>
-<p>以 Ubuntu 为例：</p>
-<ol>
-<li>添加 Elastic APT 仓库：</li>
-</ol>
-<div class="codehilite"><pre><span></span><code><span class="w">   </span>curl<span class="w"> </span>-L<span class="w"> </span>-O<span class="w"> </span>https://artifacts.elastic.co/downloads/logstash/logstash-8.10.0.deb
-<span class="w">   </span>sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>logstash-8.10.0.deb
+<p>一个典型的 Logstash 配置文件结构如下：</p>
+<div class="codehilite"><pre><span></span><code>input {
+  # 定义输入
+}
+
+filter {
+  # 定义过滤和处理
+}
+
+output {
+  # 定义输出
+}
 </code></pre></div>
 
-<ol>
-<li>安装 Logstash：</li>
-</ol>
-<div class="codehilite"><pre><span></span><code><span class="w">   </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
-<span class="w">   </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>logstash
+<p>接下来我们详细讲解这三部分的配置，并结合具体示例来说明如何配置 Logstash。</p>
+<h3 id="1-input">1. Input（输入）部分详解</h3>
+<p><code>input</code> 定义了 Logstash 从哪些地方获取数据。常见的输入插件有：<code>beats</code>（接收来自 Filebeat 的数据）、<code>tcp</code>、<code>http</code>、<code>stdin</code> 等。</p>
+<h4 id="1-filebeat">示例 1：接收来自 Filebeat 的数据</h4>
+<div class="codehilite"><pre><span></span><code><span class="n">input</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">beats</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">port</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">5044</span><span class="w">  </span><span class="c1"># 接收来自 Filebeat 的数据，默认端口是 5044</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
 
-<ol>
-<li>启动 Logstash 服务：</li>
-</ol>
-<div class="codehilite"><pre><span></span><code><span class="w">   </span>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>logstash
-<span class="w">   </span>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>logstash
+<h4 id="2-tcp">示例 2：从 TCP 端口接收数据</h4>
+<div class="codehilite"><pre><span></span><code><span class="n">input</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">tcp</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">port</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">5000</span><span class="w">  </span><span class="c1"># 从 TCP 5000 端口接收数据</span>
+<span class="w">    </span><span class="n">codec</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">json_lines</span><span class="w">  </span><span class="c1"># 数据格式为 JSON，每行一个对象</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
 
-<h3 id="22-windows">2.2 <strong>在 Windows 上安装</strong></h3>
-<ol>
-<li>下载 Logstash 安装包：<a href="https://www.elastic.co/downloads/logstash">Logstash 下载页面</a></li>
-<li>解压文件，并进入 Logstash 目录。</li>
-<li>使用命令行启动 Logstash：</li>
-</ol>
-<div class="codehilite"><pre><span></span><code><span class="w">   </span>bin<span class="se">\l</span>ogstash.bat<span class="w"> </span>-f<span class="w"> </span>logstash.conf
+<h4 id="3">示例 3：从标准输入接收数据（用于测试）</h4>
+<div class="codehilite"><pre><span></span><code><span class="n">input</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">stdin</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
 
-<hr />
-<h2 id="3-logstash">3. <strong>Logstash 配置详解</strong></h2>
-<p>Logstash 的配置文件是基于管道（Pipeline）的。一个典型的 Logstash 配置文件包含三个部分：<code>input</code>（输入）、<code>filter</code>（过滤）和 <code>output</code>（输出）。</p>
-<h3 id="31">3.1 <strong>基本配置结构</strong></h3>
-<p>Logstash 的配置文件是纯文本文件，通常以 <code>.conf</code> 为后缀，每个配置文件可以定义多个 <code>input</code>、<code>filter</code> 和 <code>output</code> 块。下面是一个简单的 Logstash 配置示例：</p>
-<div class="codehilite"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">input {</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">beats {</span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">port =&gt; 5044</span><span class="w">  </span><span class="c1"># 接收来自 Filebeat 的日志</span>
-<span class="w">  </span><span class="err">}</span>
-<span class="err">}</span>
-
-<span class="l l-Scalar l-Scalar-Plain">filter {</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">grok {</span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">match =&gt; { &quot;message&quot; =&gt; &quot;%{COMBINEDAPACHELOG}&quot; }</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">}</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">date {</span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">match =&gt; [ &quot;timestamp&quot;, &quot;dd/MMM/yyyy:HH:mm:ss Z&quot; ]</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">}</span>
-<span class="l l-Scalar l-Scalar-Plain">}</span>
-
-<span class="l l-Scalar l-Scalar-Plain">output {</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">elasticsearch {</span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">hosts =&gt; [&quot;localhost:9200&quot;]</span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">index =&gt; &quot;logs-%{+YYYY.MM.dd}&quot;</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">}</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">stdout {</span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">codec =&gt; rubydebug</span><span class="w">  </span><span class="c1"># 在终端打印处理后的数据，用于调试</span>
-<span class="w">  </span><span class="err">}</span>
-<span class="err">}</span>
-</code></pre></div>
-
-<h3 id="32-input">3.2 <strong>Input 插件</strong></h3>
-<p>Logstash 支持多种数据源的输入，通过 <code>input</code> 插件定义数据采集方式。</p>
-<p>常用的 <code>input</code> 插件包括：</p>
-<ul>
-<li><strong>file</strong>：从文件中读取日志。</li>
-<li><strong>beats</strong>：接收来自 Beats（如 Filebeat）的数据。</li>
-<li><strong>stdin</strong>：从标准输入（控制台）读取数据。</li>
-<li><strong>syslog</strong>：从 syslog 接收日志。</li>
-</ul>
-<p>示例：</p>
-<div class="codehilite"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">input {</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">file {</span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">path =&gt; &quot;/var/log/syslog&quot;</span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">start_position =&gt; &quot;beginning&quot;</span><span class="w">  </span><span class="c1"># 从文件开头开始读取</span>
-<span class="w">  </span><span class="err">}</span>
-<span class="err">}</span>
-</code></pre></div>
-
-<h3 id="33-filter">3.3 <strong>Filter 插件</strong></h3>
-<p><code>filter</code> 插件用于对数据进行处理和转换。Logstash 提供了丰富的 <code>filter</code> 插件，常见的有：</p>
-<ul>
-<li><strong>grok</strong>：用于解析和提取日志中的结构化数据。</li>
-<li><strong>mutate</strong>：修改字段（如添加、重命名、移除字段）。</li>
-<li><strong>date</strong>：将时间戳转换为统一格式。</li>
-<li><strong>geoip</strong>：根据 IP 地址查找地理位置信息。</li>
-<li><strong>kv</strong>：将键值对解析为结构化字段。</li>
-</ul>
-<h4 id="331-grok">3.3.1 <strong>Grok 过滤器</strong></h4>
-<p><code>grok</code> 插件是 Logstash 最常用的过滤器之一，用于解析非结构化数据。它基于正则表达式，将日志信息解析成结构化字段。</p>
-<p>例如，解析 Nginx 访问日志：</p>
-<div class="codehilite"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">filter {</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">grok {</span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">match =&gt; { &quot;message&quot; =&gt; &quot;%{COMBINEDAPACHELOG}&quot; }</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">}</span>
-<span class="l l-Scalar l-Scalar-Plain">}</span>
-</code></pre></div>
-
-<p>Logstash 提供了许多预定义的 <code>grok</code> 模式（如 <code>%{COMBINEDAPACHELOG}</code>），你可以根据需要自定义。</p>
-<h4 id="332-mutate">3.3.2 <strong>Mutate 过滤器</strong></h4>
-<p><code>mutate</code> 插件用于修改字段，例如重命名、删除、转换类型等。</p>
-<p>示例：将字段 <code>status_code</code> 从字符串转换为整数：</p>
-<div class="codehilite"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">filter {</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">mutate {</span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">convert =&gt; { &quot;status_code&quot; =&gt; &quot;integer&quot; }</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">}</span>
-<span class="l l-Scalar l-Scalar-Plain">}</span>
-</code></pre></div>
-
-<h4 id="333-date">3.3.3 <strong>Date 过滤器</strong></h4>
-<p><code>date</code> 插件将日志中的时间戳转换为 Logstash 内部使用的标准时间格式。</p>
-<p>示例：</p>
-<div class="codehilite"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">filter {</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">date {</span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">match =&gt; [ &quot;timestamp&quot;, &quot;dd/MMM/yyyy:HH:mm:ss Z&quot; ]</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">}</span>
-<span class="l l-Scalar l-Scalar-Plain">}</span>
-</code></pre></div>
-
-<h3 id="34-output">3.4 <strong>Output 插件</strong></h3>
-<p><code>output</code> 插件用于定义日志的输出目的地，Logstash 支持多种目标，包括 Elasticsearch、文件、Kafka、数据库等。</p>
-<p>常见的 <code>output</code> 插件有：</p>
-<ul>
-<li><strong>elasticsearch</strong>：将日志发送到 Elasticsearch。</li>
-<li><strong>file</strong>：将日志写入文件。</li>
-<li><strong>kafka</strong>：将日志发送到 Kafka。</li>
-<li><strong>stdout</strong>：将日志输出到标准输出（控制台）。</li>
-</ul>
-<h4 id="341-elasticsearch">3.4.1 <strong>输出到 Elasticsearch</strong></h4>
-<p>最常见的输出方式是将日志发送到 Elasticsearch，以便后续通过 Kibana 进行可视化分析。</p>
-<div class="codehilite"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">output {</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">elasticsearch {</span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">hosts =&gt; [&quot;http://localhost:9200&quot;]</span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">index =&gt; &quot;logs-%{+YYYY.MM.dd}&quot;</span><span class="w">  </span><span class="c1"># 按日期生成索引</span>
-<span class="w">  </span><span class="err">}</span>
-<span class="err">}</span>
-</code></pre></div>
-
-<h4 id="342-stdout">3.4.2 <strong>输出到控制台（stdout）</strong></h4>
-<p>在开发和调试时，可以将日志输出到控制台，便于观察处理效果：</p>
-<div class="codehilite"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">output {</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">stdout {</span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">codec =&gt; rubydebug</span><span class="w">  </span><span class="c1"># 以可读格式输出日志</span>
-<span class="w">  </span><span class="err">}</span>
-<span class="err">}</span>
-</code></pre></div>
-
-<hr />
-<h2 id="4-logstash-apache">4. <strong>Logstash 实例：处理 Apache 日志</strong></h2>
-<p>下面是一个处理 Apache 日志的完整 Logstash 配置示例，演示了如何从文件读取日志、解析日志内容并将其存储到 Elasticsearch。</p>
-<div class="codehilite"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">input {</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">file {</span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">path =&gt; &quot;/var/log/apache2/access.log&quot;</span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">start_position =&gt; &quot;beginning&quot;</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">}</span>
-<span class="l l-Scalar l-Scalar-Plain">}</span>
-
-<span class="l l-Scalar l-Scalar-Plain">filter {</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">grok {</span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">match =&gt; { &quot;message&quot; =&gt; &quot;%{COMBINEDAPACHELOG}&quot; }</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">}</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">date {</span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">match =&gt; [ &quot;timestamp&quot;, &quot;dd/MMM/yyyy:HH:mm:ss Z&quot; ]</span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">target =&gt; &quot;@timestamp&quot;</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">}</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">geoip {</span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">source =&gt; &quot;clientip&quot;</span><span class="w">  </span><span class="c1"># 根据 IP 查找地理位置信息</span>
-<span class="w">  </span><span class="err">}</span>
-<span class="err">}</span>
-
-<span class="l l-Scalar l-Scalar-Plain">output {</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">elasticsearch {</span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">hosts =&gt; [&quot;localhost:9200&quot;]</span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">index =&gt; &quot;apache-logs-%{+YYYY.MM.dd}&quot;</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">}</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">stdout {</span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">codec =&gt; rubydebug</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">}</span>
-<span class="l l-Scalar l-Scalar-Plain">}</span>
-</code></pre></div>
-
-<p>这个配置文件的工作流程是：</p>
-<ol>
-<li><strong>输入</strong>：从 <code>/var/log/apache2/access.log</code> 文件中读取日志。</li>
-<li><strong>过滤</strong>：使用 <code>grok</code> 解析日志，提取字段如 <code>clientip</code>、<code>request</code>、<code>response</code> 等；使用 <code>date</code> 插件解析时间戳；使用 <code>geoip</code> 插件根据 <code>clientip</code> 获取地理位置。</li>
-<li><strong>输出</strong>：将日志发送到 Elasticsearch，并按日期创建索引，同时将日志输出到控制台。</li>
-</ol>
-<hr />
-<h2 id="5-logstash">5. <strong>Logstash 管道管理与性能优化</strong></h2>
-<p>在生产环境中，Logstash 处理大量的数据，可能需要进行性能调优和多管道管理。</p>
-<h3 id="51">5.1 <strong>多管道配置</strong></h3>
-<p>Logstash 支持多管道，可以同时处理多个不同类型的日志。你可以在 Logstash 配置目录中创建多个配置文件，每个文件对应不同的管道。</p>
-<p>在 <code>logstash.yml</code> 中启用多管道配置：</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">path.config</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/etc/logstash/conf.d/*.conf&quot;</span>
-</code></pre></div>
-
-<p>将每个日志源的处理逻辑拆分成多个配置文件，例如 <code>nginx.conf</code>、<code>mysql.conf</code>。</p>
-<h3 id="52">5.2 <strong>性能优化</strong></h3>
-<ul>
-<li><strong>Pipeline Workers</strong>：调整 Logstash 管道的工作线程数以提高并发处理能力，默认情况下，Logstash 的 <code>pipeline.workers</code> 设置为 CPU 核心数。</li>
-</ul>
-<p><code>yaml
-  pipeline.workers: 4</code></p>
-<ul>
-<li><strong>批处理大小</strong>：调整 <code>pipeline.batch.size</code> 以提高数据处理效率，默认是 125。</li>
-</ul>
-<p><code>yaml
-  pipeline.batch.size: 200</code></p>
-<hr />
-<h2 id="6-logstash">6. <strong>Logstash 可视化与监控</strong></h2>
-<p>通过 Elastic Stack 的 Kibana，你可以监控 Logstash 的运行状态，查看数据处理的延迟、错误等。</p>
-<ol>
-<li>在 Kibana 中导航到 <strong>Stack Monitoring</strong>。</li>
-<li>启用监控后，你可以实时查看 Logstash 的性能指标，包括吞吐量、延迟、CPU 使用率等。</li>
-</ol>
-<hr />
-<h2 id="filter">Filter 详解</h2>
-<p><code>Logstash</code> 的 <code>filter</code> 是数据处理管道中的中间步骤，用于转换、增强、解析或过滤传入的数据。<code>filter</code> 插件可以帮助你对数据执行复杂的操作，常见的过滤插件包括 <code>grok</code>、<code>date</code>、<code>mutate</code>、<code>geoip</code> 等。</p>
-<h3 id="logstash-filter">Logstash Filter 插件类别及常用插件</h3>
-<h4 id="1-grok">1. <strong>grok</strong> 插件</h4>
-<p><code>grok</code> 是 Logstash 中最常用的插件之一，用于从未结构化的文本（如日志文件）中提取结构化数据。它基于正则表达式来匹配并解析文本。</p>
+<h3 id="2-filter">2. Filter（过滤器）部分详解</h3>
+<p><code>filter</code> 部分是 Logstash 的核心，定义如何处理和转换数据。常见的过滤插件有 <code>grok</code>（提取模式匹配）、<code>date</code>（时间戳解析）、<code>mutate</code>（修改字段）等。</p>
+<h4 id="1-grok">示例 1：使用 <code>grok</code> 提取日志信息</h4>
 <div class="codehilite"><pre><span></span><code><span class="n">filter</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">grok</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">match</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;message&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;%{COMBINEDAPACHELOG}&quot;</span><span class="w"> </span><span class="p">}</span><span class="w">  </span><span class="c1"># 使用预定义的模式解析 Apache 日志</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h4 id="2-mutate">示例 2：使用 <code>mutate</code> 修改字段</h4>
+<div class="codehilite"><pre><span></span><code><span class="n">filter</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">mutate</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">rename</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;host&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;server_host&quot;</span><span class="w"> </span><span class="p">}</span><span class="w">  </span><span class="c1"># 将字段 &quot;host&quot; 重命名为 &quot;server_host&quot;</span>
+<span class="w">    </span><span class="n">add_field</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;env&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;production&quot;</span><span class="w"> </span><span class="p">}</span><span class="w">  </span><span class="c1"># 添加一个新字段 &quot;env&quot;</span>
+<span class="w">    </span><span class="n">remove_field</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="o">[</span><span class="s2">&quot;agent&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;user&quot;</span><span class="o">]</span><span class="w">  </span><span class="c1"># 删除不需要的字段</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h4 id="3-date">示例 3：使用 <code>date</code> 解析时间戳</h4>
+<div class="codehilite"><pre><span></span><code><span class="n">filter</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">date</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">match</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s2">&quot;timestamp&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;ISO8601&quot;</span><span class="w"> </span><span class="o">]</span><span class="w">  </span><span class="c1"># 将 timestamp 字段解析为 Logstash 的 @timestamp 字段</span>
+<span class="w">    </span><span class="n">target</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;@timestamp&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h4 id="4">示例 4：处理多行日志</h4>
+<div class="codehilite"><pre><span></span><code><span class="n">filter</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">multiline</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">pattern</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;^ERROR&quot;</span><span class="w">  </span><span class="c1"># 匹配 ERROR 开头的日志</span>
+<span class="w">    </span><span class="n">negate</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="kp">true</span>
+<span class="w">    </span><span class="n">what</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;previous&quot;</span><span class="w">  </span><span class="c1"># 将当前行附加到前一行日志</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="3-output">3. Output（输出）部分详解</h3>
+<p><code>output</code> 部分定义了数据的去向，可以输出到 Elasticsearch、文件、Kafka 等。</p>
+<h4 id="1-elasticsearch">示例 1：输出到 Elasticsearch</h4>
+<div class="codehilite"><pre><span></span><code><span class="n">output</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">elasticsearch</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">hosts</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="o">[</span><span class="s2">&quot;localhost:9200&quot;</span><span class="o">]</span><span class="w">  </span><span class="c1"># Elasticsearch 地址</span>
+<span class="w">    </span><span class="n">index</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;logstash-%{+YYYY.MM.dd}&quot;</span><span class="w">  </span><span class="c1"># 指定索引格式</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h4 id="2">示例 2：输出到文件</h4>
+<div class="codehilite"><pre><span></span><code><span class="n">output</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">file</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">path</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;/var/log/logstash/logstash_output.log&quot;</span><span class="w">  </span><span class="c1"># 将处理后的日志写入文件</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h4 id="3_1">示例 3：输出到标准输出（用于调试）</h4>
+<div class="codehilite"><pre><span></span><code><span class="n">output</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">stdout</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">codec</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">rubydebug</span><span class="w">  </span><span class="c1"># 以调试模式输出日志</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h4 id="4-kafka">示例 4：输出到 Kafka</h4>
+<div class="codehilite"><pre><span></span><code><span class="n">output</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">kafka</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">bootstrap_servers</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;localhost:9092&quot;</span><span class="w">  </span><span class="c1"># Kafka 服务器地址</span>
+<span class="w">    </span><span class="n">topic_id</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;logstash_logs&quot;</span><span class="w">  </span><span class="c1"># Kafka 主题名称</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="4-logstash">4. Logstash 配置文件完整示例</h3>
+<p>假设我们要从 Filebeat 收集 Apache 日志，经过过滤后将其发送到 Elasticsearch，并且需要过滤掉不必要的字段并解析日志时间戳。以下是一个完整的配置示例：</p>
+<div class="codehilite"><pre><span></span><code><span class="n">input</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">beats</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">port</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">5044</span><span class="w">  </span><span class="c1"># 接收来自 Filebeat 的数据</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">filter</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1"># 解析 Apache 日志格式</span>
 <span class="w">  </span><span class="n">grok</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">match</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;message&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;%{COMBINEDAPACHELOG}&quot;</span><span class="w"> </span><span class="p">}</span>
 <span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
 
-<p><strong>示例解释：</strong>
-- <code>match</code>：定义了 <code>grok</code> 匹配模式，其中 <code>"message"</code> 是日志字段，<code>%{COMBINEDAPACHELOG}</code> 是 <code>grok</code> 模式，它代表 Apache 日志格式。</p>
-<p>你也可以自定义 <code>grok</code> 模式，例如：</p>
-<div class="codehilite"><pre><span></span><code><span class="n">filter</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">grok</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">match</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;message&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;%{IP:client_ip} %{WORD:method} %{URIPATHPARAM:request} %{NUMBER:status_code}&quot;</span><span class="w"> </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-
-<p>这里定义了提取 <code>IP</code>、<code>HTTP 方法</code>、<code>请求路径</code> 和 <code>状态码</code>。</p>
-<h4 id="2-mutate">2. <strong>mutate</strong> 插件</h4>
-<p><code>mutate</code> 插件用于修改事件中的字段，可以进行增删改操作，包括重命名字段、转换数据类型、拆分或合并字符串等操作。</p>
-<div class="codehilite"><pre><span></span><code><span class="n">filter</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">mutate</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">rename</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;host&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;server_host&quot;</span><span class="w"> </span><span class="p">}</span>
-<span class="w">    </span><span class="n">convert</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;status_code&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;integer&quot;</span><span class="w"> </span><span class="p">}</span>
-<span class="w">    </span><span class="n">remove_field</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s2">&quot;unnecessary_field&quot;</span><span class="w"> </span><span class="o">]</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-
-<p><strong>常用操作：</strong>
-- <code>rename</code>：重命名字段。
-- <code>convert</code>：将字段转换为不同的数据类型（如 <code>integer</code>, <code>float</code>, <code>string</code>）。
-- <code>remove_field</code>：删除不必要的字段。</p>
-<h4 id="3-date">3. <strong>date</strong> 插件</h4>
-<p><code>date</code> 插件用于解析日期字段，并将它们转换为 <code>Logstash</code> 的 <code>@timestamp</code> 字段。这样可以确保日志时间被正确解析并与其他系统时间保持一致。</p>
-<div class="codehilite"><pre><span></span><code><span class="n">filter</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">date</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">match</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s2">&quot;timestamp&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;dd/MMM/yyyy:HH:mm:ss Z&quot;</span><span class="w"> </span><span class="o">]</span>
-<span class="w">    </span><span class="n">target</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;@timestamp&quot;</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-
-<p><strong>示例解释：</strong>
-- <code>match</code>：用于匹配输入日志的日期格式。<code>"timestamp"</code> 是日志字段，后面的 <code>"dd/MMM/yyyy:HH:mm:ss Z"</code> 是日期格式模板。
-- <code>target</code>：指定输出的目标字段，默认是 <code>@timestamp</code>。</p>
-<h4 id="4-geoip">4. <strong>geoip</strong> 插件</h4>
-<p><code>geoip</code> 插件用于将 IP 地址解析为地理位置信息（如国家、城市、纬度、经度等）。</p>
-<div class="codehilite"><pre><span></span><code><span class="n">filter</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">geoip</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">source</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;client_ip&quot;</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-
-<p><strong>示例解释：</strong>
-- <code>source</code>：要解析的 IP 地址字段。插件会根据该字段自动生成地理位置信息（如 <code>geoip.location</code>）。</p>
-<h4 id="5-json">5. <strong>json</strong> 插件</h4>
-<p><code>json</code> 插件用于将 JSON 字符串解析为结构化数据（字段）。</p>
-<div class="codehilite"><pre><span></span><code><span class="n">filter</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">json</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">source</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;message&quot;</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-
-<p><strong>示例解释：</strong>
-- <code>source</code>：指定要解析的 JSON 字符串字段，<code>Logstash</code> 会自动解析该字段并生成相应的结构化字段。</p>
-<h4 id="6-kv">6. <strong>kv</strong> 插件</h4>
-<p><code>kv</code> 插件用于从键值对字符串中提取字段。它非常适用于从 URL 查询参数或其他带有键值对的日志格式中提取信息。</p>
-<div class="codehilite"><pre><span></span><code><span class="n">filter</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">kv</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">source</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;message&quot;</span>
-<span class="w">    </span><span class="n">field_split</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;&amp;&quot;</span>
-<span class="w">    </span><span class="n">value_split</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;=&quot;</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-
-<p><strong>示例解释：</strong>
-- <code>source</code>：指定要解析的字段。
-- <code>field_split</code>：指定字段之间的分隔符（如 <code>&amp;</code>）。
-- <code>value_split</code>：指定键值之间的分隔符（如 <code>=</code>）。</p>
-<h4 id="7-split">7. <strong>split</strong> 插件</h4>
-<p><code>split</code> 插件用于将一个字段拆分为多个事件。这在你有数组或多个记录嵌套在同一个事件中的时候非常有用。</p>
-<div class="codehilite"><pre><span></span><code><span class="n">filter</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nb">split</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">field</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;items&quot;</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-
-<p><strong>示例解释：</strong>
-- <code>field</code>：指定要拆分的数组字段。</p>
-<h4 id="8-drop">8. <strong>drop</strong> 插件</h4>
-<p><code>drop</code> 插件用于丢弃不需要的事件，通常用于过滤掉不需要的日志。</p>
-<div class="codehilite"><pre><span></span><code><span class="n">filter</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="n">status_code</span><span class="o">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">drop</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-
-<p><strong>示例解释：</strong>
-- 这里指定当 <code>status_code</code> 为 <code>200</code> 时，丢弃该事件。</p>
-<h3 id="logstash-filter_1">Logstash Filter 的基本结构</h3>
-<div class="codehilite"><pre><span></span><code><span class="n">filter</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">filter_plugin</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">option1</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">value1</span>
-<span class="w">    </span><span class="n">option2</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">value2</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-
-<p>其中 <code>filter_plugin</code> 是你选择的过滤插件（如 <code>grok</code>, <code>mutate</code> 等），<code>option1</code> 和 <code>value1</code> 是该插件的配置选项和值。</p>
-<h3 id="_1">综合示例</h3>
-<div class="codehilite"><pre><span></span><code><span class="n">filter</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">grok</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">match</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;message&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;%{IPORHOST:client_ip} %{USER:ident} %{USER:auth} \[%{HTTPDATE:timestamp}\] </span><span class="se">\&quot;</span><span class="s2">%{WORD:method} %{URIPATHPARAM:request} HTTP/%{NUMBER:http_version}</span><span class="se">\&quot;</span><span class="s2"> %{NUMBER:status_code} %{NUMBER:bytes}&quot;</span><span class="w"> </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
-
+<span class="w">  </span><span class="c1"># 将日志中的时间字段转换为 @timestamp</span>
 <span class="w">  </span><span class="n">date</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">match</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s2">&quot;timestamp&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;dd/MMM/yyyy:HH:mm:ss Z&quot;</span><span class="w"> </span><span class="o">]</span>
 <span class="w">    </span><span class="n">target</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;@timestamp&quot;</span>
 <span class="w">  </span><span class="p">}</span>
 
-<span class="w">  </span><span class="n">geoip</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">source</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;client_ip&quot;</span>
+<span class="w">  </span><span class="c1"># 删除不必要的字段</span>
+<span class="w">  </span><span class="n">mutate</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">remove_field</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s2">&quot;agent&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;auth&quot;</span><span class="w"> </span><span class="o">]</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">output</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1"># 输出到 Elasticsearch</span>
+<span class="w">  </span><span class="n">elasticsearch</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">hosts</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="o">[</span><span class="s2">&quot;localhost:9200&quot;</span><span class="o">]</span>
+<span class="w">    </span><span class="n">index</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;apache-logs-%{+YYYY.MM.dd}&quot;</span>
 <span class="w">  </span><span class="p">}</span>
 
-<span class="w">  </span><span class="n">mutate</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">convert</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;status_code&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;integer&quot;</span><span class="w"> </span><span class="p">}</span>
-<span class="w">    </span><span class="n">convert</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;bytes&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;integer&quot;</span><span class="w"> </span><span class="p">}</span>
-<span class="w">    </span><span class="n">remove_field</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s2">&quot;ident&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;auth&quot;</span><span class="w"> </span><span class="o">]</span>
+<span class="w">  </span><span class="c1"># 同时将日志输出到标准输出，用于调试</span>
+<span class="w">  </span><span class="n">stdout</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">codec</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">rubydebug</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 
-<p><strong>示例解释：</strong>
-1. 使用 <code>grok</code> 从日志中提取客户端 IP、HTTP 方法、请求路径、状态码等字段。
-2. 使用 <code>date</code> 插件将 <code>timestamp</code> 字段转换为 <code>@timestamp</code>。
-3. 使用 <code>geoip</code> 插件根据 IP 提取地理位置信息。
-4. 使用 <code>mutate</code> 插件转换 <code>status_code</code> 和 <code>bytes</code> 字段为整数，并删除不需要的字段。</p>
+<h3 id="_1">配置文件详解：</h3>
+<ul>
+<li><strong>input</strong>: 配置 Logstash 从 Filebeat 接收日志，监听端口 5044。</li>
+<li><strong>filter</strong>: </li>
+<li>使用 <code>grok</code> 解析 Apache 日志格式。</li>
+<li>使用 <code>date</code> 解析日志中的时间戳。</li>
+<li>使用 <code>mutate</code> 删除不需要的字段（如 <code>agent</code> 和 <code>auth</code>）。</li>
+<li><strong>output</strong>: </li>
+<li>将处理后的日志数据输出到 Elasticsearch，创建名为 <code>apache-logs-YYYY.MM.dd</code> 的索引。</li>
+<li>同时将日志输出到标准输出，方便调试。</li>
+</ul>
+<h3 id="5">5. 多输入、多输出示例</h3>
+<p>Logstash 支持多个输入、过滤器和输出插件，可以组合使用。</p>
+<div class="codehilite"><pre><span></span><code><span class="n">input</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">beats</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">port</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">5044</span><span class="w">  </span><span class="c1"># 接收来自 Filebeat 的数据</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="n">tcp</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">port</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="mi">5000</span><span class="w">  </span><span class="c1"># 从 TCP 5000 端口接收数据</span>
+<span class="w">    </span><span class="n">codec</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">json_lines</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">filter</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1"># 针对 Filebeat 数据的过滤器</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="n">type</span><span class="o">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;filebeat&quot;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">grok</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">match</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;message&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;%{COMBINEDAPACHELOG}&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1"># 针对 TCP 数据的过滤器</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="n">type</span><span class="o">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;tcp&quot;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">json</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">source</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;message&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">output</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">elasticsearch</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">hosts</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="o">[</span><span class="s2">&quot;localhost:9200&quot;</span><span class="o">]</span>
+<span class="w">    </span><span class="n">index</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s2">&quot;logstash-%{+YYYY.MM.dd}&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
 <h3 id="_2">总结</h3>
-<p><code>Logstash</code> 的 <code>filter</code> 插件为日志处理提供了强大的能力，可以通过 <code>grok</code> 提取文本，使用 <code>mutate</code> 修改字段，使用 <code>geoip</code> 获取地理信息等。根据不同需求，选择合适的插件进行配置，将有效提升日志处理的效率和灵活性。</p>
+<p>Logstash 的配置文件非常灵活，可以根据需要自定义输入、过滤和输出。通过不同的输入插件，可以从不同来源接收数据；通过过滤插件可以对数据进行丰富的处理；输出插件可以将处理后的数据发送到多种目标，如 Elasticsearch、文件、Kafka 等。</p>
 
 
 
