@@ -1,0 +1,2 @@
+# journalctl 教程
+
