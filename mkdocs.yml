@@ -20,16 +20,18 @@ theme:
     - material.switch
     - content.code.copy  # 启用代码块复制功能
   palette:
-    # 选择主题颜色
-    primary: 'teal'
-    accent: 'deep orange'
-    # 默认的暗色模式配置
-    toggle:
-      - auto: true
-      - logo: true
-      - name: 'Switch to Dark Mode'
-      - icon: 'light_mode'
-      - icon_dark: 'dark_mode'
+    - scheme: default
+      primary: teal
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate  # 暗模式
+      primary: teal
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
 
 plugins:
   - search
