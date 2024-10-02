@@ -6,7 +6,6 @@ theme:
   name: material
   language: zh
   features:
-    - content.code.copy
     - navigation.expand
     - navigation.sections
     - toc.integrate
@@ -19,6 +18,7 @@ theme:
     - content.code
     - material.nav
     - material.switch
+    - content.code.copy  # 启用代码块复制功能
   palette:
     # 选择主题颜色
     primary: 'teal'
