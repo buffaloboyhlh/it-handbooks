@@ -76,4 +76,5 @@
 + [**混沌工程**](工具篇/chaos.md)
 + [**SonarQube**](工具篇/SonarQube.md)
 + [**Linux命令**](工具篇/commands.md)
++ [**Supervisor**](工具篇/supervisor.md)
 
