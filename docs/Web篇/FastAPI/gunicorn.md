@@ -22,6 +22,7 @@ Gunicorn（Green Unicorn）是一个 Python 的 WSGI HTTP 服务器，广泛用�
 Gunicorn 是一个 WSGI 兼容的服务器，主要用于将 Python web 框架运行在 HTTP 服务上。Gunicorn 是 Pre-fork worker 模型的服务器，适用于多核系统，并通过合理的 worker 数量处理并发请求，从而提高性能。
 
 #### 特点：
+
 - **简单易用**：支持大多数 Python web 框架。
 - **性能优异**：轻量高效，适合生产环境。
 - **多平台支持**：可以在 UNIX 系统中使用，包括 Linux 和 macOS。
@@ -34,6 +35,7 @@ Gunicorn 是一个 WSGI 兼容的服务器，主要用于将 Python web 框架�
 Gunicorn 采用 **Pre-fork worker** 模型，即主进程（master）启动后，会 fork 出多个 worker 进程来处理请求。主进程负责监听端口，分发请求给 worker 进程，这种模型使得 Gunicorn 具有高并发处理能力。
 
 工作流程：
+
 1. **Master 进程**启动，负责监听 HTTP 请求端口。
 2. **Master 进程**创建指定数量的 worker 进程。
 3. **Worker 进程**处理来自客户端的请求并返回响应。
@@ -62,6 +64,7 @@ gunicorn app:app
 ```
 
 这里的 `app:app` 表示的是：
+
 - 第一个 `app` 是 Python 文件 `app.py` 的文件名。
 - 第二个 `app` 是 Flask 应用对象的名称。
 
@@ -110,6 +113,7 @@ Gunicorn 提供了丰富的配置选项来优化应用的运行。以下列出�
 --worker-class gevent
 ```
 Gunicorn 支持多种 worker 模型，常用类型包括：
+
 - **sync**：默认同步 worker。
 - **gevent**：基于协程的异步 worker，适用于 I/O 密集型应用。
 - **eventlet**：类似 gevent 的协程模式。
