@@ -964,6 +964,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uvicorn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Uvicorn 教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -5344,11 +5365,13 @@
 <hr />
 <h3 id="2-gunicorn">2. Gunicorn 的工作原理</h3>
 <p>Gunicorn 采用 <strong>Pre-fork worker</strong> 模型，即主进程（master）启动后，会 fork 出多个 worker 进程来处理请求。主进程负责监听端口，分发请求给 worker 进程，这种模型使得 Gunicorn 具有高并发处理能力。</p>
-<p>工作流程：
-1. <strong>Master 进程</strong>启动，负责监听 HTTP 请求端口。
-2. <strong>Master 进程</strong>创建指定数量的 worker 进程。
-3. <strong>Worker 进程</strong>处理来自客户端的请求并返回响应。
-4. 当某个 worker 进程出错时，master 进程会自动重启一个新的 worker。</p>
+<p>工作流程：</p>
+<ol>
+<li><strong>Master 进程</strong>启动，负责监听 HTTP 请求端口。</li>
+<li><strong>Master 进程</strong>创建指定数量的 worker 进程。</li>
+<li><strong>Worker 进程</strong>处理来自客户端的请求并返回响应。</li>
+<li>当某个 worker 进程出错时，master 进程会自动重启一个新的 worker。</li>
+</ol>
 <p>Gunicorn 还支持多种 worker 类型，如同步模式、异步模式、以及 gevent 等协程模式，可以根据需要选择合适的 worker。</p>
 <hr />
 <h3 id="3-gunicorn">3. Gunicorn 安装与基本使用</h3>
@@ -5362,9 +5385,11 @@
 <div class="codehilite"><pre><span></span><code>gunicorn<span class="w"> </span>app:app
 </code></pre></div>
 
-<p>这里的 <code>app:app</code> 表示的是：
-- 第一个 <code>app</code> 是 Python 文件 <code>app.py</code> 的文件名。
-- 第二个 <code>app</code> 是 Flask 应用对象的名称。</p>
+<p>这里的 <code>app:app</code> 表示的是：</p>
+<ul>
+<li>第一个 <code>app</code> 是 Python 文件 <code>app.py</code> 的文件名。</li>
+<li>第二个 <code>app</code> 是 Flask 应用对象的名称。</li>
+</ul>
 <p>Gunicorn 默认在 <code>127.0.0.1:8000</code> 启动服务。</p>
 <h4 id="33-ip">3.3 指定 IP 和端口</h4>
 <p>你可以通过 <code>-b</code> 或 <code>--bind</code> 选项来绑定指定的 IP 地址和端口号：</p>
@@ -5395,11 +5420,13 @@
 <div class="codehilite"><pre><span></span><code>--worker-class<span class="w"> </span>gevent
 </code></pre></div>
 
-<p>Gunicorn 支持多种 worker 模型，常用类型包括：
-- <strong>sync</strong>：默认同步 worker。
-- <strong>gevent</strong>：基于协程的异步 worker，适用于 I/O 密集型应用。
-- <strong>eventlet</strong>：类似 gevent 的协程模式。
-- <strong>tornado</strong>：支持异步 I/O 的 worker 类型。</p>
+<p>Gunicorn 支持多种 worker 模型，常用类型包括：</p>
+<ul>
+<li><strong>sync</strong>：默认同步 worker。</li>
+<li><strong>gevent</strong>：基于协程的异步 worker，适用于 I/O 密集型应用。</li>
+<li><strong>eventlet</strong>：类似 gevent 的协程模式。</li>
+<li><strong>tornado</strong>：支持异步 I/O 的 worker 类型。</li>
+</ul>
 <h4 id="44">4.4 设置超时时间</h4>
 <div class="codehilite"><pre><span></span><code>--timeout<span class="w"> </span><span class="m">30</span>
 </code></pre></div>

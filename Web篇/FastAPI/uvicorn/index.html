@@ -13,25 +13,25 @@
       
       
       
-        <link rel="prev" href="../matpliot/">
+        <link rel="prev" href="../practice/">
       
       
-        <link rel="next" href="../numpy/">
+        <link rel="next" href="../../Flask/advance/">
       
       
-      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
     
     
       
-        <title>mock 模块 - IT-手册</title>
+        <title>Uvicorn 教程 - IT-手册</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.8c3ca2c6.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8c3ca2c6.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,9 +50,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../../css/extra.css">
+      <link rel="stylesheet" href="../../../css/extra.css">
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mock" class="md-skip">
+        <a href="#uvicorn" class="md-skip">
           跳转至
         </a>
       
@@ -94,7 +94,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../../.." title="IT-手册" class="md-header__button md-logo" aria-label="IT-手册" data-md-component="logo">
+    <a href="../../.." title="IT-手册" class="md-header__button md-logo" aria-label="IT-手册" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              mock 模块
+              Uvicorn 教程
             
           </span>
         </div>
@@ -219,7 +219,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="IT-手册" class="md-nav__button md-logo" aria-label="IT-手册" data-md-component="logo">
+    <a href="../../.." title="IT-手册" class="md-nav__button md-logo" aria-label="IT-手册" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -237,7 +237,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -254,8 +254,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -265,13 +267,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -285,7 +285,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Web篇
@@ -338,7 +338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Web%E7%AF%87/Django/advance/" class="md-nav__link">
+      <a href="../../Django/advance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -359,7 +359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Web%E7%AF%87/Django/basic/" class="md-nav__link">
+      <a href="../../Django/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -380,7 +380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Web%E7%AF%87/Django/interview/" class="md-nav__link">
+      <a href="../../Django/interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -401,7 +401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Web%E7%AF%87/Django/questions/" class="md-nav__link">
+      <a href="../../Django/questions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -422,7 +422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Web%E7%AF%87/Django/restful/" class="md-nav__link">
+      <a href="../../Django/restful/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -448,6 +448,8 @@
                 
   
   
+    
+  
   
   
     
@@ -456,13 +458,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -476,7 +476,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             FastAPI
@@ -490,7 +490,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Web%E7%AF%87/FastAPI/advance./" class="md-nav__link">
+      <a href="../advance./" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -511,7 +511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Web%E7%AF%87/FastAPI/basic/" class="md-nav__link">
+      <a href="../basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -532,7 +532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Web%E7%AF%87/FastAPI/gunicorn/" class="md-nav__link">
+      <a href="../gunicorn/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -553,7 +553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Web%E7%AF%87/FastAPI/interview/" class="md-nav__link">
+      <a href="../interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -574,7 +574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Web%E7%AF%87/FastAPI/practice/" class="md-nav__link">
+      <a href="../practice/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -592,10 +592,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../../Web%E7%AF%87/FastAPI/uvicorn/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Uvicorn 教程
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -604,6 +624,284 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      目录：
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-uvicorn" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 什么是 Uvicorn？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-uvicorn-asgi" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Uvicorn 与 ASGI 介绍
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-uvicorn" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Uvicorn 安装
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Uvicorn 安装">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 基础安装
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-uvicorn" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 安装带性能优化的 Uvicorn
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 快速启动 FastAPI 应用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 快速启动 FastAPI 应用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 并发处理示例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-uvicorn" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Uvicorn 命令行参数详解
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Uvicorn 命令行参数详解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 常用命令行参数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 实用示例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-uvicorn" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 配置文件方式运行 Uvicorn
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 配置文件方式运行 Uvicorn">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 配置文件示例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-gunicorn-uvicorn" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 使用 gunicorn 和 uvicorn 结合部署
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. 使用 gunicorn 和 uvicorn 结合部署">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-gunicorn" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 安装 gunicorn
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-gunicorn-uvicorn" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 使用 gunicorn 启动 Uvicorn
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. 性能优化
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. 性能优化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-uvloop" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1 使用 uvloop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-http2" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2 启用 HTTP/2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.3 调整工作进程
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. 日志管理与监控
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-uvicorn" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Uvicorn 应用实战案例
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Uvicorn 应用实战案例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.1 构建一个简单的 API
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -663,7 +961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Web%E7%AF%87/Flask/advance/" class="md-nav__link">
+      <a href="../../Flask/advance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -684,7 +982,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Web%E7%AF%87/Flask/basic/" class="md-nav__link">
+      <a href="../../Flask/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -705,7 +1003,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Web%E7%AF%87/Flask/interview/" class="md-nav__link">
+      <a href="../../Flask/interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -726,7 +1024,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Web%E7%AF%87/Flask/questions/" class="md-nav__link">
+      <a href="../../Flask/questions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -843,7 +1141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/basic/" class="md-nav__link">
+      <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -864,7 +1162,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/interview/" class="md-nav__link">
+      <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -932,7 +1230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/rabbitmq/basic/" class="md-nav__link">
+      <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/rabbitmq/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -953,7 +1251,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/rabbitmq/interview/" class="md-nav__link">
+      <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/rabbitmq/interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1021,7 +1319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/zookeeper/basic/" class="md-nav__link">
+      <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/zookeeper/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1042,7 +1340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/zookeeper/interview/" class="md-nav__link">
+      <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/zookeeper/interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1159,7 +1457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/alert/" class="md-nav__link">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/alert/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1180,7 +1478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/basic/" class="md-nav__link">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1201,7 +1499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/prometheus/" class="md-nav__link">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/prometheus/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1222,7 +1520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/promql/" class="md-nav__link">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/promql/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1290,7 +1588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/basic/" class="md-nav__link">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1311,7 +1609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/interview/" class="md-nav__link">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1379,7 +1677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/basic/" class="md-nav__link">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1400,7 +1698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/crictl/" class="md-nav__link">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/crictl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1421,7 +1719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/helm/" class="md-nav__link">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/helm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1442,7 +1740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/interview/" class="md-nav__link">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1463,7 +1761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/monitor/" class="md-nav__link">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/monitor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1580,7 +1878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/LangChain/advance/" class="md-nav__link">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/LangChain/advance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1601,7 +1899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/LangChain/basic/" class="md-nav__link">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/LangChain/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1669,7 +1967,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/advance/" class="md-nav__link">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/advance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1690,7 +1988,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/basic/" class="md-nav__link">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1711,7 +2009,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/interview/" class="md-nav__link">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1779,7 +2077,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/advance/" class="md-nav__link">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/advance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1800,7 +2098,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/basic/" class="md-nav__link">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1821,7 +2119,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/interview/" class="md-nav__link">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1889,7 +2187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/advance/" class="md-nav__link">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/advance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1910,7 +2208,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/basic/" class="md-nav__link">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1931,7 +2229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/interview/" class="md-nav__link">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2009,7 +2307,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E5%B7%A5%E5%85%B7%E7%AF%87/SRE/" class="md-nav__link">
+      <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/SRE/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2030,7 +2328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E5%B7%A5%E5%85%B7%E7%AF%87/SonarQube/" class="md-nav__link">
+      <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/SonarQube/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2051,7 +2349,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E5%B7%A5%E5%85%B7%E7%AF%87/chaos/" class="md-nav__link">
+      <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/chaos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2072,7 +2370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E5%B7%A5%E5%85%B7%E7%AF%87/commands/" class="md-nav__link">
+      <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/commands/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2093,7 +2391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E5%B7%A5%E5%85%B7%E7%AF%87/crontab/" class="md-nav__link">
+      <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/crontab/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2114,7 +2412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E5%B7%A5%E5%85%B7%E7%AF%87/git/" class="md-nav__link">
+      <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/git/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2135,7 +2433,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E5%B7%A5%E5%85%B7%E7%AF%87/jenkins/" class="md-nav__link">
+      <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/jenkins/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2156,7 +2454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E5%B7%A5%E5%85%B7%E7%AF%87/journalctl/" class="md-nav__link">
+      <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/journalctl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2177,7 +2475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E5%B7%A5%E5%85%B7%E7%AF%87/supervisor/" class="md-nav__link">
+      <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/supervisor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2286,7 +2584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/basic/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2307,7 +2605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/filebeat/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/filebeat/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2328,7 +2626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/interview/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2349,7 +2647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/logstash/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/logstash/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2370,7 +2668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/questions/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/questions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2438,7 +2736,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/basic/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2459,7 +2757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/interview/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2480,7 +2778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/questions/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/questions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2548,7 +2846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/basic/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2569,7 +2867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/command/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/command/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2590,7 +2888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/interview/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2611,7 +2909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/questions/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/questions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2679,7 +2977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/PostgreSQL/advance/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/PostgreSQL/advance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2700,7 +2998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/PostgreSQL/basic/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/PostgreSQL/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2768,7 +3066,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/basic/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2789,7 +3087,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/interview/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2810,7 +3108,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/questions/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/questions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2888,7 +3186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/algorithm/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/algorithm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2909,7 +3207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/leetcode/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/leetcode/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2930,7 +3228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/struct/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/struct/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3039,7 +3337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%9C%8D%E5%8A%A1%E5%99%A8/nginx/basic/" class="md-nav__link">
+      <a href="../../../%E6%9C%8D%E5%8A%A1%E5%99%A8/nginx/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3060,7 +3358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%9C%8D%E5%8A%A1%E5%99%A8/nginx/interview/" class="md-nav__link">
+      <a href="../../../%E6%9C%8D%E5%8A%A1%E5%99%A8/nginx/interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3128,7 +3426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%9C%8D%E5%8A%A1%E5%99%A8/uvicorn/basic/" class="md-nav__link">
+      <a href="../../../%E6%9C%8D%E5%8A%A1%E5%99%A8/uvicorn/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3206,7 +3504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/bloom/" class="md-nav__link">
+      <a href="../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/bloom/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3227,7 +3525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/hash/" class="md-nav__link">
+      <a href="../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/hash/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3248,7 +3546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/id/" class="md-nav__link">
+      <a href="../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/id/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3269,7 +3567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/interview/" class="md-nav__link">
+      <a href="../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3290,7 +3588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/ratelimit/" class="md-nav__link">
+      <a href="../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/ratelimit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3360,7 +3658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http/" class="md-nav__link">
+      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3381,7 +3679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/network/" class="md-nav__link">
+      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/network/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3402,7 +3700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/system/" class="md-nav__link">
+      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/system/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3423,7 +3721,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/websocket/" class="md-nav__link">
+      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/websocket/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3448,8 +3746,6 @@
       
   
   
-    
-  
   
   
     
@@ -3461,11 +3757,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12" >
         
           
           <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="">
@@ -3479,7 +3777,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_12">
             <span class="md-nav__icon md-icon"></span>
             语言篇
@@ -3532,7 +3830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../C%2B%2B/advance/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/C%2B%2B/advance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3553,7 +3851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../C%2B%2B/basic/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/C%2B%2B/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3574,7 +3872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../C%2B%2B/interview/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/C%2B%2B/interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3642,7 +3940,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Golang/advance/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/advance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3663,7 +3961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Golang/basic/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3723,7 +4021,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/cobra/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/cobra/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3744,7 +4042,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/encoding/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/encoding/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3765,7 +4063,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/fmt/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/fmt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3786,7 +4084,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/gin/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/gin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3807,7 +4105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/gorm/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/gorm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3828,7 +4126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/io/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/io/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3849,7 +4147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/jwt-go/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/jwt-go/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3870,7 +4168,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/logrus/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/logrus/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3891,7 +4189,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/net/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/net/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3912,7 +4210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/os/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/os/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3933,7 +4231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/pprof/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/pprof/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3954,7 +4252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/protobuf/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/protobuf/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3975,7 +4273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/sync/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/sync/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3996,7 +4294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/testify/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/testify/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4017,7 +4315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/time/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/time/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4038,7 +4336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/viper/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/viper/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4059,7 +4357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/zap/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/zap/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4093,8 +4391,6 @@
                 
   
   
-    
-  
   
   
     
@@ -4103,11 +4399,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12_3" >
         
           
           <label class="md-nav__link" for="__nav_12_3" id="__nav_12_3_label" tabindex="0">
@@ -4121,7 +4419,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_12_3">
             <span class="md-nav__icon md-icon"></span>
             Python
@@ -4135,7 +4433,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../advance/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/advance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4156,7 +4454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../basic/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4177,7 +4475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../interview/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4195,8 +4493,6 @@
                 
   
   
-    
-  
   
   
     
@@ -4205,11 +4501,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_3_4" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12_3_4" >
         
           
           <label class="md-nav__link" for="__nav_12_3_4" id="__nav_12_3_4_label" tabindex="0">
@@ -4223,7 +4521,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_12_3_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_12_3_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_12_3_4">
             <span class="md-nav__icon md-icon"></span>
             Python常用库
@@ -4237,7 +4535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Seaborn/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/Seaborn/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4258,7 +4556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../beautifulsoup/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/beautifulsoup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4279,7 +4577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../celery/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/celery/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4300,7 +4598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../datastruct/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/datastruct/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4321,7 +4619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../datetime/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/datetime/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4342,7 +4640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../functools/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/functools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4363,7 +4661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../json/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/json/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4384,7 +4682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../logging/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/logging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4405,7 +4703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../math/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/math/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4426,7 +4724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../matpliot/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/matpliot/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4444,30 +4742,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    mock 模块
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/mock/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4476,140 +4754,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#python-mock" class="md-nav__link">
-    <span class="md-ellipsis">
-      Python mock 模块详解
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Python mock 模块详解">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. 基本概念
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. 模拟方法和属性
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. 检查方法调用
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-patch" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. 使用 patch 装饰器/上下文管理器
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-patchobject" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. 使用 patch.object 替换对象属性
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-magicmock" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. MagicMock 类
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. 自动补全属性和方法
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#8-side_effect" class="md-nav__link">
-    <span class="md-ellipsis">
-      8. side_effect 用法
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#9-mock_open" class="md-nav__link">
-    <span class="md-ellipsis">
-      9. mock_open 读取文件
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#10-mock" class="md-nav__link">
-    <span class="md-ellipsis">
-      10. 重置 Mock 对象
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      总结
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -4622,7 +4766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../numpy/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/numpy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4643,7 +4787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../os/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/os/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4664,7 +4808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pandas/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pandas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4685,7 +4829,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pathlib/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pathlib/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4706,7 +4850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pickle/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pickle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4727,7 +4871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pymysql/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pymysql/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4748,7 +4892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pytest/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pytest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4769,7 +4913,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pytorch/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pytorch/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4790,7 +4934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../queue/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/queue/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4811,7 +4955,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../random/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/random/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4832,7 +4976,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../re/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/re/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4853,7 +4997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../redis/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/redis/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4874,7 +5018,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../requests/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/requests/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4895,7 +5039,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../scikit-learn/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scikit-learn/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4916,7 +5060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../scipy/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scipy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4937,7 +5081,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../scrapy/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scrapy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4958,7 +5102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../selenium/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/selenium/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4979,7 +5123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../shutil/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/shutil/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5000,7 +5144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sqlalchemy/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/sqlalchemy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5021,7 +5165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sys/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/sys/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5042,7 +5186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../time/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/time/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5063,7 +5207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../urllib/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/urllib/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5115,174 +5259,217 @@
                   
 
 
-<h1 id="mock">mock 模块</h1>
-<h3 id="python-mock">Python <code>mock</code> 模块详解</h3>
-<p><code>mock</code> 模块（从 Python 3.3 开始集成为 <code>unittest.mock</code>）用于在测试中替换和模拟对象的行为。它可以帮助模拟复杂的依赖关系，使单元测试更加独立和可控。</p>
-<h4 id="1">1. 基本概念</h4>
-<p><code>mock</code> 模块的核心类是 <code>Mock</code>，它允许你创建“伪造”的对象，这些对象可以被动态地赋予任何属性和行为。</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">unittest.mock</span> <span class="kn">import</span> <span class="n">Mock</span>
-
-<span class="c1"># 创建一个 Mock 对象</span>
-<span class="n">mock_obj</span> <span class="o">=</span> <span class="n">Mock</span><span class="p">()</span>
+<h1 id="uvicorn">Uvicorn 教程</h1>
+<h4 id="_1">目录：</h4>
+<ol>
+<li>什么是 Uvicorn？</li>
+<li>Uvicorn 与 ASGI 介绍</li>
+<li>Uvicorn 安装</li>
+<li>快速启动 FastAPI 应用</li>
+<li>Uvicorn 命令行参数详解</li>
+<li>配置文件方式运行 Uvicorn</li>
+<li>使用 <code>gunicorn</code> 和 <code>uvicorn</code> 结合部署</li>
+<li>性能优化</li>
+<li>日志管理与监控</li>
+<li>Uvicorn 应用实战案例</li>
+</ol>
+<hr />
+<h3 id="1-uvicorn">1. 什么是 Uvicorn？</h3>
+<p>Uvicorn 是一个基于 <strong>Python</strong> 的高性能、异步 ASGI 服务器，专门用于运行像 <strong>FastAPI</strong>、<strong>Starlette</strong> 等基于 ASGI 标准的 Web 框架。它支持 HTTP/1.1、HTTP/2 和 WebSockets 协议，适用于构建高并发、低延迟的现代 Web 应用。</p>
+<ul>
+<li><strong>异步处理</strong>：Uvicorn 使用 <code>asyncio</code> 或 <code>uvloop</code> 实现异步、并发处理。</li>
+<li><strong>高性能</strong>：使用 <code>uvloop</code> 提升事件循环性能，接近甚至超越 Node.js 的处理速度。</li>
+<li><strong>轻量快速</strong>：设计简洁，启动速度快，资源占用少。</li>
+</ul>
+<h3 id="2-uvicorn-asgi">2. Uvicorn 与 ASGI 介绍</h3>
+<p>Uvicorn 遵循 <strong>ASGI（Asynchronous Server Gateway Interface）</strong> 标准，ASGI 是 WSGI 的异步版本，旨在支持 WebSockets 和 HTTP/2。ASGI 框架像 FastAPI、Starlette 可以通过 Uvicorn 运行异步应用程序，具备更高的并发能力。</p>
+<hr />
+<h3 id="3-uvicorn">3. Uvicorn 安装</h3>
+<h4 id="31">3.1 基础安装</h4>
+<p>通过 pip 安装 Uvicorn：</p>
+<div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>uvicorn
 </code></pre></div>
 
-<h4 id="2">2. 模拟方法和属性</h4>
-<ul>
-<li><strong>模拟方法</strong>:</li>
-</ul>
-<p><code>python
-  mock_obj.some_method.return_value = 42
-  result = mock_obj.some_method()
-  assert result == 42</code></p>
-<ul>
-<li><strong>模拟属性</strong>:</li>
-</ul>
-<p><code>python
-  mock_obj.some_attr = 'mocked attribute'
-  assert mock_obj.some_attr == 'mocked attribute'</code></p>
-<h4 id="3">3. 检查方法调用</h4>
-<ul>
-<li><strong>检查方法是否被调用</strong>:</li>
-</ul>
-<p><code>python
-  mock_obj.some_method()
-  mock_obj.some_method.assert_called()</code></p>
-<ul>
-<li><strong>检查方法调用次数</strong>:</li>
-</ul>
-<p><code>python
-  mock_obj.some_method()
-  mock_obj.some_method()
-  mock_obj.some_method.assert_called_once()  # 检查是否只调用了一次</code></p>
-<ul>
-<li><strong>检查方法调用的参数</strong>:</li>
-</ul>
-<p><code>python
-  mock_obj.some_method('hello', 'world')
-  mock_obj.some_method.assert_called_with('hello', 'world')</code></p>
-<ul>
-<li><strong>检查方法的调用顺序</strong>:</li>
-</ul>
-<p>```python
-  from unittest.mock import call</p>
-<p>mock_obj.some_method('first')
-  mock_obj.some_method('second')</p>
-<p>mock_obj.some_method.assert_has_calls([call('first'), call('second')])
-  ```</p>
-<h4 id="4-patch">4. 使用 <code>patch</code> 装饰器/上下文管理器</h4>
-<p><code>patch</code> 是 <code>mock</code> 模块中最常用的功能之一，它可以临时替换对象或模块的属性。</p>
-<ul>
-<li><strong>使用 <code>patch</code> 装饰器</strong>:</li>
-</ul>
-<p>```python
-  from unittest.mock import patch</p>
-<p>@patch('module.ClassName')
-  def test_something(mock_class):
-      instance = mock_class.return_value
-      instance.method.return_value = 'mocked'</p>
-<div class="codehilite"><pre><span></span><code>  result = instance.method()
-  assert result == &#39;mocked&#39;
+<h4 id="32-uvicorn">3.2 安装带性能优化的 Uvicorn</h4>
+<p>为了获得更好的性能，可以安装带 <code>uvloop</code> 和 <code>httptools</code> 的标准版本：</p>
+<div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;uvicorn[standard]&quot;</span>
 </code></pre></div>
 
-<p>```</p>
 <ul>
-<li><strong>使用 <code>patch</code> 上下文管理器</strong>:</li>
+<li><strong>uvloop</strong>：基于 <code>libuv</code> 的高性能事件循环库。</li>
+<li><strong>httptools</strong>：用于解析 HTTP 的快速库。</li>
 </ul>
-<p>```python
-  with patch('module.ClassName') as mock_class:
-      instance = mock_class.return_value
-      instance.method.return_value = 'mocked'</p>
-<div class="codehilite"><pre><span></span><code>  result = instance.method()
-  assert result == &#39;mocked&#39;
+<hr />
+<h3 id="4-fastapi">4. 快速启动 FastAPI 应用</h3>
+<p>假设我们有一个 FastAPI 应用，代码位于 <code>main.py</code> 中，内容如下：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">read_root</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Hello, World&quot;</span><span class="p">}</span>
 </code></pre></div>
 
-<p>```</p>
-<h4 id="5-patchobject">5. 使用 <code>patch.object</code> 替换对象属性</h4>
-<p><code>patch.object</code> 允许替换特定对象的属性或方法。</p>
-<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">MyClass</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">method</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="s1">&#39;original&#39;</span>
-
-<span class="n">my_obj</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">()</span>
-
-<span class="k">with</span> <span class="n">patch</span><span class="o">.</span><span class="n">object</span><span class="p">(</span><span class="n">my_obj</span><span class="p">,</span> <span class="s1">&#39;method&#39;</span><span class="p">,</span> <span class="n">return_value</span><span class="o">=</span><span class="s1">&#39;mocked&#39;</span><span class="p">):</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="n">my_obj</span><span class="o">.</span><span class="n">method</span><span class="p">()</span>
-    <span class="k">assert</span> <span class="n">result</span> <span class="o">==</span> <span class="s1">&#39;mocked&#39;</span>
+<p>启动该应用非常简单，只需要运行：</p>
+<div class="codehilite"><pre><span></span><code>uvicorn<span class="w"> </span>main:app<span class="w"> </span>--reload
 </code></pre></div>
 
-<h4 id="6-magicmock">6. <code>MagicMock</code> 类</h4>
-<p><code>MagicMock</code> 是 <code>Mock</code> 的一个子类，它模拟了所有魔法方法（如 <code>__len__</code>、<code>__getitem__</code> 等）。</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">unittest.mock</span> <span class="kn">import</span> <span class="n">MagicMock</span>
-
-<span class="n">mock_list</span> <span class="o">=</span> <span class="n">MagicMock</span><span class="p">()</span>
-
-<span class="c1"># 模拟 list 的行为</span>
-<span class="n">mock_list</span><span class="o">.</span><span class="fm">__len__</span><span class="o">.</span><span class="n">return_value</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">mock_list</span><span class="p">)</span> <span class="o">==</span> <span class="mi">10</span>
-
-<span class="n">mock_list</span><span class="o">.</span><span class="fm">__getitem__</span><span class="o">.</span><span class="n">return_value</span> <span class="o">=</span> <span class="s1">&#39;mocked&#39;</span>
-<span class="k">assert</span> <span class="n">mock_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;mocked&#39;</span>
-</code></pre></div>
-
-<h4 id="7">7. 自动补全属性和方法</h4>
-<p><code>mock</code> 对象的任意属性和方法默认都是 <code>Mock</code> 对象。</p>
-<div class="codehilite"><pre><span></span><code><span class="n">mock_obj</span> <span class="o">=</span> <span class="n">Mock</span><span class="p">()</span>
-
-<span class="c1"># 动态生成属性和方法</span>
-<span class="n">result</span> <span class="o">=</span> <span class="n">mock_obj</span><span class="o">.</span><span class="n">anything</span><span class="o">.</span><span class="n">you</span><span class="o">.</span><span class="n">can</span><span class="o">.</span><span class="n">imagine</span><span class="p">()</span>
-<span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">Mock</span><span class="p">)</span>
-</code></pre></div>
-
-<h4 id="8-side_effect">8. side_effect 用法</h4>
-<p><code>side_effect</code> 可以指定调用方法时的副作用。它可以是一个函数、异常或一个返回值序列。</p>
 <ul>
-<li><strong>抛出异常</strong>:</li>
+<li><code>main</code> 是 Python 文件名（不带 <code>.py</code>）。</li>
+<li><code>app</code> 是 FastAPI 的应用实例。</li>
+<li><code>--reload</code> 启用代码热重载，当代码发生变更时，服务器会自动重启（常用于开发环境）。</li>
 </ul>
-<p><code>python
-  mock_obj.method.side_effect = ValueError("Error occurred")
-  try:
-      mock_obj.method()
-  except ValueError as e:
-      assert str(e) == "Error occurred"</code></p>
-<ul>
-<li><strong>根据输入参数返回不同值</strong>:</li>
-</ul>
-<p>```python
-  def side_effect(arg):
-      return arg * 2</p>
-<p>mock_obj.method.side_effect = side_effect
-  assert mock_obj.method(3) == 6
-  ```</p>
-<ul>
-<li><strong>返回不同的序列值</strong>:</li>
-</ul>
-<p><code>python
-  mock_obj.method.side_effect = [1, 2, 3]
-  assert mock_obj.method() == 1
-  assert mock_obj.method() == 2
-  assert mock_obj.method() == 3</code></p>
-<h4 id="9-mock_open">9. mock_open 读取文件</h4>
-<p><code>mock_open</code> 用于模拟文件读取操作，特别是在测试需要模拟 <code>open()</code> 函数时。</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">unittest.mock</span> <span class="kn">import</span> <span class="n">mock_open</span><span class="p">,</span> <span class="n">patch</span>
-
-<span class="n">m</span> <span class="o">=</span> <span class="n">mock_open</span><span class="p">(</span><span class="n">read_data</span><span class="o">=</span><span class="s1">&#39;file content&#39;</span><span class="p">)</span>
-
-<span class="k">with</span> <span class="n">patch</span><span class="p">(</span><span class="s1">&#39;builtins.open&#39;</span><span class="p">,</span> <span class="n">m</span><span class="p">):</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;file.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-        <span class="n">result</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-        <span class="k">assert</span> <span class="n">result</span> <span class="o">==</span> <span class="s1">&#39;file content&#39;</span>
+<p>访问 <code>http://127.0.0.1:8000/</code> 会返回 JSON 响应：</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Hello, World&quot;</span><span class="p">}</span>
 </code></pre></div>
 
-<h4 id="10-mock">10. 重置 Mock 对象</h4>
-<p><code>reset_mock()</code> 方法用于重置 <code>mock</code> 对象的所有调用记录和状态。</p>
-<div class="codehilite"><pre><span></span><code><span class="n">mock_obj</span> <span class="o">=</span> <span class="n">Mock</span><span class="p">()</span>
-<span class="n">mock_obj</span><span class="o">.</span><span class="n">method</span><span class="p">()</span>
-<span class="n">mock_obj</span><span class="o">.</span><span class="n">reset_mock</span><span class="p">()</span>
-<span class="k">assert</span> <span class="n">mock_obj</span><span class="o">.</span><span class="n">method</span><span class="o">.</span><span class="n">call_count</span> <span class="o">==</span> <span class="mi">0</span>
+<h4 id="41">4.1 并发处理示例</h4>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/delayed&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">delayed_response</span><span class="p">():</span>
+    <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;This request was delayed by 3 seconds&quot;</span><span class="p">}</span>
 </code></pre></div>
 
-<h3 id="_1">总结</h3>
-<p><code>unittest.mock</code> 模块为测试提供了强大的工具，使得你能够轻松地模拟对象、替换依赖并检查交互。它可以帮助你编写更健壮的单元测试，使测试代码与实际代码解耦。</p>
+<p>该 API 延迟 3 秒返回响应，但由于 Uvicorn 的异步处理能力，多个请求可以并发执行，而不会因为单个请求的延迟而阻塞其他请求。</p>
+<hr />
+<h3 id="5-uvicorn">5. Uvicorn 命令行参数详解</h3>
+<p>Uvicorn 提供了丰富的命令行参数，用于控制服务器的运行行为。常用参数包括：</p>
+<div class="codehilite"><pre><span></span><code>uvicorn<span class="w"> </span><span class="o">[</span>module_name<span class="o">]</span>:<span class="o">[</span>app_instance<span class="o">]</span><span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</code></pre></div>
+
+<h4 id="51">5.1 常用命令行参数</h4>
+<ul>
+<li><code>--host</code>: 设置服务器监听的主机地址，默认是 <code>127.0.0.1</code>。</li>
+<li>
+<p>例：<code>--host 0.0.0.0</code> 用于监听所有 IP 地址。</p>
+</li>
+<li>
+<p><code>--port</code>: 设置服务器监听的端口号，默认是 <code>8000</code>。</p>
+</li>
+<li>
+<p>例：<code>--port 8080</code>。</p>
+</li>
+<li>
+<p><code>--reload</code>: 启用代码热重载，适用于开发环境，当代码发生变更时，服务器会自动重启。</p>
+</li>
+<li>
+<p><code>--workers</code>: 指定启动的工作进程数量，适合多核 CPU 的场景，能提高并发能力。</p>
+</li>
+<li>
+<p>例：<code>--workers 4</code>。</p>
+</li>
+<li>
+<p><code>--log-level</code>: 设置日志级别。可选值包括：<code>critical</code>, <code>error</code>, <code>warning</code>, <code>info</code>, <code>debug</code>, <code>trace</code>。</p>
+</li>
+<li>
+<p><code>--ssl-keyfile</code> 和 <code>--ssl-certfile</code>: 设置 SSL 加密，启用 HTTPS 支持。</p>
+</li>
+<li>
+<p>例：<code>--ssl-keyfile /path/to/key.pem --ssl-certfile /path/to/cert.pem</code>。</p>
+</li>
+<li>
+<p><code>--http2</code>: 启用 HTTP/2 支持（需要使用 SSL 加密）。</p>
+</li>
+</ul>
+<h4 id="52">5.2 实用示例</h4>
+<p>启动一个监听所有 IP 地址、端口号为 8080、带有 SSL 支持的应用：</p>
+<div class="codehilite"><pre><span></span><code>uvicorn<span class="w"> </span>main:app<span class="w"> </span>--host<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span>--port<span class="w"> </span><span class="m">8080</span><span class="w"> </span>--ssl-keyfile<span class="o">=</span>key.pem<span class="w"> </span>--ssl-certfile<span class="o">=</span>cert.pem<span class="w"> </span>--http2
+</code></pre></div>
+
+<hr />
+<h3 id="6-uvicorn">6. 配置文件方式运行 Uvicorn</h3>
+<p>在复杂项目中，可以使用配置文件管理 Uvicorn 的启动参数。</p>
+<h4 id="61">6.1 配置文件示例</h4>
+<p>创建一个 <code>uvicorn_config.py</code>：</p>
+<div class="codehilite"><pre><span></span><code><span class="n">config</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0.0.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">8000</span><span class="p">,</span>
+    <span class="s2">&quot;log_level&quot;</span><span class="p">:</span> <span class="s2">&quot;info&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;workers&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="s2">&quot;reload&quot;</span><span class="p">:</span> <span class="kc">True</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>然后通过 <code>--config</code> 参数加载配置文件：</p>
+<div class="codehilite"><pre><span></span><code>uvicorn<span class="w"> </span>main:app<span class="w"> </span>--config<span class="w"> </span>uvicorn_config.py
+</code></pre></div>
+
+<hr />
+<h3 id="7-gunicorn-uvicorn">7. 使用 gunicorn 和 uvicorn 结合部署</h3>
+<p><code>gunicorn</code> 是一个常用于生产环境的 WSGI HTTP 服务器，它可以管理多个 Uvicorn 工作进程以实现高并发和负载均衡。</p>
+<h4 id="71-gunicorn">7.1 安装 gunicorn</h4>
+<div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>gunicorn
+</code></pre></div>
+
+<h4 id="72-gunicorn-uvicorn">7.2 使用 gunicorn 启动 Uvicorn</h4>
+<div class="codehilite"><pre><span></span><code>gunicorn<span class="w"> </span>-w<span class="w"> </span><span class="m">4</span><span class="w"> </span>-k<span class="w"> </span>uvicorn.workers.UvicornWorker<span class="w"> </span>main:app
+</code></pre></div>
+
+<ul>
+<li><code>-w 4</code> 表示启动 4 个工作进程。</li>
+<li><code>-k uvicorn.workers.UvicornWorker</code> 表示使用 Uvicorn 作为工作进程。</li>
+</ul>
+<p>这是推荐的生产环境部署方式，可以充分利用多核 CPU。</p>
+<hr />
+<h3 id="8">8. 性能优化</h3>
+<h4 id="81-uvloop">8.1 使用 uvloop</h4>
+<p><code>uvloop</code> 是一个基于 <code>libuv</code> 的事件循环库，能够大幅提升异步应用的性能。安装 <code>uvloop</code> 后，Uvicorn 会自动使用：</p>
+<div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>uvloop
+</code></pre></div>
+
+<h4 id="82-http2">8.2 启用 HTTP/2</h4>
+<p>启用 HTTP/2 提升并发处理能力和传输效率：</p>
+<div class="codehilite"><pre><span></span><code>uvicorn<span class="w"> </span>main:app<span class="w"> </span>--ssl-keyfile<span class="o">=</span>key.pem<span class="w"> </span>--ssl-certfile<span class="o">=</span>cert.pem<span class="w"> </span>--http2
+</code></pre></div>
+
+<h4 id="83">8.3 调整工作进程</h4>
+<p>根据服务器的 CPU 核数调整 <code>--workers</code> 选项，以充分利用多核资源。</p>
+<hr />
+<h3 id="9">9. 日志管理与监控</h3>
+<p>Uvicorn 提供丰富的日志功能，默认会输出 <code>info</code> 级别的日志。通过 <code>--log-level</code> 参数可以控制日志的详细程度：</p>
+<ul>
+<li><code>critical</code>: 仅记录严重错误。</li>
+<li><code>error</code>: 记录所有错误。</li>
+<li><code>warning</code>: 记录警告和错误。</li>
+<li><code>info</code>: 默认级别，记录一般操作信息。</li>
+<li><code>debug</code>: 输出调试信息，适合用于开发阶段。</li>
+<li><code>trace</code>: 最详细的日志输出，通常用于追踪错误和调试问题。</li>
+</ul>
+<p>可以使用外部日志工具，如 <strong>ELK</strong> 堆栈（Elasticsearch、Logstash、Kibana）或 <strong>Prometheus</strong> 进行日志和性能监控。</p>
+<hr />
+<h3 id="10-uvicorn">10. Uvicorn 应用实战案例</h3>
+<h4 id="101-api">10.1 构建一个简单的 API</h4>
+<div class="codehilite"><pre><span></span><code><span class="c1"># main.py</span>
+<span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">read_root</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Hello Uvicorn&quot;</span><span class="p">}</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/items/</span><span class="si">{item_id}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">read_item</span><span class="p">(</span><span class="n">item_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">q</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;item_id&quot;</span><span class="p">:</span> <span class="n">item_id</span><span class="p">,</span> <span class="s2">&quot;q&quot;</span><span class="p">:</span> <span class="n">q</span><span class="p">}</span>
+</code></pre></div>
+
+<p>启动该应用：</p>
+<div class="codehilite"><pre><span></span><code>uvicorn<span class="w"> </span>main:app<span class="w"> </span>--reload
+</code></pre></div>
+
+<p>访问 <code>http://127.0.0.1:8000/items/42?q=test</code> 会返回：</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;item_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;q&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;test&quot;</span><span class="p">}</span>
+</code></pre></div>
+
+<hr />
+<h3 id="_2">总结</h3>
+<p>Uvicorn 是一个高效、轻量级的 ASGI 服务器，专为异步 Web 应用设计。通过结合 FastAPI 等框架，以及优化性能参数（如 <code>uvloop</code>、HTTP/2、合理的工作进程数），Uvicorn 可以在生产环境中提供出色的并发和性能表现。</p>
 
 
 
@@ -5329,10 +5516,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.expand", "navigation.sections", "toc.integrate", "search.highlight", "search.suggest", "header.autohide", "footer.copyright", "footer.text", "code.annotate", "content.code", "material.nav", "material.switch", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand", "navigation.sections", "toc.integrate", "search.highlight", "search.suggest", "header.autohide", "footer.copyright", "footer.text", "code.annotate", "content.code", "material.nav", "material.switch", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.525ec568.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.525ec568.min.js"></script>
       
     
   </body>
