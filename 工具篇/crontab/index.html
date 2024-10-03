@@ -13,25 +13,25 @@
       
       
       
-        <link rel="prev" href="../gunicorn/">
+        <link rel="prev" href="../commands/">
       
       
-        <link rel="next" href="../practice/">
+        <link rel="next" href="../git/">
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
     
     
       
-        <title>FastAPI 面试手册 - IT-手册</title>
+        <title>Crontab - IT-手册</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.8c3ca2c6.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,9 +50,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../css/extra.css">
+      <link rel="stylesheet" href="../../css/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#fastapi" class="md-skip">
+        <a href="#linux-crontab" class="md-skip">
           跳转至
         </a>
       
@@ -94,7 +94,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../.." title="IT-手册" class="md-header__button md-logo" aria-label="IT-手册" data-md-component="logo">
+    <a href="../.." title="IT-手册" class="md-header__button md-logo" aria-label="IT-手册" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              FastAPI 面试手册
+              Crontab
             
           </span>
         </div>
@@ -219,7 +219,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="IT-手册" class="md-nav__button md-logo" aria-label="IT-手册" data-md-component="logo">
+    <a href="../.." title="IT-手册" class="md-nav__button md-logo" aria-label="IT-手册" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -237,7 +237,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -254,8 +254,6 @@
       
   
   
-    
-  
   
   
     
@@ -267,11 +265,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -285,7 +285,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Web篇
@@ -338,7 +338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Django/advance/" class="md-nav__link">
+      <a href="../../Web%E7%AF%87/Django/advance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -359,7 +359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Django/basic/" class="md-nav__link">
+      <a href="../../Web%E7%AF%87/Django/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -380,7 +380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Django/interview/" class="md-nav__link">
+      <a href="../../Web%E7%AF%87/Django/interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -401,7 +401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Django/questions/" class="md-nav__link">
+      <a href="../../Web%E7%AF%87/Django/questions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -422,7 +422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Django/restful/" class="md-nav__link">
+      <a href="../../Web%E7%AF%87/Django/restful/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -448,8 +448,6 @@
                 
   
   
-    
-  
   
   
     
@@ -458,11 +456,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -476,7 +476,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             FastAPI
@@ -490,7 +490,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advance./" class="md-nav__link">
+      <a href="../../Web%E7%AF%87/FastAPI/advance./" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -511,7 +511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../basic/" class="md-nav__link">
+      <a href="../../Web%E7%AF%87/FastAPI/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -532,7 +532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gunicorn/" class="md-nav__link">
+      <a href="../../Web%E7%AF%87/FastAPI/gunicorn/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -550,30 +550,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    FastAPI 面试手册
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Web%E7%AF%87/FastAPI/interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -582,218 +562,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#fastapi_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      一、FastAPI 基础概念
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="一、FastAPI 基础概念">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11-fastapi" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.1 举例说明：什么是 FastAPI，它的优势是什么？
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      二、路由与请求处理
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="二、路由与请求处理">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-fastapi" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.1 举例说明：如何在 FastAPI 中定义一个简单的路由？
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      三、请求参数
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="三、请求参数">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31-fastapi" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.1 举例说明：如何在 FastAPI 中处理路径参数和查询参数？
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      四、请求体和表单数据
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="四、请求体和表单数据">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41-fastapi-json" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.1 举例说明：如何在 FastAPI 中处理 JSON 请求体？
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      五、依赖注入
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="五、依赖注入">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#51-fastapi" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.1 举例说明：如何在 FastAPI 中使用依赖注入？
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      六、异常处理
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="六、异常处理">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#61-fastapi" class="md-nav__link">
-    <span class="md-ellipsis">
-      6.1 举例说明：如何在 FastAPI 中处理异常？
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fastapi_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      七、测试 FastAPI 应用
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="七、测试 FastAPI 应用">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#71-fastapi" class="md-nav__link">
-    <span class="md-ellipsis">
-      7.1 举例说明：如何测试一个 FastAPI 应用？
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fastapi_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      八、部署 FastAPI 应用
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="八、部署 FastAPI 应用">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#81-fastapi" class="md-nav__link">
-    <span class="md-ellipsis">
-      8.1 举例说明：如何部署一个 FastAPI 应用？
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -806,7 +574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../practice/" class="md-nav__link">
+      <a href="../../Web%E7%AF%87/FastAPI/practice/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -874,7 +642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Flask/advance/" class="md-nav__link">
+      <a href="../../Web%E7%AF%87/Flask/advance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -895,7 +663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Flask/basic/" class="md-nav__link">
+      <a href="../../Web%E7%AF%87/Flask/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -916,7 +684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Flask/interview/" class="md-nav__link">
+      <a href="../../Web%E7%AF%87/Flask/interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -937,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Flask/questions/" class="md-nav__link">
+      <a href="../../Web%E7%AF%87/Flask/questions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1054,7 +822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/basic/" class="md-nav__link">
+      <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1075,7 +843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/interview/" class="md-nav__link">
+      <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1143,7 +911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/rabbitmq/basic/" class="md-nav__link">
+      <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/rabbitmq/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1164,7 +932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/rabbitmq/interview/" class="md-nav__link">
+      <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/rabbitmq/interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1232,7 +1000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/zookeeper/basic/" class="md-nav__link">
+      <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/zookeeper/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1253,7 +1021,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/zookeeper/interview/" class="md-nav__link">
+      <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/zookeeper/interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1370,7 +1138,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/alert/" class="md-nav__link">
+      <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/alert/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1391,7 +1159,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/basic/" class="md-nav__link">
+      <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1412,7 +1180,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/prometheus/" class="md-nav__link">
+      <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/prometheus/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1433,7 +1201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/promql/" class="md-nav__link">
+      <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/promql/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1501,7 +1269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/basic/" class="md-nav__link">
+      <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1522,7 +1290,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/interview/" class="md-nav__link">
+      <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1590,7 +1358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/basic/" class="md-nav__link">
+      <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1611,7 +1379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/crictl/" class="md-nav__link">
+      <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/crictl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1632,7 +1400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/helm/" class="md-nav__link">
+      <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/helm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1653,7 +1421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/interview/" class="md-nav__link">
+      <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1674,7 +1442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/monitor/" class="md-nav__link">
+      <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/monitor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1791,7 +1559,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/LangChain/advance/" class="md-nav__link">
+      <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/LangChain/advance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1812,7 +1580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/LangChain/basic/" class="md-nav__link">
+      <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/LangChain/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1880,7 +1648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/advance/" class="md-nav__link">
+      <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/advance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1901,7 +1669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/basic/" class="md-nav__link">
+      <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1922,7 +1690,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/interview/" class="md-nav__link">
+      <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1990,7 +1758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/advance/" class="md-nav__link">
+      <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/advance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2011,7 +1779,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/basic/" class="md-nav__link">
+      <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2032,7 +1800,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/interview/" class="md-nav__link">
+      <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2100,7 +1868,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/advance/" class="md-nav__link">
+      <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/advance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2121,7 +1889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/basic/" class="md-nav__link">
+      <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2142,7 +1910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/interview/" class="md-nav__link">
+      <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2175,8 +1943,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -2186,13 +1956,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
@@ -2206,7 +1974,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             工具篇
@@ -2220,7 +1988,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/SRE/" class="md-nav__link">
+      <a href="../SRE/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2241,7 +2009,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/SonarQube/" class="md-nav__link">
+      <a href="../SonarQube/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2262,7 +2030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/chaos/" class="md-nav__link">
+      <a href="../chaos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2283,7 +2051,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/commands/" class="md-nav__link">
+      <a href="../commands/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2301,10 +2069,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/crontab/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Crontab
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2313,6 +2099,378 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#linux-crontab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux 定时任务（Crontab）详解
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Linux 定时任务（Crontab）详解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      目录
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 什么是 Linux 定时任务？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-cron-crontab" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. cron 和 crontab 基础
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. cron 和 crontab 基础">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-cron" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 cron 服务
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-crontab" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 crontab 文件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 基本概念
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-crontab" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. crontab 文件的格式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-crontab" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. crontab 命令详解
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. crontab 命令详解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-crontab" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 查看当前用户的 crontab 任务
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-crontab" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 编辑当前用户的 crontab 文件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-crontab" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 删除当前用户的 crontab 任务
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-crontab" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 用 crontab 从文件加载任务
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 常见的时间表达方式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 常见的时间表达方式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 通配符
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 具体数值
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 多选和区间
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 步长
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5 常用时间表达
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-crontab" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. crontab 的实际使用案例
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. crontab 的实际使用案例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 自动备份数据库
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 清理临时文件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 定期重启服务
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-crontab" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 环境变量在 crontab 中的使用
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. 日志管理与问题排查
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. 日志管理与问题排查">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-cron" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1 查看 cron 日志
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2 输出重定向
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-cron" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. cron 服务管理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. cron 服务管理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-cron" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.1 启动 cron 服务
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-cron" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.2 查看 cron 服务状态
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-cron" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3 开机自动启动 cron 服务
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. 安全性与用户权限
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. 安全性与用户权限">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.1 用户权限管理
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. 总结
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2325,7 +2483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/git/" class="md-nav__link">
+      <a href="../git/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2346,7 +2504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/jenkins/" class="md-nav__link">
+      <a href="../jenkins/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2367,7 +2525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/journalctl/" class="md-nav__link">
+      <a href="../journalctl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2388,7 +2546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/supervisor/" class="md-nav__link">
+      <a href="../supervisor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2497,7 +2655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/basic/" class="md-nav__link">
+      <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2518,7 +2676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/filebeat/" class="md-nav__link">
+      <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/filebeat/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2539,7 +2697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/interview/" class="md-nav__link">
+      <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2560,7 +2718,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/logstash/" class="md-nav__link">
+      <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/logstash/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2581,7 +2739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/questions/" class="md-nav__link">
+      <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/questions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2649,7 +2807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/basic/" class="md-nav__link">
+      <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2670,7 +2828,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/interview/" class="md-nav__link">
+      <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2691,7 +2849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/questions/" class="md-nav__link">
+      <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/questions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2759,7 +2917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/basic/" class="md-nav__link">
+      <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2780,7 +2938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/command/" class="md-nav__link">
+      <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/command/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2801,7 +2959,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/interview/" class="md-nav__link">
+      <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2822,7 +2980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/questions/" class="md-nav__link">
+      <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/questions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2890,7 +3048,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/PostgreSQL/advance/" class="md-nav__link">
+      <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/PostgreSQL/advance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2911,7 +3069,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/PostgreSQL/basic/" class="md-nav__link">
+      <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/PostgreSQL/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2979,7 +3137,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/basic/" class="md-nav__link">
+      <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3000,7 +3158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/interview/" class="md-nav__link">
+      <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3021,7 +3179,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/questions/" class="md-nav__link">
+      <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/questions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3099,7 +3257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/algorithm/" class="md-nav__link">
+      <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/algorithm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3120,7 +3278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/leetcode/" class="md-nav__link">
+      <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/leetcode/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3141,7 +3299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/struct/" class="md-nav__link">
+      <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/struct/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3250,7 +3408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E6%9C%8D%E5%8A%A1%E5%99%A8/nginx/basic/" class="md-nav__link">
+      <a href="../../%E6%9C%8D%E5%8A%A1%E5%99%A8/nginx/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3271,7 +3429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E6%9C%8D%E5%8A%A1%E5%99%A8/nginx/interview/" class="md-nav__link">
+      <a href="../../%E6%9C%8D%E5%8A%A1%E5%99%A8/nginx/interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3339,7 +3497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E6%9C%8D%E5%8A%A1%E5%99%A8/uvicorn/basic/" class="md-nav__link">
+      <a href="../../%E6%9C%8D%E5%8A%A1%E5%99%A8/uvicorn/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3417,7 +3575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/bloom/" class="md-nav__link">
+      <a href="../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/bloom/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3438,7 +3596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/hash/" class="md-nav__link">
+      <a href="../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/hash/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3459,7 +3617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/id/" class="md-nav__link">
+      <a href="../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/id/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3480,7 +3638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/interview/" class="md-nav__link">
+      <a href="../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3501,7 +3659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/ratelimit/" class="md-nav__link">
+      <a href="../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/ratelimit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3571,7 +3729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http/" class="md-nav__link">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3592,7 +3750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/network/" class="md-nav__link">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/network/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3613,7 +3771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/system/" class="md-nav__link">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/system/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3634,7 +3792,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/websocket/" class="md-nav__link">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/websocket/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3743,7 +3901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/C%2B%2B/advance/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/C%2B%2B/advance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3764,7 +3922,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/C%2B%2B/basic/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/C%2B%2B/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3785,7 +3943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/C%2B%2B/interview/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/C%2B%2B/interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3853,7 +4011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/advance/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/advance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3874,7 +4032,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/basic/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3934,7 +4092,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/cobra/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/cobra/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3955,7 +4113,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/encoding/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/encoding/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3976,7 +4134,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/fmt/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/fmt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3997,7 +4155,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/gin/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/gin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4018,7 +4176,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/gorm/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/gorm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4039,7 +4197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/io/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/io/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4060,7 +4218,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/jwt-go/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/jwt-go/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4081,7 +4239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/logrus/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/logrus/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4102,7 +4260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/net/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/net/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4123,7 +4281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/os/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/os/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4144,7 +4302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/pprof/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/pprof/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4165,7 +4323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/protobuf/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/protobuf/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4186,7 +4344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/sync/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/sync/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4207,7 +4365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/testify/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/testify/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4228,7 +4386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/time/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/time/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4249,7 +4407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/viper/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/viper/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4270,7 +4428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/zap/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/zap/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4346,7 +4504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/advance/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/advance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4367,7 +4525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/basic/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4388,7 +4546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/interview/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4448,7 +4606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/Seaborn/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/Seaborn/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4469,7 +4627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/beautifulsoup/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/beautifulsoup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4490,7 +4648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/celery/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/celery/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4511,7 +4669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/datastruct/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/datastruct/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4532,7 +4690,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/datetime/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/datetime/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4553,7 +4711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/functools/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/functools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4574,7 +4732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/json/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/json/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4595,7 +4753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/logging/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/logging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4616,7 +4774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/math/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/math/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4637,7 +4795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/matpliot/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/matpliot/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4658,7 +4816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/mock/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/mock/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4679,7 +4837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/numpy/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/numpy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4700,7 +4858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/os/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/os/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4721,7 +4879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pandas/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pandas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4742,7 +4900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pathlib/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pathlib/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4763,7 +4921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pickle/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pickle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4784,7 +4942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pymysql/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pymysql/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4805,7 +4963,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pytest/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pytest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4826,7 +4984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pytorch/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pytorch/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4847,7 +5005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/queue/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/queue/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4868,7 +5026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/random/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/random/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4889,7 +5047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/re/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/re/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4910,7 +5068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/redis/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/redis/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4931,7 +5089,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/requests/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/requests/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4952,7 +5110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scikit-learn/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scikit-learn/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4973,7 +5131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scipy/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scipy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4994,7 +5152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scrapy/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scrapy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5015,7 +5173,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/selenium/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/selenium/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5036,7 +5194,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/shutil/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/shutil/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5057,7 +5215,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/sqlalchemy/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/sqlalchemy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5078,7 +5236,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/sys/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/sys/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5099,7 +5257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/time/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/time/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5120,7 +5278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/urllib/" class="md-nav__link">
+      <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/urllib/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5172,188 +5330,192 @@
                   
 
 
-<h1 id="fastapi">FastAPI  面试手册</h1>
-<p>在 FastAPI 的面试中，面试官通常会考察候选人对 FastAPI 的基本概念、实际应用以及如何应对各种开发场景的能力。以下是一些典型的 FastAPI 面试题目和解答举例，帮助你更好地理解面试中的问题和解答思路。</p>
-<h3 id="fastapi_1">一、FastAPI 基础概念</h3>
-<h4 id="11-fastapi">1.1 <strong>举例说明：什么是 FastAPI，它的优势是什么？</strong></h4>
-<ul>
-<li><strong>示例问题</strong>：请简要介绍一下 FastAPI，以及它相比其他 Python Web 框架的优势。</li>
-<li><strong>详细解答</strong>：</li>
-<li><strong>FastAPI 介绍</strong>：FastAPI 是一个基于 Python 3.6+ 的现代 Web 框架，用于构建快速（high-performance）API，基于标准 Python 类型提示。</li>
-<li><strong>优势</strong>：<ul>
-<li><strong>高性能</strong>：基于 Starlette 和 Pydantic，性能与 Node.js 和 Go 相当。</li>
-<li><strong>自动生成文档</strong>：支持自动生成 OpenAPI 和 JSON Schema 文档。</li>
-<li><strong>依赖注入</strong>：内置的依赖注入系统，便于管理复杂的依赖关系。</li>
-<li><strong>类型安全</strong>：利用 Python 类型提示确保参数验证和类型检查。</li>
-</ul>
-</li>
-</ul>
-<h3 id="_1">二、路由与请求处理</h3>
-<h4 id="21-fastapi">2.1 <strong>举例说明：如何在 FastAPI 中定义一个简单的路由？</strong></h4>
-<ul>
-<li><strong>示例问题</strong>：请展示如何使用 FastAPI 定义一个返回 "Hello, World!" 的 GET 请求。</li>
-<li><strong>详细解答</strong>：</li>
-<li><strong>问题分析</strong>：在 FastAPI 中，通过装饰器 <code>@app.get()</code> 定义 GET 请求路由。</li>
-<li><strong>处理方法</strong>：<ul>
-<li><strong>定义路由</strong>：通过装饰器定义路由，并在路由函数中返回响应内容。</li>
-</ul>
-</li>
-</ul>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
+  <h1>Crontab</h1>
 
-<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
-
-<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">read_root</span><span class="p">():</span>
-    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Hello, World!&quot;</span><span class="p">}</span>
+<h2 id="linux-crontab">Linux 定时任务（Crontab）详解</h2>
+<p>在 Linux 系统中，定时任务通常通过 <code>cron</code> 服务来管理。<code>cron</code> 是一个非常重要的系统守护进程，用于在指定时间或周期执行特定任务。<code>crontab</code> 是用来定义这些任务的工具。</p>
+<h3 id="_1">目录</h3>
+<ol>
+<li>什么是 Linux 定时任务？</li>
+<li><code>cron</code> 和 <code>crontab</code> 基础</li>
+<li><code>crontab</code> 文件的格式</li>
+<li><code>crontab</code> 命令详解</li>
+<li>常见的时间表达方式</li>
+<li><code>crontab</code> 的实际使用案例</li>
+<li>环境变量在 <code>crontab</code> 中的使用</li>
+<li>日志管理与问题排查</li>
+<li><code>cron</code> 服务管理</li>
+<li>安全性与用户权限</li>
+<li>总结</li>
+</ol>
+<hr />
+<h3 id="1-linux">1. 什么是 Linux 定时任务？</h3>
+<p>Linux 定时任务是指预先设定的系统或用户操作，按照指定的时间间隔自动执行。它通常用于以下场景：
+- 定期备份数据
+- 定时执行脚本或应用
+- 清理临时文件
+- 自动更新系统</p>
+<p>定时任务主要由 <code>cron</code> 服务驱动，而任务的定义则保存在 <code>crontab</code> 中。<code>cron</code> 是 Linux 系统中最常用的任务调度工具。</p>
+<hr />
+<h3 id="2-cron-crontab">2. <code>cron</code> 和 <code>crontab</code> 基础</h3>
+<h4 id="21-cron">2.1 <code>cron</code> 服务</h4>
+<p><code>cron</code> 是系统守护进程，它会每分钟检查一次计划任务文件（<code>crontab</code>），当检测到有任务需要执行时，便会按照设定执行。</p>
+<h4 id="22-crontab">2.2 <code>crontab</code> 文件</h4>
+<p><code>crontab</code> 文件是用来定义任务的，文件中的每一行代表一个任务的调度信息。每个用户都可以有自己的 <code>crontab</code> 文件，且只有该用户能够修改它。</p>
+<h4 id="23">2.3 基本概念</h4>
+<ul>
+<li><strong>系统级别的定时任务</strong>：由管理员设定，通常保存在 <code>/etc/crontab</code> 或 <code>/etc/cron.d/</code> 下。</li>
+<li><strong>用户级别的定时任务</strong>：由普通用户设定，每个用户都可以通过 <code>crontab</code> 工具定义自己的定时任务。</li>
+</ul>
+<hr />
+<h3 id="3-crontab">3. <code>crontab</code> 文件的格式</h3>
+<p><code>crontab</code> 文件由 6 部分组成：前 5 部分表示任务执行的时间，第 6 部分表示要执行的命令。</p>
+<div class="codehilite"><pre><span></span><code>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span><span class="nb">command</span>
 </code></pre></div>
 
-<h3 id="_2">三、请求参数</h3>
-<h4 id="31-fastapi">3.1 <strong>举例说明：如何在 FastAPI 中处理路径参数和查询参数？</strong></h4>
-<ul>
-<li><strong>示例问题</strong>：请编写一个 API 接口，它接受一个用户名作为路径参数，并可选地接受一个年龄作为查询参数。</li>
-<li><strong>详细解答</strong>：</li>
-<li><strong>问题分析</strong>：路径参数直接在 URL 路径中定义，查询参数通过 URL 的 <code>?</code> 号后面定义。</li>
-<li><strong>处理方法</strong>：<ul>
-<li><strong>路径参数</strong>：在路径中定义参数，并在函数签名中相应定义。</li>
-<li><strong>查询参数</strong>：在函数签名中定义可选参数，并设置默认值。</li>
-</ul>
-</li>
-</ul>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
-
-<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
-
-<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/users/</span><span class="si">{username}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">read_user</span><span class="p">(</span><span class="n">username</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="n">username</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="n">age</span><span class="p">}</span>
+<p>每个字段的含义：
+1. <strong>分钟</strong>：0-59
+2. <strong>小时</strong>：0-23
+3. <strong>日期</strong>：1-31
+4. <strong>月份</strong>：1-12
+5. <strong>星期</strong>：0-7（0 和 7 都代表星期天）
+6. <strong>命令</strong>：需要执行的命令或脚本路径</p>
+<p>例如：</p>
+<div class="codehilite"><pre><span></span><code><span class="m">30</span><span class="w"> </span><span class="m">2</span><span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>/path/to/command
 </code></pre></div>
 
-<h3 id="_3">四、请求体和表单数据</h3>
-<h4 id="41-fastapi-json">4.1 <strong>举例说明：如何在 FastAPI 中处理 JSON 请求体？</strong></h4>
-<ul>
-<li><strong>示例问题</strong>：请编写一个 API 接口，它接受一个包含用户信息的 JSON 对象，并返回处理后的用户数据。</li>
-<li><strong>详细解答</strong>：</li>
-<li><strong>问题分析</strong>：FastAPI 使用 Pydantic 模型来定义和验证请求体的数据结构。</li>
-<li><strong>处理方法</strong>：<ul>
-<li><strong>定义 Pydantic 模型</strong>：创建 Pydantic 模型类来描述请求体结构。</li>
-<li><strong>请求体处理</strong>：通过函数参数接收并处理 JSON 数据。</li>
-</ul>
-</li>
-</ul>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
-<span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span>
-
-<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
-
-<span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
-    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
-    <span class="n">age</span><span class="p">:</span> <span class="nb">int</span>
-
-<span class="nd">@app</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/users/&quot;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">create_user</span><span class="p">(</span><span class="n">user</span><span class="p">:</span> <span class="n">User</span><span class="p">):</span>
-    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="n">user</span><span class="o">.</span><span class="n">age</span><span class="p">}</span>
+<p>上面的定时任务表示每天凌晨 2:30 执行 <code>/path/to/command</code> 这个命令。</p>
+<hr />
+<h3 id="4-crontab">4. <code>crontab</code> 命令详解</h3>
+<h4 id="41-crontab">4.1 查看当前用户的 <code>crontab</code> 任务</h4>
+<div class="codehilite"><pre><span></span><code>crontab<span class="w"> </span>-l
 </code></pre></div>
 
-<h3 id="_4">五、依赖注入</h3>
-<h4 id="51-fastapi">5.1 <strong>举例说明：如何在 FastAPI 中使用依赖注入？</strong></h4>
-<ul>
-<li><strong>示例问题</strong>：如何定义一个依赖，它会在每个请求中打印一条日志，并在路由函数中使用它？</li>
-<li><strong>详细解答</strong>：</li>
-<li><strong>问题分析</strong>：FastAPI 允许通过 <code>Depends</code> 进行依赖注入，便于代码重用和逻辑分离。</li>
-<li><strong>处理方法</strong>：<ul>
-<li><strong>定义依赖</strong>：创建一个函数，用作依赖。</li>
-<li><strong>使用依赖</strong>：在路由函数中通过 <code>Depends</code> 注入该依赖。</li>
-</ul>
-</li>
-</ul>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span><span class="p">,</span> <span class="n">Depends</span>
-
-<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
-
-<span class="k">def</span> <span class="nf">log_dependency</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Log: New request received&quot;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="s2">&quot;Dependency injected&quot;</span>
-
-<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/items/&quot;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">read_items</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Depends</span><span class="p">(</span><span class="n">log_dependency</span><span class="p">)):</span>
-    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="n">log</span><span class="p">}</span>
+<h4 id="42-crontab">4.2 编辑当前用户的 <code>crontab</code> 文件</h4>
+<div class="codehilite"><pre><span></span><code>crontab<span class="w"> </span>-e
 </code></pre></div>
 
-<h3 id="_5">六、异常处理</h3>
-<h4 id="61-fastapi">6.1 <strong>举例说明：如何在 FastAPI 中处理异常？</strong></h4>
-<ul>
-<li><strong>示例问题</strong>：如何定义一个自定义异常并在 FastAPI 中处理它？</li>
-<li><strong>详细解答</strong>：</li>
-<li><strong>问题分析</strong>：可以通过 <code>HTTPException</code> 抛出标准异常，也可以通过自定义异常处理器处理特殊情况。</li>
-<li><strong>处理方法</strong>：<ul>
-<li><strong>定义自定义异常</strong>：通过继承 Python 的 <code>Exception</code> 类创建自定义异常。</li>
-<li><strong>注册异常处理器</strong>：使用 <code>app.exception_handler</code> 装饰器注册处理器。</li>
-</ul>
-</li>
-</ul>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span><span class="p">,</span> <span class="n">HTTPException</span>
-<span class="kn">from</span> <span class="nn">fastapi.responses</span> <span class="kn">import</span> <span class="n">JSONResponse</span>
-
-<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
-
-<span class="k">class</span> <span class="nc">CustomException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-
-<span class="nd">@app</span><span class="o">.</span><span class="n">exception_handler</span><span class="p">(</span><span class="n">CustomException</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">custom_exception_handler</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">exc</span><span class="p">:</span> <span class="n">CustomException</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">JSONResponse</span><span class="p">(</span><span class="n">status_code</span><span class="o">=</span><span class="mi">418</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;Oops! </span><span class="si">{</span><span class="n">exc</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> did something wrong.&quot;</span><span class="p">})</span>
-
-<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/items/</span><span class="si">{name}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">read_item</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;bad&quot;</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="n">CustomException</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
-    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">name</span><span class="p">}</span>
+<p>进入编辑模式后，你可以定义或修改定时任务。保存退出后，任务会立即生效。</p>
+<h4 id="43-crontab">4.3 删除当前用户的 <code>crontab</code> 任务</h4>
+<div class="codehilite"><pre><span></span><code>crontab<span class="w"> </span>-r
 </code></pre></div>
 
-<h3 id="fastapi_2">七、测试 FastAPI 应用</h3>
-<h4 id="71-fastapi">7.1 <strong>举例说明：如何测试一个 FastAPI 应用？</strong></h4>
-<ul>
-<li><strong>示例问题</strong>：请展示如何使用 <code>TestClient</code> 测试一个 FastAPI 应用的 API 路由。</li>
-<li><strong>详细解答</strong>：</li>
-<li><strong>问题分析</strong>：FastAPI 提供了 <code>TestClient</code> 来模拟请求，测试 API 的行为。</li>
-<li><strong>处理方法</strong>：<ul>
-<li><strong>测试客户端</strong>：使用 <code>TestClient</code> 创建客户端，发送请求并验证响应。</li>
-</ul>
-</li>
-</ul>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi.testclient</span> <span class="kn">import</span> <span class="n">TestClient</span>
-<span class="kn">from</span> <span class="nn">myapp</span> <span class="kn">import</span> <span class="n">app</span>  <span class="c1"># 假设上面的 FastAPI 应用在 myapp.py 文件中</span>
-
-<span class="n">client</span> <span class="o">=</span> <span class="n">TestClient</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">test_read_root</span><span class="p">():</span>
-    <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
-    <span class="k">assert</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span>
-    <span class="k">assert</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span> <span class="o">==</span> <span class="p">{</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Hello, World!&quot;</span><span class="p">}</span>
+<p>此命令会删除当前用户的所有定时任务。</p>
+<h4 id="44-crontab">4.4 用 <code>crontab</code> 从文件加载任务</h4>
+<div class="codehilite"><pre><span></span><code>crontab<span class="w"> </span>filename
 </code></pre></div>
 
-<h3 id="fastapi_3">八、部署 FastAPI 应用</h3>
-<h4 id="81-fastapi">8.1 <strong>举例说明：如何部署一个 FastAPI 应用？</strong></h4>
+<p>从指定文件导入 <code>crontab</code> 任务，这个文件必须符合 <code>crontab</code> 的格式要求。</p>
+<hr />
+<h3 id="5">5. 常见的时间表达方式</h3>
+<h4 id="51">5.1 通配符</h4>
 <ul>
-<li><strong>示例问题</strong>：你会如何将一个 FastAPI 应用部署到生产环境？</li>
-<li><strong>详细解答</strong>：</li>
-<li><strong>问题分析</strong>：部署 FastAPI 应用的方式多种多样，常见的有使用 Uvicorn 或 Gunicorn。</li>
-<li><strong>处理方法</strong>：<ul>
-<li><strong>本地部署</strong>：使用 Uvicorn 运行应用。</li>
-<li><strong>生产环境部署</strong>：通过 Gunicorn + Uvicorn 多工作进程的方式提高性能。</li>
+<li><code>*</code>：任意值。例如，<code>* * * * *</code> 表示每分钟执行一次。</li>
 </ul>
-</li>
+<h4 id="52">5.2 具体数值</h4>
+<ul>
+<li>数字表示特定时间。例如，<code>0 3 * * *</code> 表示每天凌晨 3 点执行任务。</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="c1"># 使用 Uvicorn 本地运行应用</span>
-uvicorn<span class="w"> </span>myapp:app<span class="w"> </span>--reload
-
-<span class="c1"># 使用 Gunicorn + Uvicorn 部署到生产环境</span>
-gunicorn<span class="w"> </span>-k<span class="w"> </span>uvicorn.workers.UvicornWorker<span class="w"> </span>myapp:app
+<h4 id="53">5.3 多选和区间</h4>
+<ul>
+<li>多个时间值可以用逗号分隔。例如，<code>0,30 * * * *</code> 表示每小时的第 0 分钟和第 30 分钟执行任务。</li>
+<li>通过短横线定义时间区间。例如，<code>1-5</code> 表示从 1 到 5。</li>
+</ul>
+<h4 id="54">5.4 步长</h4>
+<ul>
+<li>使用 <code>/</code> 表示步长。例如，<code>*/10 * * * *</code> 表示每 10 分钟执行一次。</li>
+</ul>
+<h4 id="55">5.5 常用时间表达</h4>
+<ul>
+<li>每天凌晨 12:00 执行任务：</li>
+</ul>
+<p><code>bash
+  0 0 * * * /path/to/command</code></p>
+<ul>
+<li>每 5 分钟执行一次任务：</li>
+</ul>
+<p><code>bash
+  */5 * * * * /path/to/command</code></p>
+<ul>
+<li>每月的第一天凌晨 1 点执行任务：</li>
+</ul>
+<p><code>bash
+  0 1 1 * * /path/to/command</code></p>
+<ul>
+<li>每周一的凌晨 4:00 执行任务：</li>
+</ul>
+<p><code>bash
+  0 4 * * 1 /path/to/command</code></p>
+<hr />
+<h3 id="6-crontab">6. <code>crontab</code> 的实际使用案例</h3>
+<h4 id="61">6.1 自动备份数据库</h4>
+<p>每天凌晨 3 点备份 MySQL 数据库：</p>
+<div class="codehilite"><pre><span></span><code><span class="m">0</span><span class="w"> </span><span class="m">3</span><span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>/usr/bin/mysqldump<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p<span class="w"> </span>my_database<span class="w"> </span>&gt;<span class="w"> </span>/backup/db_backup.sql
 </code></pre></div>
 
-<p>这些示例涵盖了 FastAPI 面试中可能涉及的多个方面，帮助你系统性地理解和回答相关问题。通过这些详细的解答，你可以更好地准备 FastAPI 面试，展现你的技术能力和项目经验。</p>
+<h4 id="62">6.2 清理临时文件</h4>
+<p>每天晚上 11:30 清理 <code>/tmp</code> 目录下超过 7 天的文件：</p>
+<div class="codehilite"><pre><span></span><code><span class="m">30</span><span class="w"> </span><span class="m">23</span><span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>find<span class="w"> </span>/tmp<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-mtime<span class="w"> </span>+7<span class="w"> </span>-exec<span class="w"> </span>rm<span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span>
+</code></pre></div>
+
+<h4 id="63">6.3 定期重启服务</h4>
+<p>每周日凌晨 2 点重启 Apache 服务器：</p>
+<div class="codehilite"><pre><span></span><code><span class="m">0</span><span class="w"> </span><span class="m">2</span><span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span><span class="m">7</span><span class="w"> </span>/usr/sbin/service<span class="w"> </span>apache2<span class="w"> </span>restart
+</code></pre></div>
+
+<hr />
+<h3 id="7-crontab">7. 环境变量在 <code>crontab</code> 中的使用</h3>
+<p><code>crontab</code> 默认执行时的环境变量可能和用户的 Shell 环境不同。如果需要特定的环境变量，可以在 <code>crontab</code> 文件中显式定义。例如：</p>
+<div class="codehilite"><pre><span></span><code><span class="nv">SHELL</span><span class="o">=</span>/bin/bash
+<span class="nv">PATH</span><span class="o">=</span>/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+<span class="nv">MAILTO</span><span class="o">=</span>user@example.com
+</code></pre></div>
+
+<ul>
+<li><code>SHELL</code>：指定使用的 Shell。</li>
+<li><code>PATH</code>：指定可执行文件的查找路径。</li>
+<li><code>MAILTO</code>：指定错误日志发送到的邮箱地址。</li>
+</ul>
+<hr />
+<h3 id="8">8. 日志管理与问题排查</h3>
+<h4 id="81-cron">8.1 查看 <code>cron</code> 日志</h4>
+<p><code>cron</code> 执行的日志可以通过以下方式查看：</p>
+<div class="codehilite"><pre><span></span><code>tail<span class="w"> </span>-f<span class="w"> </span>/var/log/cron
+</code></pre></div>
+
+<p>系统中的定时任务执行日志都会记录在此。</p>
+<h4 id="82">8.2 输出重定向</h4>
+<p>为了方便调试，可以将任务的输出和错误日志重定向到文件：</p>
+<div class="codehilite"><pre><span></span><code><span class="m">0</span><span class="w"> </span><span class="m">5</span><span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>/path/to/command<span class="w"> </span>&gt;<span class="w"> </span>/path/to/logfile.log<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+</code></pre></div>
+
+<ul>
+<li><code>&gt; logfile.log</code> 表示将标准输出重定向到日志文件。</li>
+<li><code>2&gt;&amp;1</code> 表示将错误输出重定向到标准输出。</li>
+</ul>
+<hr />
+<h3 id="9-cron">9. <code>cron</code> 服务管理</h3>
+<h4 id="91-cron">9.1 启动 <code>cron</code> 服务</h4>
+<div class="codehilite"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>crond
+</code></pre></div>
+
+<h4 id="92-cron">9.2 查看 <code>cron</code> 服务状态</h4>
+<div class="codehilite"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>crond
+</code></pre></div>
+
+<h4 id="93-cron">9.3 开机自动启动 <code>cron</code> 服务</h4>
+<div class="codehilite"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>crond
+</code></pre></div>
+
+<hr />
+<h3 id="10">10. 安全性与用户权限</h3>
+<h4 id="101">10.1 用户权限管理</h4>
+<p>系统管理员可以限制某些用户使用 <code>crontab</code> 任务调度器。通过编辑 <code>/etc/cron.allow</code> 或 <code>/etc/cron.deny</code> 文件来控制权限：
+- <strong><code>/etc/cron.allow</code></strong>：列出允许使用 <code>crontab</code> 的用户。
+- <strong><code>/etc/cron.deny</code></strong>：列出禁止使用 <code>crontab</code> 的用户。</p>
+<hr />
+<h3 id="11">11. 总结</h3>
+<p><code>cron</code> 是 Linux 系统中强大的任务调度工具，结合 <code>crontab</code> 文件可以灵活地设置各种定时任务。了解 <code>crontab</code> 的时间表达和正确使用环境变量，可以帮助你轻松实现自动化任务。</p>
 
 
 
@@ -5400,10 +5562,10 @@ gunicorn<span class="w"> </span>-k<span class="w"> </span>uvicorn.workers.Uvicor
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand", "navigation.sections", "toc.integrate", "search.highlight", "search.suggest", "header.autohide", "footer.copyright", "footer.text", "code.annotate", "content.code", "material.nav", "material.switch", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.sections", "toc.integrate", "search.highlight", "search.suggest", "header.autohide", "footer.copyright", "footer.text", "code.annotate", "content.code", "material.nav", "material.switch", "content.code.copy"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.525ec568.min.js"></script>
+      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
       
     
   </body>
