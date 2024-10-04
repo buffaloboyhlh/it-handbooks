@@ -46,6 +46,7 @@
 + [**Nginx**](服务器/nginx/basic.md)
 + [**uvicorn**](服务器/uvicorn/basic.md)
 + [**Gunicorn**](服务器/gunicorn/basic.md)
++ [**uwsgi**](服务器/uwsgi/basic.md)
 
 
 ## 云原生
