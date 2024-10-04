@@ -18,11 +18,13 @@ Gunicorn（Green Unicorn）是一个用于 Python WSGI 应用程序的高性能�
 ### 1. Gunicorn 简介
 
 Gunicorn 是一个兼容 WSGI 的服务器，可以轻松部署 WSGI 应用。它的特点包括：
+
 - **简洁易用**：容易上手，默认配置适合大多数场景。
 - **高并发**：基于 pre-fork 模型，能够很好地处理大量并发请求。
 - **跨平台**：支持多种操作系统，包括 Linux 和 macOS。
 
 Gunicorn 的架构主要包括：
+
 - **Master**：管理 worker 进程。
 - **Worker**：处理请求，通常基于同步、异步或者 gevent 等模式。
 - **Pre-fork 模型**：主进程先启动，然后 fork 出多个 worker 进程。

@@ -21,6 +21,7 @@
 Uvicorn 是基于 ASGI 规范的高性能 Web 服务器，旨在处理异步操作。相比传统的 WSGI（如 Gunicorn），Uvicorn 更适合异步框架，并且支持 WebSockets、Server-Sent Events 等实时通信协议。
 
 主要特点：
+
 - 高性能，适合生产环境
 - 支持异步框架（如 FastAPI, Starlette）
 - 兼容 WebSockets
@@ -70,6 +71,7 @@ uvicorn app:app --reload
 ```
 
 解释：
+
 - `app:app`：第一个 `app` 是文件名，第二个 `app` 是 FastAPI 应用实例。
 - `--reload`：开启自动热重载，当文件发生变化时，服务器会自动重启。
 
