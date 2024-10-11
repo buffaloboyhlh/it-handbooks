@@ -34,6 +34,7 @@
 + [**MongoDB**](数据库/MongoDB/basic.md)
 + [**Elastic**](数据库/Elastic/basic.md)
 + [**PostgreSQL**](数据库/PostgreSQL/basic.md)
++ [**HBase**](数据库/HBase/basic.md)
 
 ## 中间件
 
