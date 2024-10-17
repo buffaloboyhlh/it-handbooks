@@ -24,7 +24,7 @@
     
     
       
-        <title>celery 教程 - IT-手册</title>
+        <title>Celery - IT-手册</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#celery" class="md-skip">
+        <a href="#1-celery" class="md-skip">
           跳转至
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              celery 教程
+              Celery
             
           </span>
         </div>
@@ -4489,14 +4489,12 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   <span class="md-ellipsis">
-    celery 教程
+    Celery
   </span>
   
 
@@ -4507,7 +4505,7 @@
         
   
   <span class="md-ellipsis">
-    celery 教程
+    Celery
   </span>
   
 
@@ -4519,8 +4517,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -4529,92 +4525,407 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#celery_1" class="md-nav__link">
+  <a href="#1-celery" class="md-nav__link">
     <span class="md-ellipsis">
-      Celery 教程：概念和使用方法
+      1. Celery 概述
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Celery 概述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-celery" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 什么是 Celery？
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#1-celery" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#12-celery" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Celery 核心概念
+      1.2 Celery 的主要组件
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#2-celery" class="md-nav__link">
     <span class="md-ellipsis">
-      2. 安装 Celery 和消息代理
+      2. Celery 环境搭建和配置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Celery 环境搭建和配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-celery-redis" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 安装 Celery 和 Redis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 安装 Celery 和 Redis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#redis-macos-ubuntu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redis 安装（MacOS 和 Ubuntu）
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#3-celery" class="md-nav__link">
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
     <span class="md-ellipsis">
-      3. 创建 Celery 应用
+      2.2 基本配置
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#4-celery-worker" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
     <span class="md-ellipsis">
-      4. 运行 Celery Worker
+      2.3 配置文件
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 定义和执行任务
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 定义和执行任务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 创建任务
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 执行任务
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 执行任务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      异步执行任务
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      同步获取任务结果
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 检查任务状态
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 常见的任务状态
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-worker" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Worker 管理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Worker 管理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-worker" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 启动 Worker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-worker" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 停止 Worker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-worker" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 多进程 Worker
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#5" class="md-nav__link">
     <span class="md-ellipsis">
-      5. 调用任务
+      5. 任务重试和错误处理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 任务重试和错误处理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 任务重试
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#6" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
     <span class="md-ellipsis">
-      6. 定时任务调度
+      5.2 任务超时
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#7" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
     <span class="md-ellipsis">
-      7. 任务重试
+      5.3 错误处理
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#8" class="md-nav__link">
-    <span class="md-ellipsis">
-      8. 监控和管理
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#9" class="md-nav__link">
+  <a href="#6-periodic-tasks" class="md-nav__link">
     <span class="md-ellipsis">
-      9. 优化与扩展
+      6. 定时任务（Periodic Tasks）
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="6. 定时任务（Periodic Tasks）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 定义定时任务
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-celery-beat" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 启动 Celery Beat
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-celery" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 监控 Celery
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. 监控 Celery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-flower-celery" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 使用 Flower 监控 Celery
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.1 使用 Flower 监控 Celery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flower" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装 Flower
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flower_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      启动 Flower
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 使用命令行工具
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.2 使用命令行工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#worker" class="md-nav__link">
+    <span class="md-ellipsis">
+      查看 Worker 状态
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      撤销任务
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-django" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. 与 Django 集成
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. 与 Django 集成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-celery-django" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1 安装 Celery 和 Django
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-celery-django" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2 配置 Celery 与 Django 的集成
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-django" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.3 创建 Django 任务
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -5379,382 +5690,292 @@
                   
 
 
-<h1 id="celery">celery 教程</h1>
-<h3 id="celery_1">Celery 教程：概念和使用方法</h3>
-<p>Celery 是一个广泛使用的分布式任务队列系统，支持实时任务处理和调度任务。它能够轻松地处理大量并发任务，常用于 Web 应用程序的后台任务处理。下面我们来详细介绍 Celery 的核心概念和基本使用方法。</p>
-<h3 id="1-celery">1. <strong>Celery 核心概念</strong></h3>
+  <h1>Celery</h1>
+
+<p>要全面和详细地讲解 Celery 手册，我会从基础概念到高级功能，逐步深入，并涵盖 Celery 的安装、配置、任务执行、错误处理、定时任务、监控工具、与 Django 集成等内容。Celery 是一个分布式任务队列框架，支持异步任务、调度任务，广泛应用于 Python 项目，特别是 Django 和 Flask 项目。</p>
+<hr />
+<h2 id="1-celery">1. Celery 概述</h2>
+<h3 id="11-celery">1.1 什么是 Celery？</h3>
+<p><code>Celery</code> 是一个用于处理分布式任务的异步任务队列系统，支持：
+- <strong>任务队列</strong>：用于处理异步操作，任务会被添加到队列中。
+- <strong>分布式执行</strong>：多个 worker 并行执行任务。
+- <strong>结果存储</strong>：任务执行的结果可以存储，供后续查询。
+- <strong>重试机制</strong>：任务失败时可以配置重试。
+- <strong>定时任务</strong>：支持周期性任务和一次性任务的调度。</p>
+<h3 id="12-celery">1.2 Celery 的主要组件</h3>
 <ul>
-<li><strong>任务（Task）</strong>：Celery 中的基本单位，即一个函数或操作。可以被 worker 异步执行。</li>
-<li><strong>队列（Queue）</strong>：存放任务的地方，worker 会从队列中获取任务并执行。</li>
-<li><strong>Worker</strong>：执行任务的进程。通常会启动多个 worker 来处理不同队列中的任务。</li>
-<li><strong>消息代理（Broker）</strong>：负责传递任务消息，常用的代理包括 RabbitMQ 和 Redis。</li>
-<li><strong>结果后端（Result Backend）</strong>：用于存储任务的执行结果，便于后续查询。</li>
+<li><strong>Celery 应用（App）</strong>：Celery 的核心，用来管理任务、配置和 worker。</li>
+<li><strong>Broker（消息代理）</strong>：用于传递消息。常用的有 <code>Redis</code>、<code>RabbitMQ</code>。</li>
+<li><strong>Worker（工作进程）</strong>：用于处理任务的进程，多个 worker 可以并行处理任务。</li>
+<li><strong>Result Backend（结果存储）</strong>：用于存储任务的执行结果。常用的有 <code>Redis</code>、<code>数据库</code>。</li>
+<li><strong>Task（任务）</strong>：异步或同步执行的函数。</li>
 </ul>
-<h3 id="2-celery">2. <strong>安装 Celery 和消息代理</strong></h3>
-<p>首先，使用 <code>pip</code> 安装 Celery 以及消息代理（以 Redis 为例）：</p>
+<hr />
+<h2 id="2-celery">2. Celery 环境搭建和配置</h2>
+<h3 id="21-celery-redis">2.1 安装 Celery 和 Redis</h3>
+<p>Celery 需要一个消息代理来处理任务调度，<code>Redis</code> 是一个常用的消息代理和结果存储。安装 Celery 和 Redis 依赖：</p>
 <div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>celery<span class="o">[</span>redis<span class="o">]</span>
 </code></pre></div>
 
-<h3 id="3-celery">3. <strong>创建 Celery 应用</strong></h3>
-<p>在项目中创建一个名为 <code>tasks.py</code> 的文件，定义一个简单的 Celery 应用和任务函数：</p>
+<p><code>[redis]</code> 安装额外的 Redis 依赖包。你也可以根据需求选择其他 broker（如 RabbitMQ）。</p>
+<h4 id="redis-macos-ubuntu">Redis 安装（MacOS 和 Ubuntu）</h4>
+<ul>
+<li>
+<p><strong>MacOS</strong>：
+  <code>bash
+  brew install redis
+  brew services start redis</code></p>
+</li>
+<li>
+<p><strong>Ubuntu</strong>：
+  <code>bash
+  sudo apt update
+  sudo apt install redis-server
+  sudo systemctl enable redis-server
+  sudo systemctl start redis-server</code></p>
+</li>
+</ul>
+<h3 id="22">2.2 基本配置</h3>
+<p>在项目中，首先需要创建一个 Celery 应用，并指定消息代理和结果存储。</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">celery</span> <span class="kn">import</span> <span class="n">Celery</span>
 
-<span class="c1"># 创建 Celery 实例</span>
-<span class="n">app</span> <span class="o">=</span> <span class="n">Celery</span><span class="p">(</span><span class="s1">&#39;tasks&#39;</span><span class="p">,</span> <span class="n">broker</span><span class="o">=</span><span class="s1">&#39;redis://localhost:6379/0&#39;</span><span class="p">,</span> <span class="n">backend</span><span class="o">=</span><span class="s1">&#39;redis://localhost:6379/0&#39;</span><span class="p">)</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Celery</span><span class="p">(</span><span class="s1">&#39;myapp&#39;</span><span class="p">,</span> 
+             <span class="n">broker</span><span class="o">=</span><span class="s1">&#39;redis://localhost:6379/0&#39;</span><span class="p">,</span>  <span class="c1"># Redis 作为消息代理</span>
+             <span class="n">backend</span><span class="o">=</span><span class="s1">&#39;redis://localhost:6379/0&#39;</span><span class="p">)</span>  <span class="c1"># Redis 作为结果存储</span>
+</code></pre></div>
 
-<span class="c1"># 定义一个简单的任务</span>
-<span class="nd">@app</span><span class="o">.</span><span class="n">task</span>
+<ul>
+<li><strong>broker</strong>：指定消息代理的 URL。在本例中使用 <code>Redis</code>。</li>
+<li><strong>backend</strong>：任务执行结果的存储位置，使用 <code>Redis</code> 保存任务结果。</li>
+</ul>
+<h3 id="23">2.3 配置文件</h3>
+<p>可以通过 <code>app.config_from_object</code> 来加载配置文件。例如，在 <code>celeryconfig.py</code> 中定义配置：</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># celeryconfig.py</span>
+<span class="n">broker_url</span> <span class="o">=</span> <span class="s1">&#39;redis://localhost:6379/0&#39;</span>
+<span class="n">result_backend</span> <span class="o">=</span> <span class="s1">&#39;redis://localhost:6379/0&#39;</span>
+<span class="n">task_serializer</span> <span class="o">=</span> <span class="s1">&#39;json&#39;</span>
+<span class="n">result_serializer</span> <span class="o">=</span> <span class="s1">&#39;json&#39;</span>
+<span class="n">accept_content</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;json&#39;</span><span class="p">]</span>
+<span class="n">timezone</span> <span class="o">=</span> <span class="s1">&#39;UTC&#39;</span>
+<span class="n">enable_utc</span> <span class="o">=</span> <span class="kc">True</span>
+</code></pre></div>
+
+<p>然后在 Celery 应用中引用该配置：</p>
+<div class="codehilite"><pre><span></span><code><span class="n">app</span><span class="o">.</span><span class="n">config_from_object</span><span class="p">(</span><span class="s1">&#39;celeryconfig&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<hr />
+<h2 id="3">3. 定义和执行任务</h2>
+<h3 id="31">3.1 创建任务</h3>
+<p>任务是 Celery 中的核心概念，任务可以是任何 Python 函数，只需要用 <code>@app.task</code> 装饰器标记为任务即可。以下是一个简单的任务：</p>
+<div class="codehilite"><pre><span></span><code><span class="nd">@app</span><span class="o">.</span><span class="n">task</span>
 <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
 </code></pre></div>
 
 <ul>
-<li><strong>broker</strong>：指定使用 Redis 作为消息代理。</li>
-<li><strong>backend</strong>：指定使用 Redis 存储任务的执行结果。</li>
+<li><strong><code>@app.task</code></strong>：用于将函数声明为 Celery 任务。</li>
 </ul>
-<h3 id="4-celery-worker">4. <strong>运行 Celery Worker</strong></h3>
-<p>在命令行中启动 Celery worker 进程，以便监听任务并执行：</p>
-<div class="codehilite"><pre><span></span><code>celery<span class="w"> </span>-A<span class="w"> </span>tasks<span class="w"> </span>worker<span class="w"> </span>--loglevel<span class="o">=</span>info
+<h3 id="32">3.2 执行任务</h3>
+<p>Celery 任务可以同步或异步执行。</p>
+<h4 id="_1">异步执行任务</h4>
+<div class="codehilite"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">add</span><span class="o">.</span><span class="n">delay</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
 </code></pre></div>
 
 <ul>
-<li><strong>-A tasks</strong>：指定 Celery 应用所在的模块，即 <code>tasks.py</code>。</li>
-<li><strong>--loglevel=info</strong>：设置日志输出的级别。</li>
+<li><strong><code>delay()</code></strong> 方法将任务发送给 Celery worker 并异步执行。任务将放入消息队列，等待 worker 执行。</li>
 </ul>
-<h3 id="5">5. <strong>调用任务</strong></h3>
-<p>在另一个 Python 会话中异步调用任务：</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">tasks</span> <span class="kn">import</span> <span class="n">add</span>
-
-<span class="n">result</span> <span class="o">=</span> <span class="n">add</span><span class="o">.</span><span class="n">delay</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>  <span class="c1"># 输出任务的唯一 ID</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">))</span>  <span class="c1"># 获取任务结果，最多等待 10 秒</span>
+<h4 id="_2">同步获取任务结果</h4>
+<p>要获取任务结果，可以使用 <code>result.get()</code>：</p>
+<div class="codehilite"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">add</span><span class="o">.</span><span class="n">delay</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">))</span>  <span class="c1"># 等待结果，超时时间10秒</span>
 </code></pre></div>
 
 <ul>
-<li><strong>delay</strong>：这是 Celery 中异步调用任务的方式。</li>
-<li><strong>result.get()</strong>：用于获取任务的返回值，可以设置超时时间。</li>
+<li><strong><code>get()</code></strong> 方法等待任务执行完成并获取结果。<code>timeout</code> 参数设置等待的超时时间。</li>
 </ul>
-<h3 id="6">6. <strong>定时任务调度</strong></h3>
-<p>Celery 支持定时任务调度（类似于 cron）。你可以使用 Celery 的 <code>beat</code> 组件来调度任务：</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">celery</span> <span class="kn">import</span> <span class="n">Celery</span>
-<span class="kn">from</span> <span class="nn">celery.schedules</span> <span class="kn">import</span> <span class="n">crontab</span>
+<h3 id="33">3.3 检查任务状态</h3>
+<p>任务执行过程中，你可以随时检查其状态：</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">status</span><span class="p">)</span>  <span class="c1"># 打印任务状态：PENDING, SUCCESS, FAILURE</span>
+</code></pre></div>
 
-<span class="n">app</span> <span class="o">=</span> <span class="n">Celery</span><span class="p">(</span><span class="s1">&#39;tasks&#39;</span><span class="p">,</span> <span class="n">broker</span><span class="o">=</span><span class="s1">&#39;redis://localhost:6379/0&#39;</span><span class="p">,</span> <span class="n">backend</span><span class="o">=</span><span class="s1">&#39;redis://localhost:6379/0&#39;</span><span class="p">)</span>
+<h3 id="34">3.4 常见的任务状态</h3>
+<ul>
+<li><strong>PENDING</strong>：任务还没有开始执行。</li>
+<li><strong>STARTED</strong>：任务已经开始执行。</li>
+<li><strong>SUCCESS</strong>：任务执行成功。</li>
+<li><strong>FAILURE</strong>：任务执行失败。</li>
+<li><strong>RETRY</strong>：任务失败并正在重试。</li>
+<li><strong>REVOKED</strong>：任务被取消。</li>
+</ul>
+<hr />
+<h2 id="4-worker">4. Worker 管理</h2>
+<h3 id="41-worker">4.1 启动 Worker</h3>
+<p>Celery Worker 是实际执行任务的进程。要启动一个 worker，使用以下命令：</p>
+<div class="codehilite"><pre><span></span><code>celery<span class="w"> </span>-A<span class="w"> </span>myapp<span class="w"> </span>worker<span class="w"> </span>--loglevel<span class="o">=</span>info
+</code></pre></div>
 
-<span class="nd">@app</span><span class="o">.</span><span class="n">task</span>
-<span class="k">def</span> <span class="nf">scheduled_task</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is a scheduled task.&quot;</span><span class="p">)</span>
+<ul>
+<li><code>-A myapp</code>：指定 Celery 应用（<code>myapp</code> 是应用的名字）。</li>
+<li><code>worker</code>：启动 Celery 工作进程。</li>
+<li><code>--loglevel=info</code>：显示详细的日志信息。</li>
+</ul>
+<h3 id="42-worker">4.2 停止 Worker</h3>
+<p>你可以通过 <code>Ctrl+C</code> 停止 Worker，或者使用以下命令优雅地关闭 Worker：</p>
+<div class="codehilite"><pre><span></span><code>celery<span class="w"> </span>-A<span class="w"> </span>myapp<span class="w"> </span>control<span class="w"> </span>shutdown
+</code></pre></div>
 
-<span class="c1"># 配置定时任务</span>
+<h3 id="43-worker">4.3 多进程 Worker</h3>
+<p>为了提高任务的并发执行效率，Celery 允许你启动多个 worker 进程：</p>
+<div class="codehilite"><pre><span></span><code>celery<span class="w"> </span>-A<span class="w"> </span>myapp<span class="w"> </span>worker<span class="w"> </span>--concurrency<span class="o">=</span><span class="m">4</span><span class="w"> </span>--loglevel<span class="o">=</span>info
+</code></pre></div>
+
+<ul>
+<li><code>--concurrency=4</code>：启动 4 个并发 worker 进程。</li>
+</ul>
+<hr />
+<h2 id="5">5. 任务重试和错误处理</h2>
+<h3 id="51">5.1 任务重试</h3>
+<p>当任务由于某种原因失败时，可以使用 <code>retry()</code> 方法重新尝试执行任务。例如：</p>
+<div class="codehilite"><pre><span></span><code><span class="nd">@app</span><span class="o">.</span><span class="n">task</span><span class="p">(</span><span class="n">bind</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">max_retries</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">error_prone_task</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># 某些可能失败的代码</span>
+        <span class="k">pass</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="bp">self</span><span class="o">.</span><span class="n">retry</span><span class="p">(</span><span class="n">exc</span><span class="o">=</span><span class="n">exc</span><span class="p">,</span> <span class="n">countdown</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>  <span class="c1"># 失败后 60 秒后重试</span>
+</code></pre></div>
+
+<ul>
+<li><code>max_retries=3</code>：最大重试次数为 3 次。</li>
+<li><code>countdown=60</code>：设置任务失败后的重试间隔时间为 60 秒。</li>
+</ul>
+<h3 id="52">5.2 任务超时</h3>
+<p>可以为任务设置超时时间，确保任务不会长时间挂起：</p>
+<div class="codehilite"><pre><span></span><code><span class="nd">@app</span><span class="o">.</span><span class="n">task</span><span class="p">(</span><span class="n">time_limit</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">long_running_task</span><span class="p">():</span>
+    <span class="c1"># 执行耗时任务</span>
+    <span class="k">pass</span>
+</code></pre></div>
+
+<ul>
+<li><code>time_limit=30</code>：任务最多可以执行 30 秒，超时后会自动终止。</li>
+</ul>
+<h3 id="53">5.3 错误处理</h3>
+<p>在任务执行过程中，可以使用 <code>try-except</code> 结构来捕获和处理错误：</p>
+<div class="codehilite"><pre><span></span><code><span class="nd">@app</span><span class="o">.</span><span class="n">task</span><span class="p">(</span><span class="n">bind</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">divide</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">x</span> <span class="o">/</span> <span class="n">y</span>
+    <span class="k">except</span> <span class="ne">ZeroDivisionError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">retry</span><span class="p">(</span><span class="n">exc</span><span class="o">=</span><span class="n">e</span><span class="p">,</span> <span class="n">countdown</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>  <span class="c1"># 在 60 秒后重试</span>
+</code></pre></div>
+
+<hr />
+<h2 id="6-periodic-tasks">6. 定时任务（Periodic Tasks）</h2>
+<p>Celery 支持使用 <code>beat</code> 调度器来定期运行任务。</p>
+<h3 id="61">6.1 定义定时任务</h3>
+<p>你可以通过配置 Celery 的 <code>beat_schedule</code> 来定义定时任务。例如，每隔 30 秒运行一次任务：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">celery.schedules</span> <span class="kn">import</span> <span class="n">crontab</span>
+
 <span class="n">app</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">beat_schedule</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;add-every-30-seconds&#39;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s1">&#39;task&#39;</span><span class="p">:</span> <span class="s1">&#39;tasks.scheduled_task&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;schedule&#39;</span><span class="p">:</span> <span class="mf">30.0</span><span class="p">,</span>  <span class="c1"># 每 30 秒执行一次</span>
+        <span class="s1">&#39;task&#39;</span><span class="p">:</span> <span class="s1">&#39;tasks.add&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;schedule&#39;</span><span class="p">:</span> <span class="mf">30.0</span><span class="p">,</span>  <span class="c1"># 每隔 30 秒执行一次</span>
+        <span class="s1">&#39;args&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;multiply-at-midnight&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;task&#39;</span><span class="p">:</span> <span class="s1">&#39;tasks.mul&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;schedule&#39;</span><span class="p">:</span> <span class="n">crontab</span><span class="p">(</span><span class="n">hour</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">minute</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>  <span class="c1"># 每天午夜执行</span>
+        <span class="s1">&#39;args&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
     <span class="p">},</span>
 <span class="p">}</span>
 </code></pre></div>
 
-<p>启动 Celery worker 和 beat：</p>
-<div class="codehilite"><pre><span></span><code>celery<span class="w"> </span>-A<span class="w"> </span>tasks<span class="w"> </span>worker<span class="w"> </span>--loglevel<span class="o">=</span>info
-celery<span class="w"> </span>-A<span class="w"> </span>tasks<span class="w"> </span>beat<span class="w"> </span>--loglevel<span class="o">=</span>info
+<ul>
+<li><code>schedule=30.0</code>：任务每 30 秒执行一次。</li>
+<li><code>crontab()</code>：可以通过 <code>crontab</code> 定义更复杂的调度规则。</li>
+</ul>
+<h3 id="62-celery-beat">6.2 启动 Celery Beat</h3>
+<p>要执行定时任务，你需要启动 Celery Beat：</p>
+<div class="codehilite"><pre><span></span><code>celery<span class="w"> </span>-A<span class="w"> </span>myapp<span class="w"> </span>beat<span class="w"> </span>--loglevel<span class="o">=</span>info
 </code></pre></div>
 
-<h3 id="7">7. <strong>任务重试</strong></h3>
-<p>如果任务执行失败，Celery 可以自动重试任务：</p>
-<div class="codehilite"><pre><span></span><code><span class="nd">@app</span><span class="o">.</span><span class="n">task</span><span class="p">(</span><span class="n">bind</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">max_retries</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">unreliable_task</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="c1"># 可能会失败的操作</span>
-        <span class="k">pass</span>
-    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="bp">self</span><span class="o">.</span><span class="n">retry</span><span class="p">(</span><span class="n">exc</span><span class="o">=</span><span class="n">exc</span><span class="p">,</span> <span class="n">countdown</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>  <span class="c1"># 60 秒后重试</span>
-</code></pre></div>
-
-<h3 id="8">8. <strong>监控和管理</strong></h3>
-<p>Celery 提供了 <code>Flower</code> 监控工具，可以实时监控任务的执行状态：</p>
+<p>Beat 进程会按照定义的调度计划定期触发任务。</p>
+<hr />
+<h2 id="7-celery">7. 监控 Celery</h2>
+<h3 id="71-flower-celery">7.1 使用 Flower 监控 Celery</h3>
+<p><code>Flower</code> 是一个基于 Web 的 Celery 实时监控工具。它允许</p>
+<p>你监控任务执行、worker 状态等信息。</p>
+<h4 id="flower">安装 Flower</h4>
 <div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>flower
-celery<span class="w"> </span>-A<span class="w"> </span>tasks<span class="w"> </span>flower
 </code></pre></div>
 
-<p>通过 <code>Flower</code> 的 Web 界面，可以查看任务执行情况、队列状态等。</p>
-<h3 id="9">9. <strong>优化与扩展</strong></h3>
-<p>在实际生产环境中，可以考虑以下优化措施：
-- <strong>任务路由</strong>：将不同类型的任务分配到不同的队列，提高系统的吞吐量。
-- <strong>并发控制</strong>：使用多进程或多线程 worker 来处理大量并发任务。
-- <strong>任务预取</strong>：通过调整预取数量来控制 worker 预取任务的数量，避免任务堆积。</p>
-<h1 id="celery_2">celery 进阶</h1>
-<p>这里是一些关于 Celery 的更多进阶教程和使用技巧，帮助你更深入地理解和使用 Celery。</p>
-<h3 id="1-chord">1. <strong>链式任务（Chord）</strong></h3>
-<p>链式任务允许将多个任务按顺序执行，其中每个任务的输出作为下一个任务的输入。你可以使用 <code>chain</code> 方法实现链式任务：</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">celery</span> <span class="kn">import</span> <span class="n">chain</span>
-<span class="kn">from</span> <span class="nn">tasks</span> <span class="kn">import</span> <span class="n">add</span><span class="p">,</span> <span class="n">multiply</span>
-
-<span class="n">result</span> <span class="o">=</span> <span class="n">chain</span><span class="p">(</span><span class="n">add</span><span class="o">.</span><span class="n">s</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="o">|</span> <span class="n">multiply</span><span class="o">.</span><span class="n">s</span><span class="p">(</span><span class="mi">3</span><span class="p">))()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>
+<h4 id="flower_1">启动 Flower</h4>
+<div class="codehilite"><pre><span></span><code>celery<span class="w"> </span>-A<span class="w"> </span>myapp<span class="w"> </span>flower
 </code></pre></div>
 
-<ul>
-<li><code>chain(add.s(4, 6) | multiply.s(3))</code>：将 <code>add</code> 和 <code>multiply</code> 任务链接在一起，<code>add</code> 的结果将传递给 <code>multiply</code>。</li>
-</ul>
-<h3 id="2-group">2. <strong>分组任务（Group）</strong></h3>
-<p>分组任务允许并行执行多个任务，并在所有任务完成后返回结果。你可以使用 <code>group</code> 来创建任务组：</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">celery</span> <span class="kn">import</span> <span class="n">group</span>
-<span class="kn">from</span> <span class="nn">tasks</span> <span class="kn">import</span> <span class="n">add</span>
-
-<span class="n">result</span> <span class="o">=</span> <span class="n">group</span><span class="p">(</span><span class="n">add</span><span class="o">.</span><span class="n">s</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>
+<p>默认情况下，Flower 运行在 <code>http://localhost:5555</code>，你可以在浏览器中查看实时监控页面。</p>
+<h3 id="72">7.2 使用命令行工具</h3>
+<p>你还可以使用 Celery 提供的命令行工具来监控和管理任务。</p>
+<h4 id="worker">查看 Worker 状态</h4>
+<div class="codehilite"><pre><span></span><code>celery<span class="w"> </span>-A<span class="w"> </span>myapp<span class="w"> </span>status
 </code></pre></div>
 
-<ul>
-<li><code>group(add.s(i, i) for i in range(10))</code>：并行执行多个 <code>add</code> 任务。</li>
-</ul>
-<h3 id="3">3. <strong>任务重试与回退机制</strong></h3>
-<p>当任务失败时，Celery 可以自动重试，并在多次失败后执行特定的回退操作：</p>
-<div class="codehilite"><pre><span></span><code><span class="nd">@app</span><span class="o">.</span><span class="n">task</span><span class="p">(</span><span class="n">bind</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">max_retries</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">send_email</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">email_address</span><span class="p">):</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="c1"># 发送邮件的代码</span>
-        <span class="k">pass</span>
-    <span class="k">except</span> <span class="n">SomeSpecificException</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
-        <span class="c1"># 重试3次后执行回退操作</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">retry</span><span class="p">(</span><span class="n">exc</span><span class="o">=</span><span class="n">exc</span><span class="p">,</span> <span class="n">countdown</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>
+<h4 id="_3">撤销任务</h4>
+<div class="codehilite"><pre><span></span><code>celery<span class="w"> </span>-A<span class="w"> </span>myapp<span class="w"> </span>control<span class="w"> </span>revoke<span class="w"> </span>&lt;task_id&gt;
 </code></pre></div>
 
-<ul>
-<li><code>max_retries</code>：定义最大重试次数。</li>
-<li><code>countdown</code>：在重试之前等待的秒数。</li>
-</ul>
-<h3 id="4">4. <strong>使用自定义队列</strong></h3>
-<p>你可以创建和使用自定义队列来处理不同类型的任务。可以通过在 Celery 应用配置中定义队列：</p>
-<div class="codehilite"><pre><span></span><code><span class="n">app</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">task_queues</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="n">Queue</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="n">routing_key</span><span class="o">=</span><span class="s1">&#39;task.#&#39;</span><span class="p">),</span>
-    <span class="n">Queue</span><span class="p">(</span><span class="s1">&#39;emails&#39;</span><span class="p">,</span> <span class="n">routing_key</span><span class="o">=</span><span class="s1">&#39;email.#&#39;</span><span class="p">),</span>
-<span class="p">)</span>
+<hr />
+<h2 id="8-django">8. 与 Django 集成</h2>
+<p>Celery 很常用于 Django 项目来处理后台任务，如发送邮件、定时清理数据等。</p>
+<h3 id="81-celery-django">8.1 安装 Celery 和 Django</h3>
+<p>在 Django 项目中安装 Celery：</p>
+<div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>celery<span class="o">[</span>redis<span class="o">]</span>
 </code></pre></div>
 
-<p>并通过 <code>queue</code> 参数指定任务的队列：</p>
-<div class="codehilite"><pre><span></span><code><span class="nd">@app</span><span class="o">.</span><span class="n">task</span><span class="p">(</span><span class="n">queue</span><span class="o">=</span><span class="s1">&#39;emails&#39;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">send_email</span><span class="p">(</span><span class="n">email_address</span><span class="p">):</span>
+<h3 id="82-celery-django">8.2 配置 Celery 与 Django 的集成</h3>
+<p>在 <code>settings.py</code> 中为 Django 配置 Celery：</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># settings.py</span>
+<span class="n">CELERY_BROKER_URL</span> <span class="o">=</span> <span class="s1">&#39;redis://localhost:6379/0&#39;</span>
+<span class="n">CELERY_RESULT_BACKEND</span> <span class="o">=</span> <span class="s1">&#39;redis://localhost:6379/0&#39;</span>
+</code></pre></div>
+
+<p>创建 <code>celery.py</code> 文件来初始化 Celery：</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># celery.py</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">absolute_import</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">celery</span> <span class="kn">import</span> <span class="n">Celery</span>
+<span class="kn">from</span> <span class="nn">django.conf</span> <span class="kn">import</span> <span class="n">settings</span>
+
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s1">&#39;DJANGO_SETTINGS_MODULE&#39;</span><span class="p">,</span> <span class="s1">&#39;myproject.settings&#39;</span><span class="p">)</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Celery</span><span class="p">(</span><span class="s1">&#39;myproject&#39;</span><span class="p">)</span>
+
+<span class="c1"># 使用 Django 的配置</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config_from_object</span><span class="p">(</span><span class="s1">&#39;django.conf:settings&#39;</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">autodiscover_tasks</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="n">settings</span><span class="o">.</span><span class="n">INSTALLED_APPS</span><span class="p">)</span>
+</code></pre></div>
+
+<p>在 Django 项目的 <code>__init__.py</code> 中导入 Celery 应用：</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">.celery</span> <span class="kn">import</span> <span class="n">app</span> <span class="k">as</span> <span class="n">celery_app</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;celery_app&#39;</span><span class="p">,)</span>
+</code></pre></div>
+
+<h3 id="83-django">8.3 创建 Django 任务</h3>
+<p>你可以在 Django 应用的 <code>tasks.py</code> 文件中定义任务：</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># tasks.py</span>
+<span class="kn">from</span> <span class="nn">celery</span> <span class="kn">import</span> <span class="n">shared_task</span>
+
+<span class="nd">@shared_task</span>
+<span class="k">def</span> <span class="nf">send_email_task</span><span class="p">():</span>
+    <span class="c1"># 发送邮件的逻辑</span>
     <span class="k">pass</span>
 </code></pre></div>
 
-<h3 id="5_1">5. <strong>任务路由</strong></h3>
-<p>任务路由允许你将特定的任务发送到指定的队列中。可以通过 <code>task_routes</code> 参数配置路由：</p>
-<div class="codehilite"><pre><span></span><code><span class="n">app</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">task_routes</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;tasks.add&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;queue&#39;</span><span class="p">:</span> <span class="s1">&#39;default&#39;</span><span class="p">},</span>
-    <span class="s1">&#39;tasks.send_email&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;queue&#39;</span><span class="p">:</span> <span class="s1">&#39;emails&#39;</span><span class="p">},</span>
-<span class="p">}</span>
-</code></pre></div>
-
-<h3 id="6-celery-signals">6. <strong>使用 Celery Signals</strong></h3>
-<p>Celery 提供了信号机制，允许你在任务执行的不同阶段执行一些特定操作。常用的信号包括：</p>
-<ul>
-<li><strong>task_prerun</strong>：任务开始执行前触发。</li>
-<li><strong>task_postrun</strong>：任务执行结束后触发。</li>
-<li><strong>task_failure</strong>：任务失败时触发。</li>
-</ul>
-<p>示例：</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">celery.signals</span> <span class="kn">import</span> <span class="n">task_prerun</span><span class="p">,</span> <span class="n">task_postrun</span>
-
-<span class="nd">@task_prerun</span><span class="o">.</span><span class="n">connect</span>
-<span class="k">def</span> <span class="nf">task_start_handler</span><span class="p">(</span><span class="n">sender</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Task </span><span class="si">{</span><span class="n">sender</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> is starting...&quot;</span><span class="p">)</span>
-
-<span class="nd">@task_postrun</span><span class="o">.</span><span class="n">connect</span>
-<span class="k">def</span> <span class="nf">task_end_handler</span><span class="p">(</span><span class="n">sender</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Task </span><span class="si">{</span><span class="n">sender</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> has finished.&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<h3 id="7-celery-django">7. <strong>Celery 与 Django 集成</strong></h3>
-<p>Celery 与 Django 框架集成非常紧密，可以方便地处理异步任务和定时任务。以下是 Django 项目中使用 Celery 的步骤：</p>
-<ol>
-<li>
-<p><strong>安装 Celery 和 Django-Celery-Beat</strong>：
-   <code>bash
-   pip install celery django-celery-beat</code></p>
-</li>
-<li>
-<p><strong>配置 Celery</strong>：
-   在 Django 项目根目录创建 <code>celery.py</code> 文件：</p>
-</li>
-</ol>
-<p>```python
-   from <strong>future</strong> import absolute_import, unicode_literals
-   import os
-   from celery import Celery</p>
-<p>os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'your_project.settings')</p>
-<p>app = Celery('your_project')
-   app.config_from_object('django.conf:settings', namespace='CELERY')
-   app.autodiscover_tasks()
-   ```</p>
-<ol>
-<li><strong>在 <code>__init__.py</code> 中加载 Celery</strong>：
-   ```python
-   from <strong>future</strong> import absolute_import, unicode_literals
-   from .celery import app as celery_app</li>
-</ol>
-<p><strong>all</strong> = ('celery_app',)
-   ```</p>
-<ol>
-<li><strong>创建任务</strong>：
-   在任意 Django app 中的 <code>tasks.py</code> 文件中创建任务：</li>
-</ol>
-<p>```python
-   from celery import shared_task</p>
-<p>@shared_task
-   def my_task():
-       # 执行一些操作
-       pass
-   ```</p>
-<ol>
-<li>
-<p><strong>启动 Celery Worker</strong>：
-   <code>bash
-   celery -A your_project worker -l info</code></p>
-</li>
-<li>
-<p><strong>定时任务</strong>：
-   使用 <code>django-celery-beat</code> 可以在 Django Admin 中管理定时任务。</p>
-</li>
-</ol>
-<p>这里提供更多关于 Celery 的进阶使用技巧和特性，帮助你在复杂场景中更加高效地使用 Celery。</p>
-<h3 id="1-chaining-and-callbacks">1. <strong>链式任务与回调（Chaining and Callbacks）</strong></h3>
-<p>Celery 允许你将多个任务链接起来执行，支持任务之间的依赖关系。你可以通过 <code>chain</code>、<code>chord</code>、<code>group</code> 等方式实现复杂的任务链。</p>
-<ul>
-<li><strong>链式任务</strong>：按顺序执行多个任务，每个任务的输出将作为下一个任务的输入。</li>
-</ul>
-<p>```python
-  from celery import chain</p>
-<p>result = chain(task1.s(arg1), task2.s(), task3.s())()
-  ```</p>
-<ul>
-<li><strong>任务组（Group）</strong>：并行执行一组任务。</li>
-</ul>
-<p>```python
-  from celery import group</p>
-<p>result = group(task1.s(), task2.s(), task3.s())()
-  ```</p>
-<ul>
-<li><strong>回调（Callback）</strong>：在任务组执行完成后执行的任务。</li>
-</ul>
-<p>```python
-  from celery import chord</p>
-<p>result = chord(group(task1.s(), task2.s()))(callback_task.s())
-  ```</p>
-<h3 id="2">2. <strong>任务重试策略</strong></h3>
-<p>在处理不稳定的外部服务时，任务可能会偶尔失败。Celery 提供了自动重试机制来处理这些失败情况。</p>
-<div class="codehilite"><pre><span></span><code><span class="nd">@app</span><span class="o">.</span><span class="n">task</span><span class="p">(</span><span class="n">bind</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">max_retries</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">send_email</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">to</span><span class="p">):</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="c1"># 发送邮件操作</span>
-        <span class="k">pass</span>
-    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="bp">self</span><span class="o">.</span><span class="n">retry</span><span class="p">(</span><span class="n">exc</span><span class="o">=</span><span class="n">exc</span><span class="p">,</span> <span class="n">countdown</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>  <span class="c1"># 60秒后重试</span>
-</code></pre></div>
-
-<ul>
-<li><code>max_retries</code>：最大重试次数。</li>
-<li><code>countdown</code>：在重试之前等待的秒数。</li>
-</ul>
-<h3 id="3_1">3. <strong>任务优先级</strong></h3>
-<p>Celery 支持任务优先级，允许你控制任务在队列中的处理顺序。任务优先级的范围通常是 0（最高优先级）到 9（最低优先级）。</p>
-<div class="codehilite"><pre><span></span><code><span class="nd">@app</span><span class="o">.</span><span class="n">task</span><span class="p">(</span><span class="n">priority</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">high_priority_task</span><span class="p">():</span>
-    <span class="k">pass</span>
-</code></pre></div>
-
-<h3 id="4_1">4. <strong>任务超时控制</strong></h3>
-<p>对于需要限制执行时间的任务，可以设置任务的超时时间，防止任务长期占用资源。</p>
-<div class="codehilite"><pre><span></span><code><span class="nd">@app</span><span class="o">.</span><span class="n">task</span><span class="p">(</span><span class="n">time_limit</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">long_running_task</span><span class="p">():</span>
-    <span class="c1"># 任务逻辑</span>
-    <span class="k">pass</span>
-</code></pre></div>
-
-<ul>
-<li><code>time_limit</code>：任务的执行时间限制，单位为秒。</li>
-</ul>
-<h3 id="5-prefetching">5. <strong>配置任务预取（Prefetching）</strong></h3>
-<p>预取控制 worker 预取任务的数量，这对性能优化非常重要。可以通过 <code>worker_prefetch_multiplier</code> 配置项进行设置。</p>
-<div class="codehilite"><pre><span></span><code><span class="n">app</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">worker_prefetch_multiplier</span> <span class="o">=</span> <span class="mi">1</span>
-</code></pre></div>
-
-<h3 id="6_1">6. <strong>任务的路由与交换机</strong></h3>
-<p>你可以根据任务类型将任务发送到不同的队列，以实现更好的资源隔离和调度控制。</p>
-<div class="codehilite"><pre><span></span><code><span class="n">app</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">task_routes</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;myapp.tasks.add&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;queue&#39;</span><span class="p">:</span> <span class="s1">&#39;low_priority&#39;</span><span class="p">},</span>
-    <span class="s1">&#39;myapp.tasks.multiply&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;queue&#39;</span><span class="p">:</span> <span class="s1">&#39;high_priority&#39;</span><span class="p">},</span>
-<span class="p">}</span>
-</code></pre></div>
-
-<ul>
-<li><strong>自定义交换机与队列</strong>：通过定义不同的交换机和队列，可以实现更复杂的路由机制。</li>
-</ul>
-<p>```python
-  from kombu import Exchange, Queue</p>
-<p>app.conf.task_queues = (
-      Queue('default', Exchange('default'), routing_key='default'),
-      Queue('emails', Exchange('emails'), routing_key='email.#'),
-  )
-  ```</p>
-<h3 id="7_1">7. <strong>分布式锁</strong></h3>
-<p>在某些情况下，你可能需要确保某一时间点只有一个任务实例在运行，这时可以使用分布式锁。例如，通过 Redis 实现一个简单的分布式锁：</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">redis</span>
-<span class="kn">from</span> <span class="nn">celery</span> <span class="kn">import</span> <span class="n">Task</span>
-
-<span class="k">class</span> <span class="nc">LockedTask</span><span class="p">(</span><span class="n">Task</span><span class="p">):</span>
-    <span class="n">_lock</span> <span class="o">=</span> <span class="kc">None</span>
-
-    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span> <span class="o">=</span> <span class="n">redis</span><span class="o">.</span><span class="n">StrictRedis</span><span class="p">()</span><span class="o">.</span><span class="n">lock</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span><span class="o">.</span><span class="n">acquire</span><span class="p">(</span><span class="n">blocking</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-            <span class="k">try</span><span class="p">:</span>
-                <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__call__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-            <span class="k">finally</span><span class="p">:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Task is already running&quot;</span><span class="p">)</span>
-
-<span class="nd">@app</span><span class="o">.</span><span class="n">task</span><span class="p">(</span><span class="n">base</span><span class="o">=</span><span class="n">LockedTask</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">my_locked_task</span><span class="p">():</span>
-    <span class="c1"># 任务逻辑</span>
-    <span class="k">pass</span>
-</code></pre></div>
-
-<h3 id="8_1">8. <strong>监控与健康检查</strong></h3>
-<p>Celery 提供了多种工具和机制来监控任务执行状态，并确保系统的健康运行。</p>
-<ul>
-<li><strong>Flower</strong>：实时监控和管理 Celery 的任务和队列。</li>
-</ul>
-<p><code>bash
-  celery -A your_project flower</code></p>
-<ul>
-<li><strong>健康检查</strong>：通过 Celery 的 <code>ping</code> 任务或自定义健康检查任务来定期检查 worker 的健康状态。</li>
-</ul>
-<p><code>python
-  app.control.ping()</code></p>
-<h3 id="9-celery-signals">9. <strong>使用 Celery Signals</strong></h3>
-<p>Celery Signals 提供了任务生命周期中的各种钩子，允许你在任务执行的不同阶段插入自定义逻辑。</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">celery.signals</span> <span class="kn">import</span> <span class="n">task_success</span><span class="p">,</span> <span class="n">task_failure</span>
-
-<span class="nd">@task_success</span><span class="o">.</span><span class="n">connect</span>
-<span class="k">def</span> <span class="nf">task_success_handler</span><span class="p">(</span><span class="n">sender</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">result</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Task </span><span class="si">{</span><span class="n">sender</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1"> succeeded with result: </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-
-<span class="nd">@task_failure</span><span class="o">.</span><span class="n">connect</span>
-<span class="k">def</span> <span class="nf">task_failure_handler</span><span class="p">(</span><span class="n">sender</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">exception</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Task </span><span class="si">{</span><span class="n">sender</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1"> failed with exception: </span><span class="si">{</span><span class="n">exception</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-<h3 id="10-worker">10. <strong>动态调整 Worker</strong></h3>
-<p>在高峰期，你可能需要增加 worker 的数量来处理更多的任务，Celery 支持动态调整 worker 的数量。</p>
-<div class="codehilite"><pre><span></span><code>celery<span class="w"> </span>-A<span class="w"> </span>your_project<span class="w"> </span>worker<span class="w"> </span>--autoscale<span class="o">=</span><span class="m">10</span>,3
-</code></pre></div>
-
-<ul>
-<li><code>--autoscale=10,3</code>：动态调整 worker 数量，最多 10 个 worker，最少 3 个。</li>
-</ul>
-<p>这些进阶教程和使用技巧可以帮助你在生产环境中更加灵活、高效地使用 Celery，处理更复杂的任务调度和执行场景。</p>
+<hr />
+<p>通过以上 Celery 的全面解读，你可以初步搭建和使用 Celery 处理异步任务。Celery 支持高度的扩展性，并能与不同框架和工具进行无缝集成。</p>
 
 
 
