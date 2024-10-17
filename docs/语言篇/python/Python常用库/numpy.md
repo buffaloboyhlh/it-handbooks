@@ -1,562 +1,488 @@
-# numpy 笔记
+# NumPy 教程
 
-NumPy 是 Python 中用于科学计算的核心库，它提供了支持多维数组对象、各种派生对象（如掩码数组和矩阵）、以及大量的数学操作和统计函数。NumPy 是很多高级数据处理库的基础，例如 Pandas、SciPy 和 Scikit-learn。以下是一个详细的 NumPy 教程，帮助你了解如何使用这个库进行数据处理和计算。
+本文详细讲解 `NumPy` 的各项功能，包括从基础到高级的操作，帮助你全面掌握这个科学计算库。每个部分都会深入解释其工作原理和具体使用方法。
 
-## 创建数组
+---
 
-### 从列表创建数组
+#### 目录
+
+1. 什么是 NumPy
+2. 安装 NumPy
+3. NumPy 基础操作
+    - 创建数组
+    - 数组的数据类型
+    - 数组的基本属性
+4. 数组运算
+    - 数组的广播机制
+    - 数学运算
+    - 统计运算
+5. 数组索引与切片
+    - 基本索引
+    - 布尔索引
+    - 花式索引
+6. 数组变形和拼接
+    - 数组变形
+    - 数组拼接与分割
+7. 高级操作
+    - 数组的排序
+    - 条件逻辑操作
+    - 线性代数
+    - 随机数生成
+8. NumPy 性能优化
+    - 使用内建函数优化
+    - 向量化操作
+9. NumPy 实战案例
+
+---
+
+### 1. 什么是 NumPy
+
+`NumPy`（Numerical Python）是 Python 语言的一个开源库，主要用于科学计算。它提供了高效操作大规模多维数组和矩阵的功能，还包括大量数学函数库，是数据分析、机器学习等领域的基础工具。
+
+NumPy 的核心是 `ndarray`，也称为多维数组。`ndarray` 能高效存储和操作同类数据，非常适合用于数值计算。
+
+---
+
+### 2. 安装 NumPy
+
+安装 NumPy 只需一行命令：
+
+```bash
+pip install numpy
 ```
+
+如果安装成功，你可以通过以下代码来验证：
+
+```python
 import numpy as np
-
-# 从列表创建一维数组
-a = np.array([1, 2, 3, 4, 5])
-print(a)
-
-# 从列表创建二维数组
-b = np.array([[1, 2, 3], [4, 5, 6]])
-print(b)
+print(np.__version__)
 ```
 
-### 使用 arange 和 linspace 创建数组
-```
-# 使用 arange 创建数组
-a = np.arange(0, 10, 2)  # 从0到10，步长为2
-print(a)
+---
 
-# 使用 linspace 创建数组
-b = np.linspace(0, 1, 5)  # 在0和1之间创建5个均匀分布的值
-print(b)
-```
+### 3. NumPy 基础操作
 
-### 创建特殊数组
-```
-# 创建全零数组
-a = np.zeros((2, 3))
-print(a)
+#### 创建数组
 
-# 创建全一数组
-b = np.ones((3, 4))
-print(b)
+`array()` 是创建 NumPy 数组的最基本函数，可以将 Python 列表、元组等转换为数组。
 
-# 创建单位矩阵
-c = np.eye(4)
-print(c)
-
-# 创建随机数组
-d = np.random.random((2, 2))
-print(d)
-```
-
-###  数组属性
-```
-a = np.array([[1, 2, 3], [4, 5, 6]])
-
-# 数组形状
-print("Shape:", a.shape)
-
-# 数组维度
-print("Dimensions:", a.ndim)
-
-# 数组大小 (元素的总个数)
-print("Size:", a.size) # 输出6
-
-# 数组元素数据类型
-print("Data type:", a.dtype)
-```
-
-## 数组操作
-### 数组切片和索引
-
-#### 一维数组的切片
-对于一维数组，切片的基本语法是 start:stop:step，其中：
-
-	•	start：切片的起始索引（包含）。
-	•	stop：切片的结束索引（不包含）。
-	•	step：切片的步长（默认为 1）。
-
-
-```
+```python
 import numpy as np
 
 # 创建一维数组
-a = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
-
-# 基本切片
-print(a[2:7])        # 输出: [2 3 4 5 6]
-print(a[:5])         # 输出: [0 1 2 3 4]
-print(a[5:])         # 输出: [5 6 7 8 9]
-print(a[::2])        # 输出: [0 2 4 6 8]
-print(a[1:8:2])      # 输出: [1 3 5 7]
-```
-
-#### 二维数组的切片
-对于二维数组，切片操作可以在每个维度上独立进行。切片的基本语法是 array[row_start:row_stop:row_step, col_start:col_stop:col_step]
-
-```
-import numpy as np
+arr1d = np.array([1, 2, 3, 4])
 
 # 创建二维数组
-a = np.array([[0, 1, 2, 3, 4],
-              [5, 6, 7, 8, 9],
-              [10, 11, 12, 13, 14],
-              [15, 16, 17, 18, 19],
-              [20, 21, 22, 23, 24]])
-
-# 提取子数组
-print(a[1:4, 2:5])  # 输出: [[ 7  8  9]
-                    #       [12 13 14]
-                    #       [17 18 19]]
-
-# 提取第二列
-print(a[:, 1])      # 输出: [ 1  6 11 16 21]
-
-# 提取第三行
-print(a[2, :])      # 输出: [10 11 12 13 14]
-
-# 提取第三行的第2到第4个元素
-print(a[2, 1:4])    # 输出: [11 12 13]
-
-# 步长切片
-print(a[::2, ::2])  # 输出: [[ 0  2  4]
-                    #       [10 12 14]
-                    #       [20 22 24]]
-```
-
-#### 高维数组的切片
-对于更高维度的数组，切片操作可以推广到每个维度。
-
-```
-import numpy as np
+arr2d = np.array([[1, 2, 3], [4, 5, 6]])
 
 # 创建三维数组
-a = np.array([[[0, 1, 2], [3, 4, 5]],
-              [[6, 7, 8], [9, 10, 11]],
-              [[12, 13, 14], [15, 16, 17]]])
-
-# 提取子数组
-print(a[1:, :, :])   # 提取从第二个“平面”开始的所有数据
-
-# 提取特定平面的特定部分
-print(a[:, 1, :])    # 提取每个平面的第二行
-
-# 提取特定平面中的某一块
-print(a[1, :, 1:3])  # 输出: [[ 7  8]
-                     #       [10 11]]
+arr3d = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
 ```
 
-####  结合布尔索引的切片
-```
-import numpy as np
+此外，NumPy 提供了许多创建数组的函数：
 
-# 创建一维数组
-a = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9])
+- `zeros(shape)`：创建全为 0 的数组。
+- `ones(shape)`：创建全为 1 的数组。
+- `empty(shape)`：创建未初始化的数组。
+- `arange(start, stop, step)`：创建等间隔的数组。
+- `linspace(start, stop, num)`：生成从 `start` 到 `stop` 的 `num` 个等间隔数值。
 
-# 条件筛选
-print(a[a > 5])   # 输出: [6 7 8 9]
-
-# 条件筛选并切片
-print(a[(a > 3) & (a < 8)])  # 输出: [4 5 6 7]
-```
-
-### 形状变换
-
-```
-nums = np.array([[1, 2, 3], [4, 5, 6]])
-# 重塑数组
-b = nums.reshape(3, 2)
-print(b)
-# 展平数组
-c = b.flatten()
-print(c)
-# 重塑数组
-c.resize((2,3))
-print(c)
+```python
+arr_zeros = np.zeros((3, 3))  # 创建 3x3 的全 0 数组
+arr_ones = np.ones((2, 2))    # 创建 2x2 的全 1 数组
+arr_arange = np.arange(0, 10, 2)  # 从 0 开始，间隔 2，直到 10（不包括 10）
+arr_linspace = np.linspace(0, 1, 5)  # 生成从 0 到 1 的 5 个等间隔数
 ```
 
-## 数组运算
-NumPy 允许对数组进行各种算术运算、逻辑运算、统计运算等。
-### 基本算术运算
-```
-a = np.array([1, 2, 3, 4])
-b = np.array([10, 20, 30, 40])
+#### 数组的数据类型
 
-# 数组加法
-print(a + b)
+NumPy 数组的数据类型可以通过 `dtype` 参数指定。例如，`dtype='int32'` 创建一个 32 位整数类型的数组。你还可以使用 `astype()` 方法转换数组的数据类型。
 
-# 数组减法
-print(a - b)
+```python
+arr = np.array([1, 2, 3], dtype='float64')  # 指定数据类型为 float64
+print(arr.dtype)  # 输出 float64
 
-# 数组乘法
-print(a * b)
-
-# 数组除法
-print(a / b)
+# 转换数据类型
+arr_int = arr.astype('int32')
+print(arr_int)
 ```
 
-### 广播机制
-当两个数组的形状不同时，NumPy 会自动适应（广播）较小的数组以匹配较大的数组，从而进行运算。
+#### 数组的基本属性
 
-NumPy 的广播机制（Broadcasting）是一种强大的功能，允许不同形状的数组在算术运算时进行自动扩展，以便它们能够兼容。广播机制的目的是在数组操作中避免创建不必要的多维数组，从而提高计算效率。
+每个 `ndarray` 对象都有一些基本属性：
 
-#### 广播机制的基本原则
-	1.	如果两个数组的维度数不同，形状较小的数组将在前面补充一维，直到两个数组的维度数相同。
+- **`ndim`**：数组的维度数（几维数组）。
+- **`shape`**：数组的形状（每个维度的大小）。
+- **`size`**：数组中的元素总数。
+- **`dtype`**：数组中元素的数据类型。
+- **`itemsize`**：每个元素所占字节数。
 
-	2.	沿每个维度，数组的大小要么是相同的，要么其中一个数组的大小为 1，要么会发生广播。
+```python
+arr = np.array([[1, 2, 3], [4, 5, 6]])
 
-	3.	在任何维度上，如果两个数组的大小都不相等且都不为 1，则不能进行广播，操作会抛出错误。
-
-#### 广播机制示例
-##### 示例 1：标量与数组之间的广播
-```
-import numpy as np
-
-# 创建一个一维数组
-a = np.array([1, 2, 3])
-
-# 标量与数组相加
-b = a + 5
-print(b)  # 输出: [6 7 8]
+print(arr.ndim)    # 输出 2，表示二维数组
+print(arr.shape)   # 输出 (2, 3)，表示两行三列
+print(arr.size)    # 输出 6，表示数组中有 6 个元素
+print(arr.dtype)   # 输出 int64，表示数据类型为 64 位整数
+print(arr.itemsize)  # 输出 8，每个元素占 8 个字节
 ```
 
-##### 示例 2：二维数组与一维数组之间的广播
-```
-import numpy as np
+---
 
-# 创建一个二维数组
-a = np.array([[1, 2, 3], [4, 5, 6]])
+### 4. 数组运算
 
-# 创建一个一维数组
-b = np.array([1, 2, 3])
+#### 数组的广播机制
 
-# 二维数组与一维数组相加
-c = a + b
-print(c)
-# 输出:
-# [[2 4 6]
-#  [5 7 9]]
-```
-在这个示例中，数组 b 被广播以匹配数组 a 的形状，然后逐元素相加。
+广播（Broadcasting）允许不同形状的数组在进行运算时自动扩展为相同形状，使得数组运算更加高效。广播的原则是沿着对齐的维度进行扩展，较小的数组会被自动重复。
 
-##### 示例 3：不同形状的二维数组之间的广播
-```
-import numpy as np
+```python
+arr1 = np.array([[1, 2, 3], [4, 5, 6]])
+arr2 = np.array([1, 2, 3])
 
-# 创建一个二维数组
-a = np.array([[1, 2, 3], [4, 5, 6]])
-
-# 创建一个形状为 (2, 1) 的二维数组
-b = np.array([[10], [20]])
-
-# 广播并相加
-c = a + b
-print(c)
-# 输出:
-# [[11 12 13]
-#  [24 25 26]]
-```
-在这个示例中，数组 b 被广播以匹配数组 a 的形状，其中 b 的形状从 (2, 1) 被广播到 (2, 3)。
-
-### 广播的具体工作原理
-
-假设你有两个数组 A 和 B，它们的形状分别是 (m, n, p) 和 (n, p)。要使这两个数组进行广播，它们的形状需要按以下步骤进行调整：
-
-	•	首先，数组 B 会在其最前面补充一维，变为 (1, n, p)。
-
-	•	然后，B 会沿第一个维度复制，变为 (m, n, p)，这样它们就可以进行逐元素的运算了。
-
-
-###  广播的应用
-
-广播机制非常有用，尤其是在处理多维数据时。它可以让你以简洁的代码进行复杂的操作，而无需手动扩展数组维度。广播通常用于：
-
-	•	标量与数组之间的操作：如将数组中的所有元素加上一个常数。
-
-	•	低维数组与高维数组之间的操作：如将一个一维数组加到二维数组的每一行或列上。
-
-	•	数据归一化：如在矩阵的每一行或列中减去均值。
-
-## 统计函数
-```
-a = np.array([[1, 2, 3], [4, 5, 6]])
-
-# 最小值
-print("Min:", a.min())
-
-# 最大值
-print("Max:", a.max())
-
-# 和
-print("Sum:", a.sum())
-
-# 平均值
-print("Mean:", a.mean())
-
-# 标准差
-print("Standard Deviation:", a.std())
+# arr2 会被广播为 [[1, 2, 3], [1, 2, 3]]
+result = arr1 + arr2
+print(result)
 ```
 
-## 数组的高级操作
-### 数组拼接和分割
+#### 数学运算
 
-```
-a = np.array([[1, 2], [3, 4]])
-b = np.array([[5, 6]])
+NumPy 提供了丰富的数学运算功能，包括加、减、乘、除、幂运算、对数等。运算可以逐元素应用于数组。
 
-# 数组拼接
-c = np.vstack((a, b))  # 垂直堆叠
-print(c)
-
-d = np.hstack((a, b.T))  # 水平堆叠
-print(d)
-
-# 数组分割
-e = np.hsplit(a, 2)  # 水平分割
-print(e)
+```python
+arr = np.array([1, 2, 3, 4])
+print(arr + 2)     # 每个元素加 2 -> [3 4 5 6]
+print(arr * 3)     # 每个元素乘 3 -> [3 6 9 12]
+print(arr ** 2)    # 每个元素平方 -> [1 4 9 16]
 ```
 
-### 条件筛选
+#### 统计运算
+
+- **`sum()`**：计算数组元素的和。
+- **`mean()`**：计算平均值。
+- **`max()` 和 `min()`**：返回数组中的最大值和最小值。
+- **`std()`**：计算标准差。
+- **`argmax()` 和 `argmin()`**：返回最大值和最小值的索引。
+
+```python
+arr = np.array([[1, 2, 3], [4, 5, 6]])
+
+print(np.sum(arr))          # 求和 -> 21
+print(np.mean(arr))         # 平均值 -> 3.5
+print(np.max(arr, axis=0))  # 按列求最大值 -> [4 5 6]
+print(np.min(arr, axis=1))  # 按行求最小值 -> [1 4]
 ```
-a = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9])
 
-# 筛选大于5的元素
-print(a[a > 5])
+---
 
-# 筛选偶数元素
-print(a[a % 2 == 0])
+### 5. 数组索引与切片
+
+#### 基本索引
+
+NumPy 支持与 Python 列表类似的索引方式。可以通过索引访问和修改数组元素。
+
+```python
+arr = np.array([1, 2, 3, 4, 5])
+
+# 访问第一个和最后一个元素
+print(arr[0])    # 1
+print(arr[-1])   # 5
+
+# 修改第二个元素
+arr[1] = 10
+print(arr)       # [ 1 10  3  4  5 ]
 ```
 
-## 线性代数操作
-NumPy 提供了多种线性代数操作，如矩阵乘法、逆矩阵、特征值和特征向量等。
+对于多维数组，可以通过多个索引访问不同维度的元素。
 
-### 矩阵乘法或点积
+```python
+arr2d = np.array([[1, 2, 3], [4, 5, 6]])
+
+print(arr2d[0, 1])  # 访问第一行第二列的元素 -> 2
+print(arr2d[1, -1]) # 访问最后一行最后一列的元素 -> 6
+```
+
+#### 切片
+
+NumPy 数组的切片操作允许获取数组的一部分。切片的语法为 `arr[start:stop:step]`。
+
+```python
+arr = np.array([1, 2, 3, 4, 5])
+
+# 获取从索引 1 到 3 的元素
+print(arr[1:4])  # [2 3 4]
+
+# 每隔一个元素获取
+print(arr[::2])  # [1 3 5]
+```
+
+多维数组的切片可以对每个维度分别操作。
+
+```python
+arr2d = np.array([[1, 2, 3], [4, 5, 6]])
+
+# 获取第二列的所有行
+print(arr2d[:, 1])  # [2 5]
+
+# 获取第一行的前两列
+print(arr2d[0, :2])  # [1 2]
+```
+
+#### 布尔索引
+
+布尔索
+
+引用于通过条件筛选数组元素。
+
+```python
+arr = np.array([1, 2, 3, 4, 5])
+
+# 返回大于 3 的元素
+print(arr[arr > 3])  # [4 5]
+```
+
+#### 花式索引
+
+花式索引是通过一组索引值获取数组中的元素。
+
+```python
+arr = np.array([10, 20, 30, 40, 50])
+
+# 获取第 0, 2, 4 个元素
+print(arr[[0, 2, 4]])  # [10 30 50]
+```
+
+---
+
+### 6. 数组变形和拼接
+
+#### 数组变形
+
+`reshape()` 函数可以改变数组的形状，而不改变数组的数据。在变形时，变换后的数组大小必须与原数组的大小相同。
+
+```python
+arr = np.array([1, 2, 3, 4, 5, 6])
+
+# 将一维数组变形为 2x3 的二维数组
+reshaped = arr.reshape((2, 3))
+print(reshaped)
+```
+
+输出：
 
 ```
-import numpy as np
+[[1 2 3]
+ [4 5 6]]
+```
 
-# 创建两个二维数组
-A = np.array([[1, 2], [3, 4]])
-B = np.array([[5, 6], [7, 8]])
+如果你不确定某一维的大小，可以用 `-1` 让 NumPy 自动计算。
+
+```python
+reshaped = arr.reshape((-1, 2))
+print(reshaped)  # NumPy 会自动计算行数
+```
+
+`ravel()` 和 `flatten()` 用于将多维数组展平成一维数组：
+
+- `ravel()`：返回的是原数组的视图，修改它会影响原数组。
+- `flatten()`：返回的是数组的拷贝，修改它不会影响原数组。
+
+```python
+arr2d = np.array([[1, 2, 3], [4, 5, 6]])
+
+# ravel 展平成一维数组
+arr1d_ravel = arr2d.ravel()
+print(arr1d_ravel)  # [1 2 3 4 5 6]
+
+# flatten 展平成一维数组
+arr1d_flatten = arr2d.flatten()
+print(arr1d_flatten)  # [1 2 3 4 5 6]
+```
+
+#### 数组拼接与分割
+
+- **拼接**：可以使用 `concatenate()` 函数沿指定轴将多个数组拼接在一起。
+- **堆叠**：`vstack()` 和 `hstack()` 分别用于垂直和水平堆叠数组。
+- **分割**：`split()` 可以将数组分割成多个子数组。
+
+```python
+arr1 = np.array([[1, 2], [3, 4]])
+arr2 = np.array([[5, 6]])
+
+# 沿行拼接数组
+concatenated = np.concatenate((arr1, arr2), axis=0)
+print(concatenated)
+```
+
+垂直、水平拼接：
+
+```python
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
+
+# 垂直堆叠
+vstacked = np.vstack((arr1, arr2))
+print(vstacked)
+
+# 水平堆叠
+hstacked = np.hstack((arr1, arr2))
+print(hstacked)
+```
+
+数组分割：
+
+```python
+arr = np.array([[1, 2, 3], [4, 5, 6]])
+
+# 将数组水平分割为两部分
+split_arr = np.hsplit(arr, 3)
+print(split_arr)
+```
+
+---
+
+### 7. 高级操作
+
+#### 数组排序
+
+`sort()` 函数可以对数组进行排序。可以指定沿哪个轴进行排序：
+
+```python
+arr = np.array([[3, 2, 1], [6, 5, 4]])
+
+# 沿着列排序
+arr.sort(axis=0)
+print(arr)
+
+# 沿着行排序
+arr.sort(axis=1)
+print(arr)
+```
+
+`argsort()` 返回排序后的元素在原数组中的索引。
+
+#### 条件逻辑操作
+
+NumPy 提供了 `where()` 函数，可以根据条件筛选元素。它返回满足条件的元素的索引位置或根据条件选择的数组。
+
+```python
+arr = np.array([1, 2, 3, 4, 5])
+
+# 返回满足条件的索引
+index = np.where(arr > 3)
+print(index)
+
+# 使用条件返回新数组
+result = np.where(arr > 3, arr, 0)
+print(result)
+```
+
+#### 线性代数
+
+NumPy 提供了用于线性代数运算的 `linalg` 模块：
+
+- **`dot()`**：计算矩阵乘法。
+- **`inv()`**：计算矩阵的逆。
+- **`det()`**：计算矩阵的行列式。
+
+```python
+arr1 = np.array([[1, 2], [3, 4]])
+arr2 = np.array([[5, 6], [7, 8]])
 
 # 矩阵乘法
-C = np.dot(A, B)
-print(C)
-# 输出:
-# [[19 22]
-#  [43 50]]
+dot_product = np.dot(arr1, arr2)
+print(dot_product)
+
+# 矩阵的逆
+inv_arr = np.linalg.inv(arr1)
+print(inv_arr)
+
+# 矩阵的行列式
+det_arr = np.linalg.det(arr1)
+print(det_arr)
 ```
 
-### np.matmul() 或 @ 运算符
-矩阵乘法。与 np.dot() 类似，但更适用于矩阵乘法。
+#### 随机数生成
 
-```
-import numpy as np
+NumPy 的 `random` 模块提供了生成随机数的工具：
 
-# 创建两个二维数组
-A = np.array([[1, 2], [3, 4]])
-B = np.array([[5, 6], [7, 8]])
+- **`rand()`**：生成 0 到 1 之间的均匀分布随机数。
+- **`randn()`**：生成均值为 0，标准差为 1 的正态分布随机数。
+- **`randint()`**：生成指定范围内的随机整数。
+- **`choice()`**：从数组中随机选择元素。
 
-# 矩阵乘法
-C = np.matmul(A, B)
-print(C)
+```python
+# 生成 2x3 的随机数
+rand_arr = np.random.rand(2, 3)
+print(rand_arr)
 
-# 或使用 @ 运算符
-D = A @ B
-print(D)
-```
+# 生成 5 个正态分布随机数
+randn_arr = np.random.randn(5)
+print(randn_arr)
 
-### np.transpose() 或 array.T
-矩阵转置。
-
-```
-import numpy as np
-
-# 创建一个二维数组
-A = np.array([[1, 2, 3], [4, 5, 6]])
-
-# 矩阵转置
-B = np.transpose(A)
-print(B)
-# 输出:
-# [[1 4]
-#  [2 5]
-#  [3 6]]
-
-# 或者使用属性 T
-C = A.T
-print(C)
+# 生成 10 到 20 之间的随机整数
+randint_arr = np.random.randint(10, 20, size=5)
+print(randint_arr)
 ```
 
-###  np.linalg.inv()
-计算矩阵的逆矩阵。前提是矩阵必须是方阵且可逆。
+---
 
-```
-import numpy as np
+### 8. NumPy 性能优化
 
-# 创建一个二维数组（方阵）
-A = np.array([[1, 2], [3, 4]])
+#### 使用内建函数优化
 
-# 计算逆矩阵
-A_inv = np.linalg.inv(A)
-print(A_inv)
-# 输出:
-# [[-2.   1. ]
-#  [ 1.5 -0.5]]
-```
+尽量使用 NumPy 的内建函数而不是 Python 的循环，内建函数是在 C 语言实现的，性能更高。
 
-### np.linalg.det()
-计算方阵的行列式。
+```python
+arr = np.arange(1e7)
 
-```
-import numpy as np
+# NumPy 内建求和函数
+%time np.sum(arr)
 
-# 创建一个二维数组（方阵）
-A = np.array([[1, 2], [3, 4]])
-
-# 计算行列式
-det_A = np.linalg.det(A)
-print(det_A)  # 输出: -2.0000000000000004
+# Python 的循环求和
+%time sum(arr)
 ```
 
-### np.linalg.eig()
-计算方阵的特征值和特征向量。
+#### 向量化操作
 
-```
-import numpy as np
+向量化操作是指用数组而不是循环进行运算。这样可以大幅提升性能。
 
-# 创建一个二维数组（方阵）
-A = np.array([[1, 2], [3, 4]])
-
-# 计算特征值和特征向量
-eigenvalues, eigenvectors = np.linalg.eig(A)
-print("特征值:", eigenvalues)
-# 输出: 特征值: [-0.37228132  5.37228132]
-print("特征向量:\n", eigenvectors)
-# 输出:
-# 特征向量:
-# [[-0.82456484 -0.41597356]
-#  [ 0.56576746 -0.90937671]]
+```python
+# 向量化运算
+arr = np.array([1, 2, 3, 4])
+print(arr * 2)  # 每个元素乘以 2
 ```
 
-### np.linalg.solve()
-解线性方程组 Ax = b，其中 A 是系数矩阵，b 是常数向量。
+---
 
-```
-import numpy as np
+### 9. NumPy 实战案例
 
-# 创建系数矩阵 A 和常数向量 b
-A = np.array([[3, 1], [1, 2]])
-b = np.array([9, 8])
+#### 案例1：数据归一化
 
-# 解线性方程组 Ax = b
-x = np.linalg.solve(A, b)
-print(x)  # 输出: [2. 3.]
-```
+将数据缩放到指定范围，如 0 到 1：
 
-### np.linalg.norm()
-计算矩阵或向量的范数。
+```python
+data = np.random.randint(0, 100, size=(3, 3))
 
-```
-import numpy as np
-
-# 创建一个向量
-v = np.array([3, 4])
-
-# 计算向量的二范数（欧几里得范数）
-norm_v = np.linalg.norm(v)
-print(norm_v)  # 输出: 5.0
-
-# 创建一个二维数组（矩阵）
-A = np.array([[1, 2], [3, 4]])
-
-# 计算矩阵的二范数
-norm_A = np.linalg.norm(A)
-print(norm_A)  # 输出: 5.477225575051661
+# 归一化公式： (x - min) / (max - min)
+normalized_data = (data - data.min()) / (data.max() - data.min())
+print(normalized_data)
 ```
 
-### np.linalg.qr()
-对矩阵进行 QR 分解。
+#### 案例2：多项式拟合
 
-```
-import numpy as np
+使用 NumPy 进行多项式拟合：
 
-# 创建一个二维数组（矩阵）
-A = np.array([[1, 2], [3, 4], [5, 6]])
+```python
+x = np.linspace(-5, 5, 100)
+y = 3 * x**2 + 2 * x + 1 + np.random.randn(100) * 5
 
-# 进行 QR 分解
-Q, R = np.linalg.qr(A)
-print("Q:\n", Q)
-print("R:\n", R)
-# 输出:
-# Q:
-# [[-0.16903085  0.89708523]
-#  [-0.50709255  0.27602622]
-#  [-0.84515425 -0.34503278]]
-# R:
-# [[-5.91607978 -7.43735744]
-#  [ 0.          0.82807867]]
-```
-###  np.linalg.svd()
-对矩阵进行奇异值分解（SVD）。
+# 拟合二次多项式
+p = np.polyfit(x, y, 2)
 
-```
-import numpy as np
-
-# 创建一个二维数组（矩阵）
-A = np.array([[1, 2, 3], [4, 5, 6]])
-
-# 进行奇异值分解
-U, S, V = np.linalg.svd(A)
-print("U:\n", U)
-print("S:\n", S)
-print("V:\n", V)
-# 输出:
-# U:
-# [[-0.3863177  -0.92236578]
-#  [-0.92236578  0.3863177 ]]
-# S:
-# [9.508032   0.77286964]
-# V:
-# [[-0.42866713 -0.56630692 -0.7039467 ]
-#  [ 0.80596391  0.11238241 -0.5811991 ]
-#  [ 0.40824829 -0.81649658  0.40824829]]
+# 计算拟合曲线的 y 值
+y_fit = np.polyval(p, x)
 ```
 
-## 随机数生成
-```
-# 生成0到1之间的随机数
-print(np.random.rand(5))
+---
 
-# 生成指定范围内的随机整数
-print(np.random.randint(0, 10, size=5))
-
-# 生成标准正态分布的随机数
-print(np.random.randn(5))
-
-# 洗牌数组
-a = np.array([1, 2, 3, 4, 5])
-np.random.shuffle(a)
-print(a)
-```
-
-### 读取和保存数据
-NumPy 可以方便地读取和保存数据。
-
-```
-a = np.array([[1, 2, 3], [4, 5, 6]])
-
-# 保存数组到文件
-np.save('my_array.npy', a)
-
-# 从文件读取数组
-b = np.load('my_array.npy')
-print(b)
-
-# 保存为文本文件
-np.savetxt('my_array.txt', a)
-
-# 从文本文件读取数组
-c = np.loadtxt('my_array.txt')
-print(c)
-```
-
-
+通过学习这些内容，您将能够灵活使用 NumPy 进行各种数据操作和科学计算。
