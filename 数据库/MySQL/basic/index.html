@@ -915,7 +915,7 @@
         
   
   <span class="md-ellipsis">
-    RabbitMQ 基础
+    Basic
   </span>
   
 
@@ -2641,6 +2641,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#1-mysql" class="md-nav__link">
     <span class="md-ellipsis">
       1. MySQL 基础知识
@@ -3573,7 +3582,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       典型应用场景：
     </span>
@@ -3597,7 +3606,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       典型应用场景：
     </span>
@@ -3606,7 +3615,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       数据同步方式：
     </span>
@@ -6317,7 +6326,7 @@
 
 <h1 id="mysql">MySQL 教程</h1>
 <p>MySQL 是一种广泛使用的关系型数据库管理系统，因其开源、稳定、高效的特点，常被用于网站和应用程序的后台数据库。这个教程将帮助你从 MySQL 的基础知识入门，逐步深入到更高级的操作和优化技巧。</p>
-<hr />
+<h2 id="_1"><img alt="MySQL架构图" src="../../../resources/mysql.awebp" /></h2>
 <h2 id="1-mysql">1. <strong>MySQL 基础知识</strong></h2>
 <h3 id="11-mysql">1.1 什么是 MySQL？</h3>
 <p>MySQL 是一个开源的关系型数据库管理系统，它基于 SQL（结构化查询语言）进行数据管理。它通常用于存储、检索和管理应用程序中的数据，尤其是 Web 应用。</p>
@@ -7177,19 +7186,19 @@
 <p>随着应用程序的需求越来越复杂，有时仅靠 MySQL 的关系型数据库无法满足需求。将 MySQL 与 NoSQL 数据库结合使用是一个有效的解决方案。</p>
 <h3 id="1051-mysql-redis">10.5.1 MySQL 与 Redis 集成</h3>
 <p>Redis 是一个高性能的内存数据库，常用于缓存和实时数据存储。通过将 Redis 与 MySQL 集成，你可以利用 Redis 进行缓存，以减轻 MySQL 的查询压力。</p>
-<h4 id="_1">典型应用场景：</h4>
+<h4 id="_2">典型应用场景：</h4>
 <ol>
 <li><strong>缓存热点数据</strong>：将经常访问的数据缓存到 Redis，减少 MySQL 的查询负载。</li>
 <li><strong>会话存储</strong>：使用 Redis 来存储用户会话数据，而持久化数据则存储在 MySQL 中。</li>
 </ol>
 <h3 id="1052-mysql-elasticsearch">10.5.2 MySQL 与 Elasticsearch 集成</h3>
 <p>Elasticsearch 是一个强大的搜索和分析引擎。通过将 MySQL 数据同步到 Elasticsearch，可以实现高效的全文检索功能。</p>
-<h4 id="_2">典型应用场景：</h4>
+<h4 id="_3">典型应用场景：</h4>
 <ol>
 <li><strong>数据索引与搜索</strong>：将 MySQL 数据索引到 Elasticsearch 中，提升全文搜索的性能。</li>
 <li><strong>大数据分析</strong>：利用 Elasticsearch 的聚合功能进行大规模数据的实时分析。</li>
 </ol>
-<h4 id="_3">数据同步方式：</h4>
+<h4 id="_4">数据同步方式：</h4>
 <ol>
 <li>使用 MySQL 的 <code>binlog</code>（二进制日志）同步数据到 Elasticsearch。</li>
 <li>使用第三方同步工具如 <code>Logstash</code> 或 <code>Debezium</code> 实现实时数据同步。</li>
