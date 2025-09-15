@@ -4,43 +4,55 @@ site_author: hlh
 
 theme:
   name: material
-  language: zh
-  features:
-    - navigation.expand
-    - navigation.sections
-    - toc.integrate
-    - search.highlight
-    - search.suggest
-    - header.autohide
-    - footer.copyright
-    - footer.text
-    - code.annotate
-    - content.code
-    - material.nav
-    - material.switch
-    - content.code.copy  # 启用代码块复制功能
+  primary: teal
   palette:
-    - scheme: default
-      primary: teal
-      accent: indigo
+    - media: "(prefers-color-scheme: light)"
+      scheme: default # 日间模式
+      primary: teal # 上方的
+      accent: amber # 链接等可交互元件的高亮色
+      # teal
       toggle:
-        icon: material/weather-night
-        name: Switch to dark mode
-    - scheme: slate  # 暗模式
-      primary: teal
+        icon: material/brightness-7 # 图标
+        name: 切换至夜间模式 # 鼠标悬浮提示
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate # 夜间模式
+      primary: black
       accent: indigo
+      # teal
       toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
+        icon: material/brightness-4
+        name: 切换至日间模式
+  features:
+    - navigation.section
+    - navigation.expand
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - content.code.copy
+    - content.tabs.link
+    - content.code.annotate
+    - math
+  language: zh
 
 plugins:
   - search
-  - awesome-pages
+
+extra_css:
+  - styles/css/extra.css
+  - https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css
+
+extra_javascript:
+  - styles/javascripts/config.js
+  - https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js
+  - https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js
+  - styles/javascripts/katex.js
 
 markdown_extensions:
   - admonition
-  - codehilite
-  - footnotes
-
-extra_css:
-  - css/extra.css
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+  - toc:
+      permalink: true
+      toc_depth: 2-3
