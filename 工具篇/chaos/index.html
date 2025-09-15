@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -50,7 +50,9 @@
       
     
     
-      <link rel="stylesheet" href="../../css/extra.css">
+      <link rel="stylesheet" href="../../styles/css/extra.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -69,7 +71,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="amber">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chaos" class="md-skip">
+        <a href="#1" class="md-skip">
           跳转至
         </a>
       
@@ -90,9 +92,7 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
     <a href="../.." title="IT-手册" class="md-header__button md-logo" aria-label="IT-手册" data-md-component="logo">
       
@@ -127,20 +127,20 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="amber"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_1">
     
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
@@ -152,11 +152,13 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -175,8 +177,6 @@
         </button>
       </nav>
       
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
@@ -190,6 +190,7 @@
     </div>
   </div>
 </div>
+      
     
     
   </nav>
@@ -200,6 +201,348 @@
       
       
         
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  IT-手册大全
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Web%E7%AF%87/Django/advance/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Web篇
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/basic/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  中间件
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/alert/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  云原生
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/LangChain/advance/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  人工智能
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../SRE/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  工具篇
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/basic/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  数据库
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/algorithm/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  数据结构和算法
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E6%9C%8D%E5%8A%A1%E5%99%A8/gunicorn/basic/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  服务器
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/bloom/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  系统设计
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  计算机基础
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/C%2B%2B/advance/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  语言篇
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
           
         
       
@@ -214,10 +557,10 @@
                     
 
 
-
   
 
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="导航栏" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="IT-手册" class="md-nav__button md-logo" aria-label="IT-手册" data-md-component="logo">
       
@@ -240,8 +583,10 @@
       <a href="../.." class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     IT-手册大全
+    
   </span>
   
 
@@ -258,14 +603,23 @@
   
     
     
-    
       
         
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -274,11 +628,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Web篇
+    
   </span>
   
 
@@ -300,7 +656,23 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -316,8 +688,10 @@
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Django
+    
   </span>
   
 
@@ -341,8 +715,10 @@
       <a href="../../Web%E7%AF%87/Django/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Django 进阶教程
+    
   </span>
   
 
@@ -362,8 +738,10 @@
       <a href="../../Web%E7%AF%87/Django/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Django 基础教程
+    
   </span>
   
 
@@ -383,8 +761,10 @@
       <a href="../../Web%E7%AF%87/Django/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Django 面试手册
+    
   </span>
   
 
@@ -404,8 +784,10 @@
       <a href="../../Web%E7%AF%87/Django/questions/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Django 开发中遇到的问题
+    
   </span>
   
 
@@ -425,8 +807,10 @@
       <a href="../../Web%E7%AF%87/Django/restful/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Django RESTful
+    
   </span>
   
 
@@ -452,7 +836,23 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -468,8 +868,10 @@
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     FastAPI
+    
   </span>
   
 
@@ -493,8 +895,10 @@
       <a href="../../Web%E7%AF%87/FastAPI/GraphQL/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     GraphQL 教程
+    
   </span>
   
 
@@ -514,8 +918,10 @@
       <a href="../../Web%E7%AF%87/FastAPI/advance./" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     FastAPI 进阶教程
+    
   </span>
   
 
@@ -535,8 +941,10 @@
       <a href="../../Web%E7%AF%87/FastAPI/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     FastAPI 教程
+    
   </span>
   
 
@@ -556,8 +964,10 @@
       <a href="../../Web%E7%AF%87/FastAPI/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     FastAPI 面试手册
+    
   </span>
   
 
@@ -577,8 +987,10 @@
       <a href="../../Web%E7%AF%87/FastAPI/practice/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     FastAPI 实战项目教程：构建完整的博客 API
+    
   </span>
   
 
@@ -604,7 +1016,21 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -620,8 +1046,10 @@
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Flask
+    
   </span>
   
 
@@ -645,8 +1073,10 @@
       <a href="../../Web%E7%AF%87/Flask/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Flask 进阶教程
+    
   </span>
   
 
@@ -666,8 +1096,10 @@
       <a href="../../Web%E7%AF%87/Flask/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Flask 基础教程
+    
   </span>
   
 
@@ -687,8 +1119,10 @@
       <a href="../../Web%E7%AF%87/Flask/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Flask 面试手册
+    
   </span>
   
 
@@ -708,8 +1142,10 @@
       <a href="../../Web%E7%AF%87/Flask/questions/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Flask 工作中常见问题
+    
   </span>
   
 
@@ -742,14 +1178,23 @@
   
     
     
-    
       
         
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -758,11 +1203,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     中间件
+    
   </span>
   
 
@@ -784,7 +1231,17 @@
   
     
     
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -800,8 +1257,10 @@
           <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Kafka
+    
   </span>
   
 
@@ -825,8 +1284,10 @@
       <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Kafka 基础
+    
   </span>
   
 
@@ -846,8 +1307,10 @@
       <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     kafka 面试
+    
   </span>
   
 
@@ -873,7 +1336,17 @@
   
     
     
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -889,8 +1362,10 @@
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Rabbitmq
+    
   </span>
   
 
@@ -914,8 +1389,10 @@
       <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/rabbitmq/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Basic
+    
   </span>
   
 
@@ -935,8 +1412,10 @@
       <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/rabbitmq/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     RabbitMQ 面试
+    
   </span>
   
 
@@ -962,7 +1441,17 @@
   
     
     
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -978,8 +1467,10 @@
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Zookeeper
+    
   </span>
   
 
@@ -1003,8 +1494,10 @@
       <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/zookeeper/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     zookeeper 教程
+    
   </span>
   
 
@@ -1024,8 +1517,10 @@
       <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/zookeeper/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     zookeeper 面试
+    
   </span>
   
 
@@ -1058,14 +1553,23 @@
   
     
     
-    
       
         
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -1074,11 +1578,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     云原生
+    
   </span>
   
 
@@ -1100,7 +1606,21 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -1116,8 +1636,10 @@
           <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Prometheus
+    
   </span>
   
 
@@ -1141,8 +1663,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/alert/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Prometheus 告警
+    
   </span>
   
 
@@ -1162,8 +1686,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Prometheus 教程
+    
   </span>
   
 
@@ -1183,8 +1709,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/prometheus/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Prometheus 配置文件
+    
   </span>
   
 
@@ -1204,8 +1732,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/promql/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     PromQL
+    
   </span>
   
 
@@ -1231,7 +1761,17 @@
   
     
     
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -1247,8 +1787,10 @@
           <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Docker
+    
   </span>
   
 
@@ -1272,8 +1814,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Docker-基础
+    
   </span>
   
 
@@ -1293,8 +1837,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Docker 面试
+    
   </span>
   
 
@@ -1320,7 +1866,23 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -1336,8 +1898,10 @@
           <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Kubernetes
+    
   </span>
   
 
@@ -1361,8 +1925,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     kubernetes 教程
+    
   </span>
   
 
@@ -1382,8 +1948,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/crictl/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     crictl 教程
+    
   </span>
   
 
@@ -1403,8 +1971,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/helm/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     kubernetes 包管理工具 helm
+    
   </span>
   
 
@@ -1424,8 +1994,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     kubernetes 面试手册
+    
   </span>
   
 
@@ -1445,8 +2017,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/monitor/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     kubernetes 监控平台和日志管理
+    
   </span>
   
 
@@ -1479,14 +2053,25 @@
   
     
     
-    
       
         
+      
+        
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -1495,11 +2080,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     人工智能
+    
   </span>
   
 
@@ -1521,7 +2108,17 @@
   
     
     
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -1537,8 +2134,10 @@
           <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     LangChain
+    
   </span>
   
 
@@ -1562,8 +2161,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/LangChain/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     LangChain 进阶教程
+    
   </span>
   
 
@@ -1583,8 +2184,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/LangChain/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     LangChain 基础教程
+    
   </span>
   
 
@@ -1610,7 +2213,19 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -1626,8 +2241,10 @@
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     大语言模型
+    
   </span>
   
 
@@ -1651,8 +2268,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     LLM 进阶教程
+    
   </span>
   
 
@@ -1672,8 +2291,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     LLM 基础教程
+    
   </span>
   
 
@@ -1693,8 +2314,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     LLM 面试手册
+    
   </span>
   
 
@@ -1720,7 +2343,19 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -1736,8 +2371,10 @@
           <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     机器学习
+    
   </span>
   
 
@@ -1761,8 +2398,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     机器学习 进阶教程
+    
   </span>
   
 
@@ -1782,8 +2421,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     机器学习 基础教程
+    
   </span>
   
 
@@ -1803,8 +2444,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     机器学习 面试手册
+    
   </span>
   
 
@@ -1830,7 +2473,19 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -1846,8 +2501,10 @@
           <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     深度学习
+    
   </span>
   
 
@@ -1871,8 +2528,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     深度学习 进阶教程
+    
   </span>
   
 
@@ -1892,8 +2551,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     深度学习 进阶教程
+    
   </span>
   
 
@@ -1913,8 +2574,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     深度学习 面试手册
+    
   </span>
   
 
@@ -1949,9 +2612,33 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
     
       
         
+        
+      
+      
         
       
     
@@ -1966,8 +2653,10 @@
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
             
   
+  
   <span class="md-ellipsis">
     工具篇
+    
   </span>
   
 
@@ -1991,8 +2680,10 @@
       <a href="../SRE/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     SRE 故障排查
+    
   </span>
   
 
@@ -2012,8 +2703,10 @@
       <a href="../SonarQube/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     SonarQube 基本教程
+    
   </span>
   
 
@@ -2036,14 +2729,14 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
     Chaos 混沌工程
+    
   </span>
   
 
@@ -2053,8 +2746,10 @@
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
     Chaos 混沌工程
+    
   </span>
   
 
@@ -2065,8 +2760,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
@@ -2100,66 +2793,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. 混沌工程的实践步骤">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.1 确定正常状态
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.2 设定假设
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.3 制造故障（引入混沌）
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#34" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.4 监控和分析
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#35" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.5 改进系统
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#36" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.6 持续执行
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -2169,48 +2802,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="4. 混沌工程的最佳实践">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.1 从小规模开始
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.2 自动化实验
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#43" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.3 保护核心业务
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#44" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.4 逐步增加复杂性
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -2219,57 +2810,6 @@
       5. 混沌工程的工具
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="5. 混沌工程的工具">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#51-chaos-monkey" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.1 Chaos Monkey
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#52-gremlin" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.2 Gremlin
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#53-litmus" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.3 Litmus
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#54-pumba" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.4 Pumba
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#55-chaos-mesh" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.5 Chaos Mesh
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2328,8 +2868,10 @@
       <a href="../commands/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Linux 常用命令
+    
   </span>
   
 
@@ -2349,8 +2891,10 @@
       <a href="../crontab/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Crontab
+    
   </span>
   
 
@@ -2370,8 +2914,10 @@
       <a href="../git/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     git 命令
+    
   </span>
   
 
@@ -2391,8 +2937,10 @@
       <a href="../jenkins/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Jenkins
+    
   </span>
   
 
@@ -2412,8 +2960,10 @@
       <a href="../journalctl/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     journalctl 教程
+    
   </span>
   
 
@@ -2433,8 +2983,10 @@
       <a href="../supervisor/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Supervisor 教程
+    
   </span>
   
 
@@ -2459,14 +3011,29 @@
   
     
     
-    
       
         
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -2475,11 +3042,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     数据库
+    
   </span>
   
 
@@ -2501,7 +3070,23 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -2517,8 +3102,10 @@
           <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Elastic
+    
   </span>
   
 
@@ -2542,8 +3129,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Elasticsearch 教程
+    
   </span>
   
 
@@ -2563,8 +3152,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/filebeat/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     filebeat.yml 配置文件
+    
   </span>
   
 
@@ -2584,8 +3175,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     ElasticSearch 面试手册
+    
   </span>
   
 
@@ -2605,8 +3198,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/logstash/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     logstash 配置文件
+    
   </span>
   
 
@@ -2626,8 +3221,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/questions/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     ElasticSearch 工作中遇到的问题
+    
   </span>
   
 
@@ -2653,7 +3250,15 @@
   
     
     
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -2669,8 +3274,10 @@
           <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     HBase
+    
   </span>
   
 
@@ -2694,8 +3301,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/HBase/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Basic
+    
   </span>
   
 
@@ -2721,7 +3330,19 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -2737,8 +3358,10 @@
           <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     MongoDB
+    
   </span>
   
 
@@ -2762,8 +3385,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     MongoDB 完整教程：从入门到精通
+    
   </span>
   
 
@@ -2783,8 +3408,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     MongoDB 面试手册
+    
   </span>
   
 
@@ -2804,8 +3431,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/questions/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     MongoDB 工作中遇到的问题
+    
   </span>
   
 
@@ -2831,7 +3460,21 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -2847,8 +3490,10 @@
           <label class="md-nav__link" for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     MySQL
+    
   </span>
   
 
@@ -2872,8 +3517,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     MySQL 教程
+    
   </span>
   
 
@@ -2893,8 +3540,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/command/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     MySQL 常用命令
+    
   </span>
   
 
@@ -2914,8 +3563,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     MySQL 面试题
+    
   </span>
   
 
@@ -2935,8 +3586,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/questions/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     MySQl 常见问题
+    
   </span>
   
 
@@ -2962,7 +3615,19 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -2978,8 +3643,10 @@
           <label class="md-nav__link" for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     PostgreSQL
+    
   </span>
   
 
@@ -3003,8 +3670,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/PostgreSQL/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     PostgreSQL 进阶教程
+    
   </span>
   
 
@@ -3024,8 +3693,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/PostgreSQL/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     PostgreSQL基础教程
+    
   </span>
   
 
@@ -3045,8 +3716,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/PostgreSQL/demo/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Demo
+    
   </span>
   
 
@@ -3072,7 +3745,19 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -3088,8 +3773,10 @@
           <label class="md-nav__link" for="__nav_7_6" id="__nav_7_6_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Redis
+    
   </span>
   
 
@@ -3113,8 +3800,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Redis 教程
+    
   </span>
   
 
@@ -3134,8 +3823,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Redis 面试手册
+    
   </span>
   
 
@@ -3155,8 +3846,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/questions/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Redis 工作中常见问题
+    
   </span>
   
 
@@ -3189,14 +3882,23 @@
   
     
     
-    
       
         
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -3205,11 +3907,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     数据结构和算法
+    
   </span>
   
 
@@ -3233,8 +3937,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/algorithm/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     算法
+    
   </span>
   
 
@@ -3254,8 +3960,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/leetcode/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     LeetCode 题目
+    
   </span>
   
 
@@ -3275,8 +3983,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/struct/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     数据结构
+    
   </span>
   
 
@@ -3301,14 +4011,25 @@
   
     
     
-    
       
         
+      
+        
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -3317,11 +4038,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
         
           
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     服务器
+    
   </span>
   
 
@@ -3343,7 +4066,15 @@
   
     
     
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -3359,8 +4090,10 @@
           <label class="md-nav__link" for="__nav_9_1" id="__nav_9_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Gunicorn
+    
   </span>
   
 
@@ -3384,8 +4117,10 @@
       <a href="../../%E6%9C%8D%E5%8A%A1%E5%99%A8/gunicorn/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Gunicorn 教程
+    
   </span>
   
 
@@ -3411,7 +4146,17 @@
   
     
     
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -3427,8 +4172,10 @@
           <label class="md-nav__link" for="__nav_9_2" id="__nav_9_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Nginx
+    
   </span>
   
 
@@ -3452,8 +4199,10 @@
       <a href="../../%E6%9C%8D%E5%8A%A1%E5%99%A8/nginx/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Nginx 教程
+    
   </span>
   
 
@@ -3473,8 +4222,10 @@
       <a href="../../%E6%9C%8D%E5%8A%A1%E5%99%A8/nginx/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     nginx 面试手册
+    
   </span>
   
 
@@ -3500,7 +4251,15 @@
   
     
     
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -3516,8 +4275,10 @@
           <label class="md-nav__link" for="__nav_9_3" id="__nav_9_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Uvicorn
+    
   </span>
   
 
@@ -3541,8 +4302,10 @@
       <a href="../../%E6%9C%8D%E5%8A%A1%E5%99%A8/uvicorn/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Uvicorn 教程
+    
   </span>
   
 
@@ -3568,7 +4331,15 @@
   
     
     
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -3584,8 +4355,10 @@
           <label class="md-nav__link" for="__nav_9_4" id="__nav_9_4_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Uwsgi
+    
   </span>
   
 
@@ -3609,8 +4382,10 @@
       <a href="../../%E6%9C%8D%E5%8A%A1%E5%99%A8/uwsgi/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     uWSGI 教程
+    
   </span>
   
 
@@ -3643,14 +4418,27 @@
   
     
     
-    
       
         
+      
+        
+      
+        
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -3659,11 +4447,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
         
           
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     系统设计
+    
   </span>
   
 
@@ -3687,8 +4477,10 @@
       <a href="../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/bloom/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     布隆过滤器
+    
   </span>
   
 
@@ -3708,8 +4500,10 @@
       <a href="../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/hash/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     一致性哈希
+    
   </span>
   
 
@@ -3729,8 +4523,10 @@
       <a href="../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/id/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     唯一ID
+    
   </span>
   
 
@@ -3750,8 +4546,10 @@
       <a href="../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     系统设计题目
+    
   </span>
   
 
@@ -3771,8 +4569,10 @@
       <a href="../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/ratelimit/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     限流
+    
   </span>
   
 
@@ -3797,14 +4597,25 @@
   
     
     
-    
       
         
+      
+        
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -3813,11 +4624,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11" >
         
           
-          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="">
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     计算机基础
+    
   </span>
   
 
@@ -3841,8 +4654,10 @@
       <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     http 手册
+    
   </span>
   
 
@@ -3862,8 +4677,10 @@
       <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/network/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     计算机网络面试手册
+    
   </span>
   
 
@@ -3883,8 +4700,10 @@
       <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/system/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     操作系统面试手册
+    
   </span>
   
 
@@ -3904,8 +4723,10 @@
       <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/websocket/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Websocket
+    
   </span>
   
 
@@ -3930,14 +4751,23 @@
   
     
     
-    
       
         
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -3946,11 +4776,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12" >
         
           
-          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="">
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     语言篇
+    
   </span>
   
 
@@ -3972,7 +4804,19 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -3988,8 +4832,10 @@
           <label class="md-nav__link" for="__nav_12_1" id="__nav_12_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     C++
+    
   </span>
   
 
@@ -4013,8 +4859,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/C%2B%2B/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     C++ 进阶教程
+    
   </span>
   
 
@@ -4034,8 +4882,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/C%2B%2B/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     C++ 基础教程
+    
   </span>
   
 
@@ -4055,8 +4905,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/C%2B%2B/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     C++ 面试手册
+    
   </span>
   
 
@@ -4082,7 +4934,19 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -4098,8 +4962,10 @@
           <label class="md-nav__link" for="__nav_12_2" id="__nav_12_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Golang
+    
   </span>
   
 
@@ -4123,8 +4989,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Go 进阶教程
+    
   </span>
   
 
@@ -4144,8 +5012,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Go 基础教程
+    
   </span>
   
 
@@ -4163,7 +5033,47 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -4179,8 +5089,10 @@
           <label class="md-nav__link" for="__nav_12_2_3" id="__nav_12_2_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     常用库
+    
   </span>
   
 
@@ -4204,8 +5116,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/cobra/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Cobra
+    
   </span>
   
 
@@ -4225,8 +5139,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/encoding/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Encoding
+    
   </span>
   
 
@@ -4246,8 +5162,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/fmt/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     fmt 库
+    
   </span>
   
 
@@ -4267,8 +5185,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/gin/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Gin
+    
   </span>
   
 
@@ -4288,8 +5208,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/gorm/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Gorm
+    
   </span>
   
 
@@ -4309,8 +5231,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/io/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Io
+    
   </span>
   
 
@@ -4330,8 +5254,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/jwt-go/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Jwt go
+    
   </span>
   
 
@@ -4351,8 +5277,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/logrus/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Logrus
+    
   </span>
   
 
@@ -4372,8 +5300,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/net/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     net
+    
   </span>
   
 
@@ -4393,8 +5323,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/os/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Os
+    
   </span>
   
 
@@ -4414,8 +5346,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/pprof/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Pprof
+    
   </span>
   
 
@@ -4435,8 +5369,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/protobuf/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Protobuf
+    
   </span>
   
 
@@ -4456,8 +5392,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/sync/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Sync
+    
   </span>
   
 
@@ -4477,8 +5415,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/testify/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Testify
+    
   </span>
   
 
@@ -4498,8 +5438,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/time/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Time
+    
   </span>
   
 
@@ -4519,8 +5461,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/viper/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Viper
+    
   </span>
   
 
@@ -4540,8 +5484,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/zap/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Zap
+    
   </span>
   
 
@@ -4575,7 +5521,21 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -4591,8 +5551,10 @@
           <label class="md-nav__link" for="__nav_12_3" id="__nav_12_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Python
+    
   </span>
   
 
@@ -4616,8 +5578,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Python 进阶教程
+    
   </span>
   
 
@@ -4637,8 +5601,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     python 基础教程
+    
   </span>
   
 
@@ -4658,8 +5624,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Python 面试手册
+    
   </span>
   
 
@@ -4677,7 +5645,87 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -4693,8 +5741,10 @@
           <label class="md-nav__link" for="__nav_12_3_4" id="__nav_12_3_4_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Python常用库
+    
   </span>
   
 
@@ -4718,8 +5768,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/Seaborn/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Seaborn
+    
   </span>
   
 
@@ -4739,8 +5791,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/beautifulsoup/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     beautifulsoup 模块
+    
   </span>
   
 
@@ -4760,8 +5814,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/celery/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Celery
+    
   </span>
   
 
@@ -4781,8 +5837,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/click/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Click
+    
   </span>
   
 
@@ -4802,8 +5860,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/datastruct/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     数据结构和算法
+    
   </span>
   
 
@@ -4823,8 +5883,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/datetime/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     datetime 模块
+    
   </span>
   
 
@@ -4844,8 +5906,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/functools/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     functools 模块
+    
   </span>
   
 
@@ -4865,8 +5929,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/jose/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Jose
+    
   </span>
   
 
@@ -4886,8 +5952,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/json/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     json 模块
+    
   </span>
   
 
@@ -4907,8 +5975,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/logging/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     logging 模块
+    
   </span>
   
 
@@ -4928,8 +5998,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/math/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     math 模块
+    
   </span>
   
 
@@ -4949,8 +6021,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/matpliot/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     matpliot 使用教程
+    
   </span>
   
 
@@ -4970,8 +6044,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/mock/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     mock 模块
+    
   </span>
   
 
@@ -4991,8 +6067,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/numpy/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     NumPy 教程
+    
   </span>
   
 
@@ -5012,8 +6090,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/os/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     os模块
+    
   </span>
   
 
@@ -5033,8 +6113,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pandas/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Pandas 教程
+    
   </span>
   
 
@@ -5054,8 +6136,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/passlib/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Passlib
+    
   </span>
   
 
@@ -5075,8 +6159,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pathlib/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     pathlib 模块
+    
   </span>
   
 
@@ -5096,8 +6182,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pickle/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     pickle 模块
+    
   </span>
   
 
@@ -5117,8 +6205,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pydantic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Pydantic
+    
   </span>
   
 
@@ -5138,8 +6228,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pymysql/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     pymysql 模块
+    
   </span>
   
 
@@ -5159,8 +6251,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pytest/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     pytest 模块
+    
   </span>
   
 
@@ -5180,8 +6274,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pytorch/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     PyTorch 从入门到精通：详细教程
+    
   </span>
   
 
@@ -5201,8 +6297,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/queue/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     queue 模块
+    
   </span>
   
 
@@ -5222,8 +6320,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/random/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     random 模块
+    
   </span>
   
 
@@ -5243,8 +6343,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/re/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     re 模块
+    
   </span>
   
 
@@ -5264,8 +6366,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/redis/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     redis
+    
   </span>
   
 
@@ -5285,8 +6389,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/requests/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     requests 模块
+    
   </span>
   
 
@@ -5306,8 +6412,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scikit-learn/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     scikit-learn
+    
   </span>
   
 
@@ -5327,8 +6435,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scipy/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     scipy 模块
+    
   </span>
   
 
@@ -5348,8 +6458,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scrapy/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     scrapy 教程
+    
   </span>
   
 
@@ -5369,8 +6481,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/selenium/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     selenium 使用教程
+    
   </span>
   
 
@@ -5390,8 +6504,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/shutil/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     shutil 模块
+    
   </span>
   
 
@@ -5411,8 +6527,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/sqlalchemy/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Sqlalchemy
+    
   </span>
   
 
@@ -5432,8 +6550,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/sys/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     sys 模块
+    
   </span>
   
 
@@ -5453,8 +6573,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/time/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     time 模块
+    
   </span>
   
 
@@ -5474,8 +6596,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/urllib/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     urllib 模块
+    
   </span>
   
 
@@ -5515,6 +6639,111 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 混沌工程的核心理念
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 为什么需要混沌工程
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 混沌工程的实践步骤
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 混沌工程的最佳实践
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 混沌工程的工具
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 混沌工程的挑战
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-devopssre" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 混沌工程与 DevOps/SRE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. 混沌工程的未来
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           
             <div class="md-content" data-md-component="content">
@@ -5523,95 +6752,96 @@
                   
 
 
-<h1 id="chaos">Chaos 混沌工程</h1>
+
+<h1 id="chaos">Chaos 混沌工程<a class="headerlink" href="#chaos" title="Permanent link">&para;</a></h1>
 <p><strong>混沌工程（Chaos Engineering）</strong>是一种用于测试分布式系统韧性和容错性的工程实践。通过在生产环境或模拟环境中引入不可预测的故障和异常（即混沌），帮助开发和运维团队提前发现系统中的潜在问题，从而提高系统的稳定性、可用性和弹性。</p>
-<h3 id="1">1. 混沌工程的核心理念</h3>
+<h3 id="1">1. 混沌工程的核心理念<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
 <p>混沌工程的核心理念是：<strong>“通过在系统中引入故障，验证系统是否能够在压力下正常运行并自动恢复。”</strong> 换句话说，混沌工程故意制造混乱，以确保系统在不确定性和异常情况下依然稳定。</p>
-<h3 id="2">2. 为什么需要混沌工程</h3>
+<h3 id="2">2. 为什么需要混沌工程<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
 <p>现代分布式系统通常依赖于多种服务和组件，这些组件在多节点、多数据中心或云环境中运行，可能出现各种不可预知的故障，如网络延迟、服务器崩溃、磁盘损坏等。如果这些故障未被提前发现，可能会导致严重的业务中断和数据丢失。</p>
 <p>混沌工程通过主动注入故障，使团队在可控环境下提前暴露系统的薄弱点，促使他们改进系统的可靠性和弹性。</p>
-<h3 id="3">3. 混沌工程的实践步骤</h3>
-<h4 id="31">3.1 确定正常状态</h4>
+<h3 id="3">3. 混沌工程的实践步骤<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<h4 id="31">3.1 确定正常状态<a class="headerlink" href="#31" title="Permanent link">&para;</a></h4>
 <p>在引入混沌之前，团队首先需要确定系统的“正常状态”。这通常通过一组关键性能指标（KPIs）来定义，例如：
 - 响应时间
 - 吞吐量
 - 错误率
 - 服务可用性</p>
 <p>这些指标将作为评判混沌实验成功与否的标准。</p>
-<h4 id="32">3.2 设定假设</h4>
+<h4 id="32">3.2 设定假设<a class="headerlink" href="#32" title="Permanent link">&para;</a></h4>
 <p>在进行混沌实验之前，团队应该设定关于系统的假设。比如：
 - <strong>假设 1</strong>：如果某个服务不可用，系统依然可以自动切换到备份服务。
 - <strong>假设 2</strong>：网络延迟增加时，系统的响应时间会略有增加，但不会导致服务崩溃。</p>
 <p>这些假设帮助团队明确系统在面对特定故障时应该表现出的行为。</p>
-<h4 id="33">3.3 制造故障（引入混沌）</h4>
+<h4 id="33">3.3 制造故障（引入混沌）<a class="headerlink" href="#33" title="Permanent link">&para;</a></h4>
 <p>通过在系统中故意引入故障，验证之前的假设是否成立。常见的故障类型包括：
 - <strong>服务器故障</strong>：强制关闭服务器或虚拟机，模拟服务器宕机。
 - <strong>网络异常</strong>：引入高延迟、丢包、断网等网络故障。
 - <strong>资源耗尽</strong>：模拟 CPU、内存、磁盘等资源耗尽的情况。
 - <strong>服务异常</strong>：人为导致某个服务停止或异常行为，观察系统是否能够正确处理。</p>
-<h4 id="34">3.4 监控和分析</h4>
+<h4 id="34">3.4 监控和分析<a class="headerlink" href="#34" title="Permanent link">&para;</a></h4>
 <p>在实验期间，团队需要实时监控系统的各项性能指标，观察故障是否对系统造成了不利影响。如果系统在引入故障后仍然能够保持关键服务的正常运行，则说明系统具备较好的韧性。</p>
-<h4 id="35">3.5 改进系统</h4>
+<h4 id="35">3.5 改进系统<a class="headerlink" href="#35" title="Permanent link">&para;</a></h4>
 <p>如果实验发现系统在某些故障情况下无法正常运行，团队应针对薄弱环节进行改进和优化。例如：
 - 增加自动化故障转移（Failover）机制。
 - 优化服务的容错设计。
 - 提高监控和告警的敏感度。</p>
-<h4 id="36">3.6 持续执行</h4>
+<h4 id="36">3.6 持续执行<a class="headerlink" href="#36" title="Permanent link">&para;</a></h4>
 <p>混沌工程不应是一时的活动，而是应该持续进行。随着系统的变化和扩展，新的服务、架构和依赖关系引入后可能会带来新的故障风险，因此混沌实验需要定期进行。</p>
-<h3 id="4">4. 混沌工程的最佳实践</h3>
-<h4 id="41">4.1 从小规模开始</h4>
+<h3 id="4">4. 混沌工程的最佳实践<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<h4 id="41">4.1 从小规模开始<a class="headerlink" href="#41" title="Permanent link">&para;</a></h4>
 <p>在生产环境中执行混沌实验时，建议从小规模开始，逐步增加实验的复杂性和影响范围。可以先在非生产环境或子系统上进行测试，确保不会对核心业务产生重大影响。</p>
-<h4 id="42">4.2 自动化实验</h4>
+<h4 id="42">4.2 自动化实验<a class="headerlink" href="#42" title="Permanent link">&para;</a></h4>
 <p>为了确保混沌实验的效率和覆盖面，许多团队会使用自动化工具来执行混沌实验。例如：
 - 定时运行混沌实验。
 - 自动监控实验的结果并记录数据。
 - 根据实验结果自动触发告警或修复措施。</p>
-<h4 id="43">4.3 保护核心业务</h4>
+<h4 id="43">4.3 保护核心业务<a class="headerlink" href="#43" title="Permanent link">&para;</a></h4>
 <p>在进行混沌实验时，团队需要明确哪些服务和功能是至关重要的，绝不能被实验中断。例如，对于一个在线支付系统，支付网关或账务系统应被严格保护，实验应主要集中在外围服务上。</p>
-<h4 id="44">4.4 逐步增加复杂性</h4>
+<h4 id="44">4.4 逐步增加复杂性<a class="headerlink" href="#44" title="Permanent link">&para;</a></h4>
 <p>一开始可以引入较为简单和常见的故障，如关闭单个服务器或增加轻微的网络延迟。在系统应对这些情况良好的情况下，逐渐引入更复杂的多重故障，如多个节点宕机或大规模网络分区。</p>
-<h3 id="5">5. 混沌工程的工具</h3>
+<h3 id="5">5. 混沌工程的工具<a class="headerlink" href="#5" title="Permanent link">&para;</a></h3>
 <p>为了帮助团队更方便地进行混沌实验，业界提供了一些专门的混沌工程工具。以下是常用的混沌工程工具：</p>
-<h4 id="51-chaos-monkey">5.1 <strong>Chaos Monkey</strong></h4>
+<h4 id="51-chaos-monkey">5.1 <strong>Chaos Monkey</strong><a class="headerlink" href="#51-chaos-monkey" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>开发者</strong>：Netflix</li>
 <li><strong>特点</strong>：Chaos Monkey 是 Netflix 开发的混沌工具，最初用于随机关闭生产环境中的实例，以验证 Netflix 的分布式系统是否具有自动恢复能力。</li>
 <li><strong>使用场景</strong>：适用于大规模分布式系统，特别是云环境中的自动化实例管理和恢复测试。</li>
 </ul>
-<h4 id="52-gremlin">5.2 <strong>Gremlin</strong></h4>
+<h4 id="52-gremlin">5.2 <strong>Gremlin</strong><a class="headerlink" href="#52-gremlin" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>特点</strong>：Gremlin 是一个商业化的混沌工程平台，支持多种类型的故障模拟，如 CPU 耗尽、内存泄漏、网络延迟等。它提供了一个易于使用的界面，允许团队以可控的方式执行实验。</li>
 <li><strong>使用场景</strong>：适用于希望使用商业工具快速部署混沌实验的团队。</li>
 </ul>
-<h4 id="53-litmus">5.3 <strong>Litmus</strong></h4>
+<h4 id="53-litmus">5.3 <strong>Litmus</strong><a class="headerlink" href="#53-litmus" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>特点</strong>：Litmus 是一个开源的混沌工程框架，主要针对 Kubernetes 环境中的应用程序。它允许团队定义、运行和管理混沌实验，旨在提高云原生应用的弹性。</li>
 <li><strong>使用场景</strong>：适用于 Kubernetes 集群和微服务架构的混沌实验。</li>
 </ul>
-<h4 id="54-pumba">5.4 <strong>Pumba</strong></h4>
+<h4 id="54-pumba">5.4 <strong>Pumba</strong><a class="headerlink" href="#54-pumba" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>特点</strong>：Pumba 是一个专门针对 Docker 容器的开源混沌工具。它可以通过杀死容器、注入网络故障等方式，帮助测试容器化应用的弹性和容错能力。</li>
 <li><strong>使用场景</strong>：适合用于容器化环境中的混沌实验，特别是 Docker Swarm 或 Kubernetes 集群中的微服务架构。</li>
 </ul>
-<h4 id="55-chaos-mesh">5.5 <strong>Chaos Mesh</strong></h4>
+<h4 id="55-chaos-mesh">5.5 <strong>Chaos Mesh</strong><a class="headerlink" href="#55-chaos-mesh" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>特点</strong>：Chaos Mesh 是由 PingCAP 开发的开源混沌工程工具，专门为 Kubernetes 设计。它支持多种类型的混沌实验，如网络故障、Pod 故障、磁盘 I/O 故障等，能够轻松地将混沌实验集成到 Kubernetes 环境中。</li>
 <li><strong>使用场景</strong>：专门用于 Kubernetes 环境下的微服务测试。</li>
 </ul>
-<h3 id="6">6. 混沌工程的挑战</h3>
+<h3 id="6">6. 混沌工程的挑战<a class="headerlink" href="#6" title="Permanent link">&para;</a></h3>
 <p>虽然混沌工程能够显著提升系统的韧性，但实施过程中也存在一些挑战：
 - <strong>文化阻力</strong>：在某些企业中，故意制造故障可能会引起团队的抵触情绪，特别是担心影响生产环境的稳定性。
 - <strong>实验控制</strong>：如果没有合理的控制和监控机制，混沌实验可能会导致不可预见的严重后果，甚至引发生产故障。
 - <strong>复杂性增加</strong>：混沌实验引入的复杂性较高，团队需要有足够的技术能力和监控手段，才能确保实验的安全和可控性。</p>
-<h3 id="7-devopssre">7. 混沌工程与 DevOps/SRE</h3>
+<h3 id="7-devopssre">7. 混沌工程与 DevOps/SRE<a class="headerlink" href="#7-devopssre" title="Permanent link">&para;</a></h3>
 <p>混沌工程与 DevOps 和 SRE（Site Reliability Engineering）密切相关。DevOps 强调开发与运维的协作，提高系统的快速交付和稳定性，而 SRE 注重通过工程实践提高系统的可靠性。混沌工程作为一种提高系统韧性的重要实践，被许多 SRE 团队广泛采用。</p>
 <ul>
 <li><strong>DevOps 实践中的混沌工程</strong>：通过在 CI/CD 流水线中加入混沌测试，确保每次代码部署后系统的稳定性。</li>
 <li><strong>SRE 实践中的混沌工程</strong>：SRE 团队常常使用混沌工程来进行容量规划、容灾演练，确保系统在高负载或异常条件下依然稳定。</li>
 </ul>
-<h3 id="8">8. 混沌工程的未来</h3>
+<h3 id="8">8. 混沌工程的未来<a class="headerlink" href="#8" title="Permanent link">&para;</a></h3>
 <p>随着分布式系统、云计算、容器和微服务架构的普及，混沌工程的应用也在不断扩大。未来，混沌工程将会更加自动化、智能化，结合机器学习和 AI，帮助团队提前预测故障并做出更智能的决策。</p>
-<h3 id="_1">总结</h3>
+<h3 id="_1">总结<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p>混沌工程是一种创新的系统韧性测试方法，旨在通过主动引入故障验证系统的稳定性。通过持续的混沌实验，团队可以提高系统的容错能力、优化自动恢复机制，从而应对复杂的分布式系统中不可预见的故障。结合合适的工具和实践，混沌工程能够显著提升系统的可靠性和用户体验。</p>
 
 
@@ -5630,6 +6860,8 @@
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -5659,10 +6891,20 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.sections", "toc.integrate", "search.highlight", "search.suggest", "header.autohide", "footer.copyright", "footer.text", "code.annotate", "content.code", "material.nav", "material.switch", "content.code.copy"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.section", "navigation.expand", "navigation.tabs", "navigation.sections", "navigation.indexes", "content.code.copy", "content.tabs.link", "content.code.annotate", "math"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+        <script src="../../styles/javascripts/config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="../../styles/javascripts/katex.js"></script>
       
     
   </body>

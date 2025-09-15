@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.8c3ca2c6.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -50,7 +50,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../css/extra.css">
+      <link rel="stylesheet" href="../../../styles/css/extra.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -69,7 +71,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="amber">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#_2" class="md-skip">
           跳转至
         </a>
       
@@ -90,9 +92,7 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
     <a href="../../.." title="IT-手册" class="md-header__button md-logo" aria-label="IT-手册" data-md-component="logo">
       
@@ -127,20 +127,20 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="amber"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_1">
     
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
@@ -152,11 +152,13 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -175,8 +177,6 @@
         </button>
       </nav>
       
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
@@ -190,6 +190,7 @@
     </div>
   </div>
 </div>
+      
     
     
   </nav>
@@ -200,6 +201,350 @@
       
       
         
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  IT-手册大全
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Web%E7%AF%87/Django/advance/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Web篇
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/basic/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  中间件
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/alert/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  云原生
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../LangChain/advance/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  人工智能
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/SRE/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  工具篇
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/basic/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  数据库
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/algorithm/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  数据结构和算法
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E6%9C%8D%E5%8A%A1%E5%99%A8/gunicorn/basic/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  服务器
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/bloom/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  系统设计
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  计算机基础
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/C%2B%2B/advance/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  语言篇
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
           
         
       
@@ -214,10 +559,10 @@
                     
 
 
-
   
 
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="导航栏" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="IT-手册" class="md-nav__button md-logo" aria-label="IT-手册" data-md-component="logo">
       
@@ -240,8 +585,10 @@
       <a href="../../.." class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     IT-手册大全
+    
   </span>
   
 
@@ -258,14 +605,23 @@
   
     
     
-    
       
         
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -274,11 +630,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Web篇
+    
   </span>
   
 
@@ -300,7 +658,23 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -316,8 +690,10 @@
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Django
+    
   </span>
   
 
@@ -341,8 +717,10 @@
       <a href="../../../Web%E7%AF%87/Django/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Django 进阶教程
+    
   </span>
   
 
@@ -362,8 +740,10 @@
       <a href="../../../Web%E7%AF%87/Django/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Django 基础教程
+    
   </span>
   
 
@@ -383,8 +763,10 @@
       <a href="../../../Web%E7%AF%87/Django/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Django 面试手册
+    
   </span>
   
 
@@ -404,8 +786,10 @@
       <a href="../../../Web%E7%AF%87/Django/questions/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Django 开发中遇到的问题
+    
   </span>
   
 
@@ -425,8 +809,10 @@
       <a href="../../../Web%E7%AF%87/Django/restful/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Django RESTful
+    
   </span>
   
 
@@ -452,7 +838,23 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -468,8 +870,10 @@
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     FastAPI
+    
   </span>
   
 
@@ -493,8 +897,10 @@
       <a href="../../../Web%E7%AF%87/FastAPI/GraphQL/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     GraphQL 教程
+    
   </span>
   
 
@@ -514,8 +920,10 @@
       <a href="../../../Web%E7%AF%87/FastAPI/advance./" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     FastAPI 进阶教程
+    
   </span>
   
 
@@ -535,8 +943,10 @@
       <a href="../../../Web%E7%AF%87/FastAPI/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     FastAPI 教程
+    
   </span>
   
 
@@ -556,8 +966,10 @@
       <a href="../../../Web%E7%AF%87/FastAPI/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     FastAPI 面试手册
+    
   </span>
   
 
@@ -577,8 +989,10 @@
       <a href="../../../Web%E7%AF%87/FastAPI/practice/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     FastAPI 实战项目教程：构建完整的博客 API
+    
   </span>
   
 
@@ -604,7 +1018,21 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -620,8 +1048,10 @@
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Flask
+    
   </span>
   
 
@@ -645,8 +1075,10 @@
       <a href="../../../Web%E7%AF%87/Flask/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Flask 进阶教程
+    
   </span>
   
 
@@ -666,8 +1098,10 @@
       <a href="../../../Web%E7%AF%87/Flask/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Flask 基础教程
+    
   </span>
   
 
@@ -687,8 +1121,10 @@
       <a href="../../../Web%E7%AF%87/Flask/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Flask 面试手册
+    
   </span>
   
 
@@ -708,8 +1144,10 @@
       <a href="../../../Web%E7%AF%87/Flask/questions/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Flask 工作中常见问题
+    
   </span>
   
 
@@ -742,14 +1180,23 @@
   
     
     
-    
       
         
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -758,11 +1205,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     中间件
+    
   </span>
   
 
@@ -784,7 +1233,17 @@
   
     
     
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -800,8 +1259,10 @@
           <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Kafka
+    
   </span>
   
 
@@ -825,8 +1286,10 @@
       <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Kafka 基础
+    
   </span>
   
 
@@ -846,8 +1309,10 @@
       <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     kafka 面试
+    
   </span>
   
 
@@ -873,7 +1338,17 @@
   
     
     
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -889,8 +1364,10 @@
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Rabbitmq
+    
   </span>
   
 
@@ -914,8 +1391,10 @@
       <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/rabbitmq/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Basic
+    
   </span>
   
 
@@ -935,8 +1414,10 @@
       <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/rabbitmq/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     RabbitMQ 面试
+    
   </span>
   
 
@@ -962,7 +1443,17 @@
   
     
     
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -978,8 +1469,10 @@
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Zookeeper
+    
   </span>
   
 
@@ -1003,8 +1496,10 @@
       <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/zookeeper/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     zookeeper 教程
+    
   </span>
   
 
@@ -1024,8 +1519,10 @@
       <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/zookeeper/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     zookeeper 面试
+    
   </span>
   
 
@@ -1058,14 +1555,23 @@
   
     
     
-    
       
         
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -1074,11 +1580,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     云原生
+    
   </span>
   
 
@@ -1100,7 +1608,21 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -1116,8 +1638,10 @@
           <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Prometheus
+    
   </span>
   
 
@@ -1141,8 +1665,10 @@
       <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/alert/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Prometheus 告警
+    
   </span>
   
 
@@ -1162,8 +1688,10 @@
       <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Prometheus 教程
+    
   </span>
   
 
@@ -1183,8 +1711,10 @@
       <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/prometheus/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Prometheus 配置文件
+    
   </span>
   
 
@@ -1204,8 +1734,10 @@
       <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/promql/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     PromQL
+    
   </span>
   
 
@@ -1231,7 +1763,17 @@
   
     
     
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -1247,8 +1789,10 @@
           <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Docker
+    
   </span>
   
 
@@ -1272,8 +1816,10 @@
       <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Docker-基础
+    
   </span>
   
 
@@ -1293,8 +1839,10 @@
       <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Docker 面试
+    
   </span>
   
 
@@ -1320,7 +1868,23 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -1336,8 +1900,10 @@
           <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Kubernetes
+    
   </span>
   
 
@@ -1361,8 +1927,10 @@
       <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     kubernetes 教程
+    
   </span>
   
 
@@ -1382,8 +1950,10 @@
       <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/crictl/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     crictl 教程
+    
   </span>
   
 
@@ -1403,8 +1973,10 @@
       <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/helm/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     kubernetes 包管理工具 helm
+    
   </span>
   
 
@@ -1424,8 +1996,10 @@
       <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     kubernetes 面试手册
+    
   </span>
   
 
@@ -1445,8 +2019,10 @@
       <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/monitor/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     kubernetes 监控平台和日志管理
+    
   </span>
   
 
@@ -1481,9 +2057,23 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
     
       
         
+        
+      
+      
         
       
     
@@ -1498,8 +2088,10 @@
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
+  
   <span class="md-ellipsis">
     人工智能
+    
   </span>
   
 
@@ -1521,11 +2113,24 @@
   
     
     
-    
+      
+        
+      
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -1534,11 +2139,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_1" >
         
           
-          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="">
             
+  
   
   <span class="md-ellipsis">
     LangChain
+    
   </span>
   
 
@@ -1562,8 +2169,10 @@
       <a href="../../LangChain/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     LangChain 进阶教程
+    
   </span>
   
 
@@ -1583,8 +2192,10 @@
       <a href="../../LangChain/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     LangChain 基础教程
+    
   </span>
   
 
@@ -1610,11 +2221,26 @@
   
     
     
-    
+      
+        
+      
+        
+      
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -1623,11 +2249,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
         
           
-          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="">
             
+  
   
   <span class="md-ellipsis">
     大语言模型
+    
   </span>
   
 
@@ -1651,8 +2279,10 @@
       <a href="../../%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     LLM 进阶教程
+    
   </span>
   
 
@@ -1672,8 +2302,10 @@
       <a href="../../%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     LLM 基础教程
+    
   </span>
   
 
@@ -1693,8 +2325,10 @@
       <a href="../../%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     LLM 面试手册
+    
   </span>
   
 
@@ -1720,11 +2354,26 @@
   
     
     
-    
+      
+        
+      
+        
+      
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -1733,11 +2382,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3" >
         
           
-          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="">
             
+  
   
   <span class="md-ellipsis">
     机器学习
+    
   </span>
   
 
@@ -1761,8 +2412,10 @@
       <a href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     机器学习 进阶教程
+    
   </span>
   
 
@@ -1782,8 +2435,10 @@
       <a href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     机器学习 基础教程
+    
   </span>
   
 
@@ -1803,8 +2458,10 @@
       <a href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     机器学习 面试手册
+    
   </span>
   
 
@@ -1832,22 +2489,39 @@
   
     
     
-    
+      
+        
+      
+        
+      
+        
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="">
             
+  
   
   <span class="md-ellipsis">
     深度学习
+    
   </span>
   
 
@@ -1871,8 +2545,10 @@
       <a href="../advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     深度学习 进阶教程
+    
   </span>
   
 
@@ -1892,8 +2568,10 @@
       <a href="../basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     深度学习 进阶教程
+    
   </span>
   
 
@@ -1916,14 +2594,14 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
     深度学习 面试手册
+    
   </span>
   
 
@@ -1933,8 +2611,10 @@
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
     深度学习 面试手册
+    
   </span>
   
 
@@ -1945,8 +2625,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
@@ -1971,30 +2649,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. 基础理论">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11-backpropagation" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.1 解释反向传播（Backpropagation）算法的原理和步骤。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12-batch-normalization" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.2 介绍批量归一化（Batch Normalization）的原理及其优点。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -2003,30 +2657,6 @@
       2. 模型架构
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="2. 模型架构">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-cnn" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.1 介绍卷积神经网络（CNN）的基本结构和作用。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22-transformer" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.2 解释Transformer模型的主要组件及其在自然语言处理中的应用。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2037,30 +2667,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. 实际应用">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.1 描述你在处理图像数据时使用的数据增强技术，并说明它们的作用。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.2 你如何在训练深度学习模型时处理计算资源限制问题？
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -2070,30 +2676,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="4. 系统设计">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.1 设计一个深度学习模型的训练和部署系统。考虑数据流、模型版本控制和在线推理。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.2 你如何处理模型的版本管理和实验追踪？
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -2102,30 +2684,6 @@
       5. 现代技术和趋势
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="5. 现代技术和趋势">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#51-self-supervised-learning" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.1 解释自监督学习（Self-Supervised Learning）及其应用场景。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#52-model-quantization" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.2 介绍模型量化（Model Quantization）及其在实际应用中的优势。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2145,48 +2703,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="6. 高级模型和技术">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#61-gan" class="md-nav__link">
-    <span class="md-ellipsis">
-      6.1 介绍生成对抗网络（GAN）的基本原理及其应用。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#62-rnn" class="md-nav__link">
-    <span class="md-ellipsis">
-      6.2 解释循环神经网络（RNN）的基本结构，并介绍其在序列建模中的应用。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#63-lstmrnn" class="md-nav__link">
-    <span class="md-ellipsis">
-      6.3 介绍长短期记忆网络（LSTM）及其相对于传统RNN的优势。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#64-self-attentiontransformerrnn" class="md-nav__link">
-    <span class="md-ellipsis">
-      6.4 解释自注意力机制（Self-Attention）在Transformer中的作用，并比较其与RNN的优缺点。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -2196,30 +2712,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="7. 模型优化">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#71-adamrmsprop" class="md-nav__link">
-    <span class="md-ellipsis">
-      7.1 介绍深度学习中的优化算法（如Adam、RMSprop），并比较它们的优缺点。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#72-dropoutl2" class="md-nav__link">
-    <span class="md-ellipsis">
-      7.2 解释模型的正则化技术（如Dropout、L2正则化）的作用，并举例说明其在实际应用中的效果。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -2228,30 +2720,6 @@
       8. 系统设计和实践
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="8. 系统设计和实践">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#81" class="md-nav__link">
-    <span class="md-ellipsis">
-      8.1 设计一个深度学习模型的训练和部署系统，包括数据处理、模型训练、版本控制和监控。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#82" class="md-nav__link">
-    <span class="md-ellipsis">
-      8.2 如何进行模型评估和调优？举例说明在实际应用中如何选择和调整评估指标。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2271,48 +2739,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="9. 复杂模型设计">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#91-gnn" class="md-nav__link">
-    <span class="md-ellipsis">
-      9.1 介绍图神经网络（GNN）的基本原理及其应用场景。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#92-attention-mechanism" class="md-nav__link">
-    <span class="md-ellipsis">
-      9.2 解释注意力机制（Attention Mechanism）的工作原理，并介绍其在自然语言处理中的应用。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#93-neural-architecture-searchnas" class="md-nav__link">
-    <span class="md-ellipsis">
-      9.3 介绍神经架构搜索（Neural Architecture Search，NAS）的基本概念和方法。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#94-adversarial-training" class="md-nav__link">
-    <span class="md-ellipsis">
-      9.4 解释对抗训练（Adversarial Training）及其在提高模型鲁棒性方面的作用。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -2322,39 +2748,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="10. 最新技术和趋势">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#101-bertgpt" class="md-nav__link">
-    <span class="md-ellipsis">
-      10.1 介绍预训练模型（如BERT、GPT）在自然语言处理中的应用及其优势。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#102" class="md-nav__link">
-    <span class="md-ellipsis">
-      10.2 解释大规模预训练模型的挑战及其解决方案。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#103-quantum-machine-learning" class="md-nav__link">
-    <span class="md-ellipsis">
-      10.3 介绍量子机器学习（Quantum Machine Learning）的基本概念及其潜在应用。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -2363,30 +2756,6 @@
       11. 实际应用和挑战
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="11. 实际应用和挑战">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#111" class="md-nav__link">
-    <span class="md-ellipsis">
-      11.1 介绍深度学习在医疗影像分析中的应用，并讨论其面临的挑战。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#112" class="md-nav__link">
-    <span class="md-ellipsis">
-      11.2 解释深度学习在自动驾驶中的应用，包括感知、决策和控制。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2406,48 +2775,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="12. 最新技术和理论">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#121" class="md-nav__link">
-    <span class="md-ellipsis">
-      12.1 介绍多模态学习的基本概念及其在实际应用中的例子。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#122-batch-normalizationlayer-normalization" class="md-nav__link">
-    <span class="md-ellipsis">
-      12.2 解释神经网络中的正则化技术（如Batch Normalization、Layer Normalization）及其作用。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#123-vaegan" class="md-nav__link">
-    <span class="md-ellipsis">
-      12.3 解释图像生成模型（如VAE、GAN）的基本原理及其应用。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#124" class="md-nav__link">
-    <span class="md-ellipsis">
-      12.4 介绍自监督学习的基本思想及其在无监督学习中的应用。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -2457,48 +2784,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="13. 复杂模型和系统设计">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#131-deep-reinforcement-learning" class="md-nav__link">
-    <span class="md-ellipsis">
-      13.1 介绍深度强化学习（Deep Reinforcement Learning）的基本原理及其应用。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#132" class="md-nav__link">
-    <span class="md-ellipsis">
-      13.2 解释深度学习模型的部署和优化，包括在线推理和离线推理的区别。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#133" class="md-nav__link">
-    <span class="md-ellipsis">
-      13.3 讨论深度学习模型在分布式系统中的挑战和解决方案。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#134-limeshap" class="md-nav__link">
-    <span class="md-ellipsis">
-      13.4 解释深度学习中的解释性技术（如LIME、SHAP）及其作用。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -2507,30 +2792,6 @@
       14. 深度学习中的实验设计
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="14. 深度学习中的实验设计">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#141" class="md-nav__link">
-    <span class="md-ellipsis">
-      14.1 介绍实验设计的基本原则（如假设检验、实验对照）及其在深度学习中的应用。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#142" class="md-nav__link">
-    <span class="md-ellipsis">
-      14.2 讨论如何设计深度学习模型的评估实验，包括选择合适的指标和数据集。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2550,48 +2811,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="15. 领域应用与模型优化">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#151" class="md-nav__link">
-    <span class="md-ellipsis">
-      15.1 介绍深度学习在金融领域的应用，并讨论其面临的挑战。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#152" class="md-nav__link">
-    <span class="md-ellipsis">
-      15.2 解释深度学习在医疗诊断中的应用，包括模型训练和验证过程。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#153" class="md-nav__link">
-    <span class="md-ellipsis">
-      15.3 讨论深度学习在自动驾驶中的技术挑战和解决方案。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#154" class="md-nav__link">
-    <span class="md-ellipsis">
-      15.4 解释迁移学习的基本概念，并讨论其在特定任务中的应用。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -2601,48 +2820,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="16. 模型优化与系统架构">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#161" class="md-nav__link">
-    <span class="md-ellipsis">
-      16.1 讨论模型压缩技术（如剪枝、量化）及其对模型性能的影响。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#162" class="md-nav__link">
-    <span class="md-ellipsis">
-      16.2 解释模型优化的超参数（如学习率、批次大小）的选择策略。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#163" class="md-nav__link">
-    <span class="md-ellipsis">
-      16.3 讨论深度学习模型的分布式训练和优化技术（如数据并行、模型并行）。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#164" class="md-nav__link">
-    <span class="md-ellipsis">
-      16.4 解释深度学习系统的容错和可扩展性设计。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -2651,39 +2828,6 @@
       17. 高级模型与算法
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="17. 高级模型与算法">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#171" class="md-nav__link">
-    <span class="md-ellipsis">
-      17.1 介绍强化学习中的策略梯度方法及其与价值函数方法的区别。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#172-adamrmsprop" class="md-nav__link">
-    <span class="md-ellipsis">
-      17.2 讨论深度学习中的自适应优化算法（如Adam、RMSprop）的基本原理及其优缺点。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#173" class="md-nav__link">
-    <span class="md-ellipsis">
-      17.3 解释深度学习中的超分辨率技术，并讨论其应用场景。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2703,39 +2847,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="18. 最新技术趋势">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#181-gnn" class="md-nav__link">
-    <span class="md-ellipsis">
-      18.1 介绍图神经网络（GNN）的基本概念及其应用场景。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#182-transformer" class="md-nav__link">
-    <span class="md-ellipsis">
-      18.2 讨论Transformer模型的优势，并解释其在自然语言处理中的应用。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#183" class="md-nav__link">
-    <span class="md-ellipsis">
-      18.3 解释如何使用自监督学习进行图像生成任务。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -2744,39 +2855,6 @@
       19. 复杂模型应用
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="19. 复杂模型应用">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#191" class="md-nav__link">
-    <span class="md-ellipsis">
-      19.1 讨论深度学习在语音识别中的挑战及其解决方案。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#192" class="md-nav__link">
-    <span class="md-ellipsis">
-      19.2 介绍深度学习在计算机视觉中的目标检测技术，并讨论其应用。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#193" class="md-nav__link">
-    <span class="md-ellipsis">
-      19.3 讨论深度学习在强化学习中的应用，并解释其如何提高策略优化的效率。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2787,39 +2865,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="20. 系统设计与工程">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#201" class="md-nav__link">
-    <span class="md-ellipsis">
-      20.1 解释深度学习系统中的模型版本管理和实验跟踪的重要性。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#202" class="md-nav__link">
-    <span class="md-ellipsis">
-      20.2 讨论深度学习模型的生产环境部署策略（如容器化、微服务架构）。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#203" class="md-nav__link">
-    <span class="md-ellipsis">
-      20.3 介绍深度学习模型的性能监控和维护策略。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -2828,39 +2873,6 @@
       21. 高级算法与模型
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="21. 高级算法与模型">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#211-ganstylegancyclegan" class="md-nav__link">
-    <span class="md-ellipsis">
-      21.1 介绍图像生成对抗网络（GAN）的变种（如StyleGAN、CycleGAN）及其特点。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#212-adversarial-examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      21.2 解释深度学习中的对抗样本（Adversarial Examples）及其防御方法。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#213-domain-adaptation" class="md-nav__link">
-    <span class="md-ellipsis">
-      21.3 讨论深度学习中的领域适应（Domain Adaptation）技术及其应用。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2880,39 +2892,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="22. 前沿研究">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#221-self-attentiontransformer" class="md-nav__link">
-    <span class="md-ellipsis">
-      22.1 介绍深度学习中的自注意力机制（Self-Attention）及其在Transformer中的作用。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#222-style-transfer" class="md-nav__link">
-    <span class="md-ellipsis">
-      22.2 讨论深度学习中的图像风格迁移（Style Transfer）技术，并解释其应用场景。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#223-qdqndouble-dqndueling-dqn" class="md-nav__link">
-    <span class="md-ellipsis">
-      22.3 解释深度强化学习中的深度Q网络（DQN）及其改进方法（如Double DQN、Dueling DQN）。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -2921,30 +2900,6 @@
       23. 模型解释性与透明性
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="23. 模型解释性与透明性">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#231-limeshap" class="md-nav__link">
-    <span class="md-ellipsis">
-      23.1 讨论深度学习模型的解释性问题，并介绍常用的解释方法（如LIME、SHAP）。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#232" class="md-nav__link">
-    <span class="md-ellipsis">
-      23.2 讨论深度学习中的模型透明性和公平性问题，并介绍解决方案。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2955,39 +2910,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="24. 伦理与社会影响">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#241" class="md-nav__link">
-    <span class="md-ellipsis">
-      24.1 讨论深度学习技术在社会中的伦理问题（如隐私、偏见）。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#242" class="md-nav__link">
-    <span class="md-ellipsis">
-      24.2 讨论深度学习在自动化决策中的潜在风险，并提出防范措施。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#243" class="md-nav__link">
-    <span class="md-ellipsis">
-      24.3 解释如何在深度学习项目中进行伦理审查和合规性检查。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -2996,39 +2918,6 @@
       25. 高级模型与系统设计
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="25. 高级模型与系统设计">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#251" class="md-nav__link">
-    <span class="md-ellipsis">
-      25.1 讨论多模态学习的基本概念及其应用场景。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#252" class="md-nav__link">
-    <span class="md-ellipsis">
-      25.2 讨论深度学习模型的在线学习和增量学习技术。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#253" class="md-nav__link">
-    <span class="md-ellipsis">
-      25.3 介绍深度学习模型在大规模数据处理中的挑战与解决方案（如数据分布变化）。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3048,39 +2937,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="26. 新兴技术">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#261-automl" class="md-nav__link">
-    <span class="md-ellipsis">
-      26.1 介绍深度学习中的自动机器学习（AutoML）技术及其优势。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#262-transfer-learning" class="md-nav__link">
-    <span class="md-ellipsis">
-      26.2 解释深度学习中的迁移学习（Transfer Learning）及其在图像分类中的应用。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#263-q" class="md-nav__link">
-    <span class="md-ellipsis">
-      26.3 讨论深度学习中的强化学习与深度学习的结合（如深度Q学习）。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -3089,39 +2945,6 @@
       27. 模型调优
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="27. 模型调优">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#271" class="md-nav__link">
-    <span class="md-ellipsis">
-      27.1 讨论如何选择合适的损失函数以优化模型性能，并举例说明。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#272-cross-validation" class="md-nav__link">
-    <span class="md-ellipsis">
-      27.2 解释如何使用交叉验证（Cross-Validation）来评估模型性能。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#273-hyperparameter-tuning" class="md-nav__link">
-    <span class="md-ellipsis">
-      27.3 讨论深度学习中的超参数优化（Hyperparameter Tuning）方法，并解释其重要性。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3132,39 +2955,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="28. 优化算法">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#281-adamrmsprop" class="md-nav__link">
-    <span class="md-ellipsis">
-      28.1 介绍深度学习中的优化算法（如Adam、RMSprop）及其优缺点。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#282-gradient-clipping" class="md-nav__link">
-    <span class="md-ellipsis">
-      28.2 解释如何使用梯度剪切（Gradient Clipping）来解决梯度爆炸问题。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#283-learning-rate-scheduling" class="md-nav__link">
-    <span class="md-ellipsis">
-      28.3 讨论深度学习中的学习率调度（Learning Rate Scheduling）方法及其作用。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -3173,39 +2963,6 @@
       29. 深度学习系统设计
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="29. 深度学习系统设计">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#291" class="md-nav__link">
-    <span class="md-ellipsis">
-      29.1 讨论深度学习系统中的数据管道设计，包括数据预处理和数据增强。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#292" class="md-nav__link">
-    <span class="md-ellipsis">
-      29.2 介绍如何设计和实现分布式深度学习训练系统。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#293" class="md-nav__link">
-    <span class="md-ellipsis">
-      29.3 讨论深度学习模型部署的最佳实践，包括模型优化和服务架构设计。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3225,39 +2982,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="30. 模型设计与架构">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#301-cnn" class="md-nav__link">
-    <span class="md-ellipsis">
-      30.1 解释卷积神经网络（CNN）的基本架构，包括卷积层、池化层和全连接层。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#302-gan" class="md-nav__link">
-    <span class="md-ellipsis">
-      30.2 讨论深度学习中的生成对抗网络（GAN）及其应用。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#303-gnn" class="md-nav__link">
-    <span class="md-ellipsis">
-      30.3 介绍深度学习中的图神经网络（GNN）及其应用场景。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -3267,39 +2991,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="31. 前沿技术">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#311-self-supervised-learning" class="md-nav__link">
-    <span class="md-ellipsis">
-      31.1 讨论深度学习中的自监督学习（Self-Supervised Learning）及其优势。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#312-shotzero-shot-learning" class="md-nav__link">
-    <span class="md-ellipsis">
-      31.2 介绍深度学习中的零-shot学习（Zero-Shot Learning）技术及其应用。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#313-meta-learning" class="md-nav__link">
-    <span class="md-ellipsis">
-      31.3 讨论深度学习中的元学习（Meta-Learning）技术及其应用。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -3308,39 +2999,6 @@
       32. 应用挑战
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="32. 应用挑战">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#321" class="md-nav__link">
-    <span class="md-ellipsis">
-      32.1 讨论深度学习模型在实际应用中的挑战，如数据稀缺、计算资源需求等。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#322" class="md-nav__link">
-    <span class="md-ellipsis">
-      32.2 讨论深度学习模型在跨领域应用中的挑战，如城市与农村环境的适应性。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#323" class="md-nav__link">
-    <span class="md-ellipsis">
-      32.3 讨论深度学习模型在处理不平衡数据集中的挑战，并介绍解决方案。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3360,39 +3018,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="33. 高级模型设计">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#331-transformer" class="md-nav__link">
-    <span class="md-ellipsis">
-      33.1 介绍Transformer模型的基本结构及其优势。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#332-attention-mechanism" class="md-nav__link">
-    <span class="md-ellipsis">
-      33.2 讨论深度学习中的注意力机制（Attention Mechanism）及其在自然语言处理中的应用。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#333-cnnresidual-connections" class="md-nav__link">
-    <span class="md-ellipsis">
-      33.3 解释卷积神经网络（CNN）中的残差连接（Residual Connections）及其作用。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -3402,39 +3027,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="34. 实验策略">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#341" class="md-nav__link">
-    <span class="md-ellipsis">
-      34.1 讨论如何设计深度学习实验，包括数据集划分、模型选择和评估指标。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#342" class="md-nav__link">
-    <span class="md-ellipsis">
-      34.2 讨论如何进行模型调优，包括超参数优化和模型选择。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#343-shaplime" class="md-nav__link">
-    <span class="md-ellipsis">
-      34.3 讨论如何使用模型解释工具（如SHAP、LIME）来理解深度学习模型的决策过程。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -3443,39 +3035,6 @@
       35. 模型部署
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="35. 模型部署">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#351" class="md-nav__link">
-    <span class="md-ellipsis">
-      35.1 讨论如何在生产环境中部署深度学习模型，包括选择部署平台和处理延迟问题。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#352" class="md-nav__link">
-    <span class="md-ellipsis">
-      35.2 介绍如何监控和维护深度学习模型的性能，包括实时监控和日志记录。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#353" class="md-nav__link">
-    <span class="md-ellipsis">
-      35.3 讨论模型版本控制和更新策略，包括如何处理模型的迭代和版本兼容性。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3495,39 +3054,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="36. 模型优化">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#361-l1l2" class="md-nav__link">
-    <span class="md-ellipsis">
-      36.1 讨论深度学习模型中的正则化技术，包括L1、L2正则化及其作用。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#362-learning-rate-scheduling" class="md-nav__link">
-    <span class="md-ellipsis">
-      36.2 解释学习率调度（Learning Rate Scheduling）及其常见策略。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#363-pruning" class="md-nav__link">
-    <span class="md-ellipsis">
-      36.3 讨论模型剪枝（Pruning）技术及其对模型性能的影响。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -3537,39 +3063,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="37. 数据处理">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#371" class="md-nav__link">
-    <span class="md-ellipsis">
-      37.1 讨论如何处理深度学习中的数据不平衡问题，包括数据增强和重采样技术。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#372" class="md-nav__link">
-    <span class="md-ellipsis">
-      37.2 讨论深度学习中的数据预处理步骤，如标准化、归一化和特征工程。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#373-incremental-learning" class="md-nav__link">
-    <span class="md-ellipsis">
-      37.3 讨论如何使用增量学习（Incremental Learning）来处理大规模数据集。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -3578,39 +3071,6 @@
       38. 实际应用中的问题
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="38. 实际应用中的问题">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#381" class="md-nav__link">
-    <span class="md-ellipsis">
-      38.1 讨论深度学习模型在处理噪声数据时的挑战，并介绍处理噪声数据的方法。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#382" class="md-nav__link">
-    <span class="md-ellipsis">
-      38.2 讨论深度学习模型在处理稀疏数据时的挑战，并介绍解决方案。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#383-transfer-learning" class="md-nav__link">
-    <span class="md-ellipsis">
-      38.3 讨论深度学习在跨领域迁移学习（Transfer Learning）中的应用及挑战。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3630,39 +3090,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="39. 深度学习应用">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#391" class="md-nav__link">
-    <span class="md-ellipsis">
-      39.1 讨论深度学习在医疗影像分析中的应用及挑战。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#392-nlp" class="md-nav__link">
-    <span class="md-ellipsis">
-      39.2 讨论深度学习在自然语言处理（NLP）中的应用，如情感分析、机器翻译等。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#393" class="md-nav__link">
-    <span class="md-ellipsis">
-      39.3 讨论深度学习在自动驾驶中的应用及其技术挑战。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -3672,39 +3099,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="40. 前沿技术">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#401-adaptive-computation" class="md-nav__link">
-    <span class="md-ellipsis">
-      40.1 讨论深度学习中的自适应计算（Adaptive Computation）技术及其优势。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#402-multimodal-learning" class="md-nav__link">
-    <span class="md-ellipsis">
-      40.2 介绍深度学习中的多模态学习（Multimodal Learning）及其应用。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#403-knowledge-distillation" class="md-nav__link">
-    <span class="md-ellipsis">
-      40.3 讨论深度学习中的知识蒸馏（Knowledge Distillation）及其作用。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -3713,39 +3107,6 @@
       41. 模型优化与调试
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="41. 模型优化与调试">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#411-hyperparameter-tuning" class="md-nav__link">
-    <span class="md-ellipsis">
-      41.1 讨论如何使用超参数优化（Hyperparameter Tuning）来提高深度学习模型的性能。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#412" class="md-nav__link">
-    <span class="md-ellipsis">
-      41.2 讨论模型调试中的常见问题及解决方法，如过拟合和欠拟合。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#413-model-interpretability" class="md-nav__link">
-    <span class="md-ellipsis">
-      41.3 介绍如何利用模型可解释性（Model Interpretability）工具进行深度学习模型的调试和优化。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3765,39 +3126,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="42. 进阶技术">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#421-gans" class="md-nav__link">
-    <span class="md-ellipsis">
-      42.1 讨论生成对抗网络（GANs）的工作原理及其应用。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#422-vae" class="md-nav__link">
-    <span class="md-ellipsis">
-      42.2 讨论变分自编码器（VAE）的工作原理及其应用。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#423-gnns" class="md-nav__link">
-    <span class="md-ellipsis">
-      42.3 讨论图神经网络（GNNs）的基本概念及其应用场景。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -3807,39 +3135,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="43. 深度学习的伦理问题">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#431-bias" class="md-nav__link">
-    <span class="md-ellipsis">
-      43.1 讨论深度学习中的偏见（Bias）问题及其影响。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#432-transparency" class="md-nav__link">
-    <span class="md-ellipsis">
-      43.2 讨论深度学习模型的透明性（Transparency）问题及其重要性。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#433" class="md-nav__link">
-    <span class="md-ellipsis">
-      43.3 讨论深度学习在隐私保护方面的挑战及解决方案。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -3848,39 +3143,6 @@
       44. 前沿技术
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="44. 前沿技术">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#441-self-supervised-learning" class="md-nav__link">
-    <span class="md-ellipsis">
-      44.1 介绍深度学习中的自监督学习（Self-Supervised Learning）及其优势。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#442-federated-learning" class="md-nav__link">
-    <span class="md-ellipsis">
-      44.2 讨论深度学习中的联邦学习（Federated Learning）及其应用场景。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#443-neural-architecture-search-nas" class="md-nav__link">
-    <span class="md-ellipsis">
-      44.3 介绍深度学习中的神经架构搜索（Neural Architecture Search, NAS）及其最新进展。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3900,39 +3162,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="45. 进阶模型设计">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#451-attention-mechanismnlp" class="md-nav__link">
-    <span class="md-ellipsis">
-      45.1 讨论深度学习中的注意力机制（Attention Mechanism），并解释其在NLP中的作用。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#452-graph-convolutional-networks-gcns" class="md-nav__link">
-    <span class="md-ellipsis">
-      45.2 介绍深度学习中的图卷积网络（Graph Convolutional Networks, GCNs）及其应用。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#453-styleganbiggan" class="md-nav__link">
-    <span class="md-ellipsis">
-      45.3 讨论深度学习中的图像生成技术，如StyleGAN和BigGAN，并解释它们的优势和应用。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -3942,39 +3171,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="46. 最新算法">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#461-transformernlp" class="md-nav__link">
-    <span class="md-ellipsis">
-      46.1 介绍深度学习中的变换器（Transformer）模型及其在NLP中的应用。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#462-deep-reinforcement-learning-drl" class="md-nav__link">
-    <span class="md-ellipsis">
-      46.2 讨论深度强化学习（Deep Reinforcement Learning, DRL）的基本概念及其应用。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#463-super-resolution" class="md-nav__link">
-    <span class="md-ellipsis">
-      46.3 介绍深度学习中的超分辨率（Super-Resolution）技术及其应用。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -3983,39 +3179,6 @@
       47. 深度学习在特殊领域的应用
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="47. 深度学习在特殊领域的应用">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#471" class="md-nav__link">
-    <span class="md-ellipsis">
-      47.1 讨论深度学习在金融领域的应用，如信用评分、交易预测等。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#472" class="md-nav__link">
-    <span class="md-ellipsis">
-      47.2 讨论深度学习在语音识别中的应用及其挑战。
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#473" class="md-nav__link">
-    <span class="md-ellipsis">
-      47.3 介绍深度学习在环境监测中的应用，如气候变化、空气质量预测等。
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -4051,14 +3214,35 @@
   
     
     
-    
       
         
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -4067,11 +3251,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     工具篇
+    
   </span>
   
 
@@ -4095,8 +3281,10 @@
       <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/SRE/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     SRE 故障排查
+    
   </span>
   
 
@@ -4116,8 +3304,10 @@
       <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/SonarQube/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     SonarQube 基本教程
+    
   </span>
   
 
@@ -4137,8 +3327,10 @@
       <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/chaos/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Chaos 混沌工程
+    
   </span>
   
 
@@ -4158,8 +3350,10 @@
       <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/commands/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Linux 常用命令
+    
   </span>
   
 
@@ -4179,8 +3373,10 @@
       <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/crontab/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Crontab
+    
   </span>
   
 
@@ -4200,8 +3396,10 @@
       <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/git/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     git 命令
+    
   </span>
   
 
@@ -4221,8 +3419,10 @@
       <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/jenkins/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Jenkins
+    
   </span>
   
 
@@ -4242,8 +3442,10 @@
       <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/journalctl/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     journalctl 教程
+    
   </span>
   
 
@@ -4263,8 +3465,10 @@
       <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/supervisor/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Supervisor 教程
+    
   </span>
   
 
@@ -4289,14 +3493,29 @@
   
     
     
-    
       
         
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -4305,11 +3524,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     数据库
+    
   </span>
   
 
@@ -4331,7 +3552,23 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -4347,8 +3584,10 @@
           <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Elastic
+    
   </span>
   
 
@@ -4372,8 +3611,10 @@
       <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Elasticsearch 教程
+    
   </span>
   
 
@@ -4393,8 +3634,10 @@
       <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/filebeat/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     filebeat.yml 配置文件
+    
   </span>
   
 
@@ -4414,8 +3657,10 @@
       <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     ElasticSearch 面试手册
+    
   </span>
   
 
@@ -4435,8 +3680,10 @@
       <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/logstash/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     logstash 配置文件
+    
   </span>
   
 
@@ -4456,8 +3703,10 @@
       <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/questions/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     ElasticSearch 工作中遇到的问题
+    
   </span>
   
 
@@ -4483,7 +3732,15 @@
   
     
     
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -4499,8 +3756,10 @@
           <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     HBase
+    
   </span>
   
 
@@ -4524,8 +3783,10 @@
       <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/HBase/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Basic
+    
   </span>
   
 
@@ -4551,7 +3812,19 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -4567,8 +3840,10 @@
           <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     MongoDB
+    
   </span>
   
 
@@ -4592,8 +3867,10 @@
       <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     MongoDB 完整教程：从入门到精通
+    
   </span>
   
 
@@ -4613,8 +3890,10 @@
       <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     MongoDB 面试手册
+    
   </span>
   
 
@@ -4634,8 +3913,10 @@
       <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/questions/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     MongoDB 工作中遇到的问题
+    
   </span>
   
 
@@ -4661,7 +3942,21 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -4677,8 +3972,10 @@
           <label class="md-nav__link" for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     MySQL
+    
   </span>
   
 
@@ -4702,8 +3999,10 @@
       <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     MySQL 教程
+    
   </span>
   
 
@@ -4723,8 +4022,10 @@
       <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/command/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     MySQL 常用命令
+    
   </span>
   
 
@@ -4744,8 +4045,10 @@
       <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     MySQL 面试题
+    
   </span>
   
 
@@ -4765,8 +4068,10 @@
       <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/questions/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     MySQl 常见问题
+    
   </span>
   
 
@@ -4792,7 +4097,19 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -4808,8 +4125,10 @@
           <label class="md-nav__link" for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     PostgreSQL
+    
   </span>
   
 
@@ -4833,8 +4152,10 @@
       <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/PostgreSQL/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     PostgreSQL 进阶教程
+    
   </span>
   
 
@@ -4854,8 +4175,10 @@
       <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/PostgreSQL/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     PostgreSQL基础教程
+    
   </span>
   
 
@@ -4875,8 +4198,10 @@
       <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/PostgreSQL/demo/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Demo
+    
   </span>
   
 
@@ -4902,7 +4227,19 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -4918,8 +4255,10 @@
           <label class="md-nav__link" for="__nav_7_6" id="__nav_7_6_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Redis
+    
   </span>
   
 
@@ -4943,8 +4282,10 @@
       <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Redis 教程
+    
   </span>
   
 
@@ -4964,8 +4305,10 @@
       <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Redis 面试手册
+    
   </span>
   
 
@@ -4985,8 +4328,10 @@
       <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/questions/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Redis 工作中常见问题
+    
   </span>
   
 
@@ -5019,14 +4364,23 @@
   
     
     
-    
       
         
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -5035,11 +4389,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     数据结构和算法
+    
   </span>
   
 
@@ -5063,8 +4419,10 @@
       <a href="../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/algorithm/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     算法
+    
   </span>
   
 
@@ -5084,8 +4442,10 @@
       <a href="../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/leetcode/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     LeetCode 题目
+    
   </span>
   
 
@@ -5105,8 +4465,10 @@
       <a href="../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/struct/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     数据结构
+    
   </span>
   
 
@@ -5131,14 +4493,25 @@
   
     
     
-    
       
         
+      
+        
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -5147,11 +4520,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
         
           
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     服务器
+    
   </span>
   
 
@@ -5173,7 +4548,15 @@
   
     
     
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -5189,8 +4572,10 @@
           <label class="md-nav__link" for="__nav_9_1" id="__nav_9_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Gunicorn
+    
   </span>
   
 
@@ -5214,8 +4599,10 @@
       <a href="../../../%E6%9C%8D%E5%8A%A1%E5%99%A8/gunicorn/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Gunicorn 教程
+    
   </span>
   
 
@@ -5241,7 +4628,17 @@
   
     
     
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -5257,8 +4654,10 @@
           <label class="md-nav__link" for="__nav_9_2" id="__nav_9_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Nginx
+    
   </span>
   
 
@@ -5282,8 +4681,10 @@
       <a href="../../../%E6%9C%8D%E5%8A%A1%E5%99%A8/nginx/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Nginx 教程
+    
   </span>
   
 
@@ -5303,8 +4704,10 @@
       <a href="../../../%E6%9C%8D%E5%8A%A1%E5%99%A8/nginx/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     nginx 面试手册
+    
   </span>
   
 
@@ -5330,7 +4733,15 @@
   
     
     
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -5346,8 +4757,10 @@
           <label class="md-nav__link" for="__nav_9_3" id="__nav_9_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Uvicorn
+    
   </span>
   
 
@@ -5371,8 +4784,10 @@
       <a href="../../../%E6%9C%8D%E5%8A%A1%E5%99%A8/uvicorn/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Uvicorn 教程
+    
   </span>
   
 
@@ -5398,7 +4813,15 @@
   
     
     
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -5414,8 +4837,10 @@
           <label class="md-nav__link" for="__nav_9_4" id="__nav_9_4_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Uwsgi
+    
   </span>
   
 
@@ -5439,8 +4864,10 @@
       <a href="../../../%E6%9C%8D%E5%8A%A1%E5%99%A8/uwsgi/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     uWSGI 教程
+    
   </span>
   
 
@@ -5473,14 +4900,27 @@
   
     
     
-    
       
         
+      
+        
+      
+        
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -5489,11 +4929,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
         
           
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     系统设计
+    
   </span>
   
 
@@ -5517,8 +4959,10 @@
       <a href="../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/bloom/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     布隆过滤器
+    
   </span>
   
 
@@ -5538,8 +4982,10 @@
       <a href="../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/hash/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     一致性哈希
+    
   </span>
   
 
@@ -5559,8 +5005,10 @@
       <a href="../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/id/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     唯一ID
+    
   </span>
   
 
@@ -5580,8 +5028,10 @@
       <a href="../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     系统设计题目
+    
   </span>
   
 
@@ -5601,8 +5051,10 @@
       <a href="../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/ratelimit/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     限流
+    
   </span>
   
 
@@ -5627,14 +5079,25 @@
   
     
     
-    
       
         
+      
+        
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -5643,11 +5106,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11" >
         
           
-          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="">
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     计算机基础
+    
   </span>
   
 
@@ -5671,8 +5136,10 @@
       <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     http 手册
+    
   </span>
   
 
@@ -5692,8 +5159,10 @@
       <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/network/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     计算机网络面试手册
+    
   </span>
   
 
@@ -5713,8 +5182,10 @@
       <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/system/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     操作系统面试手册
+    
   </span>
   
 
@@ -5734,8 +5205,10 @@
       <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/websocket/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Websocket
+    
   </span>
   
 
@@ -5760,14 +5233,23 @@
   
     
     
-    
       
         
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -5776,11 +5258,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12" >
         
           
-          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="">
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     语言篇
+    
   </span>
   
 
@@ -5802,7 +5286,19 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -5818,8 +5314,10 @@
           <label class="md-nav__link" for="__nav_12_1" id="__nav_12_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     C++
+    
   </span>
   
 
@@ -5843,8 +5341,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/C%2B%2B/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     C++ 进阶教程
+    
   </span>
   
 
@@ -5864,8 +5364,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/C%2B%2B/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     C++ 基础教程
+    
   </span>
   
 
@@ -5885,8 +5387,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/C%2B%2B/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     C++ 面试手册
+    
   </span>
   
 
@@ -5912,7 +5416,19 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -5928,8 +5444,10 @@
           <label class="md-nav__link" for="__nav_12_2" id="__nav_12_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Golang
+    
   </span>
   
 
@@ -5953,8 +5471,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Go 进阶教程
+    
   </span>
   
 
@@ -5974,8 +5494,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Go 基础教程
+    
   </span>
   
 
@@ -5993,7 +5515,47 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -6009,8 +5571,10 @@
           <label class="md-nav__link" for="__nav_12_2_3" id="__nav_12_2_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     常用库
+    
   </span>
   
 
@@ -6034,8 +5598,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/cobra/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Cobra
+    
   </span>
   
 
@@ -6055,8 +5621,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/encoding/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Encoding
+    
   </span>
   
 
@@ -6076,8 +5644,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/fmt/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     fmt 库
+    
   </span>
   
 
@@ -6097,8 +5667,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/gin/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Gin
+    
   </span>
   
 
@@ -6118,8 +5690,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/gorm/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Gorm
+    
   </span>
   
 
@@ -6139,8 +5713,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/io/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Io
+    
   </span>
   
 
@@ -6160,8 +5736,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/jwt-go/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Jwt go
+    
   </span>
   
 
@@ -6181,8 +5759,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/logrus/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Logrus
+    
   </span>
   
 
@@ -6202,8 +5782,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/net/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     net
+    
   </span>
   
 
@@ -6223,8 +5805,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/os/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Os
+    
   </span>
   
 
@@ -6244,8 +5828,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/pprof/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Pprof
+    
   </span>
   
 
@@ -6265,8 +5851,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/protobuf/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Protobuf
+    
   </span>
   
 
@@ -6286,8 +5874,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/sync/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Sync
+    
   </span>
   
 
@@ -6307,8 +5897,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/testify/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Testify
+    
   </span>
   
 
@@ -6328,8 +5920,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/time/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Time
+    
   </span>
   
 
@@ -6349,8 +5943,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/viper/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Viper
+    
   </span>
   
 
@@ -6370,8 +5966,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/zap/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Zap
+    
   </span>
   
 
@@ -6405,7 +6003,21 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -6421,8 +6033,10 @@
           <label class="md-nav__link" for="__nav_12_3" id="__nav_12_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Python
+    
   </span>
   
 
@@ -6446,8 +6060,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Python 进阶教程
+    
   </span>
   
 
@@ -6467,8 +6083,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     python 基础教程
+    
   </span>
   
 
@@ -6488,8 +6106,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Python 面试手册
+    
   </span>
   
 
@@ -6507,7 +6127,87 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -6523,8 +6223,10 @@
           <label class="md-nav__link" for="__nav_12_3_4" id="__nav_12_3_4_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Python常用库
+    
   </span>
   
 
@@ -6548,8 +6250,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/Seaborn/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Seaborn
+    
   </span>
   
 
@@ -6569,8 +6273,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/beautifulsoup/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     beautifulsoup 模块
+    
   </span>
   
 
@@ -6590,8 +6296,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/celery/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Celery
+    
   </span>
   
 
@@ -6611,8 +6319,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/click/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Click
+    
   </span>
   
 
@@ -6632,8 +6342,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/datastruct/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     数据结构和算法
+    
   </span>
   
 
@@ -6653,8 +6365,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/datetime/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     datetime 模块
+    
   </span>
   
 
@@ -6674,8 +6388,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/functools/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     functools 模块
+    
   </span>
   
 
@@ -6695,8 +6411,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/jose/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Jose
+    
   </span>
   
 
@@ -6716,8 +6434,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/json/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     json 模块
+    
   </span>
   
 
@@ -6737,8 +6457,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/logging/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     logging 模块
+    
   </span>
   
 
@@ -6758,8 +6480,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/math/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     math 模块
+    
   </span>
   
 
@@ -6779,8 +6503,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/matpliot/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     matpliot 使用教程
+    
   </span>
   
 
@@ -6800,8 +6526,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/mock/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     mock 模块
+    
   </span>
   
 
@@ -6821,8 +6549,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/numpy/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     NumPy 教程
+    
   </span>
   
 
@@ -6842,8 +6572,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/os/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     os模块
+    
   </span>
   
 
@@ -6863,8 +6595,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pandas/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Pandas 教程
+    
   </span>
   
 
@@ -6884,8 +6618,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/passlib/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Passlib
+    
   </span>
   
 
@@ -6905,8 +6641,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pathlib/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     pathlib 模块
+    
   </span>
   
 
@@ -6926,8 +6664,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pickle/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     pickle 模块
+    
   </span>
   
 
@@ -6947,8 +6687,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pydantic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Pydantic
+    
   </span>
   
 
@@ -6968,8 +6710,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pymysql/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     pymysql 模块
+    
   </span>
   
 
@@ -6989,8 +6733,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pytest/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     pytest 模块
+    
   </span>
   
 
@@ -7010,8 +6756,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pytorch/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     PyTorch 从入门到精通：详细教程
+    
   </span>
   
 
@@ -7031,8 +6779,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/queue/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     queue 模块
+    
   </span>
   
 
@@ -7052,8 +6802,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/random/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     random 模块
+    
   </span>
   
 
@@ -7073,8 +6825,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/re/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     re 模块
+    
   </span>
   
 
@@ -7094,8 +6848,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/redis/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     redis
+    
   </span>
   
 
@@ -7115,8 +6871,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/requests/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     requests 模块
+    
   </span>
   
 
@@ -7136,8 +6894,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scikit-learn/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     scikit-learn
+    
   </span>
   
 
@@ -7157,8 +6917,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scipy/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     scipy 模块
+    
   </span>
   
 
@@ -7178,8 +6940,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scrapy/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     scrapy 教程
+    
   </span>
   
 
@@ -7199,8 +6963,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/selenium/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     selenium 使用教程
+    
   </span>
   
 
@@ -7220,8 +6986,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/shutil/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     shutil 模块
+    
   </span>
   
 
@@ -7241,8 +7009,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/sqlalchemy/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Sqlalchemy
+    
   </span>
   
 
@@ -7262,8 +7032,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/sys/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     sys 模块
+    
   </span>
   
 
@@ -7283,8 +7055,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/time/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     time 模块
+    
   </span>
   
 
@@ -7304,8 +7078,10 @@
       <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/urllib/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     urllib 模块
+    
   </span>
   
 
@@ -7345,6 +7121,579 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      深度学习大厂面试题详解
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 基础理论
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 模型架构
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 实际应用
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 系统设计
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 现代技术和趋势
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      深度学习大厂面试题详解（更多内容）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 高级模型和技术
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 模型优化
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. 系统设计和实践
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      深度学习大厂面试题详解（更多内容）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. 复杂模型设计
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. 最新技术和趋势
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. 实际应用和挑战
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      深度学习大厂面试题详解（更多内容）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. 最新技术和理论
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. 复杂模型和系统设计
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      14. 深度学习中的实验设计
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      深度学习大厂面试题详解（更多内容）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      15. 领域应用与模型优化
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      16. 模型优化与系统架构
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    <span class="md-ellipsis">
+      17. 高级模型与算法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      深度学习大厂面试题详解（更多内容）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18" class="md-nav__link">
+    <span class="md-ellipsis">
+      18. 最新技术趋势
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19" class="md-nav__link">
+    <span class="md-ellipsis">
+      19. 复杂模型应用
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20" class="md-nav__link">
+    <span class="md-ellipsis">
+      20. 系统设计与工程
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      21. 高级算法与模型
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      深度学习大厂面试题详解（更多内容）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      22. 前沿研究
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      23. 模型解释性与透明性
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      24. 伦理与社会影响
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      25. 高级模型与系统设计
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      深度学习大厂面试题详解（更多内容）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26" class="md-nav__link">
+    <span class="md-ellipsis">
+      26. 新兴技术
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27" class="md-nav__link">
+    <span class="md-ellipsis">
+      27. 模型调优
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28" class="md-nav__link">
+    <span class="md-ellipsis">
+      28. 优化算法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29" class="md-nav__link">
+    <span class="md-ellipsis">
+      29. 深度学习系统设计
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      深度学习大厂面试题详解（更多内容）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#30" class="md-nav__link">
+    <span class="md-ellipsis">
+      30. 模型设计与架构
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      31. 前沿技术
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      32. 应用挑战
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      深度学习大厂面试题详解（更多内容）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      33. 高级模型设计
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      34. 实验策略
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    <span class="md-ellipsis">
+      35. 模型部署
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      深度学习大厂面试题详解（更多内容）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36" class="md-nav__link">
+    <span class="md-ellipsis">
+      36. 模型优化
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#37" class="md-nav__link">
+    <span class="md-ellipsis">
+      37. 数据处理
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#38" class="md-nav__link">
+    <span class="md-ellipsis">
+      38. 实际应用中的问题
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      深度学习大厂面试题详解（更多内容）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#39" class="md-nav__link">
+    <span class="md-ellipsis">
+      39. 深度学习应用
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#40" class="md-nav__link">
+    <span class="md-ellipsis">
+      40. 前沿技术
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#41_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      41. 模型优化与调试
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      深度学习大厂面试题详解（更多内容）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      42. 进阶技术
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      43. 深度学习的伦理问题
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    <span class="md-ellipsis">
+      44. 前沿技术
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      深度学习大厂面试题详解（更多内容）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45" class="md-nav__link">
+    <span class="md-ellipsis">
+      45. 进阶模型设计
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#46" class="md-nav__link">
+    <span class="md-ellipsis">
+      46. 最新算法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#47" class="md-nav__link">
+    <span class="md-ellipsis">
+      47. 深度学习在特殊领域的应用
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           
             <div class="md-content" data-md-component="content">
@@ -7353,12 +7702,13 @@
                   
 
 
-<h1 id="_1">深度学习 面试手册</h1>
-<h3 id="_2">深度学习大厂面试题详解</h3>
+
+<h1 id="_1">深度学习 面试手册<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h3 id="_2">深度学习大厂面试题详解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>在深度学习的大厂面试中，问题通常涵盖基础理论、模型架构、实际应用和系统设计等方面。以下是一些常见的面试题及其详解：</p>
 <hr />
-<h3 id="1">1. 基础理论</h3>
-<h4 id="11-backpropagation">1.1 解释反向传播（Backpropagation）算法的原理和步骤。</h4>
+<h3 id="1">1. 基础理论<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<h4 id="11-backpropagation">1.1 解释反向传播（Backpropagation）算法的原理和步骤。<a class="headerlink" href="#11-backpropagation" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
 <p><strong>反向传播</strong>是一种用于训练神经网络的算法，通过链式法则计算每一层的梯度，从而调整模型的参数以最小化损失函数。</p>
@@ -7374,14 +7724,14 @@
 </li>
 <li>
 <p><strong>公式</strong>：
-  对于某一层的权重 ( W )，其梯度可以表示为：
+  对于某一层的权重 <span class="arithmatex">\( W \)</span>，其梯度可以表示为：
   [
   \frac{\partial L}{\partial W} = \frac{\partial L}{\partial z} \cdot \frac{\partial z}{\partial W}
   ]
-  其中 ( L ) 是损失函数，( z ) 是该层的加权输入。</p>
+  其中 <span class="arithmatex">\( L \)</span> 是损失函数，<span class="arithmatex">\( z \)</span> 是该层的加权输入。</p>
 </li>
 </ul>
-<h4 id="12-batch-normalization">1.2 介绍批量归一化（Batch Normalization）的原理及其优点。</h4>
+<h4 id="12-batch-normalization">1.2 介绍批量归一化（Batch Normalization）的原理及其优点。<a class="headerlink" href="#12-batch-normalization" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
 <p><strong>批量归一化</strong>是一种用于加速训练和提高模型性能的技术，通过规范化每层的输入来减少内部协变量偏移（Internal Covariate Shift）。</p>
@@ -7402,8 +7752,8 @@
 <li><strong>具有一定正则化效果</strong>：减少对Dropout等正则化方法的依赖。</li>
 </ul>
 <hr />
-<h3 id="2">2. 模型架构</h3>
-<h4 id="21-cnn">2.1 介绍卷积神经网络（CNN）的基本结构和作用。</h4>
+<h3 id="2">2. 模型架构<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<h4 id="21-cnn">2.1 介绍卷积神经网络（CNN）的基本结构和作用。<a class="headerlink" href="#21-cnn" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
 <p><strong>卷积神经网络（CNN）</strong>是一种专门用于处理图像数据的深度学习模型。它通过卷积层提取图像中的特征，通过池化层减少特征的维度。</p>
@@ -7421,7 +7771,7 @@
 <p><strong>作用</strong>：有效提取和学习图像特征，减少参数量并提高计算效率。</p>
 </li>
 </ul>
-<h4 id="22-transformer">2.2 解释Transformer模型的主要组件及其在自然语言处理中的应用。</h4>
+<h4 id="22-transformer">2.2 解释Transformer模型的主要组件及其在自然语言处理中的应用。<a class="headerlink" href="#22-transformer" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
 <p><strong>Transformer</strong>是一种基于自注意力机制的模型，主要用于处理序列数据，如自然语言处理任务。</p>
@@ -7440,8 +7790,8 @@
 </li>
 </ul>
 <hr />
-<h3 id="3">3. 实际应用</h3>
-<h4 id="31">3.1 描述你在处理图像数据时使用的数据增强技术，并说明它们的作用。</h4>
+<h3 id="3">3. 实际应用<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<h4 id="31">3.1 描述你在处理图像数据时使用的数据增强技术，并说明它们的作用。<a class="headerlink" href="#31" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
 <p><strong>数据增强</strong>技术通过生成原始数据的变体来增加训练数据的多样性，从而提高模型的泛化能力。</p>
@@ -7459,7 +7809,7 @@
 <p><strong>作用</strong>：增强数据集的多样性，减少过拟合，提高模型在实际应用中的表现。</p>
 </li>
 </ul>
-<h4 id="32">3.2 你如何在训练深度学习模型时处理计算资源限制问题？</h4>
+<h4 id="32">3.2 你如何在训练深度学习模型时处理计算资源限制问题？<a class="headerlink" href="#32" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>处理计算资源限制</strong>的方法包括：</li>
 <li><strong>模型压缩</strong>：通过剪枝（pruning）、量化（quantization）等技术减少模型的参数量和计算复杂度。</li>
@@ -7468,8 +7818,8 @@
 <li><strong>减少模型复杂度</strong>：简化模型架构，如使用较小的网络层或减少每层的神经元数量。</li>
 </ul>
 <hr />
-<h3 id="4">4. 系统设计</h3>
-<h4 id="41">4.1 设计一个深度学习模型的训练和部署系统。考虑数据流、模型版本控制和在线推理。</h4>
+<h3 id="4">4. 系统设计<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<h4 id="41">4.1 设计一个深度学习模型的训练和部署系统。考虑数据流、模型版本控制和在线推理。<a class="headerlink" href="#41" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>训练系统设计</strong>：</li>
 <li><strong>数据流</strong>：数据从数据源（如数据库或数据湖）经过数据清洗、预处理和特征工程后，送入训练管道。训练管道包括模型训练、评估和验证。</li>
@@ -7485,7 +7835,7 @@
 <li><strong>模型监控</strong>：监控模型在生产环境中的性能，及时检测和处理模型漂移（concept drift）和性能下降问题。</li>
 <li><strong>自动化更新</strong>：设计自动化流程进行模型更新和重新训练，以适应新的数据和需求。</li>
 </ul>
-<h4 id="42">4.2 你如何处理模型的版本管理和实验追踪？</h4>
+<h4 id="42">4.2 你如何处理模型的版本管理和实验追踪？<a class="headerlink" href="#42" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>版本管理</strong>：</li>
 <li><strong>使用工具</strong>：使用版本管理工具（如Git、DVC）管理代码和模型的版本。DVC可以帮助追踪数据、模型和实验结果的版本。</li>
@@ -7499,8 +7849,8 @@
 <li><strong>报告生成</strong>：自动生成实验报告，帮助分析不同实验的效果，并优化模型的性能。</li>
 </ul>
 <hr />
-<h3 id="5">5. 现代技术和趋势</h3>
-<h4 id="51-self-supervised-learning">5.1 解释自监督学习（Self-Supervised Learning）及其应用场景。</h4>
+<h3 id="5">5. 现代技术和趋势<a class="headerlink" href="#5" title="Permanent link">&para;</a></h3>
+<h4 id="51-self-supervised-learning">5.1 解释自监督学习（Self-Supervised Learning）及其应用场景。<a class="headerlink" href="#51-self-supervised-learning" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
 <p><strong>自监督学习</strong>是一种无监督学习方法，通过利用数据本身的结构来生成标签进行训练。目标是从未标记的数据中学习有用的特征表示。</p>
@@ -7511,7 +7861,7 @@
 <li><strong>预训练模型</strong>：在大规模未标记数据上进行预训练，如BERT、GPT，通过自监督学习捕捉语言中的语法和语义信息。</li>
 <li><strong>图像生成</strong>：通过自监督学习生成图像数据中的潜在特征，用于图像恢复和生成任务。</li>
 </ul>
-<h4 id="52-model-quantization">5.2 介绍模型量化（Model Quantization）及其在实际应用中的优势。</h4>
+<h4 id="52-model-quantization">5.2 介绍模型量化（Model Quantization）及其在实际应用中的优势。<a class="headerlink" href="#52-model-quantization" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
 <p><strong>模型量化</strong>是一种优化技术，通过将模型参数和计算从高精度（如32位浮点数）转换为低精度（如8位整数）来减少模型的存储和计算需求。</p>
@@ -7524,11 +7874,11 @@
 <li><strong>降低能耗</strong>：减少计算和存储的能耗，适用于嵌入式系统和移动设备。</li>
 </ul>
 <hr />
-<h3 id="_3">深度学习大厂面试题详解（更多内容）</h3>
+<h3 id="_3">深度学习大厂面试题详解（更多内容）<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>以下是一些高级深度学习面试题及其详细解答，涵盖更深入的领域，包括复杂模型、优化技术、系统架构等。</p>
 <hr />
-<h3 id="6">6. 高级模型和技术</h3>
-<h4 id="61-gan">6.1 介绍生成对抗网络（GAN）的基本原理及其应用。</h4>
+<h3 id="6">6. 高级模型和技术<a class="headerlink" href="#6" title="Permanent link">&para;</a></h3>
+<h4 id="61-gan">6.1 介绍生成对抗网络（GAN）的基本原理及其应用。<a class="headerlink" href="#61-gan" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
 <p><strong>生成对抗网络（GAN）</strong>是一种生成模型，由两个神经网络组成：生成器和判别器。生成器生成逼真的数据样本，判别器判断样本是真实的还是由生成器生成的。两个网络通过对抗训练不断提高性能。</p>
@@ -7548,7 +7898,7 @@
 <li><strong>图像修复</strong>：恢复图像中的缺失部分（如inpainting）。</li>
 <li><strong>文本生成</strong>：生成自然语言文本（如文本对话生成）。</li>
 </ul>
-<h4 id="62-rnn">6.2 解释循环神经网络（RNN）的基本结构，并介绍其在序列建模中的应用。</h4>
+<h4 id="62-rnn">6.2 解释循环神经网络（RNN）的基本结构，并介绍其在序列建模中的应用。<a class="headerlink" href="#62-rnn" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
 <p><strong>循环神经网络（RNN）</strong>是一种用于处理序列数据的神经网络，能够通过循环结构保留序列中的上下文信息。</p>
@@ -7563,7 +7913,7 @@
      [
      h_t = \text{tanh}(W_h \cdot h_{t-1} + W_x \cdot x_t + b_h)
      ]
-     其中 (h_t) 是当前隐藏状态，(x_t) 是当前输入，(W_h) 和 (W_x) 是权重矩阵，(b_h) 是偏置。</p>
+     其中 <span class="arithmatex">\(h_t\)</span> 是当前隐藏状态，<span class="arithmatex">\(x_t\)</span> 是当前输入，<span class="arithmatex">\(W_h\)</span> 和 <span class="arithmatex">\(W_x\)</span> 是权重矩阵，<span class="arithmatex">\(b_h\)</span> 是偏置。</p>
 </li>
 <li>
 <p><strong>应用</strong>：</p>
@@ -7572,7 +7922,7 @@
 <li><strong>时间序列预测</strong>：预测金融市场的未来走势。</li>
 <li><strong>语音识别</strong>：将语音信号转录为文本。</li>
 </ul>
-<h4 id="63-lstmrnn">6.3 介绍长短期记忆网络（LSTM）及其相对于传统RNN的优势。</h4>
+<h4 id="63-lstmrnn">6.3 介绍长短期记忆网络（LSTM）及其相对于传统RNN的优势。<a class="headerlink" href="#63-lstmrnn" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
 <p><strong>长短期记忆网络（LSTM）</strong>是一种特殊类型的RNN，用于解决传统RNN在处理长序列时的梯度消失和梯度爆炸问题。</p>
@@ -7592,7 +7942,7 @@
 <li><strong>长距离依赖</strong>：能够捕捉序列中的长期依赖关系。</li>
 <li><strong>稳定训练</strong>：通过门控机制减少梯度消失和梯度爆炸问题。</li>
 </ul>
-<h4 id="64-self-attentiontransformerrnn">6.4 解释自注意力机制（Self-Attention）在Transformer中的作用，并比较其与RNN的优缺点。</h4>
+<h4 id="64-self-attentiontransformerrnn">6.4 解释自注意力机制（Self-Attention）在Transformer中的作用，并比较其与RNN的优缺点。<a class="headerlink" href="#64-self-attentiontransformerrnn" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
 <p><strong>自注意力机制</strong>允许模型在处理每个输入元素时考虑序列中的所有其他元素，从而捕捉长程依赖。</p>
@@ -7618,8 +7968,8 @@
 </li>
 </ul>
 <hr />
-<h3 id="7">7. 模型优化</h3>
-<h4 id="71-adamrmsprop">7.1 介绍深度学习中的优化算法（如Adam、RMSprop），并比较它们的优缺点。</h4>
+<h3 id="7">7. 模型优化<a class="headerlink" href="#7" title="Permanent link">&para;</a></h3>
+<h4 id="71-adamrmsprop">7.1 介绍深度学习中的优化算法（如Adam、RMSprop），并比较它们的优缺点。<a class="headerlink" href="#71-adamrmsprop" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
 <p><strong>Adam（Adaptive Moment Estimation）</strong>：结合了Momentum和RMSprop的优点，通过计算梯度的一阶矩和二阶矩的加权平均来更新参数。</p>
@@ -7654,7 +8004,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="72-dropoutl2">7.2 解释模型的正则化技术（如Dropout、L2正则化）的作用，并举例说明其在实际应用中的效果。</h4>
+<h4 id="72-dropoutl2">7.2 解释模型的正则化技术（如Dropout、L2正则化）的作用，并举例说明其在实际应用中的效果。<a class="headerlink" href="#72-dropoutl2" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
 <p><strong>Dropout</strong>：在训练过程中随机丢弃神经网络中的一部分神经元，减少过拟合。</p>
@@ -7690,8 +8040,8 @@
 </li>
 </ul>
 <hr />
-<h3 id="8">8. 系统设计和实践</h3>
-<h4 id="81">8.1 设计一个深度学习模型的训练和部署系统，包括数据处理、模型训练、版本控制和监控。</h4>
+<h3 id="8">8. 系统设计和实践<a class="headerlink" href="#8" title="Permanent link">&para;</a></h3>
+<h4 id="81">8.1 设计一个深度学习模型的训练和部署系统，包括数据处理、模型训练、版本控制和监控。<a class="headerlink" href="#81" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>数据处理</strong>：</li>
 <li><strong>数据收集</strong>：从各种来源收集数据（如日志、传感器、用户行为）。</li>
@@ -7714,7 +8064,7 @@
 <li><strong>负载均衡</strong>：使用负载均衡器分发请求，保证系统的高可用性。</li>
 <li><strong>性能监控</strong>：监控模型在生产环境中的性能，检测模型漂移和性能下降。</li>
 </ul>
-<h4 id="82">8.2 如何进行模型评估和调优？举例说明在实际应用中如何选择和调整评估指标。</h4>
+<h4 id="82">8.2 如何进行模型评估和调优？举例说明在实际应用中如何选择和调整评估指标。<a class="headerlink" href="#82" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>模型评估</strong>：</li>
 <li><strong>交叉验证</strong>：使用k折交叉验证评估模型的泛化能力。</li>
@@ -7736,11 +8086,11 @@
 <li><strong>回归任务</strong>：在房价预测任务中，使用均方误差（MSE）作为评估指标，优化特征选择和模型参数。</li>
 </ul>
 <hr />
-<h3 id="_4">深度学习大厂面试题详解（更多内容）</h3>
+<h3 id="_4">深度学习大厂面试题详解（更多内容）<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>以下是一些更高级和深入的深度学习面试题及其详细解答，涵盖复杂模型设计、最新技术和挑战等方面。</p>
 <hr />
-<h3 id="9">9. 复杂模型设计</h3>
-<h4 id="91-gnn">9.1 介绍图神经网络（GNN）的基本原理及其应用场景。</h4>
+<h3 id="9">9. 复杂模型设计<a class="headerlink" href="#9" title="Permanent link">&para;</a></h3>
+<h4 id="91-gnn">9.1 介绍图神经网络（GNN）的基本原理及其应用场景。<a class="headerlink" href="#91-gnn" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
 <p><strong>图神经网络（GNN）</strong>是一类用于处理图结构数据的神经网络，能够有效捕捉节点和边之间的复杂关系。</p>
@@ -7760,7 +8110,7 @@
 <li><strong>药物发现</strong>：预测化合物的生物活性或药物相互作用。</li>
 <li><strong>推荐系统</strong>：基于用户和物品的图结构进行个性化推荐。</li>
 </ul>
-<h4 id="92-attention-mechanism">9.2 解释注意力机制（Attention Mechanism）的工作原理，并介绍其在自然语言处理中的应用。</h4>
+<h4 id="92-attention-mechanism">9.2 解释注意力机制（Attention Mechanism）的工作原理，并介绍其在自然语言处理中的应用。<a class="headerlink" href="#92-attention-mechanism" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
 <p><strong>注意力机制</strong>是一种使模型能够集中注意力于输入序列中的重要部分的技术，通过加权不同部分的输入来提高模型的性能。</p>
@@ -7779,7 +8129,7 @@
 <li><strong>机器翻译</strong>：在翻译过程中对源语言中的每个单词分配不同的权重，从而更好地捕捉上下文信息（如Transformer中的自注意力）。</li>
 <li><strong>文本摘要</strong>：自动生成文档的简短摘要，通过注意力机制聚焦于文档中的关键信息。</li>
 </ul>
-<h4 id="93-neural-architecture-searchnas">9.3 介绍神经架构搜索（Neural Architecture Search，NAS）的基本概念和方法。</h4>
+<h4 id="93-neural-architecture-searchnas">9.3 介绍神经架构搜索（Neural Architecture Search，NAS）的基本概念和方法。<a class="headerlink" href="#93-neural-architecture-searchnas" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
 <p><strong>神经架构搜索（NAS）</strong>是一种自动化设计神经网络架构的技术，通过搜索空间探索最优的网络结构。</p>
@@ -7798,7 +8148,7 @@
 <li><strong>基于进化算法</strong>：通过遗传算法或变异操作生成和评估多个网络架构。</li>
 <li><strong>基于强化学习</strong>：使用强化学习代理来探索和优化网络架构。</li>
 </ul>
-<h4 id="94-adversarial-training">9.4 解释对抗训练（Adversarial Training）及其在提高模型鲁棒性方面的作用。</h4>
+<h4 id="94-adversarial-training">9.4 解释对抗训练（Adversarial Training）及其在提高模型鲁棒性方面的作用。<a class="headerlink" href="#94-adversarial-training" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
 <p><strong>对抗训练</strong>是一种增强模型对对抗样本（即经过精心设计的扰动样本）鲁棒性的技术，通过在训练中加入对抗样本来改进模型。</p>
@@ -7818,8 +8168,8 @@
 <li><strong>改善泛化</strong>：使模型在面对噪声和扰动时表现更稳健。</li>
 </ul>
 <hr />
-<h3 id="10">10. 最新技术和趋势</h3>
-<h4 id="101-bertgpt">10.1 介绍预训练模型（如BERT、GPT）在自然语言处理中的应用及其优势。</h4>
+<h3 id="10">10. 最新技术和趋势<a class="headerlink" href="#10" title="Permanent link">&para;</a></h3>
+<h4 id="101-bertgpt">10.1 介绍预训练模型（如BERT、GPT）在自然语言处理中的应用及其优势。<a class="headerlink" href="#101-bertgpt" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
 <p><strong>预训练模型</strong>是一种在大规模数据上进行预训练，然后在特定任务上进行微调的技术，能够提高自然语言处理任务的性能。</p>
@@ -7837,7 +8187,7 @@
 <li><strong>应用</strong>：文本生成、对话系统、自动总结等。</li>
 <li><strong>优势</strong>：生成高质量的连贯文本，能够处理长文本生成和上下文理解。</li>
 </ul>
-<h4 id="102">10.2 解释大规模预训练模型的挑战及其解决方案。</h4>
+<h4 id="102">10.2 解释大规模预训练模型的挑战及其解决方案。<a class="headerlink" href="#102" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>挑战</strong>：</li>
 <li><strong>计算资源</strong>：训练大规模预训练模型需要大量计算资源和存储。</li>
@@ -7852,7 +8202,7 @@
 <li><strong>数据增强</strong>：利用数据增强技术生成更多的训练数据。</li>
 <li><strong>模型压缩</strong>：通过剪枝、量化等技术减少模型的计算和存储需求。</li>
 </ul>
-<h4 id="103-quantum-machine-learning">10.3 介绍量子机器学习（Quantum Machine Learning）的基本概念及其潜在应用。</h4>
+<h4 id="103-quantum-machine-learning">10.3 介绍量子机器学习（Quantum Machine Learning）的基本概念及其潜在应用。<a class="headerlink" href="#103-quantum-machine-learning" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
 <p><strong>量子机器学习（Quantum Machine Learning）</strong>是一种结合量子计算和机器学习的方法，利用量子计算机的能力处理复杂问题。</p>
@@ -7871,8 +8221,8 @@
 <li><strong>优化问题</strong>：求解复杂的优化问题，如组合优化和药物发现。</li>
 </ul>
 <hr />
-<h3 id="11">11. 实际应用和挑战</h3>
-<h4 id="111">11.1 介绍深度学习在医疗影像分析中的应用，并讨论其面临的挑战。</h4>
+<h3 id="11">11. 实际应用和挑战<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
+<h4 id="111">11.1 介绍深度学习在医疗影像分析中的应用，并讨论其面临的挑战。<a class="headerlink" href="#111" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>应用</strong>：</li>
 <li><strong>疾病检测</strong>：如使用CNN对CT图像进行肺癌检测。</li>
@@ -7887,7 +8237,7 @@
 <li><strong>数据不平衡</strong>：疾病样本相对稀少，导致模型不平衡。</li>
 <li><strong>解释性</strong>：深度学习模型的“黑箱”特性使得结果解释变得困难。</li>
 </ul>
-<h4 id="112">11.2 解释深度学习在自动驾驶中的应用，包括感知、决策和控制。</h4>
+<h4 id="112">11.2 解释深度学习在自动驾驶中的应用，包括感知、决策和控制。<a class="headerlink" href="#112" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>感知</strong>：</li>
 <li><strong>物体检测</strong>：使用CNN检测道路上的车辆、行人和交通标志。</li>
@@ -7907,11 +8257,11 @@
 <li><strong>自动驾驶</strong>：根据感知和决策结果控制车辆的加速、制动和转向。</li>
 </ul>
 <hr />
-<h3 id="_5">深度学习大厂面试题详解（更多内容）</h3>
+<h3 id="_5">深度学习大厂面试题详解（更多内容）<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>以下是一些更深入的深度学习面试题及其详细解答，涵盖最新技术、理论基础和系统设计等方面。</p>
 <hr />
-<h3 id="12">12. 最新技术和理论</h3>
-<h4 id="121">12.1 介绍多模态学习的基本概念及其在实际应用中的例子。</h4>
+<h3 id="12">12. 最新技术和理论<a class="headerlink" href="#12" title="Permanent link">&para;</a></h3>
+<h4 id="121">12.1 介绍多模态学习的基本概念及其在实际应用中的例子。<a class="headerlink" href="#121" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
 <p><strong>多模态学习</strong>是一种结合多种类型数据（如图像、文本、音频）的学习方法，旨在通过整合不同模态的信息来提高模型的性能。</p>
@@ -7930,7 +8280,7 @@
 <li><strong>视频分析</strong>：通过结合视频中的图像和音频信息进行情感分析或行为识别。</li>
 <li><strong>跨模态检索</strong>：通过将图像和文本数据融合，实现图像和文本的相互检索。</li>
 </ul>
-<h4 id="122-batch-normalizationlayer-normalization">12.2 解释神经网络中的正则化技术（如Batch Normalization、Layer Normalization）及其作用。</h4>
+<h4 id="122-batch-normalizationlayer-normalization">12.2 解释神经网络中的正则化技术（如Batch Normalization、Layer Normalization）及其作用。<a class="headerlink" href="#122-batch-normalizationlayer-normalization" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>Batch Normalization（BN）</strong>：</li>
 <li><strong>作用</strong>：在每一层对批次数据进行标准化，确保数据分布的稳定性，从而加速训练和提高模型性能。</li>
@@ -7940,9 +8290,9 @@
     \hat{x}<em>{i} = \frac{x</em>{i} - \mu_{B}}{\sqrt{\sigma_{B}^{2} + \epsilon}}
     ]
     [
-    y_{i} = \gamma \hat{x}<em>{i} + \beta
+    y_{i} = \gamma \hat{x}_{i} + \beta
     ]
-    其中 (\mu</em>{B}) 和 (\sigma_{B}^{2}) 是批次数据的均值和方差，(\gamma) 和 (\beta) 是可学习的参数。</p>
+    其中 <span class="arithmatex">\(\mu_{B}\)</span> 和 <span class="arithmatex">\(\sigma_{B}^{2}\)</span> 是批次数据的均值和方差，<span class="arithmatex">\(\gamma\)</span> 和 <span class="arithmatex">\(\beta\)</span> 是可学习的参数。</p>
 </li>
 <li>
 <p><strong>Layer Normalization（LN）</strong>：</p>
@@ -7953,11 +8303,11 @@
     \hat{x}<em>{i} = \frac{x</em>{i} - \mu_{L}}{\sqrt{\sigma_{L}^{2} + \epsilon}}
     ]
     [
-    y_{i} = \gamma \hat{x}<em>{i} + \beta
+    y_{i} = \gamma \hat{x}_{i} + \beta
     ]
-    其中 (\mu</em>{L}) 和 (\sigma_{L}^{2}) 是当前层的均值和方差，(\gamma) 和 (\beta) 是可学习的参数。</li>
+    其中 <span class="arithmatex">\(\mu_{L}\)</span> 和 <span class="arithmatex">\(\sigma_{L}^{2}\)</span> 是当前层的均值和方差，<span class="arithmatex">\(\gamma\)</span> 和 <span class="arithmatex">\(\beta\)</span> 是可学习的参数。</li>
 </ul>
-<h4 id="123-vaegan">12.3 解释图像生成模型（如VAE、GAN）的基本原理及其应用。</h4>
+<h4 id="123-vaegan">12.3 解释图像生成模型（如VAE、GAN）的基本原理及其应用。<a class="headerlink" href="#123-vaegan" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>变分自编码器（VAE）</strong>：</li>
 <li><strong>基本原理</strong>：通过学习数据的潜在表示，使用变分推断方法生成新的样本。VAE由编码器和解码器组成。</li>
@@ -7970,7 +8320,7 @@
 <li><strong>基本原理</strong>：由生成器和判别器组成，生成器试图生成逼真的样本，而判别器则试图区分真实样本和生成样本。通过对抗训练使生成器生成越来越真实的样本。</li>
 <li><strong>应用</strong>：图像生成、风格迁移、超分辨率重建。</li>
 </ul>
-<h4 id="124">12.4 介绍自监督学习的基本思想及其在无监督学习中的应用。</h4>
+<h4 id="124">12.4 介绍自监督学习的基本思想及其在无监督学习中的应用。<a class="headerlink" href="#124" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
 <p><strong>自监督学习</strong>是一种无监督学习方法，通过从数据中生成自标签来训练模型，无需人工标注数据。</p>
@@ -7989,8 +8339,8 @@
 <li><strong>文本填空</strong>：通过训练模型预测文本中的缺失词，实现文本的自监督学习（如BERT中的遮蔽语言模型）。</li>
 </ul>
 <hr />
-<h3 id="13">13. 复杂模型和系统设计</h3>
-<h4 id="131-deep-reinforcement-learning">13.1 介绍深度强化学习（Deep Reinforcement Learning）的基本原理及其应用。</h4>
+<h3 id="13">13. 复杂模型和系统设计<a class="headerlink" href="#13" title="Permanent link">&para;</a></h3>
+<h4 id="131-deep-reinforcement-learning">13.1 介绍深度强化学习（Deep Reinforcement Learning）的基本原理及其应用。<a class="headerlink" href="#131-deep-reinforcement-learning" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
 <p><strong>深度强化学习</strong>结合了深度学习和强化学习，通过深度神经网络来逼近强化学习中的价值函数或策略函数。</p>
@@ -8009,7 +8359,7 @@
 <li><strong>机器人控制</strong>：通过训练智能体控制机器人执行任务（如自主驾驶）。</li>
 <li><strong>金融交易</strong>：通过学习交易策略优化金融资产的投资回报。</li>
 </ul>
-<h4 id="132">13.2 解释深度学习模型的部署和优化，包括在线推理和离线推理的区别。</h4>
+<h4 id="132">13.2 解释深度学习模型的部署和优化，包括在线推理和离线推理的区别。<a class="headerlink" href="#132" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>在线推理</strong>：</li>
 <li><strong>定义</strong>：实时处理和响应请求，通常需要低延迟。</li>
@@ -8022,7 +8372,7 @@
 <li><strong>定义</strong>：对大批量数据进行处理，通常不需要实时响应。</li>
 <li><strong>优化</strong>：使用数据并行计算、存储优化（如缓存、分布式存储）等方法提高处理效率。</li>
 </ul>
-<h4 id="133">13.3 讨论深度学习模型在分布式系统中的挑战和解决方案。</h4>
+<h4 id="133">13.3 讨论深度学习模型在分布式系统中的挑战和解决方案。<a class="headerlink" href="#133" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>挑战</strong>：</li>
 <li><strong>数据分布</strong>：在分布式系统中处理和同步大量数据。</li>
@@ -8037,7 +8387,7 @@
 <li><strong>模型并行</strong>：将模型分布到多个计算节点上进行计算，解决模型过大问题。</li>
 <li><strong>高效通信</strong>：使用高效的通信协议和技术（如Ring-AllReduce）减少同步开销。</li>
 </ul>
-<h4 id="134-limeshap">13.4 解释深度学习中的解释性技术（如LIME、SHAP）及其作用。</h4>
+<h4 id="134-limeshap">13.4 解释深度学习中的解释性技术（如LIME、SHAP）及其作用。<a class="headerlink" href="#134-limeshap" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>LIME（Local Interpretable Model-agnostic Explanations）</strong>：</li>
 <li><strong>作用</strong>：通过局部线性模型解释复杂模型的预测结果，使得模型的预测结果更具解释性。</li>
@@ -8051,8 +8401,8 @@
 <li><strong>方法</strong>：基于Shapley值的理论计算每个特征对预测结果的影响。</li>
 </ul>
 <hr />
-<h3 id="14">14. 深度学习中的实验设计</h3>
-<h4 id="141">14.1 介绍实验设计的基本原则（如假设检验、实验对照）及其在深度学习中的应用。</h4>
+<h3 id="14">14. 深度学习中的实验设计<a class="headerlink" href="#14" title="Permanent link">&para;</a></h3>
+<h4 id="141">14.1 介绍实验设计的基本原则（如假设检验、实验对照）及其在深度学习中的应用。<a class="headerlink" href="#141" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>基本原则</strong>：</li>
 <li><strong>假设检验</strong>：定义假设并通过实验验证假设是否成立。</li>
@@ -8065,7 +8415,7 @@
 <li><strong>超参数调优</strong>：通过实验验证不同超参数对模型性能的影响。</li>
 <li><strong>模型比较</strong>：比较不同模型架构或训练策略的效果，选择最佳方案。</li>
 </ul>
-<h4 id="142">14.2 讨论如何设计深度学习模型的评估实验，包括选择合适的指标和数据集。</h4>
+<h4 id="142">14.2 讨论如何设计深度学习模型的评估实验，包括选择合适的指标和数据集。<a class="headerlink" href="#142" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>评估实验设计</strong>：</li>
 <li><strong>选择指标</strong>：根据任务性质选择合适的评估指标（如分类任务中的准确率、回归任务中的均方误差）。</li>
@@ -8073,11 +8423,11 @@
 <li><strong>交叉验证</strong>：使用交叉验证技术评估模型的稳定性和性能。</li>
 </ul>
 <hr />
-<h3 id="_6">深度学习大厂面试题详解（更多内容）</h3>
+<h3 id="_6">深度学习大厂面试题详解（更多内容）<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>以下是更深入的深度学习面试题及其详细解答，涵盖特定领域应用、模型优化、系统架构等方面。</p>
 <hr />
-<h3 id="15">15. 领域应用与模型优化</h3>
-<h4 id="151">15.1 介绍深度学习在金融领域的应用，并讨论其面临的挑战。</h4>
+<h3 id="15">15. 领域应用与模型优化<a class="headerlink" href="#15" title="Permanent link">&para;</a></h3>
+<h4 id="151">15.1 介绍深度学习在金融领域的应用，并讨论其面临的挑战。<a class="headerlink" href="#151" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>应用</strong>：</li>
 <li><strong>信用评分</strong>：使用深度学习模型预测借款人的信用风险。</li>
@@ -8092,7 +8442,7 @@
 <li><strong>数据质量</strong>：金融数据可能包含噪声和不完整信息，影响模型的准确性。</li>
 <li><strong>实时处理</strong>：金融市场数据变化迅速，需要实时处理和预测。</li>
 </ul>
-<h4 id="152">15.2 解释深度学习在医疗诊断中的应用，包括模型训练和验证过程。</h4>
+<h4 id="152">15.2 解释深度学习在医疗诊断中的应用，包括模型训练和验证过程。<a class="headerlink" href="#152" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>应用</strong>：</li>
 <li><strong>疾病预测</strong>：使用深度学习模型预测患者的疾病风险（如糖尿病、心脏病）。</li>
@@ -8108,7 +8458,7 @@
 <li><strong>训练过程</strong>：使用交叉验证等方法对模型进行训练和调优，避免过拟合。</li>
 <li><strong>验证过程</strong>：在独立的测试集上评估模型的性能，确保模型的泛化能力。</li>
 </ul>
-<h4 id="153">15.3 讨论深度学习在自动驾驶中的技术挑战和解决方案。</h4>
+<h4 id="153">15.3 讨论深度学习在自动驾驶中的技术挑战和解决方案。<a class="headerlink" href="#153" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>技术挑战</strong>：</li>
 <li><strong>感知系统的准确性</strong>：需要准确识别道路上的物体、障碍物和交通标志。</li>
@@ -8123,7 +8473,7 @@
 <li><strong>增强现实仿真</strong>：使用仿真环境进行训练和测试，以减少实际测试中的风险。</li>
 <li><strong>半监督学习</strong>：使用少量标注数据结合大量未标注数据进行训练，降低标注成本。</li>
 </ul>
-<h4 id="154">15.4 解释迁移学习的基本概念，并讨论其在特定任务中的应用。</h4>
+<h4 id="154">15.4 解释迁移学习的基本概念，并讨论其在特定任务中的应用。<a class="headerlink" href="#154" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
 <p><strong>迁移学习</strong>是一种在一个任务上预训练模型，然后将其应用于另一个相关任务的技术。</p>
@@ -8142,8 +8492,8 @@
 <li><strong>自然语言处理</strong>：使用在大规模语料库上训练的语言模型（如BERT）进行情感分析、问答等任务。</li>
 </ul>
 <hr />
-<h3 id="16">16. 模型优化与系统架构</h3>
-<h4 id="161">16.1 讨论模型压缩技术（如剪枝、量化）及其对模型性能的影响。</h4>
+<h3 id="16">16. 模型优化与系统架构<a class="headerlink" href="#16" title="Permanent link">&para;</a></h3>
+<h4 id="161">16.1 讨论模型压缩技术（如剪枝、量化）及其对模型性能的影响。<a class="headerlink" href="#161" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>剪枝</strong>：</li>
 <li><strong>定义</strong>：通过去除网络中的一些不重要的参数或结构来减小模型的大小。</li>
@@ -8156,7 +8506,7 @@
 <li><strong>定义</strong>：将模型中的浮点数参数转换为低精度的整数，以减少模型的存储和计算需求。</li>
 <li><strong>影响</strong>：降低模型的计算成本和内存占用，但可能导致精度略微下降。</li>
 </ul>
-<h4 id="162">16.2 解释模型优化的超参数（如学习率、批次大小）的选择策略。</h4>
+<h4 id="162">16.2 解释模型优化的超参数（如学习率、批次大小）的选择策略。<a class="headerlink" href="#162" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>学习率</strong>：</li>
 <li>
@@ -8167,7 +8517,7 @@
 </li>
 <li><strong>选择策略</strong>：批次大小影响训练的稳定性和速度。较小的批次大小可能提供更好的泛化性能，而较大的批次大小可以加速训练。</li>
 </ul>
-<h4 id="163">16.3 讨论深度学习模型的分布式训练和优化技术（如数据并行、模型并行）。</h4>
+<h4 id="163">16.3 讨论深度学习模型的分布式训练和优化技术（如数据并行、模型并行）。<a class="headerlink" href="#163" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>数据并行</strong>：</li>
 <li><strong>定义</strong>：将数据分割成多个小批次，并在多个计算节点上并行处理，合并梯度进行更新。</li>
@@ -8180,7 +8530,7 @@
 <li><strong>定义</strong>：将模型的不同部分分布到多个计算节点上进行训练，适用于模型过大无法在单个节点上处理的情况。</li>
 <li><strong>优势</strong>：解决内存瓶颈问题，提高计算效率。</li>
 </ul>
-<h4 id="164">16.4 解释深度学习系统的容错和可扩展性设计。</h4>
+<h4 id="164">16.4 解释深度学习系统的容错和可扩展性设计。<a class="headerlink" href="#164" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>容错设计</strong>：</li>
 <li><strong>定义</strong>：通过冗余、检查点机制等手段确保系统在发生故障时能够恢复。</li>
@@ -8194,8 +8544,8 @@
 <li><strong>实现</strong>：使用分布式计算框架（如TensorFlow分布式）和动态扩展技术（如自动扩展集群）来处理扩展需求。</li>
 </ul>
 <hr />
-<h3 id="17">17. 高级模型与算法</h3>
-<h4 id="171">17.1 介绍强化学习中的策略梯度方法及其与价值函数方法的区别。</h4>
+<h3 id="17">17. 高级模型与算法<a class="headerlink" href="#17" title="Permanent link">&para;</a></h3>
+<h4 id="171">17.1 介绍强化学习中的策略梯度方法及其与价值函数方法的区别。<a class="headerlink" href="#171" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>策略梯度方法</strong>：</li>
 <li><strong>基本原理</strong>：直接优化策略函数，通过梯度下降算法提高策略的期望回报。</li>
@@ -8208,7 +8558,7 @@
 <li><strong>基本原理</strong>：通过估计状态值函数或动作值函数来优化策略，通常使用Q-learning或SARSA。</li>
 <li><strong>优点</strong>：算法简单，易于理解，适用于离散动作空间。</li>
 </ul>
-<h4 id="172-adamrmsprop">17.2 讨论深度学习中的自适应优化算法（如Adam、RMSprop）的基本原理及其优缺点。</h4>
+<h4 id="172-adamrmsprop">17.2 讨论深度学习中的自适应优化算法（如Adam、RMSprop）的基本原理及其优缺点。<a class="headerlink" href="#172-adamrmsprop" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>Adam（Adaptive Moment Estimation）</strong>：</li>
 <li><strong>基本原理</strong>：结合了动量法和自适应学习率调整，通过计算一阶和二阶矩的自适应学习率来优化梯度更新。</li>
@@ -8223,7 +8573,7 @@
 <li><strong>优点</strong>：适用于非平稳目标，能有效解决梯度爆炸或消失问题。</li>
 <li><strong>缺点</strong>：需要调节学习率和衰减率。</li>
 </ul>
-<h4 id="173">17.3 解释深度学习中的超分辨率技术，并讨论其应用场景。</h4>
+<h4 id="173">17.3 解释深度学习中的超分辨率技术，并讨论其应用场景。<a class="headerlink" href="#173" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>超分辨率技术</strong>：</li>
 <li><strong>基本原理</strong>：通过深度学习模型将低分辨率图像恢复成高分辨率图像，通常使用卷积神经网络（CNN）进行图像重建。</li>
@@ -8235,11 +8585,11 @@
 </li>
 </ul>
 <hr />
-<h3 id="_7">深度学习大厂面试题详解（更多内容）</h3>
+<h3 id="_7">深度学习大厂面试题详解（更多内容）<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>以下是更多深度学习面试题及其详细解答，涵盖最新技术趋势、复杂模型应用、系统设计等方面。</p>
 <hr />
-<h3 id="18">18. 最新技术趋势</h3>
-<h4 id="181-gnn">18.1 介绍图神经网络（GNN）的基本概念及其应用场景。</h4>
+<h3 id="18">18. 最新技术趋势<a class="headerlink" href="#18" title="Permanent link">&para;</a></h3>
+<h4 id="181-gnn">18.1 介绍图神经网络（GNN）的基本概念及其应用场景。<a class="headerlink" href="#181-gnn" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>图神经网络（GNN）</strong>：</li>
 <li><strong>基本概念</strong>：图神经网络是一种处理图结构数据的深度学习模型，通过节点之间的边信息进行特征传播和学习。</li>
@@ -8254,7 +8604,7 @@
 <li><strong>推荐系统</strong>：利用用户和商品之间的关系图进行个性化推荐。</li>
 <li><strong>生物信息学</strong>：分析蛋白质交互网络以预测蛋白质功能。</li>
 </ul>
-<h4 id="182-transformer">18.2 讨论Transformer模型的优势，并解释其在自然语言处理中的应用。</h4>
+<h4 id="182-transformer">18.2 讨论Transformer模型的优势，并解释其在自然语言处理中的应用。<a class="headerlink" href="#182-transformer" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>Transformer模型</strong>：</li>
 <li>
@@ -8272,7 +8622,7 @@
 <li><strong>文本生成</strong>：如GPT系列，生成自然语言文本用于对话生成、内容创作等。</li>
 <li><strong>问答系统</strong>：如BERT，能够理解文本中的上下文进行问答匹配。</li>
 </ul>
-<h4 id="183">18.3 解释如何使用自监督学习进行图像生成任务。</h4>
+<h4 id="183">18.3 解释如何使用自监督学习进行图像生成任务。<a class="headerlink" href="#183" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>自监督学习</strong>：</li>
 <li>
@@ -8286,8 +8636,8 @@
 <li><strong>训练过程</strong>：通过设定损失函数（如重构损失）优化模型，确保生成的图像与输入图像在特征上尽可能接近。</li>
 </ul>
 <hr />
-<h3 id="19">19. 复杂模型应用</h3>
-<h4 id="191">19.1 讨论深度学习在语音识别中的挑战及其解决方案。</h4>
+<h3 id="19">19. 复杂模型应用<a class="headerlink" href="#19" title="Permanent link">&para;</a></h3>
+<h4 id="191">19.1 讨论深度学习在语音识别中的挑战及其解决方案。<a class="headerlink" href="#191" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>挑战</strong>：</li>
 <li><strong>噪声处理</strong>：在嘈杂环境中准确识别语音。</li>
@@ -8302,7 +8652,7 @@
 <li><strong>多任务学习</strong>：通过在多种语音数据上训练模型，提高对不同口音的适应能力。</li>
 <li><strong>模型优化</strong>：采用高效的模型架构（如深度卷积神经网络、Transformer）提升实时处理能力。</li>
 </ul>
-<h4 id="192">19.2 介绍深度学习在计算机视觉中的目标检测技术，并讨论其应用。</h4>
+<h4 id="192">19.2 介绍深度学习在计算机视觉中的目标检测技术，并讨论其应用。<a class="headerlink" href="#192" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>目标检测技术</strong>：</li>
 <li>
@@ -8320,7 +8670,7 @@
 <li><strong>自动驾驶</strong>：识别道路上的行人、车辆和交通标志。</li>
 <li><strong>工业检测</strong>：自动检测产品生产过程中的缺陷或异常。</li>
 </ul>
-<h4 id="193">19.3 讨论深度学习在强化学习中的应用，并解释其如何提高策略优化的效率。</h4>
+<h4 id="193">19.3 讨论深度学习在强化学习中的应用，并解释其如何提高策略优化的效率。<a class="headerlink" href="#193" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>应用</strong>：</li>
 <li><strong>游戏</strong>：训练智能体在复杂的游戏环境中（如Atari、围棋）通过强化学习算法学习最佳策略。</li>
@@ -8335,8 +8685,8 @@
 <li><strong>优势函数</strong>：使用优势函数（如A2C、PPO）提高策略优化的效率，减少策略梯度的方差。</li>
 </ul>
 <hr />
-<h3 id="20">20. 系统设计与工程</h3>
-<h4 id="201">20.1 解释深度学习系统中的模型版本管理和实验跟踪的重要性。</h4>
+<h3 id="20">20. 系统设计与工程<a class="headerlink" href="#20" title="Permanent link">&para;</a></h3>
+<h4 id="201">20.1 解释深度学习系统中的模型版本管理和实验跟踪的重要性。<a class="headerlink" href="#201" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>模型版本管理</strong>：</li>
 <li><strong>定义</strong>：管理不同版本的模型及其训练参数，以便于回溯和对比。</li>
@@ -8349,7 +8699,7 @@
 <li><strong>定义</strong>：记录实验的参数设置、模型性能和训练过程中的日志。</li>
 <li><strong>重要性</strong>：帮助跟踪和比较不同实验的结果，优化模型性能，提高研发效率。</li>
 </ul>
-<h4 id="202">20.2 讨论深度学习模型的生产环境部署策略（如容器化、微服务架构）。</h4>
+<h4 id="202">20.2 讨论深度学习模型的生产环境部署策略（如容器化、微服务架构）。<a class="headerlink" href="#202" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>容器化</strong>：</li>
 <li><strong>定义</strong>：使用容器技术（如Docker）将模型及其依赖打包到容器中，确保一致性和可移植性。</li>
@@ -8362,7 +8712,7 @@
 <li><strong>定义</strong>：将模型服务拆分成多个小服务，通过API进行通信和协作。</li>
 <li><strong>优势</strong>：提高系统的可维护性和可扩展性，支持按需扩展和独立部署。</li>
 </ul>
-<h4 id="203">20.3 介绍深度学习模型的性能监控和维护策略。</h4>
+<h4 id="203">20.3 介绍深度学习模型的性能监控和维护策略。<a class="headerlink" href="#203" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>性能监控</strong>：</li>
 <li><strong>定义</strong>：实时监控模型在生产环境中的运行性能，包括延迟、吞吐量和错误率。</li>
@@ -8376,8 +8726,8 @@
 <li><strong>故障处理</strong>：建立应急响应机制，快速解决模型运行中的问题，保障系统的可靠性。</li>
 </ul>
 <hr />
-<h3 id="21">21. 高级算法与模型</h3>
-<h4 id="211-ganstylegancyclegan">21.1 介绍图像生成对抗网络（GAN）的变种（如StyleGAN、CycleGAN）及其特点。</h4>
+<h3 id="21">21. 高级算法与模型<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
+<h4 id="211-ganstylegancyclegan">21.1 介绍图像生成对抗网络（GAN）的变种（如StyleGAN、CycleGAN）及其特点。<a class="headerlink" href="#211-ganstylegancyclegan" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>StyleGAN</strong>：</li>
 <li><strong>特点</strong>：能够生成高质量、逼真的图像，通过层次化的风格控制图像的细节和风格。</li>
@@ -8390,7 +8740,7 @@
 <li><strong>特点</strong>：能够进行图像风格转换（如将马的图像转换为斑马），无需配对数据。</li>
 <li><strong>应用</strong>：图像风格转换、艺术效果生成。</li>
 </ul>
-<h4 id="212-adversarial-examples">21.2 解释深度学习中的对抗样本（Adversarial Examples）及其防御方法。</h4>
+<h4 id="212-adversarial-examples">21.2 解释深度学习中的对抗样本（Adversarial Examples）及其防御方法。<a class="headerlink" href="#212-adversarial-examples" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>对抗样本</strong>：</li>
 <li><strong>定义</strong>：通过对输入数据进行微小扰动，使得模型产生错误预测的样本。</li>
@@ -8403,7 +8753,7 @@
 <li><strong>对抗训练</strong>：将对抗样本加入训练数据中，提高模型对对抗攻击的鲁棒性。</li>
 <li><strong>防御性检测</strong>：使用检测算法识别和过滤对抗样本，减少对模型的影响。</li>
 </ul>
-<h4 id="213-domain-adaptation">21.3 讨论深度学习中的领域适应（Domain Adaptation）技术及其应用。</h4>
+<h4 id="213-domain-adaptation">21.3 讨论深度学习中的领域适应（Domain Adaptation）技术及其应用。<a class="headerlink" href="#213-domain-adaptation" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>领域适应</strong>：</li>
 <li><strong>定义</strong>：通过迁移学习技术，使模型在源领域（有标签数据）和目标领域（无标签数据）之间进行适应。</li>
@@ -8417,11 +8767,11 @@
 <li><strong>语音识别</strong>：将训练在标准英语语音数据上的模型适应到具有特定口音的语音数据。</li>
 </ul>
 <hr />
-<h3 id="_8">深度学习大厂面试题详解（更多内容）</h3>
+<h3 id="_8">深度学习大厂面试题详解（更多内容）<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <p>以下是更多深度学习面试题及其详细解答，涵盖前沿研究、模型解释性、伦理问题等方面。</p>
 <hr />
-<h3 id="22">22. 前沿研究</h3>
-<h4 id="221-self-attentiontransformer">22.1 介绍深度学习中的自注意力机制（Self-Attention）及其在Transformer中的作用。</h4>
+<h3 id="22">22. 前沿研究<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
+<h4 id="221-self-attentiontransformer">22.1 介绍深度学习中的自注意力机制（Self-Attention）及其在Transformer中的作用。<a class="headerlink" href="#221-self-attentiontransformer" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>自注意力机制</strong>：</li>
 <li><strong>定义</strong>：自注意力机制允许每个位置的特征向量在计算其表示时，关注序列中其他位置的信息。</li>
@@ -8434,7 +8784,7 @@
 <li><strong>作用</strong>：自注意力机制是Transformer模型的核心组件，使得模型能够捕捉长程依赖关系和全局信息。</li>
 <li><strong>优势</strong>：与传统的RNN模型相比，自注意力机制可以并行计算，显著提高训练效率。</li>
 </ul>
-<h4 id="222-style-transfer">22.2 讨论深度学习中的图像风格迁移（Style Transfer）技术，并解释其应用场景。</h4>
+<h4 id="222-style-transfer">22.2 讨论深度学习中的图像风格迁移（Style Transfer）技术，并解释其应用场景。<a class="headerlink" href="#222-style-transfer" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>图像风格迁移</strong>：</li>
 <li><strong>定义</strong>：通过深度学习模型将一幅图像的内容与另一幅图像的风格结合，生成风格化的图像。</li>
@@ -8448,7 +8798,7 @@
 <li><strong>广告设计</strong>：在广告中应用不同的风格来吸引观众的注意。</li>
 <li><strong>游戏设计</strong>：为游戏场景和角色生成具有独特风格的视觉效果。</li>
 </ul>
-<h4 id="223-qdqndouble-dqndueling-dqn">22.3 解释深度强化学习中的深度Q网络（DQN）及其改进方法（如Double DQN、Dueling DQN）。</h4>
+<h4 id="223-qdqndouble-dqndueling-dqn">22.3 解释深度强化学习中的深度Q网络（DQN）及其改进方法（如Double DQN、Dueling DQN）。<a class="headerlink" href="#223-qdqndouble-dqndueling-dqn" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>深度Q网络（DQN）</strong>：</li>
 <li><strong>定义</strong>：结合Q-learning和深度学习，通过深度神经网络逼近Q值函数，用于处理高维状态空间的问题。</li>
@@ -8462,8 +8812,8 @@
 <li><strong>Dueling DQN</strong>：将Q值函数分解为状态值函数和优势函数，提高训练效率和性能。</li>
 </ul>
 <hr />
-<h3 id="23">23. 模型解释性与透明性</h3>
-<h4 id="231-limeshap">23.1 讨论深度学习模型的解释性问题，并介绍常用的解释方法（如LIME、SHAP）。</h4>
+<h3 id="23">23. 模型解释性与透明性<a class="headerlink" href="#23" title="Permanent link">&para;</a></h3>
+<h4 id="231-limeshap">23.1 讨论深度学习模型的解释性问题，并介绍常用的解释方法（如LIME、SHAP）。<a class="headerlink" href="#231-limeshap" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>解释性问题</strong>：</li>
 <li>
@@ -8483,7 +8833,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="232">23.2 讨论深度学习中的模型透明性和公平性问题，并介绍解决方案。</h4>
+<h4 id="232">23.2 讨论深度学习中的模型透明性和公平性问题，并介绍解决方案。<a class="headerlink" href="#232" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>模型透明性</strong>：</li>
 <li><strong>定义</strong>：模型透明性指的是对模型内部工作机制的清晰理解。</li>
@@ -8497,8 +8847,8 @@
 <li><strong>解决方案</strong>：进行公平性检查、使用公平性优化算法、确保数据集的多样性。</li>
 </ul>
 <hr />
-<h3 id="24">24. 伦理与社会影响</h3>
-<h4 id="241">24.1 讨论深度学习技术在社会中的伦理问题（如隐私、偏见）。</h4>
+<h3 id="24">24. 伦理与社会影响<a class="headerlink" href="#24" title="Permanent link">&para;</a></h3>
+<h4 id="241">24.1 讨论深度学习技术在社会中的伦理问题（如隐私、偏见）。<a class="headerlink" href="#241" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>隐私问题</strong>：</li>
 <li><strong>定义</strong>：深度学习技术涉及大量个人数据，可能引发隐私泄露的风险。</li>
@@ -8511,7 +8861,7 @@
 <li><strong>定义</strong>：模型可能会从训练数据中学习到社会偏见，导致不公平的决策。</li>
 <li><strong>解决方案</strong>：使用去偏见算法、审查和清洗数据集，确保模型的公平性。</li>
 </ul>
-<h4 id="242">24.2 讨论深度学习在自动化决策中的潜在风险，并提出防范措施。</h4>
+<h4 id="242">24.2 讨论深度学习在自动化决策中的潜在风险，并提出防范措施。<a class="headerlink" href="#242" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>潜在风险</strong>：</li>
 <li><strong>定义</strong>：自动化决策系统可能导致决策错误、影响用户权益、加剧社会不平等。</li>
@@ -8523,7 +8873,7 @@
 </li>
 <li><strong>措施</strong>：建立监督机制、进行系统审计、确保透明度和可解释性，提供人工干预的选项。</li>
 </ul>
-<h4 id="243">24.3 解释如何在深度学习项目中进行伦理审查和合规性检查。</h4>
+<h4 id="243">24.3 解释如何在深度学习项目中进行伦理审查和合规性检查。<a class="headerlink" href="#243" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>伦理审查</strong>：</li>
 <li><strong>定义</strong>：评估项目对社会、环境的影响，确保遵循伦理规范。</li>
@@ -8537,8 +8887,8 @@
 <li><strong>步骤</strong>：实施合规性审计、建立数据保护机制、保持法律合规性更新。</li>
 </ul>
 <hr />
-<h3 id="25">25. 高级模型与系统设计</h3>
-<h4 id="251">25.1 讨论多模态学习的基本概念及其应用场景。</h4>
+<h3 id="25">25. 高级模型与系统设计<a class="headerlink" href="#25" title="Permanent link">&para;</a></h3>
+<h4 id="251">25.1 讨论多模态学习的基本概念及其应用场景。<a class="headerlink" href="#251" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>多模态学习</strong>：</li>
 <li><strong>定义</strong>：融合来自不同模态（如文本、图像、语音）的信息进行学习和推理。</li>
@@ -8552,7 +8902,7 @@
 <li><strong>图像和文本检索</strong>：通过联合表示进行跨模态的图像和文本检索。</li>
 <li><strong>视频理解</strong>：结合视频帧和音频信息进行视频内容分析。</li>
 </ul>
-<h4 id="252">25.2 讨论深度学习模型的在线学习和增量学习技术。</h4>
+<h4 id="252">25.2 讨论深度学习模型的在线学习和增量学习技术。<a class="headerlink" href="#252" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>在线学习</strong>：</li>
 <li><strong>定义</strong>：模型在处理新数据时能够实时更新和学习，而不需要重新训练。</li>
@@ -8565,7 +8915,7 @@
 <li><strong>定义</strong>：模型能够在不断接收到新数据的情况下逐步改进，而无需重新训练整个模型。</li>
 <li><strong>应用</strong>：适用于需要处理大量动态数据的场景（如用户行为分析）。</li>
 </ul>
-<h4 id="253">25.3 介绍深度学习模型在大规模数据处理中的挑战与解决方案（如数据分布变化）。</h4>
+<h4 id="253">25.3 介绍深度学习模型在大规模数据处理中的挑战与解决方案（如数据分布变化）。<a class="headerlink" href="#253" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>挑战</strong>：</li>
 <li><strong>数据分布变化</strong>：模型在面对数据分布的变化时可能表现不佳。</li>
@@ -8579,11 +8929,11 @@
 <li><strong>分布式计算</strong>：使用分布式计算框架（如Spark、Hadoop）处理大规模数据，优化计算资源使用。</li>
 </ul>
 <hr />
-<h3 id="_9">深度学习大厂面试题详解（更多内容）</h3>
+<h3 id="_9">深度学习大厂面试题详解（更多内容）<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <p>以下是进一步的深度学习面试题及其详细解答，涵盖新兴技术、模型调优、优化算法等方面。</p>
 <hr />
-<h3 id="26">26. 新兴技术</h3>
-<h4 id="261-automl">26.1 介绍深度学习中的自动机器学习（AutoML）技术及其优势。</h4>
+<h3 id="26">26. 新兴技术<a class="headerlink" href="#26" title="Permanent link">&para;</a></h3>
+<h4 id="261-automl">26.1 介绍深度学习中的自动机器学习（AutoML）技术及其优势。<a class="headerlink" href="#261-automl" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>自动机器学习（AutoML）</strong>：</li>
 <li><strong>定义</strong>：自动机器学习旨在自动化机器学习模型的设计、训练、调优和选择过程。</li>
@@ -8602,7 +8952,7 @@
 <li><strong>TPOT</strong>：基于遗传编程的AutoML工具，用于自动化特征选择和模型构建。</li>
 <li><strong>Google AutoML</strong>：Google推出的AutoML服务，提供自动化模型训练和优化。</li>
 </ul>
-<h4 id="262-transfer-learning">26.2 解释深度学习中的迁移学习（Transfer Learning）及其在图像分类中的应用。</h4>
+<h4 id="262-transfer-learning">26.2 解释深度学习中的迁移学习（Transfer Learning）及其在图像分类中的应用。<a class="headerlink" href="#262-transfer-learning" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>迁移学习</strong>：</li>
 <li><strong>定义</strong>：迁移学习通过利用在一个任务上学到的知识来提高在另一个相关任务上的学习效果。</li>
@@ -8619,7 +8969,7 @@
 </li>
 <li><strong>优势</strong>：减少训练时间，利用大规模数据集（如ImageNet）提高模型的泛化能力。</li>
 </ul>
-<h4 id="263-q">26.3 讨论深度学习中的强化学习与深度学习的结合（如深度Q学习）。</h4>
+<h4 id="263-q">26.3 讨论深度学习中的强化学习与深度学习的结合（如深度Q学习）。<a class="headerlink" href="#263-q" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>深度Q学习</strong>：</li>
 <li><strong>定义</strong>：深度Q学习将深度学习与传统的Q-learning算法结合，通过深度神经网络逼近Q值函数。</li>
@@ -8633,8 +8983,8 @@
 <li><strong>稳定性提升</strong>：通过经验回放和目标网络的使用，提升了训练的稳定性。</li>
 </ul>
 <hr />
-<h3 id="27">27. 模型调优</h3>
-<h4 id="271">27.1 讨论如何选择合适的损失函数以优化模型性能，并举例说明。</h4>
+<h3 id="27">27. 模型调优<a class="headerlink" href="#27" title="Permanent link">&para;</a></h3>
+<h4 id="271">27.1 讨论如何选择合适的损失函数以优化模型性能，并举例说明。<a class="headerlink" href="#271" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>选择损失函数</strong>：</li>
 <li><strong>分类任务</strong>：常用的损失函数包括交叉熵损失（Cross-Entropy Loss），适用于分类问题（如图像分类、文本分类）。</li>
@@ -8648,7 +8998,7 @@
 <li><strong>图像分类</strong>：使用交叉熵损失函数来优化模型，使其能够正确分类不同的图像类别。</li>
 <li><strong>目标检测</strong>：使用交叉熵损失函数与回归损失函数的组合来优化目标检测模型，提高定位精度和分类准确度。</li>
 </ul>
-<h4 id="272-cross-validation">27.2 解释如何使用交叉验证（Cross-Validation）来评估模型性能。</h4>
+<h4 id="272-cross-validation">27.2 解释如何使用交叉验证（Cross-Validation）来评估模型性能。<a class="headerlink" href="#272-cross-validation" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>交叉验证</strong>：</li>
 <li><strong>定义</strong>：交叉验证是一种模型评估方法，通过将数据集划分为多个子集，交替使用部分数据作为训练集和验证集，评估模型的泛化能力。</li>
@@ -8665,7 +9015,7 @@
 <li><strong>减少过拟合</strong>：通过多次验证减少模型对特定训练集的依赖，提高模型的泛化能力。</li>
 <li><strong>提高评估准确性</strong>：综合多次训练和验证的结果，获得更可靠的性能评估。</li>
 </ul>
-<h4 id="273-hyperparameter-tuning">27.3 讨论深度学习中的超参数优化（Hyperparameter Tuning）方法，并解释其重要性。</h4>
+<h4 id="273-hyperparameter-tuning">27.3 讨论深度学习中的超参数优化（Hyperparameter Tuning）方法，并解释其重要性。<a class="headerlink" href="#273-hyperparameter-tuning" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>超参数优化</strong>：</li>
 <li><strong>定义</strong>：超参数优化是调整模型超参数（如学习率、批量大小、网络结构）的过程，以提高模型性能。</li>
@@ -8684,8 +9034,8 @@
 <li><strong>避免过拟合</strong>：通过合理选择超参数，可以减少模型过拟合，提高泛化能力。</li>
 </ul>
 <hr />
-<h3 id="28">28. 优化算法</h3>
-<h4 id="281-adamrmsprop">28.1 介绍深度学习中的优化算法（如Adam、RMSprop）及其优缺点。</h4>
+<h3 id="28">28. 优化算法<a class="headerlink" href="#28" title="Permanent link">&para;</a></h3>
+<h4 id="281-adamrmsprop">28.1 介绍深度学习中的优化算法（如Adam、RMSprop）及其优缺点。<a class="headerlink" href="#281-adamrmsprop" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>Adam（Adaptive Moment Estimation）</strong>：</li>
 <li><strong>优点</strong>：<ul>
@@ -8712,7 +9062,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="282-gradient-clipping">28.2 解释如何使用梯度剪切（Gradient Clipping）来解决梯度爆炸问题。</h4>
+<h4 id="282-gradient-clipping">28.2 解释如何使用梯度剪切（Gradient Clipping）来解决梯度爆炸问题。<a class="headerlink" href="#282-gradient-clipping" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>梯度剪切</strong>：</li>
 <li><strong>定义</strong>：梯度剪切是一种技术，通过限制梯度的最大值，防止梯度爆炸。</li>
@@ -8725,7 +9075,7 @@
 <li><strong>避免梯度爆炸</strong>：在深度神经网络训练过程中，使用梯度剪切来确保梯度不会过大，从而避免梯度爆炸问题。</li>
 <li><strong>稳定训练过程</strong>：提高训练过程的稳定性，加速模型收敛。</li>
 </ul>
-<h4 id="283-learning-rate-scheduling">28.3 讨论深度学习中的学习率调度（Learning Rate Scheduling）方法及其作用。</h4>
+<h4 id="283-learning-rate-scheduling">28.3 讨论深度学习中的学习率调度（Learning Rate Scheduling）方法及其作用。<a class="headerlink" href="#283-learning-rate-scheduling" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>学习率调度</strong>：</li>
 <li><strong>定义</strong>：学习率调度是在训练过程中动态调整学习率的技术。</li>
@@ -8745,8 +9095,8 @@
 <li><strong>避免过拟合</strong>：通过减少学习率，减少训练过程中对局部最优的过拟合。</li>
 </ul>
 <hr />
-<h3 id="29">29. 深度学习系统设计</h3>
-<h4 id="291">29.1 讨论深度学习系统中的数据管道设计，包括数据预处理和数据增强。</h4>
+<h3 id="29">29. 深度学习系统设计<a class="headerlink" href="#29" title="Permanent link">&para;</a></h3>
+<h4 id="291">29.1 讨论深度学习系统中的数据管道设计，包括数据预处理和数据增强。<a class="headerlink" href="#291" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>数据管道设计</strong>：</li>
 <li><strong>数据预处理</strong>：包括数据清洗、归一化、标准化、去噪等步骤，以提高数据质量。</li>
@@ -8759,7 +9109,7 @@
 <li><strong>使用库</strong>：利用数据处理和增强库（如TensorFlow Data、PyTorch DataLoader、Albumentations）来构建高效的数据管道。</li>
 <li><strong>管道优化</strong>：采用多线程、预取机制等技术提高数据处理和加载的效率。</li>
 </ul>
-<h4 id="292">29.2 介绍如何设计和实现分布式深度学习训练系统。</h4>
+<h4 id="292">29.2 介绍如何设计和实现分布式深度学习训练系统。<a class="headerlink" href="#292" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>分布式训练系统</strong>：</li>
 <li><strong>定义</strong>：分布式训练系统通过将训练任务分配到多个计算节点上，加速深度学习模型的训练过程。</li>
@@ -8778,7 +9128,7 @@
 <li><strong>PyTorch Distributed</strong>：PyTorch提供的分布式训练框架，支持多种分布式训练策略。</li>
 <li><strong>Horovod</strong>：开源分布式训练框架，支持多种深度学习框架的分布式训练。</li>
 </ul>
-<h4 id="293">29.3 讨论深度学习模型部署的最佳实践，包括模型优化和服务架构设计。</h4>
+<h4 id="293">29.3 讨论深度学习模型部署的最佳实践，包括模型优化和服务架构设计。<a class="headerlink" href="#293" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>模型优化</strong>：</li>
 <li><strong>量化</strong>：通过减少模型参数的精度来降低计算开销和存储需求（如将浮点数转换为整数）。</li>
@@ -8794,11 +9144,11 @@
 <li><strong>自动化部署</strong>：利用CI/CD工具自动化模型的部署和更新过程，提高开发效率。</li>
 </ul>
 <hr />
-<h3 id="_10">深度学习大厂面试题详解（更多内容）</h3>
+<h3 id="_10">深度学习大厂面试题详解（更多内容）<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
 <p>以下是更多深度学习面试题及其详细解答，涵盖模型设计、前沿技术、应用挑战等方面。</p>
 <hr />
-<h3 id="30">30. 模型设计与架构</h3>
-<h4 id="301-cnn">30.1 解释卷积神经网络（CNN）的基本架构，包括卷积层、池化层和全连接层。</h4>
+<h3 id="30">30. 模型设计与架构<a class="headerlink" href="#30" title="Permanent link">&para;</a></h3>
+<h4 id="301-cnn">30.1 解释卷积神经网络（CNN）的基本架构，包括卷积层、池化层和全连接层。<a class="headerlink" href="#301-cnn" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>卷积神经网络（CNN）</strong>：</li>
 <li>
@@ -8823,7 +9173,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="302-gan">30.2 讨论深度学习中的生成对抗网络（GAN）及其应用。</h4>
+<h4 id="302-gan">30.2 讨论深度学习中的生成对抗网络（GAN）及其应用。<a class="headerlink" href="#302-gan" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>生成对抗网络（GAN）</strong>：</li>
 <li><strong>定义</strong>：GAN由生成器和判别器组成，通过对抗训练生成与真实数据相似的数据。</li>
@@ -8841,7 +9191,7 @@
 <li><strong>数据增强</strong>：生成额外的数据样本，扩充训练数据集。</li>
 <li><strong>图像修复</strong>：修复损坏或缺失的图像部分。</li>
 </ul>
-<h4 id="303-gnn">30.3 介绍深度学习中的图神经网络（GNN）及其应用场景。</h4>
+<h4 id="303-gnn">30.3 介绍深度学习中的图神经网络（GNN）及其应用场景。<a class="headerlink" href="#303-gnn" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>图神经网络（GNN）</strong>：</li>
 <li><strong>定义</strong>：GNN处理图结构数据，通过节点之间的消息传递和聚合来学习图的表示。</li>
@@ -8856,8 +9206,8 @@
 <li><strong>药物发现</strong>：通过学习分子图的结构来发现新的药物分子。</li>
 </ul>
 <hr />
-<h3 id="31_1">31. 前沿技术</h3>
-<h4 id="311-self-supervised-learning">31.1 讨论深度学习中的自监督学习（Self-Supervised Learning）及其优势。</h4>
+<h3 id="31_1">31. 前沿技术<a class="headerlink" href="#31_1" title="Permanent link">&para;</a></h3>
+<h4 id="311-self-supervised-learning">31.1 讨论深度学习中的自监督学习（Self-Supervised Learning）及其优势。<a class="headerlink" href="#311-self-supervised-learning" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>自监督学习</strong>：</li>
 <li><strong>定义</strong>：自监督学习通过从数据中生成标签来进行训练，而不是依赖人工标注数据。</li>
@@ -8870,7 +9220,7 @@
 <li><strong>减少标注成本</strong>：通过生成伪标签减少对人工标注数据的依赖。</li>
 <li><strong>提高模型的泛化能力</strong>：利用大量未标注数据进行预训练，提高模型的鲁棒性和泛化能力。</li>
 </ul>
-<h4 id="312-shotzero-shot-learning">31.2 介绍深度学习中的零-shot学习（Zero-Shot Learning）技术及其应用。</h4>
+<h4 id="312-shotzero-shot-learning">31.2 介绍深度学习中的零-shot学习（Zero-Shot Learning）技术及其应用。<a class="headerlink" href="#312-shotzero-shot-learning" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>零-shot学习</strong>：</li>
 <li><strong>定义</strong>：零-shot学习使模型能够识别在训练时未见过的类别。</li>
@@ -8883,7 +9233,7 @@
 <li><strong>图像分类</strong>：分类未见过的图像类别，如在物体检测中处理新物体。</li>
 <li><strong>自然语言处理</strong>：处理未见过的词汇或任务，如问答系统中的新问题类型。</li>
 </ul>
-<h4 id="313-meta-learning">31.3 讨论深度学习中的元学习（Meta-Learning）技术及其应用。</h4>
+<h4 id="313-meta-learning">31.3 讨论深度学习中的元学习（Meta-Learning）技术及其应用。<a class="headerlink" href="#313-meta-learning" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>元学习</strong>：</li>
 <li><strong>定义</strong>：元学习（学习如何学习）旨在提高模型在新任务上的学习效率。</li>
@@ -8897,8 +9247,8 @@
 <li><strong>自适应优化</strong>：自动调整优化算法以适应不同任务的需求。</li>
 </ul>
 <hr />
-<h3 id="32_1">32. 应用挑战</h3>
-<h4 id="321">32.1 讨论深度学习模型在实际应用中的挑战，如数据稀缺、计算资源需求等。</h4>
+<h3 id="32_1">32. 应用挑战<a class="headerlink" href="#32_1" title="Permanent link">&para;</a></h3>
+<h4 id="321">32.1 讨论深度学习模型在实际应用中的挑战，如数据稀缺、计算资源需求等。<a class="headerlink" href="#321" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>数据稀缺</strong>：</li>
 <li><strong>挑战</strong>：训练深度学习模型通常需要大量标注数据，数据稀缺会影响模型的训练效果。</li>
@@ -8911,7 +9261,7 @@
 <li><strong>挑战</strong>：训练深度学习模型需要大量计算资源（如GPU、TPU）和内存，可能导致高昂的成本。</li>
 <li><strong>解决方案</strong>：使用分布式计算、模型压缩技术（如量化、剪枝）降低计算开销。</li>
 </ul>
-<h4 id="322">32.2 讨论深度学习模型在跨领域应用中的挑战，如城市与农村环境的适应性。</h4>
+<h4 id="322">32.2 讨论深度学习模型在跨领域应用中的挑战，如城市与农村环境的适应性。<a class="headerlink" href="#322" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>挑战</strong>：</li>
 <li><strong>领域差异</strong>：模型在一个领域中训练（如城市环境），可能在另一个领域（如农村环境）中表现不佳。</li>
@@ -8924,7 +9274,7 @@
 <li><strong>城市与农村环境</strong>：在城市环境中训练的模型可能需要调整以适应农村环境的不同特征。</li>
 <li><strong>语音识别</strong>：在标准英语数据上训练的模型需要适应不同方言或口音的数据。</li>
 </ul>
-<h4 id="323">32.3 讨论深度学习模型在处理不平衡数据集中的挑战，并介绍解决方案。</h4>
+<h4 id="323">32.3 讨论深度学习模型在处理不平衡数据集中的挑战，并介绍解决方案。<a class="headerlink" href="#323" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>不平衡数据集</strong>：</li>
 <li><strong>挑战</strong>：类别不平衡可能导致模型偏向于预测占比大的类别，忽视少数类别。</li>
@@ -8936,11 +9286,11 @@
 </li>
 </ul>
 <hr />
-<h3 id="_11">深度学习大厂面试题详解（更多内容）</h3>
+<h3 id="_11">深度学习大厂面试题详解（更多内容）<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
 <p>以下是更多深度学习面试题及其详细解答，涉及高级模型设计、实验策略、模型部署等方面。</p>
 <hr />
-<h3 id="33">33. 高级模型设计</h3>
-<h4 id="331-transformer">33.1 介绍Transformer模型的基本结构及其优势。</h4>
+<h3 id="33">33. 高级模型设计<a class="headerlink" href="#33" title="Permanent link">&para;</a></h3>
+<h4 id="331-transformer">33.1 介绍Transformer模型的基本结构及其优势。<a class="headerlink" href="#331-transformer" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>Transformer模型</strong>：</li>
 <li><strong>结构</strong>：Transformer由编码器和解码器组成。编码器和解码器每个都有多个层级，每层包括自注意力机制和前馈神经网络。</li>
@@ -8955,7 +9305,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="332-attention-mechanism">33.2 讨论深度学习中的注意力机制（Attention Mechanism）及其在自然语言处理中的应用。</h4>
+<h4 id="332-attention-mechanism">33.2 讨论深度学习中的注意力机制（Attention Mechanism）及其在自然语言处理中的应用。<a class="headerlink" href="#332-attention-mechanism" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>注意力机制</strong>：</li>
 <li><strong>定义</strong>：注意力机制通过动态调整对输入序列不同部分的关注程度，使模型能够专注于重要的信息。</li>
@@ -8969,7 +9319,7 @@
 <li><strong>文本摘要</strong>：生成文本摘要时，模型使用注意力机制选择原文中的关键信息进行压缩。</li>
 <li><strong>问答系统</strong>：通过关注问题和答案之间的相关信息，提高问答系统的准确性。</li>
 </ul>
-<h4 id="333-cnnresidual-connections">33.3 解释卷积神经网络（CNN）中的残差连接（Residual Connections）及其作用。</h4>
+<h4 id="333-cnnresidual-connections">33.3 解释卷积神经网络（CNN）中的残差连接（Residual Connections）及其作用。<a class="headerlink" href="#333-cnnresidual-connections" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>残差连接</strong>：</li>
 <li><strong>定义</strong>：残差连接将输入直接加到输出上，通过短路路径绕过中间层。</li>
@@ -8981,8 +9331,8 @@
 </li>
 </ul>
 <hr />
-<h3 id="34">34. 实验策略</h3>
-<h4 id="341">34.1 讨论如何设计深度学习实验，包括数据集划分、模型选择和评估指标。</h4>
+<h3 id="34">34. 实验策略<a class="headerlink" href="#34" title="Permanent link">&para;</a></h3>
+<h4 id="341">34.1 讨论如何设计深度学习实验，包括数据集划分、模型选择和评估指标。<a class="headerlink" href="#341" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>实验设计</strong>：</li>
 <li><strong>数据集划分</strong>：<ul>
@@ -9003,7 +9353,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="342">34.2 讨论如何进行模型调优，包括超参数优化和模型选择。</h4>
+<h4 id="342">34.2 讨论如何进行模型调优，包括超参数优化和模型选择。<a class="headerlink" href="#342" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>模型调优</strong>：</li>
 <li><strong>超参数优化</strong>：<ul>
@@ -9017,7 +9367,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="343-shaplime">34.3 讨论如何使用模型解释工具（如SHAP、LIME）来理解深度学习模型的决策过程。</h4>
+<h4 id="343-shaplime">34.3 讨论如何使用模型解释工具（如SHAP、LIME）来理解深度学习模型的决策过程。<a class="headerlink" href="#343-shaplime" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>模型解释工具</strong>：</li>
 <li><strong>SHAP（SHapley Additive exPlanations）</strong>：<ul>
@@ -9032,8 +9382,8 @@
 </li>
 </ul>
 <hr />
-<h3 id="35">35. 模型部署</h3>
-<h4 id="351">35.1 讨论如何在生产环境中部署深度学习模型，包括选择部署平台和处理延迟问题。</h4>
+<h3 id="35">35. 模型部署<a class="headerlink" href="#35" title="Permanent link">&para;</a></h3>
+<h4 id="351">35.1 讨论如何在生产环境中部署深度学习模型，包括选择部署平台和处理延迟问题。<a class="headerlink" href="#351" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>部署平台</strong>：</li>
 <li><strong>云服务</strong>：AWS SageMaker、Google AI Platform、Microsoft Azure ML等，提供可扩展的模型托管和管理服务。</li>
@@ -9048,7 +9398,7 @@
 <li><strong>硬件加速</strong>：使用GPU、TPU等硬件加速推理过程。</li>
 <li><strong>批处理推理</strong>：对多个请求进行批量处理，减少每个请求的延迟。</li>
 </ul>
-<h4 id="352">35.2 介绍如何监控和维护深度学习模型的性能，包括实时监控和日志记录。</h4>
+<h4 id="352">35.2 介绍如何监控和维护深度学习模型的性能，包括实时监控和日志记录。<a class="headerlink" href="#352" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>性能监控</strong>：</li>
 <li><strong>实时监控</strong>：使用监控工具（如Prometheus、Grafana）实时跟踪模型的推理性能和资源使用情况。</li>
@@ -9061,7 +9411,7 @@
 <li><strong>日志内容</strong>：记录模型预测结果、输入数据、性能指标等信息，以便分析和排查问题。</li>
 <li><strong>日志管理</strong>：使用日志管理工具（如ELK Stack）进行集中化管理和分析。</li>
 </ul>
-<h4 id="353">35.3 讨论模型版本控制和更新策略，包括如何处理模型的迭代和版本兼容性。</h4>
+<h4 id="353">35.3 讨论模型版本控制和更新策略，包括如何处理模型的迭代和版本兼容性。<a class="headerlink" href="#353" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>版本控制</strong>：</li>
 <li><strong>工具</strong>：使用Git、DVC等工具进行模型和数据的版本控制。</li>
@@ -9075,11 +9425,11 @@
 <li><strong>滚动更新</strong>：逐步更新模型的实例，确保系统的稳定性和兼容性。</li>
 </ul>
 <hr />
-<h3 id="_12">深度学习大厂面试题详解（更多内容）</h3>
+<h3 id="_12">深度学习大厂面试题详解（更多内容）<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
 <p>以下是更多深度学习面试题及其详细解答，涵盖模型优化、数据处理、实际应用中的问题等方面。</p>
 <hr />
-<h3 id="36">36. 模型优化</h3>
-<h4 id="361-l1l2">36.1 讨论深度学习模型中的正则化技术，包括L1、L2正则化及其作用。</h4>
+<h3 id="36">36. 模型优化<a class="headerlink" href="#36" title="Permanent link">&para;</a></h3>
+<h4 id="361-l1l2">36.1 讨论深度学习模型中的正则化技术，包括L1、L2正则化及其作用。<a class="headerlink" href="#361-l1l2" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>正则化技术</strong>：</li>
 <li>
@@ -9102,7 +9452,7 @@
 <li><strong>L1正则化</strong>：适用于需要特征选择的情况。</li>
 <li><strong>L2正则化</strong>：适用于大多数深度学习任务，尤其是在特征数量很大时。</li>
 </ul>
-<h4 id="362-learning-rate-scheduling">36.2 解释学习率调度（Learning Rate Scheduling）及其常见策略。</h4>
+<h4 id="362-learning-rate-scheduling">36.2 解释学习率调度（Learning Rate Scheduling）及其常见策略。<a class="headerlink" href="#362-learning-rate-scheduling" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>学习率调度</strong>：</li>
 <li>
@@ -9118,7 +9468,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="363-pruning">36.3 讨论模型剪枝（Pruning）技术及其对模型性能的影响。</h4>
+<h4 id="363-pruning">36.3 讨论模型剪枝（Pruning）技术及其对模型性能的影响。<a class="headerlink" href="#363-pruning" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>模型剪枝</strong>：</li>
 <li>
@@ -9140,8 +9490,8 @@
 </li>
 </ul>
 <hr />
-<h3 id="37">37. 数据处理</h3>
-<h4 id="371">37.1 讨论如何处理深度学习中的数据不平衡问题，包括数据增强和重采样技术。</h4>
+<h3 id="37">37. 数据处理<a class="headerlink" href="#37" title="Permanent link">&para;</a></h3>
+<h4 id="371">37.1 讨论如何处理深度学习中的数据不平衡问题，包括数据增强和重采样技术。<a class="headerlink" href="#371" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>数据不平衡</strong>：</li>
 <li>
@@ -9159,7 +9509,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="372">37.2 讨论深度学习中的数据预处理步骤，如标准化、归一化和特征工程。</h4>
+<h4 id="372">37.2 讨论深度学习中的数据预处理步骤，如标准化、归一化和特征工程。<a class="headerlink" href="#372" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>数据预处理</strong>：</li>
 <li>
@@ -9184,7 +9534,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="373-incremental-learning">37.3 讨论如何使用增量学习（Incremental Learning）来处理大规模数据集。</h4>
+<h4 id="373-incremental-learning">37.3 讨论如何使用增量学习（Incremental Learning）来处理大规模数据集。<a class="headerlink" href="#373-incremental-learning" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>增量学习</strong>：</li>
 <li>
@@ -9206,8 +9556,8 @@
 </li>
 </ul>
 <hr />
-<h3 id="38">38. 实际应用中的问题</h3>
-<h4 id="381">38.1 讨论深度学习模型在处理噪声数据时的挑战，并介绍处理噪声数据的方法。</h4>
+<h3 id="38">38. 实际应用中的问题<a class="headerlink" href="#38" title="Permanent link">&para;</a></h3>
+<h4 id="381">38.1 讨论深度学习模型在处理噪声数据时的挑战，并介绍处理噪声数据的方法。<a class="headerlink" href="#381" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>噪声数据</strong>：</li>
 <li>
@@ -9222,7 +9572,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="382">38.2 讨论深度学习模型在处理稀疏数据时的挑战，并介绍解决方案。</h4>
+<h4 id="382">38.2 讨论深度学习模型在处理稀疏数据时的挑战，并介绍解决方案。<a class="headerlink" href="#382" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>稀疏数据</strong>：</li>
 <li>
@@ -9237,7 +9587,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="383-transfer-learning">38.3 讨论深度学习在跨领域迁移学习（Transfer Learning）中的应用及挑战。</h4>
+<h4 id="383-transfer-learning">38.3 讨论深度学习在跨领域迁移学习（Transfer Learning）中的应用及挑战。<a class="headerlink" href="#383-transfer-learning" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>跨领域迁移学习</strong>：</li>
 <li>
@@ -9259,11 +9609,11 @@
 </li>
 </ul>
 <hr />
-<h3 id="_13">深度学习大厂面试题详解（更多内容）</h3>
+<h3 id="_13">深度学习大厂面试题详解（更多内容）<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
 <p>以下是更多深度学习面试题及其详细解答，涵盖深度学习的应用、前沿技术、模型优化和调试等方面。</p>
 <hr />
-<h3 id="39">39. 深度学习应用</h3>
-<h4 id="391">39.1 讨论深度学习在医疗影像分析中的应用及挑战。</h4>
+<h3 id="39">39. 深度学习应用<a class="headerlink" href="#39" title="Permanent link">&para;</a></h3>
+<h4 id="391">39.1 讨论深度学习在医疗影像分析中的应用及挑战。<a class="headerlink" href="#391" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>应用</strong>：</li>
 <li><strong>疾病检测</strong>：使用CNN进行CT或MRI图像中的疾病（如癌症、脑部疾病）的自动检测。</li>
@@ -9278,7 +9628,7 @@
 <li><strong>数据不平衡</strong>：某些疾病的病例可能非常稀少，导致数据不平衡问题。</li>
 <li><strong>模型泛化能力</strong>：医疗数据的多样性和复杂性要求模型具有强大的泛化能力。</li>
 </ul>
-<h4 id="392-nlp">39.2 讨论深度学习在自然语言处理（NLP）中的应用，如情感分析、机器翻译等。</h4>
+<h4 id="392-nlp">39.2 讨论深度学习在自然语言处理（NLP）中的应用，如情感分析、机器翻译等。<a class="headerlink" href="#392-nlp" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>应用</strong>：</li>
 <li><strong>情感分析</strong>：使用RNN或Transformer模型分析文本的情感倾向，广泛应用于社交媒体和客户反馈分析。</li>
@@ -9292,7 +9642,7 @@
 <li><strong>上下文理解</strong>：深度学习模型需要理解复杂的上下文和语义，以生成准确的翻译或分析。</li>
 <li><strong>数据稀缺</strong>：一些语言或领域的标注数据可能稀缺，影响模型的性能。</li>
 </ul>
-<h4 id="393">39.3 讨论深度学习在自动驾驶中的应用及其技术挑战。</h4>
+<h4 id="393">39.3 讨论深度学习在自动驾驶中的应用及其技术挑战。<a class="headerlink" href="#393" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>应用</strong>：</li>
 <li><strong>目标检测</strong>：使用CNN检测车辆、行人和交通标志，实现环境感知。</li>
@@ -9308,8 +9658,8 @@
 <li><strong>安全性</strong>：确保自动驾驶系统在各种场景下的安全性和鲁棒性。</li>
 </ul>
 <hr />
-<h3 id="40">40. 前沿技术</h3>
-<h4 id="401-adaptive-computation">40.1 讨论深度学习中的自适应计算（Adaptive Computation）技术及其优势。</h4>
+<h3 id="40">40. 前沿技术<a class="headerlink" href="#40" title="Permanent link">&para;</a></h3>
+<h4 id="401-adaptive-computation">40.1 讨论深度学习中的自适应计算（Adaptive Computation）技术及其优势。<a class="headerlink" href="#401-adaptive-computation" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>自适应计算</strong>：</li>
 <li>
@@ -9330,7 +9680,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="402-multimodal-learning">40.2 介绍深度学习中的多模态学习（Multimodal Learning）及其应用。</h4>
+<h4 id="402-multimodal-learning">40.2 介绍深度学习中的多模态学习（Multimodal Learning）及其应用。<a class="headerlink" href="#402-multimodal-learning" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>多模态学习</strong>：</li>
 <li>
@@ -9351,7 +9701,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="403-knowledge-distillation">40.3 讨论深度学习中的知识蒸馏（Knowledge Distillation）及其作用。</h4>
+<h4 id="403-knowledge-distillation">40.3 讨论深度学习中的知识蒸馏（Knowledge Distillation）及其作用。<a class="headerlink" href="#403-knowledge-distillation" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>知识蒸馏</strong>：</li>
 <li>
@@ -9373,8 +9723,8 @@
 </li>
 </ul>
 <hr />
-<h3 id="41_1">41. 模型优化与调试</h3>
-<h4 id="411-hyperparameter-tuning">41.1 讨论如何使用超参数优化（Hyperparameter Tuning）来提高深度学习模型的性能。</h4>
+<h3 id="41_1">41. 模型优化与调试<a class="headerlink" href="#41_1" title="Permanent link">&para;</a></h3>
+<h4 id="411-hyperparameter-tuning">41.1 讨论如何使用超参数优化（Hyperparameter Tuning）来提高深度学习模型的性能。<a class="headerlink" href="#411-hyperparameter-tuning" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>超参数优化</strong>：</li>
 <li>
@@ -9392,7 +9742,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="412">41.2 讨论模型调试中的常见问题及解决方法，如过拟合和欠拟合。</h4>
+<h4 id="412">41.2 讨论模型调试中的常见问题及解决方法，如过拟合和欠拟合。<a class="headerlink" href="#412" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>过拟合</strong>：</li>
 <li><strong>问题</strong>：模型在训练数据上表现很好，但在测试数据上表现较差，说明模型过于复杂，学习了训练数据的噪声。</li>
@@ -9415,7 +9765,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="413-model-interpretability">41.3 介绍如何利用模型可解释性（Model Interpretability）工具进行深度学习模型的调试和优化。</h4>
+<h4 id="413-model-interpretability">41.3 介绍如何利用模型可解释性（Model Interpretability）工具进行深度学习模型的调试和优化。<a class="headerlink" href="#413-model-interpretability" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>模型可解释性工具</strong>：</li>
 <li><strong>SHAP</strong>（SHapley Additive exPlanations）：解释每个特征对模型预测的贡献。</li>
@@ -9429,11 +9779,11 @@
 <li><strong>优化</strong>：通过理解特征对预测的影响，改进模型的特征工程和数据处理流程。</li>
 </ul>
 <hr />
-<h3 id="_14">深度学习大厂面试题详解（更多内容）</h3>
+<h3 id="_14">深度学习大厂面试题详解（更多内容）<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
 <p>以下是更多深度学习面试题及其详细解答，涵盖了模型设计的进阶技术、深度学习的伦理问题以及前沿技术的最新发展等方面。</p>
 <hr />
-<h3 id="42_1">42. 进阶技术</h3>
-<h4 id="421-gans">42.1 讨论生成对抗网络（GANs）的工作原理及其应用。</h4>
+<h3 id="42_1">42. 进阶技术<a class="headerlink" href="#42_1" title="Permanent link">&para;</a></h3>
+<h4 id="421-gans">42.1 讨论生成对抗网络（GANs）的工作原理及其应用。<a class="headerlink" href="#421-gans" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>工作原理</strong>：</li>
 <li><strong>生成对抗网络（GANs）</strong>由两个神经网络组成：生成器（Generator）和判别器（Discriminator）。</li>
@@ -9449,7 +9799,7 @@
 <li><strong>数据增强</strong>：生成合成数据来扩充训练集，提高模型的泛化能力。</li>
 <li><strong>艺术创作</strong>：用于生成艺术风格的图像或音乐创作。</li>
 </ul>
-<h4 id="422-vae">42.2 讨论变分自编码器（VAE）的工作原理及其应用。</h4>
+<h4 id="422-vae">42.2 讨论变分自编码器（VAE）的工作原理及其应用。<a class="headerlink" href="#422-vae" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>工作原理</strong>：</li>
 <li><strong>变分自编码器（VAE）</strong>是一种生成模型，通过引入概率模型来生成新的数据样本。</li>
@@ -9465,7 +9815,7 @@
 <li><strong>图像重建</strong>：从部分损坏的图像中重建完整图像。</li>
 <li><strong>数据降维</strong>：在潜在空间中对数据进行降维和分析。</li>
 </ul>
-<h4 id="423-gnns">42.3 讨论图神经网络（GNNs）的基本概念及其应用场景。</h4>
+<h4 id="423-gnns">42.3 讨论图神经网络（GNNs）的基本概念及其应用场景。<a class="headerlink" href="#423-gnns" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>基本概念</strong>：</li>
 <li><strong>图神经网络（GNNs）</strong>是一类处理图数据的神经网络，通过在图结构上进行消息传递来学习节点的表示。</li>
@@ -9481,8 +9831,8 @@
 <li><strong>药物发现</strong>：通过图建模分子结构，预测分子活性。</li>
 </ul>
 <hr />
-<h3 id="43">43. 深度学习的伦理问题</h3>
-<h4 id="431-bias">43.1 讨论深度学习中的偏见（Bias）问题及其影响。</h4>
+<h3 id="43">43. 深度学习的伦理问题<a class="headerlink" href="#43" title="Permanent link">&para;</a></h3>
+<h4 id="431-bias">43.1 讨论深度学习中的偏见（Bias）问题及其影响。<a class="headerlink" href="#431-bias" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>偏见问题</strong>：</li>
 <li><strong>定义</strong>：偏见指的是模型在训练或预测过程中表现出对某些特定群体的偏向。</li>
@@ -9500,7 +9850,7 @@
 <li><strong>数据审查</strong>：审查和清理训练数据中的潜在偏见，确保数据的公平性。</li>
 <li><strong>算法调整</strong>：使用公平性算法对模型进行调整，减少对特定群体的偏见。</li>
 </ul>
-<h4 id="432-transparency">43.2 讨论深度学习模型的透明性（Transparency）问题及其重要性。</h4>
+<h4 id="432-transparency">43.2 讨论深度学习模型的透明性（Transparency）问题及其重要性。<a class="headerlink" href="#432-transparency" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>透明性问题</strong>：</li>
 <li><strong>定义</strong>：透明性指的是模型的决策过程和内部机制对用户是否可理解。</li>
@@ -9517,7 +9867,7 @@
 <li><strong>可解释性工具</strong>：使用工具（如SHAP、LIME）解释模型的决策过程。</li>
 <li><strong>模型文档</strong>：提供详细的模型文档，包括训练数据、算法选择和性能评估。</li>
 </ul>
-<h4 id="433">43.3 讨论深度学习在隐私保护方面的挑战及解决方案。</h4>
+<h4 id="433">43.3 讨论深度学习在隐私保护方面的挑战及解决方案。<a class="headerlink" href="#433" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>隐私保护挑战</strong>：</li>
 <li><strong>数据隐私</strong>：深度学习需要大量数据，涉及用户隐私和敏感信息。</li>
@@ -9531,8 +9881,8 @@
 <li><strong>安全多方计算</strong>：在多个参与方之间进行计算，确保数据在计算过程中的隐私保护。</li>
 </ul>
 <hr />
-<h3 id="44">44. 前沿技术</h3>
-<h4 id="441-self-supervised-learning">44.1 介绍深度学习中的自监督学习（Self-Supervised Learning）及其优势。</h4>
+<h3 id="44">44. 前沿技术<a class="headerlink" href="#44" title="Permanent link">&para;</a></h3>
+<h4 id="441-self-supervised-learning">44.1 介绍深度学习中的自监督学习（Self-Supervised Learning）及其优势。<a class="headerlink" href="#441-self-supervised-learning" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>自监督学习</strong>：</li>
 <li><strong>定义</strong>：自监督学习是一种利用未标注数据进行训练的方法，通过生成伪标签来进行监督。</li>
@@ -9551,7 +9901,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="442-federated-learning">44.2 讨论深度学习中的联邦学习（Federated Learning）及其应用场景。</h4>
+<h4 id="442-federated-learning">44.2 讨论深度学习中的联邦学习（Federated Learning）及其应用场景。<a class="headerlink" href="#442-federated-learning" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>联邦学习</strong>：</li>
 <li>
@@ -9572,7 +9922,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="443-neural-architecture-search-nas">44.3 介绍深度学习中的神经架构搜索（Neural Architecture Search, NAS）及其最新进展。</h4>
+<h4 id="443-neural-architecture-search-nas">44.3 介绍深度学习中的神经架构搜索（Neural Architecture Search, NAS）及其最新进展。<a class="headerlink" href="#443-neural-architecture-search-nas" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>神经架构搜索（NAS）</strong>：</li>
 <li>
@@ -9594,11 +9944,11 @@
 </li>
 </ul>
 <hr />
-<h3 id="_15">深度学习大厂面试题详解（更多内容）</h3>
+<h3 id="_15">深度学习大厂面试题详解（更多内容）<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
 <p>以下是更多深度学习面试题及其详细解答，涵盖了模型设计的进阶技术、最新算法、深度学习在特殊领域的应用等方面。</p>
 <hr />
-<h3 id="45">45. 进阶模型设计</h3>
-<h4 id="451-attention-mechanismnlp">45.1 讨论深度学习中的注意力机制（Attention Mechanism），并解释其在NLP中的作用。</h4>
+<h3 id="45">45. 进阶模型设计<a class="headerlink" href="#45" title="Permanent link">&para;</a></h3>
+<h4 id="451-attention-mechanismnlp">45.1 讨论深度学习中的注意力机制（Attention Mechanism），并解释其在NLP中的作用。<a class="headerlink" href="#451-attention-mechanismnlp" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>注意力机制</strong>：</li>
 <li>
@@ -9619,7 +9969,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="452-graph-convolutional-networks-gcns">45.2 介绍深度学习中的图卷积网络（Graph Convolutional Networks, GCNs）及其应用。</h4>
+<h4 id="452-graph-convolutional-networks-gcns">45.2 介绍深度学习中的图卷积网络（Graph Convolutional Networks, GCNs）及其应用。<a class="headerlink" href="#452-graph-convolutional-networks-gcns" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>图卷积网络（GCNs）</strong>：</li>
 <li>
@@ -9641,7 +9991,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="453-styleganbiggan">45.3 讨论深度学习中的图像生成技术，如StyleGAN和BigGAN，并解释它们的优势和应用。</h4>
+<h4 id="453-styleganbiggan">45.3 讨论深度学习中的图像生成技术，如StyleGAN和BigGAN，并解释它们的优势和应用。<a class="headerlink" href="#453-styleganbiggan" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>图像生成技术</strong>：</li>
 <li>
@@ -9668,8 +10018,8 @@
 </li>
 </ul>
 <hr />
-<h3 id="46">46. 最新算法</h3>
-<h4 id="461-transformernlp">46.1 介绍深度学习中的变换器（Transformer）模型及其在NLP中的应用。</h4>
+<h3 id="46">46. 最新算法<a class="headerlink" href="#46" title="Permanent link">&para;</a></h3>
+<h4 id="461-transformernlp">46.1 介绍深度学习中的变换器（Transformer）模型及其在NLP中的应用。<a class="headerlink" href="#461-transformernlp" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>变换器（Transformer）模型</strong>：</li>
 <li>
@@ -9691,7 +10041,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="462-deep-reinforcement-learning-drl">46.2 讨论深度强化学习（Deep Reinforcement Learning, DRL）的基本概念及其应用。</h4>
+<h4 id="462-deep-reinforcement-learning-drl">46.2 讨论深度强化学习（Deep Reinforcement Learning, DRL）的基本概念及其应用。<a class="headerlink" href="#462-deep-reinforcement-learning-drl" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>深度强化学习（DRL）</strong>：</li>
 <li>
@@ -9713,7 +10063,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="463-super-resolution">46.3 介绍深度学习中的超分辨率（Super-Resolution）技术及其应用。</h4>
+<h4 id="463-super-resolution">46.3 介绍深度学习中的超分辨率（Super-Resolution）技术及其应用。<a class="headerlink" href="#463-super-resolution" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>超分辨率（Super-Resolution）</strong>：</li>
 <li>
@@ -9736,8 +10086,8 @@
 </li>
 </ul>
 <hr />
-<h3 id="47">47. 深度学习在特殊领域的应用</h3>
-<h4 id="471">47.1 讨论深度学习在金融领域的应用，如信用评分、交易预测等。</h4>
+<h3 id="47">47. 深度学习在特殊领域的应用<a class="headerlink" href="#47" title="Permanent link">&para;</a></h3>
+<h4 id="471">47.1 讨论深度学习在金融领域的应用，如信用评分、交易预测等。<a class="headerlink" href="#471" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>金融领域应用</strong>：</li>
 <li>
@@ -9755,7 +10105,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="472">47.2 讨论深度学习在语音识别中的应用及其挑战。</h4>
+<h4 id="472">47.2 讨论深度学习在语音识别中的应用及其挑战。<a class="headerlink" href="#472" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>语音识别</strong>：</li>
 <li>
@@ -9774,7 +10124,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="473">47.3 介绍深度学习在环境监测中的应用，如气候变化、空气质量预测等。</h4>
+<h4 id="473">47.3 介绍深度学习在环境监测中的应用，如气候变化、空气质量预测等。<a class="headerlink" href="#473" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>环境监测</strong>：</li>
 <li>
@@ -9810,6 +10160,8 @@
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -9839,10 +10191,20 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand", "navigation.sections", "toc.integrate", "search.highlight", "search.suggest", "header.autohide", "footer.copyright", "footer.text", "code.annotate", "content.code", "material.nav", "material.switch", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.section", "navigation.expand", "navigation.tabs", "navigation.sections", "navigation.indexes", "content.code.copy", "content.tabs.link", "content.code.annotate", "math"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.525ec568.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+        <script src="../../../styles/javascripts/config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="../../../styles/javascripts/katex.js"></script>
       
     
   </body>

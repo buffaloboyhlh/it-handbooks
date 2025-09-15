@@ -1,0 +1,203 @@
+/****************************************
+ * H1 ~ H6 自定义标题样式（亮/暗模式优化，字体缩小版）
+ ****************************************/
+
+/* ========= 亮模式（light） ========= */
+[data-md-color-scheme="default"] {
+    h1 {
+        text-align: center;
+        font-size: 1.9em; /* 原 2.4em */
+        font-weight: bold;
+        color: #00695c;
+        border-bottom: 3px solid #ffb300;
+        padding-bottom: 0.3em;
+        margin-top: 1.2em;
+        margin-bottom: 0.6em;
+    }
+    h2 {
+        font-size: 1.6em; /* 原 2em */
+        font-weight: bold;
+        color: #00796b;
+        border-left: 6px solid #ffb300;
+        padding-left: 0.6em;
+        margin-top: 1.2em;
+        margin-bottom: 0.6em;
+    }
+    h3 {
+        font-size: 1.35em; /* 原 1.7em */
+        font-weight: bold;
+        color: #004d40;
+        background-color: rgba(255, 193, 7, 0.15);
+        padding: 0.2em 0.5em;
+        border-radius: 4px;
+        margin-top: 1em;
+    }
+    h4 {
+        font-size: 1.15em; /* 原 1.4em */
+        font-style: italic;
+        color: #00695c;
+        border-bottom: 1px dashed #ffb300;
+        padding-bottom: 0.1em;
+        margin-top: 0.8em;
+    }
+    h5 {
+        font-size: 1em; /* 原 1.2em */
+        color: #5ba45b;
+        margin-top: 0.6em;
+    }
+    h6 {
+        font-size: 0.9em; /* 原 1em */
+        color: #af5ea1;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 0.5em;
+    }
+    strong {
+        font-weight: bold;
+        color: #00695c;  /* 深墨绿，和 H1/H2 呼应 */
+    }
+    em {
+        font-style: italic;
+        color: #ff6f00; /* 琥珀橙，次级强调 */
+    }
+}
+
+/* ========= 暗模式（dark） ========= */
+[data-md-color-scheme="slate"] {
+    h1 {
+        text-align: center;
+        font-size: 1.9em;
+        font-weight: bold;
+        color: #80cbc4;
+        border-bottom: 3px solid #82b1ff;
+        padding-bottom: 0.3em;
+        margin-top: 1.2em;
+        margin-bottom: 0.6em;
+    }
+    h2 {
+        font-size: 1.6em;
+        font-weight: bold;
+        color: #4dd0e1;
+        border-left: 6px solid #82b1ff;
+        padding-left: 0.6em;
+        margin-top: 1.2em;
+        margin-bottom: 0.6em;
+    }
+    h3 {
+        font-size: 1.35em;
+        font-weight: bold;
+        color: #b2ebf2;
+        background-color: rgba(130, 177, 255, 0.15);
+        padding: 0.2em 0.5em;
+        border-radius: 4px;
+        margin-top: 1em;
+    }
+    h4 {
+        font-size: 1.15em;
+        font-style: italic;
+        color: #80deea;
+        border-bottom: 1px dashed #82b1ff;
+        padding-bottom: 0.1em;
+        margin-top: 0.8em;
+    }
+    h5 {
+        font-size: 1em;
+        color: #b0bec5;
+        margin-top: 0.6em;
+    }
+    h6 {
+        font-size: 0.9em;
+        color: #90a4ae;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 0.5em;
+    }
+    strong {
+        font-weight: bold;
+        color: #4dd0e1;  /* 青色，高亮但不刺眼 */
+    }
+    em {
+        font-style: italic;
+        color: #ffd54f; /* 柔和琥珀黄，形成暖色对比 */
+    }
+}
+
+/****************************************
+ * Table 自定义主题（亮/暗模式，分割线清晰版）
+ ****************************************/
+
+/* ========= 亮模式（light） ========= */
+[data-md-color-scheme="default"] table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1em 0;
+    font-size: 0.95em;
+    border: 2px solid #00695c; /* 外边框更醒目 */
+}
+
+[data-md-color-scheme="default"] table th,
+[data-md-color-scheme="default"] table td {
+    border: 1px solid #bbb; /* 网格线清晰 */
+    padding: 0.6em;
+    text-align: left;
+}
+
+[data-md-color-scheme="default"] table thead {
+    background-color: #00695c;
+    color: #fff;
+}
+
+[data-md-color-scheme="default"] table thead th {
+    border: 1px solid #004d40;
+    font-weight: bold;
+}
+
+[data-md-color-scheme="default"] table tbody tr:nth-child(odd) {
+    background-color: rgba(255, 193, 7, 0.08);
+}
+
+[data-md-color-scheme="default"] table tbody tr:nth-child(even) {
+    background-color: #fff;
+}
+
+[data-md-color-scheme="default"] table tbody tr:hover {
+    background-color: rgba(0, 105, 92, 0.12);
+}
+
+/* ========= 暗模式（dark） ========= */
+[data-md-color-scheme="slate"] table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1em 0;
+    font-size: 0.95em;
+    border: 2px solid #4dd0e1;
+}
+
+[data-md-color-scheme="slate"] table th,
+[data-md-color-scheme="slate"] table td {
+    border: 1px solid #607d8b;
+    padding: 0.6em;
+    text-align: left;
+}
+
+[data-md-color-scheme="slate"] table thead {
+    background-color: #4dd0e1;
+    color: #000;
+}
+
+[data-md-color-scheme="slate"] table thead th {
+    border: 1px solid #26c6da;
+    font-weight: bold;
+}
+
+[data-md-color-scheme="slate"] table tbody tr:nth-child(odd) {
+    background-color: rgba(130, 177, 255, 0.08);
+}
+
+[data-md-color-scheme="slate"] table tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+[data-md-color-scheme="slate"] table tbody tr:hover {
+    background-color: rgba(77, 208, 225, 0.12);
+}

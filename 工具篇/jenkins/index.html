@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -50,7 +50,9 @@
       
     
     
-      <link rel="stylesheet" href="../../css/extra.css">
+      <link rel="stylesheet" href="../../styles/css/extra.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -69,7 +71,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="amber">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -90,9 +92,7 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
     <a href="../.." title="IT-手册" class="md-header__button md-logo" aria-label="IT-手册" data-md-component="logo">
       
@@ -127,20 +127,20 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="amber"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_1">
     
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
@@ -152,11 +152,13 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -175,8 +177,6 @@
         </button>
       </nav>
       
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
@@ -190,6 +190,7 @@
     </div>
   </div>
 </div>
+      
     
     
   </nav>
@@ -200,6 +201,348 @@
       
       
         
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  IT-手册大全
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Web%E7%AF%87/Django/advance/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Web篇
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/basic/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  中间件
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/alert/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  云原生
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/LangChain/advance/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  人工智能
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../SRE/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  工具篇
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/basic/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  数据库
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/algorithm/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  数据结构和算法
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E6%9C%8D%E5%8A%A1%E5%99%A8/gunicorn/basic/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  服务器
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/bloom/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  系统设计
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  计算机基础
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/C%2B%2B/advance/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  语言篇
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
           
         
       
@@ -214,10 +557,10 @@
                     
 
 
-
   
 
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="导航栏" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="IT-手册" class="md-nav__button md-logo" aria-label="IT-手册" data-md-component="logo">
       
@@ -240,8 +583,10 @@
       <a href="../.." class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     IT-手册大全
+    
   </span>
   
 
@@ -258,14 +603,23 @@
   
     
     
-    
       
         
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -274,11 +628,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Web篇
+    
   </span>
   
 
@@ -300,7 +656,23 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -316,8 +688,10 @@
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Django
+    
   </span>
   
 
@@ -341,8 +715,10 @@
       <a href="../../Web%E7%AF%87/Django/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Django 进阶教程
+    
   </span>
   
 
@@ -362,8 +738,10 @@
       <a href="../../Web%E7%AF%87/Django/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Django 基础教程
+    
   </span>
   
 
@@ -383,8 +761,10 @@
       <a href="../../Web%E7%AF%87/Django/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Django 面试手册
+    
   </span>
   
 
@@ -404,8 +784,10 @@
       <a href="../../Web%E7%AF%87/Django/questions/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Django 开发中遇到的问题
+    
   </span>
   
 
@@ -425,8 +807,10 @@
       <a href="../../Web%E7%AF%87/Django/restful/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Django RESTful
+    
   </span>
   
 
@@ -452,7 +836,23 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -468,8 +868,10 @@
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     FastAPI
+    
   </span>
   
 
@@ -493,8 +895,10 @@
       <a href="../../Web%E7%AF%87/FastAPI/GraphQL/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     GraphQL 教程
+    
   </span>
   
 
@@ -514,8 +918,10 @@
       <a href="../../Web%E7%AF%87/FastAPI/advance./" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     FastAPI 进阶教程
+    
   </span>
   
 
@@ -535,8 +941,10 @@
       <a href="../../Web%E7%AF%87/FastAPI/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     FastAPI 教程
+    
   </span>
   
 
@@ -556,8 +964,10 @@
       <a href="../../Web%E7%AF%87/FastAPI/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     FastAPI 面试手册
+    
   </span>
   
 
@@ -577,8 +987,10 @@
       <a href="../../Web%E7%AF%87/FastAPI/practice/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     FastAPI 实战项目教程：构建完整的博客 API
+    
   </span>
   
 
@@ -604,7 +1016,21 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -620,8 +1046,10 @@
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Flask
+    
   </span>
   
 
@@ -645,8 +1073,10 @@
       <a href="../../Web%E7%AF%87/Flask/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Flask 进阶教程
+    
   </span>
   
 
@@ -666,8 +1096,10 @@
       <a href="../../Web%E7%AF%87/Flask/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Flask 基础教程
+    
   </span>
   
 
@@ -687,8 +1119,10 @@
       <a href="../../Web%E7%AF%87/Flask/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Flask 面试手册
+    
   </span>
   
 
@@ -708,8 +1142,10 @@
       <a href="../../Web%E7%AF%87/Flask/questions/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Flask 工作中常见问题
+    
   </span>
   
 
@@ -742,14 +1178,23 @@
   
     
     
-    
       
         
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -758,11 +1203,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     中间件
+    
   </span>
   
 
@@ -784,7 +1231,17 @@
   
     
     
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -800,8 +1257,10 @@
           <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Kafka
+    
   </span>
   
 
@@ -825,8 +1284,10 @@
       <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Kafka 基础
+    
   </span>
   
 
@@ -846,8 +1307,10 @@
       <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     kafka 面试
+    
   </span>
   
 
@@ -873,7 +1336,17 @@
   
     
     
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -889,8 +1362,10 @@
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Rabbitmq
+    
   </span>
   
 
@@ -914,8 +1389,10 @@
       <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/rabbitmq/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Basic
+    
   </span>
   
 
@@ -935,8 +1412,10 @@
       <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/rabbitmq/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     RabbitMQ 面试
+    
   </span>
   
 
@@ -962,7 +1441,17 @@
   
     
     
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -978,8 +1467,10 @@
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Zookeeper
+    
   </span>
   
 
@@ -1003,8 +1494,10 @@
       <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/zookeeper/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     zookeeper 教程
+    
   </span>
   
 
@@ -1024,8 +1517,10 @@
       <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/zookeeper/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     zookeeper 面试
+    
   </span>
   
 
@@ -1058,14 +1553,23 @@
   
     
     
-    
       
         
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -1074,11 +1578,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     云原生
+    
   </span>
   
 
@@ -1100,7 +1606,21 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -1116,8 +1636,10 @@
           <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Prometheus
+    
   </span>
   
 
@@ -1141,8 +1663,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/alert/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Prometheus 告警
+    
   </span>
   
 
@@ -1162,8 +1686,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Prometheus 教程
+    
   </span>
   
 
@@ -1183,8 +1709,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/prometheus/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Prometheus 配置文件
+    
   </span>
   
 
@@ -1204,8 +1732,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/promql/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     PromQL
+    
   </span>
   
 
@@ -1231,7 +1761,17 @@
   
     
     
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -1247,8 +1787,10 @@
           <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Docker
+    
   </span>
   
 
@@ -1272,8 +1814,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Docker-基础
+    
   </span>
   
 
@@ -1293,8 +1837,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Docker 面试
+    
   </span>
   
 
@@ -1320,7 +1866,23 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -1336,8 +1898,10 @@
           <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Kubernetes
+    
   </span>
   
 
@@ -1361,8 +1925,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     kubernetes 教程
+    
   </span>
   
 
@@ -1382,8 +1948,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/crictl/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     crictl 教程
+    
   </span>
   
 
@@ -1403,8 +1971,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/helm/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     kubernetes 包管理工具 helm
+    
   </span>
   
 
@@ -1424,8 +1994,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     kubernetes 面试手册
+    
   </span>
   
 
@@ -1445,8 +2017,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/monitor/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     kubernetes 监控平台和日志管理
+    
   </span>
   
 
@@ -1479,14 +2053,25 @@
   
     
     
-    
       
         
+      
+        
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -1495,11 +2080,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     人工智能
+    
   </span>
   
 
@@ -1521,7 +2108,17 @@
   
     
     
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -1537,8 +2134,10 @@
           <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     LangChain
+    
   </span>
   
 
@@ -1562,8 +2161,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/LangChain/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     LangChain 进阶教程
+    
   </span>
   
 
@@ -1583,8 +2184,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/LangChain/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     LangChain 基础教程
+    
   </span>
   
 
@@ -1610,7 +2213,19 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -1626,8 +2241,10 @@
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     大语言模型
+    
   </span>
   
 
@@ -1651,8 +2268,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     LLM 进阶教程
+    
   </span>
   
 
@@ -1672,8 +2291,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     LLM 基础教程
+    
   </span>
   
 
@@ -1693,8 +2314,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     LLM 面试手册
+    
   </span>
   
 
@@ -1720,7 +2343,19 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -1736,8 +2371,10 @@
           <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     机器学习
+    
   </span>
   
 
@@ -1761,8 +2398,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     机器学习 进阶教程
+    
   </span>
   
 
@@ -1782,8 +2421,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     机器学习 基础教程
+    
   </span>
   
 
@@ -1803,8 +2444,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     机器学习 面试手册
+    
   </span>
   
 
@@ -1830,7 +2473,19 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -1846,8 +2501,10 @@
           <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     深度学习
+    
   </span>
   
 
@@ -1871,8 +2528,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     深度学习 进阶教程
+    
   </span>
   
 
@@ -1892,8 +2551,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     深度学习 进阶教程
+    
   </span>
   
 
@@ -1913,8 +2574,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     深度学习 面试手册
+    
   </span>
   
 
@@ -1949,9 +2612,33 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
     
       
         
+        
+      
+      
         
       
     
@@ -1966,8 +2653,10 @@
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
             
   
+  
   <span class="md-ellipsis">
     工具篇
+    
   </span>
   
 
@@ -1991,8 +2680,10 @@
       <a href="../SRE/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     SRE 故障排查
+    
   </span>
   
 
@@ -2012,8 +2703,10 @@
       <a href="../SonarQube/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     SonarQube 基本教程
+    
   </span>
   
 
@@ -2033,8 +2726,10 @@
       <a href="../chaos/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Chaos 混沌工程
+    
   </span>
   
 
@@ -2054,8 +2749,10 @@
       <a href="../commands/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Linux 常用命令
+    
   </span>
   
 
@@ -2075,8 +2772,10 @@
       <a href="../crontab/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Crontab
+    
   </span>
   
 
@@ -2096,8 +2795,10 @@
       <a href="../git/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     git 命令
+    
   </span>
   
 
@@ -2124,8 +2825,10 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
     Jenkins
+    
   </span>
   
 
@@ -2135,8 +2838,10 @@
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
     Jenkins
+    
   </span>
   
 
@@ -2223,39 +2928,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2.2 安装 Jenkins">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#macos" class="md-nav__link">
-    <span class="md-ellipsis">
-      在 macOS 上安装
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#linux" class="md-nav__link">
-    <span class="md-ellipsis">
-      在 Linux 上安装
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#windows" class="md-nav__link">
-    <span class="md-ellipsis">
-      在 Windows 上安装
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -2321,21 +2993,6 @@
       4.2 Declarative Pipeline 与 Scripted Pipeline
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="4.2 Declarative Pipeline 与 Scripted Pipeline">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#declarative-pipeline" class="md-nav__link">
-    <span class="md-ellipsis">
-      Declarative Pipeline 示例
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -2420,21 +3077,6 @@
       6.1 Master-Agent 架构
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="6.1 Master-Agent 架构">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      配置分布式构建
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -2571,21 +3213,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1.2 安装 Python 和 FastAPI 项目">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#python-fastapi" class="md-nav__link">
-    <span class="md-ellipsis">
-      安装 Python 和 FastAPI
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -2594,39 +3221,6 @@
       1.3 基本的 FastAPI 项目代码示例
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="1.3 基本的 FastAPI 项目代码示例">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#appmainpy" class="md-nav__link">
-    <span class="md-ellipsis">
-      app/main.py
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#teststest_mainpy" class="md-nav__link">
-    <span class="md-ellipsis">
-      tests/test_main.py
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#requirementstxt" class="md-nav__link">
-    <span class="md-ellipsis">
-      requirements.txt
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -2660,21 +3254,6 @@
       2.2 Jenkinsfile 配置
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="2.2 Jenkinsfile 配置">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#jenkinsfile" class="md-nav__link">
-    <span class="md-ellipsis">
-      Jenkinsfile 示例
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -2771,8 +3350,10 @@
       <a href="../journalctl/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     journalctl 教程
+    
   </span>
   
 
@@ -2792,8 +3373,10 @@
       <a href="../supervisor/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Supervisor 教程
+    
   </span>
   
 
@@ -2818,14 +3401,29 @@
   
     
     
-    
       
         
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -2834,11 +3432,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     数据库
+    
   </span>
   
 
@@ -2860,7 +3460,23 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -2876,8 +3492,10 @@
           <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Elastic
+    
   </span>
   
 
@@ -2901,8 +3519,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Elasticsearch 教程
+    
   </span>
   
 
@@ -2922,8 +3542,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/filebeat/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     filebeat.yml 配置文件
+    
   </span>
   
 
@@ -2943,8 +3565,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     ElasticSearch 面试手册
+    
   </span>
   
 
@@ -2964,8 +3588,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/logstash/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     logstash 配置文件
+    
   </span>
   
 
@@ -2985,8 +3611,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/questions/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     ElasticSearch 工作中遇到的问题
+    
   </span>
   
 
@@ -3012,7 +3640,15 @@
   
     
     
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -3028,8 +3664,10 @@
           <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     HBase
+    
   </span>
   
 
@@ -3053,8 +3691,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/HBase/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Basic
+    
   </span>
   
 
@@ -3080,7 +3720,19 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -3096,8 +3748,10 @@
           <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     MongoDB
+    
   </span>
   
 
@@ -3121,8 +3775,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     MongoDB 完整教程：从入门到精通
+    
   </span>
   
 
@@ -3142,8 +3798,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     MongoDB 面试手册
+    
   </span>
   
 
@@ -3163,8 +3821,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/questions/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     MongoDB 工作中遇到的问题
+    
   </span>
   
 
@@ -3190,7 +3850,21 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -3206,8 +3880,10 @@
           <label class="md-nav__link" for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     MySQL
+    
   </span>
   
 
@@ -3231,8 +3907,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     MySQL 教程
+    
   </span>
   
 
@@ -3252,8 +3930,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/command/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     MySQL 常用命令
+    
   </span>
   
 
@@ -3273,8 +3953,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     MySQL 面试题
+    
   </span>
   
 
@@ -3294,8 +3976,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/questions/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     MySQl 常见问题
+    
   </span>
   
 
@@ -3321,7 +4005,19 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -3337,8 +4033,10 @@
           <label class="md-nav__link" for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     PostgreSQL
+    
   </span>
   
 
@@ -3362,8 +4060,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/PostgreSQL/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     PostgreSQL 进阶教程
+    
   </span>
   
 
@@ -3383,8 +4083,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/PostgreSQL/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     PostgreSQL基础教程
+    
   </span>
   
 
@@ -3404,8 +4106,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/PostgreSQL/demo/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Demo
+    
   </span>
   
 
@@ -3431,7 +4135,19 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -3447,8 +4163,10 @@
           <label class="md-nav__link" for="__nav_7_6" id="__nav_7_6_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Redis
+    
   </span>
   
 
@@ -3472,8 +4190,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Redis 教程
+    
   </span>
   
 
@@ -3493,8 +4213,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Redis 面试手册
+    
   </span>
   
 
@@ -3514,8 +4236,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/questions/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Redis 工作中常见问题
+    
   </span>
   
 
@@ -3548,14 +4272,23 @@
   
     
     
-    
       
         
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -3564,11 +4297,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     数据结构和算法
+    
   </span>
   
 
@@ -3592,8 +4327,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/algorithm/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     算法
+    
   </span>
   
 
@@ -3613,8 +4350,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/leetcode/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     LeetCode 题目
+    
   </span>
   
 
@@ -3634,8 +4373,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/struct/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     数据结构
+    
   </span>
   
 
@@ -3660,14 +4401,25 @@
   
     
     
-    
       
         
+      
+        
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -3676,11 +4428,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
         
           
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     服务器
+    
   </span>
   
 
@@ -3702,7 +4456,15 @@
   
     
     
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -3718,8 +4480,10 @@
           <label class="md-nav__link" for="__nav_9_1" id="__nav_9_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Gunicorn
+    
   </span>
   
 
@@ -3743,8 +4507,10 @@
       <a href="../../%E6%9C%8D%E5%8A%A1%E5%99%A8/gunicorn/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Gunicorn 教程
+    
   </span>
   
 
@@ -3770,7 +4536,17 @@
   
     
     
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -3786,8 +4562,10 @@
           <label class="md-nav__link" for="__nav_9_2" id="__nav_9_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Nginx
+    
   </span>
   
 
@@ -3811,8 +4589,10 @@
       <a href="../../%E6%9C%8D%E5%8A%A1%E5%99%A8/nginx/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Nginx 教程
+    
   </span>
   
 
@@ -3832,8 +4612,10 @@
       <a href="../../%E6%9C%8D%E5%8A%A1%E5%99%A8/nginx/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     nginx 面试手册
+    
   </span>
   
 
@@ -3859,7 +4641,15 @@
   
     
     
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -3875,8 +4665,10 @@
           <label class="md-nav__link" for="__nav_9_3" id="__nav_9_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Uvicorn
+    
   </span>
   
 
@@ -3900,8 +4692,10 @@
       <a href="../../%E6%9C%8D%E5%8A%A1%E5%99%A8/uvicorn/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Uvicorn 教程
+    
   </span>
   
 
@@ -3927,7 +4721,15 @@
   
     
     
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -3943,8 +4745,10 @@
           <label class="md-nav__link" for="__nav_9_4" id="__nav_9_4_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Uwsgi
+    
   </span>
   
 
@@ -3968,8 +4772,10 @@
       <a href="../../%E6%9C%8D%E5%8A%A1%E5%99%A8/uwsgi/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     uWSGI 教程
+    
   </span>
   
 
@@ -4002,14 +4808,27 @@
   
     
     
-    
       
         
+      
+        
+      
+        
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -4018,11 +4837,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
         
           
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     系统设计
+    
   </span>
   
 
@@ -4046,8 +4867,10 @@
       <a href="../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/bloom/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     布隆过滤器
+    
   </span>
   
 
@@ -4067,8 +4890,10 @@
       <a href="../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/hash/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     一致性哈希
+    
   </span>
   
 
@@ -4088,8 +4913,10 @@
       <a href="../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/id/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     唯一ID
+    
   </span>
   
 
@@ -4109,8 +4936,10 @@
       <a href="../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     系统设计题目
+    
   </span>
   
 
@@ -4130,8 +4959,10 @@
       <a href="../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/ratelimit/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     限流
+    
   </span>
   
 
@@ -4156,14 +4987,25 @@
   
     
     
-    
       
         
+      
+        
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -4172,11 +5014,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11" >
         
           
-          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="">
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     计算机基础
+    
   </span>
   
 
@@ -4200,8 +5044,10 @@
       <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     http 手册
+    
   </span>
   
 
@@ -4221,8 +5067,10 @@
       <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/network/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     计算机网络面试手册
+    
   </span>
   
 
@@ -4242,8 +5090,10 @@
       <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/system/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     操作系统面试手册
+    
   </span>
   
 
@@ -4263,8 +5113,10 @@
       <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/websocket/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Websocket
+    
   </span>
   
 
@@ -4289,14 +5141,23 @@
   
     
     
-    
       
         
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -4305,11 +5166,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12" >
         
           
-          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="">
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     语言篇
+    
   </span>
   
 
@@ -4331,7 +5194,19 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -4347,8 +5222,10 @@
           <label class="md-nav__link" for="__nav_12_1" id="__nav_12_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     C++
+    
   </span>
   
 
@@ -4372,8 +5249,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/C%2B%2B/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     C++ 进阶教程
+    
   </span>
   
 
@@ -4393,8 +5272,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/C%2B%2B/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     C++ 基础教程
+    
   </span>
   
 
@@ -4414,8 +5295,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/C%2B%2B/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     C++ 面试手册
+    
   </span>
   
 
@@ -4441,7 +5324,19 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -4457,8 +5352,10 @@
           <label class="md-nav__link" for="__nav_12_2" id="__nav_12_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Golang
+    
   </span>
   
 
@@ -4482,8 +5379,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Go 进阶教程
+    
   </span>
   
 
@@ -4503,8 +5402,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Go 基础教程
+    
   </span>
   
 
@@ -4522,7 +5423,47 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -4538,8 +5479,10 @@
           <label class="md-nav__link" for="__nav_12_2_3" id="__nav_12_2_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     常用库
+    
   </span>
   
 
@@ -4563,8 +5506,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/cobra/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Cobra
+    
   </span>
   
 
@@ -4584,8 +5529,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/encoding/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Encoding
+    
   </span>
   
 
@@ -4605,8 +5552,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/fmt/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     fmt 库
+    
   </span>
   
 
@@ -4626,8 +5575,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/gin/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Gin
+    
   </span>
   
 
@@ -4647,8 +5598,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/gorm/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Gorm
+    
   </span>
   
 
@@ -4668,8 +5621,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/io/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Io
+    
   </span>
   
 
@@ -4689,8 +5644,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/jwt-go/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Jwt go
+    
   </span>
   
 
@@ -4710,8 +5667,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/logrus/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Logrus
+    
   </span>
   
 
@@ -4731,8 +5690,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/net/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     net
+    
   </span>
   
 
@@ -4752,8 +5713,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/os/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Os
+    
   </span>
   
 
@@ -4773,8 +5736,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/pprof/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Pprof
+    
   </span>
   
 
@@ -4794,8 +5759,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/protobuf/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Protobuf
+    
   </span>
   
 
@@ -4815,8 +5782,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/sync/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Sync
+    
   </span>
   
 
@@ -4836,8 +5805,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/testify/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Testify
+    
   </span>
   
 
@@ -4857,8 +5828,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/time/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Time
+    
   </span>
   
 
@@ -4878,8 +5851,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/viper/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Viper
+    
   </span>
   
 
@@ -4899,8 +5874,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/zap/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Zap
+    
   </span>
   
 
@@ -4934,7 +5911,21 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -4950,8 +5941,10 @@
           <label class="md-nav__link" for="__nav_12_3" id="__nav_12_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Python
+    
   </span>
   
 
@@ -4975,8 +5968,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Python 进阶教程
+    
   </span>
   
 
@@ -4996,8 +5991,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     python 基础教程
+    
   </span>
   
 
@@ -5017,8 +6014,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Python 面试手册
+    
   </span>
   
 
@@ -5036,7 +6035,87 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -5052,8 +6131,10 @@
           <label class="md-nav__link" for="__nav_12_3_4" id="__nav_12_3_4_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Python常用库
+    
   </span>
   
 
@@ -5077,8 +6158,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/Seaborn/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Seaborn
+    
   </span>
   
 
@@ -5098,8 +6181,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/beautifulsoup/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     beautifulsoup 模块
+    
   </span>
   
 
@@ -5119,8 +6204,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/celery/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Celery
+    
   </span>
   
 
@@ -5140,8 +6227,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/click/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Click
+    
   </span>
   
 
@@ -5161,8 +6250,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/datastruct/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     数据结构和算法
+    
   </span>
   
 
@@ -5182,8 +6273,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/datetime/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     datetime 模块
+    
   </span>
   
 
@@ -5203,8 +6296,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/functools/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     functools 模块
+    
   </span>
   
 
@@ -5224,8 +6319,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/jose/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Jose
+    
   </span>
   
 
@@ -5245,8 +6342,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/json/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     json 模块
+    
   </span>
   
 
@@ -5266,8 +6365,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/logging/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     logging 模块
+    
   </span>
   
 
@@ -5287,8 +6388,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/math/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     math 模块
+    
   </span>
   
 
@@ -5308,8 +6411,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/matpliot/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     matpliot 使用教程
+    
   </span>
   
 
@@ -5329,8 +6434,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/mock/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     mock 模块
+    
   </span>
   
 
@@ -5350,8 +6457,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/numpy/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     NumPy 教程
+    
   </span>
   
 
@@ -5371,8 +6480,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/os/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     os模块
+    
   </span>
   
 
@@ -5392,8 +6503,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pandas/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Pandas 教程
+    
   </span>
   
 
@@ -5413,8 +6526,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/passlib/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Passlib
+    
   </span>
   
 
@@ -5434,8 +6549,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pathlib/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     pathlib 模块
+    
   </span>
   
 
@@ -5455,8 +6572,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pickle/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     pickle 模块
+    
   </span>
   
 
@@ -5476,8 +6595,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pydantic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Pydantic
+    
   </span>
   
 
@@ -5497,8 +6618,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pymysql/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     pymysql 模块
+    
   </span>
   
 
@@ -5518,8 +6641,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pytest/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     pytest 模块
+    
   </span>
   
 
@@ -5539,8 +6664,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pytorch/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     PyTorch 从入门到精通：详细教程
+    
   </span>
   
 
@@ -5560,8 +6687,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/queue/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     queue 模块
+    
   </span>
   
 
@@ -5581,8 +6710,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/random/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     random 模块
+    
   </span>
   
 
@@ -5602,8 +6733,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/re/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     re 模块
+    
   </span>
   
 
@@ -5623,8 +6756,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/redis/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     redis
+    
   </span>
   
 
@@ -5644,8 +6779,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/requests/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     requests 模块
+    
   </span>
   
 
@@ -5665,8 +6802,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scikit-learn/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     scikit-learn
+    
   </span>
   
 
@@ -5686,8 +6825,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scipy/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     scipy 模块
+    
   </span>
   
 
@@ -5707,8 +6848,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scrapy/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     scrapy 教程
+    
   </span>
   
 
@@ -5728,8 +6871,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/selenium/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     selenium 使用教程
+    
   </span>
   
 
@@ -5749,8 +6894,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/shutil/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     shutil 模块
+    
   </span>
   
 
@@ -5770,8 +6917,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/sqlalchemy/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Sqlalchemy
+    
   </span>
   
 
@@ -5791,8 +6940,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/sys/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     sys 模块
+    
   </span>
   
 
@@ -5812,8 +6963,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/time/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     time 模块
+    
   </span>
   
 
@@ -5833,8 +6986,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/urllib/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     urllib 模块
+    
   </span>
   
 
@@ -5874,6 +7029,501 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#jenkins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jenkins 全面教程：从入门到精通
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-jenkins" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Jenkins 简介
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Jenkins 简介">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-jenkins" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 什么是 Jenkins？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-jenkins" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Jenkins 的核心特性：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-jenkins" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Jenkins 安装与初始配置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Jenkins 安装与初始配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 环境准备
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-jenkins" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 安装 Jenkins
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-jenkins" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Jenkins 初始配置
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-jenkins" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Jenkins 核心操作：构建任务
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Jenkins 核心操作：构建任务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-jenkins" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 创建第一个 Jenkins 构建任务
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-jenkins-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Jenkins Pipeline 深入解析
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Jenkins Pipeline 深入解析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 什么是 Pipeline？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-declarative-pipeline-scripted-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Declarative Pipeline 与 Scripted Pipeline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-jenkinsfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Jenkinsfile 详解
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-blue-ocean-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 Blue Ocean 可视化 Pipeline
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-jenkins" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Jenkins 插件生态及集成
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Jenkins 插件生态及集成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 常用插件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 系统集成
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 管理插件
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-jenkins" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Jenkins 高级功能：分布式构建和集群管理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Jenkins 高级功能：分布式构建和集群管理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-master-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 Master-Agent 架构
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 并行执行与流水线优化
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-jenkins" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Jenkins 的安全与备份
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Jenkins 的安全与备份">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 安全配置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 备份与恢复
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-jenkins" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Jenkins 常见问题及优化建议
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Jenkins 常见问题及优化建议">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1 构建速度慢
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2 内存占用过高
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.3 插件冲突
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. 总结
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jenkins-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jenkins + FastAPI 实战教程
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 环境准备
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 环境准备">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-jenkins_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 安装 Jenkins
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-python-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 安装 Python 和 FastAPI 项目
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 基本的 FastAPI 项目代码示例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-jenkins_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Jenkins 项目配置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Jenkins 项目配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-jenkins" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 创建 Jenkins 任务
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-jenkinsfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Jenkinsfile 配置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 关键步骤详解
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-jenkins" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 配置 Jenkins 插件
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. FastAPI 项目容器化和部署
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. FastAPI 项目容器化和部署">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-dockerfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Dockerfile 编写
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Docker Compose 编写
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 部署流程
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 总结
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           
             <div class="md-content" data-md-component="content">
@@ -5882,15 +7532,16 @@
                   
 
 
+
   <h1>Jenkins</h1>
 
 <p>要深入掌握 Jenkins，从入门到精通，除了基本概念和操作之外，还需要详细了解其架构、核心功能、插件生态、以及在不同场景下的应用。接下来，我将为你提供一份更全面、详细的 Jenkins 教程。</p>
-<h3 id="jenkins"><strong>Jenkins 全面教程：从入门到精通</strong></h3>
+<h3 id="jenkins"><strong>Jenkins 全面教程：从入门到精通</strong><a class="headerlink" href="#jenkins" title="Permanent link">&para;</a></h3>
 <hr />
-<h2 id="1-jenkins"><strong>1. Jenkins 简介</strong></h2>
-<h3 id="11-jenkins">1.1 什么是 Jenkins？</h3>
+<h2 id="1-jenkins"><strong>1. Jenkins 简介</strong><a class="headerlink" href="#1-jenkins" title="Permanent link">&para;</a></h2>
+<h3 id="11-jenkins">1.1 什么是 Jenkins？<a class="headerlink" href="#11-jenkins" title="Permanent link">&para;</a></h3>
 <p>Jenkins 是一个开源的自动化服务器，广泛应用于持续集成（CI）和持续交付（CD）的场景中。它能够帮助开发团队自动化软件的构建、测试、发布流程，从而加速软件开发周期，降低人为错误。</p>
-<h3 id="12-jenkins">1.2 Jenkins 的核心特性：</h3>
+<h3 id="12-jenkins">1.2 Jenkins 的核心特性：<a class="headerlink" href="#12-jenkins" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>可扩展性强</strong>：通过插件，Jenkins 可以与几乎所有主流的开发、测试、部署工具集成。</li>
 <li><strong>分布式构建</strong>：Jenkins 可以将构建任务分发到多个节点上并行处理，支持大规模的分布式项目。</li>
@@ -5898,54 +7549,54 @@
 <li><strong>可视化构建结果</strong>：详细的构建日志、失败原因展示，有助于快速排查问题。</li>
 </ul>
 <hr />
-<h2 id="2-jenkins"><strong>2. Jenkins 安装与初始配置</strong></h2>
-<h3 id="21">2.1 环境准备</h3>
+<h2 id="2-jenkins"><strong>2. Jenkins 安装与初始配置</strong><a class="headerlink" href="#2-jenkins" title="Permanent link">&para;</a></h2>
+<h3 id="21">2.1 环境准备<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
 <p>Jenkins 作为一款跨平台工具，可以运行在不同的操作系统上。安装 Jenkins 之前，建议准备以下环境：
 - <strong>操作系统</strong>：Linux、macOS 或 Windows。
 - <strong>Java</strong>：Jenkins 依赖于 Java 运行环境，通常需要安装 OpenJDK 或 Oracle JDK 版本 11 或更高版本。
 - <strong>构建工具</strong>：如 Maven、Gradle、Ant 等。</p>
-<h3 id="22-jenkins">2.2 安装 Jenkins</h3>
-<h4 id="macos"><strong>在 macOS 上安装</strong></h4>
+<h3 id="22-jenkins">2.2 安装 Jenkins<a class="headerlink" href="#22-jenkins" title="Permanent link">&para;</a></h3>
+<h4 id="macos"><strong>在 macOS 上安装</strong><a class="headerlink" href="#macos" title="Permanent link">&para;</a></h4>
 <ol>
 <li>使用 <code>Homebrew</code> 安装 Jenkins：
-   <code>bash
-   brew install jenkins-lts</code></li>
+   <div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>jenkins-lts
+</code></pre></div></li>
 <li>启动 Jenkins：
-   <code>bash
-   brew services start jenkins-lts</code></li>
+   <div class="highlight"><pre><span></span><code>brew<span class="w"> </span>services<span class="w"> </span>start<span class="w"> </span>jenkins-lts
+</code></pre></div></li>
 <li>打开浏览器，访问 <a href="http://localhost:8080">http://localhost:8080</a>，输入管理员密码（可通过命令获取）：
-   <code>bash
-   cat /usr/local/var/jenkins/secrets/initialAdminPassword</code></li>
+   <div class="highlight"><pre><span></span><code>cat<span class="w"> </span>/usr/local/var/jenkins/secrets/initialAdminPassword
+</code></pre></div></li>
 </ol>
-<h4 id="linux"><strong>在 Linux 上安装</strong></h4>
+<h4 id="linux"><strong>在 Linux 上安装</strong><a class="headerlink" href="#linux" title="Permanent link">&para;</a></h4>
 <ol>
 <li>安装 Jenkins 官方仓库：
-   <code>bash
-   wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
-   sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ &gt; /etc/apt/sources.list.d/jenkins.list'
-   sudo apt update
-   sudo apt install jenkins</code></li>
+   <div class="highlight"><pre><span></span><code>wget<span class="w"> </span>-q<span class="w"> </span>-O<span class="w"> </span>-<span class="w"> </span>https://pkg.jenkins.io/debian/jenkins.io.key<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>apt-key<span class="w"> </span>add<span class="w"> </span>-
+sudo<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;echo deb http://pkg.jenkins.io/debian-stable binary/ &gt; /etc/apt/sources.list.d/jenkins.list&#39;</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>jenkins
+</code></pre></div></li>
 <li>启动 Jenkins 服务：
-   <code>bash
-   sudo systemctl start jenkins
-   sudo systemctl enable jenkins</code></li>
+   <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>jenkins
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>jenkins
+</code></pre></div></li>
 </ol>
-<h4 id="windows"><strong>在 Windows 上安装</strong></h4>
+<h4 id="windows"><strong>在 Windows 上安装</strong><a class="headerlink" href="#windows" title="Permanent link">&para;</a></h4>
 <ol>
 <li>从 <a href="https://jenkins.io/">Jenkins 官网</a> 下载 Jenkins Windows 安装包。</li>
 <li>双击安装包，按照提示完成安装。安装过程中会自动配置 Java 环境和 Jenkins 的服务。</li>
 </ol>
-<h3 id="23-jenkins">2.3 Jenkins 初始配置</h3>
+<h3 id="23-jenkins">2.3 Jenkins 初始配置<a class="headerlink" href="#23-jenkins" title="Permanent link">&para;</a></h3>
 <ol>
 <li><strong>解锁 Jenkins</strong>：在第一次访问时，Jenkins 会要求输入临时管理员密码。密码可在 Jenkins 安装目录的 <code>secrets</code> 文件夹中找到。
-   <code>bash
-   cat /var/lib/jenkins/secrets/initialAdminPassword</code></li>
+   <div class="highlight"><pre><span></span><code>cat<span class="w"> </span>/var/lib/jenkins/secrets/initialAdminPassword
+</code></pre></div></li>
 <li><strong>安装推荐插件</strong>：Jenkins 安装后会提示安装推荐插件，建议选择自动安装所有推荐插件，方便后续的 CI/CD 配置。</li>
 <li><strong>创建管理员用户</strong>：完成插件安装后，Jenkins 会要求创建一个管理员账号。</li>
 </ol>
 <hr />
-<h2 id="3-jenkins"><strong>3. Jenkins 核心操作：构建任务</strong></h2>
-<h3 id="31-jenkins">3.1 创建第一个 Jenkins 构建任务</h3>
+<h2 id="3-jenkins"><strong>3. Jenkins 核心操作：构建任务</strong><a class="headerlink" href="#3-jenkins" title="Permanent link">&para;</a></h2>
+<h3 id="31-jenkins">3.1 创建第一个 Jenkins 构建任务<a class="headerlink" href="#31-jenkins" title="Permanent link">&para;</a></h3>
 <ol>
 <li><strong>新建任务</strong>：在 Jenkins 控制台首页，点击 “新建任务”。</li>
 <li><strong>选择项目类型</strong>：</li>
@@ -5979,16 +7630,16 @@
 <li>构建完成后，可以设置发布操作（如将构建产物上传到远程服务器），或者发送构建状态通知（如通过邮件或 Slack）。</li>
 </ol>
 <hr />
-<h2 id="4-jenkins-pipeline"><strong>4. Jenkins Pipeline 深入解析</strong></h2>
-<h3 id="41-pipeline">4.1 什么是 Pipeline？</h3>
+<h2 id="4-jenkins-pipeline"><strong>4. Jenkins Pipeline 深入解析</strong><a class="headerlink" href="#4-jenkins-pipeline" title="Permanent link">&para;</a></h2>
+<h3 id="41-pipeline">4.1 什么是 Pipeline？<a class="headerlink" href="#41-pipeline" title="Permanent link">&para;</a></h3>
 <p>Pipeline 是 Jenkins 中的关键概念，允许用户通过代码定义持续集成和持续交付的整个流程。通过使用 Jenkinsfile，团队可以将 CI/CD 的配置放入版本控制系统中，进行管理和维护。</p>
-<h3 id="42-declarative-pipeline-scripted-pipeline">4.2 Declarative Pipeline 与 Scripted Pipeline</h3>
+<h3 id="42-declarative-pipeline-scripted-pipeline">4.2 Declarative Pipeline 与 Scripted Pipeline<a class="headerlink" href="#42-declarative-pipeline-scripted-pipeline" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Declarative Pipeline</strong>：使用更简洁的 DSL 语法，适合定义标准化的流水线。</li>
 <li><strong>Scripted Pipeline</strong>：基于 Groovy 脚本，提供更大的灵活性和复杂性，适合需要高度自定义的场景。</li>
 </ul>
-<h4 id="declarative-pipeline"><strong>Declarative Pipeline 示例</strong></h4>
-<div class="codehilite"><pre><span></span><code><span class="n">pipeline</span><span class="w"> </span><span class="o">{</span>
+<h4 id="declarative-pipeline"><strong>Declarative Pipeline 示例</strong><a class="headerlink" href="#declarative-pipeline" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">pipeline</span><span class="w"> </span><span class="o">{</span>
 <span class="w">    </span><span class="n">agent</span><span class="w"> </span><span class="n">any</span>
 <span class="w">    </span><span class="n">stages</span><span class="w"> </span><span class="o">{</span>
 <span class="w">        </span><span class="n">stage</span><span class="o">(</span><span class="s1">&#39;Build&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
@@ -6012,19 +7663,18 @@
 <span class="w">    </span><span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div>
-
-<h3 id="43-jenkinsfile">4.3 Jenkinsfile 详解</h3>
+<h3 id="43-jenkinsfile">4.3 Jenkinsfile 详解<a class="headerlink" href="#43-jenkinsfile" title="Permanent link">&para;</a></h3>
 <p>Jenkinsfile 是定义 Jenkins Pipeline 的核心文件，通常位于项目根目录中。
 - <strong><code>pipeline {}</code></strong>：流水线的主体，定义了流水线的结构。
 - <strong><code>agent</code></strong>：定义在哪个节点上运行流水线任务。<code>agent any</code> 表示在任何可用节点上运行。
 - <strong><code>stages</code></strong>：定义流水线的各个阶段，每个阶段通常代表一个构建步骤（如编译、测试、部署）。
 - <strong><code>steps</code></strong>：具体执行的操作步骤，通常是 Shell 命令或构建工具的调用。</p>
-<h3 id="44-blue-ocean-pipeline">4.4 Blue Ocean 可视化 Pipeline</h3>
+<h3 id="44-blue-ocean-pipeline">4.4 Blue Ocean 可视化 Pipeline<a class="headerlink" href="#44-blue-ocean-pipeline" title="Permanent link">&para;</a></h3>
 <p><strong>Blue Ocean</strong> 是 Jenkins 提供的现代化 UI 界面，能够更直观地展示流水线的运行状态。通过 Blue Ocean，用户可以轻松地查看每个阶段的执行情况，快速定位问题。</p>
 <hr />
-<h2 id="5-jenkins"><strong>5. Jenkins 插件生态及集成</strong></h2>
+<h2 id="5-jenkins"><strong>5. Jenkins 插件生态及集成</strong><a class="headerlink" href="#5-jenkins" title="Permanent link">&para;</a></h2>
 <p>Jenkins 的强大之处在于其丰富的插件生态，几乎可以与所有主流工具集成。以下是一些常用的插件和集成方案：</p>
-<h3 id="51">5.1 常用插件</h3>
+<h3 id="51">5.1 常用插件<a class="headerlink" href="#51" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Git Plugin</strong>：用于管理 Git 仓库的代码源。</li>
 <li><strong>Pipeline Plugin</strong>：支持使用 Pipeline 定义复杂的 CI/CD 流程。</li>
@@ -6032,166 +7682,163 @@
 <li><strong>JUnit Plugin</strong>：集成 JUnit 测试框架，展示测试报告。</li>
 <li><strong>Docker Plugin</strong>：支持在 Docker 容器中执行 Jenkins 构建任务。</li>
 </ul>
-<h3 id="52">5.2 系统集成</h3>
+<h3 id="52">5.2 系统集成<a class="headerlink" href="#52" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>与 GitHub/GitLab 集成</strong>：通过 Git 插件和 Webhook，可以实现 Jenkins 自动触发构建任务。</li>
 <li><strong>与 Slack 集成</strong>：通过 Slack 插件，可以在构建完成后发送通知。</li>
 <li><strong>与 SonarQube 集成</strong>：使用 SonarQube 插件，可以在 Jenkins 中执行代码质量检测。</li>
 </ul>
-<h3 id="53">5.3 管理插件</h3>
+<h3 id="53">5.3 管理插件<a class="headerlink" href="#53" title="Permanent link">&para;</a></h3>
 <ul>
 <li>进入“管理 Jenkins”页面，选择“插件管理”，可以在线搜索、安装、更新插件。注意定期检查插件更新，避免版本兼容问题。</li>
 </ul>
 <hr />
-<h2 id="6-jenkins"><strong>6. Jenkins 高级功能：分布式构建和集群管理</strong></h2>
-<h3 id="61-master-agent">6.1 Master-Agent 架构</h3>
+<h2 id="6-jenkins"><strong>6. Jenkins 高级功能：分布式构建和集群管理</strong><a class="headerlink" href="#6-jenkins" title="Permanent link">&para;</a></h2>
+<h3 id="61-master-agent">6.1 Master-Agent 架构<a class="headerlink" href="#61-master-agent" title="Permanent link">&para;</a></h3>
 <p>Jenkins 支持分布式构建，即将任务分发到不同的 Agent 节点上执行。Master 节点负责管理任务分配，Agent 节点实际执行构建任务。</p>
-<h4 id="_1"><strong>配置分布式构建</strong></h4>
+<h4 id="_1"><strong>配置分布式构建</strong><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
 <ol>
 <li>进入 “管理 Jenkins” 页面，点击 “管理节点”。</li>
 <li>添加一个新节点，配置其名称、远程工作目录等信息。</li>
 <li>通过 SSH 或 JNLP 将 Agent 节点连接到 Master 节点。</li>
 </ol>
-<h3 id="62">6.2 并行执行与流水线优化</h3>
+<h3 id="62">6.2 并行执行与流水线优化<a class="headerlink" href="#62" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>并行执行</strong>：在流水线中定义并行的构建步骤，提升构建效率。</li>
 <li><strong>节点资源优化</strong>：合理分配不同节点的资源，根据任务需求指定执行节点。</li>
 </ul>
 <hr />
-<h2 id="7-jenkins"><strong>7. Jenkins 的安全与备份</strong></h2>
-<h3 id="71">7.1 安全配置</h3>
+<h2 id="7-jenkins"><strong>7. Jenkins 的安全与备份</strong><a class="headerlink" href="#7-jenkins" title="Permanent link">&para;</a></h2>
+<h3 id="71">7.1 安全配置<a class="headerlink" href="#71" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>用户权限管理</strong>：通过安装 “Role-based Authorization Strategy” 插件，可以精细化控制用户角色和权限。</li>
 <li><strong>凭据管理</strong>：通过“凭据”功能，安全地存储敏感信息，如 API Token、SSH Key 等。</li>
 </ul>
-<h3 id="72">7.2 备份与恢复</h3>
+<h3 id="72">7.2 备份与恢复<a class="headerlink" href="#72" title="Permanent link">&para;</a></h3>
 <ul>
 <li>定期备份 Jenkins 的配置和数据文件，通常位于 <code>/var/lib/jenkins</code> 目录中。</li>
 <li>通过 “ThinBackup” 插件，可以自动化执行备份任务，并在必要时恢复。</li>
 </ul>
 <hr />
-<h2 id="8-jenkins"><strong>8. Jenkins 常见问题及优化建议</strong></h2>
-<h3 id="81">8.1 构建速度慢</h3>
+<h2 id="8-jenkins"><strong>8. Jenkins 常见问题及优化建议</strong><a class="headerlink" href="#8-jenkins" title="Permanent link">&para;</a></h2>
+<h3 id="81">8.1 构建速度慢<a class="headerlink" href="#81" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>优化构建脚本</strong>：减少不必要的依赖，避免重复的构建步骤。</li>
 <li><strong>使用并行执行</strong>：在流水线中定义并行步骤，提升构建效率。</li>
 </ul>
-<h3 id="82">8.2 内存占用过高</h3>
+<h3 id="82">8.2 内存占用过高<a class="headerlink" href="#82" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>定期清理旧的构建记录</strong>：Jenkins 会保存每次构建的详细日志，建议定期清理历史构建。</li>
 <li><strong>调整 JVM 内存设置</strong>：在 Jenkins 启动参数中增加 JVM 内存限制。</li>
 </ul>
-<h3 id="83">8.3 插件冲突</h3>
+<h3 id="83">8.3 插件冲突<a class="headerlink" href="#83" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>升级插件</strong>：定期检查插件更新，保持 Jenkins 和插件版本一致。</li>
 <li><strong>插件隔离</strong>：在不同的节点上运行插件，避免冲突。</li>
 </ul>
 <hr />
-<h2 id="9"><strong>9. 总结</strong></h2>
+<h2 id="9"><strong>9. 总结</strong><a class="headerlink" href="#9" title="Permanent link">&para;</a></h2>
 <p>通过本教程，您可以从入门到精通 Jenkins 的核心功能。Jenkins 强大的插件生态和灵活的流水线机制，使其成为自动化构建和交付的首选工具。无论是小型团队还是大型企业，Jenkins 都能够提供适应性的解决方案，从而加速软件开发流程。</p>
 <p>Jenkins 和 FastAPI 结合的实战教程可以帮助你实现自动化的 CI/CD 流程，将 FastAPI 项目从开发、测试到部署全流程打通。以下是详细的 Jenkins + FastAPI 实战教程。</p>
-<h2 id="jenkins-fastapi"><strong>Jenkins + FastAPI 实战教程</strong></h2>
+<h2 id="jenkins-fastapi"><strong>Jenkins + FastAPI 实战教程</strong><a class="headerlink" href="#jenkins-fastapi" title="Permanent link">&para;</a></h2>
 <hr />
-<h2 id="1"><strong>1. 环境准备</strong></h2>
-<h3 id="11-jenkins_1">1.1 安装 Jenkins</h3>
+<h2 id="1"><strong>1. 环境准备</strong><a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<h3 id="11-jenkins_1">1.1 安装 Jenkins<a class="headerlink" href="#11-jenkins_1" title="Permanent link">&para;</a></h3>
 <p>可以参考前面 Jenkins 的安装步骤，确保 Jenkins 服务器已安装并运行。</p>
 <ul>
 <li><strong>macOS</strong> 安装 Jenkins：
-   <code>bash
-   brew install jenkins-lts
-   brew services start jenkins-lts</code></li>
+   <div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>jenkins-lts
+brew<span class="w"> </span>services<span class="w"> </span>start<span class="w"> </span>jenkins-lts
+</code></pre></div></li>
 <li><strong>Linux</strong> 安装 Jenkins：
-   <code>bash
-   sudo apt update
-   sudo apt install jenkins
-   sudo systemctl start jenkins</code></li>
+   <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>jenkins
+sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>jenkins
+</code></pre></div></li>
 <li><strong>Windows</strong> 安装 Jenkins：
    下载 Windows 安装包并安装。</li>
 </ul>
-<h3 id="12-python-fastapi">1.2 安装 Python 和 FastAPI 项目</h3>
+<h3 id="12-python-fastapi">1.2 安装 Python 和 FastAPI 项目<a class="headerlink" href="#12-python-fastapi" title="Permanent link">&para;</a></h3>
 <p>FastAPI 是基于 Python 的快速 Web 框架，需要安装 Python 及相关依赖。</p>
-<h4 id="python-fastapi"><strong>安装 Python 和 FastAPI</strong></h4>
+<h4 id="python-fastapi"><strong>安装 Python 和 FastAPI</strong><a class="headerlink" href="#python-fastapi" title="Permanent link">&para;</a></h4>
 <ol>
 <li>安装 Python（确保 Python 版本 &gt;= 3.7）：
-   <code>bash
-   sudo apt install python3 python3-pip</code></li>
+   <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3<span class="w"> </span>python3-pip
+</code></pre></div></li>
 <li>
 <p>创建虚拟环境并安装 FastAPI：
-   <code>bash
-   python3 -m venv venv
-   source venv/bin/activate
-   pip install fastapi uvicorn</code></p>
+   <div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
+<span class="nb">source</span><span class="w"> </span>venv/bin/activate
+pip<span class="w"> </span>install<span class="w"> </span>fastapi<span class="w"> </span>uvicorn
+</code></pre></div></p>
 </li>
 <li>
 <p>安装依赖工具：</p>
 </li>
 <li>
 <p><strong>Uvicorn</strong>：用于运行 FastAPI 服务器。
-   <code>bash
-   pip install uvicorn</code></p>
+   <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>uvicorn
+</code></pre></div></p>
 </li>
 <li>
 <p>创建基本的 FastAPI 项目文件结构：
-   <code>bash
-   ├── app
-   │   ├── main.py        # FastAPI 入口文件
-   ├── tests
-   │   ├── test_main.py   # 测试文件
-   ├── requirements.txt   # 依赖文件
-   ├── Jenkinsfile        # Jenkins Pipeline 文件</code></p>
+   <div class="highlight"><pre><span></span><code>├──<span class="w"> </span>app
+│<span class="w">   </span>├──<span class="w"> </span>main.py<span class="w">        </span><span class="c1"># FastAPI 入口文件</span>
+├──<span class="w"> </span>tests
+│<span class="w">   </span>├──<span class="w"> </span>test_main.py<span class="w">   </span><span class="c1"># 测试文件</span>
+├──<span class="w"> </span>requirements.txt<span class="w">   </span><span class="c1"># 依赖文件</span>
+├──<span class="w"> </span>Jenkinsfile<span class="w">        </span><span class="c1"># Jenkins Pipeline 文件</span>
+</code></pre></div></p>
 </li>
 </ol>
-<h3 id="13-fastapi">1.3 基本的 FastAPI 项目代码示例</h3>
-<h4 id="appmainpy"><strong>app/main.py</strong></h4>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
+<h3 id="13-fastapi">1.3 基本的 FastAPI 项目代码示例<a class="headerlink" href="#13-fastapi" title="Permanent link">&para;</a></h3>
+<h4 id="appmainpy"><strong>app/main.py</strong><a class="headerlink" href="#appmainpy" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">fastapi</span><span class="w"> </span><span class="kn">import</span> <span class="n">FastAPI</span>
 
 <span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
 
 <span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">read_root</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">read_root</span><span class="p">():</span>
     <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;Hello&quot;</span><span class="p">:</span> <span class="s2">&quot;World&quot;</span><span class="p">}</span>
 
 <span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/items/</span><span class="si">{item_id}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">read_item</span><span class="p">(</span><span class="n">item_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">q</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">read_item</span><span class="p">(</span><span class="n">item_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">q</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
     <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;item_id&quot;</span><span class="p">:</span> <span class="n">item_id</span><span class="p">,</span> <span class="s2">&quot;q&quot;</span><span class="p">:</span> <span class="n">q</span><span class="p">}</span>
 </code></pre></div>
-
-<h4 id="teststest_mainpy"><strong>tests/test_main.py</strong></h4>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi.testclient</span> <span class="kn">import</span> <span class="n">TestClient</span>
-<span class="kn">from</span> <span class="nn">app.main</span> <span class="kn">import</span> <span class="n">app</span>
+<h4 id="teststest_mainpy"><strong>tests/test_main.py</strong><a class="headerlink" href="#teststest_mainpy" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">fastapi.testclient</span><span class="w"> </span><span class="kn">import</span> <span class="n">TestClient</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">app.main</span><span class="w"> </span><span class="kn">import</span> <span class="n">app</span>
 
 <span class="n">client</span> <span class="o">=</span> <span class="n">TestClient</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">test_read_root</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_read_root</span><span class="p">():</span>
     <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
     <span class="k">assert</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span>
     <span class="k">assert</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span> <span class="o">==</span> <span class="p">{</span><span class="s2">&quot;Hello&quot;</span><span class="p">:</span> <span class="s2">&quot;World&quot;</span><span class="p">}</span>
 
-<span class="k">def</span> <span class="nf">test_read_item</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_read_item</span><span class="p">():</span>
     <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/items/1?q=foo&quot;</span><span class="p">)</span>
     <span class="k">assert</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span>
     <span class="k">assert</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span> <span class="o">==</span> <span class="p">{</span><span class="s2">&quot;item_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;q&quot;</span><span class="p">:</span> <span class="s2">&quot;foo&quot;</span><span class="p">}</span>
 </code></pre></div>
-
-<h4 id="requirementstxt"><strong>requirements.txt</strong></h4>
-<div class="codehilite"><pre><span></span><code>fastapi
+<h4 id="requirementstxt"><strong>requirements.txt</strong><a class="headerlink" href="#requirementstxt" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>fastapi
 uvicorn
 pytest
 </code></pre></div>
-
 <hr />
-<h2 id="2-jenkins_1"><strong>2. Jenkins 项目配置</strong></h2>
-<h3 id="21-jenkins">2.1 创建 Jenkins 任务</h3>
+<h2 id="2-jenkins_1"><strong>2. Jenkins 项目配置</strong><a class="headerlink" href="#2-jenkins_1" title="Permanent link">&para;</a></h2>
+<h3 id="21-jenkins">2.1 创建 Jenkins 任务<a class="headerlink" href="#21-jenkins" title="Permanent link">&para;</a></h3>
 <ol>
 <li>登录 Jenkins 控制台，点击“新建任务”。</li>
 <li>选择“Pipeline”（流水线项目），为项目命名，如 <code>FastAPI-CI-CD</code>，点击“OK”。</li>
 <li>选择“Pipeline script from SCM”，在源码管理选择 Git，填写你的 Git 仓库地址，并配置凭据（如 SSH Key）。</li>
 <li>配置 <code>Jenkinsfile</code> 来定义流水线。</li>
 </ol>
-<h3 id="22-jenkinsfile">2.2 Jenkinsfile 配置</h3>
+<h3 id="22-jenkinsfile">2.2 Jenkinsfile 配置<a class="headerlink" href="#22-jenkinsfile" title="Permanent link">&para;</a></h3>
 <p><strong>Jenkinsfile</strong> 是 Jenkins 中定义 CI/CD 流水线的核心文件，使用 Groovy 语言编写。</p>
-<h4 id="jenkinsfile"><strong>Jenkinsfile 示例</strong></h4>
-<div class="codehilite"><pre><span></span><code><span class="n">pipeline</span><span class="w"> </span><span class="o">{</span>
+<h4 id="jenkinsfile"><strong>Jenkinsfile 示例</strong><a class="headerlink" href="#jenkinsfile" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">pipeline</span><span class="w"> </span><span class="o">{</span>
 <span class="w">    </span><span class="n">agent</span><span class="w"> </span><span class="n">any</span>
 
 <span class="w">    </span><span class="n">environment</span><span class="w"> </span><span class="o">{</span>
@@ -6257,8 +7904,7 @@ pytest
 <span class="w">    </span><span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div>
-
-<h3 id="23">2.3 关键步骤详解</h3>
+<h3 id="23">2.3 关键步骤详解<a class="headerlink" href="#23" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Checkout 阶段</strong>：从 Git 仓库检出项目代码，<code>credentialsId</code> 是 Jenkins 中存储的 Git 凭据 ID。</li>
 <li><strong>Install dependencies</strong>：安装 Python 虚拟环境和依赖。<code>requirements.txt</code> 定义了项目的依赖包。</li>
@@ -6266,17 +7912,17 @@ pytest
 <li><strong>Build Docker Image</strong>：使用 <code>Dockerfile</code> 构建项目的 Docker 镜像，便于后续的部署操作。</li>
 <li><strong>Deploy to Server</strong>：将构建的 Docker 镜像推送到 Docker Hub 或者私有镜像仓库，并在远程服务器上部署。</li>
 </ul>
-<h3 id="24-jenkins">2.4 配置 Jenkins 插件</h3>
+<h3 id="24-jenkins">2.4 配置 Jenkins 插件<a class="headerlink" href="#24-jenkins" title="Permanent link">&para;</a></h3>
 <p>在 Jenkins 中，确保安装以下插件以支持整个流水线的运行：
 - <strong>Git Plugin</strong>：支持从 Git 仓库拉取代码。
 - <strong>Pipeline Plugin</strong>：支持 Jenkinsfile 定义流水线。
 - <strong>Docker Pipeline Plugin</strong>：用于构建和推送 Docker 镜像。
 - <strong>SSH Agent Plugin</strong>：支持使用 SSH 进行远程部署。</p>
 <hr />
-<h2 id="3-fastapi"><strong>3. FastAPI 项目容器化和部署</strong></h2>
-<h3 id="31-dockerfile">3.1 Dockerfile 编写</h3>
+<h2 id="3-fastapi"><strong>3. FastAPI 项目容器化和部署</strong><a class="headerlink" href="#3-fastapi" title="Permanent link">&para;</a></h2>
+<h3 id="31-dockerfile">3.1 Dockerfile 编写<a class="headerlink" href="#31-dockerfile" title="Permanent link">&para;</a></h3>
 <p>在 FastAPI 项目中，编写一个 Dockerfile，用于容器化应用。</p>
-<div class="codehilite"><pre><span></span><code><span class="c"># 使用官方的 Python 镜像</span>
+<div class="highlight"><pre><span></span><code><span class="c"># 使用官方的 Python 镜像</span>
 <span class="k">FROM</span><span class="w"> </span><span class="s">python:3.9-slim</span>
 
 <span class="c"># 设置工作目录</span>
@@ -6294,11 +7940,10 @@ pytest
 <span class="c"># 启动 Uvicorn 服务器</span>
 <span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;uvicorn&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;app.main:app&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;--host&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;0.0.0.0&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;--port&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;8000&quot;</span><span class="p">]</span>
 </code></pre></div>
-
-<h3 id="32-docker-compose">3.2 Docker Compose 编写</h3>
+<h3 id="32-docker-compose">3.2 Docker Compose 编写<a class="headerlink" href="#32-docker-compose" title="Permanent link">&para;</a></h3>
 <p>如果你要将 FastAPI 项目与数据库或其他服务一起部署，可以使用 Docker Compose。</p>
-<p><strong>docker-compose.yml 示例：</strong></p>
-<div class="codehilite"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3&#39;</span>
+<p><strong>docker-compose.yml 示例：</strong>
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3&#39;</span>
 
 <span class="nt">services</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">web</span><span class="p">:</span>
@@ -6321,16 +7966,15 @@ pytest
 
 <span class="nt">volumes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">postgres_data</span><span class="p">:</span>
-</code></pre></div>
-
-<h3 id="33">3.3 部署流程</h3>
+</code></pre></div></p>
+<h3 id="33">3.3 部署流程<a class="headerlink" href="#33" title="Permanent link">&para;</a></h3>
 <ol>
 <li><strong>构建镜像</strong>：通过 Jenkins 任务中定义的 Dockerfile 自动化构建 Docker 镜像。</li>
 <li><strong>推送镜像</strong>：将镜像推送到 Docker Hub 或私有 Docker 镜像仓库。</li>
 <li><strong>远程部署</strong>：通过 SSH 在服务器上拉取最新的镜像，并使用 Docker Compose 启动 FastAPI 应用。</li>
 </ol>
 <hr />
-<h2 id="4"><strong>4. 总结</strong></h2>
+<h2 id="4"><strong>4. 总结</strong><a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
 <p>通过 Jenkins 与 FastAPI 的集成，你可以实现：
 - 自动化的代码拉取、测试、打包。
 - 使用 Docker 容器化 FastAPI 应用，提升部署一致性和可移植性。
@@ -6353,6 +7997,8 @@ pytest
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -6382,10 +8028,20 @@ pytest
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.sections", "toc.integrate", "search.highlight", "search.suggest", "header.autohide", "footer.copyright", "footer.text", "code.annotate", "content.code", "material.nav", "material.switch", "content.code.copy"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.section", "navigation.expand", "navigation.tabs", "navigation.sections", "navigation.indexes", "content.code.copy", "content.tabs.link", "content.code.annotate", "math"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+        <script src="../../styles/javascripts/config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="../../styles/javascripts/katex.js"></script>
       
     
   </body>

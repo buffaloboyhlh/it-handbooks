@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -50,7 +50,9 @@
       
     
     
-      <link rel="stylesheet" href="../../css/extra.css">
+      <link rel="stylesheet" href="../../styles/css/extra.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -69,7 +71,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="amber">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#linux" class="md-skip">
+        <a href="#1" class="md-skip">
           跳转至
         </a>
       
@@ -90,9 +92,7 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
     <a href="../.." title="IT-手册" class="md-header__button md-logo" aria-label="IT-手册" data-md-component="logo">
       
@@ -127,20 +127,20 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="amber"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_1">
     
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
@@ -152,11 +152,13 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -175,8 +177,6 @@
         </button>
       </nav>
       
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
@@ -190,6 +190,7 @@
     </div>
   </div>
 </div>
+      
     
     
   </nav>
@@ -200,6 +201,348 @@
       
       
         
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  IT-手册大全
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Web%E7%AF%87/Django/advance/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Web篇
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/basic/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  中间件
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/alert/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  云原生
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/LangChain/advance/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  人工智能
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../SRE/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  工具篇
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/basic/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  数据库
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/algorithm/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  数据结构和算法
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E6%9C%8D%E5%8A%A1%E5%99%A8/gunicorn/basic/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  服务器
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/bloom/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  系统设计
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  计算机基础
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/C%2B%2B/advance/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  语言篇
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
           
         
       
@@ -214,10 +557,10 @@
                     
 
 
-
   
 
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="导航栏" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="IT-手册" class="md-nav__button md-logo" aria-label="IT-手册" data-md-component="logo">
       
@@ -240,8 +583,10 @@
       <a href="../.." class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     IT-手册大全
+    
   </span>
   
 
@@ -258,14 +603,23 @@
   
     
     
-    
       
         
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -274,11 +628,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Web篇
+    
   </span>
   
 
@@ -300,7 +656,23 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -316,8 +688,10 @@
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Django
+    
   </span>
   
 
@@ -341,8 +715,10 @@
       <a href="../../Web%E7%AF%87/Django/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Django 进阶教程
+    
   </span>
   
 
@@ -362,8 +738,10 @@
       <a href="../../Web%E7%AF%87/Django/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Django 基础教程
+    
   </span>
   
 
@@ -383,8 +761,10 @@
       <a href="../../Web%E7%AF%87/Django/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Django 面试手册
+    
   </span>
   
 
@@ -404,8 +784,10 @@
       <a href="../../Web%E7%AF%87/Django/questions/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Django 开发中遇到的问题
+    
   </span>
   
 
@@ -425,8 +807,10 @@
       <a href="../../Web%E7%AF%87/Django/restful/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Django RESTful
+    
   </span>
   
 
@@ -452,7 +836,23 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -468,8 +868,10 @@
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     FastAPI
+    
   </span>
   
 
@@ -493,8 +895,10 @@
       <a href="../../Web%E7%AF%87/FastAPI/GraphQL/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     GraphQL 教程
+    
   </span>
   
 
@@ -514,8 +918,10 @@
       <a href="../../Web%E7%AF%87/FastAPI/advance./" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     FastAPI 进阶教程
+    
   </span>
   
 
@@ -535,8 +941,10 @@
       <a href="../../Web%E7%AF%87/FastAPI/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     FastAPI 教程
+    
   </span>
   
 
@@ -556,8 +964,10 @@
       <a href="../../Web%E7%AF%87/FastAPI/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     FastAPI 面试手册
+    
   </span>
   
 
@@ -577,8 +987,10 @@
       <a href="../../Web%E7%AF%87/FastAPI/practice/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     FastAPI 实战项目教程：构建完整的博客 API
+    
   </span>
   
 
@@ -604,7 +1016,21 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -620,8 +1046,10 @@
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Flask
+    
   </span>
   
 
@@ -645,8 +1073,10 @@
       <a href="../../Web%E7%AF%87/Flask/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Flask 进阶教程
+    
   </span>
   
 
@@ -666,8 +1096,10 @@
       <a href="../../Web%E7%AF%87/Flask/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Flask 基础教程
+    
   </span>
   
 
@@ -687,8 +1119,10 @@
       <a href="../../Web%E7%AF%87/Flask/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Flask 面试手册
+    
   </span>
   
 
@@ -708,8 +1142,10 @@
       <a href="../../Web%E7%AF%87/Flask/questions/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Flask 工作中常见问题
+    
   </span>
   
 
@@ -742,14 +1178,23 @@
   
     
     
-    
       
         
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -758,11 +1203,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     中间件
+    
   </span>
   
 
@@ -784,7 +1231,17 @@
   
     
     
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -800,8 +1257,10 @@
           <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Kafka
+    
   </span>
   
 
@@ -825,8 +1284,10 @@
       <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Kafka 基础
+    
   </span>
   
 
@@ -846,8 +1307,10 @@
       <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     kafka 面试
+    
   </span>
   
 
@@ -873,7 +1336,17 @@
   
     
     
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -889,8 +1362,10 @@
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Rabbitmq
+    
   </span>
   
 
@@ -914,8 +1389,10 @@
       <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/rabbitmq/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Basic
+    
   </span>
   
 
@@ -935,8 +1412,10 @@
       <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/rabbitmq/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     RabbitMQ 面试
+    
   </span>
   
 
@@ -962,7 +1441,17 @@
   
     
     
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -978,8 +1467,10 @@
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Zookeeper
+    
   </span>
   
 
@@ -1003,8 +1494,10 @@
       <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/zookeeper/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     zookeeper 教程
+    
   </span>
   
 
@@ -1024,8 +1517,10 @@
       <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/zookeeper/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     zookeeper 面试
+    
   </span>
   
 
@@ -1058,14 +1553,23 @@
   
     
     
-    
       
         
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -1074,11 +1578,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     云原生
+    
   </span>
   
 
@@ -1100,7 +1606,21 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -1116,8 +1636,10 @@
           <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Prometheus
+    
   </span>
   
 
@@ -1141,8 +1663,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/alert/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Prometheus 告警
+    
   </span>
   
 
@@ -1162,8 +1686,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Prometheus 教程
+    
   </span>
   
 
@@ -1183,8 +1709,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/prometheus/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Prometheus 配置文件
+    
   </span>
   
 
@@ -1204,8 +1732,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/promql/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     PromQL
+    
   </span>
   
 
@@ -1231,7 +1761,17 @@
   
     
     
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -1247,8 +1787,10 @@
           <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Docker
+    
   </span>
   
 
@@ -1272,8 +1814,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Docker-基础
+    
   </span>
   
 
@@ -1293,8 +1837,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Docker 面试
+    
   </span>
   
 
@@ -1320,7 +1866,23 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -1336,8 +1898,10 @@
           <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Kubernetes
+    
   </span>
   
 
@@ -1361,8 +1925,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     kubernetes 教程
+    
   </span>
   
 
@@ -1382,8 +1948,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/crictl/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     crictl 教程
+    
   </span>
   
 
@@ -1403,8 +1971,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/helm/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     kubernetes 包管理工具 helm
+    
   </span>
   
 
@@ -1424,8 +1994,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     kubernetes 面试手册
+    
   </span>
   
 
@@ -1445,8 +2017,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/monitor/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     kubernetes 监控平台和日志管理
+    
   </span>
   
 
@@ -1479,14 +2053,25 @@
   
     
     
-    
       
         
+      
+        
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -1495,11 +2080,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     人工智能
+    
   </span>
   
 
@@ -1521,7 +2108,17 @@
   
     
     
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -1537,8 +2134,10 @@
           <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     LangChain
+    
   </span>
   
 
@@ -1562,8 +2161,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/LangChain/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     LangChain 进阶教程
+    
   </span>
   
 
@@ -1583,8 +2184,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/LangChain/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     LangChain 基础教程
+    
   </span>
   
 
@@ -1610,7 +2213,19 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -1626,8 +2241,10 @@
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     大语言模型
+    
   </span>
   
 
@@ -1651,8 +2268,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     LLM 进阶教程
+    
   </span>
   
 
@@ -1672,8 +2291,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     LLM 基础教程
+    
   </span>
   
 
@@ -1693,8 +2314,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     LLM 面试手册
+    
   </span>
   
 
@@ -1720,7 +2343,19 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -1736,8 +2371,10 @@
           <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     机器学习
+    
   </span>
   
 
@@ -1761,8 +2398,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     机器学习 进阶教程
+    
   </span>
   
 
@@ -1782,8 +2421,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     机器学习 基础教程
+    
   </span>
   
 
@@ -1803,8 +2444,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     机器学习 面试手册
+    
   </span>
   
 
@@ -1830,7 +2473,19 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -1846,8 +2501,10 @@
           <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     深度学习
+    
   </span>
   
 
@@ -1871,8 +2528,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     深度学习 进阶教程
+    
   </span>
   
 
@@ -1892,8 +2551,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     深度学习 进阶教程
+    
   </span>
   
 
@@ -1913,8 +2574,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     深度学习 面试手册
+    
   </span>
   
 
@@ -1949,9 +2612,33 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
     
       
         
+        
+      
+      
         
       
     
@@ -1966,8 +2653,10 @@
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
             
   
+  
   <span class="md-ellipsis">
     工具篇
+    
   </span>
   
 
@@ -1991,8 +2680,10 @@
       <a href="../SRE/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     SRE 故障排查
+    
   </span>
   
 
@@ -2012,8 +2703,10 @@
       <a href="../SonarQube/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     SonarQube 基本教程
+    
   </span>
   
 
@@ -2033,8 +2726,10 @@
       <a href="../chaos/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Chaos 混沌工程
+    
   </span>
   
 
@@ -2057,14 +2752,14 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
     Linux 常用命令
+    
   </span>
   
 
@@ -2074,8 +2769,10 @@
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
     Linux 常用命令
+    
   </span>
   
 
@@ -2086,8 +2783,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
@@ -3384,8 +4079,10 @@
       <a href="../crontab/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Crontab
+    
   </span>
   
 
@@ -3405,8 +4102,10 @@
       <a href="../git/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     git 命令
+    
   </span>
   
 
@@ -3426,8 +4125,10 @@
       <a href="../jenkins/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Jenkins
+    
   </span>
   
 
@@ -3447,8 +4148,10 @@
       <a href="../journalctl/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     journalctl 教程
+    
   </span>
   
 
@@ -3468,8 +4171,10 @@
       <a href="../supervisor/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Supervisor 教程
+    
   </span>
   
 
@@ -3494,14 +4199,29 @@
   
     
     
-    
       
         
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -3510,11 +4230,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     数据库
+    
   </span>
   
 
@@ -3536,7 +4258,23 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -3552,8 +4290,10 @@
           <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Elastic
+    
   </span>
   
 
@@ -3577,8 +4317,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Elasticsearch 教程
+    
   </span>
   
 
@@ -3598,8 +4340,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/filebeat/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     filebeat.yml 配置文件
+    
   </span>
   
 
@@ -3619,8 +4363,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     ElasticSearch 面试手册
+    
   </span>
   
 
@@ -3640,8 +4386,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/logstash/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     logstash 配置文件
+    
   </span>
   
 
@@ -3661,8 +4409,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/questions/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     ElasticSearch 工作中遇到的问题
+    
   </span>
   
 
@@ -3688,7 +4438,15 @@
   
     
     
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -3704,8 +4462,10 @@
           <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     HBase
+    
   </span>
   
 
@@ -3729,8 +4489,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/HBase/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Basic
+    
   </span>
   
 
@@ -3756,7 +4518,19 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -3772,8 +4546,10 @@
           <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     MongoDB
+    
   </span>
   
 
@@ -3797,8 +4573,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     MongoDB 完整教程：从入门到精通
+    
   </span>
   
 
@@ -3818,8 +4596,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     MongoDB 面试手册
+    
   </span>
   
 
@@ -3839,8 +4619,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/questions/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     MongoDB 工作中遇到的问题
+    
   </span>
   
 
@@ -3866,7 +4648,21 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -3882,8 +4678,10 @@
           <label class="md-nav__link" for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     MySQL
+    
   </span>
   
 
@@ -3907,8 +4705,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     MySQL 教程
+    
   </span>
   
 
@@ -3928,8 +4728,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/command/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     MySQL 常用命令
+    
   </span>
   
 
@@ -3949,8 +4751,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     MySQL 面试题
+    
   </span>
   
 
@@ -3970,8 +4774,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/questions/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     MySQl 常见问题
+    
   </span>
   
 
@@ -3997,7 +4803,19 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -4013,8 +4831,10 @@
           <label class="md-nav__link" for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     PostgreSQL
+    
   </span>
   
 
@@ -4038,8 +4858,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/PostgreSQL/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     PostgreSQL 进阶教程
+    
   </span>
   
 
@@ -4059,8 +4881,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/PostgreSQL/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     PostgreSQL基础教程
+    
   </span>
   
 
@@ -4080,8 +4904,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/PostgreSQL/demo/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Demo
+    
   </span>
   
 
@@ -4107,7 +4933,19 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -4123,8 +4961,10 @@
           <label class="md-nav__link" for="__nav_7_6" id="__nav_7_6_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Redis
+    
   </span>
   
 
@@ -4148,8 +4988,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Redis 教程
+    
   </span>
   
 
@@ -4169,8 +5011,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Redis 面试手册
+    
   </span>
   
 
@@ -4190,8 +5034,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/questions/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Redis 工作中常见问题
+    
   </span>
   
 
@@ -4224,14 +5070,23 @@
   
     
     
-    
       
         
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -4240,11 +5095,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     数据结构和算法
+    
   </span>
   
 
@@ -4268,8 +5125,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/algorithm/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     算法
+    
   </span>
   
 
@@ -4289,8 +5148,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/leetcode/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     LeetCode 题目
+    
   </span>
   
 
@@ -4310,8 +5171,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/struct/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     数据结构
+    
   </span>
   
 
@@ -4336,14 +5199,25 @@
   
     
     
-    
       
         
+      
+        
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -4352,11 +5226,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
         
           
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     服务器
+    
   </span>
   
 
@@ -4378,7 +5254,15 @@
   
     
     
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -4394,8 +5278,10 @@
           <label class="md-nav__link" for="__nav_9_1" id="__nav_9_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Gunicorn
+    
   </span>
   
 
@@ -4419,8 +5305,10 @@
       <a href="../../%E6%9C%8D%E5%8A%A1%E5%99%A8/gunicorn/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Gunicorn 教程
+    
   </span>
   
 
@@ -4446,7 +5334,17 @@
   
     
     
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -4462,8 +5360,10 @@
           <label class="md-nav__link" for="__nav_9_2" id="__nav_9_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Nginx
+    
   </span>
   
 
@@ -4487,8 +5387,10 @@
       <a href="../../%E6%9C%8D%E5%8A%A1%E5%99%A8/nginx/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Nginx 教程
+    
   </span>
   
 
@@ -4508,8 +5410,10 @@
       <a href="../../%E6%9C%8D%E5%8A%A1%E5%99%A8/nginx/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     nginx 面试手册
+    
   </span>
   
 
@@ -4535,7 +5439,15 @@
   
     
     
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -4551,8 +5463,10 @@
           <label class="md-nav__link" for="__nav_9_3" id="__nav_9_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Uvicorn
+    
   </span>
   
 
@@ -4576,8 +5490,10 @@
       <a href="../../%E6%9C%8D%E5%8A%A1%E5%99%A8/uvicorn/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Uvicorn 教程
+    
   </span>
   
 
@@ -4603,7 +5519,15 @@
   
     
     
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -4619,8 +5543,10 @@
           <label class="md-nav__link" for="__nav_9_4" id="__nav_9_4_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Uwsgi
+    
   </span>
   
 
@@ -4644,8 +5570,10 @@
       <a href="../../%E6%9C%8D%E5%8A%A1%E5%99%A8/uwsgi/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     uWSGI 教程
+    
   </span>
   
 
@@ -4678,14 +5606,27 @@
   
     
     
-    
       
         
+      
+        
+      
+        
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -4694,11 +5635,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
         
           
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     系统设计
+    
   </span>
   
 
@@ -4722,8 +5665,10 @@
       <a href="../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/bloom/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     布隆过滤器
+    
   </span>
   
 
@@ -4743,8 +5688,10 @@
       <a href="../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/hash/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     一致性哈希
+    
   </span>
   
 
@@ -4764,8 +5711,10 @@
       <a href="../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/id/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     唯一ID
+    
   </span>
   
 
@@ -4785,8 +5734,10 @@
       <a href="../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     系统设计题目
+    
   </span>
   
 
@@ -4806,8 +5757,10 @@
       <a href="../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/ratelimit/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     限流
+    
   </span>
   
 
@@ -4832,14 +5785,25 @@
   
     
     
-    
       
         
+      
+        
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -4848,11 +5812,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11" >
         
           
-          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="">
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     计算机基础
+    
   </span>
   
 
@@ -4876,8 +5842,10 @@
       <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     http 手册
+    
   </span>
   
 
@@ -4897,8 +5865,10 @@
       <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/network/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     计算机网络面试手册
+    
   </span>
   
 
@@ -4918,8 +5888,10 @@
       <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/system/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     操作系统面试手册
+    
   </span>
   
 
@@ -4939,8 +5911,10 @@
       <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/websocket/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Websocket
+    
   </span>
   
 
@@ -4965,14 +5939,23 @@
   
     
     
-    
       
         
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -4981,11 +5964,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12" >
         
           
-          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="">
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     语言篇
+    
   </span>
   
 
@@ -5007,7 +5992,19 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -5023,8 +6020,10 @@
           <label class="md-nav__link" for="__nav_12_1" id="__nav_12_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     C++
+    
   </span>
   
 
@@ -5048,8 +6047,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/C%2B%2B/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     C++ 进阶教程
+    
   </span>
   
 
@@ -5069,8 +6070,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/C%2B%2B/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     C++ 基础教程
+    
   </span>
   
 
@@ -5090,8 +6093,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/C%2B%2B/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     C++ 面试手册
+    
   </span>
   
 
@@ -5117,7 +6122,19 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -5133,8 +6150,10 @@
           <label class="md-nav__link" for="__nav_12_2" id="__nav_12_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Golang
+    
   </span>
   
 
@@ -5158,8 +6177,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Go 进阶教程
+    
   </span>
   
 
@@ -5179,8 +6200,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Go 基础教程
+    
   </span>
   
 
@@ -5198,7 +6221,47 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -5214,8 +6277,10 @@
           <label class="md-nav__link" for="__nav_12_2_3" id="__nav_12_2_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     常用库
+    
   </span>
   
 
@@ -5239,8 +6304,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/cobra/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Cobra
+    
   </span>
   
 
@@ -5260,8 +6327,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/encoding/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Encoding
+    
   </span>
   
 
@@ -5281,8 +6350,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/fmt/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     fmt 库
+    
   </span>
   
 
@@ -5302,8 +6373,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/gin/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Gin
+    
   </span>
   
 
@@ -5323,8 +6396,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/gorm/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Gorm
+    
   </span>
   
 
@@ -5344,8 +6419,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/io/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Io
+    
   </span>
   
 
@@ -5365,8 +6442,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/jwt-go/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Jwt go
+    
   </span>
   
 
@@ -5386,8 +6465,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/logrus/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Logrus
+    
   </span>
   
 
@@ -5407,8 +6488,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/net/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     net
+    
   </span>
   
 
@@ -5428,8 +6511,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/os/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Os
+    
   </span>
   
 
@@ -5449,8 +6534,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/pprof/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Pprof
+    
   </span>
   
 
@@ -5470,8 +6557,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/protobuf/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Protobuf
+    
   </span>
   
 
@@ -5491,8 +6580,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/sync/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Sync
+    
   </span>
   
 
@@ -5512,8 +6603,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/testify/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Testify
+    
   </span>
   
 
@@ -5533,8 +6626,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/time/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Time
+    
   </span>
   
 
@@ -5554,8 +6649,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/viper/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Viper
+    
   </span>
   
 
@@ -5575,8 +6672,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/zap/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Zap
+    
   </span>
   
 
@@ -5610,7 +6709,21 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -5626,8 +6739,10 @@
           <label class="md-nav__link" for="__nav_12_3" id="__nav_12_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Python
+    
   </span>
   
 
@@ -5651,8 +6766,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Python 进阶教程
+    
   </span>
   
 
@@ -5672,8 +6789,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     python 基础教程
+    
   </span>
   
 
@@ -5693,8 +6812,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Python 面试手册
+    
   </span>
   
 
@@ -5712,7 +6833,87 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -5728,8 +6929,10 @@
           <label class="md-nav__link" for="__nav_12_3_4" id="__nav_12_3_4_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Python常用库
+    
   </span>
   
 
@@ -5753,8 +6956,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/Seaborn/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Seaborn
+    
   </span>
   
 
@@ -5774,8 +6979,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/beautifulsoup/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     beautifulsoup 模块
+    
   </span>
   
 
@@ -5795,8 +7002,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/celery/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Celery
+    
   </span>
   
 
@@ -5816,8 +7025,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/click/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Click
+    
   </span>
   
 
@@ -5837,8 +7048,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/datastruct/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     数据结构和算法
+    
   </span>
   
 
@@ -5858,8 +7071,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/datetime/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     datetime 模块
+    
   </span>
   
 
@@ -5879,8 +7094,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/functools/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     functools 模块
+    
   </span>
   
 
@@ -5900,8 +7117,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/jose/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Jose
+    
   </span>
   
 
@@ -5921,8 +7140,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/json/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     json 模块
+    
   </span>
   
 
@@ -5942,8 +7163,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/logging/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     logging 模块
+    
   </span>
   
 
@@ -5963,8 +7186,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/math/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     math 模块
+    
   </span>
   
 
@@ -5984,8 +7209,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/matpliot/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     matpliot 使用教程
+    
   </span>
   
 
@@ -6005,8 +7232,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/mock/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     mock 模块
+    
   </span>
   
 
@@ -6026,8 +7255,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/numpy/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     NumPy 教程
+    
   </span>
   
 
@@ -6047,8 +7278,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/os/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     os模块
+    
   </span>
   
 
@@ -6068,8 +7301,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pandas/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Pandas 教程
+    
   </span>
   
 
@@ -6089,8 +7324,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/passlib/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Passlib
+    
   </span>
   
 
@@ -6110,8 +7347,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pathlib/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     pathlib 模块
+    
   </span>
   
 
@@ -6131,8 +7370,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pickle/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     pickle 模块
+    
   </span>
   
 
@@ -6152,8 +7393,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pydantic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Pydantic
+    
   </span>
   
 
@@ -6173,8 +7416,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pymysql/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     pymysql 模块
+    
   </span>
   
 
@@ -6194,8 +7439,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pytest/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     pytest 模块
+    
   </span>
   
 
@@ -6215,8 +7462,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pytorch/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     PyTorch 从入门到精通：详细教程
+    
   </span>
   
 
@@ -6236,8 +7485,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/queue/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     queue 模块
+    
   </span>
   
 
@@ -6257,8 +7508,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/random/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     random 模块
+    
   </span>
   
 
@@ -6278,8 +7531,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/re/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     re 模块
+    
   </span>
   
 
@@ -6299,8 +7554,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/redis/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     redis
+    
   </span>
   
 
@@ -6320,8 +7577,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/requests/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     requests 模块
+    
   </span>
   
 
@@ -6341,8 +7600,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scikit-learn/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     scikit-learn
+    
   </span>
   
 
@@ -6362,8 +7623,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scipy/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     scipy 模块
+    
   </span>
   
 
@@ -6383,8 +7646,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scrapy/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     scrapy 教程
+    
   </span>
   
 
@@ -6404,8 +7669,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/selenium/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     selenium 使用教程
+    
   </span>
   
 
@@ -6425,8 +7692,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/shutil/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     shutil 模块
+    
   </span>
   
 
@@ -6446,8 +7715,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/sqlalchemy/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Sqlalchemy
+    
   </span>
   
 
@@ -6467,8 +7738,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/sys/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     sys 模块
+    
   </span>
   
 
@@ -6488,8 +7761,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/time/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     time 模块
+    
   </span>
   
 
@@ -6509,8 +7784,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/urllib/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     urllib 模块
+    
   </span>
   
 
@@ -6550,6 +7827,1299 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 系统信息与性能监控
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 系统信息与性能监控">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-uname-" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 uname - 查看操作系统信息
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-uptime-" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 uptime - 查看系统运行时间和负载
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-top-" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 top - 实时查看系统资源使用情况
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-htop-" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 htop - 更友好的实时监控工具（需安装）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-free-" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5 free - 查看内存使用情况
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-df-" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6 df - 查看磁盘空间使用情况
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-du-" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.7 du - 查看目录或文件的大小
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18-iostat-io-sysstat" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.8 iostat - 显示磁盘 I/O 统计（需安装 sysstat）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19-vmstat-" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.9 vmstat - 系统性能监控
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110-sar-sysstat" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.10 sar - 系统性能历史记录（需安装 sysstat）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 文件与目录操作
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 文件与目录操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-ls-" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 ls - 列出目录内容
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-cd-" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 cd - 切换目录
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-pwd-" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 pwd - 显示当前所在目录
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-cp-" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 cp - 复制文件或目录
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-mv-" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5 mv - 移动或重命名文件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-rm-" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6 rm - 删除文件或目录
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-mkdir-" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7 mkdir - 创建新目录
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-touch-" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8 touch - 创建空文件或更新文件时间戳
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-find-" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.9 find - 查找文件或目录
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210-locate-" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.10 locate - 快速查找文件（需安装）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 权限管理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 权限管理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-chmod-" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 chmod - 修改文件权限
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-chown-" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 chown - 修改文件所有者
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-umask-" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 umask - 设置默认权限掩码
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 进程管理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 进程管理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-ps-" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 ps - 查看当前进程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-kill-" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 kill - 终止进程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-pkill-" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 pkill - 根据进程名终止进程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-systemctl-" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 systemctl - 管理系统服务
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-service-" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5 service - 管理服务（旧版命令）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 网络管理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 网络管理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-ip-" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 ip - 查看和配置网络接口
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-ping-" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 ping - 测试网络连通性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-netstat-ss" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 netstat - 查看网络连接（ss 是其替代品）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-ss-netstat" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 ss - 替代 netstat 的现代工具
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-ss" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. ss 命令基本语法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 常用选项及参数详解
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 常用选项及参数详解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 显示所有连接
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 显示所有监听的端口
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-tcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 显示 TCP 连接
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-udp" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 显示 UDP 连接
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-unix" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5 显示 UNIX 套接字
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-tcp-udp" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6 显示所有连接（TCP 和 UDP）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-tcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7 显示监听的 TCP 端口
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-pid" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8 显示网络连接的进程（PID）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.9 显示每个连接的详细信息
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.10 过滤特定端口
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#211" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.11 显示统计信息
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-ss" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. ss 常用组合命令示例
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. ss 常用组合命令示例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-tcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 显示所有 TCP 连接（数字格式）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-udp" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 显示所有 UDP 连接
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-tcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 显示所有 TCP 连接及其状态
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-tcp-udp" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 显示所有监听的 TCP 和 UDP 端口
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-ipv6" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5 显示使用 IPv6 的连接
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6 显示套接字缓冲区信息
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.7 显示所有与某个 IP 相关的连接
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.8 根据进程 ID 过滤
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 输出字段解释
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-tcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. TCP 状态解释
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-ss-netstat" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. ss 与 netstat 对比
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. ss 与 netstat 对比">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#55-curl-" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5 curl - 命令行网络请求工具
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 基本语法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 常用选项及参数详解
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 常用选项及参数详解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 请求网页内容
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 保存文件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 显示响应头信息
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 发送自定义请求头
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-get" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5 发送 GET 请求
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-post" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6 发送 POST 请求
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7 发送 JSON 数据
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8 下载多个文件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.9 限制下载速度
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.10 显示下载进度
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#211_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.11 断点续传
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.12 发送表单数据（模拟表单提交）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.13 跟踪重定向
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#214" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.14 显示详细请求过程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#215" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.15 使用代理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#216" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.16 上传文件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#217-http-basic" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.17 认证请求（HTTP Basic 认证）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#218-cookie" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.18 显示 cookie 信息
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#219-ssl" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.19 跳过 SSL 证书验证
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-curl" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. curl 输出格式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. curl 输出格式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 输出到文件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 输出到终端但隐藏下载进度
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 只显示 HTTP 响应码
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 协议支持
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-curl" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. curl 实用示例
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. curl 实用示例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 获取网页的 HTTP 状态码
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 测试 API 接口
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 模拟浏览器行为
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56-wget-" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6 wget - 下载文件
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 软件包管理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 软件包管理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-debianubuntu" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 Debian/Ubuntu 系统
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-centosrhel" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 CentOS/RHEL 系统
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 基本语法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 常用选项及功能详解
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 常用选项及功能详解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 安装软件包
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 安装时忽略依赖关系
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 安装并覆盖已有文件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 升级软件包
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5 安装/升级时保留旧配置文件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6 删除软件包
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7 强制删除
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 查询功能
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 查询功能">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 查询已安装的软件包
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 查询软件包详细信息
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 查询软件包文件列表
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 查询文件属于哪个软件包
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5 查询软件包的依赖关系
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 验证功能
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 验证功能">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 验证软件包的完整性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 验证签名
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-rpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. RPM 文件管理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. RPM 文件管理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-rpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 查看 RPM 包的内容
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-rpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 查看 RPM 包的详细信息
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-rpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 查询 RPM 包的依赖关系
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-rpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. RPM 数据库管理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. RPM 数据库管理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-rpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 重建 RPM 数据库
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-rpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 清除 RPM 数据库中的缓存文件
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 实用示例
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. 实用示例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-rpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 下载并安装 RPM 包
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-rpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 升级多个 RPM 包
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3 查询特定软件包的版本
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4 删除已安装软件包
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#75-rpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.5 验证 RPM 包的完整性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-rpm-yum" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. RPM 与 YUM 对比
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           
             <div class="md-content" data-md-component="content">
@@ -6558,27 +9128,25 @@
                   
 
 
-<h1 id="linux">Linux 常用命令</h1>
+
+<h1 id="linux">Linux 常用命令<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h1>
 <p>在服务器管理中，Linux 系统常用命令的熟练掌握是至关重要的。为了全面涵盖各个方面的操作，以下内容将以更加详细的方式介绍 Linux 服务器中的常用命令，包括文件操作、系统监控、进程管理、网络配置、安全管理等。</p>
 <hr />
-<h2 id="1">1. 系统信息与性能监控</h2>
-<h3 id="11-uname-">1.1 <code>uname</code> - 查看操作系统信息</h3>
-<div class="codehilite"><pre><span></span><code>uname<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span>
+<h2 id="1">1. 系统信息与性能监控<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<h3 id="11-uname-">1.1 <code>uname</code> - 查看操作系统信息<a class="headerlink" href="#11-uname-" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>uname<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span>
 </code></pre></div>
-
-<p><strong>常用选项</strong>：
+<strong>常用选项</strong>：
 - <code>uname -a</code>：显示所有系统信息（包括内核版本、主机名、硬件架构等）。
 - <code>uname -r</code>：显示当前内核版本。</p>
-<h3 id="12-uptime-">1.2 <code>uptime</code> - 查看系统运行时间和负载</h3>
-<div class="codehilite"><pre><span></span><code>uptime
+<h3 id="12-uptime-">1.2 <code>uptime</code> - 查看系统运行时间和负载<a class="headerlink" href="#12-uptime-" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>uptime
 </code></pre></div>
-
-<p>显示系统的当前时间、运行时间、当前登录的用户数，以及最近 1、5、15 分钟的系统平均负载。</p>
-<h3 id="13-top-">1.3 <code>top</code> - 实时查看系统资源使用情况</h3>
-<div class="codehilite"><pre><span></span><code>top
+显示系统的当前时间、运行时间、当前登录的用户数，以及最近 1、5、15 分钟的系统平均负载。</p>
+<h3 id="13-top-">1.3 <code>top</code> - 实时查看系统资源使用情况<a class="headerlink" href="#13-top-" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>top
 </code></pre></div>
-
-<p><strong>主要信息</strong>：</p>
+<strong>主要信息</strong>：</p>
 <ul>
 <li><code>PID</code>：进程 ID。</li>
 <li><code>USER</code>：运行进程的用户。</li>
@@ -6587,347 +9155,263 @@
 <li><code>%MEM</code>：内存使用率。</li>
 </ul>
 <p>按 <code>q</code> 退出，<code>h</code> 查看帮助，<code>k</code> 杀掉某个进程。</p>
-<h3 id="14-htop-">1.4 <code>htop</code> - 更友好的实时监控工具（需安装）</h3>
-<div class="codehilite"><pre><span></span><code>htop
+<h3 id="14-htop-">1.4 <code>htop</code> - 更友好的实时监控工具（需安装）<a class="headerlink" href="#14-htop-" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>htop
 </code></pre></div>
-
-<p><code>htop</code> 比 <code>top</code> 更直观，支持上下滚动和更丰富的进程信息展示。它提供图形化 CPU 和内存利用率。</p>
-<h3 id="15-free-">1.5 <code>free</code> - 查看内存使用情况</h3>
-<div class="codehilite"><pre><span></span><code>free<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span>
+<code>htop</code> 比 <code>top</code> 更直观，支持上下滚动和更丰富的进程信息展示。它提供图形化 CPU 和内存利用率。</p>
+<h3 id="15-free-">1.5 <code>free</code> - 查看内存使用情况<a class="headerlink" href="#15-free-" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>free<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span>
 </code></pre></div>
-
-<ul>
-<li><code>free -h</code>：以人类可读的格式显示内存使用情况，显示已用、可用、缓存内存等信息。</li>
-</ul>
-<h3 id="16-df-">1.6 <code>df</code> - 查看磁盘空间使用情况</h3>
-<div class="codehilite"><pre><span></span><code>df<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span>
+- <code>free -h</code>：以人类可读的格式显示内存使用情况，显示已用、可用、缓存内存等信息。</p>
+<h3 id="16-df-">1.6 <code>df</code> - 查看磁盘空间使用情况<a class="headerlink" href="#16-df-" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>df<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span>
 </code></pre></div>
-
-<ul>
-<li><code>df -h</code>：以人类可读的格式显示每个分区的使用情况（单位为 GB/MB）。</li>
-<li><code>df -T</code>：显示每个分区的文件系统类型。</li>
-</ul>
-<h3 id="17-du-">1.7 <code>du</code> - 查看目录或文件的大小</h3>
-<div class="codehilite"><pre><span></span><code>du<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span><span class="w"> </span><span class="o">[</span>路径<span class="o">]</span>
+- <code>df -h</code>：以人类可读的格式显示每个分区的使用情况（单位为 GB/MB）。
+- <code>df -T</code>：显示每个分区的文件系统类型。</p>
+<h3 id="17-du-">1.7 <code>du</code> - 查看目录或文件的大小<a class="headerlink" href="#17-du-" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>du<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span><span class="w"> </span><span class="o">[</span>路径<span class="o">]</span>
 </code></pre></div>
-
-<ul>
-<li><code>du -sh /var/log</code>：显示 <code>/var/log</code> 目录的总大小。</li>
-<li><code>du -h --max-depth=1 /</code>：显示根目录下每个一级子目录的大小。</li>
-</ul>
-<h3 id="18-iostat-io-sysstat">1.8 <code>iostat</code> - 显示磁盘 I/O 统计（需安装 <code>sysstat</code>）</h3>
-<div class="codehilite"><pre><span></span><code>iostat<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span>
+- <code>du -sh /var/log</code>：显示 <code>/var/log</code> 目录的总大小。
+- <code>du -h --max-depth=1 /</code>：显示根目录下每个一级子目录的大小。</p>
+<h3 id="18-iostat-io-sysstat">1.8 <code>iostat</code> - 显示磁盘 I/O 统计（需安装 <code>sysstat</code>）<a class="headerlink" href="#18-iostat-io-sysstat" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>iostat<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span>
 </code></pre></div>
-
-<ul>
-<li><code>iostat</code>：显示每个设备的 CPU 使用情况和 I/O 统计。</li>
-<li><code>iostat -x</code>：显示详细的设备 I/O 统计信息。</li>
-</ul>
-<h3 id="19-vmstat-">1.9 <code>vmstat</code> - 系统性能监控</h3>
-<div class="codehilite"><pre><span></span><code>vmstat<span class="w"> </span><span class="o">[</span>时间间隔<span class="o">]</span><span class="w"> </span><span class="o">[</span>次数<span class="o">]</span>
+- <code>iostat</code>：显示每个设备的 CPU 使用情况和 I/O 统计。
+- <code>iostat -x</code>：显示详细的设备 I/O 统计信息。</p>
+<h3 id="19-vmstat-">1.9 <code>vmstat</code> - 系统性能监控<a class="headerlink" href="#19-vmstat-" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>vmstat<span class="w"> </span><span class="o">[</span>时间间隔<span class="o">]</span><span class="w"> </span><span class="o">[</span>次数<span class="o">]</span>
 </code></pre></div>
-
-<ul>
-<li><code>vmstat 1 5</code>：每秒刷新一次，共输出 5 次系统的内存、CPU、I/O 等情况。</li>
-</ul>
-<h3 id="110-sar-sysstat">1.10 <code>sar</code> - 系统性能历史记录（需安装 <code>sysstat</code>）</h3>
-<div class="codehilite"><pre><span></span><code>sar<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span><span class="w"> </span><span class="o">[</span>时间间隔<span class="o">]</span><span class="w"> </span><span class="o">[</span>次数<span class="o">]</span>
+- <code>vmstat 1 5</code>：每秒刷新一次，共输出 5 次系统的内存、CPU、I/O 等情况。</p>
+<h3 id="110-sar-sysstat">1.10 <code>sar</code> - 系统性能历史记录（需安装 <code>sysstat</code>）<a class="headerlink" href="#110-sar-sysstat" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>sar<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span><span class="w"> </span><span class="o">[</span>时间间隔<span class="o">]</span><span class="w"> </span><span class="o">[</span>次数<span class="o">]</span>
 </code></pre></div>
-
-<ul>
-<li><code>sar -u 1 3</code>：每秒显示一次 CPU 使用情况，显示 3 次。</li>
-<li><code>sar -r 1 3</code>：每秒显示一次内存使用情况，显示 3 次。</li>
-</ul>
+- <code>sar -u 1 3</code>：每秒显示一次 CPU 使用情况，显示 3 次。
+- <code>sar -r 1 3</code>：每秒显示一次内存使用情况，显示 3 次。</p>
 <hr />
-<h2 id="2">2. 文件与目录操作</h2>
-<h3 id="21-ls-">2.1 <code>ls</code> - 列出目录内容</h3>
-<div class="codehilite"><pre><span></span><code>ls<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span><span class="w"> </span><span class="o">[</span>目录<span class="o">]</span>
+<h2 id="2">2. 文件与目录操作<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<h3 id="21-ls-">2.1 <code>ls</code> - 列出目录内容<a class="headerlink" href="#21-ls-" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>ls<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span><span class="w"> </span><span class="o">[</span>目录<span class="o">]</span>
 </code></pre></div>
-
-<p><strong>常用选项</strong>：
+<strong>常用选项</strong>：
 - <code>ls</code>：列出当前目录的内容。
 - <code>ls -l</code>：以详细列表模式显示文件信息（包括权限、所有者、大小、修改时间等）。
 - <code>ls -a</code>：显示所有文件，包括隐藏文件（以 <code>.</code> 开头）。
 - <code>ls -h</code>：以人类可读的方式显示文件大小。</p>
-<h3 id="22-cd-">2.2 <code>cd</code> - 切换目录</h3>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="o">[</span>目录<span class="o">]</span>
+<h3 id="22-cd-">2.2 <code>cd</code> - 切换目录<a class="headerlink" href="#22-cd-" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="o">[</span>目录<span class="o">]</span>
 </code></pre></div>
-
-<ul>
-<li><code>cd /path/to/directory</code>：切换到指定目录。</li>
-<li><code>cd ~</code>：切换到用户的主目录。</li>
-<li><code>cd -</code>：切换到上一次所在的目录。</li>
-</ul>
-<h3 id="23-pwd-">2.3 <code>pwd</code> - 显示当前所在目录</h3>
-<div class="codehilite"><pre><span></span><code><span class="nb">pwd</span>
+- <code>cd /path/to/directory</code>：切换到指定目录。
+- <code>cd ~</code>：切换到用户的主目录。
+- <code>cd -</code>：切换到上一次所在的目录。</p>
+<h3 id="23-pwd-">2.3 <code>pwd</code> - 显示当前所在目录<a class="headerlink" href="#23-pwd-" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code><span class="nb">pwd</span>
 </code></pre></div>
-
-<p>显示当前工作目录的绝对路径。</p>
-<h3 id="24-cp-">2.4 <code>cp</code> - 复制文件或目录</h3>
-<div class="codehilite"><pre><span></span><code>cp<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span><span class="w"> </span>源文件<span class="w"> </span>目标路径
+显示当前工作目录的绝对路径。</p>
+<h3 id="24-cp-">2.4 <code>cp</code> - 复制文件或目录<a class="headerlink" href="#24-cp-" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>cp<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span><span class="w"> </span>源文件<span class="w"> </span>目标路径
 </code></pre></div>
-
-<p><strong>常用选项</strong>：
+<strong>常用选项</strong>：
 - <code>cp file1 /path/to/destination/</code>：复制文件 <code>file1</code> 到目标路径。
 - <code>cp -r dir1 /path/to/destination/</code>：递归复制目录 <code>dir1</code> 及其内容。</p>
-<h3 id="25-mv-">2.5 <code>mv</code> - 移动或重命名文件</h3>
-<div class="codehilite"><pre><span></span><code>mv<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span><span class="w"> </span>源文件<span class="w"> </span>目标路径
+<h3 id="25-mv-">2.5 <code>mv</code> - 移动或重命名文件<a class="headerlink" href="#25-mv-" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>mv<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span><span class="w"> </span>源文件<span class="w"> </span>目标路径
 </code></pre></div>
-
-<p><strong>常用操作</strong>：
+<strong>常用操作</strong>：
 - <code>mv file1 /path/to/destination/</code>：将文件 <code>file1</code> 移动到目标路径。
 - <code>mv file1 file2</code>：将 <code>file1</code> 重命名为 <code>file2</code>。</p>
-<h3 id="26-rm-">2.6 <code>rm</code> - 删除文件或目录</h3>
-<div class="codehilite"><pre><span></span><code>rm<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span><span class="w"> </span>文件名
+<h3 id="26-rm-">2.6 <code>rm</code> - 删除文件或目录<a class="headerlink" href="#26-rm-" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>rm<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span><span class="w"> </span>文件名
 </code></pre></div>
-
-<p><strong>常用选项</strong>：
+<strong>常用选项</strong>：
 - <code>rm file1</code>：删除文件 <code>file1</code>。
 - <code>rm -r dir1</code>：递归删除目录 <code>dir1</code> 及其内容。
 - <code>rm -i</code>：删除前提示确认。</p>
-<h3 id="27-mkdir-">2.7 <code>mkdir</code> - 创建新目录</h3>
-<div class="codehilite"><pre><span></span><code>mkdir<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span><span class="w"> </span>目录名
+<h3 id="27-mkdir-">2.7 <code>mkdir</code> - 创建新目录<a class="headerlink" href="#27-mkdir-" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span><span class="w"> </span>目录名
 </code></pre></div>
-
-<ul>
-<li><code>mkdir newdir</code>：创建目录 <code>newdir</code>。</li>
-<li><code>mkdir -p /path/to/newdir</code>：递归创建目录，包括必要的父目录。</li>
-</ul>
-<h3 id="28-touch-">2.8 <code>touch</code> - 创建空文件或更新文件时间戳</h3>
-<div class="codehilite"><pre><span></span><code>touch<span class="w"> </span>文件名
+- <code>mkdir newdir</code>：创建目录 <code>newdir</code>。
+- <code>mkdir -p /path/to/newdir</code>：递归创建目录，包括必要的父目录。</p>
+<h3 id="28-touch-">2.8 <code>touch</code> - 创建空文件或更新文件时间戳<a class="headerlink" href="#28-touch-" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>touch<span class="w"> </span>文件名
 </code></pre></div>
-
-<ul>
-<li><code>touch newfile</code>：创建一个新的空文件 <code>newfile</code>。</li>
-<li><code>touch -t 202309251200 file</code>：将 <code>file</code> 的时间戳设置为 2023年09月25日12时00分。</li>
-</ul>
-<h3 id="29-find-">2.9 <code>find</code> - 查找文件或目录</h3>
-<div class="codehilite"><pre><span></span><code>find<span class="w"> </span><span class="o">[</span>路径<span class="o">]</span><span class="w"> </span><span class="o">[</span>选项<span class="o">]</span><span class="w"> </span><span class="o">[</span>搜索条件<span class="o">]</span>
+- <code>touch newfile</code>：创建一个新的空文件 <code>newfile</code>。
+- <code>touch -t 202309251200 file</code>：将 <code>file</code> 的时间戳设置为 2023年09月25日12时00分。</p>
+<h3 id="29-find-">2.9 <code>find</code> - 查找文件或目录<a class="headerlink" href="#29-find-" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>find<span class="w"> </span><span class="o">[</span>路径<span class="o">]</span><span class="w"> </span><span class="o">[</span>选项<span class="o">]</span><span class="w"> </span><span class="o">[</span>搜索条件<span class="o">]</span>
 </code></pre></div>
-
-<p><strong>常用示例</strong>：
+<strong>常用示例</strong>：
 - <code>find /home -name "*.log"</code>：在 <code>/home</code> 目录下查找所有 <code>.log</code> 文件。
 - <code>find / -type d -name "test"</code>：查找名为 <code>test</code> 的目录。
 - <code>find /var/log -mtime -7</code>：查找过去 7 天内修改过的文件。</p>
-<h3 id="210-locate-">2.10 <code>locate</code> - 快速查找文件（需安装）</h3>
-<div class="codehilite"><pre><span></span><code>locate<span class="w"> </span>文件名
+<h3 id="210-locate-">2.10 <code>locate</code> - 快速查找文件（需安装）<a class="headerlink" href="#210-locate-" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>locate<span class="w"> </span>文件名
 </code></pre></div>
-
-<ul>
-<li><code>locate filename</code>：快速查找文件 <code>filename</code>，其基于预先生成的数据库。</li>
-</ul>
+- <code>locate filename</code>：快速查找文件 <code>filename</code>，其基于预先生成的数据库。</p>
 <hr />
-<h2 id="3">3. 权限管理</h2>
-<h3 id="31-chmod-">3.1 <code>chmod</code> - 修改文件权限</h3>
-<div class="codehilite"><pre><span></span><code>chmod<span class="w"> </span><span class="o">[</span>权限<span class="o">]</span><span class="w"> </span>文件名
+<h2 id="3">3. 权限管理<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<h3 id="31-chmod-">3.1 <code>chmod</code> - 修改文件权限<a class="headerlink" href="#31-chmod-" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>chmod<span class="w"> </span><span class="o">[</span>权限<span class="o">]</span><span class="w"> </span>文件名
 </code></pre></div>
-
-<ul>
-<li><code>chmod 755 script.sh</code>：为文件 <code>script.sh</code> 设置 <code>rwxr-xr-x</code> 权限。</li>
-<li><code>chmod +x script.sh</code>：为文件 <code>script.sh</code> 添加执行权限。</li>
-</ul>
-<h3 id="32-chown-">3.2 <code>chown</code> - 修改文件所有者</h3>
-<div class="codehilite"><pre><span></span><code>chown<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span><span class="w"> </span>所有者:用户组<span class="w"> </span>文件名
+- <code>chmod 755 script.sh</code>：为文件 <code>script.sh</code> 设置 <code>rwxr-xr-x</code> 权限。
+- <code>chmod +x script.sh</code>：为文件 <code>script.sh</code> 添加执行权限。</p>
+<h3 id="32-chown-">3.2 <code>chown</code> - 修改文件所有者<a class="headerlink" href="#32-chown-" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>chown<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span><span class="w"> </span>所有者:用户组<span class="w"> </span>文件名
 </code></pre></div>
-
-<ul>
-<li><code>chown user1:group1 file1</code>：将 <code>file1</code> 的所有者改为 <code>user1</code>，所属组改为 <code>group1</code>。</li>
-<li><code>chown -R user1:group1 /path/to/dir</code>：递归修改目录及其文件的所有者和所属组。</li>
-</ul>
-<h3 id="33-umask-">3.3 <code>umask</code> - 设置默认权限掩码</h3>
-<div class="codehilite"><pre><span></span><code><span class="nb">umask</span><span class="w"> </span><span class="o">[</span>权限掩码<span class="o">]</span>
+- <code>chown user1:group1 file1</code>：将 <code>file1</code> 的所有者改为 <code>user1</code>，所属组改为 <code>group1</code>。
+- <code>chown -R user1:group1 /path/to/dir</code>：递归修改目录及其文件的所有者和所属组。</p>
+<h3 id="33-umask-">3.3 <code>umask</code> - 设置默认权限掩码<a class="headerlink" href="#33-umask-" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code><span class="nb">umask</span><span class="w"> </span><span class="o">[</span>权限掩码<span class="o">]</span>
 </code></pre></div>
-
-<ul>
-<li><code>umask 022</code>：设置文件默认权限掩码，使新文件默认权限为 <code>644</code>，目录为 <code>755</code>。</li>
-</ul>
+- <code>umask 022</code>：设置文件默认权限掩码，使新文件默认权限为 <code>644</code>，目录为 <code>755</code>。</p>
 <hr />
-<h2 id="4">4. 进程管理</h2>
-<h3 id="41-ps-">4.1 <code>ps</code> - 查看当前进程</h3>
-<div class="codehilite"><pre><span></span><code>ps<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span>
+<h2 id="4">4. 进程管理<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<h3 id="41-ps-">4.1 <code>ps</code> - 查看当前进程<a class="headerlink" href="#41-ps-" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>ps<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span>
 </code></pre></div>
-
-<ul>
-<li><code>ps aux</code>：显示所有进程及其详细信息，包括进程号、CPU 使用率、内存使用率等。</li>
-<li><code>ps -ef</code>：显示所有进程的完整格式。</li>
-</ul>
-<h3 id="42-kill-">4.2 <code>kill</code> - 终止进程</h3>
-<div class="codehilite"><pre><span></span><code><span class="nb">kill</span><span class="w"> </span><span class="o">[</span>选项<span class="o">]</span><span class="w"> </span>进程号
+- <code>ps aux</code>：显示所有进程及其详细信息，包括进程号、CPU 使用率、内存使用率等。
+- <code>ps -ef</code>：显示所有进程的完整格式。</p>
+<h3 id="42-kill-">4.2 <code>kill</code> - 终止进程<a class="headerlink" href="#42-kill-" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code><span class="nb">kill</span><span class="w"> </span><span class="o">[</span>选项<span class="o">]</span><span class="w"> </span>进程号
 </code></pre></div>
-
-<ul>
-<li><code>kill 1234</code>：终止进程号为 <code>1234</code> 的进程。</li>
-<li><code>kill -9 1234</code>：强制终止进程号为 <code>1234</code> 的进程。</li>
-</ul>
-<h3 id="43-pkill-">4.3 <code>pkill</code> - 根据进程名终止进程</h3>
-<div class="codehilite"><pre><span></span><code>pkill<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span><span class="w"> </span>进程名
+- <code>kill 1234</code>：终止进程号为 <code>1234</code> 的进程。
+- <code>kill -9 1234</code>：强制终止进程号为 <code>1234</code> 的进程。</p>
+<h3 id="43-pkill-">4.3 <code>pkill</code> - 根据进程名终止进程<a class="headerlink" href="#43-pkill-" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>pkill<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span><span class="w"> </span>进程名
 </code></pre></div>
-
-<ul>
-<li><code>pkill nginx</code>：终止所有名为 <code>nginx</code> 的进程。</li>
-</ul>
-<h3 id="44-systemctl-">4.4 <code>systemctl</code> - 管理系统服务</h3>
-<div class="codehilite"><pre><span></span><code>systemctl<span class="w"> </span><span class="o">[</span>动作<span class="o">]</span><span class="w"> </span><span class="o">[</span>服务名<span class="o">]</span>
+- <code>pkill nginx</code>：终止所有名为 <code>nginx</code> 的进程。</p>
+<h3 id="44-systemctl-">4.4 <code>systemctl</code> - 管理系统服务<a class="headerlink" href="#44-systemctl-" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>systemctl<span class="w"> </span><span class="o">[</span>动作<span class="o">]</span><span class="w"> </span><span class="o">[</span>服务名<span class="o">]</span>
 </code></pre></div>
-
-<p><strong>常用命令</strong>：
+<strong>常用命令</strong>：
 - <code>systemctl start nginx</code>：启动 <code>nginx</code> 服务。
 - <code>systemctl stop nginx</code>：停止 <code>nginx</code> 服务。
 - <code>systemctl restart nginx</code>：重启 <code>nginx</code> 服务。
 - <code>systemctl status nginx</code>：查看 <code>nginx</code> 服务状态。
 - <code>systemctl enable nginx</code>：设置 <code>nginx</code> 服务开机自动启动。
 - <code>systemctl disable nginx</code>：取消 <code>nginx</code> 服务开机启动。</p>
-<h3 id="45-service-">4.5 <code>service</code> - 管理服务（旧版命令）</h3>
-<div class="codehilite"><pre><span></span><code>service<span class="w"> </span><span class="o">[</span>服务名<span class="o">]</span><span class="w"> </span><span class="o">[</span>动作<span class="o">]</span>
+<h3 id="45-service-">4.5 <code>service</code> - 管理服务（旧版命令）<a class="headerlink" href="#45-service-" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>service<span class="w"> </span><span class="o">[</span>服务名<span class="o">]</span><span class="w"> </span><span class="o">[</span>动作<span class="o">]</span>
 </code></pre></div>
-
-<p><strong>常用命令</strong>：
+<strong>常用命令</strong>：
 - <code>service nginx start</code>：启动 <code>nginx</code> 服务。
 - <code>service nginx stop</code>：停止 <code>nginx</code> 服务。</p>
 <hr />
-<h2 id="5">5. 网络管理</h2>
-<h3 id="51-ip-">5.1 <code>ip</code> - 查看和配置网络接口</h3>
-<div class="codehilite"><pre><span></span><code>ip<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span><span class="w"> </span>命令
+<h2 id="5">5. 网络管理<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<h3 id="51-ip-">5.1 <code>ip</code> - 查看和配置网络接口<a class="headerlink" href="#51-ip-" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>ip<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span><span class="w"> </span>命令
 </code></pre></div>
-
-<p><strong>常用命令</strong>：
+<strong>常用命令</strong>：
 - <code>ip addr</code>：查看网络接口的 IP 地址。
 - <code>ip link</code>：显示网络接口的状态。
 - <code>ip route</code>：查看路由信息。</p>
-<h3 id="52-ping-">5.2 <code>ping</code> - 测试网络连通性</h3>
-<div class="codehilite"><pre><span></span><code>ping<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span><span class="w"> </span>目标
+<h3 id="52-ping-">5.2 <code>ping</code> - 测试网络连通性<a class="headerlink" href="#52-ping-" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>ping<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span><span class="w"> </span>目标
 </code></pre></div>
-
-<ul>
-<li><code>ping google.com</code>：测试到 <code>google.com</code> 的网络连通性。</li>
-</ul>
-<h3 id="53-netstat-ss">5.3 <code>netstat</code> - 查看网络连接（<code>ss</code> 是其替代品）</h3>
-<div class="codehilite"><pre><span></span><code>netstat<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span>
+- <code>ping google.com</code>：测试到 <code>google.com</code> 的网络连通性。</p>
+<h3 id="53-netstat-ss">5.3 <code>netstat</code> - 查看网络连接（<code>ss</code> 是其替代品）<a class="headerlink" href="#53-netstat-ss" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>netstat<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span>
 </code></pre></div>
-
-<p><strong>常用选项</strong>：
+<strong>常用选项</strong>：
 - <code>netstat -tuln</code>：显示正在监听的 TCP/UDP 端口。
 - <code>netstat -anp</code>：显示所有网络连接及其关联进程。</p>
-<h3 id="54-ss-netstat">5.4 <code>ss</code> - 替代 <code>netstat</code> 的现代工具</h3>
-<div class="codehilite"><pre><span></span><code>ss<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span>
+<h3 id="54-ss-netstat">5.4 <code>ss</code> - 替代 <code>netstat</code> 的现代工具<a class="headerlink" href="#54-ss-netstat" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>ss<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span>
 </code></pre></div>
-
-<ul>
-<li><code>ss -tuln</code>：显示正在监听的 TCP/UDP 端口。</li>
-<li><code>ss -anp</code>：显示所有网络连接及其关联进程。</li>
-</ul>
+- <code>ss -tuln</code>：显示正在监听的 TCP/UDP 端口。
+- <code>ss -anp</code>：显示所有网络连接及其关联进程。</p>
 <p><code>ss</code>（<code>socket statistics</code>）是一个强大且高效的工具，用于查看 Linux 系统中的网络连接情况，通常用来替代较旧的 <code>netstat</code> 命令。与 <code>netstat</code> 相比，<code>ss</code> 的速度更快，并且可以显示更多详细的网络连接信息。<code>ss</code> 可以用于监控 TCP、UDP、UNIX 套接字等。</p>
 <p>以下是 <code>ss</code> 命令的详细讲解：</p>
 <hr />
-<h2 id="1-ss">1. <code>ss</code> 命令基本语法</h2>
-<div class="codehilite"><pre><span></span><code>ss<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span>
+<h2 id="1-ss">1. <code>ss</code> 命令基本语法<a class="headerlink" href="#1-ss" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>ss<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span>
 </code></pre></div>
-
-<h2 id="2_1">2. 常用选项及参数详解</h2>
-<h3 id="21">2.1 显示所有连接</h3>
-<div class="codehilite"><pre><span></span><code>ss<span class="w"> </span>-a
+<h2 id="2_1">2. 常用选项及参数详解<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h2>
+<h3 id="21">2.1 显示所有连接<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>ss<span class="w"> </span>-a
 </code></pre></div>
-
-<p><code>-a</code> 选项显示所有连接，包括监听和非监听的套接字。</p>
-<h3 id="22">2.2 显示所有监听的端口</h3>
-<div class="codehilite"><pre><span></span><code>ss<span class="w"> </span>-l
+<code>-a</code> 选项显示所有连接，包括监听和非监听的套接字。</p>
+<h3 id="22">2.2 显示所有监听的端口<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>ss<span class="w"> </span>-l
 </code></pre></div>
-
-<p><code>-l</code> 选项显示所有正在监听的套接字（例如服务器监听的端口），适合用于检查哪些服务正在监听某些端口。</p>
-<h3 id="23-tcp">2.3 显示 TCP 连接</h3>
-<div class="codehilite"><pre><span></span><code>ss<span class="w"> </span>-t
+<code>-l</code> 选项显示所有正在监听的套接字（例如服务器监听的端口），适合用于检查哪些服务正在监听某些端口。</p>
+<h3 id="23-tcp">2.3 显示 TCP 连接<a class="headerlink" href="#23-tcp" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>ss<span class="w"> </span>-t
 </code></pre></div>
-
-<p><code>-t</code> 选项显示当前的 TCP 连接信息。</p>
-<h3 id="24-udp">2.4 显示 UDP 连接</h3>
-<div class="codehilite"><pre><span></span><code>ss<span class="w"> </span>-u
+<code>-t</code> 选项显示当前的 TCP 连接信息。</p>
+<h3 id="24-udp">2.4 显示 UDP 连接<a class="headerlink" href="#24-udp" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>ss<span class="w"> </span>-u
 </code></pre></div>
-
-<p><code>-u</code> 选项显示当前的 UDP 连接信息。</p>
-<h3 id="25-unix">2.5 显示 UNIX 套接字</h3>
-<div class="codehilite"><pre><span></span><code>ss<span class="w"> </span>-x
+<code>-u</code> 选项显示当前的 UDP 连接信息。</p>
+<h3 id="25-unix">2.5 显示 UNIX 套接字<a class="headerlink" href="#25-unix" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>ss<span class="w"> </span>-x
 </code></pre></div>
-
-<p><code>-x</code> 选项显示当前的 UNIX 套接字连接（例如进程间通信）。</p>
-<h3 id="26-tcp-udp">2.6 显示所有连接（TCP 和 UDP）</h3>
-<div class="codehilite"><pre><span></span><code>ss<span class="w"> </span>-tun
+<code>-x</code> 选项显示当前的 UNIX 套接字连接（例如进程间通信）。</p>
+<h3 id="26-tcp-udp">2.6 显示所有连接（TCP 和 UDP）<a class="headerlink" href="#26-tcp-udp" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>ss<span class="w"> </span>-tun
 </code></pre></div>
-
-<p><code>-tun</code> 是将 <code>-t</code>（TCP）、<code>-u</code>（UDP）和 <code>-n</code>（不解析名称）组合在一起，用于显示所有 TCP 和 UDP 连接，并不解析主机名和端口号，而是显示数字格式。</p>
-<h3 id="27-tcp">2.7 显示监听的 TCP 端口</h3>
-<div class="codehilite"><pre><span></span><code>ss<span class="w"> </span>-tnl
+<code>-tun</code> 是将 <code>-t</code>（TCP）、<code>-u</code>（UDP）和 <code>-n</code>（不解析名称）组合在一起，用于显示所有 TCP 和 UDP 连接，并不解析主机名和端口号，而是显示数字格式。</p>
+<h3 id="27-tcp">2.7 显示监听的 TCP 端口<a class="headerlink" href="#27-tcp" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>ss<span class="w"> </span>-tnl
 </code></pre></div>
-
-<p><code>-tnl</code> 选项显示当前正在监听的 TCP 端口。</p>
-<h3 id="28-pid">2.8 显示网络连接的进程（PID）</h3>
-<div class="codehilite"><pre><span></span><code>ss<span class="w"> </span>-p
+<code>-tnl</code> 选项显示当前正在监听的 TCP 端口。</p>
+<h3 id="28-pid">2.8 显示网络连接的进程（PID）<a class="headerlink" href="#28-pid" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>ss<span class="w"> </span>-p
 </code></pre></div>
-
-<p><code>-p</code> 选项显示每个连接所对应的进程及其 PID。适合用于查看哪个进程正在使用某个端口。</p>
-<h3 id="29">2.9 显示每个连接的详细信息</h3>
-<div class="codehilite"><pre><span></span><code>ss<span class="w"> </span>-i
+<code>-p</code> 选项显示每个连接所对应的进程及其 PID。适合用于查看哪个进程正在使用某个端口。</p>
+<h3 id="29">2.9 显示每个连接的详细信息<a class="headerlink" href="#29" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>ss<span class="w"> </span>-i
 </code></pre></div>
-
-<p><code>-i</code> 选项显示连接的详细信息，包括 <code>TCP</code> 协议的拥塞状态、重传次数等。</p>
-<h3 id="210">2.10 过滤特定端口</h3>
+<code>-i</code> 选项显示连接的详细信息，包括 <code>TCP</code> 协议的拥塞状态、重传次数等。</p>
+<h3 id="210">2.10 过滤特定端口<a class="headerlink" href="#210" title="Permanent link">&para;</a></h3>
 <p>如果你想要过滤只使用某个端口的连接，可以使用以下命令：</p>
 <ul>
 <li><strong>过滤 TCP 端口 80</strong>：
-    <code>bash
-    ss -t '( sport = :80 )'</code></li>
+    <div class="highlight"><pre><span></span><code>ss<span class="w"> </span>-t<span class="w"> </span><span class="s1">&#39;( sport = :80 )&#39;</span>
+</code></pre></div></li>
 <li><strong>过滤 UDP 端口 53</strong>：
-    <code>bash
-    ss -u '( dport = :53 )'</code></li>
+    <div class="highlight"><pre><span></span><code>ss<span class="w"> </span>-u<span class="w"> </span><span class="s1">&#39;( dport = :53 )&#39;</span>
+</code></pre></div></li>
 </ul>
-<h3 id="211">2.11 显示统计信息</h3>
-<div class="codehilite"><pre><span></span><code>ss<span class="w"> </span>-s
+<h3 id="211">2.11 显示统计信息<a class="headerlink" href="#211" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>ss<span class="w"> </span>-s
 </code></pre></div>
-
-<p><code>-s</code> 选项显示汇总的网络统计信息，类似于 <code>netstat -s</code>。这适用于检查当前系统的整体网络状态，包括打开的连接数、监听的端口数、TCP 状态等。</p>
+<code>-s</code> 选项显示汇总的网络统计信息，类似于 <code>netstat -s</code>。这适用于检查当前系统的整体网络状态，包括打开的连接数、监听的端口数、TCP 状态等。</p>
 <hr />
-<h2 id="3-ss">3. <code>ss</code> 常用组合命令示例</h2>
-<h3 id="31-tcp">3.1 显示所有 TCP 连接（数字格式）</h3>
-<div class="codehilite"><pre><span></span><code>ss<span class="w"> </span>-tn
+<h2 id="3-ss">3. <code>ss</code> 常用组合命令示例<a class="headerlink" href="#3-ss" title="Permanent link">&para;</a></h2>
+<h3 id="31-tcp">3.1 显示所有 TCP 连接（数字格式）<a class="headerlink" href="#31-tcp" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>ss<span class="w"> </span>-tn
 </code></pre></div>
-
-<p><code>-t</code> 显示 TCP 连接，<code>-n</code> 使用数字格式显示 IP 和端口号，而不是将它们解析为域名和服务名称。</p>
-<h3 id="32-udp">3.2 显示所有 UDP 连接</h3>
-<div class="codehilite"><pre><span></span><code>ss<span class="w"> </span>-un
+<code>-t</code> 显示 TCP 连接，<code>-n</code> 使用数字格式显示 IP 和端口号，而不是将它们解析为域名和服务名称。</p>
+<h3 id="32-udp">3.2 显示所有 UDP 连接<a class="headerlink" href="#32-udp" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>ss<span class="w"> </span>-un
 </code></pre></div>
-
-<p>显示所有 UDP 连接，并且端口号和地址以数字显示。</p>
-<h3 id="33-tcp">3.3 显示所有 TCP 连接及其状态</h3>
-<div class="codehilite"><pre><span></span><code>ss<span class="w"> </span>-tna
+显示所有 UDP 连接，并且端口号和地址以数字显示。</p>
+<h3 id="33-tcp">3.3 显示所有 TCP 连接及其状态<a class="headerlink" href="#33-tcp" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>ss<span class="w"> </span>-tna
 </code></pre></div>
-
-<p><code>-a</code> 显示所有连接，<code>-t</code> 限定为 TCP，<code>-n</code> 禁用名称解析。这会列出所有 TCP 连接以及它们的状态（例如 <code>ESTABLISHED</code>, <code>CLOSE_WAIT</code>, <code>LISTEN</code> 等）。</p>
-<h3 id="34-tcp-udp">3.4 显示所有监听的 TCP 和 UDP 端口</h3>
-<div class="codehilite"><pre><span></span><code>ss<span class="w"> </span>-tuln
+<code>-a</code> 显示所有连接，<code>-t</code> 限定为 TCP，<code>-n</code> 禁用名称解析。这会列出所有 TCP 连接以及它们的状态（例如 <code>ESTABLISHED</code>, <code>CLOSE_WAIT</code>, <code>LISTEN</code> 等）。</p>
+<h3 id="34-tcp-udp">3.4 显示所有监听的 TCP 和 UDP 端口<a class="headerlink" href="#34-tcp-udp" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>ss<span class="w"> </span>-tuln
 </code></pre></div>
-
-<p>显示所有正在监听的 TCP 和 UDP 端口。</p>
-<h3 id="35-ipv6">3.5 显示使用 IPv6 的连接</h3>
-<div class="codehilite"><pre><span></span><code>ss<span class="w"> </span>-6
+显示所有正在监听的 TCP 和 UDP 端口。</p>
+<h3 id="35-ipv6">3.5 显示使用 IPv6 的连接<a class="headerlink" href="#35-ipv6" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>ss<span class="w"> </span>-6
 </code></pre></div>
-
-<p>仅显示使用 IPv6 协议的连接。</p>
-<h3 id="36">3.6 显示套接字缓冲区信息</h3>
-<div class="codehilite"><pre><span></span><code>ss<span class="w"> </span>-m
+仅显示使用 IPv6 协议的连接。</p>
+<h3 id="36">3.6 显示套接字缓冲区信息<a class="headerlink" href="#36" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>ss<span class="w"> </span>-m
 </code></pre></div>
-
-<p>显示每个连接的套接字缓冲区使用情况，适合检查网络性能问题。</p>
-<h3 id="37-ip">3.7 显示所有与某个 IP 相关的连接</h3>
-<div class="codehilite"><pre><span></span><code>ss<span class="w"> </span>dst<span class="w"> </span><span class="m">192</span>.168.1.1
+显示每个连接的套接字缓冲区使用情况，适合检查网络性能问题。</p>
+<h3 id="37-ip">3.7 显示所有与某个 IP 相关的连接<a class="headerlink" href="#37-ip" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>ss<span class="w"> </span>dst<span class="w"> </span><span class="m">192</span>.168.1.1
 </code></pre></div>
-
-<p>显示所有与目标 IP 地址 <code>192.168.1.1</code> 相关的连接。</p>
-<h3 id="38-id">3.8 根据进程 ID 过滤</h3>
-<div class="codehilite"><pre><span></span><code>ss<span class="w"> </span>-pt<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>PID
+显示所有与目标 IP 地址 <code>192.168.1.1</code> 相关的连接。</p>
+<h3 id="38-id">3.8 根据进程 ID 过滤<a class="headerlink" href="#38-id" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>ss<span class="w"> </span>-pt<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>PID
 </code></pre></div>
-
-<p>列出与指定 PID 相关的所有连接。</p>
+列出与指定 PID 相关的所有连接。</p>
 <hr />
-<h2 id="4_1">4. 输出字段解释</h2>
+<h2 id="4_1">4. 输出字段解释<a class="headerlink" href="#4_1" title="Permanent link">&para;</a></h2>
 <p><code>ss</code> 输出的默认字段包括：</p>
 <ul>
 <li><strong>Netid</strong>：协议类型（例如 <code>tcp</code>, <code>udp</code>, <code>unix</code>）。</li>
@@ -6938,7 +9422,7 @@
 <li><strong>Peer Address:Port</strong>：远程地址和端口。</li>
 </ul>
 <hr />
-<h2 id="5-tcp">5. TCP 状态解释</h2>
+<h2 id="5-tcp">5. TCP 状态解释<a class="headerlink" href="#5-tcp" title="Permanent link">&para;</a></h2>
 <p>在 <code>ss</code> 的输出中，TCP 连接的状态字段显示当前连接的状态。常见的状态包括：</p>
 <ul>
 <li><strong>LISTEN</strong>：服务器正在监听连接请求。</li>
@@ -6952,7 +9436,7 @@
 <li><strong>CLOSED</strong>：连接已经完全关闭。</li>
 </ul>
 <hr />
-<h2 id="6-ss-netstat">6. <code>ss</code> 与 <code>netstat</code> 对比</h2>
+<h2 id="6-ss-netstat">6. <code>ss</code> 与 <code>netstat</code> 对比<a class="headerlink" href="#6-ss-netstat" title="Permanent link">&para;</a></h2>
 <ul>
 <li><code>ss</code> 更快速、精确，且可以显示比 <code>netstat</code> 更多的细节。</li>
 <li><code>ss</code> 通过内核 <code>netlink</code> 套接字获取数据，而 <code>netstat</code> 则需要从 <code>/proc</code> 文件系统中读取，性能较差。</li>
@@ -6960,151 +9444,122 @@
 </ul>
 <hr />
 <p>通过 <code>ss</code> 命令，系统管理员可以方便地查看网络连接、监控端口状态以及进行网络故障排除。掌握并灵活运用 <code>ss</code> 的各种选项，可以显著提高网络排障的效率。</p>
-<h3 id="55-curl-">5.5 <code>curl</code> - 命令行网络请求工具</h3>
-<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span><span class="w"> </span>URL
+<h3 id="55-curl-">5.5 <code>curl</code> - 命令行网络请求工具<a class="headerlink" href="#55-curl-" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>curl<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span><span class="w"> </span>URL
 </code></pre></div>
-
-<ul>
-<li><code>curl http://example.com</code>：请求 <code>example.com</code> 并返回响应内容。</li>
-<li><code>curl -I http://example.com</code>：仅返回响应头信息。</li>
-</ul>
+- <code>curl http://example.com</code>：请求 <code>example.com</code> 并返回响应内容。
+- <code>curl -I http://example.com</code>：仅返回响应头信息。</p>
 <p><code>curl</code> 是一个功能强大的命令行工具，用于在命令行或脚本中发出 HTTP 请求，获取远程服务器的数据。它支持多种协议，包括 HTTP、HTTPS、FTP 等，广泛用于自动化任务、接口测试、数据抓取等。</p>
 <p>以下是 <code>curl</code> 命令的详细讲解：</p>
 <hr />
-<h2 id="1_1">1. 基本语法</h2>
-<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span><span class="w"> </span><span class="o">[</span>URL<span class="o">]</span>
+<h2 id="1_1">1. 基本语法<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h2>
+<p><div class="highlight"><pre><span></span><code>curl<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span><span class="w"> </span><span class="o">[</span>URL<span class="o">]</span>
 </code></pre></div>
-
-<p><code>curl</code> 命令后可以跟不同的选项来完成不同的任务，主要用来与 URL 交互。</p>
+<code>curl</code> 命令后可以跟不同的选项来完成不同的任务，主要用来与 URL 交互。</p>
 <hr />
-<h2 id="2_2">2. 常用选项及参数详解</h2>
-<h3 id="21_1">2.1 请求网页内容</h3>
-<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>http://example.com
+<h2 id="2_2">2. 常用选项及参数详解<a class="headerlink" href="#2_2" title="Permanent link">&para;</a></h2>
+<h3 id="21_1">2.1 请求网页内容<a class="headerlink" href="#21_1" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>curl<span class="w"> </span>http://example.com
 </code></pre></div>
-
-<p>最简单的 <code>curl</code> 使用方法是直接请求网页内容，<code>curl</code> 会输出网页的 HTML 源代码。</p>
-<h3 id="22_1">2.2 保存文件</h3>
-<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-o<span class="w"> </span>filename<span class="w"> </span>http://example.com/file.zip
+最简单的 <code>curl</code> 使用方法是直接请求网页内容，<code>curl</code> 会输出网页的 HTML 源代码。</p>
+<h3 id="22_1">2.2 保存文件<a class="headerlink" href="#22_1" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-o<span class="w"> </span>filename<span class="w"> </span>http://example.com/file.zip
 </code></pre></div>
-
-<p><code>-o</code> 选项将下载的内容保存为指定文件名。</p>
-<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-O<span class="w"> </span>http://example.com/file.zip
+<code>-o</code> 选项将下载的内容保存为指定文件名。</p>
+<p><div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-O<span class="w"> </span>http://example.com/file.zip
 </code></pre></div>
-
-<p><code>-O</code> 选项则使用远程文件名保存文件。比如远程 URL 是 <code>file.zip</code>，文件也会保存为 <code>file.zip</code>。</p>
-<h3 id="23">2.3 显示响应头信息</h3>
-<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-I<span class="w"> </span>http://example.com
+<code>-O</code> 选项则使用远程文件名保存文件。比如远程 URL 是 <code>file.zip</code>，文件也会保存为 <code>file.zip</code>。</p>
+<h3 id="23">2.3 显示响应头信息<a class="headerlink" href="#23" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-I<span class="w"> </span>http://example.com
 </code></pre></div>
-
-<p><code>-I</code> 选项仅获取响应头信息，不会下载实际的内容。它适合用来查看服务器响应的状态码和头部信息。</p>
-<h3 id="24">2.4 发送自定义请求头</h3>
-<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;User-Agent: Mozilla/5.0&quot;</span><span class="w"> </span>http://example.com
+<code>-I</code> 选项仅获取响应头信息，不会下载实际的内容。它适合用来查看服务器响应的状态码和头部信息。</p>
+<h3 id="24">2.4 发送自定义请求头<a class="headerlink" href="#24" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;User-Agent: Mozilla/5.0&quot;</span><span class="w"> </span>http://example.com
 </code></pre></div>
-
-<p><code>-H</code> 选项允许你发送自定义的 HTTP 请求头。例如上面命令修改了 <code>User-Agent</code>，模拟了浏览器的请求。</p>
-<h3 id="25-get">2.5 发送 GET 请求</h3>
-<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>http://example.com?param1<span class="o">=</span>value1<span class="p">&amp;</span><span class="nv">param2</span><span class="o">=</span>value2
+<code>-H</code> 选项允许你发送自定义的 HTTP 请求头。例如上面命令修改了 <code>User-Agent</code>，模拟了浏览器的请求。</p>
+<h3 id="25-get">2.5 发送 GET 请求<a class="headerlink" href="#25-get" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>curl<span class="w"> </span>http://example.com?param1<span class="o">=</span>value1<span class="p">&amp;</span><span class="nv">param2</span><span class="o">=</span>value2
 </code></pre></div>
-
-<p>GET 请求是 HTTP 的默认请求方法，直接将参数附加在 URL 后面。</p>
-<h3 id="26-post">2.6 发送 POST 请求</h3>
-<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;param1=value1&amp;param2=value2&quot;</span><span class="w"> </span>http://example.com
+GET 请求是 HTTP 的默认请求方法，直接将参数附加在 URL 后面。</p>
+<h3 id="26-post">2.6 发送 POST 请求<a class="headerlink" href="#26-post" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;param1=value1&amp;param2=value2&quot;</span><span class="w"> </span>http://example.com
 </code></pre></div>
-
-<p><code>-X POST</code> 明确表示发送 POST 请求，<code>-d</code> 选项用来传递 POST 数据。</p>
-<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>-d<span class="w"> </span>@data.json<span class="w"> </span>http://example.com
+<code>-X POST</code> 明确表示发送 POST 请求，<code>-d</code> 选项用来传递 POST 数据。</p>
+<p><div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>-d<span class="w"> </span>@data.json<span class="w"> </span>http://example.com
 </code></pre></div>
-
-<p>你也可以通过 <code>-d @filename</code> 的方式将文件中的内容作为 POST 数据发送。</p>
-<h3 id="27-json">2.7 发送 JSON 数据</h3>
-<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;key&quot;:&quot;value&quot;}&#39;</span><span class="w"> </span>http://example.com
+你也可以通过 <code>-d @filename</code> 的方式将文件中的内容作为 POST 数据发送。</p>
+<h3 id="27-json">2.7 发送 JSON 数据<a class="headerlink" href="#27-json" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;key&quot;:&quot;value&quot;}&#39;</span><span class="w"> </span>http://example.com
 </code></pre></div>
-
-<p><code>-H</code> 选项设置 <code>Content-Type</code> 为 <code>application/json</code>，然后通过 <code>-d</code> 发送 JSON 格式的数据。</p>
-<h3 id="28">2.8 下载多个文件</h3>
-<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-O<span class="w"> </span>http://example.com/file1.zip<span class="w"> </span>-O<span class="w"> </span>http://example.com/file2.zip
+<code>-H</code> 选项设置 <code>Content-Type</code> 为 <code>application/json</code>，然后通过 <code>-d</code> 发送 JSON 格式的数据。</p>
+<h3 id="28">2.8 下载多个文件<a class="headerlink" href="#28" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-O<span class="w"> </span>http://example.com/file1.zip<span class="w"> </span>-O<span class="w"> </span>http://example.com/file2.zip
 </code></pre></div>
-
-<p>可以一次下载多个文件，每个文件都使用 <code>-O</code> 选项指定 URL。</p>
-<h3 id="29_1">2.9 限制下载速度</h3>
-<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>--limit-rate<span class="w"> </span>100K<span class="w"> </span>http://example.com/file.zip
+可以一次下载多个文件，每个文件都使用 <code>-O</code> 选项指定 URL。</p>
+<h3 id="29_1">2.9 限制下载速度<a class="headerlink" href="#29_1" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--limit-rate<span class="w"> </span>100K<span class="w"> </span>http://example.com/file.zip
 </code></pre></div>
-
-<p><code>--limit-rate</code> 选项用于限制下载速度，单位可以是 <code>K</code>（千字节）或 <code>M</code>（兆字节）。</p>
-<h3 id="210_1">2.10 显示下载进度</h3>
-<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-#<span class="w"> </span>http://example.com/file.zip
+<code>--limit-rate</code> 选项用于限制下载速度，单位可以是 <code>K</code>（千字节）或 <code>M</code>（兆字节）。</p>
+<h3 id="210_1">2.10 显示下载进度<a class="headerlink" href="#210_1" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-#<span class="w"> </span>http://example.com/file.zip
 </code></pre></div>
-
-<p><code>-#</code> 选项显示下载进度条，适合用于下载较大的文件。</p>
-<h3 id="211_1">2.11 断点续传</h3>
-<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-C<span class="w"> </span>-<span class="w"> </span>-O<span class="w"> </span>http://example.com/file.zip
+<code>-#</code> 选项显示下载进度条，适合用于下载较大的文件。</p>
+<h3 id="211_1">2.11 断点续传<a class="headerlink" href="#211_1" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-C<span class="w"> </span>-<span class="w"> </span>-O<span class="w"> </span>http://example.com/file.zip
 </code></pre></div>
-
-<p><code>-C -</code> 选项用于断点续传，可以从上次中断的地方继续下载文件。</p>
-<h3 id="212">2.12 发送表单数据（模拟表单提交）</h3>
-<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-F<span class="w"> </span><span class="s2">&quot;username=admin&quot;</span><span class="w"> </span>-F<span class="w"> </span><span class="s2">&quot;password=123456&quot;</span><span class="w"> </span>http://example.com/login
+<code>-C -</code> 选项用于断点续传，可以从上次中断的地方继续下载文件。</p>
+<h3 id="212">2.12 发送表单数据（模拟表单提交）<a class="headerlink" href="#212" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-F<span class="w"> </span><span class="s2">&quot;username=admin&quot;</span><span class="w"> </span>-F<span class="w"> </span><span class="s2">&quot;password=123456&quot;</span><span class="w"> </span>http://example.com/login
 </code></pre></div>
-
-<p><code>-F</code> 选项可以用来模拟 HTML 表单提交，适合用于自动化提交表单请求。</p>
-<h3 id="213">2.13 跟踪重定向</h3>
-<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-L<span class="w"> </span>http://example.com
+<code>-F</code> 选项可以用来模拟 HTML 表单提交，适合用于自动化提交表单请求。</p>
+<h3 id="213">2.13 跟踪重定向<a class="headerlink" href="#213" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-L<span class="w"> </span>http://example.com
 </code></pre></div>
-
-<p><code>-L</code> 选项会跟随 HTTP 重定向。如果目标 URL 会重定向到另一个地址（如 <code>301</code> 或 <code>302</code>），<code>curl</code> 会自动跟随重定向后的 URL。</p>
-<h3 id="214">2.14 显示详细请求过程</h3>
-<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-v<span class="w"> </span>http://example.com
+<code>-L</code> 选项会跟随 HTTP 重定向。如果目标 URL 会重定向到另一个地址（如 <code>301</code> 或 <code>302</code>），<code>curl</code> 会自动跟随重定向后的 URL。</p>
+<h3 id="214">2.14 显示详细请求过程<a class="headerlink" href="#214" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-v<span class="w"> </span>http://example.com
 </code></pre></div>
-
-<p><code>-v</code> 选项用于显示详细的请求过程，包括请求头、响应头、以及传输的细节。</p>
-<h3 id="215">2.15 使用代理</h3>
-<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-x<span class="w"> </span>http://proxy.example.com:8080<span class="w"> </span>http://example.com
+<code>-v</code> 选项用于显示详细的请求过程，包括请求头、响应头、以及传输的细节。</p>
+<h3 id="215">2.15 使用代理<a class="headerlink" href="#215" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-x<span class="w"> </span>http://proxy.example.com:8080<span class="w"> </span>http://example.com
 </code></pre></div>
-
-<p><code>-x</code> 选项用于通过代理服务器发送请求，后面跟上代理服务器的地址和端口。</p>
-<h3 id="216">2.16 上传文件</h3>
-<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-T<span class="w"> </span>filename<span class="w"> </span>ftp://example.com/
+<code>-x</code> 选项用于通过代理服务器发送请求，后面跟上代理服务器的地址和端口。</p>
+<h3 id="216">2.16 上传文件<a class="headerlink" href="#216" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-T<span class="w"> </span>filename<span class="w"> </span>ftp://example.com/
 </code></pre></div>
-
-<p><code>-T</code> 选项用于上传文件到 FTP 服务器。</p>
-<h3 id="217-http-basic">2.17 认证请求（HTTP Basic 认证）</h3>
-<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-u<span class="w"> </span>username:password<span class="w"> </span>http://example.com
+<code>-T</code> 选项用于上传文件到 FTP 服务器。</p>
+<h3 id="217-http-basic">2.17 认证请求（HTTP Basic 认证）<a class="headerlink" href="#217-http-basic" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-u<span class="w"> </span>username:password<span class="w"> </span>http://example.com
 </code></pre></div>
-
-<p><code>-u</code> 选项用于进行 HTTP 基本认证，<code>curl</code> 会将用户名和密码以 <code>Base64</code> 编码发送给服务器。</p>
-<h3 id="218-cookie">2.18 显示 cookie 信息</h3>
-<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-c<span class="w"> </span>cookies.txt<span class="w"> </span>http://example.com
+<code>-u</code> 选项用于进行 HTTP 基本认证，<code>curl</code> 会将用户名和密码以 <code>Base64</code> 编码发送给服务器。</p>
+<h3 id="218-cookie">2.18 显示 cookie 信息<a class="headerlink" href="#218-cookie" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-c<span class="w"> </span>cookies.txt<span class="w"> </span>http://example.com
 </code></pre></div>
-
-<p><code>-c</code> 选项可以将服务器返回的 cookie 保存到文件中。</p>
-<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-b<span class="w"> </span>cookies.txt<span class="w"> </span>http://example.com
+<code>-c</code> 选项可以将服务器返回的 cookie 保存到文件中。</p>
+<p><div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-b<span class="w"> </span>cookies.txt<span class="w"> </span>http://example.com
 </code></pre></div>
-
-<p><code>-b</code> 选项可以从文件中读取 cookie 并发送给服务器。</p>
-<h3 id="219-ssl">2.19 跳过 SSL 证书验证</h3>
-<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-k<span class="w"> </span>https://example.com
+<code>-b</code> 选项可以从文件中读取 cookie 并发送给服务器。</p>
+<h3 id="219-ssl">2.19 跳过 SSL 证书验证<a class="headerlink" href="#219-ssl" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-k<span class="w"> </span>https://example.com
 </code></pre></div>
-
-<p><code>-k</code> 选项用于忽略 SSL 证书验证，适用于测试环境中 SSL 证书无效的情况。</p>
+<code>-k</code> 选项用于忽略 SSL 证书验证，适用于测试环境中 SSL 证书无效的情况。</p>
 <hr />
-<h2 id="3-curl">3. <code>curl</code> 输出格式</h2>
-<h3 id="31">3.1 输出到文件</h3>
-<p><code>curl</code> 默认将服务器响应输出到标准输出（终端）。通过以下方式可以将输出重定向到文件：</p>
-<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>http://example.com<span class="w"> </span>-o<span class="w"> </span>output.html
+<h2 id="3-curl">3. <code>curl</code> 输出格式<a class="headerlink" href="#3-curl" title="Permanent link">&para;</a></h2>
+<h3 id="31">3.1 输出到文件<a class="headerlink" href="#31" title="Permanent link">&para;</a></h3>
+<p><code>curl</code> 默认将服务器响应输出到标准输出（终端）。通过以下方式可以将输出重定向到文件：
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>http://example.com<span class="w"> </span>-o<span class="w"> </span>output.html
 </code></pre></div>
-
-<p>将结果保存到 <code>output.html</code>。</p>
-<h3 id="32">3.2 输出到终端但隐藏下载进度</h3>
-<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-s<span class="w"> </span>http://example.com
+将结果保存到 <code>output.html</code>。</p>
+<h3 id="32">3.2 输出到终端但隐藏下载进度<a class="headerlink" href="#32" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-s<span class="w"> </span>http://example.com
 </code></pre></div>
-
-<p><code>-s</code> 选项会隐藏下载进度、错误信息，适合用于脚本中避免杂乱的输出。</p>
-<h3 id="33-http">3.3 只显示 HTTP 响应码</h3>
-<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-o<span class="w"> </span>/dev/null<span class="w"> </span>-s<span class="w"> </span>-w<span class="w"> </span><span class="s2">&quot;%{http_code}&quot;</span><span class="w"> </span>http://example.com
+<code>-s</code> 选项会隐藏下载进度、错误信息，适合用于脚本中避免杂乱的输出。</p>
+<h3 id="33-http">3.3 只显示 HTTP 响应码<a class="headerlink" href="#33-http" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-o<span class="w"> </span>/dev/null<span class="w"> </span>-s<span class="w"> </span>-w<span class="w"> </span><span class="s2">&quot;%{http_code}&quot;</span><span class="w"> </span>http://example.com
 </code></pre></div>
-
-<p>通过 <code>-w</code> 选项可以自定义输出内容，<code>%{http_code}</code> 只会输出响应的 HTTP 状态码。</p>
+通过 <code>-w</code> 选项可以自定义输出内容，<code>%{http_code}</code> 只会输出响应的 HTTP 状态码。</p>
 <hr />
-<h2 id="4_2">4. 协议支持</h2>
+<h2 id="4_2">4. 协议支持<a class="headerlink" href="#4_2" title="Permanent link">&para;</a></h2>
 <p><code>curl</code> 支持多种协议，包括：
 - <code>HTTP/HTTPS</code>
 - <code>FTP</code>
@@ -7115,41 +9570,35 @@
 - <code>SMTP/SMTPS</code>
 - <code>POP3/IMAP</code></p>
 <hr />
-<h2 id="5-curl">5. <code>curl</code> 实用示例</h2>
-<h3 id="51-http">5.1 获取网页的 HTTP 状态码</h3>
-<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-o<span class="w"> </span>/dev/null<span class="w"> </span>-s<span class="w"> </span>-w<span class="w"> </span><span class="s2">&quot;%{http_code}&quot;</span><span class="w"> </span>http://example.com
+<h2 id="5-curl">5. <code>curl</code> 实用示例<a class="headerlink" href="#5-curl" title="Permanent link">&para;</a></h2>
+<h3 id="51-http">5.1 获取网页的 HTTP 状态码<a class="headerlink" href="#51-http" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-o<span class="w"> </span>/dev/null<span class="w"> </span>-s<span class="w"> </span>-w<span class="w"> </span><span class="s2">&quot;%{http_code}&quot;</span><span class="w"> </span>http://example.com
 </code></pre></div>
-
-<p>返回状态码，例如 <code>200</code> 表示请求成功。</p>
-<h3 id="52-api">5.2 测试 API 接口</h3>
-<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;key&quot;:&quot;value&quot;}&#39;</span><span class="w"> </span>http://api.example.com/endpoint
+返回状态码，例如 <code>200</code> 表示请求成功。</p>
+<h3 id="52-api">5.2 测试 API 接口<a class="headerlink" href="#52-api" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;key&quot;:&quot;value&quot;}&#39;</span><span class="w"> </span>http://api.example.com/endpoint
 </code></pre></div>
-
-<p>用于向 API 发送 POST 请求，发送 JSON 数据。</p>
-<h3 id="53">5.3 模拟浏览器行为</h3>
-<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-A<span class="w"> </span><span class="s2">&quot;Mozilla/5.0&quot;</span><span class="w"> </span>http://example.com
+用于向 API 发送 POST 请求，发送 JSON 数据。</p>
+<h3 id="53">5.3 模拟浏览器行为<a class="headerlink" href="#53" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-A<span class="w"> </span><span class="s2">&quot;Mozilla/5.0&quot;</span><span class="w"> </span>http://example.com
 </code></pre></div>
-
-<p>通过设置 <code>User-Agent</code> 模拟来自某种浏览器的请求。</p>
+通过设置 <code>User-Agent</code> 模拟来自某种浏览器的请求。</p>
 <hr />
 <p><code>curl</code> 是非常灵活的网络工具，不仅可以执行简单的 HTTP 请求，还能处理文件下载、表单提交、身份认证等复杂场景。通过理解和组合各种选项，你可以将 <code>curl</code> 用于数据抓取、接口测试、自动化操作等各种网络交互任务。</p>
-<h3 id="56-wget-">5.6 <code>wget</code> - 下载文件</h3>
-<div class="codehilite"><pre><span></span><code>wget<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span><span class="w"> </span>URL
+<h3 id="56-wget-">5.6 <code>wget</code> - 下载文件<a class="headerlink" href="#56-wget-" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>wget<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span><span class="w"> </span>URL
 </code></pre></div>
-
-<ul>
-<li><code>wget http://example.com/file.zip</code>：下载文件 <code>file.zip</code>。</li>
-</ul>
+- <code>wget http://example.com/file.zip</code>：下载文件 <code>file.zip</code>。</p>
 <hr />
-<h2 id="6">6. 软件包管理</h2>
-<h3 id="61-debianubuntu">6.1 Debian/Ubuntu 系统</h3>
+<h2 id="6">6. 软件包管理<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
+<h3 id="61-debianubuntu">6.1 Debian/Ubuntu 系统<a class="headerlink" href="#61-debianubuntu" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>apt update</code>：更新软件包索引。</li>
 <li><code>apt upgrade</code>：升级所有已安装的软件包。</li>
 <li><code>apt install package_name</code>：安装软件包。</li>
 <li><code>apt remove package_name</code>：卸载软件包。</li>
 </ul>
-<h3 id="62-centosrhel">6.2 CentOS/RHEL 系统</h3>
+<h3 id="62-centosrhel">6.2 CentOS/RHEL 系统<a class="headerlink" href="#62-centosrhel" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>yum update</code>：更新软件包和系统。</li>
 <li><code>yum install package_name</code>：安装指定软件包。</li>
@@ -7160,158 +9609,131 @@
 <p><code>rpm</code>（Red Hat Package Manager）是 Linux 下用于管理软件包的工具，适用于基于 RPM 包管理的发行版，如 Red Hat、CentOS、Fedora 等。<code>rpm</code> 命令用于安装、查询、升级、删除和验证 RPM 包，是 Linux 系统中包管理的重要组成部分。</p>
 <p>以下是 <code>rpm</code> 命令的详细讲解：</p>
 <hr />
-<h2 id="1_2">1. 基本语法</h2>
-<div class="codehilite"><pre><span></span><code>rpm<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span><span class="w"> </span><span class="o">[</span>软件包<span class="o">]</span>
+<h2 id="1_2">1. 基本语法<a class="headerlink" href="#1_2" title="Permanent link">&para;</a></h2>
+<p><div class="highlight"><pre><span></span><code>rpm<span class="w"> </span><span class="o">[</span>选项<span class="o">]</span><span class="w"> </span><span class="o">[</span>软件包<span class="o">]</span>
 </code></pre></div>
-
-<p><code>rpm</code> 命令根据不同的选项执行不同的操作，最常见的功能包括安装、查询、升级和删除 RPM 包。</p>
+<code>rpm</code> 命令根据不同的选项执行不同的操作，最常见的功能包括安装、查询、升级和删除 RPM 包。</p>
 <hr />
-<h2 id="2_3">2. 常用选项及功能详解</h2>
-<h3 id="21_2">2.1 安装软件包</h3>
-<div class="codehilite"><pre><span></span><code>rpm<span class="w"> </span>-ivh<span class="w"> </span>package.rpm
+<h2 id="2_3">2. 常用选项及功能详解<a class="headerlink" href="#2_3" title="Permanent link">&para;</a></h2>
+<h3 id="21_2">2.1 安装软件包<a class="headerlink" href="#21_2" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>rpm<span class="w"> </span>-ivh<span class="w"> </span>package.rpm
 </code></pre></div>
-
-<p><code>-i</code> 选项用于安装一个 RPM 包，<code>-v</code> 表示显示详细信息，<code>-h</code> 则是显示进度条（哈希符号）。</p>
-<h3 id="22_2">2.2 安装时忽略依赖关系</h3>
-<div class="codehilite"><pre><span></span><code>rpm<span class="w"> </span>-ivh<span class="w"> </span>--nodeps<span class="w"> </span>package.rpm
+<code>-i</code> 选项用于安装一个 RPM 包，<code>-v</code> 表示显示详细信息，<code>-h</code> 则是显示进度条（哈希符号）。</p>
+<h3 id="22_2">2.2 安装时忽略依赖关系<a class="headerlink" href="#22_2" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>rpm<span class="w"> </span>-ivh<span class="w"> </span>--nodeps<span class="w"> </span>package.rpm
 </code></pre></div>
-
-<p><code>--nodeps</code> 选项允许在安装时忽略依赖关系。如果你强行安装一个包而不检查依赖关系，可能会导致软件运行出错。</p>
-<h3 id="23_1">2.3 安装并覆盖已有文件</h3>
-<div class="codehilite"><pre><span></span><code>rpm<span class="w"> </span>-ivh<span class="w"> </span>--replacefiles<span class="w"> </span>package.rpm
+<code>--nodeps</code> 选项允许在安装时忽略依赖关系。如果你强行安装一个包而不检查依赖关系，可能会导致软件运行出错。</p>
+<h3 id="23_1">2.3 安装并覆盖已有文件<a class="headerlink" href="#23_1" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>rpm<span class="w"> </span>-ivh<span class="w"> </span>--replacefiles<span class="w"> </span>package.rpm
 </code></pre></div>
-
-<p><code>--replacefiles</code> 选项允许覆盖已经安装的软件包文件。</p>
-<h3 id="24_1">2.4 升级软件包</h3>
-<div class="codehilite"><pre><span></span><code>rpm<span class="w"> </span>-Uvh<span class="w"> </span>package.rpm
+<code>--replacefiles</code> 选项允许覆盖已经安装的软件包文件。</p>
+<h3 id="24_1">2.4 升级软件包<a class="headerlink" href="#24_1" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>rpm<span class="w"> </span>-Uvh<span class="w"> </span>package.rpm
 </code></pre></div>
-
-<p><code>-U</code> 选项用于升级一个已安装的 RPM 包，如果该包尚未安装，<code>rpm</code> 会执行安装。</p>
-<h3 id="25">2.5 安装/升级时保留旧配置文件</h3>
-<div class="codehilite"><pre><span></span><code>rpm<span class="w"> </span>-Uvh<span class="w"> </span>--oldpackage<span class="w"> </span>package.rpm
+<code>-U</code> 选项用于升级一个已安装的 RPM 包，如果该包尚未安装，<code>rpm</code> 会执行安装。</p>
+<h3 id="25">2.5 安装/升级时保留旧配置文件<a class="headerlink" href="#25" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>rpm<span class="w"> </span>-Uvh<span class="w"> </span>--oldpackage<span class="w"> </span>package.rpm
 </code></pre></div>
-
-<p><code>--oldpackage</code> 选项用于降级软件包（即安装旧版本）。</p>
-<h3 id="26">2.6 删除软件包</h3>
-<div class="codehilite"><pre><span></span><code>rpm<span class="w"> </span>-e<span class="w"> </span>package_name
+<code>--oldpackage</code> 选项用于降级软件包（即安装旧版本）。</p>
+<h3 id="26">2.6 删除软件包<a class="headerlink" href="#26" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>rpm<span class="w"> </span>-e<span class="w"> </span>package_name
 </code></pre></div>
-
-<p><code>-e</code> 选项用于删除一个已安装的 RPM 包，注意这里需要输入的是软件包的名称，而不是 RPM 文件。</p>
-<h3 id="27">2.7 强制删除</h3>
-<div class="codehilite"><pre><span></span><code>rpm<span class="w"> </span>-e<span class="w"> </span>--nodeps<span class="w"> </span>package_name
+<code>-e</code> 选项用于删除一个已安装的 RPM 包，注意这里需要输入的是软件包的名称，而不是 RPM 文件。</p>
+<h3 id="27">2.7 强制删除<a class="headerlink" href="#27" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>rpm<span class="w"> </span>-e<span class="w"> </span>--nodeps<span class="w"> </span>package_name
 </code></pre></div>
-
-<p><code>--nodeps</code> 选项允许删除时忽略依赖关系，强行删除软件包。</p>
+<code>--nodeps</code> 选项允许删除时忽略依赖关系，强行删除软件包。</p>
 <hr />
-<h2 id="3_1">3. 查询功能</h2>
-<h3 id="31_1">3.1 查询已安装的软件包</h3>
-<div class="codehilite"><pre><span></span><code>rpm<span class="w"> </span>-qa
+<h2 id="3_1">3. 查询功能<a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h2>
+<h3 id="31_1">3.1 查询已安装的软件包<a class="headerlink" href="#31_1" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>rpm<span class="w"> </span>-qa
 </code></pre></div>
-
-<p><code>-qa</code> 选项用于列出所有已安装的软件包，通常配合 <code>grep</code> 使用：</p>
-<div class="codehilite"><pre><span></span><code>rpm<span class="w"> </span>-qa<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>package_name
+<code>-qa</code> 选项用于列出所有已安装的软件包，通常配合 <code>grep</code> 使用：
+<div class="highlight"><pre><span></span><code>rpm<span class="w"> </span>-qa<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>package_name
 </code></pre></div>
-
-<p>可以查询指定的软件包是否已安装。</p>
-<h3 id="32_1">3.2 查询软件包详细信息</h3>
-<div class="codehilite"><pre><span></span><code>rpm<span class="w"> </span>-qi<span class="w"> </span>package_name
+可以查询指定的软件包是否已安装。</p>
+<h3 id="32_1">3.2 查询软件包详细信息<a class="headerlink" href="#32_1" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>rpm<span class="w"> </span>-qi<span class="w"> </span>package_name
 </code></pre></div>
-
-<p><code>-qi</code> 选项用于查看指定已安装包的详细信息，例如版本、说明、大小等。</p>
-<h3 id="33">3.3 查询软件包文件列表</h3>
-<div class="codehilite"><pre><span></span><code>rpm<span class="w"> </span>-ql<span class="w"> </span>package_name
+<code>-qi</code> 选项用于查看指定已安装包的详细信息，例如版本、说明、大小等。</p>
+<h3 id="33">3.3 查询软件包文件列表<a class="headerlink" href="#33" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>rpm<span class="w"> </span>-ql<span class="w"> </span>package_name
 </code></pre></div>
-
-<p><code>-ql</code> 选项用于列出已安装软件包的所有文件。</p>
-<h3 id="34">3.4 查询文件属于哪个软件包</h3>
-<div class="codehilite"><pre><span></span><code>rpm<span class="w"> </span>-qf<span class="w"> </span>/path/to/file
+<code>-ql</code> 选项用于列出已安装软件包的所有文件。</p>
+<h3 id="34">3.4 查询文件属于哪个软件包<a class="headerlink" href="#34" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>rpm<span class="w"> </span>-qf<span class="w"> </span>/path/to/file
 </code></pre></div>
-
-<p><code>-qf</code> 选项用于查询某个系统文件是由哪个 RPM 包安装的。</p>
-<h3 id="35">3.5 查询软件包的依赖关系</h3>
-<div class="codehilite"><pre><span></span><code>rpm<span class="w"> </span>-qR<span class="w"> </span>package_name
+<code>-qf</code> 选项用于查询某个系统文件是由哪个 RPM 包安装的。</p>
+<h3 id="35">3.5 查询软件包的依赖关系<a class="headerlink" href="#35" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>rpm<span class="w"> </span>-qR<span class="w"> </span>package_name
 </code></pre></div>
-
-<p><code>-qR</code> 选项用于列出某个已安装软件包的依赖关系。</p>
+<code>-qR</code> 选项用于列出某个已安装软件包的依赖关系。</p>
 <hr />
-<h2 id="4_3">4. 验证功能</h2>
-<h3 id="41">4.1 验证软件包的完整性</h3>
-<div class="codehilite"><pre><span></span><code>rpm<span class="w"> </span>-V<span class="w"> </span>package_name
+<h2 id="4_3">4. 验证功能<a class="headerlink" href="#4_3" title="Permanent link">&para;</a></h2>
+<h3 id="41">4.1 验证软件包的完整性<a class="headerlink" href="#41" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>rpm<span class="w"> </span>-V<span class="w"> </span>package_name
 </code></pre></div>
-
-<p><code>-V</code> 选项用于验证已安装软件包的文件是否被修改。</p>
-<p>输出结果格式如下：</p>
-<div class="codehilite"><pre><span></span><code>S.5....T.  /etc/myconfig.conf
+<code>-V</code> 选项用于验证已安装软件包的文件是否被修改。</p>
+<p>输出结果格式如下：
+<div class="highlight"><pre><span></span><code>S.5....T.  /etc/myconfig.conf
 </code></pre></div>
-
-<p>其中每个符号表示不同的校验结果：
+其中每个符号表示不同的校验结果：
 - <code>S</code>：文件大小被更改
 - <code>5</code>：MD5 校验和不匹配
 - <code>T</code>：文件时间戳被更改</p>
-<h3 id="42">4.2 验证签名</h3>
-<div class="codehilite"><pre><span></span><code>rpm<span class="w"> </span>--checksig<span class="w"> </span>package.rpm
+<h3 id="42">4.2 验证签名<a class="headerlink" href="#42" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>rpm<span class="w"> </span>--checksig<span class="w"> </span>package.rpm
 </code></pre></div>
-
-<p><code>--checksig</code> 选项用于验证 RPM 包的 GPG 签名，以确保包来源可信。</p>
+<code>--checksig</code> 选项用于验证 RPM 包的 GPG 签名，以确保包来源可信。</p>
 <hr />
-<h2 id="5-rpm">5. RPM 文件管理</h2>
-<h3 id="51-rpm">5.1 查看 RPM 包的内容</h3>
-<div class="codehilite"><pre><span></span><code>rpm<span class="w"> </span>-qpl<span class="w"> </span>package.rpm
+<h2 id="5-rpm">5. RPM 文件管理<a class="headerlink" href="#5-rpm" title="Permanent link">&para;</a></h2>
+<h3 id="51-rpm">5.1 查看 RPM 包的内容<a class="headerlink" href="#51-rpm" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>rpm<span class="w"> </span>-qpl<span class="w"> </span>package.rpm
 </code></pre></div>
-
-<p><code>-qpl</code> 选项用于查看 RPM 包中包含的文件列表（未安装）。</p>
-<h3 id="52-rpm">5.2 查看 RPM 包的详细信息</h3>
-<div class="codehilite"><pre><span></span><code>rpm<span class="w"> </span>-qpi<span class="w"> </span>package.rpm
+<code>-qpl</code> 选项用于查看 RPM 包中包含的文件列表（未安装）。</p>
+<h3 id="52-rpm">5.2 查看 RPM 包的详细信息<a class="headerlink" href="#52-rpm" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>rpm<span class="w"> </span>-qpi<span class="w"> </span>package.rpm
 </code></pre></div>
-
-<p><code>-qpi</code> 选项用于查看 RPM 包的详细信息（未安装）。</p>
-<h3 id="53-rpm">5.3 查询 RPM 包的依赖关系</h3>
-<div class="codehilite"><pre><span></span><code>rpm<span class="w"> </span>-qpR<span class="w"> </span>package.rpm
+<code>-qpi</code> 选项用于查看 RPM 包的详细信息（未安装）。</p>
+<h3 id="53-rpm">5.3 查询 RPM 包的依赖关系<a class="headerlink" href="#53-rpm" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>rpm<span class="w"> </span>-qpR<span class="w"> </span>package.rpm
 </code></pre></div>
-
-<p><code>-qpR</code> 选项用于查看 RPM 包的依赖关系（未安装）。</p>
+<code>-qpR</code> 选项用于查看 RPM 包的依赖关系（未安装）。</p>
 <hr />
-<h2 id="6-rpm">6. RPM 数据库管理</h2>
-<h3 id="61-rpm">6.1 重建 RPM 数据库</h3>
-<div class="codehilite"><pre><span></span><code>rpm<span class="w"> </span>--rebuilddb
+<h2 id="6-rpm">6. RPM 数据库管理<a class="headerlink" href="#6-rpm" title="Permanent link">&para;</a></h2>
+<h3 id="61-rpm">6.1 重建 RPM 数据库<a class="headerlink" href="#61-rpm" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>rpm<span class="w"> </span>--rebuilddb
 </code></pre></div>
-
-<p><code>--rebuilddb</code> 选项用于重建 RPM 数据库，适用于数据库损坏或其他数据库相关问题时。</p>
-<h3 id="62-rpm">6.2 清除 RPM 数据库中的缓存文件</h3>
-<div class="codehilite"><pre><span></span><code>rpm<span class="w"> </span>--initdb
+<code>--rebuilddb</code> 选项用于重建 RPM 数据库，适用于数据库损坏或其他数据库相关问题时。</p>
+<h3 id="62-rpm">6.2 清除 RPM 数据库中的缓存文件<a class="headerlink" href="#62-rpm" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>rpm<span class="w"> </span>--initdb
 </code></pre></div>
-
-<p><code>--initdb</code> 选项用于初始化数据库，通常在初次安装 RPM 时使用。</p>
+<code>--initdb</code> 选项用于初始化数据库，通常在初次安装 RPM 时使用。</p>
 <hr />
-<h2 id="7">7. 实用示例</h2>
-<h3 id="71-rpm">7.1 下载并安装 RPM 包</h3>
-<div class="codehilite"><pre><span></span><code>wget<span class="w"> </span>http://example.com/package.rpm
+<h2 id="7">7. 实用示例<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
+<h3 id="71-rpm">7.1 下载并安装 RPM 包<a class="headerlink" href="#71-rpm" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>wget<span class="w"> </span>http://example.com/package.rpm
 rpm<span class="w"> </span>-ivh<span class="w"> </span>package.rpm
 </code></pre></div>
-
-<p>从 URL 下载 RPM 包并安装。</p>
-<h3 id="72-rpm">7.2 升级多个 RPM 包</h3>
-<div class="codehilite"><pre><span></span><code>rpm<span class="w"> </span>-Uvh<span class="w"> </span>package1.rpm<span class="w"> </span>package2.rpm
+从 URL 下载 RPM 包并安装。</p>
+<h3 id="72-rpm">7.2 升级多个 RPM 包<a class="headerlink" href="#72-rpm" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>rpm<span class="w"> </span>-Uvh<span class="w"> </span>package1.rpm<span class="w"> </span>package2.rpm
 </code></pre></div>
-
-<p>同时升级多个 RPM 包。</p>
-<h3 id="73">7.3 查询特定软件包的版本</h3>
-<div class="codehilite"><pre><span></span><code>rpm<span class="w"> </span>-qa<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>httpd
+同时升级多个 RPM 包。</p>
+<h3 id="73">7.3 查询特定软件包的版本<a class="headerlink" href="#73" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>rpm<span class="w"> </span>-qa<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>httpd
 </code></pre></div>
-
-<p>查询已安装的 <code>httpd</code> 软件包版本。</p>
-<h3 id="74">7.4 删除已安装软件包</h3>
-<div class="codehilite"><pre><span></span><code>rpm<span class="w"> </span>-e<span class="w"> </span>httpd
+查询已安装的 <code>httpd</code> 软件包版本。</p>
+<h3 id="74">7.4 删除已安装软件包<a class="headerlink" href="#74" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>rpm<span class="w"> </span>-e<span class="w"> </span>httpd
 </code></pre></div>
-
-<p>删除 <code>httpd</code> 软件包。</p>
-<h3 id="75-rpm">7.5 验证 RPM 包的完整性</h3>
-<div class="codehilite"><pre><span></span><code>rpm<span class="w"> </span>-V<span class="w"> </span>httpd
+删除 <code>httpd</code> 软件包。</p>
+<h3 id="75-rpm">7.5 验证 RPM 包的完整性<a class="headerlink" href="#75-rpm" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>rpm<span class="w"> </span>-V<span class="w"> </span>httpd
 </code></pre></div>
-
-<p>验证 <code>httpd</code> 软件包的文件完整性。</p>
+验证 <code>httpd</code> 软件包的文件完整性。</p>
 <hr />
-<h2 id="8-rpm-yum">8. RPM 与 YUM 对比</h2>
+<h2 id="8-rpm-yum">8. RPM 与 YUM 对比<a class="headerlink" href="#8-rpm-yum" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -7362,6 +9784,8 @@ rpm<span class="w"> </span>-ivh<span class="w"> </span>package.rpm
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -7391,10 +9815,20 @@ rpm<span class="w"> </span>-ivh<span class="w"> </span>package.rpm
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.sections", "toc.integrate", "search.highlight", "search.suggest", "header.autohide", "footer.copyright", "footer.text", "code.annotate", "content.code", "material.nav", "material.switch", "content.code.copy"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.section", "navigation.expand", "navigation.tabs", "navigation.sections", "navigation.indexes", "content.code.copy", "content.tabs.link", "content.code.annotate", "math"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+        <script src="../../styles/javascripts/config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="../../styles/javascripts/katex.js"></script>
       
     
   </body>

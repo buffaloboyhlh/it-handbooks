@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -50,7 +50,9 @@
       
     
     
-      <link rel="stylesheet" href="../../css/extra.css">
+      <link rel="stylesheet" href="../../styles/css/extra.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -69,7 +71,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="amber">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#_2" class="md-skip">
           跳转至
         </a>
       
@@ -90,9 +92,7 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
     <a href="../.." title="IT-手册" class="md-header__button md-logo" aria-label="IT-手册" data-md-component="logo">
       
@@ -127,20 +127,20 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="amber"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_1">
     
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
@@ -152,11 +152,13 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -175,8 +177,6 @@
         </button>
       </nav>
       
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
@@ -190,6 +190,7 @@
     </div>
   </div>
 </div>
+      
     
     
   </nav>
@@ -200,6 +201,348 @@
       
       
         
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  IT-手册大全
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Web%E7%AF%87/Django/advance/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Web篇
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/basic/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  中间件
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/alert/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  云原生
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/LangChain/advance/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  人工智能
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E5%B7%A5%E5%85%B7%E7%AF%87/SRE/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  工具篇
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/basic/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  数据库
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/algorithm/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  数据结构和算法
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E6%9C%8D%E5%8A%A1%E5%99%A8/gunicorn/basic/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  服务器
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../bloom/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  系统设计
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  计算机基础
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/C%2B%2B/advance/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  语言篇
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
           
         
       
@@ -214,10 +557,10 @@
                     
 
 
-
   
 
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="导航栏" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="IT-手册" class="md-nav__button md-logo" aria-label="IT-手册" data-md-component="logo">
       
@@ -240,8 +583,10 @@
       <a href="../.." class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     IT-手册大全
+    
   </span>
   
 
@@ -258,14 +603,23 @@
   
     
     
-    
       
         
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -274,11 +628,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Web篇
+    
   </span>
   
 
@@ -300,7 +656,23 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -316,8 +688,10 @@
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Django
+    
   </span>
   
 
@@ -341,8 +715,10 @@
       <a href="../../Web%E7%AF%87/Django/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Django 进阶教程
+    
   </span>
   
 
@@ -362,8 +738,10 @@
       <a href="../../Web%E7%AF%87/Django/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Django 基础教程
+    
   </span>
   
 
@@ -383,8 +761,10 @@
       <a href="../../Web%E7%AF%87/Django/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Django 面试手册
+    
   </span>
   
 
@@ -404,8 +784,10 @@
       <a href="../../Web%E7%AF%87/Django/questions/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Django 开发中遇到的问题
+    
   </span>
   
 
@@ -425,8 +807,10 @@
       <a href="../../Web%E7%AF%87/Django/restful/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Django RESTful
+    
   </span>
   
 
@@ -452,7 +836,23 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -468,8 +868,10 @@
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     FastAPI
+    
   </span>
   
 
@@ -493,8 +895,10 @@
       <a href="../../Web%E7%AF%87/FastAPI/GraphQL/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     GraphQL 教程
+    
   </span>
   
 
@@ -514,8 +918,10 @@
       <a href="../../Web%E7%AF%87/FastAPI/advance./" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     FastAPI 进阶教程
+    
   </span>
   
 
@@ -535,8 +941,10 @@
       <a href="../../Web%E7%AF%87/FastAPI/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     FastAPI 教程
+    
   </span>
   
 
@@ -556,8 +964,10 @@
       <a href="../../Web%E7%AF%87/FastAPI/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     FastAPI 面试手册
+    
   </span>
   
 
@@ -577,8 +987,10 @@
       <a href="../../Web%E7%AF%87/FastAPI/practice/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     FastAPI 实战项目教程：构建完整的博客 API
+    
   </span>
   
 
@@ -604,7 +1016,21 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -620,8 +1046,10 @@
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Flask
+    
   </span>
   
 
@@ -645,8 +1073,10 @@
       <a href="../../Web%E7%AF%87/Flask/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Flask 进阶教程
+    
   </span>
   
 
@@ -666,8 +1096,10 @@
       <a href="../../Web%E7%AF%87/Flask/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Flask 基础教程
+    
   </span>
   
 
@@ -687,8 +1119,10 @@
       <a href="../../Web%E7%AF%87/Flask/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Flask 面试手册
+    
   </span>
   
 
@@ -708,8 +1142,10 @@
       <a href="../../Web%E7%AF%87/Flask/questions/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Flask 工作中常见问题
+    
   </span>
   
 
@@ -742,14 +1178,23 @@
   
     
     
-    
       
         
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -758,11 +1203,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     中间件
+    
   </span>
   
 
@@ -784,7 +1231,17 @@
   
     
     
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -800,8 +1257,10 @@
           <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Kafka
+    
   </span>
   
 
@@ -825,8 +1284,10 @@
       <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Kafka 基础
+    
   </span>
   
 
@@ -846,8 +1307,10 @@
       <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     kafka 面试
+    
   </span>
   
 
@@ -873,7 +1336,17 @@
   
     
     
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -889,8 +1362,10 @@
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Rabbitmq
+    
   </span>
   
 
@@ -914,8 +1389,10 @@
       <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/rabbitmq/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Basic
+    
   </span>
   
 
@@ -935,8 +1412,10 @@
       <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/rabbitmq/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     RabbitMQ 面试
+    
   </span>
   
 
@@ -962,7 +1441,17 @@
   
     
     
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -978,8 +1467,10 @@
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Zookeeper
+    
   </span>
   
 
@@ -1003,8 +1494,10 @@
       <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/zookeeper/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     zookeeper 教程
+    
   </span>
   
 
@@ -1024,8 +1517,10 @@
       <a href="../../%E4%B8%AD%E9%97%B4%E4%BB%B6/zookeeper/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     zookeeper 面试
+    
   </span>
   
 
@@ -1058,14 +1553,23 @@
   
     
     
-    
       
         
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -1074,11 +1578,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     云原生
+    
   </span>
   
 
@@ -1100,7 +1606,21 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -1116,8 +1636,10 @@
           <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Prometheus
+    
   </span>
   
 
@@ -1141,8 +1663,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/alert/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Prometheus 告警
+    
   </span>
   
 
@@ -1162,8 +1686,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Prometheus 教程
+    
   </span>
   
 
@@ -1183,8 +1709,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/prometheus/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Prometheus 配置文件
+    
   </span>
   
 
@@ -1204,8 +1732,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/promql/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     PromQL
+    
   </span>
   
 
@@ -1231,7 +1761,17 @@
   
     
     
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -1247,8 +1787,10 @@
           <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Docker
+    
   </span>
   
 
@@ -1272,8 +1814,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Docker-基础
+    
   </span>
   
 
@@ -1293,8 +1837,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Docker 面试
+    
   </span>
   
 
@@ -1320,7 +1866,23 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -1336,8 +1898,10 @@
           <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Kubernetes
+    
   </span>
   
 
@@ -1361,8 +1925,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     kubernetes 教程
+    
   </span>
   
 
@@ -1382,8 +1948,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/crictl/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     crictl 教程
+    
   </span>
   
 
@@ -1403,8 +1971,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/helm/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     kubernetes 包管理工具 helm
+    
   </span>
   
 
@@ -1424,8 +1994,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     kubernetes 面试手册
+    
   </span>
   
 
@@ -1445,8 +2017,10 @@
       <a href="../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/monitor/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     kubernetes 监控平台和日志管理
+    
   </span>
   
 
@@ -1479,14 +2053,25 @@
   
     
     
-    
       
         
+      
+        
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -1495,11 +2080,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     人工智能
+    
   </span>
   
 
@@ -1521,7 +2108,17 @@
   
     
     
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -1537,8 +2134,10 @@
           <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     LangChain
+    
   </span>
   
 
@@ -1562,8 +2161,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/LangChain/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     LangChain 进阶教程
+    
   </span>
   
 
@@ -1583,8 +2184,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/LangChain/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     LangChain 基础教程
+    
   </span>
   
 
@@ -1610,7 +2213,19 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -1626,8 +2241,10 @@
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     大语言模型
+    
   </span>
   
 
@@ -1651,8 +2268,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     LLM 进阶教程
+    
   </span>
   
 
@@ -1672,8 +2291,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     LLM 基础教程
+    
   </span>
   
 
@@ -1693,8 +2314,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     LLM 面试手册
+    
   </span>
   
 
@@ -1720,7 +2343,19 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -1736,8 +2371,10 @@
           <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     机器学习
+    
   </span>
   
 
@@ -1761,8 +2398,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     机器学习 进阶教程
+    
   </span>
   
 
@@ -1782,8 +2421,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     机器学习 基础教程
+    
   </span>
   
 
@@ -1803,8 +2444,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     机器学习 面试手册
+    
   </span>
   
 
@@ -1830,7 +2473,19 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -1846,8 +2501,10 @@
           <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     深度学习
+    
   </span>
   
 
@@ -1871,8 +2528,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     深度学习 进阶教程
+    
   </span>
   
 
@@ -1892,8 +2551,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     深度学习 进阶教程
+    
   </span>
   
 
@@ -1913,8 +2574,10 @@
       <a href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     深度学习 面试手册
+    
   </span>
   
 
@@ -1947,14 +2610,35 @@
   
     
     
-    
       
         
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -1963,11 +2647,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     工具篇
+    
   </span>
   
 
@@ -1991,8 +2677,10 @@
       <a href="../../%E5%B7%A5%E5%85%B7%E7%AF%87/SRE/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     SRE 故障排查
+    
   </span>
   
 
@@ -2012,8 +2700,10 @@
       <a href="../../%E5%B7%A5%E5%85%B7%E7%AF%87/SonarQube/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     SonarQube 基本教程
+    
   </span>
   
 
@@ -2033,8 +2723,10 @@
       <a href="../../%E5%B7%A5%E5%85%B7%E7%AF%87/chaos/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Chaos 混沌工程
+    
   </span>
   
 
@@ -2054,8 +2746,10 @@
       <a href="../../%E5%B7%A5%E5%85%B7%E7%AF%87/commands/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Linux 常用命令
+    
   </span>
   
 
@@ -2075,8 +2769,10 @@
       <a href="../../%E5%B7%A5%E5%85%B7%E7%AF%87/crontab/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Crontab
+    
   </span>
   
 
@@ -2096,8 +2792,10 @@
       <a href="../../%E5%B7%A5%E5%85%B7%E7%AF%87/git/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     git 命令
+    
   </span>
   
 
@@ -2117,8 +2815,10 @@
       <a href="../../%E5%B7%A5%E5%85%B7%E7%AF%87/jenkins/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Jenkins
+    
   </span>
   
 
@@ -2138,8 +2838,10 @@
       <a href="../../%E5%B7%A5%E5%85%B7%E7%AF%87/journalctl/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     journalctl 教程
+    
   </span>
   
 
@@ -2159,8 +2861,10 @@
       <a href="../../%E5%B7%A5%E5%85%B7%E7%AF%87/supervisor/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Supervisor 教程
+    
   </span>
   
 
@@ -2185,14 +2889,29 @@
   
     
     
-    
       
         
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -2201,11 +2920,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     数据库
+    
   </span>
   
 
@@ -2227,7 +2948,23 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -2243,8 +2980,10 @@
           <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Elastic
+    
   </span>
   
 
@@ -2268,8 +3007,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Elasticsearch 教程
+    
   </span>
   
 
@@ -2289,8 +3030,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/filebeat/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     filebeat.yml 配置文件
+    
   </span>
   
 
@@ -2310,8 +3053,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     ElasticSearch 面试手册
+    
   </span>
   
 
@@ -2331,8 +3076,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/logstash/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     logstash 配置文件
+    
   </span>
   
 
@@ -2352,8 +3099,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/questions/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     ElasticSearch 工作中遇到的问题
+    
   </span>
   
 
@@ -2379,7 +3128,15 @@
   
     
     
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -2395,8 +3152,10 @@
           <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     HBase
+    
   </span>
   
 
@@ -2420,8 +3179,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/HBase/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Basic
+    
   </span>
   
 
@@ -2447,7 +3208,19 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -2463,8 +3236,10 @@
           <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     MongoDB
+    
   </span>
   
 
@@ -2488,8 +3263,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     MongoDB 完整教程：从入门到精通
+    
   </span>
   
 
@@ -2509,8 +3286,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     MongoDB 面试手册
+    
   </span>
   
 
@@ -2530,8 +3309,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/questions/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     MongoDB 工作中遇到的问题
+    
   </span>
   
 
@@ -2557,7 +3338,21 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -2573,8 +3368,10 @@
           <label class="md-nav__link" for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     MySQL
+    
   </span>
   
 
@@ -2598,8 +3395,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     MySQL 教程
+    
   </span>
   
 
@@ -2619,8 +3418,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/command/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     MySQL 常用命令
+    
   </span>
   
 
@@ -2640,8 +3441,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     MySQL 面试题
+    
   </span>
   
 
@@ -2661,8 +3464,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/questions/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     MySQl 常见问题
+    
   </span>
   
 
@@ -2688,7 +3493,19 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -2704,8 +3521,10 @@
           <label class="md-nav__link" for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     PostgreSQL
+    
   </span>
   
 
@@ -2729,8 +3548,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/PostgreSQL/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     PostgreSQL 进阶教程
+    
   </span>
   
 
@@ -2750,8 +3571,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/PostgreSQL/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     PostgreSQL基础教程
+    
   </span>
   
 
@@ -2771,8 +3594,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/PostgreSQL/demo/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Demo
+    
   </span>
   
 
@@ -2798,7 +3623,19 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -2814,8 +3651,10 @@
           <label class="md-nav__link" for="__nav_7_6" id="__nav_7_6_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Redis
+    
   </span>
   
 
@@ -2839,8 +3678,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Redis 教程
+    
   </span>
   
 
@@ -2860,8 +3701,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Redis 面试手册
+    
   </span>
   
 
@@ -2881,8 +3724,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/questions/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Redis 工作中常见问题
+    
   </span>
   
 
@@ -2915,14 +3760,23 @@
   
     
     
-    
       
         
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -2931,11 +3785,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     数据结构和算法
+    
   </span>
   
 
@@ -2959,8 +3815,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/algorithm/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     算法
+    
   </span>
   
 
@@ -2980,8 +3838,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/leetcode/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     LeetCode 题目
+    
   </span>
   
 
@@ -3001,8 +3861,10 @@
       <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/struct/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     数据结构
+    
   </span>
   
 
@@ -3027,14 +3889,25 @@
   
     
     
-    
       
         
+      
+        
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -3043,11 +3916,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
         
           
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     服务器
+    
   </span>
   
 
@@ -3069,7 +3944,15 @@
   
     
     
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -3085,8 +3968,10 @@
           <label class="md-nav__link" for="__nav_9_1" id="__nav_9_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Gunicorn
+    
   </span>
   
 
@@ -3110,8 +3995,10 @@
       <a href="../../%E6%9C%8D%E5%8A%A1%E5%99%A8/gunicorn/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Gunicorn 教程
+    
   </span>
   
 
@@ -3137,7 +4024,17 @@
   
     
     
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -3153,8 +4050,10 @@
           <label class="md-nav__link" for="__nav_9_2" id="__nav_9_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Nginx
+    
   </span>
   
 
@@ -3178,8 +4077,10 @@
       <a href="../../%E6%9C%8D%E5%8A%A1%E5%99%A8/nginx/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Nginx 教程
+    
   </span>
   
 
@@ -3199,8 +4100,10 @@
       <a href="../../%E6%9C%8D%E5%8A%A1%E5%99%A8/nginx/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     nginx 面试手册
+    
   </span>
   
 
@@ -3226,7 +4129,15 @@
   
     
     
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -3242,8 +4153,10 @@
           <label class="md-nav__link" for="__nav_9_3" id="__nav_9_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Uvicorn
+    
   </span>
   
 
@@ -3267,8 +4180,10 @@
       <a href="../../%E6%9C%8D%E5%8A%A1%E5%99%A8/uvicorn/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Uvicorn 教程
+    
   </span>
   
 
@@ -3294,7 +4209,15 @@
   
     
     
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -3310,8 +4233,10 @@
           <label class="md-nav__link" for="__nav_9_4" id="__nav_9_4_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Uwsgi
+    
   </span>
   
 
@@ -3335,8 +4260,10 @@
       <a href="../../%E6%9C%8D%E5%8A%A1%E5%99%A8/uwsgi/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     uWSGI 教程
+    
   </span>
   
 
@@ -3371,9 +4298,25 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
     
       
         
+        
+      
+      
         
       
     
@@ -3388,8 +4331,10 @@
           <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
             
   
+  
   <span class="md-ellipsis">
     系统设计
+    
   </span>
   
 
@@ -3413,8 +4358,10 @@
       <a href="../bloom/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     布隆过滤器
+    
   </span>
   
 
@@ -3434,8 +4381,10 @@
       <a href="../hash/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     一致性哈希
+    
   </span>
   
 
@@ -3455,8 +4404,10 @@
       <a href="../id/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     唯一ID
+    
   </span>
   
 
@@ -3476,8 +4427,10 @@
       <a href="../interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     系统设计题目
+    
   </span>
   
 
@@ -3500,14 +4453,14 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
     限流
+    
   </span>
   
 
@@ -3517,8 +4470,10 @@
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
     限流
+    
   </span>
   
 
@@ -3529,8 +4484,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
@@ -3565,48 +4518,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. 固定窗口计数器算法（Fixed Window Counter）">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.1 原理
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.2 工作过程
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#13" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.3 优缺点
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#14" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.4 适用场景
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -3615,48 +4526,6 @@
       2. 滑动窗口计数器算法（Sliding Window Counter）
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="2. 滑动窗口计数器算法（Sliding Window Counter）">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.1 原理
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.2 工作过程
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#23" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.3 优缺点
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#24" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.4 适用场景
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -3667,48 +4536,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. 令牌桶算法（Token Bucket）">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.1 原理
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.2 工作过程
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.3 优缺点
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#34" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.4 适用场景
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -3718,48 +4545,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="4. 漏桶算法（Leaky Bucket）">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.1 原理
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.2 工作过程
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#43" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.3 优缺点
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#44" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.4 适用场景
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -3768,48 +4553,6 @@
       5. 滑动窗口日志算法（Sliding Log）
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="5. 滑动窗口日志算法（Sliding Log）">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#51" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.1 原理
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#52" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.2 工作过程
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#53" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.3 优缺点
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#54" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.4 适用场景
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -3828,39 +4571,6 @@
       7. 限流算法的优化
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="7. 限流算法的优化">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#71" class="md-nav__link">
-    <span class="md-ellipsis">
-      7.1 热点用户限流
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#72" class="md-nav__link">
-    <span class="md-ellipsis">
-      7.2 限流精度的平衡
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#73" class="md-nav__link">
-    <span class="md-ellipsis">
-      7.3 分布式系统中的限流
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -3913,48 +4623,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. 常见的限流算法">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-fixed-window-counter" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.1 固定窗口计数器（Fixed Window Counter）
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22-sliding-window-log" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.2 滑动窗口计数器（Sliding Window Log）
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#23-token-bucket" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.3 令牌桶算法（Token Bucket）
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#24-leaky-bucket" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.4 漏桶算法（Leaky Bucket）
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -3964,120 +4632,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. API限流的实现方式">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.1 在应用程序层实现限流
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3.1 在应用程序层实现限流">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1redis" class="md-nav__link">
-    <span class="md-ellipsis">
-      步骤 1：安装Redis依赖
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      步骤 2：实现限流逻辑
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3api" class="md-nav__link">
-    <span class="md-ellipsis">
-      步骤 3：应用限流逻辑到API视图中
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32-nginx" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.2 在Nginx中实现限流
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3.2 在Nginx中实现限流">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1nginx" class="md-nav__link">
-    <span class="md-ellipsis">
-      步骤 1：编辑Nginx配置文件
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      配置说明：
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.3 在API网关中实现限流
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3.3 在API网关中实现限流">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1kongrate-limiting" class="md-nav__link">
-    <span class="md-ellipsis">
-      步骤 1：启用Kong的Rate Limiting插件
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      配置说明：
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -4086,39 +4640,6 @@
       4. API限流的优化与扩展
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="4. API限流的优化与扩展">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.1 动态调整限流策略
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.2 分布式限流
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#43_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.3 熔断与降级
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -4162,75 +4683,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. API网关的功能">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.1 请求路由
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.2 协议转换
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#23_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.3 认证与授权
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#24_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.4 负载均衡
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#25" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.5 缓存
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#26" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.6 限流和熔断
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#27" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.7 日志和监控
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -4239,48 +4691,6 @@
       3. API网关的使用场景
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="3. API网关的使用场景">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.1 微服务架构
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.2 流量管理
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.3 安全防护
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#34_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.4 服务聚合
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -4291,57 +4701,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="4. 常见API网关解决方案">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41-kong" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.1 Kong
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42-nginx-lua" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.2 Nginx + Lua
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#43-aws-api-gateway" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.3 AWS API Gateway
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#44-zuul" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.4 Zuul
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#45-traefik" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.5 Traefik
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -4350,48 +4709,6 @@
       5. API网关的设计挑战
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="5. API网关的设计挑战">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#51_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.1 性能瓶颈
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#52_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.2 单点故障
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#53_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.3 安全问题
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#54_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.4 可扩展性
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -4435,72 +4752,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. 熔断（Circuit Breaker）">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.1 熔断的概念
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.2 熔断的作用
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#13_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.3 熔断的应用场景
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#14_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.4 熔断的实现方式
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.4 熔断的实现方式">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#141-hystrixnetflix" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.4.1 Hystrix（Netflix 开源的熔断器）
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#142-spring-cloud-resilience4j" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.4.2 Spring Cloud Resilience4j
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -4509,81 +4760,6 @@
       2. 降级（Fallback）
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="2. 降级（Fallback）">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.1 降级的概念
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.2 降级的作用
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#23_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.3 降级的应用场景
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#24_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.4 降级的实现方式
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2.4 降级的实现方式">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#241" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.4.1 代码降级
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#242" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.4.2 使用缓存进行降级
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#25_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.5 监控与告警
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -4645,48 +4821,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. Kong 的安装与配置">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31-postgresql" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.1 安装 PostgreSQL
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32-kong" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.2 安装 Kong
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.3 初始化数据库
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#34-kong" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.4 访问 Kong 管理界面
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -4695,39 +4829,6 @@
       4. API 管理示例
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="4. API 管理示例">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.1 创建一个服务
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.2 创建路由
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#43-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.3 测试 API
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -4738,39 +4839,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="5. 插件系统">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#51_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.1 限流插件
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#52_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.2 身份验证插件
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#53-cors" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.3 CORS 插件
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -4780,21 +4848,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="6. 高可用性与集群部署">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#61-db-less" class="md-nav__link">
-    <span class="md-ellipsis">
-      6.1 DB-less 模式部署
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -4803,21 +4856,6 @@
       7. 监控与日志管理
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="7. 监控与日志管理">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#71-prometheus" class="md-nav__link">
-    <span class="md-ellipsis">
-      7.1 启用 Prometheus 插件
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -4859,14 +4897,25 @@
   
     
     
-    
       
         
+      
+        
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -4875,11 +4924,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11" >
         
           
-          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="">
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     计算机基础
+    
   </span>
   
 
@@ -4903,8 +4954,10 @@
       <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     http 手册
+    
   </span>
   
 
@@ -4924,8 +4977,10 @@
       <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/network/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     计算机网络面试手册
+    
   </span>
   
 
@@ -4945,8 +5000,10 @@
       <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/system/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     操作系统面试手册
+    
   </span>
   
 
@@ -4966,8 +5023,10 @@
       <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/websocket/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Websocket
+    
   </span>
   
 
@@ -4992,14 +5051,23 @@
   
     
     
-    
       
         
+      
+        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -5008,11 +5076,13 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12" >
         
           
-          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="">
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     语言篇
+    
   </span>
   
 
@@ -5034,7 +5104,19 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -5050,8 +5132,10 @@
           <label class="md-nav__link" for="__nav_12_1" id="__nav_12_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     C++
+    
   </span>
   
 
@@ -5075,8 +5159,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/C%2B%2B/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     C++ 进阶教程
+    
   </span>
   
 
@@ -5096,8 +5182,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/C%2B%2B/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     C++ 基础教程
+    
   </span>
   
 
@@ -5117,8 +5205,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/C%2B%2B/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     C++ 面试手册
+    
   </span>
   
 
@@ -5144,7 +5234,19 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -5160,8 +5262,10 @@
           <label class="md-nav__link" for="__nav_12_2" id="__nav_12_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Golang
+    
   </span>
   
 
@@ -5185,8 +5289,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Go 进阶教程
+    
   </span>
   
 
@@ -5206,8 +5312,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Go 基础教程
+    
   </span>
   
 
@@ -5225,7 +5333,47 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -5241,8 +5389,10 @@
           <label class="md-nav__link" for="__nav_12_2_3" id="__nav_12_2_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     常用库
+    
   </span>
   
 
@@ -5266,8 +5416,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/cobra/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Cobra
+    
   </span>
   
 
@@ -5287,8 +5439,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/encoding/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Encoding
+    
   </span>
   
 
@@ -5308,8 +5462,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/fmt/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     fmt 库
+    
   </span>
   
 
@@ -5329,8 +5485,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/gin/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Gin
+    
   </span>
   
 
@@ -5350,8 +5508,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/gorm/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Gorm
+    
   </span>
   
 
@@ -5371,8 +5531,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/io/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Io
+    
   </span>
   
 
@@ -5392,8 +5554,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/jwt-go/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Jwt go
+    
   </span>
   
 
@@ -5413,8 +5577,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/logrus/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Logrus
+    
   </span>
   
 
@@ -5434,8 +5600,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/net/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     net
+    
   </span>
   
 
@@ -5455,8 +5623,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/os/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Os
+    
   </span>
   
 
@@ -5476,8 +5646,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/pprof/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Pprof
+    
   </span>
   
 
@@ -5497,8 +5669,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/protobuf/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Protobuf
+    
   </span>
   
 
@@ -5518,8 +5692,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/sync/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Sync
+    
   </span>
   
 
@@ -5539,8 +5715,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/testify/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Testify
+    
   </span>
   
 
@@ -5560,8 +5738,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/time/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Time
+    
   </span>
   
 
@@ -5581,8 +5761,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/viper/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Viper
+    
   </span>
   
 
@@ -5602,8 +5784,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/zap/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Zap
+    
   </span>
   
 
@@ -5637,7 +5821,21 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -5653,8 +5851,10 @@
           <label class="md-nav__link" for="__nav_12_3" id="__nav_12_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Python
+    
   </span>
   
 
@@ -5678,8 +5878,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/advance/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Python 进阶教程
+    
   </span>
   
 
@@ -5699,8 +5901,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/basic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     python 基础教程
+    
   </span>
   
 
@@ -5720,8 +5924,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/interview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Python 面试手册
+    
   </span>
   
 
@@ -5739,7 +5945,87 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
+    
+    
+      
+      
+        
       
     
     
@@ -5755,8 +6041,10 @@
           <label class="md-nav__link" for="__nav_12_3_4" id="__nav_12_3_4_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     Python常用库
+    
   </span>
   
 
@@ -5780,8 +6068,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/Seaborn/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Seaborn
+    
   </span>
   
 
@@ -5801,8 +6091,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/beautifulsoup/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     beautifulsoup 模块
+    
   </span>
   
 
@@ -5822,8 +6114,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/celery/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Celery
+    
   </span>
   
 
@@ -5843,8 +6137,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/click/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Click
+    
   </span>
   
 
@@ -5864,8 +6160,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/datastruct/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     数据结构和算法
+    
   </span>
   
 
@@ -5885,8 +6183,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/datetime/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     datetime 模块
+    
   </span>
   
 
@@ -5906,8 +6206,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/functools/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     functools 模块
+    
   </span>
   
 
@@ -5927,8 +6229,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/jose/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Jose
+    
   </span>
   
 
@@ -5948,8 +6252,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/json/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     json 模块
+    
   </span>
   
 
@@ -5969,8 +6275,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/logging/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     logging 模块
+    
   </span>
   
 
@@ -5990,8 +6298,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/math/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     math 模块
+    
   </span>
   
 
@@ -6011,8 +6321,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/matpliot/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     matpliot 使用教程
+    
   </span>
   
 
@@ -6032,8 +6344,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/mock/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     mock 模块
+    
   </span>
   
 
@@ -6053,8 +6367,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/numpy/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     NumPy 教程
+    
   </span>
   
 
@@ -6074,8 +6390,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/os/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     os模块
+    
   </span>
   
 
@@ -6095,8 +6413,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pandas/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Pandas 教程
+    
   </span>
   
 
@@ -6116,8 +6436,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/passlib/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Passlib
+    
   </span>
   
 
@@ -6137,8 +6459,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pathlib/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     pathlib 模块
+    
   </span>
   
 
@@ -6158,8 +6482,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pickle/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     pickle 模块
+    
   </span>
   
 
@@ -6179,8 +6505,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pydantic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Pydantic
+    
   </span>
   
 
@@ -6200,8 +6528,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pymysql/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     pymysql 模块
+    
   </span>
   
 
@@ -6221,8 +6551,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pytest/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     pytest 模块
+    
   </span>
   
 
@@ -6242,8 +6574,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pytorch/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     PyTorch 从入门到精通：详细教程
+    
   </span>
   
 
@@ -6263,8 +6597,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/queue/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     queue 模块
+    
   </span>
   
 
@@ -6284,8 +6620,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/random/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     random 模块
+    
   </span>
   
 
@@ -6305,8 +6643,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/re/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     re 模块
+    
   </span>
   
 
@@ -6326,8 +6666,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/redis/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     redis
+    
   </span>
   
 
@@ -6347,8 +6689,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/requests/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     requests 模块
+    
   </span>
   
 
@@ -6368,8 +6712,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scikit-learn/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     scikit-learn
+    
   </span>
   
 
@@ -6389,8 +6735,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scipy/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     scipy 模块
+    
   </span>
   
 
@@ -6410,8 +6758,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scrapy/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     scrapy 教程
+    
   </span>
   
 
@@ -6431,8 +6781,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/selenium/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     selenium 使用教程
+    
   </span>
   
 
@@ -6452,8 +6804,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/shutil/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     shutil 模块
+    
   </span>
   
 
@@ -6473,8 +6827,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/sqlalchemy/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Sqlalchemy
+    
   </span>
   
 
@@ -6494,8 +6850,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/sys/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     sys 模块
+    
   </span>
   
 
@@ -6515,8 +6873,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/time/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     time 模块
+    
   </span>
   
 
@@ -6536,8 +6896,10 @@
       <a href="../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/urllib/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     urllib 模块
+    
   </span>
   
 
@@ -6577,6 +6939,411 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      限流概念
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      限流算法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="限流算法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-fixed-window-counter" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 固定窗口计数器算法（Fixed Window Counter）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-sliding-window-counter" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 滑动窗口计数器算法（Sliding Window Counter）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-token-bucket" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 令牌桶算法（Token Bucket）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-leaky-bucket" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 漏桶算法（Leaky Bucket）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-sliding-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 滑动窗口日志算法（Sliding Log）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 限流算法的选择
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 限流算法的优化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. 示例：令牌桶算法的Python实现
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      限流实战
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="限流实战">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. API限流的基本概念
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 常见的限流算法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. API限流的实现方式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. API限流的优化与扩展
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 总结
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    <span class="md-ellipsis">
+      API网关
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API网关">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-api_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. API网关的作用
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. API网关的功能
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-api_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. API网关的使用场景
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-api_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 常见API网关解决方案
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. API网关的设计挑战
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 总结
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      API 熔断和降级
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API 熔断和降级">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      API 熔断和降级
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-circuit-breaker" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 熔断（Circuit Breaker）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-fallback" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 降级（Fallback）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 熔断与降级的区别与联系
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 总结
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kong" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kong 教程
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kong 教程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-kong-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 什么是 Kong API 网关
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-kong" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Kong 的主要功能
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-kong" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Kong 的安装与配置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-api_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. API 管理示例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 插件系统
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 高可用性与集群部署
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 监控与日志管理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. 总结
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           
             <div class="md-content" data-md-component="content">
@@ -6585,8 +7352,9 @@
                   
 
 
-<h1 id="_1">限流</h1>
-<h2 id="_2">限流概念</h2>
+
+<h1 id="_1">限流<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">限流概念<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>API限流是一种流量控制技术，通常通过限制在一定时间段内允许的请求次数来实现。限流可以基于多个维度，例如每个IP、用户、应用程序等。此外，还可以设置不同的限流窗口，如每秒、每分钟或每小时限制多少请求。</p>
 <p>限流的主要目的是防止以下问题：</p>
 <ul>
@@ -6594,93 +7362,93 @@
 <li>恶意流量：防止DDoS攻击或其他恶意流量的涌入。</li>
 <li>公平使用：确保每个用户公平地使用API资源。</li>
 </ul>
-<h2 id="_3">限流算法</h2>
+<h2 id="_3">限流算法<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>API限流算法是保障系统稳定性、避免资源滥用、处理高并发的重要技术之一。不同的限流算法适合不同的场景，下面将详细讲解几种常见的限流算法，包括其工作原理、优缺点以及使用场景。</p>
-<h3 id="1-fixed-window-counter">1. <strong>固定窗口计数器算法（Fixed Window Counter）</strong></h3>
-<h4 id="11">1.1 <strong>原理</strong></h4>
+<h3 id="1-fixed-window-counter">1. <strong>固定窗口计数器算法（Fixed Window Counter）</strong><a class="headerlink" href="#1-fixed-window-counter" title="Permanent link">&para;</a></h3>
+<h4 id="11">1.1 <strong>原理</strong><a class="headerlink" href="#11" title="Permanent link">&para;</a></h4>
 <p>固定窗口计数器将时间划分为固定长度的时间窗口，例如每分钟、每小时或每天。每个时间窗口都有一个计数器，记录在该窗口内接收到的请求数。当请求次数超过设定的阈值，后续的请求将被拒绝，直到进入下一个时间窗口。</p>
-<h4 id="12">1.2 <strong>工作过程</strong></h4>
+<h4 id="12">1.2 <strong>工作过程</strong><a class="headerlink" href="#12" title="Permanent link">&para;</a></h4>
 <ul>
 <li>将时间划分为固定大小的窗口（如每60秒为一个窗口）。</li>
 <li>在当前窗口内，每次接收到请求时，计数器递增。</li>
 <li>当计数器达到预定阈值时，拒绝该窗口内的所有新请求。</li>
 <li>当窗口结束时，计数器重置，新的请求可以被接受。</li>
 </ul>
-<h4 id="13">1.3 <strong>优缺点</strong></h4>
+<h4 id="13">1.3 <strong>优缺点</strong><a class="headerlink" href="#13" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>优点</strong>：实现简单，易于理解和部署，计算开销小。</li>
 <li><strong>缺点</strong>：存在边界效应。如果一个用户在窗口快结束时发起了大量请求，并且在下一个窗口开始时立即继续发起请求，系统可能会短时间内收到大量请求，造成系统压力。这种现象称为"突发效应"。</li>
 </ul>
-<h4 id="14">1.4 <strong>适用场景</strong></h4>
+<h4 id="14">1.4 <strong>适用场景</strong><a class="headerlink" href="#14" title="Permanent link">&para;</a></h4>
 <p>适用于简单的限流场景，不需要处理精细的流量控制，适合对窗口边界的突发效应不敏感的系统。</p>
-<h3 id="2-sliding-window-counter">2. <strong>滑动窗口计数器算法（Sliding Window Counter）</strong></h3>
-<h4 id="21">2.1 <strong>原理</strong></h4>
+<h3 id="2-sliding-window-counter">2. <strong>滑动窗口计数器算法（Sliding Window Counter）</strong><a class="headerlink" href="#2-sliding-window-counter" title="Permanent link">&para;</a></h3>
+<h4 id="21">2.1 <strong>原理</strong><a class="headerlink" href="#21" title="Permanent link">&para;</a></h4>
 <p>滑动窗口计数器对固定窗口算法进行优化，将时间窗口进一步划分为多个更小的时间段。每个小时间段都有独立的计数，系统根据过去的多个时间段内的请求总数来判断是否限流。</p>
-<h4 id="22">2.2 <strong>工作过程</strong></h4>
+<h4 id="22">2.2 <strong>工作过程</strong><a class="headerlink" href="#22" title="Permanent link">&para;</a></h4>
 <ul>
 <li>将大窗口进一步分割为多个小窗口，例如每分钟分成6个10秒的小窗口。</li>
 <li>记录每个小窗口内的请求数。</li>
 <li>新请求到来时，系统计算当前和过去一段时间内的总请求数。</li>
 <li>如果总请求数超过设定的阈值，则拒绝新请求。</li>
 </ul>
-<h4 id="23">2.3 <strong>优缺点</strong></h4>
+<h4 id="23">2.3 <strong>优缺点</strong><a class="headerlink" href="#23" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>优点</strong>：相比固定窗口算法，滑动窗口算法更加精确，避免了突发效应，限流效果更平滑。</li>
 <li><strong>缺点</strong>：实现相对复杂，系统需要记录每个小窗口的请求数，存储和计算开销增加。</li>
 </ul>
-<h4 id="24">2.4 <strong>适用场景</strong></h4>
+<h4 id="24">2.4 <strong>适用场景</strong><a class="headerlink" href="#24" title="Permanent link">&para;</a></h4>
 <p>适用于对请求频率有较高控制精度的场景，尤其是在高并发环境中，需要平滑处理请求的系统。</p>
-<h3 id="3-token-bucket">3. <strong>令牌桶算法（Token Bucket）</strong></h3>
-<h4 id="31">3.1 <strong>原理</strong></h4>
+<h3 id="3-token-bucket">3. <strong>令牌桶算法（Token Bucket）</strong><a class="headerlink" href="#3-token-bucket" title="Permanent link">&para;</a></h3>
+<h4 id="31">3.1 <strong>原理</strong><a class="headerlink" href="#31" title="Permanent link">&para;</a></h4>
 <p>令牌桶算法通过生成“令牌”来控制请求速率。系统以固定速率生成令牌，放入一个令牌桶中。每次请求需要消耗一个令牌才能被处理。如果桶中没有足够的令牌，请求将被拒绝或延迟，直到有新的令牌生成。该算法允许一定程度的突发请求，因为令牌可以累积。</p>
-<h4 id="32">3.2 <strong>工作过程</strong></h4>
+<h4 id="32">3.2 <strong>工作过程</strong><a class="headerlink" href="#32" title="Permanent link">&para;</a></h4>
 <ul>
 <li>系统以固定速率生成令牌（如每秒生成一个令牌）。</li>
 <li>令牌存储在桶中，桶的容量是有限的，超过容量的令牌会被丢弃。</li>
 <li>每个请求需要消耗一个令牌，只有当桶中有令牌时，请求才会被处理。</li>
 <li>如果没有令牌，新的请求将被拒绝或延迟处理。</li>
 </ul>
-<h4 id="33">3.3 <strong>优缺点</strong></h4>
+<h4 id="33">3.3 <strong>优缺点</strong><a class="headerlink" href="#33" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>优点</strong>：允许流量突发，可以控制请求速率，同时允许一定的缓冲空间；相比漏桶算法更灵活。</li>
 <li><strong>缺点</strong>：实现相对复杂，需要维护令牌的生成和消耗逻辑。</li>
 </ul>
-<h4 id="34">3.4 <strong>适用场景</strong></h4>
+<h4 id="34">3.4 <strong>适用场景</strong><a class="headerlink" href="#34" title="Permanent link">&para;</a></h4>
 <p>适用于既要限制总体请求速率，又需要支持流量突发的场景。常用于API请求限流、流量控制等场景。</p>
-<h3 id="4-leaky-bucket">4. <strong>漏桶算法（Leaky Bucket）</strong></h3>
-<h4 id="41">4.1 <strong>原理</strong></h4>
+<h3 id="4-leaky-bucket">4. <strong>漏桶算法（Leaky Bucket）</strong><a class="headerlink" href="#4-leaky-bucket" title="Permanent link">&para;</a></h3>
+<h4 id="41">4.1 <strong>原理</strong><a class="headerlink" href="#41" title="Permanent link">&para;</a></h4>
 <p>漏桶算法将请求放入一个“桶”中，桶中的请求以固定速率流出，类似于水从漏桶中流出。如果桶满了（即流量过大），新请求将被丢弃。漏桶算法可以强制控制流量的平稳输出。</p>
-<h4 id="42">4.2 <strong>工作过程</strong></h4>
+<h4 id="42">4.2 <strong>工作过程</strong><a class="headerlink" href="#42" title="Permanent link">&para;</a></h4>
 <ul>
 <li>系统维护一个固定容量的桶。</li>
 <li>请求像水一样进入桶中，桶中的水以固定的速率流出（即处理请求的速率是固定的）。</li>
 <li>当桶满时，新的请求将被丢弃。</li>
 <li>如果桶未满，请求可以继续进入桶中，并按照固定速率流出。</li>
 </ul>
-<h4 id="43">4.3 <strong>优缺点</strong></h4>
+<h4 id="43">4.3 <strong>优缺点</strong><a class="headerlink" href="#43" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>优点</strong>：流量控制严格，能够以固定速率处理请求，确保流量平稳。</li>
 <li><strong>缺点</strong>：对突发流量的处理不佳，无法灵活应对请求激增。</li>
 </ul>
-<h4 id="44">4.4 <strong>适用场景</strong></h4>
+<h4 id="44">4.4 <strong>适用场景</strong><a class="headerlink" href="#44" title="Permanent link">&para;</a></h4>
 <p>适用于需要严格控制请求流出的速率的场景，确保系统在长期内保持稳定，例如对外服务的API提供者。</p>
-<h3 id="5-sliding-log">5. <strong>滑动窗口日志算法（Sliding Log）</strong></h3>
-<h4 id="51">5.1 <strong>原理</strong></h4>
+<h3 id="5-sliding-log">5. <strong>滑动窗口日志算法（Sliding Log）</strong><a class="headerlink" href="#5-sliding-log" title="Permanent link">&para;</a></h3>
+<h4 id="51">5.1 <strong>原理</strong><a class="headerlink" href="#51" title="Permanent link">&para;</a></h4>
 <p>滑动窗口日志算法通过记录每个请求的时间戳，并根据过去某个时间窗口内的请求总数来判断是否限流。相比滑动窗口计数器算法，它更加精确，因为它记录的是每次请求的精确时间，而不是按小窗口划分。</p>
-<h4 id="52">5.2 <strong>工作过程</strong></h4>
+<h4 id="52">5.2 <strong>工作过程</strong><a class="headerlink" href="#52" title="Permanent link">&para;</a></h4>
 <ul>
 <li>每次请求的时间戳都会被记录下来。</li>
 <li>当新请求到达时，系统会遍历过去一定时间范围内的所有请求，计算请求数量。</li>
 <li>如果请求数超过设定的阈值，新请求将被拒绝。</li>
 </ul>
-<h4 id="53">5.3 <strong>优缺点</strong></h4>
+<h4 id="53">5.3 <strong>优缺点</strong><a class="headerlink" href="#53" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>优点</strong>：非常精确，能够根据每个请求的时间戳做出限流决策。</li>
 <li><strong>缺点</strong>：内存开销较大，需要存储每个请求的时间戳；处理效率较低，尤其是在高并发环境下，需要频繁遍历历史请求记录。</li>
 </ul>
-<h4 id="54">5.4 <strong>适用场景</strong></h4>
+<h4 id="54">5.4 <strong>适用场景</strong><a class="headerlink" href="#54" title="Permanent link">&para;</a></h4>
 <p>适用于精度要求极高的场景，需要精确控制请求频率，但通常在性能要求不高的场景中使用。</p>
-<h3 id="6">6. <strong>限流算法的选择</strong></h3>
+<h3 id="6">6. <strong>限流算法的选择</strong><a class="headerlink" href="#6" title="Permanent link">&para;</a></h3>
 <p>在实际应用中，选择限流算法时需要根据具体业务场景进行权衡：</p>
 <ul>
 <li><strong>固定窗口计数器</strong>适用于简单、低成本的限流场景，适合不需要高精度控制的场景。</li>
@@ -6689,21 +7457,21 @@
 <li><strong>漏桶算法</strong>适用于需要严格控制流量输出的场景，确保流量稳定。</li>
 <li><strong>滑动窗口日志</strong>适合要求精确限流，但处理量较小或并发不高的场景。</li>
 </ul>
-<h3 id="7">7. <strong>限流算法的优化</strong></h3>
-<h4 id="71">7.1 <strong>热点用户限流</strong></h4>
+<h3 id="7">7. <strong>限流算法的优化</strong><a class="headerlink" href="#7" title="Permanent link">&para;</a></h3>
+<h4 id="71">7.1 <strong>热点用户限流</strong><a class="headerlink" href="#71" title="Permanent link">&para;</a></h4>
 <p>在某些情况下，系统可能会遇到部分热点用户或IP频繁发起请求，导致局部的高并发问题。对于这种情况，可以为这些用户设置单独的限流策略，甚至采取动态调整限流策略的手段。</p>
-<h4 id="72">7.2 <strong>限流精度的平衡</strong></h4>
+<h4 id="72">7.2 <strong>限流精度的平衡</strong><a class="headerlink" href="#72" title="Permanent link">&para;</a></h4>
 <p>限流精度越高，通常需要消耗的计算和存储资源也越多。例如，滑动窗口日志算法精度高但内存和性能消耗较大，适用于需要精确控制但请求量较低的场景。而滑动窗口计数器和固定窗口算法精度相对较低，但在大规模高并发场景下具有较好的性能表现。</p>
-<h4 id="73">7.3 <strong>分布式系统中的限流</strong></h4>
+<h4 id="73">7.3 <strong>分布式系统中的限流</strong><a class="headerlink" href="#73" title="Permanent link">&para;</a></h4>
 <p>在分布式系统中，限流状态需要在多个服务器或实例之间共享，常见的做法是使用集中式存储系统（如Redis）来存储限流计数器，确保全局的一致性。Redis提供的原子操作非常适合实现高并发场景下的分布式限流。</p>
-<h3 id="8-python">8. <strong>示例：令牌桶算法的Python实现</strong></h3>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
-<span class="kn">import</span> <span class="nn">redis</span>
+<h3 id="8-python">8. <strong>示例：令牌桶算法的Python实现</strong><a class="headerlink" href="#8-python" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">redis</span>
 
 <span class="c1"># 连接到 Redis</span>
 <span class="n">r</span> <span class="o">=</span> <span class="n">redis</span><span class="o">.</span><span class="n">StrictRedis</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">6379</span><span class="p">,</span> <span class="n">db</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">is_token_bucket_limited</span><span class="p">(</span><span class="n">user_id</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">capacity</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">is_token_bucket_limited</span><span class="p">(</span><span class="n">user_id</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">capacity</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
     <span class="c1"># 获取 Redis 键</span>
     <span class="n">key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;token_bucket:</span><span class="si">{</span><span class="n">user_id</span><span class="si">}</span><span class="s2">&quot;</span>
 
@@ -6740,20 +7508,19 @@
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Request allowed&quot;</span><span class="p">)</span>  <span class="c1"># 请求允许</span>
 </code></pre></div>
-
-<h3 id="_4">总结</h3>
+<h3 id="_4">总结<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>API限流算法在保证系统稳定性、优化资源利用、应对恶意攻击等方面至关重要。不同的限流算法在性能、精度和复杂度上各有特点，实际选择时需要综合考虑业务需求、并发情况、允许的突发流量等因素。</p>
-<h2 id="_5">限流实战</h2>
+<h2 id="_5">限流实战<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p>API限流（Rate Limiting）是限制客户端在一定时间段内向服务器发送请求次数的技术。它可以防止恶意请求、保护服务器资源以及保证服务的可用性。下面详细讲解API限流的基本概念、常见算法及实现方式，并通过实战演示如何在实际开发中应用API限流。</p>
-<h3 id="1-api">1. <strong>API限流的基本概念</strong></h3>
+<h3 id="1-api">1. <strong>API限流的基本概念</strong><a class="headerlink" href="#1-api" title="Permanent link">&para;</a></h3>
 <p>API限流的主要目标是控制客户端向服务端发送请求的频率，防止系统因大量请求而崩溃。限流通常按以下几个维度来实现：</p>
 <ul>
 <li><strong>用户维度限流</strong>：每个用户在规定时间内只能发起指定数量的请求。</li>
 <li><strong>IP地址维度限流</strong>：基于客户端IP进行限流，防止同一IP发起大量请求。</li>
 <li><strong>全局限流</strong>：对所有请求进行限流，不区分用户或IP。</li>
 </ul>
-<h3 id="2">2. <strong>常见的限流算法</strong></h3>
-<h4 id="21-fixed-window-counter">2.1 <strong>固定窗口计数器（Fixed Window Counter）</strong></h4>
+<h3 id="2">2. <strong>常见的限流算法</strong><a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<h4 id="21-fixed-window-counter">2.1 <strong>固定窗口计数器（Fixed Window Counter）</strong><a class="headerlink" href="#21-fixed-window-counter" title="Permanent link">&para;</a></h4>
 <p>在固定时间窗口内，记录请求的次数，当请求超过限额时，拒绝后续请求。时间窗口结束后，计数器重置。</p>
 <p><strong>优点</strong>：
 - 实现简单，计算开销小。</p>
@@ -6761,45 +7528,44 @@
 - 边界效应：如果客户端在窗口结束和新窗口开始时发起请求，可能会导致短时间内大量请求通过，突破限流限制。</p>
 <p><strong>示例</strong>：
 - 每分钟最多允许10次请求。如果用户在第59秒发送了10次请求，并在下个窗口的第1秒又发送了10次请求，实际上1秒内发送了20次请求。</p>
-<h4 id="22-sliding-window-log">2.2 <strong>滑动窗口计数器（Sliding Window Log）</strong></h4>
+<h4 id="22-sliding-window-log">2.2 <strong>滑动窗口计数器（Sliding Window Log）</strong><a class="headerlink" href="#22-sliding-window-log" title="Permanent link">&para;</a></h4>
 <p>通过记录每次请求的时间戳，滑动窗口统计在过去固定时间内的请求次数。</p>
 <p><strong>优点</strong>：
 - 精度较高，减少固定窗口计数器的边界效应。</p>
 <p><strong>缺点</strong>：
 - 需要存储每个请求的时间戳，内存开销较大。</p>
-<h4 id="23-token-bucket">2.3 <strong>令牌桶算法（Token Bucket）</strong></h4>
+<h4 id="23-token-bucket">2.3 <strong>令牌桶算法（Token Bucket）</strong><a class="headerlink" href="#23-token-bucket" title="Permanent link">&para;</a></h4>
 <p>令牌桶算法是一种常见的限流算法。系统以固定速率向桶中添加令牌，每次请求消耗一个令牌。当令牌用完时，新的请求被拒绝。令牌桶允许一定程度的突发流量，因为在请求低谷期间可以积累令牌。</p>
 <p><strong>优点</strong>：
 - 支持突发流量，控制较灵活。</p>
 <p><strong>缺点</strong>：
 - 实现较复杂，维护令牌数量和请求时间的同步较为困难。</p>
-<h4 id="24-leaky-bucket">2.4 <strong>漏桶算法（Leaky Bucket）</strong></h4>
+<h4 id="24-leaky-bucket">2.4 <strong>漏桶算法（Leaky Bucket）</strong><a class="headerlink" href="#24-leaky-bucket" title="Permanent link">&para;</a></h4>
 <p>漏桶算法将请求以固定速率流出，无论请求何时到达，处理的速度是固定的。如果请求到达速度超过处理速率，请求将被丢弃。</p>
 <p><strong>优点</strong>：
 - 确保系统以稳定的速率处理请求，平滑流量波动。</p>
 <p><strong>缺点</strong>：
 - 突发请求容易被丢弃，难以应对突发流量。</p>
-<h3 id="3-api">3. <strong>API限流的实现方式</strong></h3>
+<h3 id="3-api">3. <strong>API限流的实现方式</strong><a class="headerlink" href="#3-api" title="Permanent link">&para;</a></h3>
 <p>限流的实现通常可以在应用程序、反向代理（如Nginx）、API网关（如Kong、Zuul）等层面进行。以下是几种常见的实现方式：</p>
-<h4 id="31_1">3.1 <strong>在应用程序层实现限流</strong></h4>
+<h4 id="31_1">3.1 <strong>在应用程序层实现限流</strong><a class="headerlink" href="#31_1" title="Permanent link">&para;</a></h4>
 <p>通过编程实现限流算法，在应用层面控制请求频率。下面使用<strong>Python和Redis</strong>来演示基于<strong>令牌桶算法</strong>的限流实现。</p>
-<h5 id="1redis">步骤 1：安装Redis依赖</h5>
-<div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>redis
+<h5 id="1redis">步骤 1：安装Redis依赖<a class="headerlink" href="#1redis" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>redis
 </code></pre></div>
+<h5 id="2_1">步骤 2：实现限流逻辑<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">redis</span>
 
-<h5 id="2_1">步骤 2：实现限流逻辑</h5>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
-<span class="kn">import</span> <span class="nn">redis</span>
-
-<span class="k">class</span> <span class="nc">TokenBucketLimiter</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">user_id</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">capacity</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">TokenBucketLimiter</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">user_id</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">capacity</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
         <span class="c1"># 初始化Redis连接</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">redis_client</span> <span class="o">=</span> <span class="n">redis</span><span class="o">.</span><span class="n">StrictRedis</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">6379</span><span class="p">,</span> <span class="n">db</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">user_id</span> <span class="o">=</span> <span class="n">user_id</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">rate</span> <span class="o">=</span> <span class="n">rate</span>  <span class="c1"># 令牌生成速率，每秒生成 rate 个令牌</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">capacity</span> <span class="o">=</span> <span class="n">capacity</span>  <span class="c1"># 令牌桶的容量</span>
 
-    <span class="k">def</span> <span class="nf">is_limited</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">is_limited</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;rate_limit:</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">user_id</span><span class="si">}</span><span class="s2">&quot;</span>
         <span class="n">now</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 
@@ -6826,13 +7592,12 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="kc">True</span>  <span class="c1"># 请求被限流</span>
 </code></pre></div>
-
-<h5 id="3api">步骤 3：应用限流逻辑到API视图中</h5>
+<h5 id="3api">步骤 3：应用限流逻辑到API视图中<a class="headerlink" href="#3api" title="Permanent link">&para;</a></h5>
 <p>将限流逻辑集成到Django或Flask等框架中的视图函数里。下面展示一个基于Django的示例：</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">django.http</span> <span class="kn">import</span> <span class="n">JsonResponse</span>
-<span class="kn">from</span> <span class="nn">.rate_limiter</span> <span class="kn">import</span> <span class="n">TokenBucketLimiter</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">django.http</span><span class="w"> </span><span class="kn">import</span> <span class="n">JsonResponse</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.rate_limiter</span><span class="w"> </span><span class="kn">import</span> <span class="n">TokenBucketLimiter</span>
 
-<span class="k">def</span> <span class="nf">api_view</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">api_view</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
     <span class="n">user_id</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">id</span> <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">is_authenticated</span> <span class="k">else</span> <span class="n">request</span><span class="o">.</span><span class="n">META</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;REMOTE_ADDR&#39;</span><span class="p">)</span>
     <span class="n">rate_limiter</span> <span class="o">=</span> <span class="n">TokenBucketLimiter</span><span class="p">(</span><span class="n">user_id</span><span class="o">=</span><span class="n">user_id</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">6</span><span class="p">,</span> <span class="n">capacity</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>  <span class="c1"># 每分钟最多10次请求</span>
 
@@ -6842,11 +7607,10 @@
     <span class="c1"># 处理正常请求</span>
     <span class="k">return</span> <span class="n">JsonResponse</span><span class="p">({</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Request successful&quot;</span><span class="p">})</span>
 </code></pre></div>
-
-<h4 id="32-nginx">3.2 <strong>在Nginx中实现限流</strong></h4>
+<h4 id="32-nginx">3.2 <strong>在Nginx中实现限流</strong><a class="headerlink" href="#32-nginx" title="Permanent link">&para;</a></h4>
 <p>Nginx作为高性能的反向代理服务器，支持通过内置的限流模块进行API限流。以下展示如何使用Nginx的<code>ngx_http_limit_req_module</code>模块来实现限流。</p>
-<h5 id="1nginx">步骤 1：编辑Nginx配置文件</h5>
-<div class="codehilite"><pre><span></span><code><span class="k">http</span><span class="w"> </span><span class="p">{</span>
+<h5 id="1nginx">步骤 1：编辑Nginx配置文件<a class="headerlink" href="#1nginx" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><span class="k">http</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1"># 定义限流区域，每秒最多处理10个请求，突发请求最多允许20个</span>
 <span class="w">    </span><span class="kn">limit_req_zone</span><span class="w"> </span><span class="nv">$binary_remote_addr</span><span class="w"> </span><span class="s">zone=mylimit:10m</span><span class="w"> </span><span class="s">rate=10r/s</span><span class="p">;</span>
 
@@ -6859,39 +7623,37 @@
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
-<h5 id="_6">配置说明：</h5>
+<h5 id="_6">配置说明：<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h5>
 <ul>
 <li><strong>limit_req_zone</strong>：定义一个限流区域<code>mylimit</code>，存储在内存中（10MB），允许每秒10个请求。</li>
 <li><strong>burst=20</strong>：允许最多20个突发请求。</li>
 <li><strong>nodelay</strong>：立即处理突发请求，不等待。</li>
 </ul>
-<h4 id="33-api">3.3 <strong>在API网关中实现限流</strong></h4>
+<h4 id="33-api">3.3 <strong>在API网关中实现限流</strong><a class="headerlink" href="#33-api" title="Permanent link">&para;</a></h4>
 <p>API网关（如Kong、AWS API Gateway、Zuul）通常具备内置的限流功能，可以通过配置限流插件来实现。在Kong中，可以通过安装<strong>Rate Limiting插件</strong>来限制请求速率。</p>
-<h5 id="1kongrate-limiting">步骤 1：启用Kong的Rate Limiting插件</h5>
-<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:8001/services/my-service/plugins<span class="w"> </span><span class="se">\</span>
+<h5 id="1kongrate-limiting">步骤 1：启用Kong的Rate Limiting插件<a class="headerlink" href="#1kongrate-limiting" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:8001/services/my-service/plugins<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--data<span class="w"> </span><span class="s2">&quot;name=rate-limiting&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--data<span class="w"> </span><span class="s2">&quot;config.minute=20&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--data<span class="w"> </span><span class="s2">&quot;config.hour=1000&quot;</span>
 </code></pre></div>
-
-<h5 id="_7">配置说明：</h5>
+<h5 id="_7">配置说明：<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h5>
 <ul>
 <li><strong>minute=20</strong>：每分钟最多允许20次请求。</li>
 <li><strong>hour=1000</strong>：每小时最多允许1000次请求。</li>
 </ul>
-<h3 id="4-api">4. <strong>API限流的优化与扩展</strong></h3>
-<h4 id="41_1">4.1 <strong>动态调整限流策略</strong></h4>
+<h3 id="4-api">4. <strong>API限流的优化与扩展</strong><a class="headerlink" href="#4-api" title="Permanent link">&para;</a></h3>
+<h4 id="41_1">4.1 <strong>动态调整限流策略</strong><a class="headerlink" href="#41_1" title="Permanent link">&para;</a></h4>
 <p>限流策略可以根据用户的身份、角色或服务等级动态调整。例如，付费用户可以有更高的限流阈值，而普通用户则限制严格一些。</p>
-<h4 id="42_1">4.2 <strong>分布式限流</strong></h4>
+<h4 id="42_1">4.2 <strong>分布式限流</strong><a class="headerlink" href="#42_1" title="Permanent link">&para;</a></h4>
 <p>在分布式系统中，多个实例可能处理同一个用户的请求。此时，限流信息应当共享在分布式环境中，通常使用Redis、Memcached等集中式存储来共享限流状态。</p>
-<h4 id="43_1">4.3 <strong>熔断与降级</strong></h4>
+<h4 id="43_1">4.3 <strong>熔断与降级</strong><a class="headerlink" href="#43_1" title="Permanent link">&para;</a></h4>
 <p>当请求超出限流阈值时，可以结合熔断机制，对某些不重要的请求进行降级处理，保证核心服务的稳定性。</p>
-<h3 id="5">5. <strong>总结</strong></h3>
+<h3 id="5">5. <strong>总结</strong><a class="headerlink" href="#5" title="Permanent link">&para;</a></h3>
 <p>API限流是保障系统稳定性、预防恶意请求、优化资源利用的重要手段。通过限流算法（如固定窗口、滑动窗口、令牌桶、漏桶等），我们可以灵活地控制API的访问频率。限流可以在应用层、Nginx、API网关等多层次实现，根据实际需求选择最合适的限流策略。</p>
-<h2 id="api">API网关</h2>
+<h2 id="api">API网关<a class="headerlink" href="#api" title="Permanent link">&para;</a></h2>
 <p><strong>API网关</strong>是微服务架构中的一个关键组件，它为客户端提供统一的接口，管理和协调后端多个微服务的请求。API网关不仅能简化客户端的请求，还可以增强系统的安全性、可靠性以及可扩展性。下面我们来详细介绍API网关的作用、功能、使用场景及常见的API网关解决方案。</p>
-<h3 id="1-api_1">1. <strong>API网关的作用</strong></h3>
+<h3 id="1-api_1">1. <strong>API网关的作用</strong><a class="headerlink" href="#1-api_1" title="Permanent link">&para;</a></h3>
 <p>API网关是系统的入口，它接收来自客户端的请求，并将这些请求路由到合适的微服务进行处理，随后返回结果给客户端。API网关在这一过程中可以执行多项关键任务，包括：</p>
 <ul>
 <li><strong>请求路由</strong>：将客户端的请求路由到合适的微服务。</li>
@@ -6902,100 +7664,100 @@
 <li><strong>日志和监控</strong>：记录请求日志，监控API的使用情况，便于性能分析和错误排查。</li>
 <li><strong>服务聚合</strong>：从多个服务获取数据，并将其组合后返回给客户端，减少客户端的多次请求。</li>
 </ul>
-<h3 id="2-api">2. <strong>API网关的功能</strong></h3>
-<h4 id="21_1">2.1 <strong>请求路由</strong></h4>
+<h3 id="2-api">2. <strong>API网关的功能</strong><a class="headerlink" href="#2-api" title="Permanent link">&para;</a></h3>
+<h4 id="21_1">2.1 <strong>请求路由</strong><a class="headerlink" href="#21_1" title="Permanent link">&para;</a></h4>
 <p>API网关通过定义规则将不同的请求路由到相应的微服务。例如，当客户端发起访问用户信息的请求时，API网关将该请求转发给用户服务，而不是其他服务。</p>
-<h4 id="22_1">2.2 <strong>协议转换</strong></h4>
+<h4 id="22_1">2.2 <strong>协议转换</strong><a class="headerlink" href="#22_1" title="Permanent link">&para;</a></h4>
 <p>不同客户端可能使用不同的通信协议，如移动端可能使用HTTP，而某些实时应用可能使用WebSocket。API网关可以将这些不同的协议转换为后端服务所支持的协议，保证客户端与后端服务的通信顺畅。</p>
-<h4 id="23_1">2.3 <strong>认证与授权</strong></h4>
+<h4 id="23_1">2.3 <strong>认证与授权</strong><a class="headerlink" href="#23_1" title="Permanent link">&para;</a></h4>
 <p>API网关可以统一处理认证和授权逻辑。例如，它可以通过OAuth 2.0、JWT等技术手段验证请求是否合法，确保只有通过认证的客户端才能访问特定的API，减少后端服务的安全压力。</p>
-<h4 id="24_1">2.4 <strong>负载均衡</strong></h4>
+<h4 id="24_1">2.4 <strong>负载均衡</strong><a class="headerlink" href="#24_1" title="Permanent link">&para;</a></h4>
 <p>当多个服务实例运行时，API网关可以自动选择最合适的实例来处理请求，从而平衡负载，提升系统性能和可靠性。</p>
-<h4 id="25">2.5 <strong>缓存</strong></h4>
+<h4 id="25">2.5 <strong>缓存</strong><a class="headerlink" href="#25" title="Permanent link">&para;</a></h4>
 <p>API网关可以对常见请求进行缓存，以减少对后端服务的请求负担。例如，对于静态资源或变化不频繁的数据，网关可以缓存响应数据并直接返回给客户端。</p>
-<h4 id="26">2.6 <strong>限流和熔断</strong></h4>
+<h4 id="26">2.6 <strong>限流和熔断</strong><a class="headerlink" href="#26" title="Permanent link">&para;</a></h4>
 <p>为了防止系统遭受大量请求的冲击或恶意攻击，API网关可以设置限流策略，如令牌桶、漏桶算法，限制每秒的请求数量。此外，网关还能监控服务的健康状态，当某个服务不可用时，触发熔断机制，直接返回错误而不再尝试请求该服务。</p>
-<h4 id="27">2.7 <strong>日志和监控</strong></h4>
+<h4 id="27">2.7 <strong>日志和监控</strong><a class="headerlink" href="#27" title="Permanent link">&para;</a></h4>
 <p>API网关可以对每个请求进行记录，生成日志数据，帮助运维人员监控系统的运行状况，并提供告警和通知功能。</p>
-<h3 id="3-api_1">3. <strong>API网关的使用场景</strong></h3>
-<h4 id="31_2">3.1 <strong>微服务架构</strong></h4>
+<h3 id="3-api_1">3. <strong>API网关的使用场景</strong><a class="headerlink" href="#3-api_1" title="Permanent link">&para;</a></h3>
+<h4 id="31_2">3.1 <strong>微服务架构</strong><a class="headerlink" href="#31_2" title="Permanent link">&para;</a></h4>
 <p>在微服务架构中，系统被拆分成多个独立的服务，每个服务只负责某一特定功能。API网关充当了客户端与后端多个微服务之间的中介，客户端只需与API网关通信，而无需了解每个微服务的具体地址和实现。</p>
-<h4 id="32_1">3.2 <strong>流量管理</strong></h4>
+<h4 id="32_1">3.2 <strong>流量管理</strong><a class="headerlink" href="#32_1" title="Permanent link">&para;</a></h4>
 <p>在流量高峰期间，API网关可以帮助管理流量，例如通过限流、负载均衡和缓存来确保系统的稳定性和高效性。</p>
-<h4 id="33_1">3.3 <strong>安全防护</strong></h4>
+<h4 id="33_1">3.3 <strong>安全防护</strong><a class="headerlink" href="#33_1" title="Permanent link">&para;</a></h4>
 <p>通过API网关可以集成身份验证、授权、SSL终止等功能，保护后端服务免受未经授权的请求攻击，确保只有合法的用户才能访问API。</p>
-<h4 id="34_1">3.4 <strong>服务聚合</strong></h4>
+<h4 id="34_1">3.4 <strong>服务聚合</strong><a class="headerlink" href="#34_1" title="Permanent link">&para;</a></h4>
 <p>如果客户端需要调用多个微服务来完成某个操作，API网关可以将多个服务的响应数据聚合在一起，减少客户端多次调用，提升性能。</p>
-<h3 id="4-api_1">4. <strong>常见API网关解决方案</strong></h3>
-<h4 id="41-kong">4.1 <strong>Kong</strong></h4>
+<h3 id="4-api_1">4. <strong>常见API网关解决方案</strong><a class="headerlink" href="#4-api_1" title="Permanent link">&para;</a></h3>
+<h4 id="41-kong">4.1 <strong>Kong</strong><a class="headerlink" href="#41-kong" title="Permanent link">&para;</a></h4>
 <p>Kong是一个基于Nginx和OpenResty的高性能API网关，它支持插件机制，可以通过插件扩展认证、限流、缓存、监控等功能。它具有很好的扩展性，适合高流量的生产环境。</p>
 <ul>
 <li><strong>优点</strong>：高性能、插件丰富、支持扩展。</li>
 <li><strong>缺点</strong>：需要配置和维护，需要学习曲线。</li>
 </ul>
-<h4 id="42-nginx-lua">4.2 <strong>Nginx + Lua</strong></h4>
+<h4 id="42-nginx-lua">4.2 <strong>Nginx + Lua</strong><a class="headerlink" href="#42-nginx-lua" title="Permanent link">&para;</a></h4>
 <p>Nginx作为高性能的Web服务器，也常用于API网关的实现。通过结合Lua脚本，可以在Nginx中实现请求路由、限流、认证等功能。</p>
 <ul>
 <li><strong>优点</strong>：性能高、灵活、成熟。</li>
 <li><strong>缺点</strong>：复杂性高，需要手动编写Lua脚本。</li>
 </ul>
-<h4 id="43-aws-api-gateway">4.3 <strong>AWS API Gateway</strong></h4>
+<h4 id="43-aws-api-gateway">4.3 <strong>AWS API Gateway</strong><a class="headerlink" href="#43-aws-api-gateway" title="Permanent link">&para;</a></h4>
 <p>AWS API Gateway是Amazon提供的API网关服务，完全托管，无需担心运维问题。它与AWS Lambda等无服务器架构集成紧密，可以快速实现API的发布和管理。</p>
 <ul>
 <li><strong>优点</strong>：与AWS生态系统深度集成，自动扩展，管理简单。</li>
 <li><strong>缺点</strong>：与AWS强绑定，离开AWS生态可能不适用。</li>
 </ul>
-<h4 id="44-zuul">4.4 <strong>Zuul</strong></h4>
+<h4 id="44-zuul">4.4 <strong>Zuul</strong><a class="headerlink" href="#44-zuul" title="Permanent link">&para;</a></h4>
 <p>Zuul是Netflix开源的API网关，主要用于微服务架构。它提供动态路由、负载均衡、限流、熔断等功能。Zuul2是其最新版本，性能提升显著。</p>
 <ul>
 <li><strong>优点</strong>：与Spring Cloud深度集成，适合Java项目。</li>
 <li><strong>缺点</strong>：性能不如Kong和Nginx，需要维护。</li>
 </ul>
-<h4 id="45-traefik">4.5 <strong>Traefik</strong></h4>
+<h4 id="45-traefik">4.5 <strong>Traefik</strong><a class="headerlink" href="#45-traefik" title="Permanent link">&para;</a></h4>
 <p>Traefik是一个开源的反向代理和负载均衡工具，常用于Docker和Kubernetes环境中。它支持自动发现微服务，并且配置简单，非常适合动态环境。</p>
 <ul>
 <li><strong>优点</strong>：配置简单，适合容器化环境，支持多种协议。</li>
 <li><strong>缺点</strong>：性能和插件生态不如Kong。</li>
 </ul>
-<h3 id="5-api">5. <strong>API网关的设计挑战</strong></h3>
-<h4 id="51_1">5.1 <strong>性能瓶颈</strong></h4>
+<h3 id="5-api">5. <strong>API网关的设计挑战</strong><a class="headerlink" href="#5-api" title="Permanent link">&para;</a></h3>
+<h4 id="51_1">5.1 <strong>性能瓶颈</strong><a class="headerlink" href="#51_1" title="Permanent link">&para;</a></h4>
 <p>API网关在系统架构中是一个关键点，因此它的性能非常重要。需要确保API网关能够高效处理大量并发请求，而不会成为系统的瓶颈。</p>
-<h4 id="52_1">5.2 <strong>单点故障</strong></h4>
+<h4 id="52_1">5.2 <strong>单点故障</strong><a class="headerlink" href="#52_1" title="Permanent link">&para;</a></h4>
 <p>API网关作为系统的入口，一旦出现问题，会导致整个系统的不可用。因此，API网关通常需要部署为<strong>高可用架构</strong>，例如通过多实例部署或使用集群。</p>
-<h4 id="53_1">5.3 <strong>安全问题</strong></h4>
+<h4 id="53_1">5.3 <strong>安全问题</strong><a class="headerlink" href="#53_1" title="Permanent link">&para;</a></h4>
 <p>API网关处理的都是外部请求，因此安全性非常关键。需要在网关层面提供严格的认证、授权和防护措施，以确保恶意请求不会进入后端系统。</p>
-<h4 id="54_1">5.4 <strong>可扩展性</strong></h4>
+<h4 id="54_1">5.4 <strong>可扩展性</strong><a class="headerlink" href="#54_1" title="Permanent link">&para;</a></h4>
 <p>随着系统业务的增长，API网关需要具备良好的可扩展性，能够根据流量的增长动态扩展，以应对未来的需求。</p>
-<h3 id="6_1">6. <strong>总结</strong></h3>
+<h3 id="6_1">6. <strong>总结</strong><a class="headerlink" href="#6_1" title="Permanent link">&para;</a></h3>
 <p>API网关在微服务架构中起着至关重要的作用，它不仅能够简化客户端与后端服务的交互，还能够提供丰富的功能，如请求路由、负载均衡、限流、认证和安全防护等。选择合适的API网关解决方案需要根据系统的需求、性能要求和生态环境来决定。通过合理设计和部署API网关，能够显著提升系统的可用性、安全性和可扩展性。</p>
-<h2 id="api_1">API 熔断和降级</h2>
-<h3 id="api_2"><strong>API 熔断和降级</strong></h3>
+<h2 id="api_1">API 熔断和降级<a class="headerlink" href="#api_1" title="Permanent link">&para;</a></h2>
+<h3 id="api_2"><strong>API 熔断和降级</strong><a class="headerlink" href="#api_2" title="Permanent link">&para;</a></h3>
 <p>在微服务架构中，服务的依赖关系错综复杂，一个服务的失败可能会导致连锁反应，进而影响整个系统的稳定性。为了提高系统的健壮性，"熔断" 和 "降级" 是常用的两种策略，它们帮助微服务应对故障或高负载时的挑战，确保系统尽可能地保持可用。</p>
 <hr />
-<h3 id="1-circuit-breaker"><strong>1. 熔断（Circuit Breaker）</strong></h3>
-<h4 id="11_1"><strong>1.1 熔断的概念</strong></h4>
+<h3 id="1-circuit-breaker"><strong>1. 熔断（Circuit Breaker）</strong><a class="headerlink" href="#1-circuit-breaker" title="Permanent link">&para;</a></h3>
+<h4 id="11_1"><strong>1.1 熔断的概念</strong><a class="headerlink" href="#11_1" title="Permanent link">&para;</a></h4>
 <p>熔断（Circuit Breaker）是一种保护机制，类似于电路中的熔断器。当下游服务连续发生失败或响应超时时，上游服务会主动中断对下游服务的调用，避免系统资源浪费，并防止由于服务依赖故障导致的级联崩溃。</p>
 <p>熔断器的主要工作机制如下：
 1. <strong>关闭状态（Closed State）</strong>：系统运行正常，所有请求都被正常发送到下游服务。
 2. <strong>打开状态（Open State）</strong>：如果请求失败率超过设定的阈值，熔断器会进入打开状态，此时所有请求将被拒绝，直接返回失败。
 3. <strong>半打开状态（Half-Open State）</strong>：经过一段时间，熔断器会允许少量请求通过。如果这些请求成功，熔断器恢复到关闭状态。如果请求仍然失败，熔断器继续保持打开状态。</p>
-<h4 id="12_1"><strong>1.2 熔断的作用</strong></h4>
+<h4 id="12_1"><strong>1.2 熔断的作用</strong><a class="headerlink" href="#12_1" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>保护下游服务</strong>：避免上游大量无效请求涌入，进一步加剧下游的负担。</li>
 <li><strong>防止系统崩溃</strong>：通过快速失败避免阻塞和资源耗尽，保护系统的可用性。</li>
 <li><strong>快速响应</strong>：减少响应时间，避免用户请求等待下游超时。</li>
 </ul>
-<h4 id="13_1"><strong>1.3 熔断的应用场景</strong></h4>
+<h4 id="13_1"><strong>1.3 熔断的应用场景</strong><a class="headerlink" href="#13_1" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>下游服务不稳定</strong>：如果下游服务频繁失败或者响应非常慢，熔断可以帮助上游快速响应并避免连锁故障。</li>
 <li><strong>第三方服务依赖</strong>：当上游依赖外部第三方服务时，熔断可以避免在外部服务故障时影响整个系统。</li>
 </ul>
-<h4 id="14_1"><strong>1.4 熔断的实现方式</strong></h4>
+<h4 id="14_1"><strong>1.4 熔断的实现方式</strong><a class="headerlink" href="#14_1" title="Permanent link">&para;</a></h4>
 <p>熔断通常通过以下几种方式实现：</p>
-<h5 id="141-hystrixnetflix"><strong>1.4.1 Hystrix（Netflix 开源的熔断器）</strong></h5>
+<h5 id="141-hystrixnetflix"><strong>1.4.1 Hystrix（Netflix 开源的熔断器）</strong><a class="headerlink" href="#141-hystrixnetflix" title="Permanent link">&para;</a></h5>
 <p>Hystrix 是 Netflix 开源的一个熔断和隔离工具。它通过统计请求失败率、超时等指标来自动管理熔断状态。</p>
 <p>以下是一个基于 Java Hystrix 的熔断器示例：</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">com.netflix.hystrix.HystrixCommand</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">com.netflix.hystrix.HystrixCommand</span><span class="p">;</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">com.netflix.hystrix.HystrixCommandGroupKey</span><span class="p">;</span>
 
 <span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HelloWorldCommand</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">HystrixCommand</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
@@ -7017,11 +7779,10 @@
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>在上面的代码中，<code>run()</code> 方法执行正常的业务逻辑，而 <code>getFallback()</code> 则是在熔断器触发时的回退逻辑。Hystrix 会根据失败率和超时来自动管理熔断状态。</p>
-<h5 id="142-spring-cloud-resilience4j"><strong>1.4.2 Spring Cloud Resilience4j</strong></h5>
+<h5 id="142-spring-cloud-resilience4j"><strong>1.4.2 Spring Cloud Resilience4j</strong><a class="headerlink" href="#142-spring-cloud-resilience4j" title="Permanent link">&para;</a></h5>
 <p><code>Resilience4j</code> 是 Spring Cloud 中推荐的熔断器替代方案，它比 Hystrix 更加轻量级。通过注解方式可以非常方便地在 Spring Boot 应用中实现熔断机制。</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker</span><span class="p">;</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.web.bind.annotation.GetMapping</span><span class="p">;</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.web.bind.annotation.RestController</span><span class="p">;</span>
 
@@ -7041,35 +7802,33 @@
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
-<h3 id="2-fallback"><strong>2. 降级（Fallback）</strong></h3>
-<h4 id="21_2"><strong>2.1 降级的概念</strong></h4>
+<h3 id="2-fallback"><strong>2. 降级（Fallback）</strong><a class="headerlink" href="#2-fallback" title="Permanent link">&para;</a></h3>
+<h4 id="21_2"><strong>2.1 降级的概念</strong><a class="headerlink" href="#21_2" title="Permanent link">&para;</a></h4>
 <p>服务降级是指在下游服务不可用或性能低下时，系统主动选择降低服务的质量，以保证系统的基本可用性。例如，返回默认值、缓存数据、甚至是一个简单的错误提示，从而避免整个系统因局部故障而无法正常运行。</p>
-<h4 id="22_2"><strong>2.2 降级的作用</strong></h4>
+<h4 id="22_2"><strong>2.2 降级的作用</strong><a class="headerlink" href="#22_2" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>提高系统可用性</strong>：即使部分服务失败，系统可以通过降级策略继续为用户提供部分功能，避免服务完全中断。</li>
 <li><strong>提升用户体验</strong>：通过返回默认数据或缓存数据，避免直接让用户看到错误页面。</li>
 <li><strong>应对突发流量</strong>：当系统遭遇流量高峰时，通过降低服务质量的方式释放资源，保证核心功能的正常运行。</li>
 </ul>
-<h4 id="23_2"><strong>2.3 降级的应用场景</strong></h4>
+<h4 id="23_2"><strong>2.3 降级的应用场景</strong><a class="headerlink" href="#23_2" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>缓存降级</strong>：如果数据库访问过慢，可以直接从缓存中读取数据，以提供快速响应。</li>
 <li><strong>静态页面降级</strong>：当内容服务不可用时，返回静态页面，避免用户看到错误提示。</li>
 <li><strong>默认数据降级</strong>：在服务不可用时，返回一组默认数据，保证用户请求的基本响应。</li>
 </ul>
-<h4 id="24_2"><strong>2.4 降级的实现方式</strong></h4>
-<h5 id="241"><strong>2.4.1 代码降级</strong></h5>
+<h4 id="24_2"><strong>2.4 降级的实现方式</strong><a class="headerlink" href="#24_2" title="Permanent link">&para;</a></h4>
+<h5 id="241"><strong>2.4.1 代码降级</strong><a class="headerlink" href="#241" title="Permanent link">&para;</a></h5>
 <p>通过代码层面的逻辑处理，在调用下游服务失败时执行降级操作。以 Hystrix 为例，<code>getFallback()</code> 方法就是一种典型的降级策略：</p>
-<div class="codehilite"><pre><span></span><code><span class="nd">@Override</span>
+<div class="highlight"><pre><span></span><code><span class="nd">@Override</span>
 <span class="kd">protected</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getFallback</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">// 返回默认数据或静态内容</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Default fallback data&quot;</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-
-<h5 id="242"><strong>2.4.2 使用缓存进行降级</strong></h5>
+<h5 id="242"><strong>2.4.2 使用缓存进行降级</strong><a class="headerlink" href="#242" title="Permanent link">&para;</a></h5>
 <p>当下游服务不可用时，可以将缓存作为降级策略的一个实现。例如，使用 Redis 或本地缓存来存储最近的请求结果，当调用服务失败时，返回缓存中的数据：</p>
-<div class="codehilite"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getDataWithFallback</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getDataWithFallback</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="c1">// 调用下游服务</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">externalService</span><span class="p">.</span><span class="na">call</span><span class="p">();</span>
@@ -7079,8 +7838,7 @@
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
-<h4 id="25_1"><strong>2.5 监控与告警</strong></h4>
+<h4 id="25_1"><strong>2.5 监控与告警</strong><a class="headerlink" href="#25_1" title="Permanent link">&para;</a></h4>
 <p>为了保证熔断与降级策略的有效性，需要结合监控工具对服务的运行状态进行持续监控。当某个服务频繁降级或熔断时，系统应当发送告警以便及时排查和处理故障。</p>
 <p>常见的监控方式包括：</p>
 <ul>
@@ -7088,16 +7846,16 @@
 <li><strong>ELK（Elasticsearch + Logstash + Kibana）</strong>：对服务日志进行集中分析。</li>
 </ul>
 <hr />
-<h3 id="3"><strong>3. 熔断与降级的区别与联系</strong></h3>
+<h3 id="3"><strong>3. 熔断与降级的区别与联系</strong><a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>熔断</strong>是为了保护系统不受故障服务的影响，主动中断对该服务的调用。</li>
 <li><strong>降级</strong>则是在熔断或故障发生时，主动降低系统功能或质量，以保证核心功能的可用性。</li>
 </ul>
 <p>它们的关系可以概括为：<strong>熔断是防止故障蔓延的手段，降级是保证系统继续服务的策略</strong>。在实际系统中，熔断和降级通常配合使用。例如，当熔断器触发后，系统可以自动降级到缓存数据或返回默认值。</p>
 <hr />
-<h3 id="4"><strong>4. 总结</strong></h3>
+<h3 id="4"><strong>4. 总结</strong><a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
 <p>熔断和降级是现代微服务架构中不可或缺的手段，它们帮助开发者应对不稳定的服务依赖和突发流量。通过合理配置熔断器和降级策略，可以显著提升系统的容错性和稳定性，确保在故障发生时，系统能够优雅地降级并维持核心服务的正常运行。</p>
-<h2 id="kong">Kong 教程</h2>
+<h2 id="kong">Kong 教程<a class="headerlink" href="#kong" title="Permanent link">&para;</a></h2>
 <p>Kong 是一个开源、基于 Nginx 和 OpenResty 构建的高性能 API 网关，广泛用于微服务架构中。Kong 提供了丰富的插件系统，支持身份验证、流量控制、日志监控等功能，帮助开发者轻松管理和扩展 API。</p>
 <p>本文将通过以下几个部分详细讲解 Kong 的安装、配置及使用教程，并结合具体实例展示如何使用 Kong 来管理 API：</p>
 <ol>
@@ -7109,7 +7867,7 @@
 <li>高可用性与集群部署</li>
 <li>监控与日志管理</li>
 </ol>
-<h3 id="1-kong-api">1. <strong>什么是 Kong API 网关</strong></h3>
+<h3 id="1-kong-api">1. <strong>什么是 Kong API 网关</strong><a class="headerlink" href="#1-kong-api" title="Permanent link">&para;</a></h3>
 <p>Kong API 网关是一个中间层，位于客户端和后端微服务之间，接收来自客户端的请求并根据配置将请求路由到相应的后端服务。Kong 具有以下核心功能：</p>
 <ul>
 <li><strong>请求路由</strong>：将请求路由到不同的后端微服务。</li>
@@ -7118,7 +7876,7 @@
 <li><strong>日志与监控</strong>：记录 API 的访问情况，便于性能分析与故障排查。</li>
 <li><strong>缓存</strong>：缓存常见请求，提高 API 响应速度。</li>
 </ul>
-<h3 id="2-kong">2. <strong>Kong 的主要功能</strong></h3>
+<h3 id="2-kong">2. <strong>Kong 的主要功能</strong><a class="headerlink" href="#2-kong" title="Permanent link">&para;</a></h3>
 <p>Kong 提供了丰富的功能，以下是一些关键特性：</p>
 <ul>
 <li><strong>负载均衡</strong>：Kong 可以通过定义服务（Service）来将请求分发到多个后端节点。</li>
@@ -7127,21 +7885,20 @@
 <li><strong>插件系统</strong>：Kong 提供了丰富的插件，支持限流、缓存、监控、CORS 等功能，用户可以按需启用。</li>
 <li><strong>扩展性强</strong>：Kong 的插件系统允许用户创建自定义插件，扩展 API 网关的功能。</li>
 </ul>
-<h3 id="3-kong">3. <strong>Kong 的安装与配置</strong></h3>
+<h3 id="3-kong">3. <strong>Kong 的安装与配置</strong><a class="headerlink" href="#3-kong" title="Permanent link">&para;</a></h3>
 <p>Kong 支持多种安装方式，包括 Docker、Kubernetes、源代码安装等。这里以 Docker 方式为例，介绍如何快速安装 Kong。</p>
-<h4 id="31-postgresql">3.1 <strong>安装 PostgreSQL</strong></h4>
+<h4 id="31-postgresql">3.1 <strong>安装 PostgreSQL</strong><a class="headerlink" href="#31-postgresql" title="Permanent link">&para;</a></h4>
 <p>Kong 需要使用数据库来存储配置信息，推荐使用 PostgreSQL 作为数据库。首先，使用 Docker 启动一个 PostgreSQL 实例：</p>
-<div class="codehilite"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>kong-database<span class="w"> </span><span class="se">\</span>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>kong-database<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-p<span class="w"> </span><span class="m">5432</span>:5432<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-e<span class="w"> </span><span class="s2">&quot;POSTGRES_USER=kong&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-e<span class="w"> </span><span class="s2">&quot;POSTGRES_DB=kong&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-e<span class="w"> </span><span class="s2">&quot;POSTGRES_PASSWORD=kong&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>postgres:13
 </code></pre></div>
-
-<h4 id="32-kong">3.2 <strong>安装 Kong</strong></h4>
+<h4 id="32-kong">3.2 <strong>安装 Kong</strong><a class="headerlink" href="#32-kong" title="Permanent link">&para;</a></h4>
 <p>接下来，使用 Docker 安装并启动 Kong：</p>
-<div class="codehilite"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>kong<span class="w"> </span><span class="se">\</span>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>kong<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--link<span class="w"> </span>kong-database:kong-database<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-e<span class="w"> </span><span class="s2">&quot;KONG_DATABASE=postgres&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-e<span class="w"> </span><span class="s2">&quot;KONG_PG_HOST=kong-database&quot;</span><span class="w"> </span><span class="se">\</span>
@@ -7152,7 +7909,6 @@
 <span class="w">    </span>-p<span class="w"> </span><span class="m">8001</span>:8001<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>kong:3.0
 </code></pre></div>
-
 <ul>
 <li><code>KONG_DATABASE=postgres</code>：指定使用 PostgreSQL 作为数据库。</li>
 <li><code>KONG_PG_HOST=kong-database</code>：指定数据库的主机地址。</li>
@@ -7160,133 +7916,125 @@
 <li><code>KONG_ADMIN_LISTEN</code>：指定 Admin API 的监听地址。</li>
 <li><code>KONG_PROXY_LISTEN</code>：指定代理请求的监听地址。</li>
 </ul>
-<h4 id="33_2">3.3 <strong>初始化数据库</strong></h4>
+<h4 id="33_2">3.3 <strong>初始化数据库</strong><a class="headerlink" href="#33_2" title="Permanent link">&para;</a></h4>
 <p>在启动 Kong 之前，需要初始化数据库：</p>
-<div class="codehilite"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>kong<span class="w"> </span>kong<span class="w"> </span>migrations<span class="w"> </span>bootstrap
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>kong<span class="w"> </span>kong<span class="w"> </span>migrations<span class="w"> </span>bootstrap
 </code></pre></div>
-
 <p>这条命令会创建必要的数据库表并准备好数据库。</p>
-<h4 id="34-kong">3.4 <strong>访问 Kong 管理界面</strong></h4>
+<h4 id="34-kong">3.4 <strong>访问 Kong 管理界面</strong><a class="headerlink" href="#34-kong" title="Permanent link">&para;</a></h4>
 <p>Kong 提供了一个 RESTful 管理 API，默认通过 <code>8001</code> 端口访问。可以使用以下命令查看 Kong 是否正常工作：</p>
-<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>http://localhost:8001
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>http://localhost:8001
 </code></pre></div>
-
 <p>如果返回 Kong 的状态信息，说明安装成功。</p>
-<h3 id="4-api_2">4. <strong>API 管理示例</strong></h3>
+<h3 id="4-api_2">4. <strong>API 管理示例</strong><a class="headerlink" href="#4-api_2" title="Permanent link">&para;</a></h3>
 <p>Kong 管理 API 的基本单位是<strong>服务（Service）</strong>和<strong>路由（Route）</strong>。服务表示一个上游（后端）API，路由则定义客户端请求如何与服务进行映射。</p>
-<h4 id="41_2">4.1 <strong>创建一个服务</strong></h4>
+<h4 id="41_2">4.1 <strong>创建一个服务</strong><a class="headerlink" href="#41_2" title="Permanent link">&para;</a></h4>
 <p>假设我们有一个后端服务 <code>http://mockbin.org/request</code>，可以通过以下命令将它注册为一个 Kong 服务：</p>
-<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-i<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:8001/services/<span class="w"> </span><span class="se">\</span>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-i<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:8001/services/<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--data<span class="w"> </span><span class="s2">&quot;name=example-service&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--data<span class="w"> </span><span class="s2">&quot;url=http://mockbin.org/request&quot;</span>
 </code></pre></div>
-
 <ul>
 <li><code>name=example-service</code>：服务的名称。</li>
 <li><code>url=http://mockbin.org/request</code>：后端 API 的地址。</li>
 </ul>
-<h4 id="42_2">4.2 <strong>创建路由</strong></h4>
+<h4 id="42_2">4.2 <strong>创建路由</strong><a class="headerlink" href="#42_2" title="Permanent link">&para;</a></h4>
 <p>接下来，为这个服务创建一个路由，让客户端可以通过指定的路径访问该服务：</p>
-<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-i<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:8001/services/example-service/routes<span class="w"> </span><span class="se">\</span>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-i<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:8001/services/example-service/routes<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--data<span class="w"> </span><span class="s2">&quot;paths[]=/example&quot;</span>
 </code></pre></div>
-
 <p>这表示任何以 <code>/example</code> 开头的请求都会被转发到 <code>example-service</code> 服务。</p>
-<h4 id="43-api">4.3 <strong>测试 API</strong></h4>
+<h4 id="43-api">4.3 <strong>测试 API</strong><a class="headerlink" href="#43-api" title="Permanent link">&para;</a></h4>
 <p>现在，客户端可以通过 Kong 访问注册的服务。使用以下命令测试：</p>
-<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-i<span class="w"> </span>http://localhost:8000/example
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-i<span class="w"> </span>http://localhost:8000/example
 </code></pre></div>
-
 <p>Kong 会将请求转发到 <code>http://mockbin.org/request</code>，并返回响应。</p>
-<h3 id="5_1">5. <strong>插件系统</strong></h3>
+<h3 id="5_1">5. <strong>插件系统</strong><a class="headerlink" href="#5_1" title="Permanent link">&para;</a></h3>
 <p>Kong 的插件系统是其一大特色，支持多种插件来增强 API 的功能。以下是几个常见插件的使用示例。</p>
-<h4 id="51_2">5.1 <strong>限流插件</strong></h4>
+<h4 id="51_2">5.1 <strong>限流插件</strong><a class="headerlink" href="#51_2" title="Permanent link">&para;</a></h4>
 <p>限流插件可以控制每个客户端的请求频率，防止服务被滥用。以下是在 <code>example-service</code> 上启用限流插件的示例：</p>
-<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-i<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:8001/services/example-service/plugins<span class="w"> </span><span class="se">\</span>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-i<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:8001/services/example-service/plugins<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--data<span class="w"> </span><span class="s2">&quot;name=rate-limiting&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--data<span class="w"> </span><span class="s2">&quot;config.minute=5&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--data<span class="w"> </span><span class="s2">&quot;config.policy=local&quot;</span>
 </code></pre></div>
-
 <ul>
 <li><code>minute=5</code>：每分钟最多允许 5 个请求。</li>
 <li><code>policy=local</code>：限流策略为本地策略。</li>
 </ul>
-<h4 id="52_2">5.2 <strong>身份验证插件</strong></h4>
+<h4 id="52_2">5.2 <strong>身份验证插件</strong><a class="headerlink" href="#52_2" title="Permanent link">&para;</a></h4>
 <p>Kong 支持多种身份验证方式，如 API 密钥、JWT 等。以下是在 <code>example-service</code> 上启用 API 密钥验证的示例：</p>
 <ol>
 <li>
 <p>启用 API 密钥插件：</p>
-<p><code>bash
-curl -i -X POST http://localhost:8001/services/example-service/plugins \
-  --data "name=key-auth"</code></p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-i<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:8001/services/example-service/plugins<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--data<span class="w"> </span><span class="s2">&quot;name=key-auth&quot;</span>
+</code></pre></div>
 </li>
 <li>
 <p>创建一个消费者（用户）并为其分配 API 密钥：</p>
-<p>```bash
-curl -i -X POST http://localhost:8001/consumers/ \
-  --data "username=user123"</p>
-<p>curl -i -X POST http://localhost:8001/consumers/user123/key-auth/ \
-  --data "key=my-secret-key"
-```</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-i<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:8001/consumers/<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--data<span class="w"> </span><span class="s2">&quot;username=user123&quot;</span>
+
+curl<span class="w"> </span>-i<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:8001/consumers/user123/key-auth/<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--data<span class="w"> </span><span class="s2">&quot;key=my-secret-key&quot;</span>
+</code></pre></div>
 </li>
 <li>
 <p>测试 API 访问：</p>
 <p>客户端请求时需要提供 API 密钥：</p>
-<p><code>bash
-curl -i http://localhost:8000/example \
-  --header "apikey: my-secret-key"</code></p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-i<span class="w"> </span>http://localhost:8000/example<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--header<span class="w"> </span><span class="s2">&quot;apikey: my-secret-key&quot;</span>
+</code></pre></div>
 </li>
 </ol>
-<h4 id="53-cors">5.3 <strong>CORS 插件</strong></h4>
+<h4 id="53-cors">5.3 <strong>CORS 插件</strong><a class="headerlink" href="#53-cors" title="Permanent link">&para;</a></h4>
 <p>CORS（跨域资源共享）插件允许跨域访问 API。以下是在 <code>example-service</code> 上启用 CORS 插件的示例：</p>
-<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-i<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:8001/services/example-service/plugins<span class="w"> </span><span class="se">\</span>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-i<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:8001/services/example-service/plugins<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--data<span class="w"> </span><span class="s2">&quot;name=cors&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--data<span class="w"> </span><span class="s2">&quot;config.origins=*&quot;</span>
 </code></pre></div>
-
-<h3 id="6_2">6. <strong>高可用性与集群部署</strong></h3>
+<h3 id="6_2">6. <strong>高可用性与集群部署</strong><a class="headerlink" href="#6_2" title="Permanent link">&para;</a></h3>
 <p>Kong 支持集群部署，以确保高可用性和负载均衡。集群中的每个 Kong 节点可以共享同一个数据库，或者使用 DB-less 模式来避免数据库瓶颈。集群部署方式包括：</p>
 <ul>
 <li><strong>DB 模式</strong>：Kong 节点通过共享数据库（如 PostgreSQL）来同步配置和状态。</li>
 <li><strong>DB-less 模式</strong>：Kong 通过配置文件（YAML/JSON）来管理配置，节点之间无需数据库。</li>
 </ul>
-<h4 id="61-db-less">6.1 <strong>DB-less 模式部署</strong></h4>
+<h4 id="61-db-less">6.1 <strong>DB-less 模式部署</strong><a class="headerlink" href="#61-db-less" title="Permanent link">&para;</a></h4>
 <p>在 DB-less 模式下，Kong 可以直接从配置文件加载所有服务和路由：</p>
 <ol>
 <li>
 <p>创建一个配置文件 <code>kong.yml</code>，内容如下：</p>
-<p><code>yaml
-_format_version: "2.1"
-services:
-  - name: example-service
-    url: http://mockbin.org/request
-    routes:
-      - paths:
-          - /example</code></p>
+<div class="highlight"><pre><span></span><code><span class="nt">_format_version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2.1&quot;</span>
+<span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example-service</span>
+<span class="w">    </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://mockbin.org/request</span>
+<span class="w">    </span><span class="nt">routes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">paths</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/example</span>
+</code></pre></div>
 </li>
 <li>
 <p>启动 Kong，并指定配置文件路径：</p>
-<p><code>bash
-docker run -d --name kong \
-  -e "KONG_DATABASE=off" \
-  -e "KONG_DECLARATIVE_CONFIG=/path/to/kong.yml" \
-  kong:3.0</code></p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>kong<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="s2">&quot;KONG_DATABASE=off&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="s2">&quot;KONG_DECLARATIVE_CONFIG=/path/to/kong.yml&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>kong:3.0
+</code></pre></div>
 </li>
 </ol>
-<h3 id="7_1">7. <strong>监控与日志管理</strong></h3>
+<h3 id="7_1">7. <strong>监控与日志管理</strong><a class="headerlink" href="#7_1" title="Permanent link">&para;</a></h3>
 <p>Kong 提供了多种方式来监控 API 的使用情况和性能，如：</p>
 <ul>
 <li><strong>Prometheus 插件</strong>：用于收集 API 请求的监控数据，便于集成到 Prometheus 和 Grafana 等监控系统中。</li>
 <li><strong>日志插件</strong>：Kong 支持多种日志输出方式，如文件、HTTP 服务、Kafka 等。</li>
 </ul>
-<h4 id="71-prometheus">7.1 <strong>启用 Prometheus 插件</strong></h4>
-<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-i<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:8001/services/example-service/plugins<span class="w"> </span><span class="se">\</span>
+<h4 id="71-prometheus">7.1 <strong>启用 Prometheus 插件</strong><a class="headerlink" href="#71-prometheus" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-i<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:8001/services/example-service/plugins<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--data<span class="w"> </span><span class="s2">&quot;name=prometheus&quot;</span>
 </code></pre></div>
-
 <p>启用后，Prometheus 可以从 <code>/metrics</code> 路径收集 Kong 的指标数据。</p>
-<h3 id="8">8. <strong>总结</strong></h3>
+<h3 id="8">8. <strong>总结</strong><a class="headerlink" href="#8" title="Permanent link">&para;</a></h3>
 <p>Kong 作为功能强大的 API 网关，提供了丰富的插件和扩展能力，能够帮助开发者轻松实现 API 管理、流量控制、安全认证等功能。通过配置服务和路由，结合插件系统，Kong 可以大幅简化微服务架构中的 API 管理。</p>
 
 
@@ -7305,6 +8053,8 @@ docker run -d --name kong \
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -7334,10 +8084,20 @@ docker run -d --name kong \
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.sections", "toc.integrate", "search.highlight", "search.suggest", "header.autohide", "footer.copyright", "footer.text", "code.annotate", "content.code", "material.nav", "material.switch", "content.code.copy"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.section", "navigation.expand", "navigation.tabs", "navigation.sections", "navigation.indexes", "content.code.copy", "content.tabs.link", "content.code.annotate", "math"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+        <script src="../../styles/javascripts/config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="../../styles/javascripts/katex.js"></script>
       
     
   </body>
