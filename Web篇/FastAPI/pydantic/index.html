@@ -13,25 +13,25 @@
       
       
       
-        <link rel="prev" href="../queue/">
+        <link rel="prev" href="../practice/">
       
       
-        <link rel="next" href="../re/">
+        <link rel="next" href="../../Flask/advance/">
       
       
-      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
-        <title>random 模块 - IT-手册</title>
+        <title>Pydantic 使用教程 - IT-手册</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,11 +50,11 @@
       
     
     
-      <link rel="stylesheet" href="../../../../styles/css/extra.css">
+      <link rel="stylesheet" href="../../../styles/css/extra.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1" class="md-skip">
+        <a href="#1-pydantic" class="md-skip">
           跳转至
         </a>
       
@@ -94,7 +94,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../../.." title="IT-手册" class="md-header__button md-logo" aria-label="IT-手册" data-md-component="logo">
+    <a href="../../.." title="IT-手册" class="md-header__button md-logo" aria-label="IT-手册" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              random 模块
+              Pydantic 使用教程
             
           </span>
         </div>
@@ -213,7 +213,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -230,6 +230,8 @@
   
   
   
+    
+  
   
     
     
@@ -237,11 +239,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../../Web%E7%AF%87/Django/advance/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../Django/advance/" class="md-tabs__link">
           
   
   
@@ -273,7 +277,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/basic/" class="md-tabs__link">
+        <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/basic/" class="md-tabs__link">
           
   
   
@@ -305,7 +309,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/alert/" class="md-tabs__link">
+        <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/alert/" class="md-tabs__link">
           
   
   
@@ -337,7 +341,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/LangChain/advance/" class="md-tabs__link">
+        <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/LangChain/advance/" class="md-tabs__link">
           
   
   
@@ -362,7 +366,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../%E5%B7%A5%E5%85%B7%E7%AF%87/SRE/" class="md-tabs__link">
+        <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/SRE/" class="md-tabs__link">
           
   
   
@@ -391,7 +395,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/basic/" class="md-tabs__link">
+        <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/basic/" class="md-tabs__link">
           
   
   
@@ -416,7 +420,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/algorithm/" class="md-tabs__link">
+        <a href="../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/algorithm/" class="md-tabs__link">
           
   
   
@@ -445,7 +449,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../%E6%9C%8D%E5%8A%A1%E5%99%A8/gunicorn/basic/" class="md-tabs__link">
+        <a href="../../../%E6%9C%8D%E5%8A%A1%E5%99%A8/gunicorn/basic/" class="md-tabs__link">
           
   
   
@@ -470,7 +474,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/bloom/" class="md-tabs__link">
+        <a href="../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/bloom/" class="md-tabs__link">
           
   
   
@@ -492,7 +496,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http/" class="md-tabs__link">
+        <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http/" class="md-tabs__link">
           
   
   
@@ -510,8 +514,6 @@
   
   
   
-    
-  
   
     
     
@@ -519,13 +521,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../C%2B%2B/advance/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/C%2B%2B/advance/" class="md-tabs__link">
           
   
   
@@ -564,7 +564,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="IT-手册" class="md-nav__button md-logo" aria-label="IT-手册" data-md-component="logo">
+    <a href="../../.." title="IT-手册" class="md-nav__button md-logo" aria-label="IT-手册" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -582,7 +582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -601,8 +601,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -616,21 +618,22 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -643,7 +646,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Web篇
@@ -675,10 +678,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -687,7 +693,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1" >
         
           
-          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="">
             
   
   
@@ -714,7 +720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Web%E7%AF%87/Django/advance/" class="md-nav__link">
+      <a href="../../Django/advance/" class="md-nav__link">
         
   
   
@@ -737,7 +743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Web%E7%AF%87/Django/basic/" class="md-nav__link">
+      <a href="../../Django/basic/" class="md-nav__link">
         
   
   
@@ -760,7 +766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Web%E7%AF%87/Django/interview/" class="md-nav__link">
+      <a href="../../Django/interview/" class="md-nav__link">
         
   
   
@@ -783,7 +789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Web%E7%AF%87/Django/questions/" class="md-nav__link">
+      <a href="../../Django/questions/" class="md-nav__link">
         
   
   
@@ -806,7 +812,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Web%E7%AF%87/Django/restful/" class="md-nav__link">
+      <a href="../../Django/restful/" class="md-nav__link">
         
   
   
@@ -834,8 +840,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -856,20 +864,21 @@
     
       
       
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
         
           
+          
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
             
   
   
@@ -882,7 +891,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             FastAPI
@@ -896,7 +905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Web%E7%AF%87/FastAPI/GraphQL/" class="md-nav__link">
+      <a href="../GraphQL/" class="md-nav__link">
         
   
   
@@ -919,7 +928,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Web%E7%AF%87/FastAPI/advance./" class="md-nav__link">
+      <a href="../advance./" class="md-nav__link">
         
   
   
@@ -942,7 +951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Web%E7%AF%87/FastAPI/basic/" class="md-nav__link">
+      <a href="../basic/" class="md-nav__link">
         
   
   
@@ -965,7 +974,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Web%E7%AF%87/FastAPI/interview/" class="md-nav__link">
+      <a href="../interview/" class="md-nav__link">
         
   
   
@@ -988,7 +997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Web%E7%AF%87/FastAPI/practice/" class="md-nav__link">
+      <a href="../practice/" class="md-nav__link">
         
   
   
@@ -1008,10 +1017,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../../Web%E7%AF%87/FastAPI/pydantic/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Pydantic 使用教程
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1022,6 +1051,270 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-pydantic" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 安装 Pydantic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 基础用法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 基础用法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 定义模型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 创建实例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 自动类型转换
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 验证错误处理
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 字段类型与验证
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 字段类型与验证">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 常用类型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 字段约束
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 自定义验证器
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 高级特性
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 高级特性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 嵌套模型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 模型继承
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 配置类（Config）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 JSON 序列化与解析
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 实用功能
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 实用功能">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 数据导出
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 模型更新
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 动态模型创建
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 与 FastAPI 集成
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 常见问题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. 常见问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 循环引用
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 性能优化
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. 总结
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1058,10 +1351,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -1070,7 +1366,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
         
           
-          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
             
   
   
@@ -1097,7 +1393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Web%E7%AF%87/Flask/advance/" class="md-nav__link">
+      <a href="../../Flask/advance/" class="md-nav__link">
         
   
   
@@ -1120,7 +1416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Web%E7%AF%87/Flask/basic/" class="md-nav__link">
+      <a href="../../Flask/basic/" class="md-nav__link">
         
   
   
@@ -1143,7 +1439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Web%E7%AF%87/Flask/interview/" class="md-nav__link">
+      <a href="../../Flask/interview/" class="md-nav__link">
         
   
   
@@ -1166,7 +1462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Web%E7%AF%87/Flask/questions/" class="md-nav__link">
+      <a href="../../Flask/questions/" class="md-nav__link">
         
   
   
@@ -1308,7 +1604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/basic/" class="md-nav__link">
+      <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/basic/" class="md-nav__link">
         
   
   
@@ -1331,7 +1627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/interview/" class="md-nav__link">
+      <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/kafka/interview/" class="md-nav__link">
         
   
   
@@ -1413,7 +1709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/rabbitmq/basic/" class="md-nav__link">
+      <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/rabbitmq/basic/" class="md-nav__link">
         
   
   
@@ -1436,7 +1732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/rabbitmq/interview/" class="md-nav__link">
+      <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/rabbitmq/interview/" class="md-nav__link">
         
   
   
@@ -1518,7 +1814,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/zookeeper/basic/" class="md-nav__link">
+      <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/zookeeper/basic/" class="md-nav__link">
         
   
   
@@ -1541,7 +1837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/zookeeper/interview/" class="md-nav__link">
+      <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/zookeeper/interview/" class="md-nav__link">
         
   
   
@@ -1687,7 +1983,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/alert/" class="md-nav__link">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/alert/" class="md-nav__link">
         
   
   
@@ -1710,7 +2006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/basic/" class="md-nav__link">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/basic/" class="md-nav__link">
         
   
   
@@ -1733,7 +2029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/prometheus/" class="md-nav__link">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/prometheus/" class="md-nav__link">
         
   
   
@@ -1756,7 +2052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/promql/" class="md-nav__link">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/Prometheus/promql/" class="md-nav__link">
         
   
   
@@ -1838,7 +2134,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/basic/" class="md-nav__link">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/basic/" class="md-nav__link">
         
   
   
@@ -1861,7 +2157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/interview/" class="md-nav__link">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/docker/interview/" class="md-nav__link">
         
   
   
@@ -1949,7 +2245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/basic/" class="md-nav__link">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/basic/" class="md-nav__link">
         
   
   
@@ -1972,7 +2268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/crictl/" class="md-nav__link">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/crictl/" class="md-nav__link">
         
   
   
@@ -1995,7 +2291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/helm/" class="md-nav__link">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/helm/" class="md-nav__link">
         
   
   
@@ -2018,7 +2314,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/interview/" class="md-nav__link">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/interview/" class="md-nav__link">
         
   
   
@@ -2041,7 +2337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/monitor/" class="md-nav__link">
+      <a href="../../../%E4%BA%91%E5%8E%9F%E7%94%9F/kubernetes/monitor/" class="md-nav__link">
         
   
   
@@ -2185,7 +2481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/LangChain/advance/" class="md-nav__link">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/LangChain/advance/" class="md-nav__link">
         
   
   
@@ -2208,7 +2504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/LangChain/basic/" class="md-nav__link">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/LangChain/basic/" class="md-nav__link">
         
   
   
@@ -2292,7 +2588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/advance/" class="md-nav__link">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/advance/" class="md-nav__link">
         
   
   
@@ -2315,7 +2611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/basic/" class="md-nav__link">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/basic/" class="md-nav__link">
         
   
   
@@ -2338,7 +2634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/interview/" class="md-nav__link">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/interview/" class="md-nav__link">
         
   
   
@@ -2422,7 +2718,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/advance/" class="md-nav__link">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/advance/" class="md-nav__link">
         
   
   
@@ -2445,7 +2741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/basic/" class="md-nav__link">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/basic/" class="md-nav__link">
         
   
   
@@ -2468,7 +2764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/interview/" class="md-nav__link">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/interview/" class="md-nav__link">
         
   
   
@@ -2552,7 +2848,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/advance/" class="md-nav__link">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/advance/" class="md-nav__link">
         
   
   
@@ -2575,7 +2871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/basic/" class="md-nav__link">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/basic/" class="md-nav__link">
         
   
   
@@ -2598,7 +2894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/interview/" class="md-nav__link">
+      <a href="../../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/interview/" class="md-nav__link">
         
   
   
@@ -2701,7 +2997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E5%B7%A5%E5%85%B7%E7%AF%87/SRE/" class="md-nav__link">
+      <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/SRE/" class="md-nav__link">
         
   
   
@@ -2724,7 +3020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E5%B7%A5%E5%85%B7%E7%AF%87/SonarQube/" class="md-nav__link">
+      <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/SonarQube/" class="md-nav__link">
         
   
   
@@ -2747,7 +3043,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E5%B7%A5%E5%85%B7%E7%AF%87/chaos/" class="md-nav__link">
+      <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/chaos/" class="md-nav__link">
         
   
   
@@ -2770,7 +3066,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E5%B7%A5%E5%85%B7%E7%AF%87/commands/" class="md-nav__link">
+      <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/commands/" class="md-nav__link">
         
   
   
@@ -2793,7 +3089,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E5%B7%A5%E5%85%B7%E7%AF%87/crontab/" class="md-nav__link">
+      <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/crontab/" class="md-nav__link">
         
   
   
@@ -2816,7 +3112,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E5%B7%A5%E5%85%B7%E7%AF%87/git/" class="md-nav__link">
+      <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/git/" class="md-nav__link">
         
   
   
@@ -2839,7 +3135,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E5%B7%A5%E5%85%B7%E7%AF%87/jenkins/" class="md-nav__link">
+      <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/jenkins/" class="md-nav__link">
         
   
   
@@ -2862,7 +3158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E5%B7%A5%E5%85%B7%E7%AF%87/journalctl/" class="md-nav__link">
+      <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/journalctl/" class="md-nav__link">
         
   
   
@@ -2885,7 +3181,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E5%B7%A5%E5%85%B7%E7%AF%87/supervisor/" class="md-nav__link">
+      <a href="../../../%E5%B7%A5%E5%85%B7%E7%AF%87/supervisor/" class="md-nav__link">
         
   
   
@@ -3031,7 +3327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/basic/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/basic/" class="md-nav__link">
         
   
   
@@ -3054,7 +3350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/filebeat/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/filebeat/" class="md-nav__link">
         
   
   
@@ -3077,7 +3373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/interview/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/interview/" class="md-nav__link">
         
   
   
@@ -3100,7 +3396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/logstash/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/logstash/" class="md-nav__link">
         
   
   
@@ -3123,7 +3419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/questions/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Elastic/questions/" class="md-nav__link">
         
   
   
@@ -3203,7 +3499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/HBase/basic/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/HBase/basic/" class="md-nav__link">
         
   
   
@@ -3287,7 +3583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/basic/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/basic/" class="md-nav__link">
         
   
   
@@ -3310,7 +3606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/interview/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/interview/" class="md-nav__link">
         
   
   
@@ -3333,7 +3629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/questions/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MongoDB/questions/" class="md-nav__link">
         
   
   
@@ -3419,7 +3715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/basic/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/basic/" class="md-nav__link">
         
   
   
@@ -3442,7 +3738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/command/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/command/" class="md-nav__link">
         
   
   
@@ -3465,7 +3761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/interview/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/interview/" class="md-nav__link">
         
   
   
@@ -3488,7 +3784,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/questions/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL/questions/" class="md-nav__link">
         
   
   
@@ -3572,7 +3868,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/PostgreSQL/advance/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/PostgreSQL/advance/" class="md-nav__link">
         
   
   
@@ -3595,7 +3891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/PostgreSQL/basic/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/PostgreSQL/basic/" class="md-nav__link">
         
   
   
@@ -3618,7 +3914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/PostgreSQL/demo/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/PostgreSQL/demo/" class="md-nav__link">
         
   
   
@@ -3702,7 +3998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/basic/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/basic/" class="md-nav__link">
         
   
   
@@ -3725,7 +4021,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/interview/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/interview/" class="md-nav__link">
         
   
   
@@ -3748,7 +4044,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/questions/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/questions/" class="md-nav__link">
         
   
   
@@ -3839,7 +4135,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/algorithm/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/algorithm/" class="md-nav__link">
         
   
   
@@ -3862,7 +4158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/leetcode/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/leetcode/" class="md-nav__link">
         
   
   
@@ -3885,7 +4181,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/struct/" class="md-nav__link">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/struct/" class="md-nav__link">
         
   
   
@@ -4019,7 +4315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%9C%8D%E5%8A%A1%E5%99%A8/gunicorn/basic/" class="md-nav__link">
+      <a href="../../../%E6%9C%8D%E5%8A%A1%E5%99%A8/gunicorn/basic/" class="md-nav__link">
         
   
   
@@ -4101,7 +4397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%9C%8D%E5%8A%A1%E5%99%A8/nginx/basic/" class="md-nav__link">
+      <a href="../../../%E6%9C%8D%E5%8A%A1%E5%99%A8/nginx/basic/" class="md-nav__link">
         
   
   
@@ -4124,7 +4420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%9C%8D%E5%8A%A1%E5%99%A8/nginx/interview/" class="md-nav__link">
+      <a href="../../../%E6%9C%8D%E5%8A%A1%E5%99%A8/nginx/interview/" class="md-nav__link">
         
   
   
@@ -4204,7 +4500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%9C%8D%E5%8A%A1%E5%99%A8/uvicorn/basic/" class="md-nav__link">
+      <a href="../../../%E6%9C%8D%E5%8A%A1%E5%99%A8/uvicorn/basic/" class="md-nav__link">
         
   
   
@@ -4284,7 +4580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E6%9C%8D%E5%8A%A1%E5%99%A8/uwsgi/basic/" class="md-nav__link">
+      <a href="../../../%E6%9C%8D%E5%8A%A1%E5%99%A8/uwsgi/basic/" class="md-nav__link">
         
   
   
@@ -4379,7 +4675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/bloom/" class="md-nav__link">
+      <a href="../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/bloom/" class="md-nav__link">
         
   
   
@@ -4402,7 +4698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/hash/" class="md-nav__link">
+      <a href="../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/hash/" class="md-nav__link">
         
   
   
@@ -4425,7 +4721,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/id/" class="md-nav__link">
+      <a href="../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/id/" class="md-nav__link">
         
   
   
@@ -4448,7 +4744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/interview/" class="md-nav__link">
+      <a href="../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/interview/" class="md-nav__link">
         
   
   
@@ -4471,7 +4767,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/ratelimit/" class="md-nav__link">
+      <a href="../../../%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/ratelimit/" class="md-nav__link">
         
   
   
@@ -4556,7 +4852,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http/" class="md-nav__link">
+      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http/" class="md-nav__link">
         
   
   
@@ -4579,7 +4875,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/network/" class="md-nav__link">
+      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/network/" class="md-nav__link">
         
   
   
@@ -4602,7 +4898,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/system/" class="md-nav__link">
+      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/system/" class="md-nav__link">
         
   
   
@@ -4625,7 +4921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/websocket/" class="md-nav__link">
+      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/websocket/" class="md-nav__link">
         
   
   
@@ -4652,10 +4948,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -4669,22 +4963,21 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" checked>
         
           
-          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
             
   
   
@@ -4697,7 +4990,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_12">
             <span class="md-nav__icon md-icon"></span>
             语言篇
@@ -4725,13 +5018,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -4740,7 +5030,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12_1" >
         
           
-          <label class="md-nav__link" for="__nav_12_1" id="__nav_12_1_label" tabindex="">
+          <label class="md-nav__link" for="__nav_12_1" id="__nav_12_1_label" tabindex="0">
             
   
   
@@ -4767,7 +5057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../C%2B%2B/advance/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/C%2B%2B/advance/" class="md-nav__link">
         
   
   
@@ -4790,7 +5080,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../C%2B%2B/basic/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/C%2B%2B/basic/" class="md-nav__link">
         
   
   
@@ -4813,7 +5103,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../C%2B%2B/interview/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/C%2B%2B/interview/" class="md-nav__link">
         
   
   
@@ -4858,13 +5148,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -4873,7 +5160,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12_2" >
         
           
-          <label class="md-nav__link" for="__nav_12_2" id="__nav_12_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_12_2" id="__nav_12_2_label" tabindex="0">
             
   
   
@@ -4900,7 +5187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Golang/advance/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/advance/" class="md-nav__link">
         
   
   
@@ -4923,7 +5210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Golang/basic/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/basic/" class="md-nav__link">
         
   
   
@@ -5027,7 +5314,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/cobra/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/cobra/" class="md-nav__link">
         
   
   
@@ -5050,7 +5337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/encoding/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/encoding/" class="md-nav__link">
         
   
   
@@ -5073,7 +5360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/fmt/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/fmt/" class="md-nav__link">
         
   
   
@@ -5096,7 +5383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/gin/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/gin/" class="md-nav__link">
         
   
   
@@ -5119,7 +5406,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/gorm/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/gorm/" class="md-nav__link">
         
   
   
@@ -5142,7 +5429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/io/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/io/" class="md-nav__link">
         
   
   
@@ -5165,7 +5452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/jwt-go/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/jwt-go/" class="md-nav__link">
         
   
   
@@ -5188,7 +5475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/logrus/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/logrus/" class="md-nav__link">
         
   
   
@@ -5211,7 +5498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/net/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/net/" class="md-nav__link">
         
   
   
@@ -5234,7 +5521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/os/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/os/" class="md-nav__link">
         
   
   
@@ -5257,7 +5544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/pprof/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/pprof/" class="md-nav__link">
         
   
   
@@ -5280,7 +5567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/protobuf/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/protobuf/" class="md-nav__link">
         
   
   
@@ -5303,7 +5590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/sync/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/sync/" class="md-nav__link">
         
   
   
@@ -5326,7 +5613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/testify/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/testify/" class="md-nav__link">
         
   
   
@@ -5349,7 +5636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/time/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/time/" class="md-nav__link">
         
   
   
@@ -5372,7 +5659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/viper/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/viper/" class="md-nav__link">
         
   
   
@@ -5395,7 +5682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/zap/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/Golang/%E5%B8%B8%E7%94%A8%E5%BA%93/zap/" class="md-nav__link">
         
   
   
@@ -5431,10 +5718,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -5451,21 +5736,20 @@
     
       
       
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
         
           
-          
         
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_3" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12_3" >
         
           
-          <label class="md-nav__link" for="__nav_12_3" id="__nav_12_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_12_3" id="__nav_12_3_label" tabindex="0">
             
   
   
@@ -5478,7 +5762,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_12_3">
             <span class="md-nav__icon md-icon"></span>
             Python
@@ -5492,7 +5776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../advance/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/advance/" class="md-nav__link">
         
   
   
@@ -5515,7 +5799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../basic/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/basic/" class="md-nav__link">
         
   
   
@@ -5538,7 +5822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../interview/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/interview/" class="md-nav__link">
         
   
   
@@ -5558,10 +5842,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -5648,11 +5930,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_3_4" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12_3_4" >
         
           
           <label class="md-nav__link" for="__nav_12_3_4" id="__nav_12_3_4_label" tabindex="0">
@@ -5668,7 +5952,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_12_3_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_12_3_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_12_3_4">
             <span class="md-nav__icon md-icon"></span>
             Python常用库
@@ -5682,7 +5966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Seaborn/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/Seaborn/" class="md-nav__link">
         
   
   
@@ -5705,7 +5989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../beautifulsoup/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/beautifulsoup/" class="md-nav__link">
         
   
   
@@ -5728,7 +6012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../celery/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/celery/" class="md-nav__link">
         
   
   
@@ -5751,7 +6035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../click/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/click/" class="md-nav__link">
         
   
   
@@ -5774,7 +6058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../datastruct/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/datastruct/" class="md-nav__link">
         
   
   
@@ -5797,7 +6081,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../datetime/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/datetime/" class="md-nav__link">
         
   
   
@@ -5820,7 +6104,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../functools/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/functools/" class="md-nav__link">
         
   
   
@@ -5843,7 +6127,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../jose/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/jose/" class="md-nav__link">
         
   
   
@@ -5866,7 +6150,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../json/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/json/" class="md-nav__link">
         
   
   
@@ -5889,7 +6173,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../logging/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/logging/" class="md-nav__link">
         
   
   
@@ -5912,7 +6196,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../math/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/math/" class="md-nav__link">
         
   
   
@@ -5935,7 +6219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../matpliot/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/matpliot/" class="md-nav__link">
         
   
   
@@ -5958,7 +6242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mock/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/mock/" class="md-nav__link">
         
   
   
@@ -5981,7 +6265,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../numpy/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/numpy/" class="md-nav__link">
         
   
   
@@ -6004,7 +6288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../os/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/os/" class="md-nav__link">
         
   
   
@@ -6027,7 +6311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pandas/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pandas/" class="md-nav__link">
         
   
   
@@ -6050,7 +6334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../passlib/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/passlib/" class="md-nav__link">
         
   
   
@@ -6073,7 +6357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pathlib/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pathlib/" class="md-nav__link">
         
   
   
@@ -6096,7 +6380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pickle/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pickle/" class="md-nav__link">
         
   
   
@@ -6119,7 +6403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pydantic/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pydantic/" class="md-nav__link">
         
   
   
@@ -6142,7 +6426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pymysql/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pymysql/" class="md-nav__link">
         
   
   
@@ -6165,7 +6449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pytest/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pytest/" class="md-nav__link">
         
   
   
@@ -6188,7 +6472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pytorch/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/pytorch/" class="md-nav__link">
         
   
   
@@ -6211,7 +6495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../queue/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/queue/" class="md-nav__link">
         
   
   
@@ -6231,30 +6515,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    random 模块
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/random/" class="md-nav__link">
         
   
   
@@ -6265,78 +6529,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. 基本随机数生成函数
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. 随机选择和打乱序列
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. 随机分布函数
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. 随机种子
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. 示例应用
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. 注意事项
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -6349,7 +6541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../re/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/re/" class="md-nav__link">
         
   
   
@@ -6372,7 +6564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../redis/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/redis/" class="md-nav__link">
         
   
   
@@ -6395,7 +6587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../requests/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/requests/" class="md-nav__link">
         
   
   
@@ -6418,7 +6610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../scikit-learn/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scikit-learn/" class="md-nav__link">
         
   
   
@@ -6441,7 +6633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../scipy/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scipy/" class="md-nav__link">
         
   
   
@@ -6464,7 +6656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../scrapy/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/scrapy/" class="md-nav__link">
         
   
   
@@ -6487,7 +6679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../selenium/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/selenium/" class="md-nav__link">
         
   
   
@@ -6510,7 +6702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../shutil/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/shutil/" class="md-nav__link">
         
   
   
@@ -6533,7 +6725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sqlalchemy/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/sqlalchemy/" class="md-nav__link">
         
   
   
@@ -6556,7 +6748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sys/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/sys/" class="md-nav__link">
         
   
   
@@ -6579,7 +6771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../time/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/time/" class="md-nav__link">
         
   
   
@@ -6602,7 +6794,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../urllib/" class="md-nav__link">
+      <a href="../../../%E8%AF%AD%E8%A8%80%E7%AF%87/python/Python%E5%B8%B8%E7%94%A8%E5%BA%93/urllib/" class="md-nav__link">
         
   
   
@@ -6666,9 +6858,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
+  <a href="#1-pydantic" class="md-nav__link">
     <span class="md-ellipsis">
-      1. 基本随机数生成函数
+      1. 安装 Pydantic
     </span>
   </a>
   
@@ -6677,43 +6869,235 @@
         <li class="md-nav__item">
   <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
-      2. 随机选择和打乱序列
+      2. 基础用法
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="2. 基础用法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 定义模型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 创建实例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 自动类型转换
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 验证错误处理
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#3" class="md-nav__link">
     <span class="md-ellipsis">
-      3. 随机分布函数
+      3. 字段类型与验证
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="3. 字段类型与验证">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 常用类型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 字段约束
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 自定义验证器
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#4" class="md-nav__link">
     <span class="md-ellipsis">
-      4. 随机种子
+      4. 高级特性
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="4. 高级特性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 嵌套模型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 模型继承
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 配置类（Config）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 JSON 序列化与解析
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#5" class="md-nav__link">
     <span class="md-ellipsis">
-      5. 示例应用
+      5. 实用功能
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 实用功能">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 数据导出
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 模型更新
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 动态模型创建
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 与 FastAPI 集成
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#6" class="md-nav__link">
+  <a href="#7" class="md-nav__link">
     <span class="md-ellipsis">
-      6. 注意事项
+      7. 常见问题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. 常见问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 循环引用
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 性能优化
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. 总结
     </span>
   </a>
   
@@ -6735,111 +7119,162 @@
 
 
 
-<h1 id="random">random 模块<a class="headerlink" href="#random" title="Permanent link">&para;</a></h1>
-<p><code>random</code> 模块是 Python 标准库中的一个模块，提供了生成随机数、随机选择、打乱序列等功能。以下是 <code>random</code> 模块的详细介绍。</p>
-<h3 id="1">1. 基本随机数生成函数<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
-<h4 id="11-randomrandom">1.1 <code>random.random()</code><a class="headerlink" href="#11-randomrandom" title="Permanent link">&para;</a></h4>
-<ul>
-<li><strong>功能</strong>：生成一个介于 <code>[0.0, 1.0)</code> 之间的随机浮点数。</li>
-<li><strong>示例</strong>：
-  <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">())</span>  <span class="c1"># 输出类似于 0.37444</span>
-</code></pre></div></li>
-</ul>
-<h4 id="12-randomrandinta-b">1.2 <code>random.randint(a, b)</code><a class="headerlink" href="#12-randomrandinta-b" title="Permanent link">&para;</a></h4>
-<ul>
-<li><strong>功能</strong>：生成一个介于 <code>[a, b]</code> 之间的随机整数，包含 <code>a</code> 和 <code>b</code>。</li>
-<li><strong>示例</strong>：
-  <div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>  <span class="c1"># 输出介于 1 和 10 之间的整数</span>
-</code></pre></div></li>
-</ul>
-<h4 id="13-randomuniforma-b">1.3 <code>random.uniform(a, b)</code><a class="headerlink" href="#13-randomuniforma-b" title="Permanent link">&para;</a></h4>
-<ul>
-<li><strong>功能</strong>：生成一个介于 <code>[a, b)</code> 之间的随机浮点数。</li>
-<li><strong>示例</strong>：
-  <div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>  <span class="c1"># 输出介于 1.0 和 10.0 之间的浮点数</span>
-</code></pre></div></li>
-</ul>
-<h3 id="2">2. 随机选择和打乱序列<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
-<h4 id="21-randomchoiceseq">2.1 <code>random.choice(seq)</code><a class="headerlink" href="#21-randomchoiceseq" title="Permanent link">&para;</a></h4>
-<ul>
-<li><strong>功能</strong>：从序列 <code>seq</code> 中随机选择一个元素。</li>
-<li><strong>示例</strong>：
-  <div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;banana&#39;</span><span class="p">,</span> <span class="s1">&#39;cherry&#39;</span><span class="p">]))</span>  <span class="c1"># 随机选择一个水果</span>
-</code></pre></div></li>
-</ul>
-<h4 id="22-randomchoicesseq-weightsnone-k1">2.2 <code>random.choices(seq, weights=None, k=1)</code><a class="headerlink" href="#22-randomchoicesseq-weightsnone-k1" title="Permanent link">&para;</a></h4>
-<ul>
-<li><strong>功能</strong>：从序列 <code>seq</code> 中随机选择 <code>k</code> 个元素，返回一个列表。可以通过 <code>weights</code> 参数设置权重。</li>
-<li><strong>示例</strong>：
-  <div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">([</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;banana&#39;</span><span class="p">,</span> <span class="s1">&#39;cherry&#39;</span><span class="p">],</span> <span class="n">k</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>  <span class="c1"># 随机选择两个水果</span>
-</code></pre></div></li>
-</ul>
-<h4 id="23-randomsamplepopulation-k">2.3 <code>random.sample(population, k)</code><a class="headerlink" href="#23-randomsamplepopulation-k" title="Permanent link">&para;</a></h4>
-<ul>
-<li><strong>功能</strong>：从集合或序列 <code>population</code> 中随机选择 <code>k</code> 个不重复的元素，返回一个列表。</li>
-<li><strong>示例</strong>：
-  <div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">3</span><span class="p">))</span>  <span class="c1"># 随机选择 3 个不同的数字</span>
-</code></pre></div></li>
-</ul>
-<h4 id="24-randomshufflex">2.4 <code>random.shuffle(x)</code><a class="headerlink" href="#24-randomshufflex" title="Permanent link">&para;</a></h4>
-<ul>
-<li><strong>功能</strong>：就地打乱序列 <code>x</code>。</li>
-<li><strong>示例</strong>：
-  <div class="highlight"><pre><span></span><code><span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>  <span class="c1"># 输出打乱后的序列</span>
-</code></pre></div></li>
-</ul>
-<h3 id="3">3. 随机分布函数<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
-<h4 id="31-randomgaussmu-sigma">3.1 <code>random.gauss(mu, sigma)</code><a class="headerlink" href="#31-randomgaussmu-sigma" title="Permanent link">&para;</a></h4>
-<ul>
-<li><strong>功能</strong>：生成一个符合正态分布（高斯分布）的随机浮点数，<code>mu</code> 为均值，<code>sigma</code> 为标准差。</li>
-<li><strong>示例</strong>：
-  <div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">gauss</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>  <span class="c1"># 输出符合正态分布的随机数</span>
-</code></pre></div></li>
-</ul>
-<h4 id="32-randomexpovariatelambd">3.2 <code>random.expovariate(lambd)</code><a class="headerlink" href="#32-randomexpovariatelambd" title="Permanent link">&para;</a></h4>
-<ul>
-<li><strong>功能</strong>：生成一个符合指数分布的随机浮点数，<code>lambd</code> 是分布的参数（<code>1/平均值</code>）。</li>
-<li><strong>示例</strong>：
-  <div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">expovariate</span><span class="p">(</span><span class="mf">1.5</span><span class="p">))</span>  <span class="c1"># 输出符合指数分布的随机数</span>
-</code></pre></div></li>
-</ul>
-<h4 id="33-randombetavariatealpha-beta">3.3 <code>random.betavariate(alpha, beta)</code><a class="headerlink" href="#33-randombetavariatealpha-beta" title="Permanent link">&para;</a></h4>
-<ul>
-<li><strong>功能</strong>：生成一个符合 Beta 分布的随机浮点数，<code>alpha</code> 和 <code>beta</code> 是形状参数。</li>
-<li><strong>示例</strong>：
-  <div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">betavariate</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">))</span>  <span class="c1"># 输出符合 Beta 分布的随机数</span>
-</code></pre></div></li>
-</ul>
-<h3 id="4">4. 随机种子<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
-<h4 id="41-randomseedanone-version2">4.1 <code>random.seed(a=None, version=2)</code><a class="headerlink" href="#41-randomseedanone-version2" title="Permanent link">&para;</a></h4>
-<ul>
-<li><strong>功能</strong>：初始化随机数生成器，可以用相同的种子产生相同的随机数序列。</li>
-<li><strong>示例</strong>：
-  <div class="highlight"><pre><span></span><code><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">())</span>  <span class="c1"># 输出将是固定的</span>
-</code></pre></div></li>
-</ul>
-<h3 id="5">5. 示例应用<a class="headerlink" href="#5" title="Permanent link">&para;</a></h3>
-<h4 id="51">5.1 掷骰子<a class="headerlink" href="#51" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">roll_dice</span><span class="p">():</span>
-    <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<h1 id="pydantic">Pydantic 使用教程<a class="headerlink" href="#pydantic" title="Permanent link">&para;</a></h1>
+<p>Pydantic 是一个强大的 Python 数据验证和设置管理库，它使用 Python 类型注解来定义数据模型的结构和验证规则。以下是 Pydantic 的详细教程，涵盖从基础到高级的用法。</p>
+<hr />
+<h2 id="1-pydantic">1. 安装 Pydantic<a class="headerlink" href="#1-pydantic" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>pydantic
+</code></pre></div>
+<hr />
+<h2 id="2">2. 基础用法<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<h3 id="21">2.1 定义模型<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
+<p>通过继承 <code>BaseModel</code> 并定义字段类型来创建模型：</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pydantic</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseModel</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">List</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">roll_dice</span><span class="p">())</span>  <span class="c1"># 模拟掷骰子</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">User</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;John Doe&quot;</span>
+    <span class="n">email</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">friends</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
 </code></pre></div>
-<h4 id="52">5.2 模拟抽奖<a class="headerlink" href="#52" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="n">participants</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="s1">&#39;Charlie&#39;</span><span class="p">,</span> <span class="s1">&#39;David&#39;</span><span class="p">]</span>
-<span class="n">winner</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">participants</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The winner is </span><span class="si">{</span><span class="n">winner</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># 随机选择获奖者</span>
+<h3 id="22">2.2 创建实例<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="n">email</span><span class="o">=</span><span class="s2">&quot;alice@example.com&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>  <span class="c1"># 输出: id=1 name=&#39;Alice&#39; email=&#39;alice@example.com&#39; friends=[]</span>
 </code></pre></div>
-<h3 id="6">6. 注意事项<a class="headerlink" href="#6" title="Permanent link">&para;</a></h3>
+<h3 id="23">2.3 自动类型转换<a class="headerlink" href="#23" title="Permanent link">&para;</a></h3>
+<p>Pydantic 会自动转换类型（如字符串数字转整数）：
+<div class="highlight"><pre><span></span><code><span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;123&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Bob&quot;</span><span class="p">)</span>  <span class="c1"># id 会被自动转换为 int</span>
+</code></pre></div></p>
+<h3 id="24">2.4 验证错误处理<a class="headerlink" href="#24" title="Permanent link">&para;</a></h3>
+<p>如果数据无效，会抛出 <code>ValidationError</code>：
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pydantic</span><span class="w"> </span><span class="kn">import</span> <span class="n">ValidationError</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">User</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;not_an_int&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="n">ValidationError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>  <span class="c1"># 输出详细的错误信息</span>
+</code></pre></div></p>
+<hr />
+<h2 id="3">3. 字段类型与验证<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<h3 id="31">3.1 常用类型<a class="headerlink" href="#31" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>random</code> 模块生成的随机数是伪随机数，依赖于初始的种子值，因此并不适用于需要高安全性的场景，如加密。</li>
-<li>对于安全性要求高的随机数生成，可以使用 <code>secrets</code> 模块。</li>
+<li>基础类型：<code>int</code>, <code>str</code>, <code>float</code>, <code>bool</code></li>
+<li>复合类型：<code>List</code>, <code>Dict</code>, <code>Set</code>, <code>Optional</code></li>
+<li>特殊类型：<code>EmailStr</code>, <code>UrlStr</code>, <code>IPvAnyAddress</code>（需安装 <code>email-validator</code>）</li>
 </ul>
-<p><code>random</code> 模块提供了丰富的随机数生成和操作功能，能够满足大多数场景下的需求。在使用时，合理选择函数和参数可以实现高效且易读的代码。</p>
+<h3 id="32">3.2 字段约束<a class="headerlink" href="#32" title="Permanent link">&para;</a></h3>
+<p>使用 <code>Field</code> 添加额外约束：
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pydantic</span><span class="w"> </span><span class="kn">import</span> <span class="n">Field</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Product</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">price</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">gt</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;价格必须大于0&quot;</span><span class="p">)</span>
+    <span class="n">tags</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">min_items</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div></p>
+<h3 id="33">3.3 自定义验证器<a class="headerlink" href="#33" title="Permanent link">&para;</a></h3>
+<p>使用 <code>@validator</code> 装饰器：
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pydantic</span><span class="w"> </span><span class="kn">import</span> <span class="n">validator</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">User</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+
+    <span class="nd">@validator</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">name_must_contain_space</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
+        <span class="k">if</span> <span class="s1">&#39; &#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">v</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;必须包含空格&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">v</span>
+</code></pre></div></p>
+<hr />
+<h2 id="4">4. 高级特性<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<h3 id="41">4.1 嵌套模型<a class="headerlink" href="#41" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Address</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">street</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">city</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">User</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">address</span><span class="p">:</span> <span class="n">Address</span>  <span class="c1"># 嵌套模型</span>
+</code></pre></div>
+<h3 id="42">4.2 模型继承<a class="headerlink" href="#42" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">BaseUser</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">email</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">User</span><span class="p">(</span><span class="n">BaseUser</span><span class="p">):</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+</code></pre></div>
+<h3 id="43-config">4.3 配置类（Config）<a class="headerlink" href="#43-config" title="Permanent link">&para;</a></h3>
+<p>自定义模型行为：
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">User</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+
+    <span class="k">class</span><span class="w"> </span><span class="nc">Config</span><span class="p">:</span>
+        <span class="n">allow_mutation</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># 禁止修改实例</span>
+        <span class="n">anystr_lower</span> <span class="o">=</span> <span class="kc">True</span>     <span class="c1"># 自动转换字符串为小写</span>
+</code></pre></div></p>
+<h3 id="44-json">4.4 JSON 序列化与解析<a class="headerlink" href="#44-json" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Alice&quot;</span><span class="p">)</span>
+<span class="n">json_data</span> <span class="o">=</span> <span class="n">user</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>          <span class="c1"># 序列化为 JSON</span>
+<span class="n">user_from_json</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">parse_raw</span><span class="p">(</span><span class="n">json_data</span><span class="p">)</span>  <span class="c1"># 从 JSON 解析</span>
+</code></pre></div>
+<hr />
+<h2 id="5">5. 实用功能<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<h3 id="51">5.1 数据导出<a class="headerlink" href="#51" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">user</span><span class="o">.</span><span class="n">dict</span><span class="p">()</span>          <span class="c1"># 转换为字典</span>
+<span class="n">user</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>          <span class="c1"># 转换为 JSON 字符串</span>
+<span class="n">user</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>          <span class="c1"># 深拷贝实例</span>
+</code></pre></div>
+<h3 id="52">5.2 模型更新<a class="headerlink" href="#52" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">user</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Bob&quot;</span><span class="p">})</span>  <span class="c1"># 更新字段值</span>
+</code></pre></div>
+<h3 id="53">5.3 动态模型创建<a class="headerlink" href="#53" title="Permanent link">&para;</a></h3>
+<p>使用 <code>create_model</code> 动态创建模型：
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pydantic</span><span class="w"> </span><span class="kn">import</span> <span class="n">create_model</span>
+
+<span class="n">DynamicUser</span> <span class="o">=</span> <span class="n">create_model</span><span class="p">(</span><span class="s2">&quot;DynamicUser&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">),</span> <span class="n">age</span><span class="o">=</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="mi">25</span><span class="p">))</span>
+</code></pre></div></p>
+<hr />
+<h2 id="6-fastapi">6. 与 FastAPI 集成<a class="headerlink" href="#6-fastapi" title="Permanent link">&para;</a></h2>
+<p>Pydantic 是 FastAPI 的默认数据模型库，用于请求/响应验证：</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">fastapi</span><span class="w"> </span><span class="kn">import</span> <span class="n">FastAPI</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pydantic</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseModel</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Item</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">price</span><span class="p">:</span> <span class="nb">float</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/items/&quot;</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">create_item</span><span class="p">(</span><span class="n">item</span><span class="p">:</span> <span class="n">Item</span><span class="p">):</span>  <span class="c1"># 自动验证请求体</span>
+    <span class="k">return</span> <span class="n">item</span>
+</code></pre></div>
+<hr />
+<h2 id="7">7. 常见问题<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
+<h3 id="71">7.1 循环引用<a class="headerlink" href="#71" title="Permanent link">&para;</a></h3>
+<p>使用 <code>defer</code>（Pydantic v1.10+）或字符串类型注解：
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pydantic</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseModel</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">List</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">User</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">friends</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="s1">&#39;User&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># 字符串注解避免循环引用</span>
+
+<span class="n">User</span><span class="o">.</span><span class="n">update_forward_refs</span><span class="p">()</span>  <span class="c1"># 更新前向引用</span>
+</code></pre></div></p>
+<h3 id="72">7.2 性能优化<a class="headerlink" href="#72" title="Permanent link">&para;</a></h3>
+<ul>
+<li>避免深层嵌套模型。</li>
+<li>使用 <code>alias_generator</code> 处理字段别名。</li>
+</ul>
+<hr />
+<h2 id="8">8. 总结<a class="headerlink" href="#8" title="Permanent link">&para;</a></h2>
+<p>Pydantic 通过类型注解提供了简洁而强大的数据验证功能，适用于：
+- API 请求/响应验证
+- 配置文件管理
+- 数据管道中的类型检查
+- 与 FastAPI、Django 等框架集成</p>
+<p>官方文档：<a href="https://pydantic-docs.helpmanual.io/">https://pydantic-docs.helpmanual.io/</a></p>
 
 
 
@@ -6890,18 +7325,18 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.section", "navigation.expand", "navigation.tabs", "navigation.sections", "navigation.indexes", "content.code.copy", "content.tabs.link", "content.code.annotate", "math"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.section", "navigation.expand", "navigation.tabs", "navigation.sections", "navigation.indexes", "content.code.copy", "content.tabs.link", "content.code.annotate", "math"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.50899def.min.js"></script>
       
-        <script src="../../../../styles/javascripts/config.js"></script>
+        <script src="../../../styles/javascripts/config.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"></script>
       
-        <script src="../../../../styles/javascripts/katex.js"></script>
+        <script src="../../../styles/javascripts/katex.js"></script>
       
     
   </body>
