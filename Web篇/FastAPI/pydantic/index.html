@@ -24,7 +24,7 @@
     
     
       
-        <title>Pydantic 使用教程 - IT-手册</title>
+        <title>Pydantic V2 教程 - IT-手册</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1-pydantic" class="md-skip">
+        <a href="#pydantic-v2_1" class="md-skip">
           跳转至
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pydantic 使用教程
+              Pydantic V2 教程
             
           </span>
         </div>
@@ -1032,7 +1032,7 @@
   
   
   <span class="md-ellipsis">
-    Pydantic 使用教程
+    Pydantic V2 教程
     
   </span>
   
@@ -1045,7 +1045,7 @@
   
   
   <span class="md-ellipsis">
-    Pydantic 使用教程
+    Pydantic V2 教程
     
   </span>
   
@@ -1066,55 +1066,64 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-pydantic" class="md-nav__link">
+  <a href="#pydantic-v2_1" class="md-nav__link">
     <span class="md-ellipsis">
-      1. 安装 Pydantic
+      Pydantic V2 全面教程：从入门到精通
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. 基础用法
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. 基础用法">
+    <nav class="md-nav" aria-label="Pydantic V2 全面教程：从入门到精通">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21" class="md-nav__link">
+  <a href="#pydantic" class="md-nav__link">
     <span class="md-ellipsis">
-      2.1 定义模型
+      一、 Pydantic 是什么？
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#22" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      2.2 创建实例
+      二、 核心概念与基础用法
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#23" class="md-nav__link">
+  <a href="#validators" class="md-nav__link">
     <span class="md-ellipsis">
-      2.3 自动类型转换
+      三、 进阶验证器 (Validators)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#24" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      2.4 验证错误处理
+      四、 高级功能与配置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      五、 与 JSON 和 HTTP 框架的集成
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      六、 总结与最佳实践
     </span>
   </a>
   
@@ -1122,192 +1131,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. 字段类型与验证
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. 字段类型与验证">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.1 常用类型
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.2 字段约束
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.3 自定义验证器
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. 高级特性
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. 高级特性">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.1 嵌套模型
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.2 模型继承
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#43-config" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.3 配置类（Config）
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#44-json" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.4 JSON 序列化与解析
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. 实用功能
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="5. 实用功能">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#51" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.1 数据导出
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#52" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.2 模型更新
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#53" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.3 动态模型创建
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-fastapi" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. 与 FastAPI 集成
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. 常见问题
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="7. 常见问题">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#71" class="md-nav__link">
-    <span class="md-ellipsis">
-      7.1 循环引用
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#72" class="md-nav__link">
-    <span class="md-ellipsis">
-      7.2 性能优化
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#8" class="md-nav__link">
-    <span class="md-ellipsis">
-      8. 总结
-    </span>
-  </a>
   
 </li>
       
@@ -6883,55 +6706,64 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-pydantic" class="md-nav__link">
+  <a href="#pydantic-v2_1" class="md-nav__link">
     <span class="md-ellipsis">
-      1. 安装 Pydantic
+      Pydantic V2 全面教程：从入门到精通
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. 基础用法
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. 基础用法">
+    <nav class="md-nav" aria-label="Pydantic V2 全面教程：从入门到精通">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21" class="md-nav__link">
+  <a href="#pydantic" class="md-nav__link">
     <span class="md-ellipsis">
-      2.1 定义模型
+      一、 Pydantic 是什么？
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#22" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      2.2 创建实例
+      二、 核心概念与基础用法
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#23" class="md-nav__link">
+  <a href="#validators" class="md-nav__link">
     <span class="md-ellipsis">
-      2.3 自动类型转换
+      三、 进阶验证器 (Validators)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#24" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      2.4 验证错误处理
+      四、 高级功能与配置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      五、 与 JSON 和 HTTP 框架的集成
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      六、 总结与最佳实践
     </span>
   </a>
   
@@ -6939,192 +6771,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. 字段类型与验证
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. 字段类型与验证">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.1 常用类型
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.2 字段约束
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.3 自定义验证器
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. 高级特性
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. 高级特性">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.1 嵌套模型
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.2 模型继承
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#43-config" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.3 配置类（Config）
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#44-json" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.4 JSON 序列化与解析
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. 实用功能
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="5. 实用功能">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#51" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.1 数据导出
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#52" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.2 模型更新
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#53" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.3 动态模型创建
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-fastapi" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. 与 FastAPI 集成
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. 常见问题
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="7. 常见问题">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#71" class="md-nav__link">
-    <span class="md-ellipsis">
-      7.1 循环引用
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#72" class="md-nav__link">
-    <span class="md-ellipsis">
-      7.2 性能优化
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#8" class="md-nav__link">
-    <span class="md-ellipsis">
-      8. 总结
-    </span>
-  </a>
   
 </li>
       
@@ -7144,162 +6790,285 @@
 
 
 
-<h1 id="pydantic">Pydantic 使用教程<a class="headerlink" href="#pydantic" title="Permanent link">&para;</a></h1>
-<p>Pydantic 是一个强大的 Python 数据验证和设置管理库，它使用 Python 类型注解来定义数据模型的结构和验证规则。以下是 Pydantic 的详细教程，涵盖从基础到高级的用法。</p>
+<h1 id="pydantic-v2">Pydantic V2 教程<a class="headerlink" href="#pydantic-v2" title="Permanent link">&para;</a></h1>
 <hr />
-<h2 id="1-pydantic">1. 安装 Pydantic<a class="headerlink" href="#1-pydantic" title="Permanent link">&para;</a></h2>
+<h2 id="pydantic-v2_1">Pydantic V2 全面教程：从入门到精通<a class="headerlink" href="#pydantic-v2_1" title="Permanent link">&para;</a></h2>
+<h3 id="pydantic">一、 Pydantic 是什么？<a class="headerlink" href="#pydantic" title="Permanent link">&para;</a></h3>
+<p>Pydantic 是一个基于 Python 类型注解的数据验证和设置管理库。它的核心功能是：
+1.  <strong>验证</strong>：确保输入数据符合你定义的模型规范。
+2.  <strong>转换</strong>：自动将输入数据（来自 JSON、字典等）转换为指定的 Python 类型（如 <code>datetime</code>, <code>UUID</code> 等）。
+3.  <strong>序列化</strong>：将模型实例轻松转换为字典或 JSON。
+4.  <strong>设置管理</strong>：非常适合管理应用程序的配置。</p>
+<p>Pydantic V2 是一个重大更新，带来了显著的性能提升（基于 Rust）和更清晰的 API。</p>
+<hr />
+<h3 id="_1">二、 核心概念与基础用法<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<h4 id="1">1. 安装<a class="headerlink" href="#1" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>pydantic
 </code></pre></div>
-<hr />
-<h2 id="2">2. 基础用法<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
-<h3 id="21">2.1 定义模型<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
-<p>通过继承 <code>BaseModel</code> 并定义字段类型来创建模型：</p>
+<h4 id="2-basemodel">2. 第一个模型：<code>BaseModel</code><a class="headerlink" href="#2-basemodel" title="Permanent link">&para;</a></h4>
+<p>一切始于从 <code>pydantic.BaseModel</code> 继承来定义你的数据模型。</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pydantic</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseModel</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">List</span>
 
 <span class="k">class</span><span class="w"> </span><span class="nc">User</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
     <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span>
     <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;John Doe&quot;</span>
-    <span class="n">email</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
-    <span class="n">friends</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">email</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># 可选字段，默认为 None</span>
+    <span class="n">is_active</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>    <span class="c1"># 带默认值的字段</span>
+
+<span class="c1"># 使用字典创建实例（验证和转换在此发生）</span>
+<span class="n">user_data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">123</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;alice@example.com&quot;</span><span class="p">}</span>
+<span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="o">**</span><span class="n">user_data</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+<span class="c1"># &gt; id=123 name=&#39;Alice&#39; email=&#39;alice@example.com&#39; is_active=True</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>        <span class="c1"># 123</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>      <span class="c1"># &#39;Alice&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">model_dump</span><span class="p">())</span> <span class="c1"># 将模型转回字典</span>
+<span class="c1"># &gt; {&#39;id&#39;: 123, &#39;name&#39;: &#39;Alice&#39;, &#39;email&#39;: &#39;alice@example.com&#39;, &#39;is_active&#39;: True}</span>
+
+<span class="c1"># 如果数据无效，会抛出 ValidationError</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">invalid_user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;not_an_int&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="n">ValidationError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    1 validation error for User</span>
+<span class="sd">    id</span>
+<span class="sd">      Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value=&#39;not_an_int&#39;, input_type=str]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 </code></pre></div>
-<h3 id="22">2.2 创建实例<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="n">email</span><span class="o">=</span><span class="s2">&quot;alice@example.com&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>  <span class="c1"># 输出: id=1 name=&#39;Alice&#39; email=&#39;alice@example.com&#39; friends=[]</span>
+<h4 id="3">3. 类型验证与自动转换<a class="headerlink" href="#3" title="Permanent link">&para;</a></h4>
+<p>Pydantic 会自动尝试将输入数据转换为你声明的类型。</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pydantic</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseModel</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Event</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">timestamp</span><span class="p">:</span> <span class="n">datetime</span>  <span class="c1"># 传入字符串，自动转换为 datetime 对象</span>
+    <span class="n">participants</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>  <span class="c1"># 传入元组，自动转换为列表</span>
+
+<span class="n">event_data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Product Launch&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;timestamp&quot;</span><span class="p">:</span> <span class="s2">&quot;2023-10-27 12:00:00&quot;</span><span class="p">,</span>  <span class="c1"># 字符串</span>
+    <span class="s2">&quot;participants&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="s2">&quot;Bob&quot;</span><span class="p">)</span>     <span class="c1"># 元组</span>
+<span class="p">}</span>
+
+<span class="n">event</span> <span class="o">=</span> <span class="n">Event</span><span class="p">(</span><span class="o">**</span><span class="n">event_data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">timestamp</span><span class="p">)</span>  <span class="c1"># datetime.datetime(2023, 10, 27, 12, 0)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">timestamp</span><span class="p">))</span>  <span class="c1"># &lt;class &#39;datetime.datetime&#39;&gt;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">participants</span><span class="p">)</span>  <span class="c1"># [&#39;Alice&#39;, &#39;Bob&#39;]</span>
 </code></pre></div>
-<h3 id="23">2.3 自动类型转换<a class="headerlink" href="#23" title="Permanent link">&para;</a></h3>
-<p>Pydantic 会自动转换类型（如字符串数字转整数）：
-<div class="highlight"><pre><span></span><code><span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;123&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Bob&quot;</span><span class="p">)</span>  <span class="c1"># id 会被自动转换为 int</span>
-</code></pre></div></p>
-<h3 id="24">2.4 验证错误处理<a class="headerlink" href="#24" title="Permanent link">&para;</a></h3>
-<p>如果数据无效，会抛出 <code>ValidationError</code>：
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pydantic</span><span class="w"> </span><span class="kn">import</span> <span class="n">ValidationError</span>
+<hr />
+<h3 id="validators">三、 进阶验证器 (Validators)<a class="headerlink" href="#validators" title="Permanent link">&para;</a></h3>
+<p>Pydantic 提供了强大的装饰器来创建自定义验证逻辑。</p>
+<h4 id="1-field_validator">1. 字段验证器 (<code>@field_validator</code>)<a class="headerlink" href="#1-field_validator" title="Permanent link">&para;</a></h4>
+<p>用于验证单个字段的值。</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pydantic</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseModel</span><span class="p">,</span> <span class="n">field_validator</span><span class="p">,</span> <span class="n">ValidationError</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">UserProfile</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">username</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">age</span><span class="p">:</span> <span class="nb">int</span>
+
+    <span class="c1"># validator 装饰器，指定要验证的字段</span>
+    <span class="nd">@field_validator</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">)</span>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">username_must_contain_letter</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">any</span><span class="p">(</span><span class="n">char</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span> <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">v</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;must contain at least one letter&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">v</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>  <span class="c1"># 验证器还可以对值进行修改</span>
+
+    <span class="nd">@field_validator</span><span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">)</span>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">age_must_be_realistic</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="n">v</span> <span class="o">&lt;</span> <span class="mi">120</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;age must be between 1 and 119&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">v</span>
+
+<span class="c1"># 测试</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">profile</span> <span class="o">=</span> <span class="n">UserProfile</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s2">&quot;123&quot;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span> <span class="c1"># 用户名无效</span>
+<span class="k">except</span> <span class="n">ValidationError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+<span class="n">good_profile</span> <span class="o">=</span> <span class="n">UserProfile</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s2">&quot;alice123&quot;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">good_profile</span><span class="o">.</span><span class="n">username</span><span class="p">)</span>  <span class="c1"># &#39;Alice123&#39; (被 title() 修改了)</span>
+</code></pre></div>
+<h4 id="2-model_validator">2. 模型验证器 (<code>@model_validator</code>)<a class="headerlink" href="#2-model_validator" title="Permanent link">&para;</a></h4>
+<p>用于验证多个字段之间的关系。</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pydantic</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseModel</span><span class="p">,</span> <span class="n">model_validator</span><span class="p">,</span> <span class="n">ValidationError</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">PasswordModel</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">password</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">password_confirm</span><span class="p">:</span> <span class="nb">str</span>
+
+    <span class="nd">@model_validator</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;after&#39;</span><span class="p">)</span> <span class="c1"># ‘after’ 表示在初始验证完成后运行</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">check_passwords_match</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;PasswordModel&#39;</span><span class="p">:</span>
+        <span class="n">pw1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">password</span>
+        <span class="n">pw2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">password_confirm</span>
+        <span class="k">if</span> <span class="n">pw1</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">pw2</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">pw1</span> <span class="o">!=</span> <span class="n">pw2</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;passwords do not match&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+<span class="c1"># 测试</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">pw</span> <span class="o">=</span> <span class="n">PasswordModel</span><span class="p">(</span><span class="n">password</span><span class="o">=</span><span class="s2">&quot;abc&quot;</span><span class="p">,</span> <span class="n">password_confirm</span><span class="o">=</span><span class="s2">&quot;123&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="n">ValidationError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h3 id="_2">四、 高级功能与配置<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h4 id="1-model_config">1. 模型配置 (<code>model_config</code>)<a class="headerlink" href="#1-model_config" title="Permanent link">&para;</a></h4>
+<p>使用 <code>model_config</code> 属性来自定义模型行为。</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pydantic</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseModel</span><span class="p">,</span> <span class="n">ConfigDict</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Company</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="c1"># 在 V2 中，这是新的配置方式</span>
+    <span class="n">model_config</span> <span class="o">=</span> <span class="n">ConfigDict</span><span class="p">(</span>
+        <span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>          <span class="c1"># 创建后实例不可变（类似命名元组）</span>
+        <span class="n">str_strip_whitespace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="c1"># 自动去除字符串两端的空格</span>
+        <span class="n">extra</span><span class="o">=</span><span class="s1">&#39;forbid&#39;</span>        <span class="c1"># 禁止传入额外字段（默认是 &#39;ignore&#39;）</span>
+    <span class="p">)</span>
+
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">founded</span><span class="p">:</span> <span class="nb">int</span>
+
+<span class="n">company</span> <span class="o">=</span> <span class="n">Company</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;  Tech Corp  &quot;</span><span class="p">,</span> <span class="n">founded</span><span class="o">=</span><span class="mi">1999</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">company</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>  <span class="c1"># &#39;Tech Corp&#39; (空格被去除)</span>
 
 <span class="k">try</span><span class="p">:</span>
-    <span class="n">User</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;not_an_int&quot;</span><span class="p">)</span>
+    <span class="n">company</span><span class="o">.</span><span class="n">founded</span> <span class="o">=</span> <span class="mi">2000</span>  <span class="c1"># 错误：实例是 frozen 的</span>
+<span class="k">except</span> <span class="ne">AttributeError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">company_data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Test&quot;</span><span class="p">,</span> <span class="s2">&quot;founded&quot;</span><span class="p">:</span> <span class="mi">2000</span><span class="p">,</span> <span class="s2">&quot;ceo&quot;</span><span class="p">:</span> <span class="s2">&quot;Alice&quot;</span><span class="p">}</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">Company</span><span class="p">(</span><span class="o">**</span><span class="n">company_data</span><span class="p">)</span> <span class="c1"># 错误：存在额外字段 &#39;ceo&#39;</span>
 <span class="k">except</span> <span class="n">ValidationError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>  <span class="c1"># 输出详细的错误信息</span>
-</code></pre></div></p>
-<hr />
-<h2 id="3">3. 字段类型与验证<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
-<h3 id="31">3.1 常用类型<a class="headerlink" href="#31" title="Permanent link">&para;</a></h3>
-<ul>
-<li>基础类型：<code>int</code>, <code>str</code>, <code>float</code>, <code>bool</code></li>
-<li>复合类型：<code>List</code>, <code>Dict</code>, <code>Set</code>, <code>Optional</code></li>
-<li>特殊类型：<code>EmailStr</code>, <code>UrlStr</code>, <code>IPvAnyAddress</code>（需安装 <code>email-validator</code>）</li>
-</ul>
-<h3 id="32">3.2 字段约束<a class="headerlink" href="#32" title="Permanent link">&para;</a></h3>
-<p>使用 <code>Field</code> 添加额外约束：
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pydantic</span><span class="w"> </span><span class="kn">import</span> <span class="n">Field</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="2-annotated-field">2. 自定义字段类型 (<code>Annotated</code> 与 <code>Field</code>)<a class="headerlink" href="#2-annotated-field" title="Permanent link">&para;</a></h4>
+<p>使用 <code>Field</code> 为字段添加元数据和约束。</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pydantic</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseModel</span><span class="p">,</span> <span class="n">Field</span><span class="p">,</span> <span class="n">ValidationError</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Annotated</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">date</span>
 
 <span class="k">class</span><span class="w"> </span><span class="nc">Product</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
-    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
-    <span class="n">price</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">gt</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;价格必须大于0&quot;</span><span class="p">)</span>
-    <span class="n">tags</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">min_items</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-</code></pre></div></p>
-<h3 id="33">3.3 自定义验证器<a class="headerlink" href="#33" title="Permanent link">&para;</a></h3>
-<p>使用 <code>@validator</code> 装饰器：
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pydantic</span><span class="w"> </span><span class="kn">import</span> <span class="n">validator</span>
+    <span class="c1"># 使用 Annotated 和 Field 提供描述、示例和约束</span>
+    <span class="n">name</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;The name of the product&quot;</span><span class="p">,</span> <span class="n">min_length</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">50</span><span class="p">)]</span>
+    <span class="n">price</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">gt</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Price must be positive&quot;</span><span class="p">)]</span> 
+    <span class="n">release_date</span><span class="p">:</span> <span class="n">date</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">examples</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;2023-01-01&quot;</span><span class="p">],</span> <span class="c1"># 提供示例值</span>
+        <span class="n">json_schema_extra</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;date&quot;</span><span class="p">}</span> <span class="c1"># 为 JSON Schema 添加额外信息</span>
+    <span class="p">)</span>
 
-<span class="k">class</span><span class="w"> </span><span class="nc">User</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
-    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+<span class="c1"># 测试</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">Product</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">price</span><span class="o">=-</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># 两个字段都无效</span>
+<span class="k">except</span> <span class="n">ValidationError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
 
-    <span class="nd">@validator</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">name_must_contain_space</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
-        <span class="k">if</span> <span class="s1">&#39; &#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">v</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;必须包含空格&#39;</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">v</span>
-</code></pre></div></p>
-<hr />
-<h2 id="4">4. 高级特性<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
-<h3 id="41">4.1 嵌套模型<a class="headerlink" href="#41" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Address</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="c1"># 查看模型的 JSON Schema</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Product</span><span class="o">.</span><span class="n">model_json_schema</span><span class="p">())</span>
+</code></pre></div>
+<h4 id="3_1">3. 嵌套模型<a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h4>
+<p>模型可以包含其他模型，实现复杂数据结构的验证。</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pydantic</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseModel</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">List</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Address</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
     <span class="n">street</span><span class="p">:</span> <span class="nb">str</span>
     <span class="n">city</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">zip_code</span><span class="p">:</span> <span class="nb">str</span>
 
-<span class="k">class</span><span class="w"> </span><span class="nc">User</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Person</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
     <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
-    <span class="n">address</span><span class="p">:</span> <span class="n">Address</span>  <span class="c1"># 嵌套模型</span>
+    <span class="n">addresses</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Address</span><span class="p">]</span>  <span class="c1"># 地址列表</span>
+
+<span class="n">person_data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Bob&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;addresses&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s2">&quot;street&quot;</span><span class="p">:</span> <span class="s2">&quot;123 Main St&quot;</span><span class="p">,</span> <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Springfield&quot;</span><span class="p">,</span> <span class="s2">&quot;zip_code&quot;</span><span class="p">:</span> <span class="s2">&quot;12345&quot;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s2">&quot;street&quot;</span><span class="p">:</span> <span class="s2">&quot;456 Oak Ave&quot;</span><span class="p">,</span> <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Metropolis&quot;</span><span class="p">,</span> <span class="s2">&quot;zip_code&quot;</span><span class="p">:</span> <span class="s2">&quot;67890&quot;</span><span class="p">},</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+
+<span class="n">person</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="o">**</span><span class="n">person_data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="o">.</span><span class="n">addresses</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">city</span><span class="p">)</span>  <span class="c1"># Springfield</span>
 </code></pre></div>
-<h3 id="42">4.2 模型继承<a class="headerlink" href="#42" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">BaseUser</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
-    <span class="n">email</span><span class="p">:</span> <span class="nb">str</span>
+<h4 id="4-alias">4. 序列化与别名 (<code>alias</code>)<a class="headerlink" href="#4-alias" title="Permanent link">&para;</a></h4>
+<p>处理 JSON 键名与 Python 属性名不一致的情况。</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pydantic</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseModel</span><span class="p">,</span> <span class="n">Field</span><span class="p">,</span> <span class="n">ConfigDict</span>
 
-<span class="k">class</span><span class="w"> </span><span class="nc">User</span><span class="p">(</span><span class="n">BaseUser</span><span class="p">):</span>
-    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
-</code></pre></div>
-<h3 id="43-config">4.3 配置类（Config）<a class="headerlink" href="#43-config" title="Permanent link">&para;</a></h3>
-<p>自定义模型行为：
-<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">User</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
-    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">DataModel</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">model_config</span> <span class="o">=</span> <span class="n">ConfigDict</span><span class="p">(</span>
+        <span class="n">populate_by_name</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="c1"># 允许同时使用 `alias` 和 属性名</span>
+    <span class="p">)</span>
 
-    <span class="k">class</span><span class="w"> </span><span class="nc">Config</span><span class="p">:</span>
-        <span class="n">allow_mutation</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># 禁止修改实例</span>
-        <span class="n">anystr_lower</span> <span class="o">=</span> <span class="kc">True</span>     <span class="c1"># 自动转换字符串为小写</span>
-</code></pre></div></p>
-<h3 id="44-json">4.4 JSON 序列化与解析<a class="headerlink" href="#44-json" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Alice&quot;</span><span class="p">)</span>
-<span class="n">json_data</span> <span class="o">=</span> <span class="n">user</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>          <span class="c1"># 序列化为 JSON</span>
-<span class="n">user_from_json</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">parse_raw</span><span class="p">(</span><span class="n">json_data</span><span class="p">)</span>  <span class="c1"># 从 JSON 解析</span>
+    <span class="c1"># 字段在 Python 中叫 `first_name`，在 JSON 中期望叫 `firstName`</span>
+    <span class="n">first_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">alias</span><span class="o">=</span><span class="s2">&quot;firstName&quot;</span><span class="p">)</span>
+    <span class="n">age</span><span class="p">:</span> <span class="nb">int</span>
+
+<span class="c1"># 通过别名（JSON键）创建</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">DataModel</span><span class="p">(</span><span class="n">firstName</span><span class="o">=</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">first_name</span><span class="p">)</span> <span class="c1"># Alice</span>
+
+<span class="c1"># 因为设置了 populate_by_name=True，也可以用属性名创建</span>
+<span class="n">data2</span> <span class="o">=</span> <span class="n">DataModel</span><span class="p">(</span><span class="n">first_name</span><span class="o">=</span><span class="s2">&quot;Bob&quot;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data2</span><span class="o">.</span><span class="n">model_dump</span><span class="p">(</span><span class="n">by_alias</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>  <span class="c1"># {&#39;firstName&#39;: &#39;Bob&#39;, &#39;age&#39;: 25}</span>
 </code></pre></div>
 <hr />
-<h2 id="5">5. 实用功能<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
-<h3 id="51">5.1 数据导出<a class="headerlink" href="#51" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">user</span><span class="o">.</span><span class="n">dict</span><span class="p">()</span>          <span class="c1"># 转换为字典</span>
-<span class="n">user</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>          <span class="c1"># 转换为 JSON 字符串</span>
-<span class="n">user</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>          <span class="c1"># 深拷贝实例</span>
-</code></pre></div>
-<h3 id="52">5.2 模型更新<a class="headerlink" href="#52" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">user</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Bob&quot;</span><span class="p">})</span>  <span class="c1"># 更新字段值</span>
-</code></pre></div>
-<h3 id="53">5.3 动态模型创建<a class="headerlink" href="#53" title="Permanent link">&para;</a></h3>
-<p>使用 <code>create_model</code> 动态创建模型：
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pydantic</span><span class="w"> </span><span class="kn">import</span> <span class="n">create_model</span>
+<h3 id="json-http">五、 与 JSON 和 HTTP 框架的集成<a class="headerlink" href="#json-http" title="Permanent link">&para;</a></h3>
+<h4 id="1-json">1. 序列化为 JSON<a class="headerlink" href="#1-json" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Alice&quot;</span><span class="p">)</span>
+<span class="n">json_str</span> <span class="o">=</span> <span class="n">user</span><span class="o">.</span><span class="n">model_dump_json</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">json_str</span><span class="p">)</span> <span class="c1"># &#39;{&quot;id&quot;:1,&quot;name&quot;:&quot;Alice&quot;,&quot;email&quot;:null,&quot;is_active&quot;:true}&#39;</span>
 
-<span class="n">DynamicUser</span> <span class="o">=</span> <span class="n">create_model</span><span class="p">(</span><span class="s2">&quot;DynamicUser&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="o">...</span><span class="p">),</span> <span class="n">age</span><span class="o">=</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="mi">25</span><span class="p">))</span>
-</code></pre></div></p>
-<hr />
-<h2 id="6-fastapi">6. 与 FastAPI 集成<a class="headerlink" href="#6-fastapi" title="Permanent link">&para;</a></h2>
-<p>Pydantic 是 FastAPI 的默认数据模型库，用于请求/响应验证：</p>
+<span class="c1"># 排除默认值</span>
+<span class="n">json_str_minimal</span> <span class="o">=</span> <span class="n">user</span><span class="o">.</span><span class="n">model_dump_json</span><span class="p">(</span><span class="n">exclude_defaults</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">json_str_minimal</span><span class="p">)</span> <span class="c1"># &#39;{&quot;id&quot;:1,&quot;name&quot;:&quot;Alice&quot;}&#39;</span>
+</code></pre></div>
+<h4 id="2-fastapi">2. 在 FastAPI 中使用 (示例)<a class="headerlink" href="#2-fastapi" title="Permanent link">&para;</a></h4>
+<p>Pydantic 是 FastAPI 的基石，用于定义请求体和响应模型。</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">fastapi</span><span class="w"> </span><span class="kn">import</span> <span class="n">FastAPI</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">pydantic</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseModel</span>
 
 <span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
 
-<span class="k">class</span><span class="w"> </span><span class="nc">Item</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="c1"># 定义请求体模型</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">ItemCreate</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
     <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">price</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">tax</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="c1"># 定义响应模型（可以排除敏感字段如 `tax`）</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">ItemResponse</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">price</span><span class="p">:</span> <span class="nb">float</span>
 
-<span class="nd">@app</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/items/&quot;</span><span class="p">)</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">create_item</span><span class="p">(</span><span class="n">item</span><span class="p">:</span> <span class="n">Item</span><span class="p">):</span>  <span class="c1"># 自动验证请求体</span>
-    <span class="k">return</span> <span class="n">item</span>
+<span class="nd">@app</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/items/&quot;</span><span class="p">,</span> <span class="n">response_model</span><span class="o">=</span><span class="n">ItemResponse</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">create_item</span><span class="p">(</span><span class="n">item</span><span class="p">:</span> <span class="n">ItemCreate</span><span class="p">):</span>
+    <span class="c1"># `item` 已经是一个验证过的 Pydantic 模型实例</span>
+    <span class="c1"># ... 在这里处理业务逻辑，比如保存到数据库 ...</span>
+    <span class="n">fake_db_id</span> <span class="o">=</span> <span class="mi">123</span>
+    <span class="c1"># 返回的数据会自动用 `ItemResponse` 模型验证和序列化</span>
+    <span class="k">return</span> <span class="p">{</span><span class="o">**</span><span class="n">item</span><span class="o">.</span><span class="n">model_dump</span><span class="p">(),</span> <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">fake_db_id</span><span class="p">}</span>
 </code></pre></div>
 <hr />
-<h2 id="7">7. 常见问题<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
-<h3 id="71">7.1 循环引用<a class="headerlink" href="#71" title="Permanent link">&para;</a></h3>
-<p>使用 <code>defer</code>（Pydantic v1.10+）或字符串类型注解：
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pydantic</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseModel</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">List</span>
-
-<span class="k">class</span><span class="w"> </span><span class="nc">User</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
-    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
-    <span class="n">friends</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="s1">&#39;User&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># 字符串注解避免循环引用</span>
-
-<span class="n">User</span><span class="o">.</span><span class="n">update_forward_refs</span><span class="p">()</span>  <span class="c1"># 更新前向引用</span>
-</code></pre></div></p>
-<h3 id="72">7.2 性能优化<a class="headerlink" href="#72" title="Permanent link">&para;</a></h3>
-<ul>
-<li>避免深层嵌套模型。</li>
-<li>使用 <code>alias_generator</code> 处理字段别名。</li>
-</ul>
-<hr />
-<h2 id="8">8. 总结<a class="headerlink" href="#8" title="Permanent link">&para;</a></h2>
-<p>Pydantic 通过类型注解提供了简洁而强大的数据验证功能，适用于：
-- API 请求/响应验证
-- 配置文件管理
-- 数据管道中的类型检查
-- 与 FastAPI、Django 等框架集成</p>
-<p>官方文档：<a href="https://pydantic-docs.helpmanual.io/">https://pydantic-docs.helpmanual.io/</a></p>
+<h3 id="_3">六、 总结与最佳实践<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>拥抱类型注解</strong>：充分利用 Python 的类型提示，这是 Pydantic 工作的基础。</li>
+<li><strong>从简单开始</strong>：先用基本的 <code>BaseModel</code> 和标准类型，需要时再引入验证器。</li>
+<li><strong>善用 <code>Field</code></strong>：使用 <code>Field</code> 来声明约束和元数据，而不是把逻辑都写在验证器里。</li>
+<li><strong>配置模型行为</strong>：使用 <code>model_config</code> 来全局控制模型的严格性、可变性等。</li>
+<li><strong>区分输入/输出模型</strong>：在 Web API 中，为创建（输入）和读取（输出）定义不同的模型。输出模型可以排除敏感信息（如密码哈希）或包含计算字段（如 <code>id</code>）。</li>
+<li><strong>性能</strong>：Pydantic V2 非常快，但复杂的自定义验证器会影响性能。保持验证器逻辑简洁。</li>
+</ol>
+<p>Pydantic V2 通过其强类型、自动验证和清晰的 API，极大地提升了 Python 数据处理的可靠性和开发者体验。希望这份教程能帮助你有效地使用它！</p>
 
 
 
