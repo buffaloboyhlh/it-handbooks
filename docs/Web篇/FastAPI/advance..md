@@ -61,6 +61,7 @@ async def read_items(checker: QueryChecker = Depends()):
 ### 3. 依赖项的作用域控制
 
 依赖项可以设置不同的作用域，包括：
+
 - **`request`**：每次请求都会创建新的依赖实例。
 - **`session`**：生命周期内维持一个依赖实例。
 
