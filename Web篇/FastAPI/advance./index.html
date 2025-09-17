@@ -7348,9 +7348,11 @@
 </ul>
 <hr />
 <h3 id="3">3. 依赖项的作用域控制<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
-<p>依赖项可以设置不同的作用域，包括：
-- <strong><code>request</code></strong>：每次请求都会创建新的依赖实例。
-- <strong><code>session</code></strong>：生命周期内维持一个依赖实例。</p>
+<p>依赖项可以设置不同的作用域，包括：</p>
+<ul>
+<li><strong><code>request</code></strong>：每次请求都会创建新的依赖实例。</li>
+<li><strong><code>session</code></strong>：生命周期内维持一个依赖实例。</li>
+</ul>
 <h4 id="_5">示例：依赖项作用域<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">fastapi</span><span class="w"> </span><span class="kn">import</span> <span class="n">Depends</span><span class="p">,</span> <span class="n">FastAPI</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">contextlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">contextmanager</span>
